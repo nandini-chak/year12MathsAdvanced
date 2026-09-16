@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Dream Australian Academy · Mathematics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #102033;
+      --muted: #5c6678;
+      --paper: #f3efe6;
+      --card: #fffdf8;
+      --navy: #0c2340;
+      --gold: #c4a35a;
+      --gold-2: #e8d7a8;
+      --line: #e0d8c8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Sans 3", "Segoe UI", Calibri, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 10% -10%, rgba(196, 163, 90, 0.18), transparent 55%),
+        var(--paper);
+      line-height: 1.5;
+    }
+    .bar {
+      background: var(--navy);
+      color: #f7f1e4;
+      padding: 0.7rem 1.4rem;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+    }
+    main { max-width: 46rem; padding: 2.4rem 1.5rem 3rem; }
+    h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+    }
+    p.lede { color: var(--muted); margin: 0 0 1.6rem; }
+    .courses { list-style: none; margin: 0; padding: 0; }
+    .courses li { margin-bottom: 0.8rem; }
+    .course {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 16px 16px 0;
+      padding: 0.95rem 1.15rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 18px 40px rgba(12, 35, 64, 0.1);
+    }
+    .course strong {
+      display: block;
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.15rem;
+      margin-bottom: 0.15rem;
+    }
+    .course span { color: var(--muted); font-size: 0.94rem; }
+    footer { margin-top: 2rem; color: var(--muted); font-size: 0.86rem; }
+  </style>
+</head>
+<body>
+  <div class="bar">My Dream Australian Academy</div>
+  <main>
+    <h1>Mathematics classroom materials</h1>
+    <p class="lede">Lesson notes, interactive graphs and worked worksheet solutions. Sign in with your class user and password to open a chapter.</p>
+    <ul class="courses">
+      <li>
+        <a class="course" href="Year12Advanced/Further%20graph%20transformations%20and%20modelling/index.html">
+          <strong>Year 12 Advanced · Chapter 2</strong>
+          <span>Further graph transformations and modelling</span>
+        </a>
+      </li>
+    </ul>
+    <footer>More chapters will be added here as they are prepared.</footer>
+  </main>
+</body>
+</html>

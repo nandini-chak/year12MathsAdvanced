@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2.01 Worksheet solutions — Year 12 Advanced</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #152033; --muted: #5b6577; --paper: #f4f1ea; --card: #fff;
+      --teal: #0f766e; --blue: #1d4ed8; --line: #d7d2c8; --ok: #166534;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", Calibri, system-ui, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.45; }
+    header.hero { background: linear-gradient(135deg, #10243d, #0f766e 75%); color: #fff; padding: 1.5rem 1.3rem 1.1rem; }
+    header.hero h1 { margin: 0.3rem 0; font-size: 1.75rem; }
+    header.hero p { margin: 0.2rem 0; opacity: 0.92; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.1rem 3rem; }
+    nav.jump { position: sticky; top: 0; z-index: 5; background: #fff; border-bottom: 1px solid var(--line); padding: 0.45rem 1.1rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    nav.jump a { color: var(--blue); text-decoration: none; }
+    .q {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 1rem 1.05rem; margin-top: 1rem;
+    }
+    .q h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+    .stem { margin: 0.2rem 0 0.6rem; }
+    button.show {
+      cursor: pointer; border: 1px solid var(--blue); background: #eef2ff; color: var(--blue);
+      border-radius: 8px; padding: 0.4rem 0.75rem; font: inherit;
+    }
+    button.show[aria-expanded="true"] { background: var(--blue); color: #fff; }
+    .sol { display: none; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--line); }
+    .sol.open { display: block; }
+    .ok { font-size: 0.82rem; color: var(--ok); margin: 0.4rem 0 0; }
+    .plot-frame { background: #fbfaf7; border: 1px solid var(--line); border-radius: 10px; padding: 0.4rem; margin: 0.45rem 0; }
+    svg.plot { width: 100%; max-width: 520px; height: auto; display: block; }
+    .legend { font-size: 0.88rem; display: flex; gap: 1rem; margin: 0.3rem 0; }
+    .legend i { display: inline-block; width: 26px; border-top: 3px solid; margin-right: 0.3rem; vertical-align: middle; }
+    .legend .p i { border-color: #0f766e; border-top-style: dashed; }
+    .legend .i i { border-color: #1d4ed8; }
+    ul { margin: 0.3rem 0; padding-left: 1.2rem; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+    @media (max-width: 700px) { .grid2 { grid-template-columns: 1fr; } }
+    .toolbar { margin: 1rem 0 0; display: flex; gap: 0.4rem; flex-wrap: wrap; }
+    footer { margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+  <link rel="stylesheet" href="chapter.css" />
+  <script src="chapter-auth.js"></script>
+</head>
+<body data-section="2.01" data-page="worksheet">
+  <div class="shell">
+  <div class="main">
+  <div class="site-bar">
+    <span>My Dream Australian Academy</span>
+    <a href="index.html">Chapter 2 home</a>
+  </div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="kicker">Practice · 2.01</span>
+        <h1>Function transformations — worksheet</h1>
+        <p>Show the question first. Use the button when you want the worked solution. Graphs redraw the answer-key sketches with labels kept off the curves.</p>
+      </div>
+    </div>
+  </header>
+  <nav class="jump">
+    <a href="index.html">Chapter home</a>
+    <a href="2.01-function-transformations-introduction.html">Lesson &amp; notes</a>
+    <a href="#q1">Q1–3</a>
+    <a href="#q4">Q4–5</a>
+    <a href="#q6">Q6–10</a>
+    <a href="#q11">Q11–14</a>
+  </nav>
+  <div class="wrap">
+    <div class="toolbar">
+      <button class="show" id="allOn" type="button">Show all solutions</button>
+      <button class="show" id="allOff" type="button">Hide all solutions</button>
+    </div>
+
+    <article class="q" id="q1">
+      <h2>1 · Match parameters</h2>
+      <div class="stem">For <span class="tex">y=kf(a(x-b))+c</span>, match each effect to <span class="tex">k,a,b,c</span>.<br>
+        1 Horizontal translation · 2 Vertical translation · 3 Vertical dilation/reflection in the <span class="tex">x</span>-axis · 4 Horizontal dilation/reflection in the <span class="tex">y</span>-axis</div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>Letters with <span class="tex">x</span> are horizontal; letters outside the function are vertical.</p>
+        <ul>
+          <li>1 → C (<span class="tex">b</span>)</li>
+          <li>2 → D (<span class="tex">c</span>)</li>
+          <li>3 → A (<span class="tex">k</span>)</li>
+          <li>4 → B (<span class="tex">a</span>)</li>
+        </ul>
+        <p class="ok">Verified against the 2.01 answer key.</p>
+      </div>
+    </article>
+
+    <article class="q" id="q2">
+      <h2>2 · True or false</h2>
+      <div class="stem">
+        <p>a The graph of <span class="tex">y=f(x+2)</span> is <span class="tex">y=f(x)</span> shifted 2 units right.</p>
+        <p>b <span class="tex">y=-f(x)</span> is a reflection of <span class="tex">y=f(x)</span> in the <span class="tex">y</span>-axis.</p>
+        <p>c <span class="tex">y=f(3x)</span> is a horizontal compression of <span class="tex">y=f(x)</span> by a factor of <span class="tex">1/3</span>.</p>
+        <p>d A vertical shift up by 4 changes <span class="tex">y</span>-coordinates and leaves <span class="tex">x</span>-coordinates unchanged.</p>
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <ul>
+          <li><strong>a False.</strong> <span class="tex">y=f(x-b)</span> with <span class="tex">b=-2</span> is a shift <em>left</em> of 2. Rewrite as <span class="tex">f(x-(-2))</span>.</li>
+          <li><strong>b False.</strong> Multiplying the output by <span class="tex">-1</span> reflects in the <span class="tex">x</span>-axis. Reflection in the <span class="tex">y</span>-axis is <span class="tex">y=f(-x)</span>.</li>
+          <li><strong>c True.</strong> Here <span class="tex">a=3</span>, so the horizontal factor is <span class="tex">1/|a|=1/3</span> (narrower graph).</li>
+          <li><strong>d True.</strong> <span class="tex">(x,y)\mapsto(x,y+4)</span>.</li>
+        </ul>
+        <p class="ok">Verified against the 2.01 answer key (F, F, T, T).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q3">
+      <h2>3 · Equations from words · <span class="tex">f(x)=x^3</span></h2>
+      <div class="stem">
+        a Vertical translation 5 down · b Horizontal translation 1 left · c Reflection in the <span class="tex">x</span>-axis then vertical stretch 2 · d Reflection in the <span class="tex">y</span>-axis
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <ul>
+          <li>a <span class="tex">y=x^3-5</span></li>
+          <li>b Left 1 means <span class="tex">b=-1</span>, so <span class="tex">y=(x+1)^3</span></li>
+          <li>c <span class="tex">k=-2</span> (stretch 2 and reflect): <span class="tex">y=-2x^3</span></li>
+          <li>d <span class="tex">y=(-x)^3=-x^3</span></li>
+        </ul>
+        <p class="ok">Verified against the 2.01 answer key (the key also notes <span class="tex">(-x)^3=-x^3</span>).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q4">
+      <h2>4 · Sketch translations</h2>
+      <div class="stem">Parent key points <span class="tex">(-4,0),(-2,-2),(0,0),(2,2),(4,0)</span>. Sketch separately: a <span class="tex">y=f(x)+2</span> · b <span class="tex">y=f(x-2)</span> · c <span class="tex">y=f(x-2)+2</span>.</div>
+      <div class="plot-frame">
+        <p class="legend"><span class="p"><i></i>parent (question)</span></p>
+        <svg id="q4parent" class="plot" viewBox="0 0 480 280"></svg>
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>Map <span class="tex">(x,y)\to(x+b,y+c)</span> then join the images.</p>
+        <div class="grid2">
+          <div>
+            <p><strong>a</strong> <span class="tex">c=2</span>: <span class="tex">(-4,2),(-2,0),(0,2),(2,4),(4,2)</span></p>
+            <div class="plot-frame"><svg id="q4a" class="plot" viewBox="0 0 480 280"></svg></div>
+          </div>
+          <div>
+            <p><strong>b</strong> <span class="tex">b=2</span>: <span class="tex">(-2,0),(0,-2),(2,0),(4,2),(6,0)</span></p>
+            <div class="plot-frame"><svg id="q4b" class="plot" viewBox="0 0 480 280"></svg></div>
+          </div>
+        </div>
+        <p><strong>c</strong> both: <span class="tex">(-2,2),(0,0),(2,2),(4,4),(6,2)</span></p>
+        <div class="plot-frame"><svg id="q4c" class="plot" viewBox="0 0 480 280"></svg></div>
+        <p class="ok">Verified against the 2.01 answer-key sketches (pages 1–2).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q5">
+      <h2>5 · Sketch dilations</h2>
+      <div class="stem">Parent key points <span class="tex">(-2,-2),(-1,0),(0,2),(1,0),(2,-2)</span>. a <span class="tex">y=3f(x)</span> · b <span class="tex">y=f(2x)</span> · c <span class="tex">y=f(-x/2)</span>.</div>
+      <div class="plot-frame">
+        <p class="legend"><span class="p"><i></i>parent (question)</span></p>
+        <svg id="q5parent" class="plot" viewBox="0 0 480 280"></svg>
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>Use <span class="tex">(x,y)\to(x/a,\,ky)</span>.</p>
+        <p><strong>a</strong> <span class="tex">k=3</span>: <span class="tex">(-2,-6),(-1,0),(0,6),(1,0),(2,-6)</span></p>
+        <div class="plot-frame"><svg id="q5a" class="plot" viewBox="0 0 480 300"></svg></div>
+        <p><strong>b</strong> <span class="tex">a=2</span> (compress by <span class="tex">1/2</span>): <span class="tex">(-1,-2),(-0.5,0),(0,2),(0.5,0),(1,-2)</span></p>
+        <div class="plot-frame"><svg id="q5b" class="plot" viewBox="0 0 480 280"></svg></div>
+        <p><strong>c</strong> <span class="tex">a=-1/2</span> (stretch by 2 and reflect in <span class="tex">y</span>-axis): <span class="tex">(4,-2),(2,0),(0,2),(-2,0),(-4,-2)</span></p>
+        <div class="plot-frame"><svg id="q5c" class="plot" viewBox="0 0 480 280"></svg></div>
+        <p class="ok">Verified against the 2.01 answer-key sketches (pages 2–3).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q6">
+      <h2>6 · Describe the sequence</h2>
+      <div class="stem">
+        a <span class="tex">x^2</span> to <span class="tex">(x-4)^2+6</span> ·
+        b <span class="tex">|x|</span> to <span class="tex">-|x+1|-3</span> ·
+        c <span class="tex">\sqrt{x}</span> to <span class="tex">3\sqrt{x}-2</span> ·
+        d <span class="tex">1/x</span> to <span class="tex">1/(2x)+5</span>
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <ul>
+          <li>a Horizontal shift 4 right, vertical shift 6 up.</li>
+          <li>b Reflection in the <span class="tex">x</span>-axis, horizontal shift 1 left, vertical shift 3 down.</li>
+          <li>c Vertical stretch by 3, vertical shift 2 down.</li>
+          <li>d Horizontal compression by <span class="tex">1/2</span> (because <span class="tex">1/(2x)=f(2x)</span>), vertical shift 5 up. Equivalent: vertical compression by <span class="tex">1/2</span> and the same vertical shift, since <span class="tex">1/(2x)=\frac12\cdot\frac1x</span>.</li>
+        </ul>
+        <p class="ok">Verified against the 2.01 answer key (including the equivalent form in d).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q7">
+      <h2>7 · Image of <span class="tex">P(3,-6)</span></h2>
+      <div class="stem">
+        a <span class="tex">y=f(x)+4</span> ·
+        b <span class="tex">y=f(x-9)</span> ·
+        c <span class="tex">y=\frac13 f(x)</span> ·
+        d <span class="tex">y=f(-3x)</span> ·
+        e <span class="tex">y=-f(x/2)+1</span> ·
+        f <span class="tex">y=f(2x+4)-3</span>
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>Rule: <span class="tex">(x,y)\mapsto\bigl(x/a+b,\,ky+c\bigr)</span> for <span class="tex">y=kf(a(x-b))+c</span>.</p>
+        <ul>
+          <li>a <span class="tex">(3,-2)</span> — add 4 to <span class="tex">y</span>.</li>
+          <li>b <span class="tex">(12,-6)</span> — add 9 to <span class="tex">x</span>.</li>
+          <li>c <span class="tex">(3,-2)</span> — multiply <span class="tex">y</span> by <span class="tex">1/3</span>.</li>
+          <li>d <span class="tex">a=-3</span> so <span class="tex">x'=3/(-3)=-1</span>: <span class="tex">(-1,-6)</span>.</li>
+          <li>e <span class="tex">a=1/2</span>, <span class="tex">k=-1</span>, <span class="tex">c=1</span> → <span class="tex">(6,7)</span>.</li>
+          <li>f Factor: <span class="tex">2x+4=2(x+2)</span> so <span class="tex">a=2</span>, <span class="tex">b=-2</span>, <span class="tex">c=-3</span> → <span class="tex">(-0.5,-9)</span>.</li>
+        </ul>
+        <p class="ok">Verified against the 2.01 answer key.</p>
+      </div>
+    </article>
+
+    <article class="q" id="q8">
+      <h2>8 · Write the equation (correct order)</h2>
+      <div class="stem">
+        a <span class="tex">\sqrt{x}</span> reflected in the <span class="tex">y</span>-axis, vertical dilation 4, up 3.<br>
+        b <span class="tex">x^2</span> dilated horizontally with scale factor <span class="tex">1/3</span>, 2 right, 5 down.<br>
+        c <span class="tex">|x|</span> translated 4 left, then horizontal dilation scale factor 2, then reflected in the <span class="tex">x</span>-axis.
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <ul>
+          <li>a <span class="tex">y=4\sqrt{-x}+3</span></li>
+          <li>b Scale factor <span class="tex">1/3</span> means <span class="tex">a=3</span>, so <span class="tex">(3x)^2=9x^2</span>, then shift: <span class="tex">y=9(x-2)^2-5</span></li>
+          <li>c Left 4 gives <span class="tex">|x+4|</span>. Horizontal factor 2 means <span class="tex">a=1/2</span>, so <span class="tex">|x/2+4|</span>. Then <span class="tex">k=-1</span>: <span class="tex">y=-\left|\dfrac{x}{2}+4\right|</span></li>
+        </ul>
+        <p class="ok">Verified against the 2.01 answer key.</p>
+      </div>
+    </article>
+
+    <article class="q" id="q9">
+      <h2>9 · One mapping <span class="tex">(2,4)\to(2,-8)</span></h2>
+      <div class="stem">Identify a transformation sending <span class="tex">(2,4)</span> on <span class="tex">y=f(x)</span> to <span class="tex">(2,-8)</span>.</div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>The <span class="tex">x</span>-coordinate is unchanged, so a purely vertical map is enough. <span class="tex">-8= -2\times 4</span>, so a vertical stretch of 2 and a reflection in the <span class="tex">x</span>-axis works: <span class="tex">y=-2f(x)</span>.</p>
+        <p>Also valid: <span class="tex">4-12=-8</span>, so <span class="tex">y=f(x)-12</span>.</p>
+        <p class="ok">Verified against the 2.01 answer key (“answers may vary”; both examples above are listed there).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q10">
+      <h2>10 · Point on <span class="tex">y=3f(2(x-1))-5</span></h2>
+      <div class="stem"><span class="tex">(4,2)</span> lies on <span class="tex">y=f(x)</span>. Find the image on the transformed graph.</div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p><span class="tex">k=3</span>, <span class="tex">a=2</span>, <span class="tex">b=1</span>, <span class="tex">c=-5</span>.</p>
+        <p><span class="tex">(4,2)\mapsto\bigl(4/2+1,\,3\cdot2-5\bigr)=(3,1)</span>.</p>
+        <p>In words: horizontal compression by <span class="tex">1/2</span>, shift 1 right, vertical stretch 3, shift 5 down.</p>
+        <p class="ok">Verified against the 2.01 answer key (point <span class="tex">(3,1)</span>).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q11">
+      <h2>11 · Which order is correct?</h2>
+      <div class="stem"><span class="tex">x^2</span> to <span class="tex">y=2x^2+4</span>. Student A: stretch 2 then up 4. Student B: up 4 then stretch 2. Who is right?</div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>Track <span class="tex">(2,4)</span> on <span class="tex">y=x^2</span>.</p>
+        <ul>
+          <li>A: stretch 2 → <span class="tex">(2,8)</span>; up 4 → <span class="tex">(2,12)</span>, which lies on <span class="tex">y=2x^2+4</span>.</li>
+          <li>B: up 4 → <span class="tex">(2,8)</span>; stretch 2 → <span class="tex">(2,16)</span>, which does <em>not</em>.</li>
+        </ul>
+        <p>Algebra: A is <span class="tex">2x^2+4</span>. B is <span class="tex">2(x^2+4)=2x^2+8</span>.</p>
+        <p class="ok">Verified against the 2.01 answer key (Student A).</p>
+      </div>
+    </article>
+
+    <article class="q" id="q12">
+      <h2>12 · Equation of the solid graph</h2>
+      <div class="stem">The solid graph is a transformation of <span class="tex">y=|x|</span> (dashed). Find its equation.</div>
+      <div class="plot-frame">
+        <p class="legend"><span class="p"><i></i><span class="tex">y=|x|</span></span><span class="i"><i></i>solid graph</span></p>
+        <svg id="q12plot" class="plot" viewBox="0 0 520 340"></svg>
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>Vertex of <span class="tex">|x|</span> at <span class="tex">(0,0)</span> has moved to <span class="tex">(1,3)</span> → shift 1 right and 3 up, form <span class="tex">y=a|x-1|+3</span>.</p>
+        <p>The graph opens downwards, so <span class="tex">a&lt;0</span>. Use the visible point <span class="tex">(2,1)</span>:</p>
+        <p><span class="tex">1=a|2-1|+3\Rightarrow a+3=1\Rightarrow a=-2</span>.</p>
+        <p>Equation: <span class="tex">y=-2|x-1|+3</span>.</p>
+        <p class="ok">Verified against the 2.01 answer key.</p>
+      </div>
+    </article>
+
+    <article class="q" id="q13">
+      <h2>13 · Factor before you shift</h2>
+      <div class="stem">A common mistake with <span class="tex">y=f(3x+6)</span> is to call this a shift of 6 left. Factor and explain.</div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p><span class="tex">3x+6=3(x+2)</span>, so <span class="tex">y=f\big(3(x+2)\big)</span>: horizontal compression by <span class="tex">1/3</span>, then shift 2 left.</p>
+        <p>A shift of 6 left would be <span class="tex">f(x+6)</span>. Compressing that gives <span class="tex">f(3(x+6))=f(3x+18)</span>, which is not <span class="tex">f(3x+6)</span>.</p>
+        <p class="ok">Verified against the 2.01 answer key.</p>
+      </div>
+    </article>
+
+    <article class="q" id="q14">
+      <h2>14 · Triangle and area</h2>
+      <div class="stem">Vertices <span class="tex">A(0,0)</span>, <span class="tex">B(4,0)</span>, <span class="tex">C(2,6)</span> on <span class="tex">y=f(x)</span>.
+        a Area of <span class="tex">ABC</span>.
+        b <span class="tex">y=2f(x)</span>: new vertices and area.
+        c <span class="tex">y=f(0.5x)</span>: new vertices and area.
+        d How do the two dilations affect area?
+      </div>
+      <button class="show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol">
+        <p>a Base 4, height 6: area <span class="tex">\frac12\times4\times6=12</span>.</p>
+        <div class="plot-frame"><svg id="q14a" class="plot" viewBox="0 0 480 280"></svg></div>
+        <p>b <span class="tex">(x,y)\to(x,2y)</span>: <span class="tex">A'(0,0)</span>, <span class="tex">B'(4,0)</span>, <span class="tex">C'(2,12)</span>. Area 24.</p>
+        <div class="plot-frame"><svg id="q14b" class="plot" viewBox="0 0 480 300"></svg></div>
+        <p>c <span class="tex">(x,y)\to(x/0.5,y)=(2x,y)</span>: <span class="tex">A'(0,0)</span>, <span class="tex">B'(8,0)</span>, <span class="tex">C'(4,6)</span>. Area 24.</p>
+        <div class="plot-frame"><svg id="q14c" class="plot" viewBox="0 0 520 280"></svg></div>
+        <p>d Vertical dilation by <span class="tex">|k|</span> multiplies area by <span class="tex">|k|</span>. Horizontal dilation by <span class="tex">1/|a|</span> multiplies area by <span class="tex">1/|a|</span>.</p>
+        <p class="ok">Verified against the 2.01 answer key.</p>
+      </div>
+    </article>
+
+    <footer>
+      Worked solutions for classroom use, checked against <em>2.01 Function transformations — answerkey.pdf</em> (Mathspace 2026). Do not photocopy the publisher PDF; this page is an original write-up of the same items.
+    </footer>
+  </div>
+  </div>
+  </div>
+  <script src="chapter-nav.js"></script>
+  <script>
+  (function () {
+    const NS = "http://www.w3.org/2000/svg";
+    function el(name, attrs, parent) {
+      const n = document.createElementNS(NS, name);
+      Object.keys(attrs || {}).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+      if (parent) parent.appendChild(n);
+      return n;
+    }
+    function Plot(svg, w) {
+      this.svg = svg; this.w = w;
+      this.pad = { l: 48, r: 36, t: 20, b: 36 };
+    }
+    Plot.prototype.inner = function () {
+      const vb = this.svg.viewBox.baseVal;
+      return { x: this.pad.l, y: this.pad.t, w: vb.width - this.pad.l - this.pad.r, h: vb.height - this.pad.t - this.pad.b };
+    };
+    Plot.prototype.xy = function (x, y) {
+      const b = this.inner();
+      return [b.x + (x - this.w.xmin) / (this.w.xmax - this.w.xmin) * b.w,
+              b.y + (this.w.ymax - y) / (this.w.ymax - this.w.ymin) * b.h];
+    };
+    Plot.prototype.clear = function () { while (this.svg.firstChild) this.svg.removeChild(this.svg.firstChild); };
+    Plot.prototype.axes = function () {
+      const b = this.inner();
+      el("rect", { x: 0, y: 0, width: this.svg.viewBox.baseVal.width, height: this.svg.viewBox.baseVal.height, fill: "#fbfaf7" }, this.svg);
+      const x0 = Math.ceil(this.w.xmin), x1 = Math.floor(this.w.xmax);
+      const y0 = Math.ceil(this.w.ymin), y1 = Math.floor(this.w.ymax);
+      for (let x = x0; x <= x1; x++) {
+        const p = this.xy(x, 0);
+        el("line", { x1: p[0], y1: b.y, x2: p[0], y2: b.y + b.h, stroke: "#ece8e0" }, this.svg);
+      }
+      for (let y = y0; y <= y1; y++) {
+        const p = this.xy(0, y);
+        el("line", { x1: b.x, y1: p[1], x2: b.x + b.w, y2: p[1], stroke: "#ece8e0" }, this.svg);
+      }
+      const o = this.xy(0, 0);
+      const ox = Math.min(Math.max(o[0], b.x), b.x + b.w);
+      const oy = Math.min(Math.max(o[1], b.y), b.y + b.h);
+      el("line", { x1: b.x, y1: oy, x2: b.x + b.w - 8, y2: oy, stroke: "#152033", "stroke-width": 1.5 }, this.svg);
+      el("polygon", { points: (b.x + b.w) + "," + oy + " " + (b.x + b.w - 9) + "," + (oy - 4) + " " + (b.x + b.w - 9) + "," + (oy + 4), fill: "#152033" }, this.svg);
+      el("line", { x1: ox, y1: b.y + b.h, x2: ox, y2: b.y + 8, stroke: "#152033", "stroke-width": 1.5 }, this.svg);
+      el("polygon", { points: ox + "," + b.y + " " + (ox - 4) + "," + (b.y + 9) + " " + (ox + 4) + "," + (b.y + 9), fill: "#152033" }, this.svg);
+      el("text", { x: b.x + b.w - 2, y: oy - 8, "text-anchor": "end", fill: "#152033", "font-size": "13" }, this.svg).textContent = "x";
+      el("text", { x: ox + 8, y: b.y + 12, fill: "#152033", "font-size": "13" }, this.svg).textContent = "y";
+      for (let x = x0; x <= x1; x++) {
+        if (!x) continue;
+        const p = this.xy(x, 0);
+        el("line", { x1: p[0], y1: oy - 3, x2: p[0], y2: oy + 3, stroke: "#152033" }, this.svg);
+        if (oy + 14 < b.y + b.h - 2) el("text", { x: p[0], y: oy + 14, "text-anchor": "middle", fill: "#5b6577", "font-size": "10" }, this.svg).textContent = String(x);
+      }
+      for (let y = y0; y <= y1; y++) {
+        if (!y) continue;
+        const p = this.xy(0, y);
+        el("line", { x1: ox - 3, y1: p[1], x2: ox + 3, y2: p[1], stroke: "#152033" }, this.svg);
+        if (ox - 7 > b.x + 6) el("text", { x: ox - 7, y: p[1] + 3, "text-anchor": "end", fill: "#5b6577", "font-size": "10" }, this.svg).textContent = String(y);
+      }
+    };
+    Plot.prototype.poly = function (pts, stroke, dash) {
+      let d = "";
+      pts.forEach(function (p, i) {
+        const xy = this.xy(p[0], p[1]);
+        d += (i ? "L" : "M") + xy[0] + " " + xy[1] + " ";
+      }, this);
+      el("path", { d: d, fill: "none", stroke: stroke, "stroke-width": 2.6, "stroke-dasharray": dash || "none", "stroke-linejoin": "round" }, this.svg);
+    };
+    Plot.prototype.dots = function (pts, fill) {
+      pts.forEach(function (p) {
+        const xy = this.xy(p[0], p[1]);
+        el("circle", { cx: xy[0], cy: xy[1], r: 4, fill: fill, stroke: "#fff", "stroke-width": 1.1 }, this.svg);
+      }, this);
+    };
+    Plot.prototype.labels = function (pts, fill) {
+      const b = this.inner();
+      pts.forEach(function (p) {
+        const xy = this.xy(p[0], p[1]);
+        let ax = "start", dx = 7, dy = -8;
+        if (xy[0] > b.x + b.w - 64) { ax = "end"; dx = -7; }
+        if (xy[1] < b.y + 16) dy = 14;
+        const t = el("text", { x: xy[0] + dx, y: xy[1] + dy, "text-anchor": ax, fill: fill, "font-size": "10", stroke: "#fbfaf7", "stroke-width": 3, "paint-order": "stroke" }, this.svg);
+        t.textContent = "(" + p[0] + ", " + p[1] + ")";
+      }, this);
+    };
+    Plot.prototype.triangle = function (pts, stroke, fill) {
+      const d = pts.map(function (p) { const xy = this.xy(p[0], p[1]); return xy[0] + "," + xy[1]; }, this).join(" ");
+      el("polygon", { points: d, fill: fill, stroke: stroke, "stroke-width": 2.2 }, this.svg);
+      this.dots(pts, stroke);
+    };
+
+    function mapPts(pts, k, a, b, c) {
+      return pts.map(function (p) { return [p[0] / a + b, k * p[1] + c]; });
+    }
+    function drawPiece(id, world, parent, image, showParent) {
+      const svg = document.getElementById(id);
+      if (!svg) return;
+      const p = new Plot(svg, world);
+      p.clear(); p.axes();
+      if (showParent !== false) { p.poly(parent, "#0f766e", "7 5"); p.dots(parent, "#0f766e"); }
+      if (image) { p.poly(image, "#1d4ed8"); p.dots(image, "#1d4ed8"); p.labels(image, "#1d4ed8"); }
+    }
+
+    const P4 = [[-4, 0], [-2, -2], [0, 0], [2, 2], [4, 0]];
+    const P5 = [[-2, -2], [-1, 0], [0, 2], [1, 0], [2, -2]];
+
+    function boot() {
+      drawPiece("q4parent", { xmin: -5, xmax: 5, ymin: -3, ymax: 3 }, P4, null);
+      drawPiece("q4a", { xmin: -5, xmax: 5, ymin: -2, ymax: 5 }, P4, mapPts(P4, 1, 1, 0, 2));
+      drawPiece("q4b", { xmin: -3, xmax: 7, ymin: -3, ymax: 3 }, P4, mapPts(P4, 1, 1, 2, 0));
+      drawPiece("q4c", { xmin: -3, xmax: 7, ymin: -2, ymax: 5 }, P4, mapPts(P4, 1, 1, 2, 2));
+      drawPiece("q5parent", { xmin: -3, xmax: 3, ymin: -3, ymax: 3 }, P5, null);
+      drawPiece("q5a", { xmin: -3, xmax: 3, ymin: -7, ymax: 7 }, P5, mapPts(P5, 3, 1, 0, 0));
+      drawPiece("q5b", { xmin: -3, xmax: 3, ymin: -3, ymax: 3 }, P5, mapPts(P5, 1, 2, 0, 0));
+      drawPiece("q5c", { xmin: -5, xmax: 5, ymin: -3, ymax: 3 }, P5, mapPts(P5, 1, -0.5, 0, 0));
+
+      const abs = [[-3, 3], [0, 0], [3, 3]];
+      const solid = [[-1, -1], [0, 1], [1, 3], [2, 1], [3, -1]];
+      const s12 = document.getElementById("q12plot");
+      const p12 = new Plot(s12, { xmin: -3, xmax: 4, ymin: -5, ymax: 5 });
+      p12.clear(); p12.axes();
+      p12.poly(abs, "#0f766e", "7 5");
+      p12.poly(solid, "#1d4ed8");
+      p12.dots([[1, 3], [2, 1], [0, 1]], "#1d4ed8");
+      const v = p12.xy(1, 3);
+      el("text", { x: v[0] + 8, y: v[1] - 8, fill: "#1d4ed8", "font-size": "11", stroke: "#fbfaf7", "stroke-width": 3, "paint-order": "stroke" }, s12).textContent = "(1, 3)";
+      const q = p12.xy(2, 1);
+      el("text", { x: q[0] + 8, y: q[1] + 14, fill: "#1d4ed8", "font-size": "11", stroke: "#fbfaf7", "stroke-width": 3, "paint-order": "stroke" }, s12).textContent = "(2, 1)";
+
+      function tri(id, world, pts) {
+        const svg = document.getElementById(id);
+        const p = new Plot(svg, world);
+        p.clear(); p.axes();
+        p.triangle(pts, "#1d4ed8", "rgba(29,78,216,0.12)");
+        p.labels(pts, "#1d4ed8");
+      }
+      tri("q14a", { xmin: -1, xmax: 6, ymin: -1, ymax: 8 }, [[0, 0], [4, 0], [2, 6]]);
+      tri("q14b", { xmin: -1, xmax: 6, ymin: -1, ymax: 14 }, [[0, 0], [4, 0], [2, 12]]);
+      tri("q14c", { xmin: -1, xmax: 10, ymin: -1, ymax: 8 }, [[0, 0], [8, 0], [4, 6]]);
+
+      document.querySelectorAll(".tex").forEach(function (n) {
+        if (n.getAttribute("data-texed")) return;
+        const s = n.textContent;
+        n.setAttribute("data-texed", "1");
+        if (window.katex) katex.render(s, n, { throwOnError: false });
+      });
+    }
+
+    function bindToggles() {
+      document.querySelectorAll("article.q").forEach(function (art) {
+        const btn = art.querySelector("button.show");
+        const sol = art.querySelector(".sol");
+        if (!btn || !sol) return;
+        btn.addEventListener("click", function () {
+          const on = !sol.classList.contains("open");
+          sol.classList.toggle("open", on);
+          btn.setAttribute("aria-expanded", on ? "true" : "false");
+          btn.textContent = on ? "Hide worked solution" : "Show worked solution";
+        });
+      });
+      document.getElementById("allOn").onclick = function () {
+        document.querySelectorAll("article.q").forEach(function (art) {
+          const btn = art.querySelector("button.show");
+          const sol = art.querySelector(".sol");
+          sol.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+          btn.textContent = "Hide worked solution";
+        });
+      };
+      document.getElementById("allOff").onclick = function () {
+        document.querySelectorAll("article.q").forEach(function (art) {
+          const btn = art.querySelector("button.show");
+          const sol = art.querySelector(".sol");
+          sol.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+          btn.textContent = "Show worked solution";
+        });
+      };
+    }
+
+    window.addEventListener("load", function () {
+      try { boot(); } catch (err) { console.error(err); }
+      bindToggles();
+    });
+  })();
+  </script>
+</body>
+</html>

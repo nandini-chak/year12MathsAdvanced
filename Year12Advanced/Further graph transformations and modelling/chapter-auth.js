@@ -1,0 +1,63 @@
+/**
+ * Simple class sign-in screen for the chapter pages.
+ * Static pages only: the check runs in the browser, so this keeps casual
+ * visitors out of the materials — it is not real security.
+ */
+(function () {
+  const USER = "nc";
+  const PASS = "23082006";
+  const KEY = "mdaa-ch2-signed-in";
+
+  function signedIn() {
+    try { return sessionStorage.getItem(KEY) === "1"; } catch (e) { return false; }
+  }
+
+  if (signedIn()) return;
+
+  document.documentElement.classList.add("auth-locked");
+
+  function build() {
+    const gate = document.createElement("div");
+    gate.className = "auth-gate";
+    gate.innerHTML =
+      '<form class="auth-card" autocomplete="off">' +
+      '<p class="auth-school">My Dream Australian Academy</p>' +
+      '<h1>Year 12 Mathematics Advanced</h1>' +
+      '<p class="auth-sub">Chapter 2 · Further graph transformations and modelling</p>' +
+      '<label for="auth-user">User</label>' +
+      '<input id="auth-user" name="auth-user" type="text" autocapitalize="none" spellcheck="false" required />' +
+      '<label for="auth-pass">Password</label>' +
+      '<input id="auth-pass" name="auth-pass" type="password" required />' +
+      '<p class="auth-error" role="alert" hidden>That user and password do not match.</p>' +
+      '<button class="btn" type="submit">Sign in</button>' +
+      '</form>';
+    document.body.appendChild(gate);
+
+    const form = gate.querySelector("form");
+    const user = gate.querySelector("#auth-user");
+    const pass = gate.querySelector("#auth-pass");
+    const error = gate.querySelector(".auth-error");
+
+    user.focus();
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (user.value.trim().toLowerCase() === USER && pass.value === PASS) {
+        try { sessionStorage.setItem(KEY, "1"); } catch (err) { /* private mode */ }
+        document.documentElement.classList.remove("auth-locked");
+        gate.remove();
+        window.dispatchEvent(new Event("resize"));
+        return;
+      }
+      error.removeAttribute("hidden");
+      pass.value = "";
+      pass.focus();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", build);
+  } else {
+    build();
+  }
+})();

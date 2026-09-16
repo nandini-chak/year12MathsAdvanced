@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2.01 Function transformations — Year 12 Advanced</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #152033;
+      --muted: #5b6577;
+      --paper: #f4f1ea;
+      --card: #ffffff;
+      --teal: #0f766e;
+      --blue: #1d4ed8;
+      --gold: #b45309;
+      --line: #d7d2c8;
+      --parent: #0f766e;
+      --image: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Calibri, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.45;
+    }
+    header.hero {
+      background: linear-gradient(135deg, #10243d, #1d4ed8 70%);
+      color: #fff;
+      padding: 1.6rem 1.4rem 1.2rem;
+    }
+    header.hero p { margin: 0.2rem 0; opacity: 0.9; }
+    header.hero h1 { margin: 0.35rem 0 0.4rem; font-size: 1.85rem; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 1.1rem 3rem; }
+    nav.jump {
+      position: sticky; top: 0; z-index: 20;
+      background: #fff; border-bottom: 1px solid var(--line);
+      display: flex; gap: 0.4rem; flex-wrap: wrap; padding: 0.45rem 1.1rem;
+    }
+    nav.jump a {
+      color: var(--blue); text-decoration: none; font-size: 0.92rem;
+      padding: 0.35rem 0.65rem; border-radius: 999px; border: 1px solid transparent;
+    }
+    nav.jump a:hover { border-color: var(--blue); background: #eef2ff; }
+    section { margin-top: 1.6rem; }
+    h2 { font-size: 1.45rem; margin: 0 0 0.6rem; }
+    h3 { font-size: 1.12rem; margin: 1rem 0 0.45rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.05rem;
+      box-shadow: 0 1px 0 rgba(21,32,51,0.04);
+    }
+    .lede { color: var(--muted); margin-top: 0; }
+    .studio {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.35rem 1rem;
+      align-items: end;
+    }
+    .controls .span2 { grid-column: 1 / -1; }
+    .controls label { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 0.55rem; }
+    .controls .row { display: flex; justify-content: space-between; align-items: baseline; }
+    .controls input[type=range] { width: 100%; }
+    .val { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; }
+    select, button {
+      font: inherit; border-radius: 8px; border: 1px solid var(--line); background: #fff;
+    }
+    select { width: 100%; padding: 0.35rem 0.45rem; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+    button.primary, button.ghost {
+      cursor: pointer; padding: 0.42rem 0.7rem;
+    }
+    button.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+    button.ghost:hover { background: #eef2ff; }
+    .plot-frame {
+      background: #fbfaf7;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.55rem 0.55rem 0.35rem;
+    }
+    svg.plot { width: 100%; height: auto; min-height: 280px; display: block; }
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 1rem; margin: 0.45rem 0 0.15rem;
+      font-size: 0.9rem;
+    }
+    .legend i {
+      display: inline-block; width: 28px; height: 0; border-top: 3px solid;
+      vertical-align: middle; margin-right: 0.35rem;
+    }
+    .legend .parent i { border-color: var(--parent); border-top-style: dashed; }
+    .legend .image i { border-color: var(--image); }
+    .eq-live {
+      margin: 0.55rem 0 0;
+      padding: 0.65rem 0.75rem;
+      background: #eef6f5;
+      border-left: 4px solid var(--teal);
+      border-radius: 0 10px 10px 0;
+      min-height: 2.6rem;
+    }
+    .words { margin: 0.35rem 0 0; color: var(--ink); }
+    .idea {
+      background: #e8f4ff;
+      border: 1px solid #cfe0f5;
+      border-radius: 12px;
+      padding: 0.8rem 0.95rem;
+      margin-top: 0.8rem;
+    }
+    .two {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;
+    }
+    @media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+    ul.compact { margin: 0.35rem 0 0.2rem; padding-left: 1.15rem; }
+    .note { font-size: 0.88rem; color: var(--muted); }
+    footer {
+      margin-top: 2rem; color: var(--muted); font-size: 0.85rem;
+    }
+    .preset { font-size: 0.85rem; }
+  </style>
+  <link rel="stylesheet" href="chapter.css" />
+  <script src="chapter-auth.js"></script>
+</head>
+<body data-section="2.01" data-page="lesson">
+  <div class="shell">
+  <div class="main">
+  <div class="site-bar">
+    <span>My Dream Australian Academy</span>
+    <a href="index.html">Chapter 2 home</a>
+  </div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="kicker">Lesson 2.01 · Year 12 Advanced</span>
+        <h1>Function transformations</h1>
+        <p>Copy the notes first. Then use the live graphs to see each letter in <span class="tex">y=kf(a(x-b))+c</span> move the picture.</p>
+      </div>
+    </div>
+  </header>
+  <nav class="jump">
+    <a href="index.html">Chapter home</a>
+    <a href="#notes">Notes to copy</a>
+    <a href="#studio">Teacher studio</a>
+    <a href="#translations">Translations</a>
+    <a href="#dilations">Dilations &amp; reflections</a>
+    <a href="#describe">Combined form</a>
+    <a href="#order">Order matters</a>
+    <a href="2.01-function-transformations-worksheet.html">Worksheet solutions</a>
+  </nav>
+  <div class="wrap">
+
+    <section id="notes">
+      <div class="notes">
+        <div class="notes-banner">
+          <div>
+            <h2>Notes to copy</h2>
+            <p class="lede" style="margin-top:0">Write these into your book before the demonstration. They are the facts you will use on the worksheet.</p>
+          </div>
+          <button class="btn ghost no-print" type="button" onclick="window.print()">Print notes</button>
+        </div>
+
+        <div class="note-block">
+          <h3>1. Words</h3>
+          <ul class="copy-list">
+            <li><strong>Function</strong> <span class="tex">f</span>: each input <span class="tex">x</span> has exactly one output <span class="tex">f(x)</span>.</li>
+            <li><strong>Graph</strong> of <span class="tex">y=f(x)</span>: the set of points <span class="tex">(x,f(x))</span>.</li>
+            <li><strong>Transformation</strong>: a rule that moves, stretches, compresses or flips a graph.</li>
+          </ul>
+        </div>
+
+        <div class="note-block">
+          <h3>2. Translations (slide, same shape)</h3>
+          <div class="formula"><span class="tex">y=f(x)+c</span></div>
+          <ul class="copy-list">
+            <li><span class="tex">c</span> is the vertical shift. <span class="tex">c&gt;0</span> up; <span class="tex">c&lt;0</span> down.</li>
+            <li>Only the <span class="tex">y</span>-coordinate changes: <span class="tex">(x,y)\mapsto(x,y+c)</span>.</li>
+          </ul>
+          <div class="formula"><span class="tex">y=f(x-b)</span></div>
+          <ul class="copy-list">
+            <li><span class="tex">b</span> is the horizontal shift. <span class="tex">b&gt;0</span> <strong>right</strong>; <span class="tex">b&lt;0</span> left.</li>
+            <li>The minus sign is the trap: <span class="tex">y=f(x+2)</span> is <span class="tex">b=-2</span>, so the graph moves <strong>left</strong> 2.</li>
+          </ul>
+        </div>
+
+        <div class="note-block">
+          <h3>3. Dilations and reflections (change size or flip)</h3>
+          <div class="formula"><span class="tex">y=kf(x)</span></div>
+          <ul class="copy-list">
+            <li>Maps <span class="tex">(x,y)\mapsto(x,ky)</span>.</li>
+            <li><span class="tex">|k|&gt;1</span> stretch vertically; <span class="tex">0&lt;|k|&lt;1</span> compress vertically.</li>
+            <li><span class="tex">k&lt;0</span> also reflects in the <span class="tex">x</span>-axis.</li>
+          </ul>
+          <div class="formula"><span class="tex">y=f(ax)</span></div>
+          <ul class="copy-list">
+            <li>Maps <span class="tex">(x,y)\mapsto(x/a,\,y)</span>.</li>
+            <li>Horizontal factor is <span class="tex">1/|a|</span>. So <span class="tex">|a|&gt;1</span> makes the graph <strong>narrower</strong>.</li>
+            <li><span class="tex">a&lt;0</span> also reflects in the <span class="tex">y</span>-axis.</li>
+          </ul>
+        </div>
+
+        <div class="note-block">
+          <h3>4. Combined form (copy this table)</h3>
+          <div class="formula"><span class="tex">y=kf\big(a(x-b)\big)+c</span></div>
+          <table class="param-table">
+            <thead>
+              <tr><th>Letter</th><th>Where it sits</th><th>What it does</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="tex">k</span></td><td>outside, in front of <span class="tex">f</span></td><td>vertical dilation by <span class="tex">|k|</span>; reflect in <span class="tex">x</span>-axis if <span class="tex">k&lt;0</span></td></tr>
+              <tr><td><span class="tex">a</span></td><td>attached to <span class="tex">x</span> inside</td><td>horizontal dilation by <span class="tex">1/|a|</span>; reflect in <span class="tex">y</span>-axis if <span class="tex">a&lt;0</span></td></tr>
+              <tr><td><span class="tex">b</span></td><td>inside, as <span class="tex">x-b</span></td><td>horizontal translation of <span class="tex">b</span> (positive = right)</td></tr>
+              <tr><td><span class="tex">c</span></td><td>outside, added on the end</td><td>vertical translation of <span class="tex">c</span> (positive = up)</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Order (always):</strong> dilations and reflections first, then translations. Outside letters <span class="tex">k,c</span> are vertical; letters with <span class="tex">x</span> (<span class="tex">a,b</span>) are horizontal.</p>
+          <p>If the inner expression is not factored, factor it before you read <span class="tex">b</span>. Example: <span class="tex">f(3x+6)=f\big(3(x+2)\big)</span>, so <span class="tex">a=3</span> and <span class="tex">b=-2</span>, not “shift 6 left”.</p>
+        </div>
+
+        <div class="note-block">
+          <h3>5. Mapping a known point</h3>
+          <p>If <span class="tex">(x,y)</span> is on <span class="tex">y=f(x)</span>, its image on <span class="tex">y=kf(a(x-b))+c</span> is</p>
+          <div class="formula"><span class="tex">(x,y)\mapsto\left(\dfrac{x}{a}+b,\,ky+c\right)</span></div>
+          <p>Check by substituting the new <span class="tex">x</span>-coordinate back into the transformed equation.</p>
+        </div>
+
+        <div class="trap">
+          <strong>Three traps to underline</strong>
+          <ul class="copy-list">
+            <li><span class="tex">y=f(x+b)</span> moves <em>left</em>, not right.</li>
+            <li>Stretch then shift is not the same as shift then stretch (e.g. <span class="tex">2x^2+4</span> vs <span class="tex">2(x^2+4)</span>).</li>
+            <li>Always factor <span class="tex">a(x-b)</span> before naming the phase shift.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio">
+      <h2>Teacher studio</h2>
+      <p class="lede">Live graph of <span class="tex">y = k\,f(a(x-b))+c</span>. Change a slider and the equation, the words, and the picture update together. Parent graph is dashed teal; image is solid blue.</p>
+      <div class="card studio">
+        <div>
+          <div class="plot-frame">
+            <svg id="studioPlot" class="plot" viewBox="0 0 720 460" role="img" aria-label="Interactive transformation graph"></svg>
+            <div class="legend">
+              <span class="parent"><i></i><span class="tex">y=f(x)</span> parent</span>
+              <span class="image"><i></i>transformed graph</span>
+            </div>
+          </div>
+          <div class="eq-live">
+            <div id="liveEq"></div>
+            <p class="words" id="liveWords"></p>
+          </div>
+        </div>
+        <div class="controls">
+          <label>Parent function
+            <select id="parentSel">
+              <option value="tent1">Example 1 tent</option>
+              <option value="zigzag">Example 2 zigzag</option>
+              <option value="sqrt">y = √x</option>
+              <option value="sq">y = x²</option>
+              <option value="abs">y = |x|</option>
+            </select>
+          </label>
+          <label><span class="row"><span>Vertical factor k</span><span class="val" id="kVal">1</span></span>
+            <input id="k" type="range" min="-4" max="4" step="0.5" value="1" />
+          </label>
+          <label><span class="row"><span>Horizontal factor a</span><span class="val" id="aVal">1</span></span>
+            <input id="a" type="range" min="-3" max="3" step="0.05" value="1" />
+          </label>
+          <label><span class="row"><span>Horizontal shift b</span><span class="val" id="bVal">0</span></span>
+            <input id="b" type="range" min="-6" max="6" step="0.5" value="0" />
+          </label>
+          <label><span class="row"><span>Vertical shift c</span><span class="val" id="cVal">0</span></span>
+            <input id="c" type="range" min="-6" max="6" step="0.5" value="0" />
+          </label>
+          <div class="span2 btn-row">
+            <button class="primary" id="btnMorph" type="button">Animate from parent</button>
+            <button class="ghost" id="btnReset" type="button">Reset</button>
+            <button class="ghost preset" data-preset="ex1" type="button">Load Example 1</button>
+            <button class="ghost preset" data-preset="ex2a" type="button">Load Example 2a</button>
+            <button class="ghost preset" data-preset="ex2b" type="button">Load Example 2b</button>
+            <button class="ghost preset" data-preset="ex3" type="button">Load Example 3</button>
+          </div>
+          <p class="note span2">If a would be 0, the slider snaps to 0.25 so the graph stays defined.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="translations">
+      <h2>Translations</h2>
+      <div class="card">
+        <p>A translation slides every point the same distance. Shape and size do not change.</p>
+        <ul class="compact">
+          <li><span class="tex">y=f(x)+c</span> — vertical. If <span class="tex">c&gt;0</span> the graph goes <strong>up</strong>.</li>
+          <li><span class="tex">y=f(x-b)</span> — horizontal. If <span class="tex">b&gt;0</span> the graph goes <strong>right</strong> (the minus sign is the usual trap).</li>
+        </ul>
+        <p>A point <span class="tex">(x,y)</span> on the parent maps to <span class="tex">(x+b,\,y+c)</span>.</p>
+        <h3>Example 1 — replay</h3>
+        <p>Parent key points <span class="tex">(-3,-1),(-1,1),(1,1),(3,-1)</span> mapped by <span class="tex">(x,y)\mapsto(x+3,y+2)</span> to sketch <span class="tex">y=f(x-3)+2</span>.</p>
+        <div class="plot-frame">
+          <svg id="ex1Plot" class="plot" viewBox="0 0 720 400" role="img" aria-label="Example 1 translation"></svg>
+          <div class="legend">
+            <span class="parent"><i></i><span class="tex">y=f(x)</span></span>
+            <span class="image"><i></i><span class="tex">y=f(x-3)+2</span></span>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="primary" id="btnEx1" type="button">Animate the four points</button>
+        </div>
+        <div class="idea">
+          <strong>Idea summary.</strong> <span class="tex">y=f(x)+c</span> shifts vertically by <span class="tex">c</span>. <span class="tex">y=f(x-b)</span> shifts horizontally by <span class="tex">b</span>.
+        </div>
+      </div>
+    </section>
+
+    <section id="dilations">
+      <h2>Dilations and reflections</h2>
+      <div class="card">
+        <ul class="compact">
+          <li><span class="tex">y=kf(x)</span> maps <span class="tex">(x,y)\to(x,ky)</span>. Stretch if <span class="tex">|k|&gt;1</span>; compress if <span class="tex">0&lt;|k|&lt;1</span>; reflect in the <span class="tex">x</span>-axis if <span class="tex">k&lt;0</span>.</li>
+          <li><span class="tex">y=f(ax)</span> maps <span class="tex">(x,y)\to(x/a,\,y)</span>. Compress horizontally if <span class="tex">|a|&gt;1</span>; stretch if <span class="tex">0&lt;|a|&lt;1</span>; reflect in the <span class="tex">y</span>-axis if <span class="tex">a&lt;0</span>.</li>
+        </ul>
+        <div class="two">
+          <div>
+            <h3>Example 2a — <span class="tex">y=2f(x)</span></h3>
+            <div class="plot-frame">
+              <svg id="ex2aPlot" class="plot" viewBox="0 0 520 340" role="img" aria-label="Example 2a vertical stretch"></svg>
+              <div class="legend">
+                <span class="parent"><i></i><span class="tex">y=f(x)</span></span>
+                <span class="image"><i></i><span class="tex">y=2f(x)</span></span>
+              </div>
+            </div>
+            <div class="btn-row"><button class="primary" id="btnEx2a" type="button">Animate 2a</button></div>
+          </div>
+          <div>
+            <h3>Example 2b — <span class="tex">y=f(x/3)</span></h3>
+            <div class="plot-frame">
+              <svg id="ex2bPlot" class="plot" viewBox="0 0 520 340" role="img" aria-label="Example 2b horizontal stretch"></svg>
+              <div class="legend">
+                <span class="parent"><i></i><span class="tex">y=f(x)</span></span>
+                <span class="image"><i></i><span class="tex">y=f(x/3)</span></span>
+              </div>
+            </div>
+            <div class="btn-row"><button class="primary" id="btnEx2b" type="button">Animate 2b</button></div>
+          </div>
+        </div>
+        <div class="idea">
+          <strong>Idea summary.</strong> Dilations change size. Negative <span class="tex">k</span> or <span class="tex">a</span> also flips the graph.
+        </div>
+      </div>
+    </section>
+
+    <section id="describe">
+      <h2>Describe transformations</h2>
+      <div class="card">
+        <p>General form (do not memorise — read where each letter sits):</p>
+        <p class="tex" style="font-size:1.15rem;">y = k f(a(x-b)) + c</p>
+        <ul class="compact">
+          <li><span class="tex">k</span> vertical dilation by <span class="tex">|k|</span>; reflect in <span class="tex">x</span>-axis if <span class="tex">k&lt;0</span></li>
+          <li><span class="tex">a</span> horizontal dilation by <span class="tex">1/|a|</span>; reflect in <span class="tex">y</span>-axis if <span class="tex">a&lt;0</span></li>
+          <li><span class="tex">b</span> horizontal translation; <span class="tex">c</span> vertical translation</li>
+        </ul>
+        <p><strong>Order:</strong> dilations and reflections first, then translations. Letters outside the function (<span class="tex">k,c</span>) are vertical; letters with <span class="tex">x</span> (<span class="tex">a,b</span>) are horizontal.</p>
+        <h3>Example 3 — <span class="tex">\sqrt{x}</span> to <span class="tex">y=-3\sqrt{x-5}+1</span></h3>
+        <p>Parameters: <span class="tex">k=-3</span>, <span class="tex">b=5</span>, <span class="tex">c=1</span>. Sequence: stretch by 3, reflect in the <span class="tex">x</span>-axis, shift 5 right, shift 1 up.</p>
+        <p>Check with <span class="tex">(4,2)</span> on the parent: <span class="tex">(4,2)\to(4,-6)\to(9,-6)\to(9,-5)</span>. Then <span class="tex">x=9</span> in the equation gives <span class="tex">-3\sqrt{4}+1=-5</span>.</p>
+        <div class="plot-frame">
+          <svg id="ex3Plot" class="plot" viewBox="0 0 720 400" role="img" aria-label="Example 3 square root transformations"></svg>
+          <div class="legend">
+            <span class="parent"><i></i><span class="tex">y=\sqrt{x}</span></span>
+            <span class="image"><i></i><span class="tex">y=-3\sqrt{x-5}+1</span></span>
+          </div>
+        </div>
+        <div class="btn-row"><button class="primary" id="btnEx3" type="button">Animate the check point (4, 2)</button></div>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Order matters (exploration)</h2>
+      <div class="card">
+        <p>For vertical changes on <span class="tex">f(x)=x^2</span>, stretching then shifting is not the same as shifting then stretching.</p>
+        <div class="two">
+          <div class="plot-frame">
+            <p><strong>Stretch 2, then down 4</strong> → <span class="tex">y=2x^2-4</span></p>
+            <svg id="orderA" class="plot" viewBox="0 0 480 300" role="img" aria-label="Stretch then shift"></svg>
+          </div>
+          <div class="plot-frame">
+            <p><strong>Down 4, then stretch 2</strong> → <span class="tex">y=2(x^2-4)=2x^2-8</span></p>
+            <svg id="orderB" class="plot" viewBox="0 0 480 300" role="img" aria-label="Shift then stretch"></svg>
+          </div>
+        </div>
+        <div class="idea">The lesson’s <span class="tex">y=2(x+3)^2-4</span> matches <em>stretch then translate</em> (and a shift left of 3), not translate-then-stretch.</div>
+      </div>
+    </section>
+
+    <footer>
+      Classroom original for MDAA, based on the 2.01 Mathspace (2026) student lesson. Graphs are redrawn so labels sit off the curves. Open this file locally or host the folder on GitHub Pages.
+    </footer>
+  </div>
+  </div>
+  </div>
+
+  <script src="chapter-nav.js"></script>
+  <script>
+  (function () {
+    const NS = "http://www.w3.org/2000/svg";
+
+    function piecewise(pts) {
+      return function (x) {
+        if (x < pts[0][0] - 1e-9 || x > pts[pts.length - 1][0] + 1e-9) return null;
+        for (let i = 0; i < pts.length - 1; i++) {
+          const x0 = pts[i][0], y0 = pts[i][1], x1 = pts[i + 1][0], y1 = pts[i + 1][1];
+          if (x >= x0 - 1e-9 && x <= x1 + 1e-9) {
+            const t = (x1 === x0) ? 0 : (x - x0) / (x1 - x0);
+            return y0 + t * (y1 - y0);
+          }
+        }
+        return pts[pts.length - 1][1];
+      };
+    }
+
+    const PARENTS = {
+      tent1: {
+        f: piecewise([[-3, -1], [-1, 1], [1, 1], [3, -1]]),
+        keys: [[-3, -1], [-1, 1], [1, 1], [3, -1]],
+        domain: [-3, 3]
+      },
+      zigzag: {
+        f: piecewise([[0, -2], [2, 2], [4, -2], [6, 0]]),
+        keys: [[0, -2], [2, 2], [4, -2], [6, 0]],
+        domain: [0, 6]
+      },
+      sqrt: {
+        f: function (x) { return x >= 0 ? Math.sqrt(x) : null; },
+        keys: [[0, 0], [1, 1], [4, 2], [9, 3]],
+        domain: [0, 12]
+      },
+      sq: {
+        f: function (x) { return x * x; },
+        keys: [[-2, 4], [-1, 1], [0, 0], [1, 1], [2, 4]],
+        domain: [-3, 3]
+      },
+      abs: {
+        f: function (x) { return Math.abs(x); },
+        keys: [[-3, 3], [0, 0], [3, 3]],
+        domain: [-4, 4]
+      }
+    };
+
+    function el(name, attrs, parent) {
+      const n = document.createElementNS(NS, name);
+      Object.keys(attrs || {}).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+      if (parent) parent.appendChild(n);
+      return n;
+    }
+
+    function Plot(svg, world) {
+      this.svg = svg;
+      this.w = world || { xmin: -8, xmax: 12, ymin: -8, ymax: 8 };
+      this.pad = { l: 52, r: 42, t: 22, b: 40 };
+    }
+    Plot.prototype.inner = function () {
+      const vb = this.svg.viewBox.baseVal;
+      return {
+        x: this.pad.l,
+        y: this.pad.t,
+        w: vb.width - this.pad.l - this.pad.r,
+        h: vb.height - this.pad.t - this.pad.b
+      };
+    };
+    Plot.prototype.xy = function (x, y) {
+      const b = this.inner();
+      const px = b.x + (x - this.w.xmin) / (this.w.xmax - this.w.xmin) * b.w;
+      const py = b.y + (this.w.ymax - y) / (this.w.ymax - this.w.ymin) * b.h;
+      return [px, py];
+    };
+    Plot.prototype.clear = function () {
+      while (this.svg.firstChild) this.svg.removeChild(this.svg.firstChild);
+    };
+    Plot.prototype.axes = function () {
+      const b = this.inner();
+      el("rect", { x: 0, y: 0, width: this.svg.viewBox.baseVal.width, height: this.svg.viewBox.baseVal.height, fill: "#fbfaf7" }, this.svg);
+      const clipId = "clip" + Math.random().toString(36).slice(2);
+      const defs = el("defs", {}, this.svg);
+      const cp = el("clipPath", { id: clipId }, defs);
+      el("rect", { x: b.x, y: b.y, width: b.w, height: b.h }, cp);
+      this.clip = "url(#" + clipId + ")";
+
+      const x0 = Math.ceil(this.w.xmin), x1 = Math.floor(this.w.xmax);
+      const y0 = Math.ceil(this.w.ymin), y1 = Math.floor(this.w.ymax);
+      for (let x = x0; x <= x1; x++) {
+        const p = this.xy(x, 0);
+        el("line", { x1: p[0], y1: b.y, x2: p[0], y2: b.y + b.h, stroke: "#ece8e0", "stroke-width": x === 0 ? 0 : 1 }, this.svg);
+      }
+      for (let y = y0; y <= y1; y++) {
+        const p = this.xy(0, y);
+        el("line", { x1: b.x, y1: p[1], x2: b.x + b.w, y2: p[1], stroke: "#ece8e0", "stroke-width": y === 0 ? 0 : 1 }, this.svg);
+      }
+      const o = this.xy(0, 0);
+      const ox = Math.min(Math.max(o[0], b.x), b.x + b.w);
+      const oy = Math.min(Math.max(o[1], b.y), b.y + b.h);
+      el("line", { x1: b.x, y1: oy, x2: b.x + b.w - 6, y2: oy, stroke: "#152033", "stroke-width": 1.6, "marker-end": "none" }, this.svg);
+      el("polygon", { points: (b.x + b.w) + "," + oy + " " + (b.x + b.w - 10) + "," + (oy - 4) + " " + (b.x + b.w - 10) + "," + (oy + 4), fill: "#152033" }, this.svg);
+      el("line", { x1: ox, y1: b.y + b.h, x2: ox, y2: b.y + 6, stroke: "#152033", "stroke-width": 1.6 }, this.svg);
+      el("polygon", { points: ox + "," + b.y + " " + (ox - 4) + "," + (b.y + 10) + " " + (ox + 4) + "," + (b.y + 10), fill: "#152033" }, this.svg);
+      el("text", { x: b.x + b.w - 2, y: oy - 10, "text-anchor": "end", fill: "#152033", "font-size": "14", "font-family": "Segoe UI, sans-serif" }, this.svg).textContent = "x";
+      el("text", { x: ox + 10, y: b.y + 14, fill: "#152033", "font-size": "14", "font-family": "Segoe UI, sans-serif" }, this.svg).textContent = "y";
+
+      for (let x = x0; x <= x1; x++) {
+        if (x === 0) continue;
+        const p = this.xy(x, 0);
+        el("line", { x1: p[0], y1: oy - 4, x2: p[0], y2: oy + 4, stroke: "#152033" }, this.svg);
+        const ty = oy + 16;
+        if (ty < b.y + b.h - 2 && ty > b.y + 12) {
+          el("text", { x: p[0], y: ty, "text-anchor": "middle", fill: "#5b6577", "font-size": "11", "font-family": "Segoe UI, sans-serif" }, this.svg).textContent = String(x);
+        }
+      }
+      for (let y = y0; y <= y1; y++) {
+        if (y === 0) continue;
+        const p = this.xy(0, y);
+        el("line", { x1: ox - 4, y1: p[1], x2: ox + 4, y2: p[1], stroke: "#152033" }, this.svg);
+        const tx = ox - 8;
+        if (tx > b.x + 8) {
+          el("text", { x: tx, y: p[1] + 4, "text-anchor": "end", fill: "#5b6577", "font-size": "11", "font-family": "Segoe UI, sans-serif" }, this.svg).textContent = String(y);
+        }
+      }
+    };
+    Plot.prototype.polyline = function (pts, style) {
+      const g = el("g", { "clip-path": this.clip }, this.svg);
+      let d = "";
+      let last = false;
+      pts.forEach(function (p) {
+        if (p == null) { last = false; return; }
+        const xy = this.xy(p[0], p[1]);
+        d += (last ? "L" : "M") + xy[0].toFixed(2) + " " + xy[1].toFixed(2) + " ";
+        last = true;
+      }, this);
+      el("path", {
+        d: d,
+        fill: "none",
+        stroke: style.stroke,
+        "stroke-width": style.width || 2.6,
+        "stroke-dasharray": style.dash || "none",
+        "stroke-linejoin": "round",
+        "stroke-linecap": "round"
+      }, g);
+    };
+    Plot.prototype.dots = function (pts, fill) {
+      const g = el("g", {}, this.svg);
+      pts.forEach(function (p) {
+        const xy = this.xy(p[0], p[1]);
+        el("circle", { cx: xy[0], cy: xy[1], r: 4.2, fill: fill, stroke: "#fff", "stroke-width": 1.2 }, g);
+      }, this);
+    };
+    Plot.prototype.labels = function (pts, fill) {
+      const b = this.inner();
+      pts.forEach(function (p) {
+        const xy = this.xy(p[0], p[1]);
+        let ax = "start", dx = 8, dy = -8;
+        if (xy[0] > b.x + b.w - 70) { ax = "end"; dx = -8; }
+        if (xy[1] < b.y + 18) dy = 16;
+        const t = el("text", {
+          x: xy[0] + dx, y: xy[1] + dy,
+          "text-anchor": ax,
+          fill: fill,
+          "font-size": "11",
+          "font-family": "Segoe UI, sans-serif",
+          stroke: "#fbfaf7",
+          "stroke-width": 3,
+          "paint-order": "stroke"
+        }, this.svg);
+        t.textContent = "(" + p[0] + ", " + p[1] + ")";
+      }, this);
+    };
+
+    function sampleParent(spec, n) {
+      const a = spec.domain[0], b = spec.domain[1];
+      const pts = [];
+      for (let i = 0; i <= n; i++) {
+        const x = a + (b - a) * i / n;
+        const y = spec.f(x);
+        pts.push(y == null || Number.isNaN(y) ? null : [x, y]);
+      }
+      return pts;
+    }
+    function sampleImage(spec, k, a, b, c, world, n) {
+      const pts = [];
+      const xmin = world.xmin, xmax = world.xmax;
+      for (let i = 0; i <= n; i++) {
+        const x = xmin + (xmax - xmin) * i / n;
+        const u = a * (x - b);
+        const y0 = spec.f(u);
+        if (y0 == null || Number.isNaN(y0)) { pts.push(null); continue; }
+        pts.push([x, k * y0 + c]);
+      }
+      return pts;
+    }
+    function mapPoint(p, k, a, b, c) {
+      return [p[0] / a + b, k * p[1] + c];
+    }
+
+    function nice(n) {
+      const r = Math.round(n * 1000) / 1000;
+      return Number.isInteger(r) ? String(r) : String(r);
+    }
+
+    function describe(k, a, b, c) {
+      const bits = [];
+      if (k !== 1) {
+        bits.push("vertical dilation by " + nice(Math.abs(k)));
+        if (k < 0) bits.push("reflection in the x-axis");
+      }
+      if (a !== 1) {
+        bits.push("horizontal dilation by " + nice(1 / Math.abs(a)));
+        if (a < 0) bits.push("reflection in the y-axis");
+      }
+      if (b !== 0) bits.push("horizontal shift " + nice(Math.abs(b)) + (b > 0 ? " right" : " left"));
+      if (c !== 0) bits.push("vertical shift " + nice(Math.abs(c)) + (c > 0 ? " up" : " down"));
+      if (!bits.length) return "Identity: the image sits on the parent.";
+      return "Applied after dilations/reflections, then translations: " + bits.join(", then ") + ".";
+    }
+
+    function texEq(k, a, b, c) {
+      if (k === 1 && a === 1 && b === 0 && c === 0) return "y = f(x)";
+      let inner = "x";
+      if (b !== 0) inner = "x" + (b > 0 ? "-" + nice(b) : "+" + nice(-b));
+      if (a !== 1) inner = nice(a) + "(" + inner + ")";
+      let body = "f(" + inner + ")";
+      if (k === -1) body = "-" + body;
+      else if (k !== 1) body = nice(k) + body;
+      if (c > 0) body += "+" + nice(c);
+      if (c < 0) body += nice(c);
+      return "y = " + body;
+    }
+
+    function renderTex(el, tex) {
+      if (window.katex) katex.render(tex, el, { throwOnError: false, displayMode: false });
+      else el.textContent = tex;
+    }
+
+    const studioSvg = document.getElementById("studioPlot");
+    const studio = new Plot(studioSvg, { xmin: -8, xmax: 14, ymin: -8, ymax: 8 });
+    let morphTimer = null;
+
+    function readParams() {
+      let a = Number(document.getElementById("a").value);
+      if (Math.abs(a) < 1e-6) {
+        a = 0.25;
+        document.getElementById("a").value = a;
+      }
+      return {
+        k: Number(document.getElementById("k").value),
+        a: a,
+        b: Number(document.getElementById("b").value),
+        c: Number(document.getElementById("c").value),
+        parent: document.getElementById("parentSel").value
+      };
+    }
+
+    function drawStudio(params, t) {
+      t = t == null ? 1 : t;
+      const k = 1 + t * (params.k - 1);
+      const a = 1 + t * (params.a - 1);
+      const b = t * params.b;
+      const c = t * params.c;
+      if (Math.abs(a) < 1e-6) return;
+      const spec = PARENTS[params.parent];
+      studio.clear();
+      studio.axes();
+      studio.polyline(sampleParent(spec, 240), { stroke: "#0f766e", dash: "7 6", width: 2.4 });
+      studio.polyline(sampleImage(spec, k, a, b, c, studio.w, 480), { stroke: "#1d4ed8", width: 2.8 });
+      const keys = spec.keys;
+      studio.dots(keys, "#0f766e");
+      const imgKeys = keys.map(function (p) { return mapPoint(p, k, a, b, c); }).filter(function (p) {
+        return p[0] >= studio.w.xmin && p[0] <= studio.w.xmax && p[1] >= studio.w.ymin && p[1] <= studio.w.ymax;
+      });
+      studio.dots(imgKeys, "#1d4ed8");
+      document.getElementById("kVal").textContent = nice(params.k);
+      document.getElementById("aVal").textContent = nice(params.a);
+      document.getElementById("bVal").textContent = nice(params.b);
+      document.getElementById("cVal").textContent = nice(params.c);
+      renderTex(document.getElementById("liveEq"), texEq(params.k, params.a, params.b, params.c));
+      document.getElementById("liveWords").textContent = describe(params.k, params.a, params.b, params.c);
+    }
+
+    function redraw() { drawStudio(readParams(), 1); }
+
+    ["k", "a", "b", "c", "parentSel"].forEach(function (id) {
+      document.getElementById(id).addEventListener("input", redraw);
+      document.getElementById(id).addEventListener("change", redraw);
+    });
+
+    document.getElementById("btnReset").onclick = function () {
+      document.getElementById("k").value = 1;
+      document.getElementById("a").value = 1;
+      document.getElementById("b").value = 0;
+      document.getElementById("c").value = 0;
+      redraw();
+    };
+
+    document.getElementById("btnMorph").onclick = function () {
+      const p = readParams();
+      if (morphTimer) cancelAnimationFrame(morphTimer);
+      const t0 = performance.now();
+      function step(now) {
+        const u = Math.min(1, (now - t0) / 1400);
+        const e = 1 - Math.pow(1 - u, 3);
+        drawStudio(p, e);
+        if (u < 1) morphTimer = requestAnimationFrame(step);
+      }
+      morphTimer = requestAnimationFrame(step);
+    };
+
+    const PRESETS = {
+      ex1: { parent: "tent1", k: 1, a: 1, b: 3, c: 2 },
+      ex2a: { parent: "zigzag", k: 2, a: 1, b: 0, c: 0 },
+      ex2b: { parent: "zigzag", k: 1, a: 1 / 3, b: 0, c: 0 },
+      ex3: { parent: "sqrt", k: -3, a: 1, b: 5, c: 1 }
+    };
+    document.querySelectorAll("[data-preset]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const p = PRESETS[btn.getAttribute("data-preset")];
+        document.getElementById("parentSel").value = p.parent;
+        document.getElementById("k").value = p.k;
+        document.getElementById("a").value = p.a;
+        document.getElementById("b").value = p.b;
+        document.getElementById("c").value = p.c;
+        const cur = readParams();
+        if (morphTimer) cancelAnimationFrame(morphTimer);
+        const t0 = performance.now();
+        function step(now) {
+          const u = Math.min(1, (now - t0) / 1400);
+          drawStudio(cur, 1 - Math.pow(1 - u, 3));
+          if (u < 1) morphTimer = requestAnimationFrame(step);
+        }
+        morphTimer = requestAnimationFrame(step);
+      });
+    });
+
+    function lerp(p, q, t) { return [p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])]; }
+
+    function drawMapped(svg, world, spec, k, a, b, c, t, labelParent) {
+      const plot = new Plot(svg, world);
+      plot.clear();
+      plot.axes();
+      plot.polyline(sampleParent(spec, 200), { stroke: "#0f766e", dash: "7 6", width: 2.3 });
+      const tk = 1 + t * (k - 1), ta = 1 + t * (a - 1), tb = t * b, tc = t * c;
+      plot.polyline(sampleImage(spec, tk, ta, tb, tc, world, 400), { stroke: "#1d4ed8", width: 2.7 });
+      const img = spec.keys.map(function (p) { return mapPoint(p, tk, ta, tb, tc); });
+      plot.dots(spec.keys, "#0f766e");
+      plot.dots(img, "#1d4ed8");
+      if (t > 0.97) plot.labels(img, "#1d4ed8");
+    }
+
+    function animateMap(svg, world, spec, k, a, b, c) {
+      const t0 = performance.now();
+      function step(now) {
+        const u = Math.min(1, (now - t0) / 1300);
+        drawMapped(svg, world, spec, k, a, b, c, 1 - Math.pow(1 - u, 3));
+        if (u < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const T1 = PARENTS.tent1;
+    const Z = PARENTS.zigzag;
+    const SQ = PARENTS.sqrt;
+    const SQF = PARENTS.sq;
+
+    function bootExamples() {
+      drawMapped(document.getElementById("ex1Plot"), { xmin: -4, xmax: 8, ymin: -3, ymax: 5 }, T1, 1, 1, 3, 2, 1);
+      drawMapped(document.getElementById("ex2aPlot"), { xmin: -1, xmax: 8, ymin: -5, ymax: 5 }, Z, 2, 1, 0, 0, 1);
+      drawMapped(document.getElementById("ex2bPlot"), { xmin: -1, xmax: 20, ymin: -3, ymax: 3 }, Z, 1, 1 / 3, 0, 0, 1);
+
+      const ex3 = new Plot(document.getElementById("ex3Plot"), { xmin: -1, xmax: 14, ymin: -10, ymax: 5 });
+      function ex3Params(u) {
+        if (u < 1 / 3) return { k: 1 + (u * 3) * (-4), a: 1, b: 0, c: 0 };
+        if (u < 2 / 3) return { k: -3, a: 1, b: (u * 3 - 1) * 5, c: 0 };
+        return { k: -3, a: 1, b: 5, c: (u * 3 - 2) * 1 };
+      }
+      function drawEx3(u) {
+        const p = ex3Params(u);
+        ex3.clear(); ex3.axes();
+        ex3.polyline(sampleParent(SQ, 200), { stroke: "#0f766e", dash: "7 6", width: 2.3 });
+        ex3.polyline(sampleImage(SQ, p.k, p.a, p.b, p.c, ex3.w, 400), { stroke: "#1d4ed8", width: 2.7 });
+        const p0 = [4, 2];
+        const p3 = mapPoint(p0, p.k, p.a, p.b, p.c);
+        ex3.dots([p0], "#0f766e");
+        ex3.dots([p3], "#1d4ed8");
+        const xy0 = ex3.xy(p0[0], p0[1]);
+        const xy3 = ex3.xy(p3[0], p3[1]);
+        el("text", { x: xy0[0] + 8, y: xy0[1] - 8, fill: "#0f766e", "font-size": "12", "font-family": "Segoe UI, sans-serif", stroke: "#fbfaf7", "stroke-width": 3, "paint-order": "stroke" }, ex3.svg).textContent = "(4, 2)";
+        el("text", { x: xy3[0] + 8, y: xy3[1] + (xy3[1] < 40 ? 16 : -8), fill: "#1d4ed8", "font-size": "12", "font-family": "Segoe UI, sans-serif", stroke: "#fbfaf7", "stroke-width": 3, "paint-order": "stroke" }, ex3.svg).textContent = "(" + nice(p3[0]) + ", " + nice(p3[1]) + ")";
+      }
+      drawEx3(1);
+      document.getElementById("btnEx3").onclick = function () {
+        const t0 = performance.now();
+        function step(now) {
+          const u = Math.min(1, (now - t0) / 2400);
+          drawEx3(u);
+          if (u < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      };
+
+      document.getElementById("btnEx1").onclick = function () {
+        animateMap(document.getElementById("ex1Plot"), { xmin: -4, xmax: 8, ymin: -3, ymax: 5 }, T1, 1, 1, 3, 2);
+      };
+      document.getElementById("btnEx2a").onclick = function () {
+        animateMap(document.getElementById("ex2aPlot"), { xmin: -1, xmax: 8, ymin: -5, ymax: 5 }, Z, 2, 1, 0, 0);
+      };
+      document.getElementById("btnEx2b").onclick = function () {
+        animateMap(document.getElementById("ex2bPlot"), { xmin: -1, xmax: 20, ymin: -3, ymax: 3 }, Z, 1, 1 / 3, 0, 0);
+      };
+
+      drawMapped(document.getElementById("orderA"), { xmin: -3, xmax: 3, ymin: -10, ymax: 10 }, SQF, 2, 1, 0, -4, 1);
+      const orderB = new Plot(document.getElementById("orderB"), { xmin: -3, xmax: 3, ymin: -10, ymax: 10 });
+      orderB.clear(); orderB.axes();
+      orderB.polyline(sampleParent(SQF, 160), { stroke: "#0f766e", dash: "7 6", width: 2.2 });
+      const pts = [];
+      for (let i = 0; i <= 160; i++) {
+        const x = -3 + 6 * i / 160;
+        pts.push([x, 2 * (x * x - 4)]);
+      }
+      orderB.polyline(pts, { stroke: "#1d4ed8", width: 2.6 });
+    }
+
+    function typesetAll() {
+      document.querySelectorAll(".tex").forEach(function (n) {
+        if (n.getAttribute("data-texed")) return;
+        const s = n.textContent;
+        n.setAttribute("data-texed", "1");
+        if (window.katex) katex.render(s, n, { throwOnError: false });
+      });
+    }
+
+    let started = false;
+    function start() {
+      if (started) return;
+      started = true;
+      typesetAll();
+      redraw();
+      bootExamples();
+    }
+    window.addEventListener("load", start);
+    setTimeout(function () { if (!studioSvg.childElementCount) start(); }, 500);
+  })();
+  </script>
+</body>
+</html>
