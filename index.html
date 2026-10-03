@@ -15,7 +15,6 @@
       --card: #fffdf8;
       --navy: #0c2340;
       --gold: #c4a35a;
-      --gold-2: #e8d7a8;
       --line: #e0d8c8;
     }
     * { box-sizing: border-box; }
@@ -57,6 +56,12 @@
       color: inherit;
       box-shadow: 0 18px 40px rgba(12, 35, 64, 0.1);
     }
+    .course.soon {
+      opacity: 0.72;
+      cursor: default;
+      pointer-events: none;
+      border-left-color: #c9c2b4;
+    }
     .course strong {
       display: block;
       font-family: Fraunces, Georgia, serif;
@@ -64,6 +69,18 @@
       margin-bottom: 0.15rem;
     }
     .course span { color: var(--muted); font-size: 0.94rem; }
+    .tag {
+      display: inline-block;
+      margin-top: 0.45rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: #eef2ff;
+      border-radius: 999px;
+      padding: 0.15rem 0.5rem;
+    }
+    .course.soon .tag { background: #efece4; color: var(--muted); }
     footer { margin-top: 2rem; color: var(--muted); font-size: 0.86rem; }
   </style>
 </head>
@@ -74,13 +91,21 @@
     <p class="lede">Lesson notes, interactive graphs and worked worksheet solutions. Sign in with your class user and password to open a chapter.</p>
     <ul class="courses">
       <li>
-        <a class="course" href="Year12Advanced/Further%20graph%20transformations%20and%20modelling/index.html">
-          <strong>Year 12 Advanced · Chapter 2</strong>
-          <span>Further graph transformations and modelling</span>
+        <a class="course" href="Year12Advanced-MathSpace/Further%20graph%20transformations%20and%20modelling/index.html">
+          <strong>Year 12 Advanced · Mathspace</strong>
+          <span>Chapter 2 — Further graph transformations and modelling</span>
+          <span class="tag">Available</span>
         </a>
       </li>
+      <li>
+        <div class="course soon">
+          <strong>Year 12 Advanced · Cambridge Book</strong>
+          <span>Topics will appear here after the Cambridge materials are prepared.</span>
+          <span class="tag">Coming next</span>
+        </div>
+      </li>
     </ul>
-    <footer>More chapters will be added here as they are prepared.</footer>
+    <footer>Mathspace materials are kept under Year12Advanced-MathSpace. Cambridge Book materials will use Year12Advanced-CambridgeBook.</footer>
   </main>
 </body>
 </html>

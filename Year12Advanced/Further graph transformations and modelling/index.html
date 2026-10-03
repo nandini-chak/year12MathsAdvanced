@@ -3,91 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chapter 2 · Further graph transformations and modelling</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="chapter.css" />
-  <script src="chapter-auth.js"></script>
+  <meta http-equiv="refresh" content="0; url=../../Year12Advanced-MathSpace/Further%20graph%20transformations%20and%20modelling/index.html" />
+  <title>Moved · Year12Advanced-MathSpace</title>
+  <link rel="canonical" href="../../Year12Advanced-MathSpace/Further%20graph%20transformations%20and%20modelling/index.html" />
 </head>
-<body data-section="home">
-  <div class="shell">
-  <div class="main">
-  <div class="site-bar">
-    <span>My Dream Australian Academy</span>
-    <span>Year 12 Mathematics Advanced</span>
-  </div>
-
-  <div class="home">
-    <h1>Further graph transformations and modelling</h1>
-    <p>This chapter is about changing a graph without starting again. Once you know the shape of a parent function, every stretch, flip and slide can be read straight from the equation — and then used to model real situations.</p>
-
-    <div class="big-idea">
-      <p class="rule"><em>y</em> = <em>k</em> f(<em>a</em>(<em>x</em> − <em>b</em>)) + <em>c</em></p>
-      <p>Four letters, four effects. <em>k</em> and <em>c</em> act vertically; <em>a</em> and <em>b</em> act horizontally. Dilations and reflections happen before translations.</p>
-    </div>
-
-    <h2>What that looks like</h2>
-    <div class="figure-row">
-
-      <figure class="figure">
-        <svg viewBox="0 0 344 210" role="img" aria-label="A parabola and the same parabola moved 2 right and 1 up">
-          <line x1="20" y1="173.5" x2="330" y2="173.5" stroke="#9aa3b0" stroke-width="1.2" />
-          <polygon points="330,169 338,173.5 330,178" fill="#9aa3b0" />
-          <line x1="143.5" y1="196" x2="143.5" y2="18" stroke="#9aa3b0" stroke-width="1.2" />
-          <polygon points="139,18 143.5,10 148,18" fill="#9aa3b0" />
-          <polyline points="55.9,43.9 77.8,100.6 99.7,141.1 121.6,165.4 143.5,173.5 165.4,165.4 187.3,141.1 209.2,100.6 231.1,43.9"
-            fill="none" stroke="#0f766e" stroke-width="2.4" stroke-dasharray="7 6" />
-          <polyline points="128.9,21.4 150.8,78.1 172.7,118.6 194.6,142.9 216.5,151 238.4,142.9 260.3,118.6 282.2,78.1 304.1,21.4"
-            fill="none" stroke="#1d4ed8" stroke-width="2.8" />
-          <circle cx="143.5" cy="173.5" r="3.4" fill="#0f766e" />
-          <circle cx="216.5" cy="151" r="3.4" fill="#1d4ed8" />
-        </svg>
-        <p class="fig-legend"><span class="p"><i></i>parent</span><span class="im"><i></i>image</span></p>
-        <figcaption><strong>Translation</strong>Every point slides the same way. The shape never changes — here 2 right and 1 up.</figcaption>
-      </figure>
-
-      <figure class="figure">
-        <svg viewBox="0 0 344 210" role="img" aria-label="A parabola and its reflection in the x-axis">
-          <line x1="20" y1="106" x2="330" y2="106" stroke="#9aa3b0" stroke-width="1.2" />
-          <polygon points="330,101.5 338,106 330,110.5" fill="#9aa3b0" />
-          <line x1="180" y1="200" x2="180" y2="18" stroke="#9aa3b0" stroke-width="1.2" />
-          <polygon points="175.5,18 180,10 184.5,18" fill="#9aa3b0" />
-          <polyline points="63.2,19.6 92.4,57.4 121.6,84.4 150.8,100.6 180,106 209.2,100.6 238.4,84.4 267.6,57.4 296.8,19.6"
-            fill="none" stroke="#0f766e" stroke-width="2.4" stroke-dasharray="7 6" />
-          <polyline points="63.2,192.4 92.4,154.6 121.6,127.6 150.8,111.4 180,106 209.2,111.4 238.4,127.6 267.6,154.6 296.8,192.4"
-            fill="none" stroke="#1d4ed8" stroke-width="2.8" />
-          <circle cx="180" cy="106" r="3.4" fill="#102033" />
-        </svg>
-        <p class="fig-legend"><span class="p"><i></i>parent</span><span class="im"><i></i>image</span></p>
-        <figcaption><strong>Reflection</strong>A negative factor outside the function flips the graph in the <em>x</em>-axis.</figcaption>
-      </figure>
-
-      <figure class="figure">
-        <svg viewBox="0 0 344 210" role="img" aria-label="A sine curve and a sine curve of double the amplitude">
-          <line x1="20" y1="106" x2="334" y2="106" stroke="#9aa3b0" stroke-width="1.2" />
-          <polygon points="334,101.5 342,106 334,110.5" fill="#9aa3b0" />
-          <line x1="34" y1="200" x2="34" y2="18" stroke="#9aa3b0" stroke-width="1.2" />
-          <polygon points="29.5,18 34,10 38.5,18" fill="#9aa3b0" />
-          <polyline points="34,106 52.25,92.2 70.5,80.5 88.75,72.7 107,70 125.25,72.7 143.5,80.5 161.75,92.2 180,106 198.25,119.8 216.5,131.5 234.75,139.3 253,142 271.25,139.3 289.5,131.5 307.75,119.8 326,106"
-            fill="none" stroke="#0f766e" stroke-width="2.4" stroke-dasharray="7 6" />
-          <polyline points="34,106 52.25,78.4 70.5,55.1 88.75,39.5 107,34 125.25,39.5 143.5,55.1 161.75,78.4 180,106 198.25,133.6 216.5,156.9 234.75,172.5 253,178 271.25,172.5 289.5,156.9 307.75,133.6 326,106"
-            fill="none" stroke="#1d4ed8" stroke-width="2.8" />
-        </svg>
-        <p class="fig-legend"><span class="p"><i></i>parent</span><span class="im"><i></i>image</span></p>
-        <figcaption><strong>Dilation</strong>The same idea runs through the trigonometric graphs: doubling the factor doubles the amplitude.</figcaption>
-      </figure>
-
-    </div>
-
-    <h2>How the chapter builds</h2>
-    <p>We start with transformations in general, using any parent function, so the language of dilation, reflection and translation is settled first. The trigonometric sections then apply exactly that language to sine, cosine and tangent — amplitude and centre from the vertical changes, period and phase from the horizontal ones — before we solve equations and model with the curves.</p>
-
-    <p class="fig-legend" style="margin-top:1.4rem">Choose a section from the left menu to open its notes and worksheet.</p>
-  </div>
-
-  </div>
-  </div>
-  <script src="chapter-nav.js"></script>
+<body>
+  <p>This chapter has moved to <a href="../../Year12Advanced-MathSpace/Further%20graph%20transformations%20and%20modelling/index.html">Year12Advanced-MathSpace</a>.</p>
 </body>
 </html>
