@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Further graph transformations and modelling · Cambridge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Chapter%206%20The%20trigonometric%20functions/chapter.css" />
+</head>
+<body data-section="theme1" data-page="hub" data-nav-depth="1" data-auth-sub="Further graph transformations and modelling">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../index.html">Site home</a></div>
+  <header class="hero">
+    <span class="kicker">Term 4 · Task 1 · Theme 1</span>
+    <h1>Further graph transformations and modelling</h1>
+    <p>Two Cambridge sections sit under this theme: logarithmic graphs (5A) and trigonometric graphs &amp; modelling (6A). Work each section as Concept → Tutorial → Exercise.</p>
+  </header>
+  <div class="wrap">
+    <div class="grid-cards">
+      <a class="lesson-card" href="../Chapter%205%20Logarithmic%20functions/5A-logarithmic-functions/index.html">
+        <strong>Cambridge 5A · Review of log base e</strong>
+        <span>Concept → Tutorial · theory → Exercise 5A. Ready for class.</span>
+      </a>
+      <a class="lesson-card" href="../Chapter%206%20The%20trigonometric%20functions/6A-trigonometric-graphs-and-modelling/index.html">
+        <strong>Cambridge 6A · Trigonometric graphs and modelling</strong>
+        <span>Concept → Tutorial · theory → Exercise 6A. Ready for class.</span>
+      </a>
+    </div>
+    <details class="teacher-note no-print">
+      <summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">
+        <p>This theme matches the school teaching map (Term 4 – Task 1). Book chapters stay in their Cambridge folders (Ch.5 / Ch.6); this page is the classroom grouping so 5A and 6A are taught as one unit of “further graph transformations and modelling.”</p>
+        <p>5A and 6A are both ready; teach in either order within Theme 1, but keep the Concept → Tutorial → Exercise flow for each section.</p>
+      </div>
+    </details>
+    <footer class="site">
+      <a href="../index.html">← Cambridge Book home</a>
+      · Theme 1 of the Year 12 Advanced Cambridge sequence.
+    </footer>
+  </div>
+  </div></div>
+  <script src="../Chapter%206%20The%20trigonometric%20functions/chapter-auth.js"></script>
+  <script>
+  // Lightweight theme nav (pack-level); full chapter nav loads inside Ch.5/Ch.6 pages.
+  (function(){
+    function el(tag,attrs,html){const n=document.createElement(tag);Object.keys(attrs||{}).forEach(k=>{if(attrs[k]!=null)n.setAttribute(k,attrs[k]);});if(html)n.innerHTML=html;return n;}
+    const nav=el("nav",{class:"chapter-nav","aria-label":"Theme navigation"});
+    nav.appendChild(el("p",{class:"nav-kicker"},"Year 12 Advanced · Cambridge"));
+    nav.appendChild(el("h2",{class:"nav-title"},"Theme 1"));
+    nav.appendChild(el("p",{class:"nav-sub"},"Further graph transformations and modelling"));
+    const list=el("ul",{class:"nav-list"});
+    [
+      {code:"Cam",title:"Cambridge home",href:"../index.html"},
+      {code:"T1",title:"Theme hub",href:"index.html",active:true},
+      {code:"5A",title:"Log base e (5A)",href:"../Chapter%205%20Logarithmic%20functions/5A-logarithmic-functions/index.html"},
+      {code:"6A",title:"Trig graphs & modelling",href:"../Chapter%206%20The%20trigonometric%20functions/6A-trigonometric-graphs-and-modelling/index.html"}
+    ].forEach(function(item){
+      const li=el("li",{class:"nav-item"+(item.active?" is-current":"")});
+      if(item.soon){
+        li.appendChild(el("div",{class:"nav-row is-soon","aria-disabled":"true"},
+          '<span class="code">'+item.code+'</span><span class="label">'+item.title+'</span><span class="badge">Soon</span>'));
+      } else {
+        li.appendChild(el("a",{class:"nav-row"+(item.active?" is-active":""),href:item.href},
+          '<span class="code">'+item.code+'</span><span class="label">'+item.title+'</span>'));
+      }
+      list.appendChild(li);
+    });
+    nav.appendChild(list);
+    nav.appendChild(el("p",{class:"nav-sub"},'<a href="../../index.html" style="color:#e8d7a8">← Site home</a>'));
+    const shell=document.querySelector(".shell");
+    const main=shell.querySelector(".main");
+    shell.insertBefore(nav, main);
+  })();
+  </script>
+</body>
+</html>

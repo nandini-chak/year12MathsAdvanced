@@ -1,9 +1,8 @@
 
 (function () {
   const depth = Number(document.body.getAttribute("data-nav-depth") || "0");
-  const prefix = depth === 2 ? "../../" : (depth === 1 ? "../" : "");
-  const secPrefix = depth === 2 ? "" : (depth === 1 ? "6A-trigonometric-graphs-and-modelling/" : "Chapter%206%20The%20trigonometric%20functions/6A-trigonometric-graphs-and-modelling/");
-  const chHome = depth === 2 ? "../index.html" : (depth === 1 ? "index.html" : "Chapter%206%20The%20trigonometric%20functions/index.html");
+  const secPrefix = depth === 2 ? "" : (depth === 1 ? "5A-logarithmic-functions/" : "Chapter%205%20Logarithmic%20functions/5A-logarithmic-functions/");
+  const chHome = depth === 2 ? "../index.html" : (depth === 1 ? "index.html" : "Chapter%205%20Logarithmic%20functions/index.html");
   const packHome = depth === 2 ? "../../index.html" : (depth === 1 ? "../index.html" : "index.html");
   const siteHome = depth === 2 ? "../../../index.html" : (depth === 1 ? "../../index.html" : "../index.html");
 
@@ -11,24 +10,27 @@
     : (depth === 1 ? "../Further%20graph%20transformations%20and%20modelling/index.html"
     : "Further%20graph%20transformations%20and%20modelling/index.html");
 
+  const sec6A = depth === 2 ? "../../Chapter%206%20The%20trigonometric%20functions/6A-trigonometric-graphs-and-modelling/index.html"
+    : (depth === 1 ? "../Chapter%206%20The%20trigonometric%20functions/6A-trigonometric-graphs-and-modelling/index.html"
+    : "Chapter%206%20The%20trigonometric%20functions/6A-trigonometric-graphs-and-modelling/index.html");
+
   const SECTIONS = [
     { id: "pack", code: "Cam", title: "Cambridge home", href: packHome },
     { id: "theme1", code: "T1", title: "Further graph transforms", href: themeHome },
-    { id: "ch6", code: "Ch.6", title: "Chapter home", href: chHome },
-    { id: "6A", code: "6A", title: "Trig graphs & modelling", ready: true, pages: [
-      { id: "hub", title: "6A hub", href: secPrefix + "index.html" },
+    { id: "ch5", code: "Ch.5", title: "Chapter home", href: chHome },
+    { id: "5A", code: "5A", title: "Review log base e", ready: true, pages: [
+      { id: "hub", title: "5A hub", href: secPrefix + "index.html" },
       { id: "concept", title: "Concept", href: secPrefix + "concept.html" },
       { id: "tutorial", title: "Tutorial · theory", href: secPrefix + "tutorial.html" },
-      { id: "problems", title: "Exercise 6A problems", href: secPrefix + "problems.html" }
+      { id: "problems", title: "Exercise 5A problems", href: secPrefix + "problems.html" }
     ]},
-    { id: "5A", code: "5A", title: "Logarithmic functions", ready: true, href: (depth === 2 ? "../../Chapter%205%20Logarithmic%20functions/5A-logarithmic-functions/index.html" : (depth === 1 ? "../Chapter%205%20Logarithmic%20functions/5A-logarithmic-functions/index.html" : "Chapter%205%20Logarithmic%20functions/5A-logarithmic-functions/index.html")) },
-    { id: "6B", code: "6B", title: "Differentiation", ready: false },
-    { id: "6C", code: "6C", title: "Diff. applications", ready: false },
-    { id: "6D", code: "6D", title: "Integration", ready: false },
-    { id: "6E", code: "6E", title: "Int. applications", ready: false },
-    { id: "6F", code: "6F", title: "Challenge", ready: false }
+    { id: "5B", code: "5B", title: "Derivative of ln x", ready: false },
+    { id: "5C", code: "5C", title: "Log applications", ready: false },
+    { id: "5D", code: "5D", title: "Integration & ln x", ready: false },
+    { id: "5E", code: "5E", title: "Log integration apps", ready: false },
+    { id: "6A", code: "6A", title: "Trig graphs (theme)", href: sec6A }
   ];
-  const currentSection = document.body.getAttribute("data-section") || "6A";
+  const currentSection = document.body.getAttribute("data-section") || "5A";
   const currentPage = document.body.getAttribute("data-page") || "";
   function el(tag, attrs, html){
     const n = document.createElement(tag);
@@ -36,10 +38,10 @@
     if (html) n.innerHTML = html;
     return n;
   }
-  const nav = el("nav", {class:"chapter-nav", id:"chapter-nav", "aria-label":"Chapter 6 sections"});
+  const nav = el("nav", {class:"chapter-nav", id:"chapter-nav", "aria-label":"Chapter 5 sections"});
   nav.appendChild(el("p",{class:"nav-kicker"},"Year 12 Advanced · Cambridge"));
-  nav.appendChild(el("h2",{class:"nav-title"},"Chapter 6"));
-  nav.appendChild(el("p",{class:"nav-sub"},"The trigonometric functions"));
+  nav.appendChild(el("h2",{class:"nav-title"},"Chapter 5"));
+  nav.appendChild(el("p",{class:"nav-sub"},"Logarithmic functions"));
   const list = el("ul",{class:"nav-list"});
   SECTIONS.forEach(sec => {
     const li = el("li",{class:"nav-item"+(sec.id===currentSection?" is-current":"")});
@@ -48,7 +50,7 @@
         '<span class="code">'+sec.code+'</span><span class="label">'+sec.title+'</span><span class="badge">Soon</span>'));
     } else {
       const parentActive = sec.id===currentSection && !currentPage;
-      li.appendChild(el("a",{class:"nav-row"+(parentActive?" is-active":""), href:sec.href},
+      li.appendChild(el("a",{class:"nav-row"+(parentActive?" is-active":""), href:sec.href || (sec.pages ? sec.pages[0].href : "#")},
         '<span class="code">'+sec.code+'</span><span class="label">'+sec.title+'</span>'));
       if (sec.pages){
         const sub = el("ul",{class:"nav-sublist"});

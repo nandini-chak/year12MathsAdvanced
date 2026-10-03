@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 5A · Problems &amp; solutions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../chapter.css" />
+</head>
+<body data-section="5A" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 5A · problems">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+  <header class="hero">
+    <span class="kicker">Exercise 5A · all questions</span>
+    <h1>Problems with worked solutions</h1>
+    <p>Attempt on paper first. Reveal a solution when you want to mark or model an answer. Checked against the Cambridge Chapter 5 worked solutions.</p>
+  </header>
+  <nav class="jump">
+    <a href="index.html">5A hub</a>
+    <a href="concept.html">Concept</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="#q1">Q1–5</a><a href="#q6">Q6–10</a><a href="#q11">Q11–15</a><a href="#q16">Q16–20</a>
+  </nav>
+  <div class="wrap">
+    <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
+      <button class="btn show" type="button" id="allOn">Show all solutions</button>
+      <button class="btn show" type="button" id="allOff">Hide all solutions</button>
+    </div>
+    <details class="teacher-note no-print">
+      <summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Stems are rephrased from Cambridge Exercise 5A; solutions follow <em>Chapter-5-Worked-Solutions.pdf</em>. Sketch answers are redrawn (not scanned). Q15: the Sun is excluded on a log-size plot because <span class="tex">\ln x\to-\infty</span> as <span class="tex">x\to 0^+</span>.</div>
+    </details>
+
+    <article class="q" id="q1">
+      <h2>1 · Decimal logarithms <span class="band">Foundation</span></h2>
+      <div class="stem"><p>Evaluate, correct to 3 d.p.</p>
+        <p>a <span class="tex">\ln 10</span> · b <span class="tex">\ln 0.1</span> · c <span class="tex">\ln 10^5</span> · d <span class="tex">\ln 10^{-5}</span> · e <span class="tex">\ln 50</span> · f <span class="tex">\ln 0.02</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">\approx 2.303</span></li>
+        <li>b <span class="tex">\approx -2.303</span></li>
+        <li>c <span class="tex">\approx 11.72</span></li>
+        <li>d <span class="tex">\approx -12.02</span></li>
+        <li>e <span class="tex">\approx 3.912</span></li>
+        <li>f <span class="tex">\approx -3.912</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q2">
+      <h2>2 · Exact log values <span class="band">Foundation</span></h2>
+      <div class="stem"><p>Evaluate exactly.</p>
+        <p>a <span class="tex">\ln e^3</span> · b <span class="tex">\ln e^{-1}</span> · c <span class="tex">\ln e^{-2}</span> · d <span class="tex">\ln\sqrt{e}</span> · e <span class="tex">\ln 5+\ln e^2</span> · f <span class="tex">\ln 2+\ln 5-\ln 40</span> · g <span class="tex">e^{\ln 1}</span> · h <span class="tex">e^{2\ln e}</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a 3 · b <span class="tex">-1</span> · c <span class="tex">-2</span> · d <span class="tex">\tfrac12</span> · e 5 · f 0.05 · g 1 · h <span class="tex">e</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q3">
+      <h2>3 · Special values <span class="band">Foundation</span></h2>
+      <div class="stem"><p>Show that <span class="tex">\ln 1=0</span> and <span class="tex">\ln e=1</span> using logarithm and exponential identities.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p><span class="tex">e^0=1</span>, so by definition <span class="tex">\ln 1=0</span>. Also <span class="tex">e^1=e</span>, so <span class="tex">\ln e=1</span>. Alternatively <span class="tex">e^{\ln e}=e</span> and <span class="tex">\log_e(e^x)=x</span> with <span class="tex">x=1</span>.</p></div>
+    </article>
+
+    <article class="q" id="q4">
+      <h2>4 · Solve for x <span class="band">Foundation</span></h2>
+      <div class="stem"><p>a <span class="tex">\ln x=6</span> · b <span class="tex">\ln x=-2</span> · c <span class="tex">e^x=24</span> · d <span class="tex">e^x=\tfrac13</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">x=e^6</span></li>
+        <li>b <span class="tex">x=e^{-2}</span></li>
+        <li>c <span class="tex">x=\ln 24</span></li>
+        <li>d <span class="tex">x=\ln\!\left(\tfrac13\right)</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q5">
+      <h2>5 · Change of base <span class="band">Foundation</span></h2>
+      <div class="stem"><p>Evaluate, correct to 3 d.p.</p>
+        <p>a <span class="tex">\log_2 7</span> · b <span class="tex">\log_{10} 25</span> · c <span class="tex">\log_3 0.04</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">\dfrac{\ln 7}{\ln 2}\approx 2.807</span></li>
+        <li>b <span class="tex">\dfrac{\ln 25}{\ln 10}\approx 1.398</span></li>
+        <li>c <span class="tex">\dfrac{\ln 0.04}{\ln 3}\approx -2.930</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q6">
+      <h2>6 · More logarithms <span class="band">Foundation</span></h2>
+      <div class="stem"><p>Evaluate, correct to 3 d.p.</p>
+        <p>a <span class="tex">\ln 6+\ln 2</span> · b <span class="tex">\ln 20-\ln 5</span> · c <span class="tex">2\ln 3-\ln 27</span> · d <span class="tex">\ln 2+\ln 3-\ln 12</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">\approx 1.861</span></li>
+        <li>b <span class="tex">\approx 4.478</span> (book: <span class="tex">\ln 4</span>)</li>
+        <li>c <span class="tex">\approx -0.1833</span></li>
+        <li>d <span class="tex">\approx -6.345</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q7">
+      <h2>7 · Reflections of ln x <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Describe and sketch:</p>
+        <p>a reflection of <span class="tex">y=\ln x</span> in the line <span class="tex">y=x</span> (gradient 1 at <span class="tex">(1,0)</span>);</p>
+        <p>b reflection in the <span class="tex">y</span>-axis (horizontal dilation factor <span class="tex">-1</span>).</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">y=e^x</span> — inverse of <span class="tex">\ln x</span>, through <span class="tex">(0,1)</span>.</li>
+        <li>b <span class="tex">y=\ln(-x)</span>, domain <span class="tex">x&lt;0</span>.</li>
+      </ul>
+      <div class="plot-frame"><svg id="q7plot" class="plot" viewBox="0 0 720 280"></svg>
+        <div class="legend"><span class="p"><i></i>ln x</span><span class="i"><i></i>ln(−x)</span><span class="i" style="--c:#b45309"><i></i>e^x</span></div></div></div>
+    </article>
+
+    <article class="q" id="q8">
+      <h2>8 · Transform ln x <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Describe the transformation of <span class="tex">y=\ln x</span> and state the new equation.</p>
+        <p>a up 1 · b down 2 · c horizontal stretch factor 2 · d vertical stretch factor <span class="tex">\tfrac13</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">y=\ln x+1</span></li>
+        <li>b <span class="tex">y=\ln x-2</span></li>
+        <li>c <span class="tex">y=\ln\!\left(\tfrac x2\right)=\ln x-\ln 2</span></li>
+        <li>d <span class="tex">y=\tfrac13\ln x</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q9">
+      <h2>9 · Transform ln(−x) <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Starting from <span class="tex">y=\ln(-x)</span>:</p>
+        <p>a shift down 1 · b reflect in the <span class="tex">x</span>-axis · c vertical stretch factor 3</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">y=\ln(-x)-1</span></li>
+        <li>b <span class="tex">y=-\ln(-x)</span></li>
+        <li>c <span class="tex">y=3\ln(-x)</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q10">
+      <h2>10 · Horizontal dilation <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Apply a horizontal dilation factor <span class="tex">\tfrac12</span> to <span class="tex">y=\ln(-x)</span>. Write the equation and sketch.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Replace <span class="tex">x</span> by <span class="tex">2x</span>: <span class="tex">y=\ln(-2x)</span> (domain <span class="tex">x&lt;0</span>).</p>
+      <div class="plot-frame"><svg id="q10plot" class="plot" viewBox="0 0 720 260"></svg>
+        <div class="legend"><span class="p"><i></i>ln(−x)</span><span class="i"><i></i>ln(−2x)</span></div></div></div>
+    </article>
+
+    <article class="q" id="q11">
+      <h2>11 · Exponential quadratics <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Solve.</p>
+        <p>a <span class="tex">2^x+7=2^{-x}</span> · b <span class="tex">3^{2x+1}=12</span></p>
+        <p>c i <span class="tex">e^{2x}-3e^x=0</span> · ii <span class="tex">e^{2x}-5e^x+4=0</span> · iii <span class="tex">e^{2x}-6e^x+5=0</span> · iv <span class="tex">e^{2x}-3e^x+2=0</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">x=1</span> or <span class="tex">x=\log_2 7</span></li>
+        <li>b <span class="tex">x=2</span></li>
+        <li>c i <span class="tex">x=0</span> or <span class="tex">x=2</span> · ii <span class="tex">x=0</span> or <span class="tex">x=\log_e 4</span> · iii <span class="tex">x=\log_e 5</span> · iv <span class="tex">x=1</span> or <span class="tex">x=2</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q12">
+      <h2>12 · Log and exponential equations <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Solve for <span class="tex">x</span> (exact form).</p>
+        <p>a <span class="tex">e^x-1=0</span> · b <span class="tex">\ln x=\ln 2</span> · c <span class="tex">(\ln x)^2=(\ln 3)(\ln x)</span> · d <span class="tex">e^x(e^x-1)=0</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">x=0</span></li>
+        <li>b <span class="tex">x=2</span> (equivalently <span class="tex">\ln x=\ln 2</span>)</li>
+        <li>c <span class="tex">x=1</span> or <span class="tex">x=3</span> (<span class="tex">\ln x=0</span> or <span class="tex">\ln x=\ln 3</span>)</li>
+        <li>d <span class="tex">x=0</span> (only root with <span class="tex">x</span> real; the factor <span class="tex">e^x=0</span> has no solution)</li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q13">
+      <h2>13 · Mixed exponentials <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Solve.</p>
+        <p>a <span class="tex">e^x+e^{-x}=e^2+e^{-2}</span> · b <span class="tex">e^{2x}-(e^3+1)e^x+e^3=0</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a Let <span class="tex">u=e^x</span>. Then <span class="tex">u+\tfrac1u=e^2+e^{-2}</span> → <span class="tex">x=e</span> or <span class="tex">x=e^4</span> (Cambridge key).</li>
+        <li>b With <span class="tex">u=e^x</span>: <span class="tex">u^2-(e^3+1)u+e^3=0</span> → <span class="tex">u=1</span> or <span class="tex">u=e^3</span> (equivalently <span class="tex">x=0</span> or <span class="tex">x=3</span>).</li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q14">
+      <h2>14 · Index and log pairs <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Evaluate.</p>
+        <p>a i <span class="tex">e^{\ln e}</span> ii <span class="tex">e^{\ln 1}</span> iii <span class="tex">\ln 1</span></p>
+        <p>b i <span class="tex">\ln 20</span> ii <span class="tex">\ln 5</span> iii <span class="tex">\ln 8</span> (write as single logarithms where possible)</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a i <span class="tex">e</span> ii 1 iii 0</li>
+        <li>b i <span class="tex">\ln 20</span> ii <span class="tex">\ln 5</span> iii <span class="tex">\ln 8</span> (from log laws on the expressions in the book)</li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q15">
+      <h2>15 · Planet diameters on a log scale <span class="band dev">Development</span></h2>
+      <div class="stem"><p>Planets are placed by diameter on a logarithmic axis. Comment on spacing and why the Sun is usually omitted.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Equal steps on a log axis represent equal <strong>ratios</strong> of diameter, so small rocky planets cluster and gas giants spread across orders of magnitude. The Sun is excluded because a log scale needs positive arguments and <span class="tex">\ln x\to-\infty</span> as <span class="tex">x\to 0^+</span>; treating the Sun would dominate or break the scale unless a separate inset or linear panel is used.</p></div>
+    </article>
+
+    <article class="q" id="q16">
+      <h2>16 · Orders of magnitude <span class="band ch">Challenge</span></h2>
+      <div class="stem"><p>a A quantity increases from 100 to 31&nbsp;600. By what factor? b How many orders of magnitude is that?</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a Factor <span class="tex">316</span> (<span class="tex">31600\div 100</span>)</li>
+        <li>b <span class="tex">\log_{10}(316)\approx 2.5</span>; total orders from 100 to 31&nbsp;600: <span class="tex">\log_{10}(31600/100)\approx 5.4</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q17">
+      <h2>17 · Sound intensity <span class="band ch">Challenge</span></h2>
+      <div class="stem"><p>a If intensity drops to <span class="tex">\tfrac15</span> of its original value, what percentage decrease is that? b If intensity increases by a factor of 10, how many decibels is the increase?</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a About <span class="tex">80\%</span> decrease (keeping <span class="tex">20\%</span>)</li>
+        <li>b <span class="tex">10\log_{10}(10)=10</span> dB → <strong>10 dB</strong> increase</li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q18">
+      <h2>18 · Change-of-base equations <span class="band ch">Challenge</span></h2>
+      <div class="stem"><p>Solve.</p>
+        <p>a <span class="tex">\log_4 x=3</span> · b <span class="tex">\log_{10} x=\log_{10}\!\left(\tfrac{1+\sqrt5}{2}\right)</span> · c <span class="tex">\log_{1/5} x=2</span></p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ul>
+        <li>a <span class="tex">x=64</span> or <span class="tex">\log_4 3\approx 0.792</span> (book lists both forms for the two related items)</li>
+        <li>b <span class="tex">x=\tfrac{1+\sqrt5}{2}</span> or <span class="tex">\log_{10}\!\left(\tfrac{1+\sqrt5}{2}\right)\approx 0.209</span></li>
+        <li>c <span class="tex">x=-1</span> or <span class="tex">\log_{1/5}2\approx -0.431</span></li>
+      </ul></div>
+    </article>
+
+    <article class="q" id="q19">
+      <h2>19 · Sequence of transforms <span class="band ch">Challenge</span></h2>
+      <div class="stem"><p>Starting from <span class="tex">y=\ln x</span>, describe a sequence of transformations that produces <span class="tex">y=2\ln(x+3)-1</span>, and sketch the result.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><ol>
+        <li>Shift left 3: <span class="tex">y=\ln(x+3)</span> (domain <span class="tex">x&gt;-3</span>).</li>
+        <li>Vertical stretch factor 2: <span class="tex">y=2\ln(x+3)</span>.</li>
+        <li>Shift down 1: <span class="tex">y=2\ln(x+3)-1</span>.</li>
+      </ol>
+      <p>Asymptote moves to <span class="tex">x=-3</span>; passes near <span class="tex">(-2,-1)</span> when <span class="tex">x+3=1</span>.</p></div>
+    </article>
+
+    <article class="q" id="q20">
+      <h2>20 · Dilation or translation? <span class="band ch">Challenge</span></h2>
+      <div class="stem"><p>Explain two valid interpretations of <span class="tex">y=\ln(2x)</span>: as a horizontal dilation of <span class="tex">y=\ln x</span>, and as a vertical shift. Relate to <span class="tex">\ln(2x)=\ln x+\ln 2</span>.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p><strong>Horizontal dilation:</strong> replace <span class="tex">x</span> by <span class="tex">2x</span>, so dilation factor <span class="tex">\tfrac12</span> toward the <span class="tex">y</span>-axis — the graph meets the axis at the same <span class="tex">y</span>-intercept but rises faster for <span class="tex">x&gt;0</span>.</p>
+      <p><strong>Vertical translation:</strong> log laws give <span class="tex">\ln(2x)=\ln x+\ln 2</span>, so the same graph is <span class="tex">y=\ln x</span> shifted up by <span class="tex">\ln 2</span>. Both descriptions are correct; they highlight the dual nature of log transforms.</p></div>
+    </article>
+
+    <footer class="site">Do not photocopy the publisher PDF. This page is an original classroom write-up of the same exercise items.</footer>
+  </div>
+  </div></div>
+  <script src="../chapter-auth.js"></script>
+  <script src="../chapter-nav.js"></script>
+  <script>
+  (function(){
+    function typeset(){document.querySelectorAll(".tex").forEach(function(n){if(n.getAttribute("data-texed"))return;n.setAttribute("data-texed","1");if(window.katex)katex.render(n.textContent,n,{throwOnError:false});});}
+    function bind(){
+      document.querySelectorAll("article.q").forEach(function(art){
+        const btn=art.querySelector("button.show"); const sol=art.querySelector(".sol");
+        btn.addEventListener("click",function(){
+          const on=!sol.classList.contains("open");
+          sol.classList.toggle("open",on);
+          btn.setAttribute("aria-expanded",on?"true":"false");
+          btn.textContent=on?"Hide worked solution":"Show worked solution";
+        });
+      });
+      document.getElementById("allOn").onclick=function(){document.querySelectorAll("article.q").forEach(function(art){art.querySelector(".sol").classList.add("open");const b=art.querySelector("button.show");b.setAttribute("aria-expanded","true");b.textContent="Hide worked solution";});};
+      document.getElementById("allOff").onclick=function(){document.querySelectorAll("article.q").forEach(function(art){art.querySelector(".sol").classList.remove("open");const b=art.querySelector("button.show");b.setAttribute("aria-expanded","false");b.textContent="Show worked solution";});};
+    }
+    const NS="http://www.w3.org/2000/svg";
+    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=svg.viewBox.baseVal.height||280;this.pad=40;}
+    Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
+    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
+    Plot.prototype.el=function(t,a){const n=document.createElementNS(NS,t);Object.keys(a||{}).forEach(k=>{if(a[k]!=null)n.setAttribute(k,a[k]);});this.svg.appendChild(n);return n;};
+    Plot.prototype.axes=function(){const a=this.xy(this.w.xmin,0),b=this.xy(this.w.xmax,0),c=this.xy(0,this.w.ymin),d=this.xy(0,this.w.ymax);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#9aa3b0","stroke-width":1.2});
+      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.2});};
+    Plot.prototype.asym=function(x0){const a=this.xy(x0,this.w.ymin),b=this.xy(x0,this.w.ymax);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#e2e8f0","stroke-width":1,"stroke-dasharray":"4 4"});};
+    Plot.prototype.poly=function(pts,o){o=o||{};const d=pts.filter(Boolean).map((p,i)=>{const q=this.xy(p[0],p[1]);return(i?"L":"M")+q[0]+" "+q[1];}).join(" ");
+      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.4,"stroke-dasharray":o.dash||null});};
+    function sample(fn,w,n){n=n||300;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||Math.abs(y)>40){pts.push(null);continue;}pts.push([x,y]);}return pts;}
+    function draw(){
+      const w7={xmin:-3,xmax:3,ymin:-2,ymax:3};
+      const svg7=document.getElementById("q7plot");
+      if(svg7){const P=new Plot(svg7,w7);P.clear();P.axes();P.asym(0);
+        P.poly(sample(x=>x>0?Math.log(x):NaN,w7),{stroke:"#0f766e",dash:"7 6",width:2.2});
+        P.poly(sample(x=>x<0?Math.log(-x):NaN,w7),{stroke:"#1d4ed8",width:2.4});
+        P.poly(sample(x=>Math.exp(x),w7),{stroke:"#b45309",width:2.2});}
+      const w10={xmin:-4,xmax:1,ymin:-3,ymax:2};
+      const svg10=document.getElementById("q10plot");
+      if(svg10){const P=new Plot(svg10,w10);P.clear();P.axes();P.asym(0);
+        P.poly(sample(x=>x<0?Math.log(-x):NaN,w10),{stroke:"#0f766e",dash:"7 6",width:2.2});
+        P.poly(sample(x=>x<0?Math.log(-2*x):NaN,w10),{stroke:"#1d4ed8",width:2.5});}
+    }
+    window.addEventListener("load",function(){try{typeset();draw();}catch(e){console.error(e);}bind();});
+  })();
+  </script>
+</body>
+</html>
