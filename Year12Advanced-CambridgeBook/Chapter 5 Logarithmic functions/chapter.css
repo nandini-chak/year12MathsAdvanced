@@ -25,6 +25,8 @@ html.auth-locked .shell{visibility:hidden}
 .auth-card .btn{width:100%;padding:.55rem .9rem}
 .auth-error{margin:0 0 .75rem;font-size:.86rem;color:#b91c1c}
 .shell{display:grid;grid-template-columns:var(--nav-w) minmax(0,1fr);min-height:100vh;width:100%}
+/* Pack/home pages have .shell but no chapter-nav — do not leave a blank 250px first column */
+.shell:not(:has(> .chapter-nav)){grid-template-columns:1fr}
 .main{min-width:0}
 .chapter-nav{background:#08182c;color:#f4ecd9;padding:1.05rem .85rem 1.6rem;position:sticky;top:0;height:100vh;overflow-y:auto;border-right:1px solid rgba(232,215,168,.16)}
 .nav-kicker{margin:0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-2)}
