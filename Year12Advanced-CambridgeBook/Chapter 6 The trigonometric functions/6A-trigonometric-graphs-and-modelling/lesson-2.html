@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6A Lesson 2 · Combined transformations & modelling</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../chapter.css" />
+</head>
+<body data-section="6A" data-page="lesson2" data-nav-depth="2" data-auth-sub="6A Lesson 2 · 45 minutes">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+  <header class="hero">
+    <span class="kicker">Lesson 2 · 45 minutes · 6A</span>
+    <h1>Combined transformations and modelling</h1>
+    <p>Factor the inner expression, apply dilations before translations, then read amplitude, period and mean in a real context.</p>
+  </header>
+  <nav class="jump">
+    <a href="lesson-1.html">← Lesson 1</a>
+    <a href="#notes">Notes</a>
+    <a href="#morph">Combined morph</a>
+    <a href="#model">Modelling</a>
+    <a href="problems.html">Exercise 6A</a>
+  </nav>
+  <div class="wrap">
+    <section class="notes" id="notes">
+      <h2>Notes to copy</h2>
+      <div class="note-block">
+        <h3>Combined sine / cosine form</h3>
+        <div class="formula"><span class="tex">y=A\sin\big(n(x-b)\big)+c</span></div>
+        <ul>
+          <li><span class="tex">|A|</span> = amplitude; <span class="tex">c</span> = mean position.</li>
+          <li>Period <span class="tex">=2\pi/|n|</span>.</li>
+          <li>Order: dilations / reflections first, then translations.</li>
+          <li>Always factor: <span class="tex">\sin(3x+\pi/2)=\sin\big(3(x+\pi/6)\big)</span>, so the shift is <span class="tex">-\pi/6</span> (left), not “π/2 left”.</li>
+        </ul>
+      </div>
+      <div class="note-block">
+        <h3>Modelling checklist</h3>
+        <ul>
+          <li>Amplitude = distance from mean to crest.</li>
+          <li>Period = time for one full cycle.</li>
+          <li>Mean = centre line of the oscillation.</li>
+          <li>Read <span class="tex">t=0</span> carefully (starting position).</li>
+        </ul>
+      </div>
+      <details class="tutor-note no-print">
+        <summary><span class="ico">T</span> Tutor note</summary>
+        <div class="body">Lesson 2 mirrors Cambridge Example 5 (combined transforms) and the modelling flavour of Exercise 6A Q13–15. Contexts are paraphrased; numbers match the book’s spring / tide / temperature items when practised on the problems page.</div>
+      </details>
+    </section>
+
+    <section class="card" id="morph">
+      <h2 class="section-h">Interactive · build <span class="tex">y=3\cos(2x+\pi/2)-2</span></h2>
+      <p>Watch the four steps. Parent is <span class="tex">y=\cos x</span> (dashed). Click <em>Play sequence</em>.</p>
+      <div class="plot-frame"><svg id="morphPlot" class="plot" viewBox="0 0 720 360"></svg>
+        <div class="legend"><span class="p"><i></i>parent cos x</span><span class="i"><i></i>current image</span></div>
+      </div>
+      <p id="stepWords" class="eq-live">Ready.</p>
+      <button class="btn" type="button" id="play">Play sequence</button>
+      <button class="btn ghost" type="button" id="showFinal">Jump to final</button>
+      <details class="tutor-note no-print">
+        <summary><span class="ico">T</span> Tutor note</summary>
+        <div class="body">Cambridge Example 5 uses <span class="tex">y=3\cos(2x+\pi/2)-2</span>, equivalently <span class="tex">y=3\cos 2(x+\pi/4)-2</span>. The animation factors first, then dilates, then shifts left <span class="tex">\pi/4</span>, then down 2. If you prefer the book’s unfactored order, say so in class — both end at the same graph.</div>
+      </details>
+    </section>
+
+    <section class="card" id="model">
+      <h2 class="section-h">Modelling mini-example (board)</h2>
+      <p>A spring: <span class="tex">x=-6\cos(\pi t)</span>, with <span class="tex">x</span> in cm and <span class="tex">t</span> in seconds.</p>
+      <div class="two">
+        <div>
+          <ul>
+            <li>At <span class="tex">t=0</span>: <span class="tex">x=-6</span> (6 cm below the origin).</li>
+            <li>Amplitude 6 cm; period <span class="tex">2\pi/\pi=2</span> s.</li>
+            <li>Distance between extremes: <span class="tex">12</span> cm.</li>
+          </ul>
+        </div>
+        <div class="plot-frame"><svg id="springPlot" class="plot" viewBox="0 0 720 300"></svg></div>
+      </div>
+      <p>Students then attempt Exercise 6A modelling questions on paper; reveal solutions on the problems page when marking.</p>
+      <p><a class="btn" href="problems.html">Open Exercise 6A problems</a>
+         <a class="btn ghost" href="tutorial.html">Theory tutorial</a></p>
+    </section>
+    <footer class="site">Suggested timing: notes 8′ · morph 18′ · modelling 12′ · start Exercise 6A 7′.</footer>
+  </div>
+  </div></div>
+  <script src="../chapter-auth.js"></script>
+  <script src="../chapter-nav.js"></script>
+  <script>
+  (function(){
+    const NS="http://www.w3.org/2000/svg";
+    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=svg.viewBox.baseVal.height||360;this.pad=40;}
+    Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
+    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
+    Plot.prototype.el=function(t,a){const n=document.createElementNS(NS,t);Object.keys(a||{}).forEach(k=>{if(a[k]!=null)n.setAttribute(k,a[k]);});this.svg.appendChild(n);return n;};
+    Plot.prototype.axes=function(){const a=this.xy(this.w.xmin,0),b=this.xy(this.w.xmax,0),c=this.xy(0,this.w.ymin),d=this.xy(0,this.w.ymax);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#9aa3b0","stroke-width":1.2});
+      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.2});};
+    Plot.prototype.poly=function(pts,o){o=o||{};const d=pts.filter(Boolean).map((p,i)=>{const q=this.xy(p[0],p[1]);return(i?"L":"M")+q[0]+" "+q[1];}).join(" ");
+      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.5,"stroke-dasharray":o.dash||null});};
+    Plot.prototype.hline=function(y){const a=this.xy(this.w.xmin,y),b=this.xy(this.w.xmax,y);this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#b45309","stroke-width":1.5,"stroke-dasharray":"4 4"});};
+    function sample(fn,w,n){n=n||360;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||Math.abs(y)>50){pts.push(null);continue;}pts.push([x,y]);}return pts;}
+
+    function drawState(A,n,b,c,words){
+      const svg=document.getElementById("morphPlot");
+      const P=new Plot(svg,{xmin:-Math.PI,xmax:2*Math.PI,ymin:-6,ymax:4});
+      P.clear();P.axes();
+      P.poly(sample(Math.cos,P.w),{stroke:"#0f766e",dash:"7 6",width:2.2});
+      P.poly(sample(x=>A*Math.cos(n*(x-b))+c,P.w),{stroke:"#1d4ed8",width:2.7});
+      if(c!==0) P.hline(c);
+      document.getElementById("stepWords").textContent=words;
+    }
+    const steps=[
+      [1,1,0,0,"Start: y = cos x"],
+      [1,2,0,0,"Dilate horizontally by 1/2: y = cos 2x (period π)"],
+      [3,2,0,0,"Dilate vertically by 3: y = 3 cos 2x"],
+      [3,2,-Math.PI/4,0,"Shift left π/4: y = 3 cos 2(x+π/4) = 3 cos(2x+π/2)"],
+      [3,2,-Math.PI/4,-2,"Shift down 2: y = 3 cos(2x+π/2) − 2. Mean y = −2; range [−5,1]."]
+    ];
+    let timer=null;
+    function play(){
+      if(timer) clearInterval(timer);
+      let i=0; drawState.apply(null,steps[0]);
+      timer=setInterval(function(){ i++; if(i>=steps.length){clearInterval(timer);timer=null;return;} drawState.apply(null,steps[i]); },1400);
+    }
+    document.getElementById("play").onclick=play;
+    document.getElementById("showFinal").onclick=function(){ if(timer)clearInterval(timer); drawState.apply(null,steps[steps.length-1]); };
+
+    function spring(){
+      const svg=document.getElementById("springPlot");
+      const P=new Plot(svg,{xmin:0,xmax:4,ymin:-7,ymax:7}); P.H=300;
+      P.clear();P.axes();
+      P.poly(sample(t=>-6*Math.cos(Math.PI*t),P.w),{stroke:"#1d4ed8",width:2.7});
+    }
+
+    function boot(){
+      document.querySelectorAll(".tex").forEach(function(n){if(n.getAttribute("data-texed"))return;n.setAttribute("data-texed","1");if(window.katex)katex.render(n.textContent,n,{throwOnError:false});});
+      drawState.apply(null,steps[0]); spring();
+    }
+    window.addEventListener("load",boot); setTimeout(boot,400);
+  })();
+  </script>
+</body>
+</html>
