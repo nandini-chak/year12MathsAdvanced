@@ -23,15 +23,6 @@
           "slug": "5A-logarithmic-functions",
           "folder": "Chapter 5 Logarithmic functions",
           "status": "ready"
-        },
-        {
-          "code": "4A",
-          "title": "Review of the exponential function base e",
-          "ch": 4,
-          "slug": "4A-review-exponential-base-e",
-          "folder": "Chapter 4 Exponential functions",
-          "status": "ready",
-          "inferredTheme": "Graph review of y=e^x (parallel to 5A); not listed on map \u2014 placed in Theme 1"
         }
       ]
     },
@@ -183,6 +174,14 @@
           "ch": 2,
           "slug": "2H-max-min-applications",
           "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "4A",
+          "title": "Review of the exponential function base e",
+          "ch": 4,
+          "slug": "4A-review-exponential-base-e",
+          "folder": "Chapter 4 Exponential functions",
           "status": "ready"
         },
         {

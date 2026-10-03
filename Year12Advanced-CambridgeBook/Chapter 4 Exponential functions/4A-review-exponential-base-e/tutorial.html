@@ -8,50 +8,153 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .studio { display: grid; grid-template-columns: minmax(0,1fr) minmax(220px,280px); gap: 1rem; align-items: start; }
+    @media (max-width: 720px) { .studio { grid-template-columns: 1fr; } }
+    .studio-controls label { display: block; font-size: 0.88rem; margin: 0.5rem 0 0.2rem; color: var(--muted); }
+    .studio-controls input[type=range] { width: 100%; }
+    .eq-live { font-size: 1.05rem; margin: 0.4rem 0 0.8rem; min-height: 2.2rem; }
+  </style>
 </head>
 <body data-section="4A" data-page="tutorial" data-nav-depth="2" data-auth-sub="4A Tutorial">
   <div class="shell"><div class="main">
   <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
-<nav class="jump">
-<a href="../../index.html">Course</a>
-<a href="../../Chapter 5 Logarithmic functions/5A-logarithmic-functions/concept.html">← 5A</a>
-<a href="concept.html">Concept</a>
-<a href="tutorial.html">Tutorial</a>
-<a href="problems.html">Exercise</a>
-<a href="../../Chapter 1 Sequences and series/1A-sequences-and-how-to-specify-them/concept.html">1A →</a>
-</nav>
   <header class="hero">
-    <span class="kicker">Tutorial · theory</span>
-    <h1>4A · Review of the exponential function base e</h1>
-    <p>Paraphrased from Cambridge Chapter 4 §4A. Not a PDF reprint.</p>
+    <span class="kicker">Tutorial · theory &amp; ideas</span>
+    <h1>Review of the exponential function base e</h1>
+    <p>Definition of <span class="tex">e</span>, graph features, transforms, dilations that are also shifts, and tangents/normals. Use after the Concept page.</p>
   </header>
+    <nav class="jump">
+    <a href="../../index.html">Course</a>
+    <a href="../../Chapter 2 Differentiation applications/2H-max-min-applications/concept.html">← 2H</a>
+    <a href="concept.html">Concept</a>
+    <a href="tutorial.html">Tutorial</a>
+    <a href="problems.html">Exercise</a>
+    <a href="../4B-diff-exponential/concept.html">4B →</a>
+  </nav>
   <div class="wrap">
-    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-4-Worked-Solutions.pdf.</div>
+    <details class="teacher-note no-print">
+      <summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Paraphrased from Cambridge §4A. Studio uses <span class="tex">y=A e^{n(x-b)}+c</span>. Chain-rule forms like <span class="tex">e^{f(x)}</span> wait for §4B.</div>
     </details>
-    <section class="card">
-      <h2 class="section-h">Theory and ideas</h2>
-      <p>174 Chapter 4 Exponential functions 4A 4A Review of the exponential function base e Learning intentions • Review the definition of e and the derivative of the function y = ex. • Review the graph of y = ex and its transformations. • Observe when a vertical translation is the same as a horizontal dilation. • Review tangents and normals to graphs involving ex. This opening section is a review of the function y = ex — its graph, its transformations, and its derivative. The number e and the function y = ex The fundamental result established in Chapter 10 of the Year 11 book is that the function y = ex is its own derivative: d dx ex = ex , that is, gradient equals height at each point. We defined the number e ≑2.7183 to be the base so that the exponential graph y = ex has gradient exactly 1 at its y-intercept. It is an irrational number, and plays a role in exponential functions very similar to the role of π in trigonometric functions. x y 1 −1 1 2 e The most significant properties of y = ex and its graph are listed below in Box 1: 1 The function y = ex • There is only one exponential function y = ex that is its own derivative, and the number e ≑2.7183 is defined to be the base of this function. Thus: d dx ex = ex , that is, at each point, gradient equals height. • The gradient at the y-intercept is 1 (where the height is also 1). • Differentiating again, d2 d2x ex = ex, so the function is always concave up. • Thus the function is always positive, it is always increasing, and the rate of increase is always increasing. • The domain is all real numbers, and the range is y &gt; 0. • The line y = 0 is a horizontal asymptote on the left, and y →∞as x →∞. Chapters 8 and 10 in Year 11 introduced logarithms, and the next chapter will deal with the calculus of logarithms. But this chapter requires from Chapter 10 the inverse function loge x of ex and the two standard inverse function identities: loge ex = x for all real x and eloge x = x for x &gt; 0 . Using the calculator On the calculator, ln means loge x and log means log10 x. The function ex is usually on the same button as loge x, and is accessed using shift followed by ln , or by some similar sequence. The notation ln x is a perfectly acceptable alternative to loge x, but this book mostly uses loge x in order to emphasise that the base is a crucial part of the mathematics, and must never be forgotten.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>4A Review of the exponential function base e 175 Transformations of y = ex Translations and reflections were applied to the curves, as in the next worked example. The first part shows the graph of y = e−x, which is just as important in science as y = ex, because the function y = ex governs exponential growth, and the function y = e−x governs exponential decay. Example 1 Translating and reflecting y = ex Sketch each function by transforming the graph of y = ex sketched to the right. Describe the transformation, show the y-intercept and the horizontal asymptote, and state the range. y = e−x a y = ex + 3 b y = ex−2 c x y 1 1 e Solution x y −1 1 e To graph y = e−x, reflect y = ex in y-axis. Range: y &gt; 0 a x y 1 3 4 e + 3 To graph y = ex + 3, shift y = ex up 3. Range: y &gt; 3 b x y 2 1 e−2 To graph y = ex−2, shift y = ex right 2. Range: y &gt; 0 c Which transformations can also be done using a dilation? • The equation y = e−x in part a is a reflection in the y-axis, and any reflection in the y-axis can be regarded as a horizontal dilation with factor −1. • The equation y = ex−2 in part c can be written as y = e−2 × ex, so it is also a vertical dilation of y = ex with factor e−2 ≑0.135. Dilations of y = ex A vertical dilation of an exponential function with positive factor has an interesting property — it can be done with a horizontal shift, as in part c above.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>176 Chapter 4 Exponential functions 4A Example 2 Dilating y = ex Use dilations of y = ex to generate a sketch of each function. Identify which dilation is also a shift in the other direction. y = e3x a y = 3ex b Solution  3 x y  e Dilate y = ex horizontally with factor 1 3. a x y   e Dilate y = ex vertically with factor 3. b • In part b, we can write 3 = eln 3, so y = 3ex in part b can be written as y = eloge 3 × ex = ex+loge 3. Thus the curve is also a shift left by loge 3. Tangents and normals to exponential functions Now that we have the derivative of y = ex, we can apply the standard methods of calculus to finding tangents and normals in sketches of exponential functions. The next section will apply the chain, product and quotient rules, but at the moment, we can only deal with multiples of ex, as in the next worked example. Example 3 The geometry of tangents and normals Let A be the point on the curve y = 2ex where x = 1. a Find the equations of the tangent and normal at the point A. b Show that the tangent at A passes through the origin, and find the point B where the normal meets the x-axis. c Sketch the situation, and find the area of △AOB. Solution a Substituting into y = 2ex shows that A = (1, 2e). Differentiating y = 2ex gives y′ = 2ex, so at A(1, 2e), where x = 1, y′ = 2e (which we know because gradient = height). Hence, using point–gradient form, the tangent at A is: y −y1 = m(x −x1) y −2e = 2e(x −1) y = 2ex. The normal at A has gradient −1 2e (it is perpendicular to the tangent), so its equation is y −2e = −1 2e(x −1) × 2e 2ey −4e2 = −x + 1 x + 2ey = 4e2 + 1.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>4A Review of the exponential function base e 177 b The tangent passes through the origin O because its y-intercept is zero. To find the x-intercept B of the normal, put y = 0, thus x = 4e2 + 1, so B has coordinates (4e2 + 1, 0). c Hence area △AOB = 1 2 × base × height = 1 2 × (4e2 + 1) × 2e = e(4e2 + 1) square units. 4 1 e2 + x y 1 2 A O B 2e</p>
-    </section>
-    <p><a class="btn" href="problems.html">Exercise 4A →</a>
-       <a class="btn ghost" href="concept.html">← Concept</a></p>
-    <footer class="site">Next: Exercise 4A, then section 1A.</footer>
-  </div>
 
+    <section class="card" id="def">
+      <h2 class="section-h">The number e and <span class="tex">y=e^x</span></h2>
+      <p>There is only one exponential that is its own derivative. The base of that function is <span class="tex">e\approx 2.7183</span>, chosen so the graph has gradient 1 at the <span class="tex">y</span>-intercept.</p>
+      <div class="formula"><span class="tex">\dfrac{d}{dx}e^x=e^x\qquad\text{(gradient = height)}</span></div>
+      <ul>
+        <li>Second derivative is also <span class="tex">e^x</span> → always concave up.</li>
+        <li>Domain <span class="tex">\mathbb R</span>, range <span class="tex">y&gt;0</span>; asymptote <span class="tex">y=0</span> as <span class="tex">x\to-\infty</span>.</li>
+        <li>Inverse: <span class="tex">\log_e x</span> (or <span class="tex">\ln x</span>), with <span class="tex">\log_e(e^x)=x</span> and <span class="tex">e^{\log_e x}=x</span> (<span class="tex">x&gt;0</span>).</li>
+      </ul>
+    </section>
+
+    <section class="card" id="studio">
+      <h2 class="section-h">Exponential graph studio</h2>
+      <p>Explore <span class="tex">y=A\,e^{n(x-b)}+c</span>. Parent <span class="tex">y=e^x</span> is dashed teal.</p>
+      <div class="studio">
+        <div class="plot-frame"><svg id="studioPlot" class="plot" viewBox="0 0 720 320"></svg>
+          <div class="legend"><span class="p"><i></i>y = e^x</span><span class="i"><i></i>transformed</span></div>
+        </div>
+        <div class="studio-controls card" style="margin:0;padding:0.85rem">
+          <p class="eq-live"><span class="tex" id="studioEq">y=e^{x}</span></p>
+          <label for="slA">A (vertical scale)</label>
+          <input id="slA" type="range" min="-2" max="3" step="0.1" value="1" />
+          <label for="slN">n (horizontal scale / reflection)</label>
+          <input id="slN" type="range" min="-2" max="2" step="0.1" value="1" />
+          <label for="slB">b (horizontal shift)</label>
+          <input id="slB" type="range" min="-2" max="2" step="0.1" value="0" />
+          <label for="slC">c (vertical shift)</label>
+          <input id="slC" type="range" min="-3" max="3" step="0.1" value="0" />
+          <details class="teacher-note no-print" style="margin-top:0.6rem"><summary><span class="ico">T</span> Teacher note</summary>
+            <div class="body">Try <span class="tex">A=3</span>, <span class="tex">n=1</span>, <span class="tex">b=0</span>: same curve as shifting left by <span class="tex">\ln 3</span>. Try <span class="tex">n=-1</span> for decay.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="ex1">
+      <h2 class="section-h">Example 1 · Translating and reflecting</h2>
+      <p>From <span class="tex">y=e^x</span>:</p>
+      <ul>
+        <li><span class="tex">y=e^{-x}</span> — reflect in the <span class="tex">y</span>-axis; range <span class="tex">y&gt;0</span>; also a horizontal dilation with factor <span class="tex">-1</span>.</li>
+        <li><span class="tex">y=e^x+3</span> — shift up 3; asymptote <span class="tex">y=3</span>; range <span class="tex">y&gt;3</span>.</li>
+        <li><span class="tex">y=e^{x-2}</span> — shift right 2; also <span class="tex">e^{-2}e^x</span> (vertical dilation by <span class="tex">e^{-2}</span>).</li>
+      </ul>
+      <div class="plot-frame"><svg id="ex1Plot" class="plot" viewBox="0 0 720 280"></svg>
+        <div class="legend"><span class="p"><i></i>e^x</span><span class="i"><i></i>e^{−x}</span></div>
+      </div>
+    </section>
+
+    <section class="card" id="ex2">
+      <h2 class="section-h">Example 2 · Dilations that are also shifts</h2>
+      <ul>
+        <li><span class="tex">y=e^{3x}</span> — horizontal dilation with factor <span class="tex">\tfrac13</span>.</li>
+        <li><span class="tex">y=3e^x</span> — vertical dilation with factor 3. Because <span class="tex">3=e^{\ln 3}</span>, this is also <span class="tex">y=e^{x+\ln 3}</span> (shift left by <span class="tex">\ln 3</span>).</li>
+      </ul>
+      <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+        <div class="body">Students often miss that a positive vertical stretch of <span class="tex">e^x</span> is the same as a horizontal translation. Make them rewrite the coefficient as <span class="tex">e^{\ln A}</span>.</div>
+      </details>
+    </section>
+
+    <section class="card" id="ex3">
+      <h2 class="section-h">Example 3 · Tangent and normal</h2>
+      <p>On <span class="tex">y=2e^x</span> at <span class="tex">x=1</span>: point <span class="tex">A=(1,2e)</span>. Then <span class="tex">y'=2e^x</span>, so at A the gradient is <span class="tex">2e</span> (equals the height).</p>
+      <ul>
+        <li>Tangent: <span class="tex">y-2e=2e(x-1)\Rightarrow y=2ex</span> (through the origin).</li>
+        <li>Normal gradient <span class="tex">-\dfrac{1}{2e}</span>; equation <span class="tex">x+2ey=4e^2+1</span>.</li>
+        <li>Normal meets the <span class="tex">x</span>-axis at <span class="tex">B=(4e^2+1,\,0)</span>; area of <span class="tex">\triangle AOB</span> is <span class="tex">e(4e^2+1)</span>.</li>
+      </ul>
+      <p><a class="btn" href="problems.html">Practise Exercise 4A</a>
+         <a class="btn ghost" href="concept.html">← Concept</a></p>
+    </section>
+    <footer class="site">Theory tutorial for §4A. Path: Concept → Tutorial → Exercise 4A → 4B.</footer>
+    <p class="credit-note">Created by Nandini C</p>
+  </div>
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    const NS="http://www.w3.org/2000/svg";
+    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=+svg.getAttribute("viewBox").split(" ")[3];this.pad=44;}
+    Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
+    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
+    Plot.prototype.line=function(x1,y1,x2,y2,cls){const[a,b]=this.xy(x1,y1),[c,d]=this.xy(x2,y2);const e=document.createElementNS(NS,"line");e.setAttribute("x1",a);e.setAttribute("y1",b);e.setAttribute("x2",c);e.setAttribute("y2",d);e.setAttribute("class",cls||"axis");this.svg.appendChild(e);};
+    Plot.prototype.path=function(pts,cls){let d="";pts.forEach((p,i)=>{const[X,Y]=this.xy(p[0],p[1]);d+=(i?"L":"M")+X+" "+Y;});const e=document.createElementNS(NS,"path");e.setAttribute("d",d);e.setAttribute("class",cls||"curve");this.svg.appendChild(e);};
+    Plot.prototype.axes=function(){const w=this.w;this.line(w.xmin,0,w.xmax,0);this.line(0,w.ymin,0,w.ymax);};
+    function sample(f,a,b,n){const pts=[];for(let i=0;i<=n;i++){const x=a+i*(b-a)/n,y=f(x);if(isFinite(y)&&Math.abs(y)<1e6)pts.push([x,y]);}return pts;}
+    function texAll(){document.querySelectorAll(".tex").forEach(function(n){if(n.getAttribute("data-texed")&&n.id!=="studioEq")return;n.setAttribute("data-texed","1");if(window.katex)katex.render(n.textContent,n,{throwOnError:false});});}
+
+    const ex1=document.getElementById("ex1Plot");
+    if(ex1){const p=new Plot(ex1,{xmin:-3,xmax:2.5,ymin:-0.5,ymax:8});p.clear();p.axes();
+      p.path(sample(x=>Math.exp(x),-3,2.5,80),"curve parent");
+      p.path(sample(x=>Math.exp(-x),-3,2.5,80),"curve image");
+    }
+
+    const A=document.getElementById("slA"), N=document.getElementById("slN"), B=document.getElementById("slB"), C=document.getElementById("slC");
+    const svg=document.getElementById("studioPlot"), eq=document.getElementById("studioEq");
+    function draw(){
+      if(!svg) return;
+      const a=+A.value,n=+N.value,b=+B.value,c=+C.value;
+      const p=new Plot(svg,{xmin:-3,xmax:3,ymin:-2,ymax:10});
+      p.clear(); p.axes();
+      p.path(sample(x=>Math.exp(x),-3,3,80),"curve parent");
+      p.path(sample(x=>a*Math.exp(n*(x-b))+c,-3,3,100),"curve image");
+      let s="y=";
+      if(a!==1) s+=(Math.abs(a)===1?(a<0?"-":""):a)+"";
+      if(a===-1) s+="";
+      s+="e^{";
+      if(n!==1) s+=n;
+      s+=(b===0?"x":"(x"+(b>0?"-":"+")+Math.abs(b)+")");
+      s+="}";
+      if(c!==0) s+=(c>0?"+":"")+c;
+      if(a===1&&n===1&&b===0&&c===0) s="y=e^{x}";
+      eq.removeAttribute("data-texed"); eq.textContent=s;
+      if(window.katex) katex.render(eq.textContent, eq, {throwOnError:false});
+    }
+    [A,N,B,C].forEach(el=>el&&el.addEventListener("input",draw));
+    function boot(){texAll();draw();}
+    if(window.katex) boot(); else setTimeout(boot,200);
+  })();
   </script>
 </body></html>
