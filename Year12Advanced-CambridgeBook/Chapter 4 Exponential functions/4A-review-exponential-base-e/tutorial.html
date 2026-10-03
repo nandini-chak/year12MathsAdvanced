@@ -54,7 +54,7 @@
       <p>Explore <span class="tex">y=A\,e^{n(x-b)}+c</span>. Parent <span class="tex">y=e^x</span> is dashed teal.</p>
       <div class="studio">
         <div class="plot-frame"><svg id="studioPlot" class="plot" viewBox="0 0 720 320"></svg>
-          <div class="legend"><span class="p"><i></i>y = e^x</span><span class="i"><i></i>transformed</span></div>
+          <div class="legend"><span class="p"><i></i><span class="tex">y=e^x</span></span><span class="i"><i></i>transformed</span></div>
         </div>
         <div class="studio-controls card" style="margin:0;padding:0.85rem">
           <p class="eq-live"><span class="tex" id="studioEq">y=e^{x}</span></p>
@@ -81,7 +81,7 @@
         <li><span class="tex">y=e^{x-2}</span> — shift right 2; also <span class="tex">e^{-2}e^x</span> (vertical dilation by <span class="tex">e^{-2}</span>).</li>
       </ul>
       <div class="plot-frame"><svg id="ex1Plot" class="plot" viewBox="0 0 720 280"></svg>
-        <div class="legend"><span class="p"><i></i>e^x</span><span class="i"><i></i>e^{−x}</span></div>
+        <div class="legend"><span class="p"><i></i><span class="tex">e^x</span></span><span class="i"><i></i><span class="tex">e^{-x}</span></span></div>
       </div>
     </section>
 
@@ -123,7 +123,14 @@
     Plot.prototype.path=function(pts,cls){let d="";pts.forEach((p,i)=>{const[X,Y]=this.xy(p[0],p[1]);d+=(i?"L":"M")+X+" "+Y;});const e=document.createElementNS(NS,"path");e.setAttribute("d",d);e.setAttribute("class",cls||"curve");this.svg.appendChild(e);};
     Plot.prototype.axes=function(){const w=this.w;this.line(w.xmin,0,w.xmax,0);this.line(0,w.ymin,0,w.ymax);};
     function sample(f,a,b,n){const pts=[];for(let i=0;i<=n;i++){const x=a+i*(b-a)/n,y=f(x);if(isFinite(y)&&Math.abs(y)<1e6)pts.push([x,y]);}return pts;}
-    function texAll(){document.querySelectorAll(".tex").forEach(function(n){if(n.getAttribute("data-texed")&&n.id!=="studioEq")return;n.setAttribute("data-texed","1");if(window.katex)katex.render(n.textContent,n,{throwOnError:false});});}
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed") && n.id!=="studioEq") return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
 
     const ex1=document.getElementById("ex1Plot");
     if(ex1){const p=new Plot(ex1,{xmin:-3,xmax:2.5,ymin:-0.5,ymax:8});p.clear();p.axes();
@@ -154,7 +161,9 @@
     }
     [A,N,B,C].forEach(el=>el&&el.addEventListener("input",draw));
     function boot(){texAll();draw();}
-    if(window.katex) boot(); else setTimeout(boot,200);
+    function waitBoot(){ if(window.katex) boot(); else setTimeout(waitBoot,100); }
+    window.addEventListener("load", waitBoot);
+    setTimeout(waitBoot, 400);
   })();
   </script>
 </body></html>

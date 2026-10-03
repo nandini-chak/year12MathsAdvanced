@@ -46,8 +46,8 @@
           <li>Always increasing and always concave up.</li>
         </ul>
         <div class="plot-frame">
-          <svg id="parentPlot" class="plot" viewBox="0 0 720 280" aria-label="Parent exponential y=e^x"></svg>
-          <div class="legend"><span class="p"><i></i>y = e^x</span></div>
+          <svg id="parentPlot" class="plot" viewBox="0 0 720 280" aria-label="Parent exponential y equals e to the x"></svg>
+          <div class="legend"><span class="p"><i></i><span class="tex">y=e^x</span></span></div>
         </div>
       </div>
 
@@ -103,16 +103,26 @@
     Plot.prototype.path=function(pts,cls){let d="";pts.forEach((p,i)=>{const[X,Y]=this.xy(p[0],p[1]);d+=(i?"L":"M")+X+" "+Y;});const e=document.createElementNS(NS,"path");e.setAttribute("d",d);e.setAttribute("class",cls||"curve");this.svg.appendChild(e);};
     Plot.prototype.axes=function(){const w=this.w;this.line(w.xmin,0,w.xmax,0);this.line(0,w.ymin,0,w.ymax);};
     function sample(f,a,b,n){const pts=[];for(let i=0;i<=n;i++){const x=a+i*(b-a)/n,y=f(x);if(isFinite(y))pts.push([x,y]);}return pts;}
-    const svg=document.getElementById("parentPlot");
-    if(!svg) return;
-    const p=new Plot(svg,{xmin:-3,xmax:2.5,ymin:-0.5,ymax:8});
-    p.clear(); p.axes();
-    p.path(sample(x=>Math.exp(x),-3,2.5,80),"curve parent");
-    document.querySelectorAll(".tex").forEach(function(n){
-      if(n.getAttribute("data-texed")) return;
-      n.setAttribute("data-texed","1");
-      if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-    });
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function draw(){
+      const svg=document.getElementById("parentPlot");
+      if(svg){
+        const p=new Plot(svg,{xmin:-3,xmax:2.5,ymin:-0.5,ymax:8});
+        p.clear(); p.axes();
+        p.path(sample(x=>Math.exp(x),-3,2.5,80),"curve parent");
+      }
+      texAll();
+    }
+    function boot(){ if(window.katex) draw(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
   })();
   </script>
 </body></html>
