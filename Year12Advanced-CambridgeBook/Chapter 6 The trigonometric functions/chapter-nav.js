@@ -12,8 +12,7 @@
     { id: "ch6", code: "Ch.6", title: "Chapter home", href: chHome },
     { id: "6A", code: "6A", title: "Trig graphs & modelling", ready: true, pages: [
       { id: "hub", title: "6A hub", href: secPrefix + "index.html" },
-      { id: "lesson1", title: "Lesson 1 (45 min)", href: secPrefix + "lesson-1.html" },
-      { id: "lesson2", title: "Lesson 2 (45 min)", href: secPrefix + "lesson-2.html" },
+      { id: "concept", title: "Concept", href: secPrefix + "concept.html" },
       { id: "tutorial", title: "Tutorial · theory", href: secPrefix + "tutorial.html" },
       { id: "problems", title: "Exercise 6A problems", href: secPrefix + "problems.html" }
     ]},
