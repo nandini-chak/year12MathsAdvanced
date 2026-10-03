@@ -58,4 +58,24 @@
   }
   const main = shell.querySelector(".main") || shell;
   shell.insertBefore(nav, main);
+
+  // Keep left-panel scroll position across topic clicks (full page loads).
+  const SCROLL_KEY = "mdaa-y12adv-nav-scroll";
+  try {
+    const saved = sessionStorage.getItem(SCROLL_KEY);
+    if (saved != null) {
+      nav.scrollTop = Number(saved) || 0;
+    } else {
+      const active = nav.querySelector(".nav-row.is-active, .nav-item.is-current");
+      if (active) active.scrollIntoView({block: "center"});
+    }
+  } catch (e) {}
+  nav.addEventListener("scroll", function(){
+    try { sessionStorage.setItem(SCROLL_KEY, String(nav.scrollTop)); } catch (e) {}
+  }, {passive: true});
+  nav.addEventListener("click", function(ev){
+    const a = ev.target && ev.target.closest ? ev.target.closest("a") : null;
+    if (!a) return;
+    try { sessionStorage.setItem(SCROLL_KEY, String(nav.scrollTop)); } catch (e) {}
+  });
 })();
