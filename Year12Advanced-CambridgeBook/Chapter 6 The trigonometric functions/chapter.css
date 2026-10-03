@@ -62,11 +62,11 @@ nav.jump a:hover{border-color:var(--gold);background:#fff8e8}
 .btn.ghost{background:#fff;color:var(--navy)}
 .btn.show{background:#eef2ff;color:var(--blue);border-color:var(--blue)}
 .btn.show[aria-expanded="true"]{background:var(--blue);color:#fff}
-.tutor-note{margin:.7rem 0;border:1px dashed #c9b48a;border-radius:12px;background:#fffaf0}
-.tutor-note summary{cursor:pointer;list-style:none;padding:.55rem .75rem;font-size:.88rem;color:var(--navy);font-weight:600;display:flex;align-items:center;gap:.45rem}
-.tutor-note summary::-webkit-details-marker{display:none}
-.tutor-note summary .ico{width:1.35rem;height:1.35rem;border-radius:50%;background:var(--gold-2);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
-.tutor-note .body{padding:0 .85rem .75rem;font-size:.9rem;color:var(--muted)}
+.teacher-note{margin:.7rem 0;border:1px dashed #c9b48a;border-radius:12px;background:#fffaf0}
+.teacher-note summary{cursor:pointer;list-style:none;padding:.55rem .75rem;font-size:.88rem;color:var(--navy);font-weight:600;display:flex;align-items:center;gap:.45rem}
+.teacher-note summary::-webkit-details-marker{display:none}
+.teacher-note summary .ico{width:1.35rem;height:1.35rem;border-radius:50%;background:var(--gold-2);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
+.teacher-note .body{padding:0 .85rem .75rem;font-size:.9rem;color:var(--muted)}
 .studio{display:flex;flex-direction:column;gap:.85rem}
 .plot-frame{background:#fbfaf7;border:1px solid var(--line);border-radius:12px;padding:.5rem}
 svg.plot{width:100%;height:auto;min-height:260px;display:block}
@@ -94,4 +94,4 @@ svg.plot{width:100%;height:auto;min-height:260px;display:block}
 .home{padding:2rem 1.5rem 3rem;max-width:56rem}
 .home h1{font-family:var(--display);font-size:clamp(1.5rem,3.2vw,2.1rem);margin:0 0 .45rem}
 footer.site{margin-top:2rem;color:var(--muted);font-size:.86rem}
-@media print{.site-bar,nav.jump,.chapter-nav,.no-print,.tutor-note{display:none!important}.shell{display:block}}
+@media print{.site-bar,nav.jump,.chapter-nav,.no-print,.teacher-note{display:none!important}.shell{display:block}}
