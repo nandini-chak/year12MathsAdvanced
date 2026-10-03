@@ -119,8 +119,8 @@
     function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=+svg.getAttribute("viewBox").split(" ")[3];this.pad=44;}
     Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
     Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
-    Plot.prototype.line=function(x1,y1,x2,y2,cls){const[a,b]=this.xy(x1,y1),[c,d]=this.xy(x2,y2);const e=document.createElementNS(NS,"line");e.setAttribute("x1",a);e.setAttribute("y1",b);e.setAttribute("x2",c);e.setAttribute("y2",d);e.setAttribute("class",cls||"axis");this.svg.appendChild(e);};
-    Plot.prototype.path=function(pts,cls){let d="";pts.forEach((p,i)=>{const[X,Y]=this.xy(p[0],p[1]);d+=(i?"L":"M")+X+" "+Y;});const e=document.createElementNS(NS,"path");e.setAttribute("d",d);e.setAttribute("class",cls||"curve");this.svg.appendChild(e);};
+    Plot.prototype.line=function(x1,y1,x2,y2){const[a,b]=this.xy(x1,y1),[c,d]=this.xy(x2,y2);const e=document.createElementNS(NS,"line");e.setAttribute("x1",a);e.setAttribute("y1",b);e.setAttribute("x2",c);e.setAttribute("y2",d);e.setAttribute("stroke","#9aa3b0");e.setAttribute("stroke-width","1.2");this.svg.appendChild(e);};
+    Plot.prototype.path=function(pts,opts){opts=opts||{};let d="";pts.forEach((p,i)=>{const[X,Y]=this.xy(p[0],p[1]);d+=(i?"L":"M")+X+" "+Y;});const e=document.createElementNS(NS,"path");e.setAttribute("d",d);e.setAttribute("fill","none");e.setAttribute("stroke",opts.stroke||"#1d4ed8");e.setAttribute("stroke-width",opts.width||2.5);if(opts.dash)e.setAttribute("stroke-dasharray",opts.dash);this.svg.appendChild(e);};
     Plot.prototype.axes=function(){const w=this.w;this.line(w.xmin,0,w.xmax,0);this.line(0,w.ymin,0,w.ymax);};
     function sample(f,a,b,n){const pts=[];for(let i=0;i<=n;i++){const x=a+i*(b-a)/n,y=f(x);if(isFinite(y)&&Math.abs(y)<1e6)pts.push([x,y]);}return pts;}
     function texAll(){
@@ -134,8 +134,8 @@
 
     const ex1=document.getElementById("ex1Plot");
     if(ex1){const p=new Plot(ex1,{xmin:-3,xmax:2.5,ymin:-0.5,ymax:8});p.clear();p.axes();
-      p.path(sample(x=>Math.exp(x),-3,2.5,80),"curve parent");
-      p.path(sample(x=>Math.exp(-x),-3,2.5,80),"curve image");
+      p.path(sample(x=>Math.exp(x),-3,2.5,80),{stroke:"#0f766e",dash:"7 6",width:2.2});
+      p.path(sample(x=>Math.exp(-x),-3,2.5,80),{stroke:"#1d4ed8",width:2.5});
     }
 
     const A=document.getElementById("slA"), N=document.getElementById("slN"), B=document.getElementById("slB"), C=document.getElementById("slC");
@@ -145,8 +145,8 @@
       const a=+A.value,n=+N.value,b=+B.value,c=+C.value;
       const p=new Plot(svg,{xmin:-3,xmax:3,ymin:-2,ymax:10});
       p.clear(); p.axes();
-      p.path(sample(x=>Math.exp(x),-3,3,80),"curve parent");
-      p.path(sample(x=>a*Math.exp(n*(x-b))+c,-3,3,100),"curve image");
+      p.path(sample(x=>Math.exp(x),-3,3,80),{stroke:"#0f766e",dash:"7 6",width:2.2});
+      p.path(sample(x=>a*Math.exp(n*(x-b))+c,-3,3,100),{stroke:"#1d4ed8",width:2.5});
       let s="y=";
       if(a!==1) s+=(Math.abs(a)===1?(a<0?"-":""):a)+"";
       if(a===-1) s+="";
