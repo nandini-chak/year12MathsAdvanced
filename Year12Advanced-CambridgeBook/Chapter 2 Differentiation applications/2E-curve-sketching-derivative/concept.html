@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Develop a systematic menu, including calculus, for sketching any curve. • Understand that a function can only change sign at a zero or a discontinuity.</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>2E Systematic curve sketching with the derivative 75 2E Systematic curve sketching with the derivative Learning intentions • Develop a systematic menu, including calculus, for sketching any curve. • Understand that a function can only change sign at a zero or a discontinuity. In Year 11, before calculus, we developed four approaches to sketching a curve: 1. domain, 2. symmetry, 3. intercepts and sign, 4. asymptotes. This chapter has used the derivative to examine the gradient and concavity of curves, and to find their turning points and inflections. We can now add these methods to develop a systematic menu for sketching any curve. A curve-sketching menu involving calculus Few curves in this course would require consideration of all the points in the summary below. Questions almost always give some guidance as to which methods are relevant for any particular function. 9 A curve-sketching menu summarising the methods developed so far 1 Domain: Find the domain of f(x). (Always do this first.) 2 Symmetry: Test whether the function is even, or odd, or neither. 3 A Intercepts: Find the y-intercept and all x-intercepts (zeroes). B Sign: Use a table of test values of f(x), that is, a table of signs, to find where the function is positive, and where it is negative. 4 A Vertical Asymptotes: Examine any discontinuities to see whether there are vertical asymptotes there. B Horizontal Asymptotes: Examine the behaviour of f(x) as x →∞and as x →−∞, noting any horizontal asymptotes. 5 The First Derivative: A Find the zeroes and discontinuities of f ′(x). B Use a table of test values of f ′(x), that is, a table of slopes, to determine the nature of the stationary points and the slope of the function throughout its domain. 6 The Second Derivative: A Find the zeroes and discontinuities of f ′′(x). B Use a table of test values of f ′′(x), that is, a table of concavities, to find any points of inflection and the concavity of the function throughout its domain. 7 Any other features: A routine warning of incompleteness. The final Step 7 is a routine warning that many important features of functions will not be picked up using this menu. For example, every parabola has an axis of symmetry, but the even-and-odd test only picks up that axis of symmetry when it is the y-axis. Even more importantly, the trigonometric functions repeat periodically, and tests for periodicity are not mentioned. An alternative order: Some people (and many problems go better this way) prefer to delay Step 4: Asymptotes until after the two calculus Steps 5–6, because the asymptotes are often clearer after sketching the slopes and curvatures.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>76 Chapter 2 Curve-sketching using the derivative 2E An example of a curve with turning points and asymptotes The curve in the worked example below has three asymptotes and a turning point. Such curves are never easy to analyse, but it is worth having one such example that combines the calculus approaches of the present chapter with the previous non-calculus approaches. Example 15 An example of curve-sketching Consider the curve y = 1 x(x −4). a Write down the domain of the function. b Use a table of test values to analyse the sign of the function. c Find any vertical and horizontal asymptotes. d Show that the derivative is y′ = 2(2 −x) x2(x −4)2 . e Find all the zeroes and discontinuities of f ′(x). Then</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Sketch with intercepts, asymptotes, stationary points, concavity.</li>
+        <li>A sign table for the derivative helps.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

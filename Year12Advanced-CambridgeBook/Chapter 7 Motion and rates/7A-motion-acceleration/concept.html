@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Review displacement–time graphs, average velocity, and average speed. • Review instantaneous velocity, and introduce acceleration. The new idea in this section is acceleration. With the second derivative now available, acceleration can be introduced as the derivative of velocity, and hence as the second derivative of displacement. The section begins with a very limited review — the reader is strongly encouraged to revise Sections 9K–9L from the Year 11 book, and particularly to review the worked examples and some questions from Exercises 9K–9L. Those sections on one-dimensional motion covered the displacement–time graph, average velocity, and average speed, then instantaneous velocity as the derivative of displacement. Motion in one dimension — the displacement–time function and graph When a particle is moving along a line, we first turn the line into a number line by choosing an origin, a positive direction, and units. Its position can be specified at any time t by a single number x, called the displacement, and the whole motion can be described by giving x as a function of the time t. Our introductory example last year was a ball hit vertically upwards from the ground. With the ground as the origin, and upwards as positive, its motion was described, in umits of metres and seconds, by the following function and table of values:     x x = 5t(8 −t), for 0 ≤t ≤8 t 0 2 4 6 8 x 0 60 80 60 0 We can see from the parabolic graph, or from the quadratic function, that the maximum height of the ball is 80 metres after 4 seconds, and that the flight lasted 8 seconds. We can also see, or calculate, that the ball was 60 metres high after 2 seconds, and again after 6 seconds.     t x O 2 4 6 8 A B C D 1 Motion in one dimension • Motion in one dimension is specified by giving the displacement x on the number line as a function of time t after time zero. • Negative values of time are normally excluded unless otherwise stated. Change in displacement and average vel</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>298 Chapter 7 Motion and rates 7A 7A Motion review plus acceleration Learning intentions • Review displacement–time graphs, average velocity, and average speed. • Review instantaneous velocity, and introduce acceleration. The new idea in this section is acceleration. With the second derivative now available, acceleration can be introduced as the derivative of velocity, and hence as the second derivative of displacement. The section begins with a very limited review — the reader is strongly encouraged to revise Sections 9K–9L from the Year 11 book, and particularly to review the worked examples and some questions from Exercises 9K–9L. Those sections on one-dimensional motion covered the displacement–time graph, average velocity, and average speed, then instantaneous velocity as the derivative of displacement. Motion in one dimension — the displacement–time function and graph When a particle is moving along a line, we first turn the line into a number line by choosing an origin, a positive direction, and units. Its position can be specified at any time t by a single number x, called the displacement, and the whole motion can be described by giving x as a function of the time t. Our introductory example last year was a ball hit vertically upwards from the ground. With the ground as the origin, and upwards as positive, its motion was described, in umits of metres and seconds, by the following function and table of values:     x x = 5t(8 −t), for 0 ≤t ≤8 t 0 2 4 6 8 x 0 60 80 60 0 We can see from the parabolic graph, or from the quadratic function, that the maximum height of the ball is 80 metres after 4 seconds, and that the flight lasted 8 seconds. We can also see, or calculate, that the ball was 60 metres high after 2 seconds, and again after 6 seconds.     t x O 2 4 6 8 A B C D 1 Motion in one dimension • Motion in one dimension is specified by giving the displacement x on the number line as a function of time t after time zero. • Negative values of time are normally excluded unless otherwise stated. Change in displacement and average velocity Average velocity is defined in terms of change of displacement: Average velocity = change in displacement change in time . • The average velocity of the ball ascending is 80 −0 4 −0 = 20 m/s. • The average velocity from t = 2 to t = 4 is 80 −60 4 −2 = 10 m/s. Be careful! Velocity can be positive, negative, or zero: • The average velocity from t = 4 to t = 6 is 60 −80 4 −2 = −10 m/s.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>7A Motion review plus acceleration 299 Velocity depends on the change of displacement, not on distance travelled: • The average velocity over the first 6 seconds is 80 −0 6 −0 = 10 m/s. • The average velocity over the whole flight is zero, because 0 −0 8 −0 = 0 m/s. 2 Average velocity and change of displacement • If a particle’s displacement is x = x1 at time t = t1, and x = x2 when t = t2: average velocity = change in displacement change in time = x2 −x1 t2 −t1 . • Hence average velocity = gradient of the chord. • Average velocity and change of displacement can be positive, negative, or zero. Distance travelled and average speed Speed, on the other hand, can only be positive or zero. Average speed = distance travelled time taken . The distance travelled takes into account any journey and return. Like average speed, it also can only be positive or zero. Compare</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Displacement, velocity, acceleration: <span class="tex">v=\dfrac{{dx}}{{dt}}</span>, <span class="tex">a=\dfrac{{dv}}{{dt}}</span>.</li>
+        <li>Constant acceleration formulae if needed.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

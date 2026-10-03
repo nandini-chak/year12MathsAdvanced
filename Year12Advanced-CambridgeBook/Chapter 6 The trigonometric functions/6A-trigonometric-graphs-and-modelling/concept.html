@@ -39,49 +39,15 @@
       <p>Full detail, worked examples and sketches live in the <a href="tutorial.html">Tutorial · theory</a> page — this page only sets the scene.</p>
     </section>
 
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Check these before the tutorial. If any feel rusty, spend a minute on them first.</p>
-
-      <div class="note-block">
-        <h3>1. Radians and the unit circle</h3>
-        <p>Angles in this chapter are in <strong>radians</strong>. One full turn is <span class="tex">2\pi</span>. Useful landmarks:</p>
-        <div class="formula"><span class="tex">0,\quad \dfrac{\pi}{2},\quad \pi,\quad \dfrac{3\pi}{2},\quad 2\pi</span></div>
-      </div>
-
-      <div class="note-block">
-        <h3>2. Parent graphs</h3>
-        <ul>
-          <li><span class="tex">\sin x</span> and <span class="tex">\cos x</span>: period <span class="tex">2\pi</span>, range <span class="tex">[-1,1]</span>, amplitude 1.</li>
-          <li><span class="tex">\tan x</span>: period <span class="tex">\pi</span>, vertical asymptotes at <span class="tex">x=\pi/2+k\pi</span>.</li>
-        </ul>
-        <div class="plot-frame">
-          <svg id="parentPlot" class="plot" viewBox="0 0 720 280" aria-label="Parent sine and cosine on the same axes"></svg>
-          <div class="legend"><span class="p"><i></i>y = sin x</span><span class="i"><i></i>y = cos x</span></div>
-        </div>
-      </div>
-
-      <div class="note-block">
-        <h3>3. Function transformations (language)</h3>
-        <p>Same words you used for other graphs:</p>
-        <ul>
-          <li><span class="tex">y=f(x-b)</span> — shift <strong>right</strong> if <span class="tex">b&gt;0</span> (plus inside brackets is a common trap: left).</li>
-          <li><span class="tex">y=f(x)+c</span> — shift up if <span class="tex">c&gt;0</span>.</li>
-          <li><span class="tex">y=Af(x)</span> — vertical stretch by <span class="tex">|A|</span> (reflection if <span class="tex">A&lt;0</span>).</li>
-          <li><span class="tex">y=f(nx)</span> — horizontal dilation by <span class="tex">1/|n|</span>.</li>
-        </ul>
-        <details class="teacher-note no-print">
-          <summary><span class="ico">T</span> Teacher note</summary>
-          <div class="body">
-            <p>Keep this page short. Do not re-teach the full §6A theory here — that belongs in the tutorial. Use the trap line only as a one-sentence warning before students open Tutorial idea 1.</p>
-          </div>
-        </details>
-      </div>
-
-      <div class="note-block">
-        <h3>4. What “modelling” will mean</h3>
-        <p>A context (spring, tide, temperature) is described by the same letters: amplitude = distance from mean to crest; period = time for one cycle; mean = centre line. The tutorial and Exercise 6A put numbers on these.</p>
-      </div>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Radians: full turn <span class="tex">2\pi</span>; landmarks <span class="tex">0,\pi/2,\pi,3\pi/2,2\pi</span>.</li>
+        <li>Parents: <span class="tex">\sin x,\cos x</span> period <span class="tex">2\pi</span>, range <span class="tex">[-1,1]</span>; <span class="tex">\tan x</span> period <span class="tex">\pi</span>.</li>
+        <li>Transform language: <span class="tex">f(x-b)</span> horizontal, <span class="tex">f(x)+c</span> vertical, <span class="tex">Af</span> stretch, <span class="tex">f(nx)</span> period change.</li>
+        <li>Details and modelling live in the Tutorial.</li>
+      </ul>
     </section>
 
     <section class="card" id="next">
@@ -102,42 +68,17 @@
   <script src="../../course-nav.js"></script>
   <script>
   (function(){
-    const NS="http://www.w3.org/2000/svg";
-    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=280;this.pad=40;}
-    Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
-    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
-    Plot.prototype.el=function(t,a){const n=document.createElementNS(NS,t);Object.keys(a||{}).forEach(k=>{if(a[k]!=null)n.setAttribute(k,a[k]);});this.svg.appendChild(n);return n;};
-    Plot.prototype.axes=function(){
-      const a=this.xy(this.w.xmin,0),b=this.xy(this.w.xmax,0),c=this.xy(0,this.w.ymin),d=this.xy(0,this.w.ymax);
-      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#9aa3b0","stroke-width":1.2});
-      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.2});
-      // tick labels placed in clear space (below axis / left of axis)
-      [[0,"0"],[Math.PI,"π"],[2*Math.PI,"2π"]].forEach(([x,lab])=>{
-        const q=this.xy(x,0);
-        const t=this.el("text",{x:q[0],y:q[1]+16,"text-anchor":"middle",fill:"#5c6678","font-size":"12"});
-        t.textContent=lab;
-      });
-    };
-    Plot.prototype.poly=function(pts,o){o=o||{};const d=pts.filter(Boolean).map((p,i)=>{const q=this.xy(p[0],p[1]);return(i?"L":"M")+q[0]+" "+q[1];}).join(" ");
-      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.5,"stroke-dasharray":o.dash||null});};
-    function sample(fn,w,n){n=n||280;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||Math.abs(y)>40){pts.push(null);continue;}pts.push([x,y]);}return pts;}
-
-    function drawParents(){
-      const svg=document.getElementById("parentPlot");
-      const P=new Plot(svg,{xmin:-0.2,xmax:2*Math.PI+0.2,ymin:-1.6,ymax:1.6});
-      P.clear();P.axes();
-      P.poly(sample(Math.sin,P.w),{stroke:"#0f766e",dash:"7 6",width:2.2});
-      P.poly(sample(Math.cos,P.w),{stroke:"#1d4ed8",width:2.5});
-    }
-    function boot(){
+    function texAll(){
       document.querySelectorAll(".tex").forEach(function(n){
         if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
         n.setAttribute("data-texed","1");
-        if(window.katex) katex.render(n.textContent,n,{throwOnError:false});
+        katex.render(n.textContent, n, {throwOnError:false});
       });
-      drawParents();
     }
-    window.addEventListener("load",boot); setTimeout(boot,400);
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
   })();
   </script>
 </body>

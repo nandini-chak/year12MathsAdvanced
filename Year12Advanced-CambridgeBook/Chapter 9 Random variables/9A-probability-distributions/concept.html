@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Review discrete, categorical, and continuous random variables. • Develop a precise definition of a discrete random distribution. • Review relative frequency, graphs, and histograms. • Emphasise that relative frequency in a dataset is an estimate of probability. This section explains what a discrete probability distribution is, and introduces some necessary language. It also reviews some ideas introduced in Year 11: • Discrete, categorical, and continuous random variables were introduced. • Data were organised into tables using frequency and relative frequency, illustrated by graphs and histograms. • Most importantly, relative frequency was used to estimate probability. A discrete random experiment, and a dataset of its trials In Section 12E last year, we tossed four coins and recorded the number of heads. Remember that what is recorded is an essential part of every experiment. • This is a random experiment, because the outcome is not determined, but is one of the five possible outcomes 0, 1, 2, 3, and 4, called its values. • It is also a discrete random experiment, because the outcomes are numeric, and they can be listed, which means that they can be arranged in a sequence. In Section 13A last year, the authors performed (or simulated) 1000 trials of this experiment, recording the dataset below of frequencies and relative frequencies: Number of heads 0 1 2 3 4 Sum Frequency 66 226 395 260 53 1000 Relative frequency 0.066 0.226 0.395 0.260 0.053 1 The set {0, 1, 2, 3, 4} is the sample space of the experiment, and the relative frequency of each value is the ratio of its frequency over the total frequency 1000. 1 Discrete random experiments • A random experiment is an experiment with more than one possible outcome. • The possible outcomes of a random experiment are also called its values. • A random experiment is called discrete if its values are numeric, and can be listed, meaning that they can be arranged in a sequence. • The trial results of a discrete random vari</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>410 Chapter 9 Discrete probability distributions 9A 9A The language of probability distributions Learning intentions • Review discrete, categorical, and continuous random variables. • Develop a precise definition of a discrete random distribution. • Review relative frequency, graphs, and histograms. • Emphasise that relative frequency in a dataset is an estimate of probability. This section explains what a discrete probability distribution is, and introduces some necessary language. It also reviews some ideas introduced in Year 11: • Discrete, categorical, and continuous random variables were introduced. • Data were organised into tables using frequency and relative frequency, illustrated by graphs and histograms. • Most importantly, relative frequency was used to estimate probability. A discrete random experiment, and a dataset of its trials In Section 12E last year, we tossed four coins and recorded the number of heads. Remember that what is recorded is an essential part of every experiment. • This is a random experiment, because the outcome is not determined, but is one of the five possible outcomes 0, 1, 2, 3, and 4, called its values. • It is also a discrete random experiment, because the outcomes are numeric, and they can be listed, which means that they can be arranged in a sequence. In Section 13A last year, the authors performed (or simulated) 1000 trials of this experiment, recording the dataset below of frequencies and relative frequencies: Number of heads 0 1 2 3 4 Sum Frequency 66 226 395 260 53 1000 Relative frequency 0.066 0.226 0.395 0.260 0.053 1 The set {0, 1, 2, 3, 4} is the sample space of the experiment, and the relative frequency of each value is the ratio of its frequency over the total frequency 1000. 1 Discrete random experiments • A random experiment is an experiment with more than one possible outcome. • The possible outcomes of a random experiment are also called its values. • A random experiment is called discrete if its values are numeric, and can be listed, meaning that they can be arranged in a sequence. • The trial results of a discrete random variable are often arranged as a table. The word ‘discrete’ comes from Latin discretus, meaning ‘separate’ or ‘distinct’. The discrete random variable and the probability distribution Denote by X the number of heads when four coins are tossed. This variable X is a discrete random variable, being the result of a discrete random experiment. Thus with five possible outcomes 0, 1, 2, 3, and 4, there are five probabilities: P (X = 0) , P (X = 1) , P (X = 2) , P (X = 3) , P (X = 4) .</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>9A The language of probability distributions 411 We calculated these probabilities last year in Chapter 12, but the next worked example draws the tree diagram that generates the results: x 0 1 2 3 4 P (X = x) 1 16 4 16 6 16 4 16 1 16 The sample space {0, 1, 2, 3, 4}, together with the corresponding probabilities in the table above, is called the discrete probability distribution of the experiment. Example 1 Toss four coins — a tree diagram finds the probabilities Draw a tree diagram to find the probabilities when four coins are tossed and the number of heads is recorded.. Solution The tree diagram branches four times, once for each coin toss. There are 16 possible ordered outcomes, each with probability 1 16. But there are only 5 unordered outcomes</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Discrete random variable: values + probabilities.</li>
+        <li><span class="tex">0\le p\le 1</span>; probabilities sum to 1.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

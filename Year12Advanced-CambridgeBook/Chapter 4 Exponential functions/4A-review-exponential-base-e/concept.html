@@ -34,46 +34,15 @@
       <p>Full theory, Examples 1–3 and a graph studio live in the <a href="tutorial.html">Tutorial · theory</a> page.</p>
     </section>
 
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Check these before the tutorial.</p>
-
-      <div class="note-block">
-        <h3>1. Parent graph <span class="tex">y=e^x</span></h3>
-        <ul>
-          <li>Domain all real <span class="tex">x</span>; range <span class="tex">y&gt;0</span>.</li>
-          <li>Passes through <span class="tex">(0,1)</span>; horizontal asymptote <span class="tex">y=0</span> on the left.</li>
-          <li>Always increasing and always concave up.</li>
-        </ul>
-        <div class="plot-frame">
-          <svg id="parentPlot" class="plot" viewBox="0 0 720 280" aria-label="Parent exponential y equals e to the x"></svg>
-          <div class="legend"><span class="p"><i></i><span class="tex">y=e^x</span></span></div>
-        </div>
-      </div>
-
-      <div class="note-block">
-        <h3>2. Index laws with base e</h3>
-        <p><span class="tex">e^a e^b=e^{a+b}</span>, <span class="tex">e^a/e^b=e^{a-b}</span>, <span class="tex">(e^a)^n=e^{an}</span>. Calculator: <span class="tex">\ln</span> means <span class="tex">\log_e</span>; use shift–ln for <span class="tex">e^x</span>.</p>
-      </div>
-
-      <div class="note-block">
-        <h3>3. Transformation language</h3>
-        <ul>
-          <li><span class="tex">y=e^{-x}</span> — reflect in the <span class="tex">y</span>-axis (decay).</li>
-          <li><span class="tex">y=e^x+c</span> — vertical shift; asymptote moves with it.</li>
-          <li><span class="tex">y=e^{x-b}</span> — horizontal shift; also <span class="tex">e^{-b}e^x</span> (vertical dilation).</li>
-          <li><span class="tex">y=Ae^x</span> — vertical stretch; equivalently shift left by <span class="tex">\ln A</span> when <span class="tex">A&gt;0</span>.</li>
-        </ul>
-        <details class="teacher-note no-print">
-          <summary><span class="ico">T</span> Teacher note</summary>
-          <div class="body">Theme 3 places 4A after Ch.2 curve work and before 4B (chain/product/quotient with exponentials). Keep this page short — dilations vs shifts are developed in the tutorial.</div>
-        </details>
-      </div>
-
-      <div class="note-block">
-        <h3>4. Tangents when gradient = height</h3>
-        <p>For <span class="tex">y=ke^x</span>, <span class="tex">y'=ke^x</span> as well, so at a point the tangent slope equals the <span class="tex">y</span>-coordinate. Normals use the negative reciprocal.</p>
-      </div>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li><span class="tex">e^x</span> is its own derivative (gradient = height); <span class="tex">e\approx 2.718</span>.</li>
+        <li>Domain all real <span class="tex">x</span>, range <span class="tex">y>0</span>; asymptote <span class="tex">y=0</span> on the left.</li>
+        <li>Index laws with base <span class="tex">e</span>; <span class="tex">\ln</span> means <span class="tex">\log_e</span>.</li>
+        <li>Transforms, dilations-as-shifts, tangents: Tutorial.</li>
+      </ul>
     </section>
 
     <section class="card" id="next">
@@ -95,14 +64,6 @@
   <script src="../../course-nav.js"></script>
   <script>
   (function(){
-    const NS="http://www.w3.org/2000/svg";
-    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=280;this.pad=44;}
-    Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
-    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
-    Plot.prototype.line=function(x1,y1,x2,y2){const[a,b]=this.xy(x1,y1),[c,d]=this.xy(x2,y2);const e=document.createElementNS(NS,"line");e.setAttribute("x1",a);e.setAttribute("y1",b);e.setAttribute("x2",c);e.setAttribute("y2",d);e.setAttribute("stroke","#9aa3b0");e.setAttribute("stroke-width","1.2");this.svg.appendChild(e);};
-    Plot.prototype.path=function(pts,opts){opts=opts||{};let d="";pts.forEach((p,i)=>{const[X,Y]=this.xy(p[0],p[1]);d+=(i?"L":"M")+X+" "+Y;});const e=document.createElementNS(NS,"path");e.setAttribute("d",d);e.setAttribute("fill","none");e.setAttribute("stroke",opts.stroke||"#0f766e");e.setAttribute("stroke-width",opts.width||2.2);if(opts.dash)e.setAttribute("stroke-dasharray",opts.dash);this.svg.appendChild(e);};
-    Plot.prototype.axes=function(){const w=this.w;this.line(w.xmin,0,w.xmax,0);this.line(0,w.ymin,0,w.ymax);};
-    function sample(f,a,b,n){const pts=[];for(let i=0;i<=n;i++){const x=a+i*(b-a)/n,y=f(x);if(isFinite(y))pts.push([x,y]);}return pts;}
     function texAll(){
       document.querySelectorAll(".tex").forEach(function(n){
         if(n.getAttribute("data-texed")) return;
@@ -111,16 +72,7 @@
         katex.render(n.textContent, n, {throwOnError:false});
       });
     }
-    function draw(){
-      const svg=document.getElementById("parentPlot");
-      if(svg){
-        const p=new Plot(svg,{xmin:-3,xmax:2.5,ymin:-0.5,ymax:8});
-        p.clear(); p.axes();
-        p.path(sample(x=>Math.exp(x),-3,2.5,80),{stroke:"#0f766e",dash:"7 6",width:2.2});
-      }
-      texAll();
-    }
-    function boot(){ if(window.katex) draw(); else setTimeout(boot,100); }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
     window.addEventListener("load", boot);
     setTimeout(boot, 400);
   })();

@@ -30,10 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>10F Applications of the normal distribution 499 10F Applications of the normal distribution Learning intentions • Describe familiar statistical situations using the normal distribution • Apply the normal distribution to familiar statistical problems. A great number of common situations follow a normal distribution, or follow it approximately enough for practical purposes. The questions in</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>10F Applications of the normal distribution 499 10F Applications of the normal distribution Learning intentions • Describe familiar statistical situations using the normal distribution • Apply the normal distribution to familiar statistical problems. A great number of common situations follow a normal distribution, or follow it approximately enough for practical purposes. The questions in</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Normal model applications (worded).</li>
+        <li>Always standardise first.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -47,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

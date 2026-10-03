@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Use differentiation to model physical situations. • When the independent variable is time, interpret the derivative as a rate. Differentiation of rates was covered in Section 9J of the Year 11 book, and the graphs of a quantity and its rate of change were drawn as functions of time. This section and the next continue to work with the mathematical model, but their main concern is to interpret what the features of these graphs mean for the physical situation that they are describing. Interpreting a graph or a formula in a physical situation requires imagination and common sense as well as mathematical precision, and the discussions of this section are intended to reflect this. Interpreting the first and second derivatives at a point When a quantity varies over time, we saw in Section 9J of the Year 11 book that we can differentiate to find the rate at which it is changing at each time t, and differentiate again to find the rate at which that rate is changing at time t. Then in Chapter 2, we carefully defined a function to be: • increasing at x = a if f ′(a) &gt; 0, and decreasing at x = a if f ′(a) &lt; 0, • concave up at x = a if f ′′(a) &gt; 0, and concave down at x = a if f ′′(a) &lt; 0. These were all precise pointwise definitions. But both these ideas have wider interpretations over an interval within the domain. Increasing and decreasing in an interval The price P of a share in newly-launched company t days after launch is given by the curve P = P(t) drawn to the right. The share price P is said to be increasing in the interval 0 ≤t ≤300 because: P(a) ≤P(b), for all a &lt; b in the interval [0, 300]. This definition of ‘increasing in an interval’, is the normal common-sense understand- ing of that the word ‘increasing’ means. t P 150 300 Notice that except for the isolated point t = 150 where the tangent is horizontal, every tangent within the interval (0, 300) slopes upwards, so the function P is increasing at every point within the interval. 8 Increasing and decreasing in</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>318 Chapter 7 Motion and rates 7C 7C Rates and differentiation Learning intentions • Use differentiation to model physical situations. • When the independent variable is time, interpret the derivative as a rate. Differentiation of rates was covered in Section 9J of the Year 11 book, and the graphs of a quantity and its rate of change were drawn as functions of time. This section and the next continue to work with the mathematical model, but their main concern is to interpret what the features of these graphs mean for the physical situation that they are describing. Interpreting a graph or a formula in a physical situation requires imagination and common sense as well as mathematical precision, and the discussions of this section are intended to reflect this. Interpreting the first and second derivatives at a point When a quantity varies over time, we saw in Section 9J of the Year 11 book that we can differentiate to find the rate at which it is changing at each time t, and differentiate again to find the rate at which that rate is changing at time t. Then in Chapter 2, we carefully defined a function to be: • increasing at x = a if f ′(a) &gt; 0, and decreasing at x = a if f ′(a) &lt; 0, • concave up at x = a if f ′′(a) &gt; 0, and concave down at x = a if f ′′(a) &lt; 0. These were all precise pointwise definitions. But both these ideas have wider interpretations over an interval within the domain. Increasing and decreasing in an interval The price P of a share in newly-launched company t days after launch is given by the curve P = P(t) drawn to the right. The share price P is said to be increasing in the interval 0 ≤t ≤300 because: P(a) ≤P(b), for all a &lt; b in the interval [0, 300]. This definition of ‘increasing in an interval’, is the normal common-sense understand- ing of that the word ‘increasing’ means. t P 150 300 Notice that except for the isolated point t = 150 where the tangent is horizontal, every tangent within the interval (0, 300) slopes upwards, so the function P is increasing at every point within the interval. 8 Increasing and decreasing in an interval Suppose that a function f(x) is defined in an interval. • The function f(x) is called increasing in the interval if: f(a) ≤f(b), for all a &lt; b in the interval. • The function f(x) is called decreasing in the interval if: f(a) ≥f(b), for all a &lt; b in the interval. If f(x) is increasing or stationary at every point within the interval, then it is clearly increasing in the interval. Note: In a more rigorous discussion, the terms strictly increasing and strictly decreasing are used when the inequalities are f(a) &lt; f(b) and f(a) &gt; f(b) respectively. This distinction will not be needed here.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>7C Rates and differentiation 319 Concave up and down in an interval The graph sketched above, in the previous subheading, is said to be concave down in the interval [0, 150] because every chord lies below the curve. And the graph is concave up in the interval [150, 300] because every chord in this interval lies above the curve. The significance of this is: • For 0 ≤t ≤150, the price is increasing, but the rate of increase is decreasing. • For 150 ≤t ≤300, the price is increasing, and the rate of increase is increasing. Sketched to the right is the gradient function dP dt of the share price P. This gradient function is decreasing within the interval (0, 150),</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Related rates: differentiate both sides with respect to time.</li>
+        <li>Chain rule links variables.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

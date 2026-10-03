@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• From the acceleration function, integrate to give velocity, then displacement. • Understand and work with the acceleration g due to gravity. The inverse process of differentiation is integration. Thus if the acceleration function is known, integration will generate the velocity function. Then a second integration will generate the displacement function. Using initial conditions Taking primitives of functions always involves constants of integration. Finding such constants requires initial conditions. For example, a problem may tell us the velocity when t = 0, or give us the displacement when t = 3. In this chapter, the constants of integration cannot ever be omitted. 6 Integrating with respect to time • Given the acceleration function ¨x, integrate to find the velocity function v. • Given the velocity function v, integrate to find the displacement function x. • Never omit constants of integration in this work. • Use initial conditions to evaluate each constant of integration. In the next worked example, the velocity function is given. Integrating the velocity function, using the initial condition, gives the displacement function. Differentiating the velocity function gives the acceleration function.</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>7B Motion and Integration 309 7B Motion and Integration Learning intentions • From the acceleration function, integrate to give velocity, then displacement. • Understand and work with the acceleration g due to gravity. The inverse process of differentiation is integration. Thus if the acceleration function is known, integration will generate the velocity function. Then a second integration will generate the displacement function. Using initial conditions Taking primitives of functions always involves constants of integration. Finding such constants requires initial conditions. For example, a problem may tell us the velocity when t = 0, or give us the displacement when t = 3. In this chapter, the constants of integration cannot ever be omitted. 6 Integrating with respect to time • Given the acceleration function ¨x, integrate to find the velocity function v. • Given the velocity function v, integrate to find the displacement function x. • Never omit constants of integration in this work. • Use initial conditions to evaluate each constant of integration. In the next worked example, the velocity function is given. Integrating the velocity function, using the initial condition, gives the displacement function. Differentiating the velocity function gives the acceleration function. Example 6 Working both ways from the velocity function A particle is moving so that its velocity t seconds after time zero is v = 2t −2 m/s. Initially it is at x = 1. a Integrate, substituting initial condition, to show that x = (t −1)2. b Find when the particle is at the origin, and find its velocity then. c Explain why the particle is never on the negative side of the origin. d Differentiate to find the acceleration, and show that it is constant. Solution a The given velocity function is v = 2t −2. (1) Integrating, x = t2 −2t + C, for some constant C. When t = 0, x = 1, so 1 = 0 −0 + C, so C = 1, and x = t2 −2t + 1 x = (t −1)2. (2) b Put x = 0. Then from (2), (t −1)2 = 0 t = 1. Hence the particle is at the origin when t = 1, and substituting t = 1 into (1), v = 2 −2 = 0 m/s.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>310 Chapter 7 Motion and rates 7B c Because x = (t −1)2 is a square, the value of x can never be negative, so the particle is never on the negative side of the origin. d Differentiating the velocity function v = 2t −2 gives the acceleration function ¨x = 2, which is a constant 2 m/s2. (3) Example 7 Working from the acceleration function A particle’s acceleration function is ¨x = 24t. Initially it is at the origin, moving with velocity −12 cm/s. a Integrate, substituting the initial condition, to find the velocity function. b Integrate again to find the displacement function. c Find when the particle is stationary, and find the displacement then. d Find when the particle returns to the origin, and the acceleration then. Solution a The given acceleration function is ¨x = 24t. (1) Integrating, v = 12t2 + C, for some constant C. When t = 0, v = −12, so −12 = 0 + C, so C = −12, and v = 12t2 −12. (2) b Integrating again, x = 4t3 −12t + D, for some constant D. When t = 0, x = 0, so 0 = 0 −0 + D, so D = 0, and x = 4t3 −12t. (3) c Put v = 0. Then from (2), 12t2 −12 = 0 t2 = 1, and assuming as normal that t ≥0, t = 1. Hence the particle is stationary after 1 second. When t = 1, x = −8, so at this time its displacement is x = −8 cm. d Put x = 0. Then using (3)</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Integrate acceleration/velocity to recover motion.</li>
+        <li>+C from initial conditions.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

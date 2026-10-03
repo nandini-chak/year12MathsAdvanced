@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Define variance and standard deviation of a discrete probability distribution. • Develop a rearranged variance formula, and calculate variance and standard deviation. • Characterise the variance as an expected value. • Understand how translations and dilations of the data affect the standard deviation. • Understand the importance of units and proportionality with standard deviation. After discussing E(X), a measure of central tendency, we now turn to variance and standard deviation, which are measures of spread. Variance is the easier of the two to define and calculate. But standard deviation, which is the non-negative square root of the variance, is just as important. It has the same units as the values of the distribution, and when all the values are increased by some factor k, the variance increases by the same factor k. The variance of a discrete distribution In this section, it is clearer to reverse the order — we present first the variance of the distribution, and then discuss the variance of a dataset of trials. Return again to the experiment of recording the number of heads when four coins are tossed. Here is the discrete probability distribution: Number of heads x 0 1 2 3 4 Sum Probability P(x) 1 16 4 16 6 16 4 16 1 16 1 In the last section, we found that the mean is µ = 2, otherwise written as E(X) = 2. We now want to see how spread out the distribution is from the mean. The histogram to the right shows the values ranging from 0 to 4, but we need a more precise measure. The two standard measures of spread are variance and standard deviation, where the standard deviation is the non-negative square root of the variance. P X x      1 2 3 4 x Always find the variance first — its symbol is Var(X) — then find the standard deviation. The discussion is complicated by two things: • The initial variance formula can be rearranged to make calculation easier. • We can rewrite both original and rearranged versions in terms of expectation. To find the variance</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>9C Variance and standard deviation 431 9C Variance and standard deviation Learning intentions • Define variance and standard deviation of a discrete probability distribution. • Develop a rearranged variance formula, and calculate variance and standard deviation. • Characterise the variance as an expected value. • Understand how translations and dilations of the data affect the standard deviation. • Understand the importance of units and proportionality with standard deviation. After discussing E(X), a measure of central tendency, we now turn to variance and standard deviation, which are measures of spread. Variance is the easier of the two to define and calculate. But standard deviation, which is the non-negative square root of the variance, is just as important. It has the same units as the values of the distribution, and when all the values are increased by some factor k, the variance increases by the same factor k. The variance of a discrete distribution In this section, it is clearer to reverse the order — we present first the variance of the distribution, and then discuss the variance of a dataset of trials. Return again to the experiment of recording the number of heads when four coins are tossed. Here is the discrete probability distribution: Number of heads x 0 1 2 3 4 Sum Probability P(x) 1 16 4 16 6 16 4 16 1 16 1 In the last section, we found that the mean is µ = 2, otherwise written as E(X) = 2. We now want to see how spread out the distribution is from the mean. The histogram to the right shows the values ranging from 0 to 4, but we need a more precise measure. The two standard measures of spread are variance and standard deviation, where the standard deviation is the non-negative square root of the variance. P X x      1 2 3 4 x Always find the variance first — its symbol is Var(X) — then find the standard deviation. The discussion is complicated by two things: • The initial variance formula can be rearranged to make calculation easier. • We can rewrite both original and rearranged versions in terms of expectation. To find the variance, take the deviation x −µ of each value from the mean µ. Then square the deviation to give (x −µ)2. This squared deviation is a good measure of how far x is from the mean for two reasons: • The square (x −µ)2 is always a positive number or zero, whether the value x is on the left or the right of µ. • The square (x −µ)2 gets larger as x moves away from the mean, and the square makes it gets larger very quickly. For example, doubling the distance of x from the mean has four times the effect on the square. Then, as with the mean, take the weighted mean of these squared deviations (x −µ)2, weighted by the probabilities, as with the mean. Using sigma notation: Var(x) = X (x −µ)2P(x), summed over the distribution. (1) Neither a square nor a probability is ever negative, so variance is never negative.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>432 Chapter 9 Discrete probability distributions 9C Calculating the variance Two more lines added to the previous table for calculating E(X) finds the variance. If the mean is already known, omit line 3 of the table below. Example 6 Finding the variance of a discrete probability distribution Find the mean, variance, and standard deviation (non-negative square root of the variance) of the toss-four- coins experiment above. For variance, use the formul</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Variance / SD measure spread.</li>
+        <li><span class="tex">Var(X)=E(X^2)-[E(X)]^2</span>.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

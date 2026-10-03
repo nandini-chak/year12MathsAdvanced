@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Review sequences and series, APs and GPs, sums and limiting sums. • Use APs and GPs to model practical situations. This section reviews the main results about APs and GPs from Chapter 1 and applies them to a variety of problems, in preparation for the later sections on finance. Section 8B is particularly concerned with the use of logarithms in solving the exponential equations that arise when working with GPs. Formulae for arithmetic sequences Here are the essential definitions and formulae that are needed for problems involving APs. But first, some definitions and notation that apply to any sequence: • The notation for a sequence is usually a1, a2, a3, . . . . • The nth partial sum of a sequence is the sum of the first n terms: Sn = a1 + a2 + · · · + an. • When attention is on adding the terms, we usually use the word series. — This may be a finite series, written as 1 + 3 + 5 + · · · + 11. — Or it may be an infinite series, such as 1 + 3 + 5 + · · · or 1 + 1 2 + 1 4 + · · · . 1 A summary of arithmetic sequences • A sequence an is called an arithmetic sequence or AP if the difference between successive terms is constant. That is: an −an−1 = d, for all n ≥2, where d is a constant, called the common difference. • The nth term of an AP with first term a and common difference d is: an = a + (n −1)d. • An AP is a linear function of n. When graphed, its points lie on a line. • Three numbers a, x, and b are in AP if: b −x = x −a, that is, x = 1 2(a + b). • The partial sum Sn of the first n terms of an AP is: Sn = 1 2n(a + an) (use when the last term an is known), OR Sn = 1 2n  2a + (n −1)d  (use when the difference d is known). The second-last formula is often written Sn = 1 2n(a + ℓ), where ℓ= an is the last term.</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>8A Applications of APs and GPs 347 8A Applications of APs and GPs Learning intentions • Review sequences and series, APs and GPs, sums and limiting sums. • Use APs and GPs to model practical situations. This section reviews the main results about APs and GPs from Chapter 1 and applies them to a variety of problems, in preparation for the later sections on finance. Section 8B is particularly concerned with the use of logarithms in solving the exponential equations that arise when working with GPs. Formulae for arithmetic sequences Here are the essential definitions and formulae that are needed for problems involving APs. But first, some definitions and notation that apply to any sequence: • The notation for a sequence is usually a1, a2, a3, . . . . • The nth partial sum of a sequence is the sum of the first n terms: Sn = a1 + a2 + · · · + an. • When attention is on adding the terms, we usually use the word series. — This may be a finite series, written as 1 + 3 + 5 + · · · + 11. — Or it may be an infinite series, such as 1 + 3 + 5 + · · · or 1 + 1 2 + 1 4 + · · · . 1 A summary of arithmetic sequences • A sequence an is called an arithmetic sequence or AP if the difference between successive terms is constant. That is: an −an−1 = d, for all n ≥2, where d is a constant, called the common difference. • The nth term of an AP with first term a and common difference d is: an = a + (n −1)d. • An AP is a linear function of n. When graphed, its points lie on a line. • Three numbers a, x, and b are in AP if: b −x = x −a, that is, x = 1 2(a + b). • The partial sum Sn of the first n terms of an AP is: Sn = 1 2n(a + an) (use when the last term an is known), OR Sn = 1 2n  2a + (n −1)d  (use when the difference d is known). The second-last formula is often written Sn = 1 2n(a + ℓ), where ℓ= an is the last term. Example 1 Salaries and APs Georgia earned $50 000 in her first year at Information Holdings, and her salary then increased every year by $6000. She worked at the company for 12 years. a What was her annual salary in her final year? b What were her total earnings over the 12 years?</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>348 Chapter 8 Series and finance 8A Solution Her annual salaries form a series, 50 000 + 56 000 + 62 000 + · · · with 12 terms. This is an AP with a = 50 000, d = 6000 and n = 12. a Her final salary is the twelfth term a12 of the series. Final salary = a + 11d (using the formula for a12) = 50 000 + 66 000 = $116 000. b Her total earnings are the sum S12 of the first twelve terms of the series. Using the first formula for Sn: Total earnings = 1 2n(a + an) = 1 2 × 12 × (a + a12) = 6 × (50 000 + 116 000) = $996 000. Using the second formula for Sn: Total earnings = 1 2n  2a + (n −1)d  1 2 × 12 × (2a + 11d) = 6 × (100 000 + 66 000) = $996 000. Example 2 Cinema charges and APs The Roxanne Cinema has a concession for groups. It charges $24 for the first ticket and then $16 for each additional ticket. a How much would 20 tickets cost? b Find a formula for the cost of n tickets. c How many people are in a group whose tickets cost $600? Solution The costs of 1, 2, 3, ... tickets form the sequence $24, $40, $56, . . . . This is an AP with a = 24 and d = 16. a The cost of 20 tickets is the 20th term a20 of the sequence. Cost of 20 tickets = a + 19d (using the formula for a20) = 24 + 19 × 16 = $328. b Cost of n tickets = a + (n −1)d</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>AP/GP in financial stories (savings patterns).</li>
+        <li>Identify a, d or r, and n.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

@@ -100,4 +100,8 @@ svg.plot .curve.image{stroke:var(--image)}
 .home{padding:2rem 1.5rem 3rem;max-width:56rem}
 .home h1{font-family:var(--display);font-size:clamp(1.5rem,3.2vw,2.1rem);margin:0 0 .45rem}
 footer.site{margin-top:2rem;color:var(--muted);font-size:.86rem}
+.prior-lead{margin:0 0 .55rem;font-size:.92rem;color:var(--muted)}
+ul.prior-list{margin:.2rem 0 0;padding-left:1.15rem}
+ul.prior-list li{margin:.28rem 0;line-height:1.35}
+.notes .note-block{display:none} /* legacy long prior blocks — prefer .prior-list */
 @media print{.site-bar,nav.jump,.chapter-nav,.no-print,.teacher-note{display:none!important}.shell{display:block}}

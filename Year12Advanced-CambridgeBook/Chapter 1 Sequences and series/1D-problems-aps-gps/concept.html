@@ -30,14 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Use the formulae for the terms of APs and GPs to solve problems. This section deals with APs and GPs together, and presents some further approaches to problems about the terms of APs and GPs. A condition for three numbers to be in AP or GP The three numbers 10, 25, 40 form an AP because the differences 25 −10 = 15 and 40 −25 = 15 are equal. Similarly, 10, 20, 40 form a GP because the ratios 20 10 = 2 and 40 20 = 2 are equal. These situations occur quite often, and a formal statement is worthwhile: 8 Three numbers in arithmetic progression or geometric progression • Three numbers a, m, and b form an AP if: m −a = b −m, that is, m = 1 2(a + b) . • Three non-zero numbers a, g, and b form a GP if: g a = b g , that is, g2 = ab .</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>20 Chapter 1 Sequences and series 1D 1D Solving problems involving APs and GPs Learning intentions • Use the formulae for the terms of APs and GPs to solve problems. This section deals with APs and GPs together, and presents some further approaches to problems about the terms of APs and GPs. A condition for three numbers to be in AP or GP The three numbers 10, 25, 40 form an AP because the differences 25 −10 = 15 and 40 −25 = 15 are equal. Similarly, 10, 20, 40 form a GP because the ratios 20 10 = 2 and 40 20 = 2 are equal. These situations occur quite often, and a formal statement is worthwhile: 8 Three numbers in arithmetic progression or geometric progression • Three numbers a, m, and b form an AP if: m −a = b −m, that is, m = 1 2(a + b) . • Three non-zero numbers a, g, and b form a GP if: g a = b g , that is, g2 = ab . Example 15 Finding three numbers that form an AP or a GP a Find the value of m if 3, m, 12 form an AP. b Find the value of g if 3, g, 12 form a GP. Solution Because 3, m, 12 form an AP: m −3 = 12 −m 2m = 15 m = 7 1 2. a Because 3, g, 12 form a GP: g 3 = 12 g g2 = 36 g = 6 or −6. b A note — for clarification only The number m above is already familiar because it is the mean of a and b. In the context of sequences, the numbers m and g are called the arithmetic mean and a geometric mean of a and b, but these names are not required in the course. You will have met ratio equations such as x 3 = 12 x when doing similarity problems in earlier years — it is because such equations arise so often in geometry that the name geometric is given to such sequences.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>1D Solving problems involving APs and GPs 21 Solving problems leading to simultaneous equations Many problems about APs and GPs lead to simultaneous equations. These are best solved by elimination. 9 Problems on APs and GPs leading to simultaneous equations • With APs, eliminate a by subtracting one equation from the other. • With GPs, eliminate a by dividing one equation by the other. Example 16 Solving a problem about an AP The third term of an AP is 16 and the 12th term is 79. Find the 41st term. Solution Let the first term be a and the common difference be d. Because a3 = 16, a + 2d = 16, (1) and because a12 = 79, a + 11d = 79. (2) Subtracting (1) from (2), 9d = 63 (this is the key step that eliminates a) d = 7. Substituting into (1), a + 14 = 16 a = 2. Hence a41 = a + 40d = 282. Example 17 Solving a problem about a GP Find the first term a and the common ratio r of a GP in which the fourth term is a4 = 6 and the seventh term is a7 = 162. Solution Because a4 = 6, ar3 = 6, (1) and because a7 = 162, ar6 = 162. (2) Dividing (2) by (1), r3 = 27 (this is the key step that eliminates a) r = 3. Substituting into (1), a × 27 = 6 a = 2 9. Solving GP problems involving trial-and-error or logarithms Equations and inequations involving the terms of a GP are index equations, so logarithms are needed for a systematic approach. Trial-and-error, however, is quite satisfactory for simpler problems, and the reader may prefer to leave the logarithms until Section 8B, which develops the systematic use of logarithms in GP problems.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>22 Chapter 1 Sequences and series 1D Example 18 Using trial-and-error or</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Use AP/GP formulae to model worded situations.</li>
+        <li>Identify a, d or r, and n from the story.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -51,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

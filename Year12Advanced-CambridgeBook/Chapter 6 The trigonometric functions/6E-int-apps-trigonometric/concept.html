@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Find areas associated with graphs of trigonometric functions. The trigonometric integrals can now be used to find areas in the usual way. Finding areas by integration As always, a sketch is essential, because an area below the x-axis is represented as a negative number by the definite integral. It is best to evaluate the separate integrals first, then make a conclusion about areas.</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>6E Applications of integration 287 6E Applications of integration Learning intentions • Find areas associated with graphs of trigonometric functions. The trigonometric integrals can now be used to find areas in the usual way. Finding areas by integration As always, a sketch is essential, because an area below the x-axis is represented as a negative number by the definite integral. It is best to evaluate the separate integrals first, then make a conclusion about areas. Example 30 Finding an area between a curve and the x-axis a Sketch y = cos 1 2 x in the interval 0 ≤x ≤4π, marking both x-intercepts. b Hence find the area between the curve and the x-axis, for 0 ≤x ≤4π. Solution a The curve y = cos 1 2 x has amplitude 1, and the period is 2π ÷ 1 2 = 4π. The two x-intercepts in the interval are x = π and x = 3π. b Integrate separately over the three intervals: [0, π] and [π, 3π] and [3π, 4π]. First, ∫π 0 cos 1 2 x dx = h 2 sin 1 2 x iπ 0 = 2 sin π 2 −2 sin 0 = 2 −0 = 2, x y −1 1 π 2π 3π 4π which is positive, because the curve is above the x-axis for 0 ≤x ≤π. Secondly, ∫3π π cos 1 2 x dx = h 2 sin 1 2 x i3π π (or use the first result and symmetry) = 2 sin 3π 2 −2 sin π 2 = −2 −2 = −4, which is negative, because the curve is below the x-axis for π ≤x ≤3π. Thirdly, ∫4π 3π cos 1 2 x dx = h 2 sin 1 2 x i4π 3π (or use the first result and symmetry) = 2 sin 2π −2 sin 3π 2 = 0 −(−2) = 2, which is positive, because the curve is above the x-axis for 3π ≤x ≤4π. Hence total area = 2 + 4 + 2 = 8 square units. But it is far quicker to integrate from x = 0 to x = π, and then use the symmetry of the cosine function to conclude that the total area is four times this integral.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>288 Chapter 6 The trigonometric functions 6E</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Trig integral applications (area, accumulations).</li>
+        <li>Sketch the wave first.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

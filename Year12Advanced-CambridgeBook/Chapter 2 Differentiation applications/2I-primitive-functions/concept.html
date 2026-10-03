@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Understand a primitive of f(x) as a function F(x) with derivative F′(x) = f(x). • Understand how constants of integration arise, and find them using initial conditions. • Develop standard forms for powers of x, and for powers of linear functions of x. This section reverses the process of differentiation, and asks, ‘What can we say about a function if we only know its derivative?’ The results of this section will be needed when integration is introduced in Chapter 3. Primitives are functions with the same derivative The following four functions all have the same derivative 2x — they are therefore called primitives of 2x. Look at their four closely related graphs below. x2, x2 + 3, x2 −3, x2 −6. These four functions are all the same apart from a constant term. This situation is true generally — any two functions with the same derivative on an open interval differ only by a constant. 18 Functions with the same derivative A If a function F(x) has derivative zero. for all x in an open interval, then F(x) is a constant function on that interval. B If F′(x) = G′(x), for all x in an open interval, then F(x) and G(x) differ by a constant on that interval. Proof A Because its derivative is zero, F(x) has gradient zero throughout the interval. The curve y = F(x) is therefore a horizontal line, and F(x) is a constant function. B The difference F(x) −G(x) has derivative F′(x) −G′(x) = 0. Hence F(x) −G(x) is a constant function by part A. Note: Following normal practice, we ignore qualifications about open intervals unless there is a problem. See the Challenge subheading at the end of this section. The family of primatives with the same derivative Continuing with the example above, the various functions whose derivatives are 2x are all of the form: F(x) = x2 + C, where C is a constant. By taking different values of the constant C, these primatives form an infinite family of curves. Each curve is the parabola y = x2 translated upwards or downwards. x y 2 7 3 −3 −6</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>98 Chapter 2 Curve-sketching using the derivative 2I 2I Primitive functions Learning intentions • Understand a primitive of f(x) as a function F(x) with derivative F′(x) = f(x). • Understand how constants of integration arise, and find them using initial conditions. • Develop standard forms for powers of x, and for powers of linear functions of x. This section reverses the process of differentiation, and asks, ‘What can we say about a function if we only know its derivative?’ The results of this section will be needed when integration is introduced in Chapter 3. Primitives are functions with the same derivative The following four functions all have the same derivative 2x — they are therefore called primitives of 2x. Look at their four closely related graphs below. x2, x2 + 3, x2 −3, x2 −6. These four functions are all the same apart from a constant term. This situation is true generally — any two functions with the same derivative on an open interval differ only by a constant. 18 Functions with the same derivative A If a function F(x) has derivative zero. for all x in an open interval, then F(x) is a constant function on that interval. B If F′(x) = G′(x), for all x in an open interval, then F(x) and G(x) differ by a constant on that interval. Proof A Because its derivative is zero, F(x) has gradient zero throughout the interval. The curve y = F(x) is therefore a horizontal line, and F(x) is a constant function. B The difference F(x) −G(x) has derivative F′(x) −G′(x) = 0. Hence F(x) −G(x) is a constant function by part A. Note: Following normal practice, we ignore qualifications about open intervals unless there is a problem. See the Challenge subheading at the end of this section. The family of primatives with the same derivative Continuing with the example above, the various functions whose derivatives are 2x are all of the form: F(x) = x2 + C, where C is a constant. By taking different values of the constant C, these primatives form an infinite family of curves. Each curve is the parabola y = x2 translated upwards or downwards. x y 2 7 3 −3 −6</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>2I Primitive functions 99 Using an initial condition to pick out a particular solution Suppose now that we know also that the graph of the primitive we are seeking passes through a particular point, say the point (2, 7), as shown on the graph to the right. Now we can evaluate the constant C by substituting that point into: F(x) = x2 + C7 = 4 + C so C = 3 and hence F(x) = x2 + 3. Thus in place of the infinite family of functions, there is now a particular solution. The extra condition that allows the evaluation of C is called an initial condition. 19 A primitive of a function • A function F(x) is called a primitive or an anti-derivative of f(x) if the derivative of F(x) is f(x): F′(x) = f(x). • If F(x) is any primitive of f(x) , then the primitive of f(x), or for emphasis the general primitive of f(x), is: F(x) + C, where C is a constant. • An initial condition will enable the constant C to be evaluated. For example, each of these functions is a primitive of x2 + 1: 1 3 x3 + x, 1 3 x3 + x + 7, 1 3 x3 + x −13, 1 3 x3 + x + 4π, but the primitive of x2 + 1 is 1 3 x3 + x + C, where C is a constant. A standard form for finding primitives We have seen that 1 2 x2 is a primitive of x, and 1 3 x3 is a primitive of x2. More generally, reversing d dx(xn+1) = (n +</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Primitive: <span class="tex">F\prime=f</span>.</li>
+        <li>Indefinite integral needs <span class="tex">+C</span>.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

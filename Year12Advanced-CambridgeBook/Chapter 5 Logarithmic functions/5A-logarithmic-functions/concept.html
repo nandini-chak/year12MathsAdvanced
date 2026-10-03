@@ -34,46 +34,15 @@
       <p>Full theory, Examples 1–6 and the interactive studio live in the <a href="tutorial.html">Tutorial · theory</a> page.</p>
     </section>
 
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Check these before the tutorial.</p>
-
-      <div class="note-block">
-        <h3>1. Exponential base e</h3>
-        <p><span class="tex">y=e^x</span> is always positive, passes through <span class="tex">(0,1)</span>, and increases rapidly. Its inverse swaps the roles of <span class="tex">x</span> and <span class="tex">y</span>.</p>
-      </div>
-
-      <div class="note-block">
-        <h3>2. Parent logarithm</h3>
-        <ul>
-          <li>Domain: <span class="tex">x&gt;0</span> only.</li>
-          <li>Range: all real <span class="tex">y</span>.</li>
-          <li>Asymptote: <span class="tex">x=0</span> (the <span class="tex">y</span>-axis).</li>
-        </ul>
-        <div class="plot-frame">
-          <svg id="parentPlot" class="plot" viewBox="0 0 720 280" aria-label="Parent natural logarithm"></svg>
-          <div class="legend"><span class="p"><i></i>y = ln x</span><span class="i"><i></i>y = e^x (inverse)</span></div>
-        </div>
-      </div>
-
-      <div class="note-block">
-        <h3>3. Transformation language</h3>
-        <ul>
-          <li><span class="tex">y=\log_e(-x)</span> — reflection in the <span class="tex">y</span>-axis.</li>
-          <li><span class="tex">y=\log_e x + c</span> — vertical shift.</li>
-          <li><span class="tex">y=\log_e(x-b)</span> — horizontal shift (watch the domain).</li>
-          <li><span class="tex">y=A\log_e x</span> — vertical stretch; <span class="tex">y=\log_e(kx)</span> often looks like a vertical shift because <span class="tex">\log_e(kx)=\log_e x+\log_e k</span>.</li>
-        </ul>
-        <details class="teacher-note no-print">
-          <summary><span class="ico">T</span> Teacher note</summary>
-          <div class="body">Keep this page short. The “horizontal dilation = vertical translation” idea is developed fully in the tutorial — flag it here only as a hook.</div>
-        </details>
-      </div>
-
-      <div class="note-block">
-        <h3>4. Index laws and quadratics</h3>
-        <p>Many equations use <span class="tex">u=e^x</span> or <span class="tex">u=\log_e x</span> so a quadratic in <span class="tex">u</span> appears. You also need change of base: <span class="tex">\log_b x=\dfrac{\log_e x}{\log_e b}</span>.</p>
-      </div>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li><span class="tex">\ln x=\log_e x</span> is the inverse of <span class="tex">e^x</span>; domain <span class="tex">x>0</span>, asymptote <span class="tex">x=0</span>.</li>
+        <li>Identities: <span class="tex">\ln(e^x)=x</span> and <span class="tex">e^{\ln x}=x</span> (<span class="tex">x>0</span>).</li>
+        <li>Change of base: <span class="tex">\log_b x=\ln x/\ln b</span>.</li>
+        <li>Graph transforms and equations: open the Tutorial.</li>
+      </ul>
     </section>
 
     <section class="card" id="next">
@@ -94,51 +63,17 @@
   <script src="../../course-nav.js"></script>
   <script>
   (function(){
-    const NS="http://www.w3.org/2000/svg";
-    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=280;this.pad=44;}
-    Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
-    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
-    Plot.prototype.el=function(t,a){const n=document.createElementNS(NS,t);Object.keys(a||{}).forEach(k=>{if(a[k]!=null)n.setAttribute(k,a[k]);});this.svg.appendChild(n);return n;};
-    Plot.prototype.axes=function(){
-      const a=this.xy(this.w.xmin,0),b=this.xy(this.w.xmax,0),c=this.xy(0,this.w.ymin),d=this.xy(0,this.w.ymax);
-      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#9aa3b0","stroke-width":1.2});
-      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.2});
-      const q=this.xy(1,0);
-      this.el("text",{x:q[0],y:q[1]+16,"text-anchor":"middle",fill:"#5c6678","font-size":"12"}).textContent="1";
-      const v=this.xy(0,1);
-      this.el("text",{x:v[0]-14,y:v[1]+4,"text-anchor":"end",fill:"#5c6678","font-size":"12"}).textContent="1";
-    };
-    Plot.prototype.asymptote=function(x0){
-      const a=this.xy(x0,this.w.ymin),b=this.xy(x0,this.w.ymax);
-      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#cbd5e1","stroke-width":1.2,"stroke-dasharray":"5 5"});
-    };
-    Plot.prototype.poly=function(pts,o){o=o||{};const d=pts.filter(Boolean).map((p,i)=>{const q=this.xy(p[0],p[1]);return(i?"L":"M")+q[0]+" "+q[1];}).join(" ");
-      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.5,"stroke-dasharray":o.dash||null});};
-    function sample(fn,w,n){n=n||320;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||Math.abs(y)>40){pts.push(null);continue;}pts.push([x,y]);}return pts;}
-
-    function drawParents(){
-      const svg=document.getElementById("parentPlot");
-      const w={xmin:-0.6,xmax:2.8,ymin:-1.2,ymax:2.8};
-      const P=new Plot(svg,w);
-      P.clear();P.axes();P.asymptote(0);
-      P.poly(sample(x=>Math.log(x),w),{stroke:"#0f766e",dash:"7 6",width:2.2});
-      P.poly(sample(x=>Math.exp(x),w),{stroke:"#1d4ed8",width:2.5});
-      const q=P.xy(1,0);
-      P.el("circle",{cx:q[0],cy:q[1],r:4,fill:"#0f766e"});
-      P.el("text",{x:q[0]+12,y:q[1]-10,fill:"#334155","font-size":"11"}).textContent="(1, 0)";
-      const r=P.xy(0,1);
-      P.el("circle",{cx:r[0],cy:r[1],r:4,fill:"#1d4ed8"});
-      P.el("text",{x:r[0]+12,y:r[1]+4,fill:"#334155","font-size":"11"}).textContent="(0, 1)";
-    }
-    function boot(){
+    function texAll(){
       document.querySelectorAll(".tex").forEach(function(n){
         if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
         n.setAttribute("data-texed","1");
-        if(window.katex) katex.render(n.textContent,n,{throwOnError:false});
+        katex.render(n.textContent, n, {throwOnError:false});
       });
-      drawParents();
     }
-    window.addEventListener("load",boot); setTimeout(boot,400);
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
   })();
   </script>
 </body>

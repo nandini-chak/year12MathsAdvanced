@@ -30,14 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Develop and use standard forms for integration involving exponential functions. • Develop and use a standard form for the reverse chain rule. • Reverse a given differentiation to find an integral. Finding primitives is the reverse of differentiation. Thus the new standard forms for differentiation can now be reversed to provide standard forms for integration. Standard forms for integration To obtain the standard forms for integration of exponential functions, reverse the standard forms for differentiat- ing them — they are listed in Box 2 of Section 4B. • Reversing d dx ex = ex gives ∫ ex dx = ex + C. • Reversing d dx eax+b = a eax+b gives ∫ a eax+b dx = eax+b, and dividing through by a, ∫ eax+b dx = 1 a eax+b + C. • Reversing d dx eu = eu du dx gives ∫ eu du dx dx = eu + C, or alternatively, d dx ef(x) = ef(x) f ′(x) gives ∫ ef(x) f ′(x) dx = e f(x) + C. Summarising these standard forms: 3 Standard forms for integration ∫ ex dx = ex + C and ∫ eax+b dx = 1 a eax+b + C A standard form for the reverse chain rule (in two forms): ∫ eu du dx dx = eu + C OR ∫ ef(x) f ′(x) dx = e f(x) + C</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>192 Chapter 4 Exponential functions 4D 4D Integration involving exponential functions Learning intentions • Develop and use standard forms for integration involving exponential functions. • Develop and use a standard form for the reverse chain rule. • Reverse a given differentiation to find an integral. Finding primitives is the reverse of differentiation. Thus the new standard forms for differentiation can now be reversed to provide standard forms for integration. Standard forms for integration To obtain the standard forms for integration of exponential functions, reverse the standard forms for differentiat- ing them — they are listed in Box 2 of Section 4B. • Reversing d dx ex = ex gives ∫ ex dx = ex + C. • Reversing d dx eax+b = a eax+b gives ∫ a eax+b dx = eax+b, and dividing through by a, ∫ eax+b dx = 1 a eax+b + C. • Reversing d dx eu = eu du dx gives ∫ eu du dx dx = eu + C, or alternatively, d dx ef(x) = ef(x) f ′(x) gives ∫ ef(x) f ′(x) dx = e f(x) + C. Summarising these standard forms: 3 Standard forms for integration ∫ ex dx = ex + C and ∫ eax+b dx = 1 a eax+b + C A standard form for the reverse chain rule (in two forms): ∫ eu du dx dx = eu + C OR ∫ ef(x) f ′(x) dx = e f(x) + C Examples of the reverse chain rule have been left to the end of the section. Example 12 Using the standard forms for integration Find these indefinite integrals. ∫ e3x+2 dx a ∫ (1 −x + ex) dx b Solution a ∫ e3x+2 dx = 1 3 e3x+2 + C (a = 3 and b = 2) b ∫ (1 −x + ex) dx = x −1 2 x2 + ex + C (integrating each term separately)</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>4D Integration involving exponential functions 193 Definite integrals Definite integrals are evaluated as usual by finding the primitive and substituting. Example 13 Evaluating definite integrals Evaluate these definite integrals. ∫2 0 ex dx a ∫3 2 e5−2x dx b Solution ∫2 0 ex dx = ex2 0 = e2 −e0 = e2 −1 a ∫3 2 e5−2x dx = −1 2 h e5−2xi3 2 (a = −2 and b = 5) = −1 2 (e−1 −e) = −1 2 1 e −e ! = e2 −1 2e b Given the derivative, find the function — initial conditions As before, if the derivative of a function is known, and the value of the function at one point is also known, then the whole function can be determined. This particular value is called an initial condition. Example 14 Using initial conditions to find the primitive It is known that f ′(x) = ex and that f(1) = 0. a Find the original function f(x). b Hence find f(0). Solution a It is given that f ′(x) = ex. Taking the primitive, f(x) = ex + C, for some constant C. It is known that f(1) = 0, so substituting x = 1 : 0 = e1 + C C = −e. Hence f(x) = ex −e. b Substituting x = 0 into this function: f(0) = e0 −e = 1 −e.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>194 Chapter 4 Exponential functions 4D Example 15 Using initial conditions to find a further primitive a If f ′(x) = 1 + 2e−x and f(0) = 1, find f(x). b Hence find f(1). Solution a It is given that f ′(x) = 1 + 2e−x. Taking the primitive, f(x) = x −2e−x + C, for some constant C. It is known that f(0) = 1, so substituting x = 0: 1 = 0 −2 e0 + C 1 = 0 −2 + C C = 3. Hence f(x) = x −2e−x + 3. b Substituting x = 1 into this function: f(1) = 1 −2e−1 + 3 = 4 −2e−1. Given a derivative, find an integral The result of any differentiation can be reversed. This often allows a new primitive to b</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Integrate <span class="tex">e^{ax}</span> and related forms.</li>
+        <li>Reverse chain when the inner derivative appears.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -51,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

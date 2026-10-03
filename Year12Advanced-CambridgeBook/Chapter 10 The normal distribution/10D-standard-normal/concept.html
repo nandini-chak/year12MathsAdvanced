@@ -30,13 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>478 Chapter 10 Continuous probability distributions 10D 10D The standard normal distribution Learning intentions • Understand and sketch the standard normal PDF φ(z), with its inflections. • Understand and sketch the CDF Φ(z) of the standard normal. • Use both these functions to find and approximate probabilities. • Understand the link between standard deviation and inflections. • Understand and use the empirical rule. • Calculate and work with quartiles. Gauss and the early statisticians realised that one particular class of distributions — the Gaussian or normal</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>478 Chapter 10 Continuous probability distributions 10D 10D The standard normal distribution Learning intentions • Understand and sketch the standard normal PDF φ(z), with its inflections. • Understand and sketch the CDF Φ(z) of the standard normal. • Use both these functions to find and approximate probabilities. • Understand the link between standard deviation and inflections. • Understand and use the empirical rule. • Calculate and work with quartiles. Gauss and the early statisticians realised that one particular class of distributions — the Gaussian or normal distribution and its translations and dilations — is particularly important. Normal distributions occur in a wide variety of situations, and for reasons that are explained in an Extension 1 topic, they are involved in the sampling of every distribution, continuous or discrete. Their graphs are generally referred to as bell-shaped curves, and every normal distribution can be obtained from every other normal distribution by shifting and stretching. We saw the shape of such a curve emerging when 20 coins were tossed at the end of Section 10A. The graph of the standard normal distribution is sketched to the right. The equation of its probability density function is: φ(z) = e−1 2 z2 √ 2π (the Greek letter φ is phi, corresponding to Latin f) . ( )z     z</p>
-<p>  It is standard practice to use Z rather than X for the standard normal random variable, and z rather than x for its values, so that the PDF is φ(z). Sketching the curve We already have all the tools for sketching this function from its equation. The first step is to stop looking at the complicated denominator √ 2π, which is just a constant. Use your calculator to find that 1 √ 2π ≑0.4, and start thinking of the formula as φ(z) ≑2 5 e−1 2 z2, which looks much more friendly. • The y-intercept is φ(0) = 1 √ 2π ≑0.4, because e0 = 1. • When z is non-zero, the index −1 2z2 is negative, so e−1 2 z2 &lt; e0 = 1. Hence the value at z = 0 is a global maximum, and the mode is therefore z = 0. • The function is defined for all values of z, and is positive for all values of z. • The function is even, with line symmetry in the y-axis, because replacing z by −z leaves the equation unchanged. • As z →∞, and as z →−∞, the index −1 2z2 quickly becomes a large negative number, so e−1 2 z2 quickly becomes an extremely small positive number. Thus the z-axis is therefore a horizontal asymptote in both directions. • There are points of inflection at z = −1 and z = 1 — both these inflections have y-coordinate e−1 2 √ 2π ≑0.24. We have left the difficult derivation of these inflections to the first of two Challenge paragraphs at the end of this section.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>10D The standard normal distribution 479 Why is φ(z) a probability density function? We have now established that φ(z) has the graph shown above, but why is it a probability density function? Certainly we can see that it is always positive. But we also need to establish that: ∫∞ −∞φ(z) dz = 1. Unfortunately, this integral cannot be established using the techniques in this course. This fact is one of a small number of things that readers will have to accept for now, and perhaps prove in later years. Making the total area under the curve have the value 1 is the reason why the denominator √ 2π has been put there, and proving the result requires a proof t</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Standard normal <span class="tex">Z\sim N(0,1)</span>.</li>
+        <li>Use tables / calculator carefully.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -50,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

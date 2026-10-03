@@ -30,14 +30,15 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Define a geometric sequence, and establish a formula for its nth term. • Solve problems about GPs, and relate them to exponential functions. A geometric sequence is a sequence such as: 2, 6, 18, 54, 162, 486, 1458, ... in which the ratio of successive terms is constant — in this example, each term is 3 times the previous term. Definition of a geometric sequence The old name was ‘geometric progression’, and so geometric sequences are called GPs. 5 Geometric sequences • The ratio of successive terms in any sequence an always means some term divided by the previous term, that is: ratio = an an−1 , where n ≥2. • A sequence an is called a geometric sequence if: an an−1 = r, where n ≥2, where r is a non-zero constant, called the common ratio. • The terms of a geometric sequence can be generated from the first term by repeated multiplication by this common ratio: an = an−1 × r, where n ≥2.</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>14 Chapter 1 Sequences and series 1C 1C Geometric sequences Learning intentions • Define a geometric sequence, and establish a formula for its nth term. • Solve problems about GPs, and relate them to exponential functions. A geometric sequence is a sequence such as: 2, 6, 18, 54, 162, 486, 1458, ... in which the ratio of successive terms is constant — in this example, each term is 3 times the previous term. Definition of a geometric sequence The old name was ‘geometric progression’, and so geometric sequences are called GPs. 5 Geometric sequences • The ratio of successive terms in any sequence an always means some term divided by the previous term, that is: ratio = an an−1 , where n ≥2. • A sequence an is called a geometric sequence if: an an−1 = r, where n ≥2, where r is a non-zero constant, called the common ratio. • The terms of a geometric sequence can be generated from the first term by repeated multiplication by this common ratio: an = an−1 × r, where n ≥2. Example 10 Testing whether a sequence is a GP Test whether each sequence is a GP. If the sequence is a GP, find its first term a and its ratio r. 40, 20, 10, 5, ... a 5, 10, 100, 200, . . . b Solution a Here a2 a1 = 20 40 = 1 2 and a3 a2 = 10 20 = 1 2 and a4 a3 = 5 10 = 1 2 , so the sequence is a GP with a = 40 and r = 1 2 . b Here a2 a1 = 10 5 = 2 and a3 a2 = 100 10 = 10 and a4 a3 = 200 100 = 2. The ratios are not all the same, so the sequence is not a GP. A formula for the nth term of a GP Let the first term of a GP be a and the common ratio be r. Then the first few terms of the sequence are: a1 = a, a2 = ar, a3 = ar2, a4 = ar3, a5 = ar4, . . . From this pattern, the general formula for the nth term is clear.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>1C Geometric sequences 15 6 The nth term of a GP an = arn−1, where a is the first term, and r is the common ratio. We usually use the symbols a and r for the first term and the common ratio. Example 11 Finding the terms of a GP Write out the first five terms, and calculate the 10th term, of the GP with: a = 3 and r = 2, a a = 7 and r = 10. b Solution 3, 6, 12, 24, 48, ... a10 = ar9 = 3 × 29 = 1536 a 7, 70, 700, 7000, 70 000, . . . a10 = a × r9 = 7 × 109 = 7 000 000 000 b Zeroes and GPs don’t mix No term of a GP can be zero. For example, if a2 = 0, then a3 a2 would be undefined, contradicting the definition that a3 a2 = r. Similarly, the ratio of a GP cannot be zero. Otherwise a2 = ar would be zero, which is impossible. Negative ratios and alternating signs Here is an important type of GP: 2, −6, 18, −54, ... Its ratio is r = −3, which is negative, so the terms alternate positive and negative. Example 12 GPs whose terms have alternating signs a Show that 2, −6, 18, −54, ... is a GP and find its first term a and ratio r. b Find a formula for the nth term, and hence find a6 and a15. Solution a a2 a1 = −6 2 = −3 and a3 a2 = 18 −6 = −3 and a4 a3 = −54 18 = −3 Hence the sequence is a GP with a = 2 and r = −3. b Using the formula for the nth term: an = arn−1 = 2 × (−3)n−1. Hence a6 = 2 × (−3)5 = −486, because 5 is odd. and a15 = 2 × (−3)14 = 2 × 314, because 14 is even.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>16 Chapter 1 Sequences and series 1C Using a switch to alternate the sign Here are two classic GPs with ratio −1: −1, 1, −1</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Geometric: common ratio <span class="tex">r</span>.</li>
+        <li><span class="tex">a_n=ar^{{n-1}}</span>.</li>
+        <li>Sign of r controls growth / oscillation.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -51,10 +52,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>

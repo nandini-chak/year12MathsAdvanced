@@ -30,12 +30,14 @@
       <h2 class="section-h">What this section is about</h2>
       <p>• Understand and use definite integrals of a function with negative values. • Understand and use definite integrals of odd and even functions. • Work with definite integrals over a zero-width interval, and running backwards. • Work with sums, multiples, and inequalities involving definite integrals. This section will first extend the theory to functions with negative values. Then some simple properties of the definite integral will be established using arguments about the dissection of regions. Integrating functions with negative values When a function has negative values, its graph is below the x-axis, so the ‘heights’ of the little rectangles in the dissection are negative numbers. This means that any areas below the x-axis should contribute negative values to the value of the final integral. For example, in the diagram to the right, where a &lt; h &lt; k &lt; b, the region B is below the x-axis because the function f(x) is negative in [h, k]. So the heights of all the infinitesimal strips making up B are negative, and B therefore contributes a negative number to the definite integral: ∫b a f(x) dx = + area A −area B + area C. x y a h k b A B C Thus we attach the sign + or −to each area, depending on whether the curve, and therefore the region, is above or below the x-axis. For this reason, the three terms in the sum above are often referred to as signed areas under the curve, because a sign has been attached to the area of each region. 5 The definite integral as the sum of signed areas Let f(x) be a function continuous in the closed interval [a, b], where a ≤b, and suppose that we are taking the definite integral over [a, b]. • For regions where the curve is above the x-axis, we attach + to the area. For regions where the curve is below the x-axis, we attach −to the area. These areas, with signs attached, are called signed areas under the curve. • The definite integral ∫b a f(x) dx is the the sum of these signed areas under the curve in the inter- val [a, b]. The whole de</p>
     </section>
-    <section class="notes" id="prior">
-      <h2>Prior knowledge — quick recap</h2>
-      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
-      <p>124 Chapter 3 Integration 3C 3C The definite integral and its properties Learning intentions • Understand and use definite integrals of a function with negative values. • Understand and use definite integrals of odd and even functions. • Work with definite integrals over a zero-width interval, and running backwards. • Work with sums, multiples, and inequalities involving definite integrals. This section will first extend the theory to functions with negative values. Then some simple properties of the definite integral will be established using arguments about the dissection of regions. Integrating functions with negative values When a function has negative values, its graph is below the x-axis, so the ‘heights’ of the little rectangles in the dissection are negative numbers. This means that any areas below the x-axis should contribute negative values to the value of the final integral. For example, in the diagram to the right, where a &lt; h &lt; k &lt; b, the region B is below the x-axis because the function f(x) is negative in [h, k]. So the heights of all the infinitesimal strips making up B are negative, and B therefore contributes a negative number to the definite integral: ∫b a f(x) dx = + area A −area B + area C. x y a h k b A B C Thus we attach the sign + or −to each area, depending on whether the curve, and therefore the region, is above or below the x-axis. For this reason, the three terms in the sum above are often referred to as signed areas under the curve, because a sign has been attached to the area of each region. 5 The definite integral as the sum of signed areas Let f(x) be a function continuous in the closed interval [a, b], where a ≤b, and suppose that we are taking the definite integral over [a, b]. • For regions where the curve is above the x-axis, we attach + to the area. For regions where the curve is below the x-axis, we attach −to the area. These areas, with signs attached, are called signed areas under the curve. • The definite integral ∫b a f(x) dx is the the sum of these signed areas under the curve in the inter- val [a, b]. The whole definite integral ∫b a f(x) dx is often also referred to as the signed area under the curve. Example 9 Integrating functions with negative values Evaluate these definite integrals. ∫4 0 (x −4) dx a ∫6 4 (x −4) dx b ∫6 0 (x −4) dx c Sketch the graph of y = x −4 and shade the regions associated with these integrals. Then explain how each result is related to the shaded regions.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>3C The definite integral and its properties 125 Solution a ∫4 0 (x −4) dx = h 1 2 x2 −4x i4 0 = (8 −16) −(0 −0) = −8 Triangle OAB has area 8 square units, and is below the x-axis, so the value of the integral is −8. x y −4 2 4 6 O A B C M b ∫6 4 (x −4) dx = h 1 2 x2 −4x i6 4 = (18 −24) −(8 −16) = −6 −(−8) = 2 Triangle BMC has area 2 square units, and is above the x-axis, so the value of the integral is 2. c ∫6 0 (x −4) dx = h 1 2 x2 −4x i6 0 = (18 −24) −(0 −0) = −6 This integral represents the area of △BMC minus the area of △OAB, so the value of the integral is 2 −8 = −6. Odd and even functions Part a of worked Example 10 below sketches the function y = x3 −4x, which is an odd function, with point symmetry in the origin. Thus the area of each shaded hump is the same. Hence the whole integral from x = −2 to x = 2 is zero, because the equal humps above and below the x-axis cancel out. In the diagram of part b, the function y = x2 + 1 is even, with line s</p>
+        <section class="notes" id="prior">
+      <h2>Prior knowledge — quick notes</h2>
+      <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
+      <ul class="prior-list">
+        <li>Linearity and interval-additivity of definite integrals.</li>
+        <li>Equal limits give zero; reverse limits change sign.</li>
+        <li>Full detail: Tutorial · theory.</li>
+      </ul>
     </section>
     <section class="card">
       <h2 class="section-h">Continue</h2>
@@ -49,10 +51,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot,100); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 400);
+  })();
   </script>
 </body></html>
