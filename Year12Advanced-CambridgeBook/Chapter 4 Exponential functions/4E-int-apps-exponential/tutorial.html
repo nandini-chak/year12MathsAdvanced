@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4E Tutorial · Applications of integration (exponential)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="4E" data-page="tutorial" data-nav-depth="2" data-auth-sub="4E Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 4 Exponential functions/4D-int-exponential/concept.html">← 4D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 5 Logarithmic functions/5D-int-reciprocal/concept.html">5D →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>4E · Applications of integration (exponential)</h1>
+    <p>Paraphrased from Cambridge Chapter 4 §4E. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-4-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>198 Chapter 4 Exponential functions 4E 4E Applications of integration Learning intentions • Use integration to find areas associated with graphs. The normal methods of finding areas by integration can now be applied to functions involving ex. Finding the area between a curve and the x-axis A sketch is essential here, because the definite integral attaches a negative sign to the area of any region below the x-axis (provided that the integral does not run backwards). Example 19 Using integration to find an area a Use shifting to sketch y = ex −e, showing the intercepts and asymptote. b Find the area of the region between this curve, the x-axis and the y-axis. Solution a Move the graph of y = ex down e units. To find the y-intercept, put x = 0, then y = e0 −e = 1 −e. To find the x-intercept, put y = 1, then ex = e x = 1. The horizontal asymptote moves down to y = −e. x y 1 1−e −e b ∫1 0 (ex −e) dx = ex −ex1 0 (the number e is a constant) = (e1 −e) −(e0 −0) = (e −e) −(1 −0) = −1. This integral is negative because the region is below the x-axis. Hence the required area is 1 square unit. Given a derivative, find an integral There are many integrals that cannot be found using standard forms or reverse chain rule. Sometimes they can be found by reversing a given differentiation — in this course, the necessary differentiation would always be given. Example 20 Given a derivative, find an integral a Differentiate y = xe−x, and hence find ∫ xe−x dx. b Calculate ∫1 −1 xe−x dx. c The graph was drawn in Section 4C, worked Example 10, and is printed to the right. Find the total area between the curve and the x-axis, between the vertical lines x = −1 and x = 1. d How does your calculation in part c confirm the integral found in part b? x y −e −1 (1, ) e−1 (2, 2 ) e−2 1 2</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>4E Applications of integration 199 Solution a Here y = xe−x. Using the product rule with u = x and v = e−x: dy dx = u′v + uv′ = e−x −xe−x. Reversing this: ∫ e−x dx − ∫ xe−x dx = xe−x −e−x − ∫ xe−x dx = xe−x ∫ xe−x dx = −xe−x −e−x + C. b ∫1 −1 xe−x dx = −xe−x −e−x1 −1 = (−1 e −1 e) −(e −e) = −2 e c Evaluating separate integrals for the regions below and above the x-axis: ∫0 −1 xe−x dx = −xe−x −e−x0 −1 = (0 −1) −(e −e) = −1 so the area is +1. ∫1 0 xe−x dx = −xe−x −e−x1 0 = (−1 e −1 e) −(0 −1) = 1 −2 e, so the area is 1 −2 e. Hence the total area is 1 + (1 −2 e) = 2 −2 e. d The two signed areas add to −1 + (1 −2 e) = −2 e, which is the answer to part b.</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 4E →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 4E, then section 5D.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

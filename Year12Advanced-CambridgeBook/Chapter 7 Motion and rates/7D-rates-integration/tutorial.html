@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7D Tutorial · Rates and integration</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="7D" data-page="tutorial" data-nav-depth="2" data-auth-sub="7D Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 7 Motion and rates/7C-rates-differentiation/concept.html">← 7C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 7 Motion and rates/7E-exponential-growth-decay/concept.html">7E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>7D · Rates and integration</h1>
+    <p>Paraphrased from Cambridge Chapter 7 §7D. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-7-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>326 Chapter 7 Motion and rates 7D 7D Rates and integration Learning intentions • Integrate a rate to find a quantity. In many situations, what is given is the rate dQ dt at which a quantity Q is changing. The original function Q can then be found by integration. As with motion, never omit the constant of integration.To evaluate the constant, use an initial boundary condition, giving the value of Q at some particular time t. 11 Finding the quantity from the rate Suppose that the rate of change of a quantity Q is known as a function of time t. • Integrate to find Q as a function of time. • Never omit the constant of integration. • Use an initial condition to evaluate the constant of integration. Example 15 Integrating to find a physical quantity A tank contains 40 000 litres of water. When the draining valve is opened, the volume V in litres of water in the tank decreases at a variable rate given by dV dt = −1500 + 30t, where t is the time in seconds after opening the valve. Once the water stops flowing, the valve shuts off. a When does the water stop flowing? b Give a common-sense reason why the rate dV dt is negative up to this time. c Integrate to find the volume of water in the tank at time t, and sketch the graph of V as a function of time t. d How much water has flowed out of the tank and how much remains? Solution a Put dV dt = 0. Then −1500 + 30t = 0 t = 50, so it takes 50 seconds for the flow to stop. b During this 50 seconds, the water is flowing out of the tank. Hence the volume V is decreasing, so the derivative dV dt is negative. c Integrating, V = −1500t + 15t2 + C, for some constant C. It is given that when t = 0, V = 40 000, and substituting, 40 000 = 0 + 0 + C C = 40 000. Hence V = 40 000 −1500t + 15t2. d When t = 50, V = 40 000 −(1500 × 50) + (15 × 2500) = 2500.    t V Hence the tank still holds 2500 litres when the valve closes, so 40 000 −2500 = 37 500 litres has flowed out during the 50 seconds.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>7D Rates and integration 327 Questions with a diagram or a graph instead of an equation In some problems about rates, a graph of some function is known, but its equation is unknown. Such problems require careful attention to zeroes and turning points and points of inflection. An approximate sketch of another graph often needs to be drawn. Example 16 Using calculus ideas to interpret a graph of a practical situation Frog numbers were increasing in the Ranavilla district, but during a long drought, the rate of increase fell and actually became negative for a few years. The rate dP dt of population growth of the frogs has been graphed to the right as a function of the time t years after careful observations began.     t dP dt a When was the population neither increasing nor decreasing? b When was the population decreasing and when was it increasing? c When was the population decreasing most rapidly? d When, during the first 12 years, was the frog population at a maximum? e When, during the years 4 ≤t ≤16, was the frog population at a minimum? f Draw a possible graph of the frog population P against time t. Solution a The graph shows that dP dt is zero when t = 4 and again when t = 12. These are the times when the frog population was neither increasing nor decreasing. b The graph shows that dP dt is negative when 4 &lt; t &lt; 12, so the population was decreasing during the years 4 &lt; t &lt; 12. The graph shows that dP dt is positive when 0 &lt; t &lt; 4 and when 12 &lt; t &lt; 16, so the population was increasing during the years 0 &lt; t &lt; 4 and during 12 &lt; t &lt; 16. c The frog population was decreasing most rapidly when t = 8. d The population was at a maximum when x = 4, because from parts a and b, the population was rising before this and falling afterwards. e Similarly, the population was minimum when x = 12. f All that matters is to draw the possible graph of P so that its gradients are consistent with the graph of dP dT . as discussed above in parts a–d. Also, there is a point of inflection at x = 8, and the frog population must never fall below zero.     t P Interpreting an area under a rate graph as an increase in the quantity When a rate is graphed as a function of time, the signed area under the curve from t = a to t = b has a physical meaning — it is the increase in the quantity from t = a to t = b. Thus in the previous worked examples: Look first at the upper graph of the rate dP dT as a function of time t: • The region represented by ∫4 0 dP dt dt is the increase in the frog population in 0 ≤t ≤4 , which is positive because the region is above the x-axis.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>328 Chapter 7 Motion and rates 7D • The region represented by ∫12 4 dP dt dt is the increase in the frog population in 4 ≤t ≤12, which is negative, because the region is below the x-axis, so the (unsigned) area is the decrease in the frog population. • The region represented by ∫16 12 dP dt dt is the increase in the frog population in 12 ≤t ≤16, which is positive. Look now at the second graph above of the frog population P against time t, and see that it grows for 4 years, then falls for 8 years, then grows for 4 years. Rates involving the exponential function Many natural events involve a quantity that dies away gradually, with an equation that involves the exponential function. The next worked example uses the standard form ∫ eax+b dx = 1 a eax+b + C to evaluate the primitive of 3 e−0.02t, so with the numbers in the question, ∫ 3 e−0.02t dt = 3 × 1 −0.02 × e−0.02t + C. Example 17 Modelling exponential decay During a drought, the flow rate dV dt of water from Welcome Well gradually diminishes according to the formula dV dt = 3 e−0.02t, where V is the volume in megalitres of water that has flowed out during the first t days after time zero. a Show that dV dt is always positive, and explain the physical significance of this. b Find the volume V as a function of time t. c How much water will flow from the well during the first 100 days? d Describe the behaviour of V as t →∞, and find what percentage of the total flow comes in the first 100 days. Then sketch the function. Solution a Because ex &gt; 0 for all x, dV dt = 3 e−0.02t is always positive. The volume V is always increasing, because V is the volume that has flowed out of the well, and the water doesn’t flow backwards into the well. b The given rate is dV dt = 3 e−0.02t . Integrating, V = 3 × 1 −0.02 × e−0.02t + C (as explained above) = −3 × 100 2 × e−0.02t + C = −150 e−0.02t + C . When t = 0, no water has flowed out, so V = 0, and substituting, 0 = −150 × e0 + C C = 150. Hence V = −150 e−0.02t + 150 = 150(1 −e−0.02t).</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>7D Rates and integration 329 c When t = 100, V = 150(1 −e−2) ≑129.7 megalitres. d As t →∞, e−0.02t →0, so V →150. Hence flow in first 100 days total flow = 150(1 −e−2) 150 = 1 −e−2 = 0.864 66 . . . ≑86.5%.  t V</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 7D →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 7D, then section 7E.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

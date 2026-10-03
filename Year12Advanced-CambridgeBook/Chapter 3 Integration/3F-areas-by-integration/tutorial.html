@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3F Tutorial · Finding areas by integration</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="3F" data-page="tutorial" data-nav-depth="2" data-auth-sub="3F Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 3 Integration/3E-indefinite-integral/concept.html">← 3E</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 3 Integration/3G-trapezoidal-rule/concept.html">3G →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>3F · Finding areas by integration</h1>
+    <p>Paraphrased from Cambridge Chapter 3 §3F. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-3-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>3F Finding areas by integration 143 3F Finding areas by integration Learning intentions • Find areas between the curve and the x-axis. • Find areas between the curve and the y-axis. • Find areas when the curve crosses the x-axis or y-axis. • Find areas associated with even and odd functions. • Find areas under a combination of regions. The aim of this section and the next is to use definite integrals to find the areas of regions bounded by curves, lines, and the coordinate axes. Areas and definite integrals Areas and definite integrals are closely related, but they are not the same thing. • An area is always positive, whereas a definite integral may be positive or negative, depending on whether the curve is above or below the x-axis, and on whether the integral is running forwards or backwards. • An area has units — called ‘square units’ or u2 in the absence of any physical interpretation — whereas a definite integral is a pure number. Problems on areas require care when finding the required integral or combination of integrals. Some techniques are listed below, but the general rule is to draw a diagram first to see which pieces need to be added or subtracted. 16 Finding an area When using integrals to find the area of a region: 1 Draw a sketch of the curves, showing relevant intercepts and intersections. 2 Create and evaluate the necessary definite integral or integrals. 3 Write a conclusion, giving the required area in square units (written also u2). Regions above the x-axis When a curve lies entirely above the x-axis, the relevant integral will be positive, and the area will be equal to the integral (apart from needing units). Example 24 Finding an area by integration Find the area of the region bounded by the curve y = 4 −x2 and the x-axis. Solution The curve (sketched in the chapter introduction) has x-intercepts (2, 0) and (−2, 0). The region lies entirely above the x-axis, and the relevant integral is: ∫2 −2(4 −x2) dx = &quot; 4x −x3 3 #2 −2 = (8 −8 3) −(−8 + 8 3) = 5 1 3 −(−5 1 3) = 10 2 3. x y y = 4 −x2 −2 2 4 The integral is positive because the region lies above the x-axis. Hence the area is 10 2 3 square units.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>144 Chapter 3 Integration 3F Regions below the x-axis When a curve lies entirely below the x-axis, the integral will be negative, and the area will be the opposite of this. Example 25 Finding an area below the x-axis Find the area of the region bounded by the curve y = x2 −1 and the x-axis. Solution The curve meets the x-axis at (1, 0) and (−1, 0), and the relevant integral is: ∫1 −1(x2 −1) dx = &quot; x3 3 −x #1 −1 = ( 1 3 −1) −(−1 3 + 1) = −2 3 −2 3 = −1 1 3. x y −1 1 −1 This is negative, because the region lies below the x-axis. Hence the area is 1 1 3 square units. Curves that cross the x-axis When a curve crosses the x-axis, the area of the region between the curve and the x-axis cannot usually be found by means of a single integral. This is because integrals representing regions below the x-axis have negative values. Example 26 Finding an area when the curve crosses the x-axis a Sketch the cubic curve y = x(x + 1)(x −2), showing the x-intercepts. b Shade the region enclosed between the x-axis and the curve, and find its area. c Find ∫2 −1 x(x + 1)(x −2) dx, and explain why this integral does not represent the area of the region described in part b. Solution a The curve has x-intercepts x = −1, x = 0 and x = 2, and is graphed below. b Expanding the cubic, y = x(x + 1)(x −2) = x(x2 −x −2) = x3 −x2 −2x. For the region above the x-axis: ∫0 −1(x3 −x2 −2x) dx = &quot; x4 4 −x3 3 −x2 #0 −1 = (0 −0 −0) −( 1 4 + 1 3 −1) = 5 12, so area above = 5 12u2. For the region below the x-axis: ∫2 0 (x3 −x2 −2x) dx = &quot; x4 4 −x3 3 −x2 #2 0 = (4 −2 2 3 −4) −(0 −0 −0) = −2 2 3, so area below = 2 2 3u2. Adding these, total area = 5 12 + 2 2 3 = 3 1 12u2. x y −1 2</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>3F Finding areas by integration 145 c ∫2 −1 x(x + 1)(x −2) dx = &quot; x4 4 −x3 3 −x2 #2 −1 = (4 −2 2 3 −4) −( 1 4 + 1 3 −1) = −2 2 3 + 5 12 = −2 1 4. This integral represents the difference 2 2 3 −5 12 = 2 1 4 of the two areas, and is negative because the area below is larger than the area above. Areas associated with odd and even functions As always in mathematics, these calculations are often much easier if symmetries can be recognised. Example 27 Finding an area when the function is even or odd a Show that y = x3 −x is an odd function. b Using part a, find the area between the curve y = x3 −x and the x-axis. Solution a Let f(x) = x3 −x. Then f(−x) = (−x)3 −(−x) = −x3 + x = −f(x). b Factoring, y = x(x2 −1) = x(x −1)(x + 1), so the x-intercepts are x = −1, x = 0 and x = 1. The two shaded regions have equal areas because the function is odd. First, ∫1 0 (x3 −x) dx = &quot; x4 4 −x2 2 #1 0 = ( 1 4 −1 2) −(0 −0) = −1 4, so area below the x-axis = 1 4 square units. Doubling, total area = 1 2 square units. x y −1 1 Areas of regions under a combination of curves Some regions are bounded by different curves in different parts of the x-axis. Example 28 a Sketch the curves y = x2 and y = (x −2)2 on one set of axes. b Shade the region bounded by y = x2, y = (x −2)2, and the x-axis. c Find the area of this shaded region. Solution a The two curves intersect at (1, 1) — easily checked by substitution.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>146 Chapter 3 Integration 3F b The whole region is above the x-axis, but it will be necessary to find separately the areas of the regions to the left and right of x = 1. c To the left of x = 1, ∫1 0 x2 dx = &quot; x3 3 #1 0 = 1 3. To the right of x = 1, ∫2 1 (x −2)2 dx = &quot;(x −2)3 3 #2 1 = 0 −(−1 3) = 1 3. Combining these, area = 1 3 + 1 3 = 2 3 square units. Note: In this worked example, the second parabola is the first shifted right 2, and each parabola is symmetric about its axis of symmetry. This is why the two pieces are congruent and so have the same area. Area between a graph and the y-axis Integration with respect to y rather than x can often give a result more quickly without the need for subtraction. When x is a function of y: • A definite integral with respect to y represents the signed area of the region between the curve and the y-axis. • This means that the definite integral is the sum of areas of regions to the right of the y-axis, minus the sum of areas of regions to the left of the y-axis. • The limits of integration are values of y rather than of x. 17 The definite integral and integration with respect to y Let x be a continuous function of y in some closed interval a ≤y ≤b. Then the definite integral ∫b a x dy is the sum of the areas of regions to the right of the y-axis, from y = a to y = b, minus the sum of the areas of regions to the left of the y-axis. Example 29 Finding an area between a curve and the y-axis a Sketch the lines y = x + 1 and y = 5, and shade the region between these lines to the right of the y-axis. b Write the equation of the line so that x is a function of y. c Use integration with respect to y to find the area of this region. d Confirm the result by area formulae. Solution a The lines are sketched below. They meet at (4, 5). b The given equation is y = x + 1. Solving for x, x = y −1.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>3F Finding areas by integration 147 c The required integral is: ∫5 1 (y −1) dy = &quot;y2 2 −y #5 1 = 25 2 −5 ! − 1 2 −1 ! = 7 1 2 −(−1 2) = 8, x y 1 5 which is positive, because the region is to the right of the y-axis. Hence the required area is 8 square units. d Area of triangle = 1 2 × base × height = 1 2 × 4 × 4 = 8 u2. Example 30 Finding an area when the curve crosses the y-axis The curve in the diagram below is the cubic y = x3. a Write the equation of the cubic so that x is a function of y. b Use integration with respect to y to find the areas of the shaded regions to the right and left of the y-axis. c Find the total area of the two shaded regions. Solution a The given equation is y = x3. Solving for x, x3 = y x = y 1 3 . b For the region to the right of the y-axis: ∫8 0 y 1 3 dy = 3 4  y 4 3 8 0 = 3 4 × (16 −0) (because 8 4 3 = 24 = 16) = 12, so area = 12 square units. For the region to the left of the y-axis: ∫0 −1 y 1 3 dy = 3 4  y 4 3 0 −1 = 3 4 × (0 −1) (because (−1) 4 3 = (−1)4 = 1) = −3 4, so area = 3 4 square units. c Adding these, total area = 12 3 4 square units.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>148 Chapter 3 Integration 3F</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 3F →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 3F, then section 3G.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8D Concept · Investing money by regular instalments</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="8D" data-page="concept" data-nav-depth="2" data-auth-sub="8D Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 8 Financial mathematics/8C-simple-compound-interest/concept.html">← 8C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 8 Financial mathematics/8E-paying-off-loan/concept.html">8E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 7 · Financial mathematics · Term 2 · Task 3</span>
+    <h1>8D · Investing money by regular instalments</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Calculate the details of a growing superannuation scheme (annuity). • Examine the effects of changing interest rates and changing payments. • Become familiar with the ‘accountant’s method’ and the recursive method. • Make a choice of method, but remain familiar with the other method. Investment schemes such as superannuation accounts, which are often called annuities, require contributions to be invested at regular intervals — typically every fortnight, month, or year. This complicates things, because each individual contribution earns compound interest for a different length of time. Calculating the value of these contributions at some future time requires adding the terms of a GP, and can be done in two different ways. This section and the next two are applications of GPs. Learning new formulae is not recommended, because they will all need to be derived within each question. The future value of a superannuation account (annuity) Imagine, for simplicity, that deposits are made annually on 1st January each year, and interest is added on 31st December each year. The future value A20 of the annuity at the end of say 20 years is the balance in the account on 31st December of the 20th year. That is, at the end of each year: • The balance of the account includes the interest paid at year’s end. • The balance does not include next year’s payment on 1st January. But always read the question very carefully to see what is intended. The term ‘future value’ may refer to the balance at any future time. But it may mean specifically the value at maturation. Again, read carefully. Developing a GP and summing it — the accountant’s method The most straightforward method with future value problems is the accountant’s method — find what each contribution grows to as it accrues compound interest. These amounts form a GP, which can then be summed. 7 Finding the future value An of an annuity — the accountant’s method • Find what each contribution will grow to as it earns compound inte</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>372 Chapter 8 Series and finance 8D 8D Investing money by regular instalments Learning intentions • Calculate the details of a growing superannuation scheme (annuity). • Examine the effects of changing interest rates and changing payments. • Become familiar with the ‘accountant’s method’ and the recursive method. • Make a choice of method, but remain familiar with the other method. Investment schemes such as superannuation accounts, which are often called annuities, require contributions to be invested at regular intervals — typically every fortnight, month, or year. This complicates things, because each individual contribution earns compound interest for a different length of time. Calculating the value of these contributions at some future time requires adding the terms of a GP, and can be done in two different ways. This section and the next two are applications of GPs. Learning new formulae is not recommended, because they will all need to be derived within each question. The future value of a superannuation account (annuity) Imagine, for simplicity, that deposits are made annually on 1st January each year, and interest is added on 31st December each year. The future value A20 of the annuity at the end of say 20 years is the balance in the account on 31st December of the 20th year. That is, at the end of each year: • The balance of the account includes the interest paid at year’s end. • The balance does not include next year’s payment on 1st January. But always read the question very carefully to see what is intended. The term ‘future value’ may refer to the balance at any future time. But it may mean specifically the value at maturation. Again, read carefully. Developing a GP and summing it — the accountant’s method The most straightforward method with future value problems is the accountant’s method — find what each contribution grows to as it accrues compound interest. These amounts form a GP, which can then be summed. 7 Finding the future value An of an annuity — the accountant’s method • Find what each contribution will grow to as it earns compound interest. • Add up all these amounts using the formula for the sum of a GP. Example 19 Investing money by regular instalments — accountant’s method Rawen’s parents invested $1000 in his name on the day that he was born. They continued to invest $1000 for him on each birthday until his 20th birthday. On his 21st birthday they gave him the total value of the investment. If all the money earned interest of 7% p.a. compounded annually, what was the final value of the scheme, correct to the nearest dollar? Solution Using the accountant’s method The 1st instalment is invested for 21 years, and so grows to 1000 × 1.0721. The 2nd instalment is invested for 20 years, and so grows to 1000 × 1.0720.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>8D Investing money by regular instalments 373 - - - - - - - - - - - - Continuing for 21 steps - - - - - - - - - - - - The 20th instalment is invested for 2 years, and so grows to 1000 × 1.072. The 21st and last instalment is invested for 1 year, and so grows to 1000 × 1.071. Thus the total amount A21 at the end of 21 years is the sum: A21 = sum of 21 instalments plus interest = (1000 × 1.07) + (1000 × 1.072) + · · · + (1000 × 1.0721). This is a GP with first term a = 1000 × 1.07, ratio r = 1.07, and 21 terms. Hence A21 = a(r21 −1) r −1 (using the formula f</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 8D</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 7 · 8D Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

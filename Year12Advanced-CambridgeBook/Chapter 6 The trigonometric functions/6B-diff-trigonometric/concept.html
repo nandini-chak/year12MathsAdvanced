@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6B Concept · Differentiation with trigonometric functions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="6B" data-page="concept" data-nav-depth="2" data-auth-sub="6B Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 5 Logarithmic functions/5B-diff-logarithmic/concept.html">← 5B</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 2 Differentiation applications/2I-primitive-functions/concept.html">2I →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 3 · Differential calculus · Term 1 · Task 2</span>
+    <h1>6B · Differentiation with trigonometric functions</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Demonstrate graphically that the derivative of sin x is cos x. • Develop the various standard forms for differentiating the trigonometric functions. • Apply the chain, product, and quotient rules for differentiation. The derivative of sin x is cos x. This result is intuitively obvious from the graphs, as is shown below. Its formal proof, however, is unfortunately difficult, though accessible, and has been placed in a Challenge Section 6F at the end of the chapter. The syllabus documents recommend extending some readers by presenting this proof, but they stress that the proof is not essential knowledge. After this result has been obtained, however, it is straightforward to generate the other standard forms for derivatives, and then to differentiate further functions involving trigonometric functions. The basic standard forms Here are the derivatives of the three basic trigonometric functions. 6 Standard derivatives of trigonometric functions d dx sin x = cos x d dx cos x = −sin x d dx tan x = sec2 x The exercises ask for derivatives of the secant, cosecant, and cotangent functions. A graphical demonstration that the derivative of sin x is cos x The upper graph drawn below is y = sin x. The lower graph is a sketch of the derivative of y = sin x — this second graph is straightforward to construct simply by paying attention to where the gradients of tangents to y = sin x are zero, maximum, and minimum. The lower graph is periodic, with period 2π, and has a shape unmistakably like a cosine graph. The first step in Challenge Section 6F proves that the gradient of y = sin x at the origin is 1. The argument for this is geometric, and the reader is encouraged to read the first two pages of Section 6F after reading this subheading. The fact that the tangent to y = sin x at the origin has gradient 1 means that the lower graph has a maximum of 1 when x = 0. It follows then by symmetry that all its maxima are 1 and all its minima are −1. Thus the lower graph not only has the d</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>6B Differentiation with trigonometric functions 261 6B Differentiation with trigonometric functions Learning intentions • Demonstrate graphically that the derivative of sin x is cos x. • Develop the various standard forms for differentiating the trigonometric functions. • Apply the chain, product, and quotient rules for differentiation. The derivative of sin x is cos x. This result is intuitively obvious from the graphs, as is shown below. Its formal proof, however, is unfortunately difficult, though accessible, and has been placed in a Challenge Section 6F at the end of the chapter. The syllabus documents recommend extending some readers by presenting this proof, but they stress that the proof is not essential knowledge. After this result has been obtained, however, it is straightforward to generate the other standard forms for derivatives, and then to differentiate further functions involving trigonometric functions. The basic standard forms Here are the derivatives of the three basic trigonometric functions. 6 Standard derivatives of trigonometric functions d dx sin x = cos x d dx cos x = −sin x d dx tan x = sec2 x The exercises ask for derivatives of the secant, cosecant, and cotangent functions. A graphical demonstration that the derivative of sin x is cos x The upper graph drawn below is y = sin x. The lower graph is a sketch of the derivative of y = sin x — this second graph is straightforward to construct simply by paying attention to where the gradients of tangents to y = sin x are zero, maximum, and minimum. The lower graph is periodic, with period 2π, and has a shape unmistakably like a cosine graph. The first step in Challenge Section 6F proves that the gradient of y = sin x at the origin is 1. The argument for this is geometric, and the reader is encouraged to read the first two pages of Section 6F after reading this subheading. The fact that the tangent to y = sin x at the origin has gradient 1 means that the lower graph has a maximum of 1 when x = 0. It follows then by symmetry that all its maxima are 1 and all its minima are −1. Thus the lower graph not only has the distinctive shape of the cosine curve, but also has the correct amplitude. π 2 π 2 π 2 − π 2 − 3π 2 − 3π 2 − 3π 2 3π 2 5π 2 5π 2 7π 2 7π 2 x y 2π 2π 4π 4π π π 3π 3π −π −π −2π −2π 1 −1 x y This doesn’t prove conclusively that the derivative of sin x is cos x, but it is very convincing. The subsequent derivatives of cos x and tan x are proven by standard methods in the next worked example.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>262 Chapter 6 The trigonometric functions 6B Example 7 The derivatives of cos x and tan x a Use the chain rule to prove that d dx cos x = −sin x. b Use the quotient rule to prove that d dx tan x = sec2 x. Solution a Let y = cos x. Then y = sin( π 2 −x). dy dx = dy du × du dx (chain rule) = (−1) × cos( π 2 −x) = −sin x. Let u = π 2 −x. Then y = sin u. Hence du dx = −1 and dy du = cos u (demonstrated above). b Let y = tan x. Then y = sin x cos x . y′ = vu′ −uv′ v2 (quotient rule) = cos x cos x + sin x sin x cos2 x = 1 cos2 x , because cos2 x + sin2 x = 1, = sec2 x. Let u = sin x and v = cos x. Then u′ = cos x (demonstrated above) and v′ = −sin x (from part a). Differentiating using the three standard forms These worked examples use the standard forms in Box 6 above to differentiate functions involving sin x, cos x, and tan x. Example</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 6B</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 3 · 6B Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

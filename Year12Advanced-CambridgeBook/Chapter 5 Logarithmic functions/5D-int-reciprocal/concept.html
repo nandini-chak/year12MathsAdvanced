@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5D Concept · Integration involving reciprocal functions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="5D" data-page="concept" data-nav-depth="2" data-auth-sub="5D Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 4 Exponential functions/4E-int-apps-exponential/concept.html">← 4E</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 5 Logarithmic functions/5E-int-apps-logarithmic/concept.html">5E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 4 · Integral calculus · Term 1 · Task 2</span>
+    <h1>5D · Integration involving reciprocal functions</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Develop standard forms for the integration of y = 1 x. • Understand why the integral of 1 x is loge |x|. • Develop a standard form for the reverse chain rule. • Reverse a given differentiation to find an integral. The reciprocal function y = 1 x is an important function — we have seen that it is needed whenever two quantities are inversely proportional. Its graph is a hyperbola, and hyperbolic graphs therefore occur widely throughout applications. So far, however, it has not been possible to integrate the reciprocal function, because the usual rule for integrating powers of x gives nonsense: When n = −1, the standard form ∫ xn dx = xn+1 n + 1 gives ∫ x−1 dx = x0 0 , which is nonsense because of the division by zero. Yet the graph of y = 1 x to the right shows that there should be no problem with definite integrals involving 1 x, provided that the integral keeps aways from the discontinuity at x = 0. For example, the diagram shows the integral ∫2 1 1 x dx, which the little rectangles show has a value between 1 2 and 1. 1 2 1 x y = x y 1 2 1 Integration of the reciprocal function Reversing the standard form for differentiating loge x will now give the standard forms for integrating 1 x. We know that d dx loge x = 1 x , and reversing this, ∫1 x dx = loge x + C, for some constant C. This is a new standard form for integrating the reciprocal function. The only qualification is that x &gt; 0, otherwise loge x is undefined, so we have: ∫1 x dx = loge x + C, provided that x &gt; 0. This result is surprising — one would hardly expect the integral of a power function such as 1 x = x−1 to be a log function whose base is a special number e that was specially identified for exponential functions. Mathematics is unified!</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>232 Chapter 5 Logarithmic functions 5D</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>5D Integration involving reciprocal functions 231 5D Integration involving reciprocal functions Learning intentions • Develop standard forms for the integration of y = 1 x. • Understand why the integral of 1 x is loge |x|. • Develop a standard form for the reverse chain rule. • Reverse a given differentiation to find an integral. The reciprocal function y = 1 x is an important function — we have seen that it is needed whenever two quantities are inversely proportional. Its graph is a hyperbola, and hyperbolic graphs therefore occur widely throughout applications. So far, however, it has not been possible to integrate the reciprocal function, because the usual rule for integrating powers of x gives nonsense: When n = −1, the standard form ∫ xn dx = xn+1 n + 1 gives ∫ x−1 dx = x0 0 , which is nonsense because of the division by zero. Yet the graph of y = 1 x to the right shows that there should be no problem with definite integrals involving 1 x, provided that the integral keeps aways from the discontinuity at x = 0. For example, the diagram shows the integral ∫2 1 1 x dx, which the little rectangles show has a value between 1 2 and 1. 1 2 1 x y = x y 1 2 1 Integration of the reciprocal function Reversing the standard form for differentiating loge x will now give the standard forms for integrating 1 x. We know that d dx loge x = 1 x , and reversing this, ∫1 x dx = loge x + C, for some constant C. This is a new standard form for integrating the reciprocal function. The only qualification is that x &gt; 0, otherwise loge x is undefined, so we have: ∫1 x dx = loge x + C, provided that x &gt; 0. This result is surprising — one would hardly expect the integral of a power function such as 1 x = x−1 to be a log function whose base is a special number e that was specially identified for exponential functions. Mathematics is unified!</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>232 Chapter 5 Logarithmic functions 5D Example 15 Using the initial standard form for integration a Find the definite integral ∫2 1 1 x dx sketched above. b Approximate the integral to verify that 1 2 &lt; ∫2 1 1 x dx &lt; 1. Solution ∫2 1 1 x dx = [ln x]2 1 = ln 2 −ln 1 = ln 2, because ln 1 = 0. a Hence ∫2 1 1 x dx = ln 2 ≑0.693, which is indeed between 1 2 and 1, as the diagram above indicated. b A characterisation of e Integrating the reciprocal function from 1 to e gives an amazingly simple result: Example 16 An amazingly simple result Find ∫e 1 1 x dx. Solution ∫e 1 1 x dx = loge xe 1 = loge e −loge 1 = 1 −0 = 1. The integral is sketched to the right. The example is very important because it characterises e as the real number satisfying ∫e 1 1 x dx = 1. In other expositions of the subject, this integral is taken as the definition of e. The primitive of y = 1 x on both sides of the origin So far, our primitive has been restricted by the condition x &gt; 0, meaning that we can only deal with definite integrals on the right-hand side of the origin. 1 x y = x y 1 1 e The full graph of the reciprocal function y = 1 x, however, is a hyperbola, with two disconnected branches separated by the discontinuity at x = 0.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>5D Integration involving reciprocal functions 233 Clearly there is no reason why we should not integrate over a closed interval such</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 5D</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 4 · 5D Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

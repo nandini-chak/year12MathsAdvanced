@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1C Tutorial · Geometric sequences</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="1C" data-page="tutorial" data-nav-depth="2" data-auth-sub="1C Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 1 Sequences and series/1B-arithmetic-sequences/concept.html">← 1B</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 1 Sequences and series/1D-problems-aps-gps/concept.html">1D →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>1C · Geometric sequences</h1>
+    <p>Paraphrased from Cambridge Chapter 1 §1C. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-1-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>14 Chapter 1 Sequences and series 1C 1C Geometric sequences Learning intentions • Define a geometric sequence, and establish a formula for its nth term. • Solve problems about GPs, and relate them to exponential functions. A geometric sequence is a sequence such as: 2, 6, 18, 54, 162, 486, 1458, ... in which the ratio of successive terms is constant — in this example, each term is 3 times the previous term. Definition of a geometric sequence The old name was ‘geometric progression’, and so geometric sequences are called GPs. 5 Geometric sequences • The ratio of successive terms in any sequence an always means some term divided by the previous term, that is: ratio = an an−1 , where n ≥2. • A sequence an is called a geometric sequence if: an an−1 = r, where n ≥2, where r is a non-zero constant, called the common ratio. • The terms of a geometric sequence can be generated from the first term by repeated multiplication by this common ratio: an = an−1 × r, where n ≥2. Example 10 Testing whether a sequence is a GP Test whether each sequence is a GP. If the sequence is a GP, find its first term a and its ratio r. 40, 20, 10, 5, ... a 5, 10, 100, 200, . . . b Solution a Here a2 a1 = 20 40 = 1 2 and a3 a2 = 10 20 = 1 2 and a4 a3 = 5 10 = 1 2 , so the sequence is a GP with a = 40 and r = 1 2 . b Here a2 a1 = 10 5 = 2 and a3 a2 = 100 10 = 10 and a4 a3 = 200 100 = 2. The ratios are not all the same, so the sequence is not a GP. A formula for the nth term of a GP Let the first term of a GP be a and the common ratio be r. Then the first few terms of the sequence are: a1 = a, a2 = ar, a3 = ar2, a4 = ar3, a5 = ar4, . . . From this pattern, the general formula for the nth term is clear.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>1C Geometric sequences 15 6 The nth term of a GP an = arn−1, where a is the first term, and r is the common ratio. We usually use the symbols a and r for the first term and the common ratio. Example 11 Finding the terms of a GP Write out the first five terms, and calculate the 10th term, of the GP with: a = 3 and r = 2, a a = 7 and r = 10. b Solution 3, 6, 12, 24, 48, ... a10 = ar9 = 3 × 29 = 1536 a 7, 70, 700, 7000, 70 000, . . . a10 = a × r9 = 7 × 109 = 7 000 000 000 b Zeroes and GPs don’t mix No term of a GP can be zero. For example, if a2 = 0, then a3 a2 would be undefined, contradicting the definition that a3 a2 = r. Similarly, the ratio of a GP cannot be zero. Otherwise a2 = ar would be zero, which is impossible. Negative ratios and alternating signs Here is an important type of GP: 2, −6, 18, −54, ... Its ratio is r = −3, which is negative, so the terms alternate positive and negative. Example 12 GPs whose terms have alternating signs a Show that 2, −6, 18, −54, ... is a GP and find its first term a and ratio r. b Find a formula for the nth term, and hence find a6 and a15. Solution a a2 a1 = −6 2 = −3 and a3 a2 = 18 −6 = −3 and a4 a3 = −54 18 = −3 Hence the sequence is a GP with a = 2 and r = −3. b Using the formula for the nth term: an = arn−1 = 2 × (−3)n−1. Hence a6 = 2 × (−3)5 = −486, because 5 is odd. and a15 = 2 × (−3)14 = 2 × 314, because 14 is even.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>16 Chapter 1 Sequences and series 1C Using a switch to alternate the sign Here are two classic GPs with ratio −1: −1, 1, −1, 1, −1, 1, . . . and 1, −1, 1, −1, 1, −1, . . . The first has formula an = (−1)n, and the second has formula an = (−1)n−1. These sequences provide a way of writing any GP that alternates in sign using a switch. For example, the sequence 2, −6, 18, −54, ... in the previous worked example has formula an = 2 × (−3)n−1, which can also be written as an = (−1)n−1 × 2 × 3n−1 to emphasise the alternating sign. And −2, 6, −18, 54, . . . can be written as: an = (−1)n × 2 × 3n−1 . 7 The signs of terms in a GP • Zero can never be a term of a GP, and the ratio r can never be zero either. • When the ratio is negative, the terms alternate in sign. • The factors (−1)n and (−1)n−1 are useful switches when terms alternate in sign. Solving problems involving GPs As with APs, the formula for the nth term of a GP allows many problems to be solved by forming an equation and solving it. Example 13 Test whether a number is a term of a GP a Find a formula for the nth term of the geometric sequence 5, 10, 20, . . . . b Hence find whether 320 and 720 are terms of this sequence. Solution The sequence is a GP with a = 5 and r = 2. Hence an = arn−1 = 5 × 2n−1. a Put an = 320. Then 5 × 2n−1 = 320 2n−1 = 64 n −1 = 6 n = 7, so 320 is the seventh term a7. b Put an = 720. Then 5 × 2n−1 = 720 2n−1 = 144. But 144 is not a power of 2, so 720 is not a term of the sequence. c Example 14 Finding the ratio of a GP given any two terms The first term of a GP is a1 = 448 and the seventh term is a7 = 7. Find the common ratio, and write out the first seven terms.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>1C Geometric sequences 17 Solution First, we know that a1 = 448, that is, a = 448. (1) Secondly, we know that a7 = 7, so using the formula for the 7th term, ar6 = 7. (2) Substituting (1) into (2), 448 r6 = 7 r6 = 1 64 r = 1 2 or −1 2. Thus either the ratio is r = 1 2, and the sequence is: 448, 224, 112, 56, 28, 14, 7, ... or the ratio is r = −1 2, and the sequence is: 448, −224, 112, −56, 28, −14, 7, .. . GPs with positive ratios and exponential functions Take this exponential function with positive base 2: f(x) = 9 × 2−x, and substitute the positive integers. The result is a GP: 4 1 2, 2 1 4, 1 1 8, 9 16, 9 32, . . . x 1 2 3 4 5 f(x) 4 1 2 2 1 4 1 1 8 9 16 9 32 The GP has a = 4 1 2 and r = 1 2 (which is positive), so its nth term has formula: an = 4 1 2 × ( 1 2)n−1 an = 9 × 2−n. As with APs, this formula is the same as the exponential function above, with a change of pronumeral from x to n. Thus the graph of a GP with positive ratio is the positive integer points on the graph of an exponential function with positive base, just as the graph of an AP is the positive integer points on the graph of a linear function. The diagram illustrates this, where the curve is y = 9 × 2−x.       </p>
+<p>x y Points are marked on the line at x = 1, x = 2, x = 3, . . . , and the successive y-coordinates of the points are the terms of the GP 4 1 2, 2 1 4, 1 1 8, 9 16, 9 32, . . . . This procedure establishes a one-to-one correspondence between all infinite GPs with positive ratio and all exponential functions functions with positive base. Note: For real numbers x, ax is only defined when the base a is positive. When a ≤0, there is no way to define ax for all x, as discussed in the Year 11 book, so the procedure described would be impossible for a ≤0.</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 1C →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 1C, then section 1D.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

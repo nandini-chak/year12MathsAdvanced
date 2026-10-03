@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6E Concept · Applications of integration (trigonometric)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="6E" data-page="concept" data-nav-depth="2" data-auth-sub="6E Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 6 The trigonometric functions/6D-int-trigonometric/concept.html">← 6D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 4 Exponential functions/4C-diff-apps-exponential/concept.html">4C →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 4 · Integral calculus · Term 1 · Task 2</span>
+    <h1>6E · Applications of integration (trigonometric)</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Find areas associated with graphs of trigonometric functions. The trigonometric integrals can now be used to find areas in the usual way. Finding areas by integration As always, a sketch is essential, because an area below the x-axis is represented as a negative number by the definite integral. It is best to evaluate the separate integrals first, then make a conclusion about areas.</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>6E Applications of integration 287 6E Applications of integration Learning intentions • Find areas associated with graphs of trigonometric functions. The trigonometric integrals can now be used to find areas in the usual way. Finding areas by integration As always, a sketch is essential, because an area below the x-axis is represented as a negative number by the definite integral. It is best to evaluate the separate integrals first, then make a conclusion about areas. Example 30 Finding an area between a curve and the x-axis a Sketch y = cos 1 2 x in the interval 0 ≤x ≤4π, marking both x-intercepts. b Hence find the area between the curve and the x-axis, for 0 ≤x ≤4π. Solution a The curve y = cos 1 2 x has amplitude 1, and the period is 2π ÷ 1 2 = 4π. The two x-intercepts in the interval are x = π and x = 3π. b Integrate separately over the three intervals: [0, π] and [π, 3π] and [3π, 4π]. First, ∫π 0 cos 1 2 x dx = h 2 sin 1 2 x iπ 0 = 2 sin π 2 −2 sin 0 = 2 −0 = 2, x y −1 1 π 2π 3π 4π which is positive, because the curve is above the x-axis for 0 ≤x ≤π. Secondly, ∫3π π cos 1 2 x dx = h 2 sin 1 2 x i3π π (or use the first result and symmetry) = 2 sin 3π 2 −2 sin π 2 = −2 −2 = −4, which is negative, because the curve is below the x-axis for π ≤x ≤3π. Thirdly, ∫4π 3π cos 1 2 x dx = h 2 sin 1 2 x i4π 3π (or use the first result and symmetry) = 2 sin 2π −2 sin 3π 2 = 0 −(−2) = 2, which is positive, because the curve is above the x-axis for 3π ≤x ≤4π. Hence total area = 2 + 4 + 2 = 8 square units. But it is far quicker to integrate from x = 0 to x = π, and then use the symmetry of the cosine function to conclude that the total area is four times this integral.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>288 Chapter 6 The trigonometric functions 6E</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 6E</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 4 · 6E Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

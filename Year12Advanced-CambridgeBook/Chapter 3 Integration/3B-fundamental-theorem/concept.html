@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3B Concept · The fundamental theorem of calculus</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="3B" data-page="concept" data-nav-depth="2" data-auth-sub="3B Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 3 Integration/3A-areas-definite-integral/concept.html">← 3A</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 3 Integration/3C-definite-integral-properties/concept.html">3C →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 4 · Integral calculus · Term 1 · Task 2</span>
+    <h1>3B · The fundamental theorem of calculus</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Understand the integral form of fundamental theorem of calculus, and apply it. • Understand that one cannot integrate across a discontinuity. There is a remarkably simple formula for evaluating definite integrals, based on taking the primitive of the function. The formula is called the fundamental theorem of calculus because the whole of calculus depends on it. Its proof is in Section 3D, which is all marked as a Challenge section because it is more difficult than the rest of this chapter. The formula alone is presented in this section. Primitives Let us first review from Section 2I what primitives are, and the first step in finding primitives of power functions. 3 Primitives • A function F(x) is called a primitive of a function f(x) if its derivative is f(x): F(x) is a primitive of f(x) if F′(x) = f(x). • To find the general primitive of a power xn, where n , −1: If dy dx = xn, then y = xn+1 n + 1 + C, for some constant C. ‘Increase the index by 1 and divide by the new index.’ Statement of the fundamental theorem The fundamental theorem says that a definite integral can be evaluated by writing down any primitive F(x) of f(x), then substituting the upper and lower limits into it and subtracting: 4 The fundamental theorem of calculus — integral form Let f(x) be a function that is continuous in a closed interval [a, b]. Then ∫b a f(x) dx = F(b) −F(a), where F(x) is any primitive of f(x). This result is extraordinary because it says that taking areas and taking tangents are inverse processes, which is not at all obvious.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>118 Chapter 3 Integration 3B Using the fundamental theorem to evaluate an integral The conventional way to set out these calculations is to enclose the primitive in square brackets, writing the lower and upper limits as subscript and superscript respectively. Look carefully at parts a and b of the next worked</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>3B The fundamental theorem of calculus 117 3B The fundamental theorem of calculus Learning intentions • Understand the integral form of fundamental theorem of calculus, and apply it. • Understand that one cannot integrate across a discontinuity. There is a remarkably simple formula for evaluating definite integrals, based on taking the primitive of the function. The formula is called the fundamental theorem of calculus because the whole of calculus depends on it. Its proof is in Section 3D, which is all marked as a Challenge section because it is more difficult than the rest of this chapter. The formula alone is presented in this section. Primitives Let us first review from Section 2I what primitives are, and the first step in finding primitives of power functions. 3 Primitives • A function F(x) is called a primitive of a function f(x) if its derivative is f(x): F(x) is a primitive of f(x) if F′(x) = f(x). • To find the general primitive of a power xn, where n , −1: If dy dx = xn, then y = xn+1 n + 1 + C, for some constant C. ‘Increase the index by 1 and divide by the new index.’ Statement of the fundamental theorem The fundamental theorem says that a definite integral can be evaluated by writing down any primitive F(x) of f(x), then substituting the upper and lower limits into it and subtracting: 4 The fundamental theorem of calculus — integral form Let f(x) be a function that is continuous in a closed interval [a, b]. Then ∫b a f(x) dx = F(b) −F(a), where F(x) is any primitive of f(x). This result is extraordinary because it says that taking areas and taking tangents are inverse processes, which is not at all obvious.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>118 Chapter 3 Integration 3B Using the fundamental theorem to evaluate an integral The conventional way to set out these calculations is to enclose the primitive in square brackets, writing the lower and upper limits as subscript and superscript respectively. Look carefully at parts a and b of the next worked example for the notation and the setting out. Example 4 Evaluating a definite integral using the fundamental theorem Evaluate these definite integrals. ∫2 0 2x dx a ∫4 2 (2x −3) dx b Then draw diagrams to show the regions that they represent, and check the answers using area formulae. Solution a ∫2 0 2x dx = h x2i2 0 (x2 is a primitive of 2x) = 22 −02 (substitute 2, then substitute 0, then subtract) = 4 This value agrees with the area of the shaded region: area of triangle = 1 2 × base × height = 1 2 × 2 × 4 = 4. x y y x = 2 4 2 b ∫4 2 (2x −3) dx = h x2 −3x i4 2 (take the primitive of each term) = (16 −12) −(4 −6) (substitute 4, then substitute 2) = 4 −(−2) = 6 Again, this value agrees with the shaded area: area of trapezium = average of parallel sides × width = 1 + 5 2 × 2 = 6. x y y x = 2 − 3 2 4 1 5 Note: Whenever the primitive has two or more terms, brackets are needed when substituting the upper and lower limits of integration. Look carefully at line 2 of the solution to part b above, and set your work out using brackets like this. Example 5 Evaluating further definite integrals Evaluate these definite integrals, whose graphs are curves. ∫1 0 x2 dx a ∫2 −2(x3 + 8) dx b ∫4 0 (25 −x2) dx c Solution a ∫1 0 x2 dx = &quot; x3 3 #1 0 (increase the index from 2 to 3, then divide by 3) = 1 3 −0 (substitute 1, then substitute 0, then subtract) = 1 3 This integral was approximated by counting squares in Exercise 3A, Question 11.</p>
+<p>© Pender et al. 2026 Cambridge U</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 3B</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 4 · 3B Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

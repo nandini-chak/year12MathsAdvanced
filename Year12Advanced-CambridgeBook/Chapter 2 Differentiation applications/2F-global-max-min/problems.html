@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 2F · Problems</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="2F" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 2F">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 2 Differentiation applications/2E-curve-sketching-derivative/concept.html">← 2E</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 2 Differentiation applications/2G-continuity-differentiability/concept.html">2G →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Exercise 2F</span>
+    <h1>Problems with worked solutions</h1>
+    <p>Attempt on paper first. Reveal a solution when you want to mark. Validated against Cambridge worked solutions (not stamped on every question).</p>
+  </header>
+  <div class="wrap">
+    <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
+      <button class="btn show" type="button" id="allOn">Show all solutions</button>
+      <button class="btn show" type="button" id="allOff">Hide all solutions</button>
+    </div>
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Stems condensed from Cambridge Exercise 2F; solutions follow <em>Chapter-2-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+    </details>
+    <article class="q" id="q1">
+      <h2>1 · Exercise 2F</h2>
+      <div class="stem"><p>In the diagrams below, classify each labelled point as one of the following: i global maximum, ii global minimum, iii local maximum, iv local minimum, v horizontal point of inflection. x y B A a x y D C E F b x y G H c x y I J d</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>f ′(x) −60</p></div>
+    </article><article class="q" id="q2">
+      <h2>2 · Exercise 2F</h2>
+      <div class="stem"><p>Sketch each function and hence determine its global minimum and maximum points in the specified do- main. y = x2, −2 ≤x ≤2 a y = 5 −x, 0 ≤x ≤3 b y = √ 16 −x2, −4 ≤x ≤4 c y = |x|, −5 ≤x ≤1 d y = √x, 0 ≤x ≤8 e y = 1/x, −4 ≤x ≤−1 f</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 2F The global minimum is −1 at x = −1. The global maximum is −1 4 at x = −4.</p></div>
+    </article><article class="q" id="q3">
+      <h2>3 · Exercise 2F</h2>
+      <div class="stem"><p>In the diagrams below, identify any local or global maxima or minima of the function.      x y a     x y b        x y c            x y d</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>f ′(x) −12</p></div>
+    </article><article class="q" id="q4">
+      <h2>4 · Exercise 2F</h2>
+      <div class="stem"><p>Sketch the graph of each function, clearly indicating any stationary points. Hence determine the global minimum and maximum of the function in the specified domain. y = x2 −4x + 3, 0 ≤x ≤5 a y = x3 −3x2 + 5, −3 ≤x ≤2 b y = 3x3 −x + 2, −1 ≤x ≤1 c y = x3 −6x2 + 12x, 0 ≤x ≤3 d</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 2F When x = −1 3, y = 20 9 . Therefore −1 3, 20</p></div>
+    </article><article class="q" id="q5">
+      <h2>5 · Exercise 2F</h2>
+      <div class="stem"><p>Find i any local maxima or minima, and ii the global maximum and minimum of the function y = x4 −8x2 + 11 for each domain. 1 ≤x ≤3 a −4 ≤x ≤1 b −1 ≤x ≤0 c © Pender et al. 2026 Cambridge University Press &amp; Assessment</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 2F There are stationary points where y′ = 0. 4x3 −16x = 0 4x(x2 −4) = 0 4x(x −2)(x + 2) = 0 x = −2, 0, 2 As 1 ≤x ≤3, there is a stationary point at x = 2. x</p></div>
+    </article>
+    <p style="margin-top:1.5rem">
+      <a class='btn' href='../../Chapter 2 Differentiation applications/2G-continuity-differentiability/concept.html'>Next: 2G Concept →</a>
+      <a class="btn ghost" href="tutorial.html">← Tutorial</a>
+    </p>
+  </div>
+  <script>
+  (function(){
+    function bind(btn){
+      btn.addEventListener("click", function(){
+        var sol = btn.nextElementSibling;
+        var open = sol.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
+      });
+    }
+    document.querySelectorAll(".q > .btn.show").forEach(bind);
+    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
+    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
+    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
+  })();
+  </script>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

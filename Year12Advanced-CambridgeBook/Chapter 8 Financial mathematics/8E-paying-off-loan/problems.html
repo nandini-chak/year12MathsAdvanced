@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 8E · Problems</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="8E" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 8E">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 8 Financial mathematics/8D-regular-instalments/concept.html">← 8D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 8 Financial mathematics/8F-pension-annuity/concept.html">8F →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Exercise 8E</span>
+    <h1>Problems with worked solutions</h1>
+    <p>Attempt on paper first. Reveal a solution when you want to mark. Validated against Cambridge worked solutions (not stamped on every question).</p>
+  </header>
+  <div class="wrap">
+    <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
+      <button class="btn show" type="button" id="allOn">Show all solutions</button>
+      <button class="btn show" type="button" id="allOff">Hide all solutions</button>
+    </div>
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Stems condensed from Cambridge Exercise 8E; solutions follow <em>Chapter-8-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+    </details>
+    <article class="q" id="q1">
+      <h2>1 · Exercise 8E</h2>
+      <div class="stem"><p>200). But the loan is exactly paid off in these 5 years, so A60 = 0. Hence 10 000 × 1.00560 −200M(1.00560 −1) = 0 200M(1.00560 −1) = 10 000 × 1.00560 ÷ 200 M(1.00560 −1) = 50 × 1.00560 M = 50 × 1.00560 1.00560 −1 ≑$193.33. © Pender et al. 2026 Cambridge University Press &amp; Assessment 8E Paying off a loan 387 Finding the length of the loan A loan is repaid when the amount An still owing is zero. Thus finding the length of a loan means solving an equation for the index n, which requires logarithms. Example 27 Finding the length of a loan Natasha and Richard took out a loan of $400 000 on 1st January 2022 to buy a house. They are repaying the loan in monthly instalments of $4400. Interest is charged at 12% p.a. compounded monthly. a Find a formula for the amount owing at the end of n months. b How much was owing after five years? c How long does it takes to repay: the full loan? i half the loan? ii d Why would instalments of $3900 per month never have repaid the loan? Solution a The monthly interest rate is 1%, so 1 + R = 1.01. The initial loan, after n months, grows to 400 000 × 1.01n. The 1st instalment is invested for n −1 months, and so grows to 4400 × 1.01n−1. The 2nd instalment is invested for n −2 months, and so grows to 4400 × 1.01n−2. The nth and last instalment is invested for no time at all, and so grows to 4400. Hence the amount An still owing at the end of n months is: An = (principal plus interest) −(instalments plus interest) = 400 000 × 1.01n −(4400 + 4400 × 1.01 + · · · + 4400 × 1.01n−1). The bit in brackets is a GP with first term a = 4400, ratio r = 1.01, and n terms. Hence An = 400 000 × 1.01n −a(rn −1) r −1 = 400 000 × 1.01n −4400 × (1.01n −1) 0.01 = 400 000 × 1.01n −440 000 × (1.01n −1) = 440 000 −40 000 × 1.01n. b To find the amount owing after 5 years, substitute n = 60 (5 years is 60 months): A60 = 440 000 −40 000 × 1.0160 ≑$367 332 (This is still almost as much as the original loan!) c i To find when the loan is repaid, put An = 0: 440 000 −40 000 × 1.01n = 0 40 000 × 1.01n = 440 000 ÷ 40 000 1.01n = 11 n = log1.01 11 (converting to a logarithmic equation) n = log10 11 log10 1.01 (using the change-of-base formula) ≑20 years and 1 month. © Pender et al. 2026 Cambridge University Press &amp; Assessment 388 Chapter 8 Series and finance 8E ii To find when the loan is half repaid, put An = 200 000: 440 000 −40 000 × 1.01n = 200 000 40 000 × 1.01n = 240 000 ÷ 40 000 1.01n = 6 n = log1.01 6 (converting to a logarithmic equation) n = log10 6 log1…</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a Let An be the loan balance after the nth annual repayment. Interest is added first and the $158.05 repayment is then deducted: A1 = 501 × 1.1 −158.05. b The recursion gives A2 = A1 × 1.1 −158.05 = 501 × 1.12 −158.05(1 + 1.1), A3 = 501 × 1.13 −158.05(1 + 1.1 + 1.12), A4 = 501 × 1.14 −158.05(1 + 1.1 + 1.12 + 1.13). c The bracketed expression is a GP with a = 1 and r = 1.1. Therefore A4 = 501 × 1.14 −158.05 × 1.14 −1 0.1 . d A4 = $733.51 −$733.51 = $0, so the loan is repaid on 31 December 2028.</p></div>
+    </article><article class="q" id="q2">
+      <h2>2 · Exercise 8E</h2>
+      <div class="stem"><p>Suppose that on 1st April 2025 a loan of $5600 is made, which is repaid with equal instalments of $1293.46 made on 31st March each year for five years, beginning in 2026. The loan attracts interest at 5% p.a. compounded annually. a Use the compound interest formula to show that the initial loan amounts to $7147.18 by 31st March 2030. b In each part, round your answer correct to the nearest cent. i What is the value of the first instalment on 31st March 2025? ii What is the value of the second instalment on this date? iii Do the same for the third, fourth and fifth instalments. iv Find the total value of the instalments on 31st March 2030, and hence show that the loan has been repaid. c i Write down your answers to parts i–iii above in increasing order, and notice that they form a GP. ii Write down the first term, common ratio and number of terms. iii Use the formula Sn = a(rn −1) r −1 to find the sum of the GP, rounding your answer correct to the nearest cent, and hence check your answer to part b iv.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a Let An be the loan balance at the end of the nth year. The first balance is A1 = 5600 × 1.05 −1293.46. b Applying interest and then deducting each repayment gives A2 = A1 × 1.05 −1293.46 = 5600 × 1.052 −1293.46(1 + 1.05), A3 = 5600 × 1.053 −1293.46(1 + 1.05 + 1.052), A4 = 5600 × 1.054 −1293.46(1 + 1.05 + 1.052 + 1.053), A5 = 5600 × 1.055 −1293.46(1 + 1.05 + 1.052 + 1.053 + 1.054).</p></div>
+    </article><article class="q" id="q3">
+      <h2>3 · Exercise 8E</h2>
+      <div class="stem"><p>Lome took out a loan with Tornado Credit Union for $15 000, to be repaid in 15 equal annual instalments of $1646.92 on 1st April each year. Compound interest is charged at 7% per annum. a Let A15 be the amount owed at the end of 15 years. i Use the compound interest formula to show that 15 000 × (1.07)15 is owed on the initial loan after 15 years. ii How much does the first instalment amount to at the end of the loan, having been invested for 14 years? iii How much does the second instalment amount to at the end of 13 years? iv What is the value of the second-last instalment? v What is the worth of the last contribution, invested for no time at all? vi Hence write down an expression involving a series for A15. b Show that the final amount owed is A15 = $15 000 × (1.07)15 −$1646.92 × (1.0715 −1) 0.07 . c Evaluate A15 and hence show that the loan has been repaid.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a Let An be the loan balance at the end of the nth year. The recursion is A1 = 15 000 × 1.07 −1646.92, A2 = 15 000 × 1.072 −1646.92(1 + 1.07), A3 = 15 000 × 1.073 −1646.92(1 + 1.07 + 1.072). b Continuing the recursion for 15 repayments, A15 = 15 000 × 1.0715 −1646.92(1 + 1.07 + 1.072 + · · · + 1.0714). c The repayment terms form a GP, hence A15 = 15 000 × 1.0715 −1646.92 × 1.0715 −1 0.07 . d A15 = $0, so the loan has been repaid.</p></div>
+    </article><article class="q" id="q4">
+      <h2>4 · Exercise 8E</h2>
+      <div class="stem"><p>Matts signed a mortgage agreement for $300 000 with a bank for 20 years at an interest rate of 6% per annum, compounded monthly (that is, at 0.5% per month). a Let M be the size of each repayment to the bank, and let A240 be the amount owing on the loan after 20 years. i What does the initial loan amount to after 20 years? ii Write down the amount that the first repayment grows to by the end of the 240th month. iii Do the same for the second repayment and for the last repayment. iv Hence write down a series expression for A240. b Hence show that A240 = 300 000 × 1.005240 −200 × M(1.005240 −1). c Explain why the bank puts A240 = 0. d Hence find M, correct to the nearest cent. e How much will Matts have paid the bank over the period of the loan? © Pender et al. 2026 Cambridge University Press &amp; Assessment 390 Chapter 8 Series and finance 8E</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a Let An be the balance at the end of the nth month, just after repayment. With monthly interest factor 1.005, A1 = 300 000 × 1.005 −M, A2 = 300 000 × 1.0052 −M(1 + 1.005), A3 = 300 000 × 1.0053 −M(1 + 1.005 + 1.0052). b Continuing the recursion for 240 months, A240 = 300 000 × 1.005240 −M(1 + 1.005 + 1.0052 + · · · + 1.005239). c Summing the GP gives A240 = 300 000 × 1.005240 −M × 1.005240 −1 0.005 . d The loan is repaid when A240 = 0. Thus M = 300 000 × 1.005240 200(1.005240 −1) = $2149.29. e $2149.29 × 240 = $515 830.60.</p></div>
+    </article><article class="q" id="q5">
+      <h2>5 · Exercise 8E</h2>
+      <div class="stem"><p>I took out a personal loan of $10 000 with a bank for five years at an interest rate of 18% per annum, compounded monthly (that is, at 1.5% per month). a Let M be the size of each instalment to the bank, and let A60 be the amount owing on the loan after 60 months. i What does the initial loan amount to after 60 months? ii Write down the amount that the first instalment grows to by the end of the 60th month. iii Do the same for the second instalment and for the last instalment. iv Hence write down a series expression for A60. b Hence show that 0 = $10 000 × 1.01560 −M × (1.01560 −1) 0.015 . c Hence find M, correct to the nearest dollar. Recursive method</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E b Continuing the recursion for 60 months, A60 = 10 000 × 1.01560 −M(1 + 1.015 + 1.0152 + · · · + 1.01559). c Hence A60 = 10 000 × 1.01560 −M × 1.01560 −1 0.015 . d Since the loan is paid off after 60 months, A60 = 0. Solving gives M = $254 (to the nearest dollar). e $254 × 60 = $15 240.</p></div>
+    </article><article class="q" id="q6">
+      <h2>6 · Exercise 8E</h2>
+      <div class="stem"><p>A couple take out a $450 000 mortgage on a house, and they agree to pay the bank $4200 per month. The interest rate on the loan is 7.5% per annum, compounded monthly, and the contract requires that the loan be paid off within 15 years. a Let A180 be the balance on the loan after 15 years. Find a series expression for A180. b Show that A180 = $450 000 × 1.00625180 −4200(1.00625180 −1) 0.00625 . c Evaluate A180, and hence show that the loan is actually paid out in less than 15 years.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E An = Aloan −Arepaid = 250 000 × 1.006n −  2000 + 2000 × 1.006 + 2000 × 1.0062 + . . . +2000 × 1.006n−1 b Arepaid forms a GP with a = 2000, r = 1.006 and n terms, hence Arepaid = S n = a (rn −1) r −1 = 2000 (1.006n −1) 1.006 −1 = 2000 (1.006n −1) 0.006 Thus An = Aloan −Arepaid = 250 000 × 1.006n −2000 (1.006n −1) 0.006 c A10×12 = A120 = $162 498 (to the nearest dollar), which is more than half. d A240 = −$16 881 (to the nearest dollar). Hence, as this is larger than the value of an instalment, the loan is paid out in less than 20 years. e An = 0 for the loan to be paid off. 250 000 × 1.006n −2000 (1.006n −1) 0.006 = 0 1500 × 1.006n = 2000 (1.006n −1) 1500 × 1.006n = 2000 × 1.006n −2000 500 × 1.006n = 2000 1.006n = 4 Hence log (1.006n) = log 4 n log (1.006) = log 4 n = log 4 log (1.006) f n = log 4 log (1.006) = 231.74 . . . The smallest integer solution is hence 232 (we cannot round down, otherwise the loan will not be paid off). Thus the loan is paid off 240 −232 = 8 months early.</p></div>
+    </article><article class="q" id="q7">
+      <h2>7 · Exercise 8E</h2>
+      <div class="stem"><p>A couple take out a $250 000 mortgage on a house, and they agree to pay the bank $2000 per month. The interest rate on the loan is 7.2% per annum, compounded monthly, and the contract requires that the loan be paid off within 20 years. a Let An be the balance on the loan after n months. Find a series expression for An. b Hence show that An = $250 000 × 1.006n −$2000(1.006n −1) 0.006 . c Find the amount owing on the loan at the end of the tenth year, and state whether this is more or less than half the amount borrowed. d Find A240, and hence show that the loan is actually paid out in less than twenty years. e If it is paid out after n months, show that 1.006n = 4, and hence that n = log 4 log 1.006 . f Find how many months early the loan is paid off. © Pender et al. 2026 Cambridge University Press &amp; Assessment 392 Chapter 8 Series and finance 8E</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E Arepaid = S 180 = a (rn −1) r −1 = 10 000 (1.004375n −1) 1.004375 −1 = 10 000 (1.004375n −1) 0.004375 Thus An = Aloan −Arepaid = 500 000 × 1.004375n −10 000 (1.004375n −1) 0.004375 b The loan is paid off when An = 0 500 000 × 1.004375n −10 000 (1.004375n −1) 0.004375 = 0 500 000 × 1.004375n = 10 000 (1.004375n −1) 0.004375 2187.50 × 1.004375n = 10 000 (1.004375n −1) 10 000 = (10 000 −2187.50) × 1.004375n 1.004375n × 7812.50 = 10 000 1.004375n = 1.28 c 1.004375n = 1.28 ln (1.004375n) = ln (1.28) n ln (1.004375) = ln (1.28) n = ln (1.28) ln (1.004375) = 56.55 Hence rounding up gives 57 months. However, the final repayment will only be $5 490.41.</p></div>
+    </article><article class="q" id="q8">
+      <h2>8 · Exercise 8E</h2>
+      <div class="stem"><p>A company borrows $500 000 from the bank at an interest rate of 5.25% per annum, compounded monthly, to be repaid in monthly instalments. The company repays the loan at the rate of $10 000 per month. a Let An be the amount owing at the end of the nth month. Show that An = 500 000 × 1.004 375n −10 000(1.004 375n −1) 0.004 375 . b Given that the loan is paid off, use the result in part a to show that 1.004 375n = 1.28. c Use logarithms or trial-and-error to find how long it will take to pay off the loan. Give your answer in whole months.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E Arepaid = S 300 = a (rn −1) r −1 = M  1.0055300 −1  1.0055 −1 = M  1.0055300 −1  0.0055 Thus A300 = Aloan −Arepaid = 180 000 × 1.0055300 − M  1.0055300 −1  0.0055 c Since A300 = 0, 180 000 × 1.0055300 − M  1.0055300 −1  0.0055 = 0 180 000 × 1.0055300 = M  1.0055300 −1  0.0055 M = 180 000 × 1.0055300 ÷  1.0055300 −1  0.0055 = $1226.64 (to the nearest cent) d 300 × 1226.64 = $367 993 (to the nearest dollar) e I = total repaid −total borrowed = 367 993 −180 000 = $187 993 I = PRn 187 993 = 180 000(R)(25) R = 187 993 180 000 × 25 ≑0.042 Hence the simple interest rate would be 4.2% per annum.</p></div>
+    </article><article class="q" id="q9">
+      <h2>9 · Exercise 8E</h2>
+      <div class="stem"><p>As can be seen from these questions, the calculations involved with reducible loans are reasonably complex. For that reason, it is sometimes convenient to convert the reducible interest rate into a simple interest rate. Suppose that a mortgage is taken out on a $500 000 house at 6.6% reducible interest per annum for a period of 25 years, with payments of amount M made monthly. a Using the usual pronumerals, explain why A300 = 0. b Show that A300 = 500 000 × 1.0055300 −M(1.0055300 −1) 0.0055 . c Find the size of each repayment to the bank. d Hence find the total paid to the bank, correct to the nearest dollar, over the life of the loan. e What amount is therefore paid in interest? Use this amount and the simple interest formula to calculate the simple interest rate per annum over the life of the loan, correct to two significant figures.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E A60 = Aloan −Arepaid = 15 000(1.01125)60 − M  1.0112560 −1  0.01125 Since A60 = 0, 0 = 15 000(1.01125)60 − M  1.0112560 −1  0.01125 as required. b In order to pay back the loan, A60 = 0 15 000×1.0112560 − M  1.0112560 −1  0.01125 = 0 15 000×1.0112560 = M  1.0112560 −1  0.01125 M = 15 000×1.0112560 ÷  1.0112560 −1  0.01125 = $345 (to the nearest dollar)</p></div>
+    </article><article class="q" id="q10">
+      <h2>10 · Exercise 8E</h2>
+      <div class="stem"><p>A personal loan of $15 000 is borrowed from the Min Hua Finance Company at a rate of 13 1 2% per annum over five years, compounded monthly. Let M be the amount of each monthly instalment. a Show that 15 000(1.01125)60 −M(1.0112560 −1) 0.01125 = 0. b What is the monthly instalment necessary to pay back the loan? Give your answer to the nearest dollar.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E 300th instalment: invested for no time at all, amounts to 3200. Hence, the balance of the loan after 300 months is: A300 = P × 1.00625300 −  3200 + 3200 × 1.006251 + 3200 × 1.006252 + . . . + 3200 × 1.00625299 Noting that the series is a GP with a = 3200, r = 1.00625 and n = 300 terms, A300 = P × 1.00625300 − 3200  1.00625300 −1  1.00625 −1 = P × 1.00625300 − 3200  1.00625300 −1  0.00625 b In order to be able to pay off the loan whilst obtaining the maximum amount possible, we have A300 = 0. P × 1.00625300 − 3200  1.00625300 −1  0.00625 = 0 P × 1.00625300 = 3200  1.00625300 −1  0.00625 P = 3200  1.00625300 −1  0.00625 ÷ 1.00625300 = $433 022 (rounded down to the nearest dollar)</p></div>
+    </article><article class="q" id="q11">
+      <h2>11 · Exercise 8E</h2>
+      <div class="stem"><p>[Problems with rounding] Most questions so far have asked you to round monetary amounts correct to the nearest dollar. This is not always wise, as this question demonstrates. A personal loan for $30 000 is approved with the following conditions. The reducible interest rate is 13.3% per annum, with payments to be made at six-monthly intervals over five years. a Find the size of each instalment, correct to the nearest dollar. b Using this amount, show that A10 , 0, that is, the loan is not paid off in five years. c Explain why this has happened.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E An = 350 000 × 1 + 0.06</p></div>
+    </article><article class="q" id="q12">
+      <h2>12 · Exercise 8E</h2>
+      <div class="stem"><p>A couple have worked out that they can afford to pay $38 400 each year in mortgage payments. The current home loan rate is 7.5% per annum, with equal payments made monthly over a period of 25 years. a Let P be the principal borrowed and A300 the amount owing after 25 years. Show that A300 = P × 1.00625300 −3200(1.00625300 −1) 0.00625 . b Hence determine the maximum amount that the couple can borrow and still pay off the loan. Round your answer down to the nearest dollar.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 8E If this is to be paid off after 20 such instalments, then A20 = 0 1.01120 × 500 000 −M   1.01620 −1 1.016 −1 = 0 1.01120 × 500 000 = M   1.01620 −1 1.016 −1  M = 1.01120 × 500 000 ÷   1.01620 −1 1.016 −1 = $44 131.77</p></div>
+    </article><article class="q" id="q13">
+      <h2>13 · Exercise 8E</h2>
+      <div class="stem"><p>The credit card rate of interest on Bankerscard is 23% per annum, compounded monthly. a If a cardholder can afford to repay $1500 per month on the card, what is the maximum value of purchases that can be made in one day if the debt is to be paid off in two months? b How much would be saved in interest payments if the cardholder instead saved up the money for two months before making the purchase? © Pender et al. 2026 Cambridge University Press &amp; Assessment 8E Paying off a loan 393</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a Let M be the maximum value of purchases. Let r be the interest rate per month, so that r = 0.23 12 . Let P = 1500 be the monthly repayment. At the end of the first month, the amount M accrues interest, and P is paid into the account, so balance after one month = M(1 + r) −P At the end of the second month, the balance accrues interest, and P is paid into the account, so balance after two months = (M(1 + r) −P) (1 + r) −P = M(1 + r)2 −P(2 + r) Because the balance after two months is zero, M(1 + r)2 −P(2 + r) = 0 M = P(2 + r) (1 + r)2 M ≑$2915.90 b Total paid to Bankerscard = $1500 + $1500 = $3000 Total value of goods = $2915.90 Interest = $3000 −$2915.90 = $84.10</p></div>
+    </article><article class="q" id="q14">
+      <h2>14 · Exercise 8E</h2>
+      <div class="stem"><p>Some banks offer a ‘honeymoon’ period on their loans. This usually takes the form of a lower interest rate for the first year. Suppose that a couple borrowed $350 000 for their first house, to be paid back monthly over 15 years. They work out that they can afford to pay $3400 per month to the bank. The standard rate of interest is 8 1 2% p.a., but the bank also offers a special rate of 6% p.a. for one year to people buying their first home. (All interest rates are compounded monthly.) a Calculate the amount the couple would owe at the end of the first year, using the special rate of interest. b Use this value as the principal of the loan at the standard rate for the next 14 years. Calculate the value of the monthly payment that is needed to pay the loan off. Can the couple afford to agree to the loan contract?</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a Noting that the initial loan has interest compounding at a rate of 0.06 12 , and noting that the first repayment is made at the end of the first month, the amount owing at the end of the first month will be A1 = 350 000 × 1 + 0.06</p></div>
+    </article><article class="q" id="q15">
+      <h2>15 · Exercise 8E</h2>
+      <div class="stem"><p>A company buys machinery for $500 000 and pays it off by 20 equal six-monthly instalments, the first payment being made six months after the loan is taken out. If the interest rate is 12% p.a. compounded monthly, how much will each instalment be?</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Noting that the initial loan has interest compounding at a rate of 0.12 12 = 0.01, and noting that the first repayment is made at the end of the first six months. The amount owing at the end of the first six months is A1 = 500 000 × 1.016 −M Note, as this loan is compounding monthly, then we must raise 1.01 to the power of 6 after the first 6 months. Now, at the end of the second six-month period, interest will have accumulated on the remaining amount owing and another repayment is made. This gives A2 = 1.016A1 −M = 1.016  500 000 × 1.016 −M  −M = 1.0112 × 500 000 −M  1 + 1.016 Similarly, at the end of n 6-month periods, the amount owing will be An = 1.016n × 500 000 −M  1 + 1.016 + 1.0112 + . . . + 1.016n−6 Noting that the terms in the right-hand brackets form a GP with a = 1, r = 1.016, and containing n terms. The amount owing may be written as An = 1.016n × 500 000 −M   1.016n −1 1.016 −1 </p></div>
+    </article><article class="q" id="q16">
+      <h2>16 · Exercise 8E</h2>
+      <div class="stem"><p>[Technology] In the first column of a spreadsheet, enter the numbers from 1 to 60 on separate rows. In the first 60 rows of the second column, enter the formula 500 000 × 1.004375n −10 000 × (1.004375n −1) 0.004375 for the balance of a loan repayment, where n is the value given in the first column. a Observe the pattern of figures in the second column. Notice that the balance decreases more slowly at first and more quickly towards the end of the loan. b Which value of n is the first to give a balance less than or equal to zero? c Compare this answer with your answer to Question 8. d Try to do Question 7f in the same way.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>A2 −A1 = $7846.68 whereas A55 −A55 = $9889.36. So we see that the balance decreases more quickly towards the end of the loan. a A57 = −4509.585864 is the first term less than (or equal to) 0. b This is the same as the answer in question 8. c 8 months d</p></div>
+    </article><article class="q" id="q17">
+      <h2>17 · Exercise 8E</h2>
+      <div class="stem"><p>[Direct Variation] Cecilia borrows $P from a bank and repays the loan with monthly instalments of $M. The bank charges interest at the rate of R% per month, compounded monthly. Cecilia plans to repay the loan in k months. Let An be the amount in her account at the end of the nth month. a Use any appropriate method to express An as a series, for 2 &lt; n ≤k. b Simplify this series. c Explain why Ak = 0. d Use your answer to the previous parts to state how P varies with M when both R and k are fixed. e Cecilia calculates that if she pays instalments of $4000 per month then she can borrow $545 000. How much could she borrow if she increased the instalments to $4100? A possible project The remarks at the end of Exercises 8C and 8D about varying interest rates and inflation hold also for housing loans. Many loans also contain insurance against death or disability or loss of employment, and again there are fees, which are not easily found. All this historical data can be found on the web and built into a spreadsheet. The spreadsheet could also take into account the increasing value of housing over past years. An interesting comparison could be made between the relative wealth of a couple who rented for a long period and invested their savings elsewhere, and a couple on the same (increasing) salary who purchased a home with a large mortgage. © Pender et al. 2026 Cambridge University Press &amp; Assessment</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a A1 = P(1 + R) −M A2 = (P(1 + R) −M)(1 + R) −M = P(1 + R)2 −M(1 + (1 + R)) · · · An = P(1 + R)n −M(1 + (1 + R) + · · · + (1 + R)n−1) b Using the formula for the sum of a geometric sequence with a = 1, r = R + 1 &gt; 1: An = P(1 + R)n −M × (1 + R)n −1 R c Cecilia wants to repay the loan in k months; hence, the amount remaining at the end of the kth month, Ak, should be zero. d Treat (1+R)k and (1 + R)k −1 R as constants and it becomes evident that P and M are directly proportional e Both quantities are directly proportional; if the instalments are increased by a factor of 4100 4000 = 1.025, the amount she can borrow is increased by the same factor i.e. 545 000 × 1.025 = 558 625</p></div>
+    </article>
+    <p style="margin-top:1.5rem">
+      <a class='btn' href='../../Chapter 8 Financial mathematics/8F-pension-annuity/concept.html'>Next: 8F Concept →</a>
+      <a class="btn ghost" href="tutorial.html">← Tutorial</a>
+    </p>
+  </div>
+  <script>
+  (function(){
+    function bind(btn){
+      btn.addEventListener("click", function(){
+        var sol = btn.nextElementSibling;
+        var open = sol.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
+      });
+    }
+    document.querySelectorAll(".q > .btn.show").forEach(bind);
+    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
+    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
+    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
+  })();
+  </script>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

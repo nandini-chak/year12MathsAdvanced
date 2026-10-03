@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7D Concept · Rates and integration</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="7D" data-page="concept" data-nav-depth="2" data-auth-sub="7D Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 7 Motion and rates/7C-rates-differentiation/concept.html">← 7C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 7 Motion and rates/7E-exponential-growth-decay/concept.html">7E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 5 · Applications of calculus · Term 2 · Task 3</span>
+    <h1>7D · Rates and integration</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Integrate a rate to find a quantity. In many situations, what is given is the rate dQ dt at which a quantity Q is changing. The original function Q can then be found by integration. As with motion, never omit the constant of integration.To evaluate the constant, use an initial boundary condition, giving the value of Q at some particular time t. 11 Finding the quantity from the rate Suppose that the rate of change of a quantity Q is known as a function of time t. • Integrate to find Q as a function of time. • Never omit the constant of integration. • Use an initial condition to evaluate the constant of integration.</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>326 Chapter 7 Motion and rates 7D 7D Rates and integration Learning intentions • Integrate a rate to find a quantity. In many situations, what is given is the rate dQ dt at which a quantity Q is changing. The original function Q can then be found by integration. As with motion, never omit the constant of integration.To evaluate the constant, use an initial boundary condition, giving the value of Q at some particular time t. 11 Finding the quantity from the rate Suppose that the rate of change of a quantity Q is known as a function of time t. • Integrate to find Q as a function of time. • Never omit the constant of integration. • Use an initial condition to evaluate the constant of integration. Example 15 Integrating to find a physical quantity A tank contains 40 000 litres of water. When the draining valve is opened, the volume V in litres of water in the tank decreases at a variable rate given by dV dt = −1500 + 30t, where t is the time in seconds after opening the valve. Once the water stops flowing, the valve shuts off. a When does the water stop flowing? b Give a common-sense reason why the rate dV dt is negative up to this time. c Integrate to find the volume of water in the tank at time t, and sketch the graph of V as a function of time t. d How much water has flowed out of the tank and how much remains? Solution a Put dV dt = 0. Then −1500 + 30t = 0 t = 50, so it takes 50 seconds for the flow to stop. b During this 50 seconds, the water is flowing out of the tank. Hence the volume V is decreasing, so the derivative dV dt is negative. c Integrating, V = −1500t + 15t2 + C, for some constant C. It is given that when t = 0, V = 40 000, and substituting, 40 000 = 0 + 0 + C C = 40 000. Hence V = 40 000 −1500t + 15t2. d When t = 50, V = 40 000 −(1500 × 50) + (15 × 2500) = 2500.    t V Hence the tank still holds 2500 litres when the valve closes, so 40 000 −2500 = 37 500 litres has flowed out during the 50 seconds.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>7D Rates and integration 327 Questions with a diagram or a graph instead of an equation In some problems about rates, a graph of some function is known, but its equation is unknown. Such problems require careful attention to zeroes and turning points and points of inflection. An approximate sketch of another graph often needs to be drawn. Example 16 Using calculus ideas to interpret a graph of a practical situation Frog numbers were increasing in the Ranavilla district, but during a long drought, the rate of increase fell and actually became negative for a few years. The rate dP dt of population growth of the frogs has been graphed to the right as a function of the time t years after careful observations began.     t dP dt a When was the population neither increasing nor decreasing? b When was the population decreasing and when was it increasing? c When was the population decreasing most rapidly? d When, during the first 12 years, was the frog population at a maximum? e When, during the years 4 ≤t ≤16, was the frog population at a minimum? f Draw a possible graph of the frog population P against time t. Solution a The graph shows that dP dt is zero when t = 4 and again when t = 12. These are the times when the frog population was neither increasing nor decreasing. b The graph shows that dP dt is negative when 4 &lt; t &lt; 12, so the population was decreasing during the y</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 7D</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 5 · 7D Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

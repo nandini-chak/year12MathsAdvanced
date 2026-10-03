@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5C Tutorial · Applications of differentiation (logarithmic)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="5C" data-page="tutorial" data-nav-depth="2" data-auth-sub="5C Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 4 Exponential functions/4C-diff-apps-exponential/concept.html">← 4C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 6 The trigonometric functions/6C-diff-apps-trigonometric/concept.html">6C →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>5C · Applications of differentiation (logarithmic)</h1>
+    <p>Paraphrased from Cambridge Chapter 5 §5C. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-5-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>226 Chapter 5 Logarithmic functions 5C 5C Applications of differentiation Learning intentions • Apply curve-sketching with calculus to functions involving logarithmic functions. • Be aware of limits associated with a conflict between x and loge x. Differentiation can now be applied in the usual way to study the graphs of functions involving loge x. The geometry of tangents and normals The derivative can investigate the geometry of tangents and normals to a curve. Example 13 Curve-sketching with logarithmic functions a Show that the tangent to y = loge x at T(e, 1) has equation x = ey. b Find the equation of the normal to y = loge x at T(e, 1). c Sketch the curve, the tangent, and the normal, and find the area of the triangle formed by the y-axis, the tangent at T, and the normal at T. Solution a Differentiating, dy dx = 1 x , so the tangent at T(e, 1) has gradient 1 e , and the tangent is y −1 = 1 e (x −e) ey −e = x −e x = ey y = x e . Notice that this tangent has gradient 1 e and passes through the origin. x y 1 T O N e 1 b The tangent at T(e, 1) has gradient 1 e , so the normal there has gradient −e. Hence the normal has equation y −1 = −e(x −e) y = −ex + (e2 + 1). c Substituting x = 0, the normal has y-intercept N(0, e2 + 1). Hence the base ON of △ONT is (e2 + 1) and its altitude is e. Thus the triangle △ONT has area 1 2e(e2 + 1) square units. An example of curve sketching Here are the six steps of our informal curve-sketching menu applied to the function y = x loge x.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>5C Applications of differentiation 227 Example 14 Systematic curve-sketching with logarithmic functions Sketch the graph of y = x loge x after carrying out these steps. a Write down the domain. b Test whether the function is even or odd or neither. c Find any zeroes of the function, and examine its sign. d Examine the function’s behaviour as x →∞and as x →−∞, noting any asymptotes. (You may assume that x loge x →0 as x →0+.) e Find any stationary points and examine their nature. f Find any points of inflection, examine the concavity, and sketch the curve. Solution a The domain is x &gt; 0, because loge x is undefined for x ≤0. b The function is undefined when x is negative, so it is neither even nor odd. c The only zero is at x = 1, and the curve is continuous for x &gt; 0. We take test values at x = e and at x = 1 e . When x = e, y = e loge e When x = e−1 , y = e−1 loge e−1 = e × 1 = e−1 × (−1) = e. = −e−1. x 0 e−1 1 e y ∗ −e−1 0 e sign ∗ − 0 + Hence y is negative for 0 &lt; x &lt; 1, and positive for x &gt; 1. d As given in the hint, y →0 as x →0+, but the origin is excluded. Also, y →∞as x →∞, and there is no asymptote. e Differentiating by the product rule: f ′(x) = vu′ + uv′ = loge x + x × 1 x = loge x + 1, and f ′′(x) = 1 x . Let u = x and v = loge x. Then u′ = 1 and v′ = 1 x . Putting f ′(x) = 0 gives loge x = −1 x = e−1 . Substituting, f ′′(e−1) = e &gt; 0 and f(e−1) = −e−1, as above, so (e−1, −e−1) is a minimum turning point, because f ′′(e−1) &gt; 0. 1 e − 1 e x y 1 1 e e (A subtle point: f ′(x) →−∞as x →0+, so the curve becomes vertical near the origin.) f Because f ′′(x) is always positive, there are no inflections, and the curve is always concave up.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>228 Chapter 5 Logarithmic functions 5C A difficulty with the limits of x loge x and loge x x The curve-sketching example above involved knowing the behaviour of x loge x as x →0+. When x is a small positive number, loge x is a large negative number, so it is not immediately clear whether the product x loge x becomes large or small as x →0+. In fact, x loge x →0 as x →0+, and x is said to dominate loge x, in the same way that ex dominated x in Section 4C. Here is a table of values that should make it reasonably clear that limx→0+ x loge x = 0: x 1 e 1 e2 1 e3 1 e4 1 e5 1 e6 1 e7 . . . x loge x −1 e −2 e2 −3 e3 −4 e4 −5 e5 −6 e6 −7 e7 . . . approx. −0.37 −0.27 −0.15 −0.073 −0.034 −0.015 −0.006 . . . Such limits would normally be given in any question where they are needed. A similar problem arises with the behaviour of loge x x as x →∞, because both top and bottom get large when x is large. Again, x dominates loge x, meaning that loge x x →0 as x →∞, as the following table should make reasonably obvious: x e e2 e3 e4 e5 e6 e7 . . . loge x x 1 e 2 e2 3 e3 4 e4 5 e5 6 e6 7 e7 . . . approx 0.37 0.27 0.15 0.073 0.034 0.015 0.006 . . . Note: Again, dominance is not in the course, and such limits would normally be given if needed.</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 5C →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 5C, then section 6C.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

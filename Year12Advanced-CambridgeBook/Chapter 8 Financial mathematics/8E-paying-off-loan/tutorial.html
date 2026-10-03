@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>8E Tutorial · Paying off a loan</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="8E" data-page="tutorial" data-nav-depth="2" data-auth-sub="8E Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 8 Financial mathematics/8D-regular-instalments/concept.html">← 8D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 8 Financial mathematics/8F-pension-annuity/concept.html">8F →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>8E · Paying off a loan</h1>
+    <p>Paraphrased from Cambridge Chapter 8 §8E. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-8-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>8E Paying off a loan 383 8E Paying off a loan Learning intentions • Calculate the details of paying off a loan by regular instalments. • Examine the effects of changing interest rates and changing payments. • Become familiar with the ‘accountant’s method’ and the recursive method. • Make a choice of method, but remain familiar with the other method. Long-term loans such as housing loans are usually paid off by regular instalments, with compound interest charged on the balance owing at any time. The calculations associated with paying off a loan are therefore similar to the investment calculations of the previous section. Developing the GP and summing it — accountant’s method As with superannuation, instalments are paid every unit of time. But there is an extra complication — these instalments must be balanced against the initial loan, which would grow with compound interest if no repayments were made. The loan is finally paid off when the amount owing is zero. Again there are the same two approaches to developing a GP to solve the problem, and as before, we present the accountant’s method first. • Calculate the final value of each instalment as it earns compound interest, and then add up these final values as before, using the theory of GPs. • Deduct this from the initial loan, which is attracting compound interest. • The loan is paid off when the amount owing is zero. 9 Calculations associated with paying off a loan — accountant’s method To find the amount An still owing after n units of time: • Find what the principal, earning compound interest, would grow to if no instalments were ever paid. • Find what each instalment will grow to as it earns compound interest, then add up all these amounts, using the formula for the sum of a GP. • The amount An still owing at the end of n units of time is An = (principal plus interest) −(instalments plus interest). The loan is paid off when the amount An still owing is zero. Note: This is how interest and instalments are usually handled: • The borrower pays an instalment at the end of each unit of time. • On the same day, the bank adds interest to the amount owing. But always read the question carefully!</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>384 Chapter 8 Series and finance 8E Example 24 Finding interest when paying off a loan — accountant’s method Yianni and Eleni borrow $20 000 from the Town and Country Bank to go on a trip to Istanbul. Interest is charged at 12% per annum, compounded monthly. They start repaying the loan one month after taking it out, and their monthly instalments are $300. a How much will they still owe the bank at the end of six years? b How much interest will they have paid in these six years? Solution Using the accountant’s method a The monthly interest rate is 1%, so 1 + R = 1.01. The initial loan of $20 000, after 72 months, grows to 20 000 × 1.0172. The 1st instalment is invested for 71 months, and so grows to 300 × 1.0171. The 2nd instalment is invested for 70 months, and so grows to 300 × 1.0170. The 71st instalment is invested for 1 month, and so grows to 300 × 1.011. The 72nd and last instalment is invested for no time at all, and so grows to 300. Hence the amount A72 still owing at the end of 72 months is: A72 = (principal plus interest) −(instalments plus interest) = 20 000 × 1.0172 −(300 + 300 × 1.01 + · · · + 300 × 1.0171). The bit in brackets is a GP with first term a = 300, ratio r = 1.01, and 72 terms. Hence A72 = 20 000 × 1.0172 −a(r72 −1) r −1 (finding the sum of the GP) = 20 000 × 1.0172 −300 × (1.0172 −1) 0.01 = 20 000 × 1.0172 −30 000 × (1.0172 −1) ≑$9529 (correct to the nearest dollar). b Total instalments over six years = 300 × 72 = $21 600. Reduction in loan over six years = 20 000 −9529 = $10 471. Hence interest charged = 21 600 −10 471 = $11 129 (more than half the original loan). Developing the GP and summing it — recursive method Again, the recursive method follows the progress of the loan on bank statements. Working with months as the units of time, let A4 be the balance owing at the end of month 4. To find the balance A5 owing at the end of month 5: • First add the monthly interest to the balance owing. • Then deduct the instalment from the balance owing — the result is A5 . Below is the previous worked example done using the recursive method.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>8E Paying off a loan 385 Example 25 Finding interest when paying off a loan — recursive method Yianni and Eleni borrow $20 000 from the Town and Country Bank to go on a trip to Istanbul. Interest is charged at 12% per annum, compounded monthly. They start repaying the loan one month after taking it out, and their monthly instalments are $300. a How much will they still owe the bank at the end of six years? b How much interest will they have paid in these six years? Solution Using the recursive method a The monthly interest rate is 1%, so 1 + R = 1.01. Let An be the balance owing after n months. For convenience, let P = 20 000 be the capital, M = 300 the monthly instalment. Then A0 = P, which is the initial principal borrowed. After 1 month, interest has been added to the loan, and an instalment deducted, so A1 = 1.01 P −M. After 2 months, interest on A1 has been added, and an instalment deducted, so A2 = 1.01 A1 −M = 1.012 P −1.01 M −M. - - - - - - - - - - - - Continuing the recursion for 72 steps - - - - - - - - - - - - Finally, A72 = 1.0172 P −(M + 1.01 M + 1.012 M + · · · + 1.0171 M). The bit in brackets is a GP with a = M, r = 1.01, and n = 72, so A72 = 1.0172 P −M(1.0172 −1) 0.01 = 20 000 × 1.0172 −30 000 × (1.0172 −1) ≑$9529, as before. b Total instalments over six years = 300 × 72 = $21 600. Reduction in loan over six years = 20 000 −9529 = $10 471. Hence interest charged = 21 600 −10 471 = $11 129 (more than half the original loan). 10 Calculations associated with paying off a loan — recursive method Let An be the amount owing at the end of n units of time. • The initial balance owing is A0 = P, where P is the principal borrowed. • Find A1 in terms of A0, then A2 in terms of A1, then A3 in terms of A2, . . . • Hence form a GP for An, and find its sum using the GP sum formula.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>386 Chapter 8 Series and finance 8E Learning the methods, and approaching the exercises Again, we have chosen to display the accountant’s method in most worked examples, but feel free to use the recursive method instead, or as well. To repeat, readers should choose one method as their preferred approach, but remain familiar with the other method, which a particular assessment problem may insist on. Again,</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 8E →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 8E, then section 8F.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

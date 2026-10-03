@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3A Concept · Areas and the definite integral</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="3A" data-page="concept" data-nav-depth="2" data-auth-sub="3A Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 2 Differentiation applications/2I-primitive-functions/concept.html">← 2I</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 3 Integration/3B-fundamental-theorem/concept.html">3B →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 4 · Integral calculus · Term 1 · Task 2</span>
+    <h1>3A · Areas and the definite integral</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Introduce the definite integral as the area under a curve. • Understand that the function must be continuous in the closed interval. • Use known area formulae to calculate some simple definite integrals. • Understand how the definite integral is the limit of a sum of thin slices. • Review the area formula for a circle as the limiting sum of thin sectors. All area formulae, and all calculations of area, are based on two principles: 1 Area of a rectangle = length × breadth. 2 When a region is dissected into a finite number of subregions, the total area is unchanged. A region bounded by straight lines, such as a triangle or a trapezium, can be cut up and rearranged into rectangles with a few well-chosen cuts. Dissecting a curved region into rectangles, however, cannot be done with a finite number of rectangles, so must be a limiting process, just as differentiation is. Continuous in a closed interval In Section 5H of Year 11, we defined continuous at a point — ‘you can draw the curve through the point on both sides without lifting the pencil off the paper.’ We must now define continuous in the closed interval [a, b]. Informally it means that ‘you can place the pencil on the left-hand endpoint at x = a and draw the curve to the right-hand endpoint at x = b without lifting the pencil off the paper.’ The three graphs sketched below are each continuous in the closed interval [a, b]. A new symbol — the definite integral Some new notation is needed to reflect the process of finer and finer dissection described above as it applies to functions whose graphs are curves. The diagram on the left below shows the region contained between a given curve y = f(x) and the x-axis, from x = a to x = b, where a ≤b. • The graph must be continuous in the closed interval [a, b]. • For the moment, the graph must never go below the x-axis. x y a b x y a b x y a b f x( ) x x + x δ In the middle diagram, the region has been dissected into a number of thin strips of equal width. Each strip is a</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>3A Areas and the definite integral 109 3A Areas and the definite integral Learning intentions • Introduce the definite integral as the area under a curve. • Understand that the function must be continuous in the closed interval. • Use known area formulae to calculate some simple definite integrals. • Understand how the definite integral is the limit of a sum of thin slices. • Review the area formula for a circle as the limiting sum of thin sectors. All area formulae, and all calculations of area, are based on two principles: 1 Area of a rectangle = length × breadth. 2 When a region is dissected into a finite number of subregions, the total area is unchanged. A region bounded by straight lines, such as a triangle or a trapezium, can be cut up and rearranged into rectangles with a few well-chosen cuts. Dissecting a curved region into rectangles, however, cannot be done with a finite number of rectangles, so must be a limiting process, just as differentiation is. Continuous in a closed interval In Section 5H of Year 11, we defined continuous at a point — ‘you can draw the curve through the point on both sides without lifting the pencil off the paper.’ We must now define continuous in the closed interval [a, b]. Informally it means that ‘you can place the pencil on the left-hand endpoint at x = a and draw the curve to the right-hand endpoint at x = b without lifting the pencil off the paper.’ The three graphs sketched below are each continuous in the closed interval [a, b]. A new symbol — the definite integral Some new notation is needed to reflect the process of finer and finer dissection described above as it applies to functions whose graphs are curves. The diagram on the left below shows the region contained between a given curve y = f(x) and the x-axis, from x = a to x = b, where a ≤b. • The graph must be continuous in the closed interval [a, b]. • For the moment, the graph must never go below the x-axis. x y a b x y a b x y a b f x( ) x x + x δ In the middle diagram, the region has been dissected into a number of thin strips of equal width. Each strip is approximately a rectangle, but only roughly so, because the upper boundary is curved. The third diagram shows just one of the strips, to the right of x on the x-axis. Its height at the left-hand end is f(x), and provided the strip is very thin, the height is still about f(x) at the right-hand end.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>110 Chapter 3 Integration 3A Let the width of the strip be ∆x, where ∆x, as usual in calculus, is thought of as being very small. Then, roughly: area of thin strip ≑height × width ≑f(x) ∆x. Adding up all the thin strips, using sigma notation for the sum: area of shaded region ≑ b X x=a area of each strip ≑ b X x=a f(x) ∆x. Now imagine that the number of strips increases without bound, so that each strip becomes ‘infinitesimally thin’ — this all means that we are taking the limit as the width of each strip goes to zero, so that the inaccuracy in the area formula above gets ‘as small as we like’. Because the procedure involves taking the limit as ∆x →0, we might expect to see the standard limit notation being used: area of shaded region = lim ∆x→0 b X x=a f(x) ∆x. (1) But instead, we use the brilliant and flexible notation introduced by Leibniz. The width ∆x is replaced by the symbol dx, which suggests an infinitesimal width, and an old German form ∫ of the letter S is used to suggest an infinite sum under the continuous curve. Th</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 3A</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 4 · 3A Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

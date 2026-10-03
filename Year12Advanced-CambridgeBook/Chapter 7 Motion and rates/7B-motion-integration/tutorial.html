@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7B Tutorial · Motion and integration</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="7B" data-page="tutorial" data-nav-depth="2" data-auth-sub="7B Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 7 Motion and rates/7A-motion-acceleration/concept.html">← 7A</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 7 Motion and rates/7C-rates-differentiation/concept.html">7C →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>7B · Motion and integration</h1>
+    <p>Paraphrased from Cambridge Chapter 7 §7B. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-7-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>7B Motion and Integration 309 7B Motion and Integration Learning intentions • From the acceleration function, integrate to give velocity, then displacement. • Understand and work with the acceleration g due to gravity. The inverse process of differentiation is integration. Thus if the acceleration function is known, integration will generate the velocity function. Then a second integration will generate the displacement function. Using initial conditions Taking primitives of functions always involves constants of integration. Finding such constants requires initial conditions. For example, a problem may tell us the velocity when t = 0, or give us the displacement when t = 3. In this chapter, the constants of integration cannot ever be omitted. 6 Integrating with respect to time • Given the acceleration function ¨x, integrate to find the velocity function v. • Given the velocity function v, integrate to find the displacement function x. • Never omit constants of integration in this work. • Use initial conditions to evaluate each constant of integration. In the next worked example, the velocity function is given. Integrating the velocity function, using the initial condition, gives the displacement function. Differentiating the velocity function gives the acceleration function. Example 6 Working both ways from the velocity function A particle is moving so that its velocity t seconds after time zero is v = 2t −2 m/s. Initially it is at x = 1. a Integrate, substituting initial condition, to show that x = (t −1)2. b Find when the particle is at the origin, and find its velocity then. c Explain why the particle is never on the negative side of the origin. d Differentiate to find the acceleration, and show that it is constant. Solution a The given velocity function is v = 2t −2. (1) Integrating, x = t2 −2t + C, for some constant C. When t = 0, x = 1, so 1 = 0 −0 + C, so C = 1, and x = t2 −2t + 1 x = (t −1)2. (2) b Put x = 0. Then from (2), (t −1)2 = 0 t = 1. Hence the particle is at the origin when t = 1, and substituting t = 1 into (1), v = 2 −2 = 0 m/s.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>310 Chapter 7 Motion and rates 7B c Because x = (t −1)2 is a square, the value of x can never be negative, so the particle is never on the negative side of the origin. d Differentiating the velocity function v = 2t −2 gives the acceleration function ¨x = 2, which is a constant 2 m/s2. (3) Example 7 Working from the acceleration function A particle’s acceleration function is ¨x = 24t. Initially it is at the origin, moving with velocity −12 cm/s. a Integrate, substituting the initial condition, to find the velocity function. b Integrate again to find the displacement function. c Find when the particle is stationary, and find the displacement then. d Find when the particle returns to the origin, and the acceleration then. Solution a The given acceleration function is ¨x = 24t. (1) Integrating, v = 12t2 + C, for some constant C. When t = 0, v = −12, so −12 = 0 + C, so C = −12, and v = 12t2 −12. (2) b Integrating again, x = 4t3 −12t + D, for some constant D. When t = 0, x = 0, so 0 = 0 −0 + D, so D = 0, and x = 4t3 −12t. (3) c Put v = 0. Then from (2), 12t2 −12 = 0 t2 = 1, and assuming as normal that t ≥0, t = 1. Hence the particle is stationary after 1 second. When t = 1, x = −8, so at this time its displacement is x = −8 cm. d Put x = 0. Then using (3), 4t3 −12t = 0 4t(t2 −3) = 0, and assuming as normal that t ≥0, t = 0 or t = √ 3 . Hence the particle returns to the origin after √ 3 seconds, and at this time, ¨x = 24 √ 3 cm/s2. The acceleration due to gravity It is said that Galileo dropped his unequal weights from the Leaning Tower of Pisa about 1590. Since then, it has been known that near the Earth’s surface, a body that is free to fall accelerates downwards at a constant rate, whatever its mass and whatever its velocity, provided air resistance is ignored. This acceleration is called the acceleration due to gravity and is conventionally given the symbol g. The value of this acceleration is about 9.8 m/s2, or in rounder figures, 10 m/s2. The acceleration is downwards. Thus if upwards is taken as positive, the acceleration ¨x is −g, but if downwards is taken as positive, the acceleration ¨x is g.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>7B Motion and Integration 311 7 The acceleration due to gravity • A falling body accelerates downwards at a constant rate g ≑9.8 m/s2, provided that air resistance is ignored — a rougher approximation is g ≑10 m/s2. • If upwards is taken as positive, start with the function ¨x = −g and integrate. • If downwards is taken as positive, start with the function ¨x = g and integrate. Example 8 Integrating from the acceleration due to gravity A stone is dropped from the top of a high building. How far has it travelled, and how fast is it going, after 5 seconds? Take g = 9.8 m/s2. Solution Let x metres be the distance travelled t seconds after the stone is dropped. This simple sentence puts the origin of space at the top of the building, it puts the origin of time at the instant when the stone is dropped, and it makes downwards the positive direction. It also defines the units of space and time. And it gives two initial conditions. Thus ¨x = 9.8 (given). (1) Integrating, v = 9.8t + C, for some constant C. Because the stone was dropped, its initial speed was zero, and substituting, 0 = 0 + C, so C = 0, and v = 9.8t. (2) Integrating again, x = 4.9t2 + D, for some constant D. Because the initial displacement of the stone was zero, 0 = 0 + D, so D = 0, and x = 4.9t2. (3) When t = 5, v = 49 (substituting into (2) above) and x = 122.5 (substituting into (3) above). 0 x Hence the stone has fallen 122.5 metres and is moving downwards at 49 m/s. Making a convenient choice of the origin and the positive direction Physical problems do not come with origins and directions attached. Thus it is up to us to choose the origins of displacement and time, and the positive direction, so that the arithmetic is as simple as possible. The previous worked example made reasonable choices, but the next worked example makes quite different choices. In all such problems, the physical interpretation of negatives and displacements is the mathematician’s responsibility, and the final answer should be given in ordinary language.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>312 Chapter 7 Motion and rates 7B Example 9 Choosing convenient origin and positive direction A cricketer is standing on a lookout that projects out over the valley floor 100 metres below him. He throws a cricket ball vertically upwards at a speed of 40 m/s and it falls back just past the lookout onto the valley floor below. How long does it take to fall, and with what speed does it strike the ground? Take g = 10 m/s2. 100 x 0 Solution Let x metres be the distance above the valley floor t seconds after the stone is thrown. Again, this simple sentence puts the origin of space at the valley floor, and puts the origin of time at the instant when the stone is thrown. It also makes upwards positive, so that ¨x = −10 because the acceleration is downwards. As discussed, ¨x = −10. (1) Integrating, v = −10t + C, for some constant C. Because v = 40 when t = 0, 40 = 0 + C, so C = 40, and v = −10t + 40. (2) Integrating again, x = −5t2 + 40t + D, for some constant D. Because x = 100 when t = 0, 100 = 0 + 0 + D, so D = 100, and x = −5t2 + 40t + 100. (3) The stone hits the ground when x = 0, so using (3) above: −5t2 + 40t + 100 = 0 t2 −8t −20 = 0 (t −10)(t + 2) = 0 t = 10 or −2. The ball was not in flight at t = −2, so the ball hits the ground after 10 seconds. Substituting t = 10 into equation (2), v = −100 + 40 = −60, so the ball hits the ground at 60 m/s. Formulae from physics cannot be used This course requires that even problems where acceleration is constant, such as above, must be solved by integrating the acceleration. Many readers will know three useful constant acceleration equations of motion: v = u + at and s = ut + 1 2at2 and v2 = u2 + 2as. These equations automate the integration process, and so cannot be used in this course. Question 18 in</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 7B →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 7B, then section 7C.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5B Tutorial · Differentiation involving logarithmic functions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="5B" data-page="tutorial" data-nav-depth="2" data-auth-sub="5B Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 4 Exponential functions/4B-diff-exponential/concept.html">← 4B</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 6 The trigonometric functions/6B-diff-trigonometric/concept.html">6B →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>5B · Differentiation involving logarithmic functions</h1>
+    <p>Paraphrased from Cambridge Chapter 5 §5B. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-5-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>220 Chapter 5 Logarithmic functions 5B 5B Differentiation involving logarithmic functions Learning intentions • Differentiate loge x. • Develop and use standard forms for differentiating log functions. • Use the product and quotient rules when differentiating with log functions. • Use the log laws to make differentiation easier. Calculus involving the exponential function y = ex requires also the calculus of its inverse function y = loge x. The diagram to the right shows once again the graphs of both curves drawn on the same set of axes — they are reflections of each other in the diagonal line y = x. Using this reflection, the important features of y = loge x are: • The domain is x &gt; 0 and the range is all real x. • The x-intercept is 1, and the gradient there is 1. • The y-axis is a vertical asymptote. • As x →∞, y →∞(look at its reflection y = ex to see this). • In its whole domain, loge x is increasing, but the rate of increase is decreasing. x y 1 2 1 2 e e Differentiating the logarithmic function The logarithmic function = loge x can be differentiated easily using the known derivative of its inverse function ex. Let y = loge x. Then x = ey, by the definition of logarithms. Differentiating, dx dy = ey, because the exponential function is its own derivative, = x, because ey = x, and taking reciprocals, dy dx = 1 x , a trick that is allowed by the chain rule. Hence the derivative of the logarithmic function is the reciprocal function. 3 The derivative of the logarithmic function is the reciprocal function d dx loge x = 1 x The next worked example uses the derivative to confirm that y = loge x has two properties that were already clear from the reflection in the diagram above. Example 7 Using the derivative of ln x a Find the gradient of the tangent to y = ln x at its x-intercept. b Prove that y = ln x is always increasing, and always concave down.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>5B Differentiation involving logarithmic functions 221 Solution a The function is y = ln x. Differentiating, y′ = 1 x . The graph crosses the x-axis at (1, 0), and substituting x = 1 into y′, gradient at x-intercept = 1. b The domain is x &gt; 0, and y′ = 1 x is positive for all x &gt; 0. Differentiating again, y′′ = −1 x2 , which is negative for all x &gt; 0. Hence y = ex is always increasing, and always concave down. x y 1 2 1 −1 e y x = loge Example 8 Using the derivative of ln x in a sum of functions Differentiate these functions using the standard form above. y = x + ln x a y = 5x2 −7 ln x b Solution y = x + ln x dy dx = 1 + 1 x a y = 5x2 −7 ln x dy dx = 10x −7 x b Further standard forms The next worked example uses the chain rule to develop two further standard forms for differentiation. Example 9 Using the chain rule with loge x Differentiate each function using the chain rule. (Part b is a standard form.) loge(3x + 4) a loge(ax + b) b loge(x2 + 1) c Solution a Let y = loge(3x + 4). Then dy dx = dy du × du dx (chain rule) = 1 3x + 4 × 3 = 3 3x + 4 . Let u = 3x + 4. Then y = loge u. Hence du dx = 3 and dy du = 1 u . b Let y = loge(ax + b). Then dy dx = dy du × du dx (chain rule) = 1 ax + b × a = a ax + b . Let u = ax + b. Then y = loge u. Hence du dx = a and dy du = 1 u .</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>222 Chapter 5 Logarithmic functions 5B c Let y = loge(x2 + 1). Then dy dx = dy du × du dx (chain rule) = 1 x2 + 1 × 2x = 2x x2 + 1 . Let u = x2 + 1. Then y = loge u. Hence du dx = 2x and dy du = 1 u . Standard forms for differentiation It is convenient to write down two further standard forms for differentiation based on the chain rule, giving three forms altogether. 4 Standard forms for differentiating logarithmic functions d dx loge x = 1 x and d dx loge(ax + b) = a ax + b Some prefer to use a standard form when differentiating with the chain rule: d dx loge u = u′ u OR d dx loge f(x) = f ′(x) f(x) The second of these standard forms was proven in part b of the previous worked example. Part a was an example of it. The third standard form is a more general chain-rule extension — part c of the previous worked example was a good example of it. This standard form will be needed later for integration. To prove the standard form: Let y = loge u, where u is a function of x. Then dy dx = dy du × du dx (chain rule) = 1 u du dx , or it can be written more concisely as dy dx = u′ u . For now, either learn it, in one of its two forms, or apply the chain rule each time. Example 10 Using the standard forms for differentiation Using the standard forms developed above, differentiate: y = loge(4x −9) a y = loge(1 −1 2 x) b y = loge(4 + x2) c Solution a For y = loge(4x −9), use the second standard form with ax + b = 4x −9. Then y′ = 4 4x −9 . b For y = loge(1 −1 2 x), use the second standard form with ax + b = −1 2 x + 1. Then y′ = −1 2 −1 2 x + 1 = 1 x −2 , after multiplying top and bottom by −2.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>5B Differentiation involving logarithmic functions 223 c For y = loge(4 + x2), y′ = 2x 4 + x2 . Let u = 4 + x2. OR Let f(x) = 4 + x2. Then u′ = 2x. Then f ′(x) = 2x. d dx loge u = u′ u d dx loge f(x) = f ′(x) f(x) . Alternatively, use the chain rule, as in the previous worked example. Using the product and quotient rules These two rules are used in the usual way. Example 11 Using the product and quotient rules for differentiation Differentiate: x3 ln x by the product rule, a ln(1 + x) x by the quotient rule. b Solution a Let y = x3 ln x. Then y′ = vu′ + uv′ product rule = 3x2 ln x + x3 × 1 x = x2(1 + 3 ln x). Let u = x3 and v = ln x. Then u′ = 3x2 and v′ = 1 x . b Let y = ln(1 + x) x . Then y′ = vu′ −uv′ v2 quotient rule = x 1 + x −ln(1 + x) x2 = x −(1 + x) ln(1 + x) x2(1 + x) . Let u = ln(1 + x) and v = x. Then u′ = 1 1 + x and v′ = 1. Using the log laws to make differentiation easier The next worked example shows the use of the log laws to avoid a combination of the chain and quotient rules. Example 12 Using the log laws to make differentiation easier Use the log laws to simplify each expression, then differentiate it. loge 7x2 a loge(3x −7)5 b loge 1 + x 1 −x . c Solution a Let y = loge 7x2. Then y = loge 7 + loge x2 (log of a product is the sum of the logs) = loge 7 + 2 loge x (log of a power is the multiple of the log), so dy dx = 2 x (loge 7 is a constant, with derivative zero).</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>224 Chapter 5 Logarithmic functions 5B b Let y = loge(3x −7)5. Then y = 5 loge(3x −7) (log of a power is the multiple of the log), so dy dx = 15 3x −7 . c Let y = loge 1 + x 1 −x . Then y = loge(1 + x) −loge(1 −x) (log of a quotient is the difference of the logs), so dy dx = 1 1 + x + 1 1 −x .</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 5B →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 5B, then section 6B.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

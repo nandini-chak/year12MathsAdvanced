@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3D Concept · Challenge — proving the fundamental theorem</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="3D" data-page="concept" data-nav-depth="2" data-auth-sub="3D Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 3 Integration/3C-definite-integral-properties/concept.html">← 3C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 3 Integration/3E-indefinite-integral/concept.html">3E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 4 · Integral calculus · Term 1 · Task 2</span>
+    <h1>3D · Challenge — proving the fundamental theorem</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Interpret the definite integral as a function of its upper bound. • Prove the differential form of the fundamental theorem of calculus. • Prove the integral form of the fundamental theorem of calculus. This section develops a proof of the fundamental theorem of calculus, as stated and used in Sections 3B–3C. The section is challenging, and readers may prefer to leave it to a second reading of the chapter at a later time. The definite integral as a function of its upper limit The value of a definite integral ∫b a f(x) dx changes when the value of b changes. This means that it is a function of its upper limit b. When we want to emphasise the functional relationship with the upper limit, we usually replace the letter b by the letter x, the conventional variable of a function. t x y a In turn, the original letter x needs to be replaced by some other letter, usually t. Then the definite integral is clearly represented as a function of its upper limit x, as in the first diagram above. For the purposes of this proof, this function is called the signed area function for f(x) starting at x = a: A(x) = ∫x a f(t) dt x A x  a</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>3D Challenge — proving the fundamental theorem 131 3D Challenge — proving the fundamental theorem Learning intentions • Interpret the definite integral as a function of its upper bound. • Prove the differential form of the fundamental theorem of calculus. • Prove the integral form of the fundamental theorem of calculus. This section develops a proof of the fundamental theorem of calculus, as stated and used in Sections 3B–3C. The section is challenging, and readers may prefer to leave it to a second reading of the chapter at a later time. The definite integral as a function of its upper limit The value of a definite integral ∫b a f(x) dx changes when the value of b changes. This means that it is a function of its upper limit b. When we want to emphasise the functional relationship with the upper limit, we usually replace the letter b by the letter x, the conventional variable of a function. t x y a In turn, the original letter x needs to be replaced by some other letter, usually t. Then the definite integral is clearly represented as a function of its upper limit x, as in the first diagram above. For the purposes of this proof, this function is called the signed area function for f(x) starting at x = a: A(x) = ∫x a f(t) dt x A x  a The function A(x) is clearly zero at x = a. For the function sketched above, A(x) is always increasing to the right of x = a, as in the second sketch. To the left of x = a, A(x) is also defined, with the integrals running backwards, so it is always negative and decreasing. And there is an inflection at x = a because f(t) has a minimum. The signed area function The function in the sketch above was never negative. But the definite integral is the signed area under the curve, meaning that a negative sign is attached to areas of regions below the x-axis (provided that the integral is not running backwards). The upper graph of f(t) to the right is a parabola with axis of symmetry x = b. The four areas marked B are all equal. Here are some properties of the signed area function: A(x) = ∫x a f(t) dt. • A(a) = 0, as always. • In the interval (a, c), f(t) is negative, so A(x) is decreasing. • A(x) has an inflection at x = b, where f(t) has a minimum. • In the interval (c, ∞), f(t) is positive, so A(x) is increasing. • A(b) = −B and A(c) = −2B and A(d) = −B. • A(x) is also defined in the interval (−∞, a) to the left of a, where it is negative because the integrals run backwards and the curve is above the x-axis. x A x  t f t( ) a b c d a b c d B B B B The lower diagram above is a sketch of the signed area function A(x) of f(x).</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>132 Chapter 3 Integration 3D 13 The signed area function Suppose that f(x) is a function defined in some interval I containing a. The signed area function for f(x) starting at a is the function defined by the definite integral A(x) = ∫x a f(t) dt, for all x in the interval I. (The idea is only needed for this proof, and an occasional later explanation.) In Chapter 10 on continuous probability distributions, the cumulative distribution function of a continuous distribution will be defined in this way. Example 15 Understanding ‘signed area’ Let A(x) = ∫x 0 f(t) dt be the signed area function starting at t = 0 for the graph sketched to the right. Use area formulae to draw up a table of values for y = A(x) in the interval [−3, 3], then sketch y = A(</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 3D</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 4 · 3D Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

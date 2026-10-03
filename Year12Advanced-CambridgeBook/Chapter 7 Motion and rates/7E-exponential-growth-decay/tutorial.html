@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7E Tutorial · Exponential growth and decay</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="7E" data-page="tutorial" data-nav-depth="2" data-auth-sub="7E Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 7 Motion and rates/7D-rates-integration/concept.html">← 7D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 9 Random variables/9A-probability-distributions/concept.html">9A →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>7E · Exponential growth and decay</h1>
+    <p>Paraphrased from Cambridge Chapter 7 §7E. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-7-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>332 Chapter 7 Motion and rates 7E 7E Exponential growth and decay Learning intentions • Understand exponential growth and decay as ‘the rate is proportional to the quantity’. • Understand that exponential growth and decay are modelled by exponential functions. • Solve a large variety of practical problems using exponential growth and decay. Exponential growth and decay is based on exponential functions, and is essential for modelling all sorts of practical situations. The topic was briefly mentioned in Section 8G in Year 11, but is now developed systematically using calculus. Consider a growing population Q, of people in some country, or rabbits on an island, or bacteria in a laboratory culture. The more individuals there are in the population, the more new individuals are born in each unit of time. Thus the rate at which the population is growing at any time t should be proportional to the number of individuals in the population at that time. Writing this in symbols: dQ dt = kQ, where k &gt; 0 is a constant of proportionality. (⋆) Such a situation is called exponential growth. Geometrically, this means that the gradient of the population graph at any point is proportional to the height of the graph at that point. If k &lt; 0, it is called exponential decay, because then dQ dt is always negative, so the quantity is always decreasing. Exponential functions model exponential growth and decay The functions that model equation (⋆) above are of course exponential functions. Let Q = A ekt, where A is a constant. Then dQ dt = kA ekt , so dQ dt = kQ, proving that Q = Aekt is a solution of equation (⋆). (We assume that there are no other solutions of equation (⋆).) The constant A is the initial value of Q, as is easily seen by substituting t = 0: When t = 0, Q = Aek×0 = A × 1 = A. If A is positive, Q is always positive, and if A is negative, Q is always negative. 12 Exponential growth and decay • A quantity Q is said to be experiencing exponential growth or decay if the rate of change of Q is proportional to Q, that is: dQ dt = kQ, where k is the constant of proportionality. • If k &gt; 0, Q is growing exponentially, and if k &lt; 0, Q is decaying exponentially. • If Q is experiencing exponential growth or decay with some constant k, then: Q = A ekt, where A is the value of Q at time t = 0. • If A is positive, Q is always positive, and if A is negative, Q is always negative. Exponential growth and decay are often called natural growth and decay.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>7E Exponential growth and decay 333 Problems involving exponential growth The constants k and A can usually be calculated from the data in the problem. The approximation of k should then be held in memory for later use. Expect a question to ask first that some exponential function satisfies a growth equation. Example 18 The rabbit population P on Goat Island was estimated to be 1000 at the start of the year 2020 and 3000 at the start of the year 2025. The population is growing according to the law of exponential growth. That is, dP dt = kP, for some constant k, where P is the rabbit population t years after the start of 2020. a Show that P = P0 ekt satisfies the equation dP dt = kP. b Find the values of P0 and k, then sketch the graph of P as a function of t. c How many rabbits are there at the start of 2028? Answer correct to the nearest ten rabbits. d When will the population be 10 000, correct to the nearest month? e Find, correct to the nearest 10 rabbits per year, the rate at which the population is increasing: when there are 8000 rabbits, i at the start of 2022. ii Solution a Substituting the function P = P0 ekt into the equation dP dt = kP: LHS = dP dt = d dt(P0 ekt) = kP0 ekt = kP, as required. b When t = 0, P = 1000, so 1000 = P0 × e0 P0 = 1000. When t = 5, P = 3000, so 3000 = 1000 e5k e5k = 3 5k = loge 3 k = 1 5 loge 3 k = 0.219 722 . . . (store this in memory). t P     2025 2028 c At the start of 2028, when t = 8, P = 1000 e8k ≑5800 rabbits. d Substituting P = 10 000, 10 000 = 1000 ekt ekt = 10 kt = loge 10 t = loge 10 k = 10.479 516 . . . ≑10 years and 6 months, so the population will reach 10 000 about 6 months into 2030.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>334 Chapter 7 Motion and rates 7E e i Substituting P = 8000 into dP dt = kP : dP dt = 8000k ≑1760 rabbits per year. ii Differentiating, dP dt = 1000k ekt, so at the start of 1922, when t = 2, dP dt = 1000k e2k ≑340 rabbits per year. Example 19 The price P of a pair of shoes rises with inflation so that: dP dt = kP, for some constant k, where t is the time in years since records were kept. a Show that P = P0 ekt, where P0 is the price at time zero, satisfies the given equation. b If the price doubles every 10 years, find k, sketch the curve, and find how long it takes for the price to rise to 10 times its original price. Solution a Substituting P = P0 ekt into the equation dP dt = kP: LHS = dP dt = d dt  P0 ekt = kP0 ekt, = kP = RHS, so the function satisfies the equation. Also, when t = 0, P = P0 e0 = P0 × 1, so P0 is the price at time zero. b When t = 10, we know that P = 2P0, so 2P0 = P0 e10k e10k = 2 10k = loge 2 k = 1 10 loge 2 k = 0.069 314 . . . (store this in memory). Now substituting P = 10P0: 10P0 = P0 ekt ekt = 10 kt = loge 10 t = loge 10 k ≑33.219, so it takes about 33.2 years for the price of the shoes to rise tenfold. 10P0 2P0 P0 t P 10</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>7E Exponential growth and decay 335 Problems involving exponential decay The same method can deal with situations in which some quantity is decreasing at a rate proportional to the quantity. Radioactive substances, for example, decay in this manner. Let M be the mass of the substance, regarded as a function of time t. Because M is decreasing, the derivative dM dt is negative, so: dM dt = kM, where k is a negative constant. Then applying Box 12, M = A ekt, where A is the mass at time t = 0. But this notation may seem counter-intuitive, because the mass is decaying, not growing. If we know that the situation involves exponential decay and not growth, then it is much easier to build the negative sign into the equation right at the start by using a positive constant of proportionality, and say: Because M is decreasing, the derivative dM dt is negative, so: dM dt = −kM, where k is a positive constant. Then applying Box 12, M = A e−kt, where A is the mass at time t = 0. This is the recommended approach, and is the first dotpoint in Box 13 below: 13 Exponential decay In situations of exponential decay, the recommended approach is: • Let the constant of proportionality be −k, where k is a positive constant. Then, if M is the quantity that is changing: dM dt = −kM and M = A e−kt, where A is the value of M at time t = 0. • Alternatively, let the constant of proportionality be k, where k &lt; 0. Then, if M is the quantity that is changing: dM dt = kM and M = A ekt, where A is the value of M at time t = 0. The arithmetic of logarithms is usually easier with the recommended approach. Example 20 A paddock has been contaminated with strontium-90, which has a half-life of about 29 years — this means that exactly half of any quantity of the isotope will decay in 29 years. Let A be the original mass present, and M the mass at time t years. a Assuming that M. t = −kM, show that M = Ae−kt satisfies this equation. b Find what proportion of the strontium-90 will remain after 100 years (answer correct to the nearest 0.1%). c How long will it take for the strontium-90 to drop to 0.001% of its original mass? Answer correct to the nearest year.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>336 Chapter 7 Motion and rates 7E Solution a Differentiating M = Ae−kt, dM dt = −kAe−kt = −kM, as required. b After 29 years, only half of the original mass remains, that is, M = 1 2A when t = 29, and substituting, 1 2A = A e−29k e−29k = 1 2. Taking reciprocals, e29k = 2 (the reciprocal of e−29k is e29k) 29k = loge 2 k = 1 29 loge 2 k = 0.023902 . . . (store this in memory). t M M0  1 2 0 M When t = 100, M = A e−100k ≑0.092A, so the strontium-90 has dropped to about 9.2% of its original value. c The mass of strontium-90 has dropped to 0.001% when M = 10−5A. Notice that 0.001% = 0.001 100 = 0.000 01 = 10−5. Substituting M = 10−5A into the equation from part a, 10−5A = A e−kt e−kt = 10−5 −kt = −5 loge 10 t = 5 loge 10 k ≑482 years.</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 7E →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 7E, then section 9A.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6D Tutorial · Integration with trigonometric functions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="6D" data-page="tutorial" data-nav-depth="2" data-auth-sub="6D Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 5 Logarithmic functions/5E-int-apps-logarithmic/concept.html">← 5E</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 6 The trigonometric functions/6E-int-apps-trigonometric/concept.html">6E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>6D · Integration with trigonometric functions</h1>
+    <p>Paraphrased from Cambridge Chapter 6 §6D. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-6-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>6D Integration with trigonometric functions 279 6D Integration with trigonometric functions Learning intentions • Develop and apply standard forms for integration with trigonometric functions. • Develop and apply standard forms for the reverse chain rule. • Reverse a differentiation to find an integral involving trigonometric functions. Reversing standard forms for differentiation gives standard forms for integration. The standard forms for integrating the trigonometric functions When the standard forms for differentiating sin x, cos x, and tan x are reversed, they give three new standard integrals. First, d dx sin x = cos x, and reversing this, ∫ cos x dx = sin x. Secondly, d dx cos x = −sin x, and reversing this, ∫ sin x dx = −cos x. Thirdly, d dx tan x = sec2 x, and reversing this, ∫ sec2 x dx = tan x. This gives three new standard integrals. These three standard forms should be carefully memorised — pay attention to the signs in the first two standard forms. 11 Standard trigonometric integrals • ∫ cos x dx = sin x + C, for some constant C • ∫ sin x dx = −cos x + C, for some constant C • ∫ sec2 x dx = tan x + C, for some constant C No calculation involving a primitive may cross an asymptote. Example 22 Applying the integral of sin x The curve y = sin x is sketched below. Show that the first arch of the curve, as shaded in the diagram, has area 2 square units. Solution Because the region is entirely above the x-axis: area = ∫π 0 sin x dx = [−cos x]π 0 = −cos π + cos 0 = −(−1) + 1 (the graph of y = cos x shows that cos π = −1) = 2 square units. x y 1 2π π π 2</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>280 Chapter 6 The trigonometric functions 6D Example 23 Evaluating definite integrals with trigonometric functions Evaluate these definite integrals. ∫π 0 cos x dx a ∫π 3 0 sec2 x dx b ∫3π 4 π 4 sec2 x dx c Solution ∫π 0 cos x dx = [sin x]π 0 = sin π −sin 0 = 0 (use the graph). a ∫π 3 0 sec2 x dx = [tan x] π 3 0 = tan π 3 −tan 0 = √ 3 b c This integral is meaningless because it crosses the asymptote at x = π 2. Replacing x by ax + b Reversing the standard forms for derivatives in Section 6B gives a set of extended standard forms. For the sine function, d dx sin(ax + b) = a cos(ax + b), so ∫ a cos(ax + b) dx = sin(ax + b), and dividing by a, ∫ cos(ax + b) dx = 1 a sin(ax + b) + C, for some constant C. The development of the standard forms for the cosine and tangent function and is analogous, and the resulting three standard forms should be memorised. 12 Standard integrals for functions of ax + b • ∫ cos(ax + b) dx = 1 a sin(ax + b) + C, for some constant C. • ∫ sin(ax + b) dx = −1 a cos(ax + b) + C, for some constant C. • ∫ sec2(ax + b) dx = 1 a tan(ax + b) + C, for some constant C. Example 24 Evaluating further definite integrals with trigonometric functions Evaluate these definite integrals. ∫π 6 0 cos 3x dx a ∫2π π sin 1 4 x dx b ∫π 8 0 sec2(2x + π) dx c Solution ∫π 6 0 cos 3x dx = 1 3 [sin 3x] π 6 0 = 1 3(sin π 2 −3 sin 0) = 1 3 a ∫2π π sin 1 4 x dx = −4 h cos 1 4 x i2π π = −4 cos π 2 + 4 cos π 4 = 0 + 4 × √ 2 2 = 2 √ 2 b c ∫π 8 0 sec2(2x + π) dx = 1 2 [tan(2x + π)] π 8 0 = 1 2(tan 5π 4 −tan π) The angle 5π 4 is in quadrant 3 with related angle π 4 so integral = 1 2(1 −0) = 1 2.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>6D Integration with trigonometric functions 281 Finding a primitive given an initial condition If the derivative of a function is known, and the value of the function at one point is also known, then the whole function can be found. Example 25 Finding a primitive given an initial condition The derivative of a certain function is y′ = cos x, and the graph of the function has y-intercept (0, 3). Find the original function f(x), and then find f( π 2). Solution Here y′ = cos x, and taking the primitive, y = sin x + C, for some constant C. When x = 0, y = 3, so substituting x = 0, 3 = sin 0 + C, so C = 3, and y = sin x + 3. When x = π 2, y = sin π 2 + 3 = 4, because sin π 2 = 1. The primitives of tan x and cot x The primitives of tan x and cot x can be found by expressing them as ratios of sin x and cos x, then applying the chain rule standard form from Chapter 5: ∫u′ u dx = loge |u| + C OR ∫f ′(x) f(x) dx = loge | f(x)| + C. Example 26 Finding primitives of tan x and cot x given an initial condition Memorisation of these results is not required. Find primitives of these functions: cot x a tan x b Solution a ∫ cot x dx = ∫cos x sin x dx = loge | sin x| + C. Let u = sin x. Let f(x) = sin x. Then u′ = cos x. OR Then f ′(x) = cos x. ∫u′ u dx = loge |u| ∫f ′(x) f(x) dx = loge | f(x)| b ∫ tan x dx = ∫sin x cos x dx = − ∫−sin x cos x dx = −loge | cos x| + C. (This can also be written as loge | sec x|.) Let u = cos x. Let f(x) = cos x. Then u′ = −sin x. OR Then f ′(x) = −sin x. ∫u′ u dx = loge |u| ∫f ′(x) f(x) dx = loge | f(x)| Note: Do not run across a zero of sin x when using part a, or a zero of cos x when using part b.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>282 Chapter 6 The trigonometric functions 6D Standard forms for the reverse chain rule Reversing the three standard forms in Section 6B for chain-rule differentiation gives the standard forms for applying the reverse chain rule with trigonometric functions: 13 Standard forms for reverse chain rule integration with trigonometric functions • ∫ cos u du dx dx = sin u + C OR ∫ cos f(x) f ′(x) dx = sin f(x) + C • ∫ sin u du dx dx = −cos u + C ∫ sin f(x) f ′(x) dx = −cos f(x) + C • ∫ sec2 u du dx dx = tan u + C ∫ sec2 f(x) f ′(x) dx = tan f(x) + C Using standard forms for the reverse chain rule with trigonometric functions The key insight is that one factor is a multiple of the derivative of a function within the other part. Example 27 Using standard forms for the reverse chain rule Use reverse chain rule standard forms to find: ∫ 6x cos(1 + 4x2) dx a ∫π 0 sin x cos4 x dx b ∫2π 0 e−x cos(e−x) dx c Solution a Key insight: x is a multiple of the derivative of 1 + 4x2. ∫ 6x cos(1 + 4x2) dx = 6 8 ∫ cos(1 + 4x2) × 8x dx = 3 4 sin(1 + 4x2) + C Let u = 1 + 4x2. OR Let f(x) = 1 + 4x2. Then u′ = 8x. Then f ′(x) = 8x. ∫ cos u du dx dx = sin u ∫ cos f(x) f ′(x) dx = sin f(x) b Key insight: sin x is a multiple of the derivative of cos x (it is the derivative). ∫π 0 sin x cos4 x dx = − ∫π 0 cos4 x(−sin x) dx = h −1 5 cos5 x iπ 0 = + 1 5 + 1 5, because cos 0 = 1 and cos π = −1, = 2 5 Let u = cos x. OR Let f(x) = cos x. Then u′ = −sin x. Then f ′(x) = −sin x. ∫ u4 du dx dx = u5 5 ∫ f(x)4 du dx dx =   f(x)5 5 c Key insight: e−x is a multiple of the derivative of e−x. ∫2π 0 e−x cos(e−x) dx = − ∫2π 0 cos(e−x)  −e−x dx = −sin(e−x)2π 0 = −sin e−2π + sin 1 Let u = e−x. OR Let f(x) = e−x. Then u′ = −e−x. Then f ′(x) = −e−x. ∫ cos u du dx dx = sin u ∫ cos f(x) × f ′(x) dx = sin f(x)</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>6D Integration with trigonometric functions 283 Given a derivative, find an integral As always, any derivative can be reversed to find an integral. The worked examples below reverse a product-rule differentiation and a chain-rule differentiation. Example 28 Reversing a product-rule derivative to find an integral a Differentiate y = x cos x. b Hence find f(x) if f ′(x) = x sin x and y = f(x) passes through the origin. Solution a Here y = x cos x. Applying the product rule: dy dx = v du dx + u dv dx = cos x −x sin x . Let u = x and v = cos x. Then du dx = 1 and dv dx = −sin x. b Reversing this, ∫ cos x dx − ∫ x sin x dx = x cos x sin x − ∫ x sin x dx = x cos x ∫ x sin x dx = sin x −x cos x + C, for some constant C. Hence the function is f(x) = sin x −x cos x + C, and we know that f(0) = 0. Substituting x = 0, 0 = 0 −0 + C, so C = 0 and f(x) = sin x −x cos x. Example 29 Reversing a chain-rule derivative to find an integral a Use the chain rule to differentiate cos5 x. b Hence find ∫π 0 sin x cos4 x dx. Solution a Let y = cos5 x. By the chain rule, dy dx = dy du + du dx = −5 sin x cos x . Let u = cos x Then y = u5. Hence du dx = −sin x and dy du = 5u4. b From part a, d dx(cos5 x) = −5 sin x cos x. Reversing this, ∫ (−5 sin x cos4 x) dx = cos5 x ÷ 5 ∫ sin x cos4 x dx = −1 5 cos5 x. Hence ∫π 0 sin x cos4 x dx = −1 5 h cos5 x iπ 0 = −1 5(−1 −1) = 2 5.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>284 Chapter 6 The trigonometric functions 6D A universal standard form for the reverse chain rule Sections 3H, 4D, and 5D mentioned a universal standard form for the reverse chain rule. The course does not mention it, but some readers may find it useful: ∫ f(u) du dx dx = ∫ f(u) du (The two dx’s cancel out by the chain rule.) Here is part c of worked Example 27 done using this standard form: ∫2π 0 e−x cos(e−x) dx = − ∫2π 0 cos(e−x)  −e−x dx = −sin(e−x)2π 0 = −sin e−2π + sin 1 Let u = e−x. Then du dx = −e−x, and ∫ cos u du = sin u.</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 6D →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 6D, then section 6E.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

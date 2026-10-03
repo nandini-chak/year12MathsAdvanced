@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10A Concept · Cumulative frequency and grouping</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="10A" data-page="concept" data-nav-depth="2" data-auth-sub="10A Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 9 Random variables/9C-variance-standard-deviation/concept.html">← 9C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 10 The normal distribution/10B-continuous-distributions/concept.html">10B →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 6 · Random variables · Term 2 · Task 3</span>
+    <h1>10A · Cumulative frequency and grouping</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Tabulate and draw cumulative histograms for data and discrete distributions. • Tabulate and draw histograms for grouped data. Continuous probability distributions rely heavily on the idea of cumulative frequency and cumulative probability, and this introductory section presents them, first in a discrete situation, then with a continuous dataset. The section also deals with grouping, which is unavoidable with continuous distributions because even two rounded measurements of a continuous variable will rarely agree. Cumulative distribution function for a discrete experiment Once again, take the experiment of tossing four coins and recording the number x of heads. This has discrete random variable P(x), where x = 0, 1, 2, 3, or 4. x 0 1 2 3 4 P(x) 1 16 4 16 6 16 4 16 1 16 F(x) 1 16 5 16 11 16 15 16 1 The cumulative distribution function F(x) of this experiment, and of any discrete experiment, is the probability of tossing x coins or fewer, that is: F(x) = P(X ≤x). Thus F(x) is obtained by adding all the probabilities up to a certain point: For example, F(3) = P(0) + P(1) + P(2) + P(3), and in general, F(x) = P(0) + P(1) + · · · + P(x), for x = 0, 1, 2, 3, 4. The symbol F(x) is deliberate — the function is analogous to a primitive of P(x). Histograms and cumulative histograms of a distribution We have already drawn the histogram of this distribution, copied on the left. We can now draw on the right the cumulative histogram of this distribution. Here are the two histograms, with superposed polygons: P X x      1 2 3 4 x P X x         1 2 3 4 x Two aspects of these diagrams need attention: • In the ordinary histogram, the heights of all the columns add to 1. In the cumulative histogram, the heights from left to right increase to 1. • In the ordinary histogram, the polygon joins the centres of the tops of the columns, and meets the x-axis at x = −1 and x = 5. In the cumulative histogram, the polygon joins the top right-hand corners of the columns</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>448 Chapter 10 Continuous probability distributions 10A 10A Cumulative frequency and grouping Learning intentions • Tabulate and draw cumulative histograms for data and discrete distributions. • Tabulate and draw histograms for grouped data. Continuous probability distributions rely heavily on the idea of cumulative frequency and cumulative probability, and this introductory section presents them, first in a discrete situation, then with a continuous dataset. The section also deals with grouping, which is unavoidable with continuous distributions because even two rounded measurements of a continuous variable will rarely agree. Cumulative distribution function for a discrete experiment Once again, take the experiment of tossing four coins and recording the number x of heads. This has discrete random variable P(x), where x = 0, 1, 2, 3, or 4. x 0 1 2 3 4 P(x) 1 16 4 16 6 16 4 16 1 16 F(x) 1 16 5 16 11 16 15 16 1 The cumulative distribution function F(x) of this experiment, and of any discrete experiment, is the probability of tossing x coins or fewer, that is: F(x) = P(X ≤x). Thus F(x) is obtained by adding all the probabilities up to a certain point: For example, F(3) = P(0) + P(1) + P(2) + P(3), and in general, F(x) = P(0) + P(1) + · · · + P(x), for x = 0, 1, 2, 3, 4. The symbol F(x) is deliberate — the function is analogous to a primitive of P(x). Histograms and cumulative histograms of a distribution We have already drawn the histogram of this distribution, copied on the left. We can now draw on the right the cumulative histogram of this distribution. Here are the two histograms, with superposed polygons: P X x      1 2 3 4 x P X x         1 2 3 4 x Two aspects of these diagrams need attention: • In the ordinary histogram, the heights of all the columns add to 1. In the cumulative histogram, the heights from left to right increase to 1. • In the ordinary histogram, the polygon joins the centres of the tops of the columns, and meets the x-axis at x = −1 and x = 5. In the cumulative histogram, the polygon joins the top right-hand corners of the columns</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>10A Cumulative frequency and grouping 449 Cumulative relative frequencies of a dataset We can do exactly the same thing with dataset relative frequencies, which are estimates of the probabilities. Here are the results of 100 trials for this experiment, with the final row labelled c fr, our symbol for the cumulative relative frequency: x 0 1 2 3 4 Sum f 7 29 34 21 9 100 fr 0.07 0.29 0.34 0.21 0.09 1 cfr 0.07 0.36 0.70 0.91 1 And here are the histograms for relative frequency and cumulative relative frequency, with their polygons, drawn with the same conventions as the probability histograms above: fr   1 2 3 4 x cfr      1 2 3 4 x Compare the two pairs of histograms. The relative frequency histograms are estimates of the probability histograms, and their lumpiness is a visual indication of how close or distant those estimates are. 1 Cumulative and relative frequencies, and histograms • The cumulative distribution function F(x) of a discrete probability distribution is the probability that the score is less than or equal to x: F(x) = P (X ≤x), for all x in the domain. • The cumulative relative frequencies are estimates of the cumulative distribution function. • In an ordinary histogram, the heights of</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 10A</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 6 · 10A Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5E Concept · Applications of integration (logarithmic)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="5E" data-page="concept" data-nav-depth="2" data-auth-sub="5E Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 5 Logarithmic functions/5D-int-reciprocal/concept.html">← 5D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 6 The trigonometric functions/6D-int-trigonometric/concept.html">6D →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 4 · Integral calculus · Term 1 · Task 2</span>
+    <h1>5E · Applications of integration (logarithmic)</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Use integration to find areas associated with hyperbolic graphs. The usual applications of integration can now be applied to the reciprocal function, whose primitive was previously unavailable. Finding areas by integration The next worked example involves sketching a hyperbolic curve and finding an area associated with it.</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>240 Chapter 5 Logarithmic functions 5E 5E Applications of integration Learning intentions • Use integration to find areas associated with hyperbolic graphs. The usual applications of integration can now be applied to the reciprocal function, whose primitive was previously unavailable. Finding areas by integration The next worked example involves sketching a hyperbolic curve and finding an area associated with it. Example 21 Find an area associated with a hyperbolic curve a Find the x-intercept and y-intercept of y = 12 x + 3 −2 . b Sketch the curve for x &gt; −3 using transformations of y = 1 x, and write down its asymptotes. c Shade the region contained between the curve and the x-axis, and between the y-axis and the line x = 6. d Find the shaded area, in exact form, and then correct to four decimal places. Solution a When x = 0, y = 2, and when y = 0, x = 3. b Shift y = 1 x left 3, then dilate vertically with factor 12, then shift down 2. Now x = −3 is a vertical asymptote, and y = −2 is a horizontal asymptote. c The asymptote is x = −3, so the areas are all to the right of the asymptote, and there is no need for absolute value signs.      x y ∫3 0 12 x + 3 −2 ! dx = 12 loge(x + 3) −2x3 0 = (12 loge 6 −6) −(12 loge 3 −0) = 12 loge 3 + 12 loge 2 −6 −12 loge 3 = 12 loge 2 −6, which is positive, as expected. ∫6 3 12 x + 3 −2 ! dx = 12 loge(x + 3) −2x6 3 = (12 loge 9 −12) −(12 loge 6 −6) = 24 loge 3 −12 −12 loge 3 −12 loge 2 + 6 = 12 loge 3 −12 loge 2 −6, which is negative, as expected. Hence total area = (12 loge 2 −6) −(12 loge 3 −12 loge 2 −6) = 24 loge 2 −12 loge 3 (or 12 loge 4 3) ≑3.4522.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>5E Applications of integration 241</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 5E</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 4 · 5E Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

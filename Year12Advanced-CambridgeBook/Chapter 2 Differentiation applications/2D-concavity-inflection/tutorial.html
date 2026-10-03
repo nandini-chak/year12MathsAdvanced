@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2D Tutorial · Concavity and points of inflection</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="2D" data-page="tutorial" data-nav-depth="2" data-auth-sub="2D Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 2 Differentiation applications/2C-second-higher-derivatives/concept.html">← 2C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 2 Differentiation applications/2E-curve-sketching-derivative/concept.html">2E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>2D · Concavity and points of inflection</h1>
+    <p>Paraphrased from Cambridge Chapter 2 §2D. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-2-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>2D Concavity and points of inflection 69 2D Concavity and points of inflection Learning intentions • Find points of inflection, and analyse concavity. • Use a table of concavities to analyse zeroes of f ′′(x). • Try to use the second derivative to test stationary points. Section 2B defined points of inflection as points where the tangent crosses the curve. This section shows how to find all inflections in preparation for a sketch. Points of inflection and differentiation Sketched to the right are a cubic function and its first and second derivatives. These sketches will show how the concavity of the original graph can be determined from the sign of the second derivative: y = x3 −6x2 + 9x = x(x −3)2 y′ = 3x2 −12x + 9 = 3(x −1)(x −3) y′′ = 6x −12 = 6(x −2) The sign of each derivative tells us whether the function above it is increasing or decreasing. Thus the second graph describes the gradient of the first, and the third graph describes the gradient of the second. To the right of x = 2, the top graph is concave up. This means that as one moves along the curve to the right from x = 2, the gradient of the tangent is steadily increasing. Thus for x &gt; 2, the gradient function y′ is increasing as x increases, as can be seen in the middle graph. The bottom graph is the gradient of the middle graph, and accordingly y′′ is positive for x &gt; 2. Similarly, to the left of x = 2 the top graph is concave down. This means that its gradient function y′ is steadily decreasing as x increases. The bottom graph is the derivative of the middle graph, so y′′ is negative for x &lt; 2. This example demonstrates that the concavity of a graph y = f(x) at any value x = a is determined by the sign of its second derivative at x = a. x y 3 2 1 x y&#x27;&#x27; 3 2 1 −12 x y&#x27; 3 2 1 9 −3 6 Concavity and the second derivative • If f ′′(a) is negative, then the curve is concave down at x = a. • If f ′′(a) is positive, then the curve is concave up at x = a. Points of inflection Points of inflection were introduced in Section 2B — they are points where the tangent crosses the curve. This means that at a point of inflection, the curve curls away from the tangent on opposite sides of the tangent, and this in turn means that the concavity changes sign around the point.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>70 Chapter 2 Curve-sketching using the derivative 2D The three diagrams above show how the point of inflection at x = 2 results in a minimum turning point at x = 2 in the middle graph of y′. Hence the bottom graph of y′′ has a zero at x = 2 and changes sign around x = 2. This discussion allows us to analyse concavity and find points of inflection. Again, we use the fact that y′′ can only change sign at a zero or a discontinuity of y′′. 7 Using f ′′(x) to analyse concavity and find points of inflection A point of inflection is a point where the tangent crosses the curve. 1 Find the zeroes and discontinuities of the second derivative f ′′(x). 2 Then use a table of test values of the second derivative f ′′(x) dodging around its zeroes and discontinuities, with the concavities sketched underneath, to see where the concavity changes sign. The table of concavities will show not only any points of inflection, but also the concavity of the graph across its whole domain. Before drawing the sketch, it is often useful to find the gradient of the tangent at each point of inflection. Such tangents are called inflectional tangents. Example 12 Finding turning points and points of inflection a Find any turning points of f(x) = x5 −5x4. b Draw up a table of concavities. Find any points of inflection and the gradients of the inflectional tangents, and describe the concavity. Then sketch it. Solution Here f(x) = x5 −5x4 = x4(x −5) f ′(x) = 5x4 −20x3 = 5x3(x −4) f ′′(x) = 20x3 −60x2 = 20x2(x −3). a f ′(x) has zeroes at x = 0 and x = 4, and no discontinuities: x −1 0 1 4 5 f ′(x) 25 0 −15 0 625 slope / — \ — / so (0, 0) is a maximum turning point, and (4, −256) is a minimum turning point. b f ′′(x) has zeroes at x = 0 and x = 3, and no discontinuities: x −1 0 1 3 4 f ′′(x) −80 0 −40 0 320 concavity ⌢ · ⌢ · ⌣ so (3, −162) is a point of inflection, but (0, 0) is not. x y −162 −256 3 4 5 Because f ′(3) = −135, the inflectional tangent has gradient −135. The graph is concave down for x &lt; 0 and 0 &lt; x &lt; 3, and concave up for x &gt; 3. Note: This example is intended to show that f ′′(x) = 0 is NOT a sufficient condition for an inflection. The sign of f ′′(x) must also change around the point — this happened at x = 3, but not at x = 0.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>2D Concavity and points of inflection 71 Try to use the second derivative to test stationary points If a curve is concave up at a stationary point, then the point is a minimum turning point, as at the point A. Similarly, if a curve is concave down at a stationary point, then the point is a maximum turning point, as at point B. This gives an alternative test of a stationary point, but it is only a partial test, because it fails when the second derivative is zero. x y B A 8 Using the second derivative to test a stationary point Suppose that the curve y = f(x) has a stationary point at x = a. • If f ′′(a) &gt; 0, the curve is concave up at x = a, and there is a minimum turning point there. • If f ′′(a) &lt; 0, the curve is concave down at x = a, and there is a maximum turning point there. • If f ′′(a) = 0, more work is needed. Go back to the table of values of f ′(x). The third dotpoint is most important — all four cases shown at the start of Section 2B are possible for the shape of the curve at x = a when the second derivative is zero there. The previous example of the point (0, 0) on y = x5 −5x4 shows that a stationary point where f ′′(x) = 0 can be a turning point. The next worked example is an example where a stationary point turns out to be a point of inflection. Example 13 Using the second derivative to test turning points Use the second derivative, if possible, to determine the nature of the stationary points of the graph of f(x) = x4 −4x3. Find also any points of inflection, examine the concavity over the whole domain, and sketch the curve. Solution Here, f(x) = x4 −4x3 = x3(x −4) f ′(x) = 4x3 −12x2 = 4x2(x −3) f ′′(x) = 12x2 −24x = 12x(x −2), so f ′(x) has zeroes at x = 0 and x = 3, and no discontinuities. Because f ′′(3) = 36 is positive, (3, −27) is a minimum turning point, but f ′′(0) = 0, so no conclusion can be drawn about x = 0. x −1 0 1 3 4 f ′(x) −16 0 −8 0 64 slope \ — \ — / so (0, 0) is a stationary point of inflection.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>72 Chapter 2 Curve-sketching using the derivative 2D f ′′(x) has zeroes at x = 0 and x = 2, and no discontinuities, x −1 0 1 2 3 f ′′(x) 36 0 −12 0 36 concavity ⌣ · ⌢ · ⌣ so, besides the horizontal inflection at (0, 0), there is a non-stationary inflection at (2, −16), and the inflectional tangent at (2, −16) has gradient −16. The graph is concave down for 0 &lt; x &lt; 2, and concave up for x &lt; 0 and x &gt; 2. x y −27 −16 3 4 2 Finding pronumerals in a function In this worked example, a pronumeral in a function is found using information about the concavity of the graph. Example 14 Finding pronumerals in a function For what values of b is y = x4 −bx3 + 5x2 + 6x −8 concave down when x = 2? Solution Differentiating, y′ = 4x3 −3bx2 + 10x + 6, and differentiating again, y′′ = 12x2 −6bx + 10, so when x = 2, y′′ = 48 −12b + 10 = 58 −12b. In order for the curve to be concave down at x = 2, 58 −12b &lt; 0 12b &gt; 58 b &gt; 4 5 6.</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 2D →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 2D, then section 2E.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

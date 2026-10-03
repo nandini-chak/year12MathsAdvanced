@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 10D · Problems</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="10D" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 10D">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 10 The normal distribution/10C-mean-variance-distribution/concept.html">← 10C</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 10 The normal distribution/10E-general-normal/concept.html">10E →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Exercise 10D</span>
+    <h1>Problems with worked solutions</h1>
+    <p>Attempt on paper first. Reveal a solution when you want to mark. Validated against Cambridge worked solutions (not stamped on every question).</p>
+  </header>
+  <div class="wrap">
+    <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
+      <button class="btn show" type="button" id="allOn">Show all solutions</button>
+      <button class="btn show" type="button" id="allOff">Hide all solutions</button>
+    </div>
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Stems condensed from Cambridge Exercise 10D; solutions follow <em>Chapter-10-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+    </details>
+    <article class="q" id="q1">
+      <h2>1 · Exercise 10D</h2>
+      <div class="stem"><p>= Φ( ) This is the graph of the standard normal cumulative distribution function Φ(z). The new curve y = Φ(z) has two horizontal asymptotes, y = 0 on the left, and y = 1 on the right. Because φ(z) is even, Φ(z) has point symmetry in (0, 0.5). Here then are some further details about finding values of Φ(z). • Below is a short table of values of Φ(z) for 0 ≤z &lt; 4, in steps of 0.1. • Statistical calculators should have this function built in. • In Excel, the function is NORM.S.DIST. The function has two arguments. ■The first argument is the value of z (or the cell containing that value). ■Set the second argument to true to obtain the value of the CDF Φ(z), and set it to false for the value of the PDF φ(z). • Other spreadsheets, and online resources, will have their own rules. A short table of values of the CDF This table of values of Φ(z) will be quite sufficient for most purposes in this course. Because of the even symmetry of the PDF φ(z), there is no need to give values of the CDF Φ(z) for negative values of z: first decimal place z .0 .1 .2 .3 .4 .5 .6 .7 .8 .9 0. 0.5000 0.5398 0.5793 0.6179 0.6554 0.6915 0.7257 0.7580 0.7881 0.8159 1. 0.8413 0.8643 0.8849 0.9032 0.9192 0.9332 0.9452 0.9554 0.9641 0.9713 2. 0.9772 0.9821 0.9861 0.9893 0.9918 0.9938 0.9953 0.9965 0.9974 0.9981 3. 0.9987 0.9990 0.9993 0.9995 0.9997 0.9998 0.9998 0.9999 0.9999 1.0000 © Pender et al. 2026 Cambridge University Press &amp; Assessment 10D The standard normal distribution 481 Calculating probabilities of a normally distributed random variable Calculating other probabilities for Z requires juggling integrals, preferably while looking at a graph of the PDF y = φ(z). Always keep two things in mind. • The total area under the curve y = φ(z) is 1. • The curve y = φ(z) is even — it has line symmetry in the y-axis. The next worked example demonstrates all the methods required. Example 10 Finding probabilities of a normally distributed random variable a Look up P(Z ≤2) and illustrate it as an area under y = φ(z). b Illustrate each probability as an area under y = φ(z). Then calculate it using the value of Φ(2) found in part a. Keep looking back to the graph in part a while you juggle the intervals. P (Z ≥2) i P (Z ≤−2) ii P (0 ≤Z ≤2) iii P (−2 ≤Z ≤2) iv Solution a From the table: P (Z ≤2) = Φ(2) = 0.9772 . The area under y = φ(z) corresponding to Φ(2) is shaded in the diagram to the right. ( )z    z  b ( )z    z  P (Z ≥2) i ( )z    z  P (Z ≤−2) ii ( )z    z  P…</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>√ 2π ∫∞ −∞e −1</p></div>
+    </article><article class="q" id="q2">
+      <h2>2 · Exercise 10D</h2>
+      <div class="stem"><p>φ′′(z) 3φ(−2)</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>z2 dz = 1 Thus we have shown that E(Z2) = 1. b Using the previous part, VAR(Z) = E(Z2) −E(Z)2 = 1 −0 = 1 c</p></div>
+    </article><article class="q" id="q3">
+      <h2>3 · Exercise 10D</h2>
+      <div class="stem"><p>This is the graph of the standard normal probability density function φ(z). -3 -2.5 -2 -1.5 -1 -0.5 0.5</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D iii P(−0.8 ≤Z &lt; 0.8) = 2 × (P(Z &lt; 0.8) −P(Z &lt; 0)) = 2 × (0.7881 −0.5) = 2 × 0.2881 = 0.5762 iv P(−2.9 ≤Z &lt; 2.9) = 2 × (P(Z &lt; 2.9) −P(Z &lt; 0)) = 2 × (0.9981 −0.5) = 2 × 0.4981 = 0.9962 v P(−0.4 ≤Z &lt; 0.4) = 2 × (P(Z &lt; 0.4) −P(Z &lt; 0)) = 2 × (0.6554 −0.5) = 2 × 0.1554 = 0.3108 vi P(−1.5 ≤Z &lt; 1.5) = 2 × (P(Z &lt; 1.5) −P(Z &lt; 0)) = 2 × (0.9332 −0.5) = 2 × 0.4332 = 0.8664</p></div>
+    </article><article class="q" id="q4">
+      <h2>4 · Exercise 10D</h2>
+      <div class="stem"><p>a Use symmetry to explain why P(Z ≤0) = 0.5. b Hence use symmetry and the standard normal table to find: P(0 &lt; Z ≤1.3) i P(0 &lt; Z ≤2.4) ii P(0 &lt; Z ≤0.7) iii P(−2.4 ≤Z &lt; 0) iv P(−1.1 ≤Z &lt; 0) v P(−0.7 ≤Z &lt; 0) vi P(0 &lt; Z ≤1.6) vii P(−1.3 ≤Z ≤0) viii P(0 &lt; Z ≤5) ix c Find: P(−1.3 ≤Z &lt; 1.3) i P(−2.4 &lt; Z ≤2.4) ii P(−0.8 &lt; Z &lt; 0.8) iii P(−2.9 &lt; Z ≤2.9) iv P(−0.4 ≤Z &lt; 0.4) v P(−1.5 &lt; Z ≤1.5) vi</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p> = P(−2 ≤Z ≤2) = 95% = 0.95</p></div>
+    </article><article class="q" id="q5">
+      <h2>5 · Exercise 10D</h2>
+      <div class="stem"><p>Match these eight probabilities into four pairs with equal values. P(Z ≤2) a P(Z ≤−1) b P(Z ≤1.2) c P(Z = 4) d P(Z &lt; 2) e P(Z = 2.3) f P(Z ≥1) g P(Z &gt; −1.2) h</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D g P(Z ≤−1.8) = 1 −P(Z &lt; 1.8) = 1 −0.9641 = 0.0359 h P(Z ≥−1.2) = P(Z ≤1.2) = 0.8849 i P(1.2 ≤Z ≤1.8) = P(Z ≤1.8) −P(Z &lt; 1.2) = 0.9641 −0.8849 = 0.0792 j P(−1.8 ≤Z ≤1.2) = P(Z ≤1.2) −P(Z &lt; −1.8) = P(Z ≤1.2) −[1 −P(Z ≤1.8)] = 0.8849 −(1 −0.9641) = 0.8849 −0.0359 = 0.8490</p></div>
+    </article><article class="q" id="q6">
+      <h2>6 · Exercise 10D</h2>
+      <div class="stem"><p>Repeat the previous question for these eight values: P(Z ≤5) a P(Z &gt; −1.7) b P(Z &lt; 5) c P(Z ≥2) d P(Z = 3) e P(Z ≤−2) f P(Z ≤1.7) g P(Z = 1.2) h © Pender et al. 2026 Cambridge University Press &amp; Assessment 10D The standard normal distribution 487</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D j P(−1.3 ≤Z ≤2.2) = P(Z ≤2.2) −P(Z &lt; −1.3) = P(Z ≤2.2) −[1 −P(Z ≤1.3)] = 0.9861 −(1 −0.9032) = 0.9861 −0.0968 = 0.8893</p></div>
+    </article><article class="q" id="q7">
+      <h2>7 · Exercise 10D</h2>
+      <div class="stem"><p>a Explain why P(a ≤Z ≤b) = P(Z ≤b) −P(Z &lt; a). b Use this result to find: P(1.2 ≤Z &lt; 1.5) i P(0.2 ≤Z &lt; 2.3) ii P(0.6 ≤Z &lt; 1.7) iii P(−2 ≤Z &lt; −1.2) iv P(−4 ≤Z &lt; −0.2) v P(−2.7 ≤Z &lt; −1) vi c Similarly find: P(−1.5 ≤Z &lt; 2.2) i P(−0.9 ≤Z &lt; 1.2) ii P(−2.9 ≤Z &lt; 1.3) iii</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D e P(0 ≤Z ≤3) = P(−3 ≤Z ≤3)</p></div>
+    </article><article class="q" id="q8">
+      <h2>8 · Exercise 10D</h2>
+      <div class="stem"><p>Use just the two values Φ(1.2) = 0.8849 and Φ(1.8) = 0.9641, and the symmetry of φ(z), and your knowledge of its properties as a PDF, to find: P(Z ≤0) a P(Z = 4) b P(Z &gt; 1.8) c P(Z ≤1.2) d P(Z ≥1.2) e P(0 ≤Z ≤1.2) f P(Z ≤−1.8) g P(Z ≥−1.2) h P(1.2 ≤Z ≤1.8) i P(−1.8 ≤Z ≤1.2) j</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D</p></div>
+    </article><article class="q" id="q9">
+      <h2>9 · Exercise 10D</h2>
+      <div class="stem"><p>The standard normal distribution Let Z be the standard normal random variable. • The probability density function of Z is φ(z) = e−1 2 z2 √ 2π . • The graph of the PDF is a bell-shaped curve, with global maximum at z = 0 (the mode), and points of inflection at z = 1 and z = −1. • The mean is µ = 0 and the standard deviation is σ = 1. • The points of inflection are each one standard deviation from the mean. ( )z     z   In Section 10E we will be shifting and stretching the standard normal distribution. Whenever you see a curve that looks evenly vaguely normal, always look first at the turning point, then look at the two inflections and estimate the standard deviation by eye. Integrating to find probabilities The probability that a standard normal random variable Z lies within one standard deviation of the mean is: P (−1 ≤Z ≤1) = ∫1 −1 φ(z) dz . Now we have a major inconvenience — the primitive of the function φ(z) cannot be written in terms of our usual range of exponential, trigonometric and algebraic functions. You have several options for finding approximations to these values, all of which can be found online: • Use a table of values for this integral. • Use a statistics calculator that has the values of these integrals built in. • Use a spreadsheet that has these integrals amongst its functions. • Use specialised statistics software. © Pender et al. 2026 Cambridge University Press &amp; Assessment 480 Chapter 10 Continuous probability distributions 10D The cumulative distribution function All these approaches will normally use the cumulative distribution function of the standard normal distribution. This CDF is usually denoted by Φ(z), using the uppercase version Φ of the lowercase Greek letter φ (‘phi’). Φ(z) = ∫z −∞φ(t) dt. -3 -2 -1</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D f P(−a &lt; Z ≤a) = 0.9906, then P(−a &lt; Z ≤a)</p></div>
+    </article><article class="q" id="q10">
+      <h2>10 · Exercise 10D</h2>
+      <div class="stem"><p>Use the standard normal table to find these probabilities. Recall from the probability chapter of the Year 11 book that ‘and’ and ‘or’ correspond to intersection and union. P(Z ≤1.2 or Z ≥1.8) a P(Z ≤1.8 and Z ≥1.2) b P(Z ≤0.2 or Z ≥1.6) c P(Z ≤2.4 and Z ≥1.7) d</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D and f ′′(x) = (−1) × e −1</p></div>
+    </article><article class="q" id="q11">
+      <h2>11 · Exercise 10D</h2>
+      <div class="stem"><p>Repeat any of the previous questions using a calculator or other technology in place of the tables.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Exercise 10D ii P(−1 ≤Z ≤Z) = 0.6802 iii The graph is concave up on [0, 1], and the concavity changes at the point of inflection at z = 1. Thus, the polygonal path of the trapezoidal rule will lie below the exact curve. iv This is in good agreement with the empirical rule (68) and the table (0.6826). b φ(z) =</p></div>
+    </article><article class="q" id="q12">
+      <h2>12 · Exercise 10D</h2>
+      <div class="stem"><p>Use the empirical rule (also called the 68–95–99.7 rule) to find: P(Z ≤0) a P(Z ≤1) b P(Z ≤2) c P(Z &lt; −1) d P(0 ≤Z ≤3) e P(0 ≤Z &lt; 1) f P(−2 ≤Z ≤0) g P(−3 &lt; Z ≤−2) h P(−1 ≤Z ≤1) i P(−3 &lt; Z ≤1) j P(−2 ≤Z &lt; 1) k P(−2 ≤Z ≤7) l</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a P(Z ≤0) = 50% (because z = 0 is the axis of symmetry) b P(Z ≤1) = P(Z ≤0) + P(−1 ≤Z ≤1)</p></div>
+    </article><article class="q" id="q13">
+      <h2>13 · Exercise 10D</h2>
+      <div class="stem"><p>Use the empirical rule to find the value of b in each case. P(−b ≤Z ≤b) = 0.68 a P(0 ≤Z ≤b) = 0.475 b P(Z ≥b) = 84% c P(−2b ≤Z ≤b) = 0.815 d P(−3b ≤Z ≤3b) = 0.997 e P(Z2 ≤b) = 0.95 f</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a b = 1 (because 68% of the data is between −1 ≤Z ≤1) b P(0 ≤Z ≤b) = 0.475, then b = 2 because P(0 ≤Z ≤2) = P(−2 ≤Z ≤2)</p></div>
+    </article><article class="q" id="q14">
+      <h2>14 · Exercise 10D</h2>
+      <div class="stem"><p>Use the standard normal table in reverse to find the value of a, given that: P(Z &lt; a) = 0.7257 a P(Z ≤a) = 0.9893 b P(Z &lt; −a) = 0.1151 c P(Z &lt; a) = 0.2119 d P(−a ≤Z &lt; a) = 0.7286 e P(−a &lt; Z ≤a) = 0.9906 f © Pender et al. 2026 Cambridge University Press &amp; Assessment 488 Chapter 10 Continuous probability distributions 10D</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a P(Z &lt; a) = 0.7257, then a = 0.6. b P(Z ≤a) = 0.9893, then a = 2.3. c P(Z &lt; −a) = 0.1151, then P(Z &lt; −a) = 1 −P(Z ≤a) = 0.1151 Hence, P(Z ≤a) = 1 −0.1151. P(Z ≤a) = 0.8849. Therefore, a = 1.2. d P(Z &lt; a) = 0.2119. 1 −0.2119 = 0.7881 and P(Z ≤0.8) = 0.7881. If P(Z ≤0.8) = 1 −P(Z &lt; a), then a = −0.8. e P(−a ≤Z &lt; a) = 0.7286, then P(−a ≤Z &lt; a)</p></div>
+    </article><article class="q" id="q15">
+      <h2>15 · Exercise 10D</h2>
+      <div class="stem"><p>A professional bowler discovers that when he bowls at a central target, his results form a standard normal distribution, where Z is the distance in centimetres from the target to where the ball hits on each bowl. a Use the empirical rule to find the probability that his result lies: i within 1 centimetre of the central target, ii further to the left than 2 centimetres to the right of the target, iii more than 3 centimetres from the target. b In how many centimetres either side of the target do 50% of the bowls strike? You will need to use the standard normal table in reverse for this question.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a i P(−1 &lt; Z &lt; 1)  68% ii P(Z &lt; 2)  97.5% iii P(Z &lt; −3 or Z &gt; 3) = 0.3% b Let a be the distance from the target where P(−a ≤Z ≤a) = 50%. Then P(0 &lt; Z ≤a) = 25%. Since P(Z ≤0) = 50%, P(0 &lt; Z ≤a) + P(Z ≤0) = 25% + 50% = 75% = P(Z ≤a) If P(Z ≤a) = 75%, then a = 0.67449  0.7 cm.</p></div>
+    </article><article class="q" id="q16">
+      <h2>16 · Exercise 10D</h2>
+      <div class="stem"><p>Give a mathematical, and also a practical explanation and example, for the result P(Z = a) = 0 for any a.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>Mathematically, P(Z = a) = ∫a a f(x) dx, which is an area of zero width. Practically, this represents the probability of getting a value exactly Z = a for a continuous distribution, for example a height of exactly 1.7142435345345 . . . metres. In a continuous distribution, all such probabilities are zero.</p></div>
+    </article><article class="q" id="q17">
+      <h2>17 · Exercise 10D</h2>
+      <div class="stem"><p>Consider the standard normal curve, φ(z) =</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a i The domain is all real numbers, because e −1</p></div>
+    </article><article class="q" id="q18">
+      <h2>18 · Exercise 10D</h2>
+      <div class="stem"><p>[Graphing the standard normal distribution] The purpose of this question is to use our calculus and curve-sketching skills to draw a graph of y = f(x), where f(x) = e−1 2 x2 , and then use this graph to sketch the standard normal density function y = φ(x). a Show that f(x) is an even function. b Show that f ′(x) = −xe−1 2 x2 and f ′′(x) = (x2 −1)e−1 2 x2. c Show that there is a unique stationary point. Find its coordinates and determine its nature. d Show that there are two points of inflection, and that they occur one standard deviation either side of the mean. Find their coordinates. e Explain what happens to f(x) as x →∞and x →−∞. f Graph y = f(x). g Now use stretching to draw the graph of y = φ(x). © Pender et al. 2026 Cambridge University Press &amp; Assessment 10D The standard normal distribution 489</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a f(x) = e −1</p></div>
+    </article><article class="q" id="q19">
+      <h2>19 · Exercise 10D</h2>
+      <div class="stem"><p>a i Use the trapezoidal rule with five function values (four intervals) to estimate the integral ∫1 0 φ(z) dz. ii Double this value to estimate the probability that a value will lie within one standard deviation of the mean on the standard normal curve. iii Why do you know that this will be an underestimate of the true result? iv Is this in good agreement with the empirical rule and the standard normal table? b Use the trapezoidal rule with five function vaues to determine the probability that: i a value will lie within two standard deviations of the mean, ii a value will lie within three standard deviations of the mean. c Use a spreadsheet to increase your number of intervals to say 10, 20, 50, and 100, and observe the convergence.</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>a i P(0 ≤Z ≤1) = 0.3401</p></div>
+    </article><article class="q" id="q20">
+      <h2>20 · Exercise 10D</h2>
+      <div class="stem"><p>In this question, you may assume the result ∫∞ −∞φ(z) dz = 1, where φ(z) =</p></div>
+      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+      <div class="sol"><p>E(Z) = ∫∞ −∞z ×</p></div>
+    </article>
+    <p style="margin-top:1.5rem">
+      <a class='btn' href='../../Chapter 10 The normal distribution/10E-general-normal/concept.html'>Next: 10E Concept →</a>
+      <a class="btn ghost" href="tutorial.html">← Tutorial</a>
+    </p>
+  </div>
+  <script>
+  (function(){
+    function bind(btn){
+      btn.addEventListener("click", function(){
+        var sol = btn.nextElementSibling;
+        var open = sol.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
+      });
+    }
+    document.querySelectorAll(".q > .btn.show").forEach(bind);
+    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
+    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
+    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
+  })();
+  </script>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

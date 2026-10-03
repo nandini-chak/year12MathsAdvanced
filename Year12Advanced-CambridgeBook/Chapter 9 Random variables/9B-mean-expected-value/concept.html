@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9B Concept · Mean or expected value</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="9B" data-page="concept" data-nav-depth="2" data-auth-sub="9B Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 9 Random variables/9A-probability-distributions/concept.html">← 9A</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 9 Random variables/9C-variance-standard-deviation/concept.html">9C →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 6 · Random variables · Term 2 · Task 3</span>
+    <h1>9B · Mean or expected value</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Calculate the mean, or expected value, of a discrete probability distribution. • Relate this to the mean of a dataset of trials of the experiment. • Understand the effects on the mean of translations and dilations of the data. When dealing with data, statistics is always asking two questions, ‘Where is the centre of the dataset? ’ and ‘How spread out is it? ’ Probability distributions throw up the same two questions, which this chapter answers for discrete distributions. This section introduces the mean, or expected value, as a measure of central tendency, and the next section will introduce the variance — standard deviation squared — as a measure of spread. The mean of a dataset, written using relative frequencies The first experiment in the previous section was, ‘Toss four coins and count the number of heads’, and the dataset below was obtained after 1000 trials. Number x of heads 0 1 2 3 4 Sum Frequency 66 226 395 260 53 1000 Relative frequency 0.066 0.226 0.395 0.260 0.053 1 To find the mean x of this set, we can do better than the usual method of ‘adding up the scores and dividing by the number of scores’. Juggling the arithmetic, and using the non-standard symbol fr(x) for the relative frequency of x, the mean is: x = 0 × 66 + 1 × 226 + 2 × 395 + 3 × 260 + 4 × 53 1000 = 0 × 66 1000 + 1 × 226 1000 + 2 × 395 1000 + 3 × 260 1000 + 4 × 53 1000 = 0 × fr(0) + 1 × fr(1) + 2 × fr(2) + 3 × fr(3) + 4 × fr(4) This object is called weighted mean — the five scores are each multiplied, or weighted, by their relative frequencies, and then the products are added up. Notice that the relative frequencies always add to exactly 1. Generalising this gives a far more elegant formula for the mean of a dataset as the weighted mean of the scores — weighted according to their relative frequencies: x = X (score) × (relative frequency), summing over all scores in the dataset. In symbols, still using sigma notation, the result is very concise: x = X x fr(x) . Sigma notation was introduc</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>9B Mean or expected value 421 9B Mean or expected value Learning intentions • Calculate the mean, or expected value, of a discrete probability distribution. • Relate this to the mean of a dataset of trials of the experiment. • Understand the effects on the mean of translations and dilations of the data. When dealing with data, statistics is always asking two questions, ‘Where is the centre of the dataset? ’ and ‘How spread out is it? ’ Probability distributions throw up the same two questions, which this chapter answers for discrete distributions. This section introduces the mean, or expected value, as a measure of central tendency, and the next section will introduce the variance — standard deviation squared — as a measure of spread. The mean of a dataset, written using relative frequencies The first experiment in the previous section was, ‘Toss four coins and count the number of heads’, and the dataset below was obtained after 1000 trials. Number x of heads 0 1 2 3 4 Sum Frequency 66 226 395 260 53 1000 Relative frequency 0.066 0.226 0.395 0.260 0.053 1 To find the mean x of this set, we can do better than the usual method of ‘adding up the scores and dividing by the number of scores’. Juggling the arithmetic, and using the non-standard symbol fr(x) for the relative frequency of x, the mean is: x = 0 × 66 + 1 × 226 + 2 × 395 + 3 × 260 + 4 × 53 1000 = 0 × 66 1000 + 1 × 226 1000 + 2 × 395 1000 + 3 × 260 1000 + 4 × 53 1000 = 0 × fr(0) + 1 × fr(1) + 2 × fr(2) + 3 × fr(3) + 4 × fr(4) This object is called weighted mean — the five scores are each multiplied, or weighted, by their relative frequencies, and then the products are added up. Notice that the relative frequencies always add to exactly 1. Generalising this gives a far more elegant formula for the mean of a dataset as the weighted mean of the scores — weighted according to their relative frequencies: x = X (score) × (relative frequency), summing over all scores in the dataset. In symbols, still using sigma notation, the result is very concise: x = X x fr(x) . Sigma notation was introduced in Chapter 1 as notation for the sum of terms of a sequence. The Greek uppercase letter Σ corresponds to the English uppercase S. The calculation itself is best set out in tabular form: x 0 1 2 3 4 Sum fr(x) 0.066 0.226 0.395 0.260 0.053 1 x fr(x) 0 0.226 0.79 0.78 0.212 2.008 Hence the mean of the dataset is x = 2.008 .</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>422 Chapter 9 Discrete probability distributions 9B 7 The mean of a dataset expressed in terms of relative trequency Suppose that a dataset records the results of many trials of an experiment. • The relative frequency of each score is the ratio: relative frequency = frequency of the score total number of scores • The mean x of the dataset is the weighted mean of the scores — weighted according to the relative frequencies fr(x) of the scores: x = X x fr(x), summing over all scores x in the dataset. The mean of a discrete probability distribution — ‘probability’ replaces ‘relative frequency’ The mean of a probability distribution is usually called the expected value of the distribution, so its symbol is usually E(X). We can define this mean, or expected value, using the corresponding weighted mean formula in Box 7, but weighting the values now by ‘probability’ rather than by ‘relative frequency’: E(X) = X x P(x), summing over all the values</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 9B</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 6 · 9B Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

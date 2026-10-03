@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3E Tutorial · The indefinite integral</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="3E" data-page="tutorial" data-nav-depth="2" data-auth-sub="3E Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 3 Integration/3D-challenge-ftc/concept.html">← 3D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 3 Integration/3F-areas-by-integration/concept.html">3F →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>3E · The indefinite integral</h1>
+    <p>Paraphrased from Cambridge Chapter 3 §3E. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-3-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>3E The indefinite integral 137 3E The indefinite integral Learning intentions • Introduce ‘indefinite integral’ as alternative term for ‘primitive’. • Review the standard forms for integrating powers. Now that primitives have been established as the key to calculating definite integrals, this section turns again to the task of finding primitives. First, a new and convenient notation for the primitive is introduced. The indefinite integral Because of the close connection established by the fundamental theorem between primitives and definite integrals, the term indefinite integral is often used for the general primitive. The standard notation for the indefinite integral of a function f(x) is an integral sign without any upper or lower limits, but with the final dx. For example, the primitive or the indefinite integral of x2 + 1 is: ∫ (x2 + 1) dx = x3 3 + x + C, for some constant C. The word ‘indefinite’ suggests that the integral cannot yet be evaluated further because no limits for the integral have yet been specified. The constant of integration A definite integral ends up as a pure number. An indefinite integral, on the other hand, is a function of x — the pronumeral x is carried across to the answer. It also contains an unknown constant C (or c, as it is often written), and the indefinite integral can also be regarded as a function of C (or of c). The constant is called a ‘constant of integration’ and is an important part of the answer — it must always be included. The only exception to including the constant of integration is when calculating definite integrals, because in that situation any primitive can be used. Note: Strictly speaking, the words ‘for some constant C’ or ‘where C is a constant’ should follow the first mention of the new pronumeral C, because no pronumeral should be used without having been formally introduced. There is a limit to one’s patience, however (and in this book there is often no room). If another pronumeral such as D is used, it would be wise to introduce it formally. Standard forms for integration The two rules for finding primitives given in Section 2H can now be restated in this new notation: 15 Standard forms for integration Suppose that n , −1. Then • ∫ xn dx = xn+1 n + 1 + C, for some constant C. • ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C, for some constant C.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>138 Chapter 3 Integration 3E The word ‘integration’ is commonly used to refer both to the finding of a primitive, and to the evaluating of a definite integral. Similarly, the unqualified term ‘integral’ is used to refer both to the indefinite integral and to the definite integral. Example 18 Using the basic standard form for integrating powers Use the standard form ∫ xn dx = xn+1 n + 1 + C to find: ∫ 12x3 dx a ∫ 9x2 −7x + 6 dx b Solution a ∫ 12x3 dx = 12 × x4 4 = 3x4 + C, for some constant C b ∫ 9x2 −7x + 6 dx = 9 × x3 3 −7 × x2 2 + 6x = 3x3 −7 2 x2 + 6x + C, for some constant C Example 19 Using the linear extension of the standard form Use the standard form ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C to find: ∫ (3x + 1)5 dx a ∫ (5 −2x)2 dx b Solution a ∫ (3x + 1)5 dx = (3x + 1)6 3 × 6 (here n = 5 and a = 3 and b = 1) = 1 18(3x + 1)6 + C b ∫ (5 −2x)2 dx = (5 −2x)3 (−2) × 3 (here n = 2 and a = −2 and b = 5) = −1 6(5 −2x)3 + C Note: It is often best to add the ‘+ C’ only on the last line. This avoids having constants added or multiplied onto C in some more complicated calculations. Negative indices Both standard forms apply with negative indices as well as positive indices. The exception is the index −1, where the rule is nonsense because it results in division by zero. We shall deal with the integration of x−1 in Chapter 5.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>3E The indefinite integral 139 Example 20 Using the standard forms with negative indices Use negative indices to find these indefinite integrals. ∫12 x3 dx a ∫ dx (3x + 4)2 b Solution a ∫12 x3 dx = ∫ 12x−3 dx = 12 × x−2 −2 (increase the index to −2, then divide by −2) = −6 x2 b ∫ dx (3x + 4)2 = ∫ (3x + 4)−2 dx = (3x + 4)−1 3 × (−1) + C (here a = 3 and b = 4) = − 1 3(3x + 4) + C Expanding the integrand In many integrals, brackets must be expanded before the indefinite integral can be found. The next worked example uses the special expansions. Part b also requires negative indices. Example 21 Expanding brackets before integrating Expand the brackets in the integrand to find: ∫ (x3 −1)2 dx a ∫ 3 −1 x2 ! 3 + 1 x2 ! dx b Solution a ∫ (x3 −1)2 dx = ∫ (x6 −2x3 + 1) dx (using (A + B)2 = A2 + 2AB + B2) = x7 7 −x4 2 + x + C, for some constant C b ∫ 3 −1 x2 ! 3 + 1 x2 ! dx = ∫ 9 −1 x4 ! dx (using (A −B)(A + B) = A2 −B2) = ∫ 9 −x−4 dx = 9x −x−3 −3 = 9x + 1 3x3 + C, for some constant C</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>140 Chapter 3 Integration 3E Fractional indices The standard forms for finding primitives of powers also apply to fractional indices. These calculations require quick conversions between fractional indices and surds. The next worked example finds each indefinite integral and then uses it to evaluate a definite integral. Example 22 Using the basic standard form with fractional indices Use fractional and negative indices to evaluate: ∫4 1 √x dx a ∫4 1 1 √x dx b Solution a ∫4 1 √x dx = ∫4 1 x 1 2 dx (rewrite √x as x 1 2 before finding the primitive) = 2 3  x 3 2 4 1 (increase the index to 3 2 and divide by 3 2) = 2 3 × (8 −1) (4 3 2 = 23 = 8 and 1 3 2 = 1) = 4 2 3 b ∫4 1 1 √x dx = ∫4 1 x−1 2 dx (rewrite 1 √x as x−1 2 before finding the primitive) = 2 1  x 1 2 4 1 (increase the index to 1 2 and divide by 1 2) = 2 × (2 −1) (4 1 2 = √ 4 = 2 and 1 1 2 = 1) = 2 Example 23 Using the linear extension standard form with fractional indices a Use index notation to express 1 √ 9 −2x as a power of 9 −2x. b Hence find the indefinite integral ∫ dx √ 9 −2x dx. Solution a 1 √ 9 −2x dx = (9 −2x)−1 2 b Hence ∫ 1 √ 9 −2x dx = ∫ (9 −2x)−1 2 dx = (9 −2x) 1 2 −2 × 1 2 , using ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) , = − √ 9 −2x + C.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>3E The indefinite integral 141</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 3E →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 3E, then section 3F.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

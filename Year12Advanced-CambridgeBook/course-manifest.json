@@ -1,0 +1,553 @@
+{
+  "title": "Year 12 Advanced \u00b7 Cambridge Book",
+  "flow": "waterfall",
+  "themes": [
+    {
+      "id": "t1",
+      "n": 1,
+      "title": "Further graph transformations and modelling",
+      "term": "Term 4 \u00b7 Task 1",
+      "sections": [
+        {
+          "code": "6A",
+          "title": "Trigonometric graphs and modelling",
+          "ch": 6,
+          "slug": "6A-trigonometric-graphs-and-modelling",
+          "folder": "Chapter 6 The trigonometric functions",
+          "status": "ready"
+        },
+        {
+          "code": "5A",
+          "title": "Review of the logarithmic function base e",
+          "ch": 5,
+          "slug": "5A-logarithmic-functions",
+          "folder": "Chapter 5 Logarithmic functions",
+          "status": "ready"
+        },
+        {
+          "code": "4A",
+          "title": "Review of the exponential function base e",
+          "ch": 4,
+          "slug": "4A-review-exponential-base-e",
+          "folder": "Chapter 4 Exponential functions",
+          "status": "ready",
+          "inferredTheme": "Graph review of y=e^x (parallel to 5A); not listed on map \u2014 placed in Theme 1"
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "n": 2,
+      "title": "Sequences and series",
+      "term": "Term 4 \u00b7 Task 1",
+      "sections": [
+        {
+          "code": "1A",
+          "title": "Sequences and how to specify them",
+          "ch": 1,
+          "slug": "1A-sequences-and-how-to-specify-them",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1B",
+          "title": "Arithmetic sequences",
+          "ch": 1,
+          "slug": "1B-arithmetic-sequences",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1C",
+          "title": "Geometric sequences",
+          "ch": 1,
+          "slug": "1C-geometric-sequences",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1D",
+          "title": "Solving problems involving APs and GPs",
+          "ch": 1,
+          "slug": "1D-problems-aps-gps",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1E",
+          "title": "Adding up the terms of a sequence",
+          "ch": 1,
+          "slug": "1E-adding-up-terms",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1F",
+          "title": "Summing an arithmetic series",
+          "ch": 1,
+          "slug": "1F-summing-arithmetic-series",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1G",
+          "title": "Summing a geometric series",
+          "ch": 1,
+          "slug": "1G-summing-geometric-series",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1H",
+          "title": "The limiting sum of a geometric series",
+          "ch": 1,
+          "slug": "1H-limiting-sum-geometric",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        },
+        {
+          "code": "1I",
+          "title": "Recurring decimals and geometric series",
+          "ch": 1,
+          "slug": "1I-recurring-decimals",
+          "folder": "Chapter 1 Sequences and series",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "n": 3,
+      "title": "Differential calculus",
+      "term": "Term 1 \u00b7 Task 2",
+      "sections": [
+        {
+          "code": "2A",
+          "title": "Increasing, decreasing, and stationary at a point",
+          "ch": 2,
+          "slug": "2A-increasing-decreasing-stationary",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "2B",
+          "title": "Stationary points and turning points",
+          "ch": 2,
+          "slug": "2B-stationary-turning-points",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "2C",
+          "title": "Second and higher derivatives",
+          "ch": 2,
+          "slug": "2C-second-higher-derivatives",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "2D",
+          "title": "Concavity and points of inflection",
+          "ch": 2,
+          "slug": "2D-concavity-inflection",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "2E",
+          "title": "Systematic curve sketching with the derivative",
+          "ch": 2,
+          "slug": "2E-curve-sketching-derivative",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "2F",
+          "title": "Global maximum and minimum",
+          "ch": 2,
+          "slug": "2F-global-max-min",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "2G",
+          "title": "Review of continuity and differentiability",
+          "ch": 2,
+          "slug": "2G-continuity-differentiability",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "2H",
+          "title": "Applications of maximisation and minimisation",
+          "ch": 2,
+          "slug": "2H-max-min-applications",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "4B",
+          "title": "Differentiation involving exponential functions",
+          "ch": 4,
+          "slug": "4B-diff-exponential",
+          "folder": "Chapter 4 Exponential functions",
+          "status": "ready"
+        },
+        {
+          "code": "5B",
+          "title": "Differentiation involving logarithmic functions",
+          "ch": 5,
+          "slug": "5B-diff-logarithmic",
+          "folder": "Chapter 5 Logarithmic functions",
+          "status": "ready"
+        },
+        {
+          "code": "6B",
+          "title": "Differentiation with trigonometric functions",
+          "ch": 6,
+          "slug": "6B-diff-trigonometric",
+          "folder": "Chapter 6 The trigonometric functions",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "n": 4,
+      "title": "Integral calculus",
+      "term": "Term 1 \u00b7 Task 2",
+      "sections": [
+        {
+          "code": "2I",
+          "title": "Primitive functions",
+          "ch": 2,
+          "slug": "2I-primitive-functions",
+          "folder": "Chapter 2 Differentiation applications",
+          "status": "ready"
+        },
+        {
+          "code": "3A",
+          "title": "Areas and the definite integral",
+          "ch": 3,
+          "slug": "3A-areas-definite-integral",
+          "folder": "Chapter 3 Integration",
+          "status": "ready"
+        },
+        {
+          "code": "3B",
+          "title": "The fundamental theorem of calculus",
+          "ch": 3,
+          "slug": "3B-fundamental-theorem",
+          "folder": "Chapter 3 Integration",
+          "status": "ready"
+        },
+        {
+          "code": "3C",
+          "title": "The definite integral and its properties",
+          "ch": 3,
+          "slug": "3C-definite-integral-properties",
+          "folder": "Chapter 3 Integration",
+          "status": "ready"
+        },
+        {
+          "code": "3D",
+          "title": "Challenge \u2014 proving the fundamental theorem",
+          "ch": 3,
+          "slug": "3D-challenge-ftc",
+          "folder": "Chapter 3 Integration",
+          "status": "ready",
+          "inferredTheme": "Listed in Ch.3 with 3A\u2013H integral block"
+        },
+        {
+          "code": "3E",
+          "title": "The indefinite integral",
+          "ch": 3,
+          "slug": "3E-indefinite-integral",
+          "folder": "Chapter 3 Integration",
+          "status": "ready"
+        },
+        {
+          "code": "3F",
+          "title": "Finding areas by integration",
+          "ch": 3,
+          "slug": "3F-areas-by-integration",
+          "folder": "Chapter 3 Integration",
+          "status": "ready"
+        },
+        {
+          "code": "3G",
+          "title": "The trapezoidal rule",
+          "ch": 3,
+          "slug": "3G-trapezoidal-rule",
+          "folder": "Chapter 3 Integration",
+          "status": "ready"
+        },
+        {
+          "code": "3H",
+          "title": "The reverse chain rule",
+          "ch": 3,
+          "slug": "3H-reverse-chain-rule",
+          "folder": "Chapter 3 Integration",
+          "status": "ready"
+        },
+        {
+          "code": "4D",
+          "title": "Integration involving exponential functions",
+          "ch": 4,
+          "slug": "4D-int-exponential",
+          "folder": "Chapter 4 Exponential functions",
+          "status": "ready"
+        },
+        {
+          "code": "4E",
+          "title": "Applications of integration (exponential)",
+          "ch": 4,
+          "slug": "4E-int-apps-exponential",
+          "folder": "Chapter 4 Exponential functions",
+          "status": "ready"
+        },
+        {
+          "code": "5D",
+          "title": "Integration involving reciprocal functions",
+          "ch": 5,
+          "slug": "5D-int-reciprocal",
+          "folder": "Chapter 5 Logarithmic functions",
+          "status": "ready"
+        },
+        {
+          "code": "5E",
+          "title": "Applications of integration (logarithmic)",
+          "ch": 5,
+          "slug": "5E-int-apps-logarithmic",
+          "folder": "Chapter 5 Logarithmic functions",
+          "status": "ready"
+        },
+        {
+          "code": "6D",
+          "title": "Integration with trigonometric functions",
+          "ch": 6,
+          "slug": "6D-int-trigonometric",
+          "folder": "Chapter 6 The trigonometric functions",
+          "status": "ready"
+        },
+        {
+          "code": "6E",
+          "title": "Applications of integration (trigonometric)",
+          "ch": 6,
+          "slug": "6E-int-apps-trigonometric",
+          "folder": "Chapter 6 The trigonometric functions",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "n": 5,
+      "title": "Applications of calculus",
+      "term": "Term 2 \u00b7 Task 3",
+      "sections": [
+        {
+          "code": "4C",
+          "title": "Applications of differentiation (exponential)",
+          "ch": 4,
+          "slug": "4C-diff-apps-exponential",
+          "folder": "Chapter 4 Exponential functions",
+          "status": "ready"
+        },
+        {
+          "code": "5C",
+          "title": "Applications of differentiation (logarithmic)",
+          "ch": 5,
+          "slug": "5C-diff-apps-logarithmic",
+          "folder": "Chapter 5 Logarithmic functions",
+          "status": "ready"
+        },
+        {
+          "code": "6C",
+          "title": "Applications of differentiation (trigonometric)",
+          "ch": 6,
+          "slug": "6C-diff-apps-trigonometric",
+          "folder": "Chapter 6 The trigonometric functions",
+          "status": "ready",
+          "inferredTheme": "Ch.6 applications of differentiation \u2014 placed with Theme 5 applications"
+        },
+        {
+          "code": "7A",
+          "title": "Motion review plus acceleration",
+          "ch": 7,
+          "slug": "7A-motion-acceleration",
+          "folder": "Chapter 7 Motion and rates",
+          "status": "ready"
+        },
+        {
+          "code": "7B",
+          "title": "Motion and integration",
+          "ch": 7,
+          "slug": "7B-motion-integration",
+          "folder": "Chapter 7 Motion and rates",
+          "status": "ready"
+        },
+        {
+          "code": "7C",
+          "title": "Rates and differentiation",
+          "ch": 7,
+          "slug": "7C-rates-differentiation",
+          "folder": "Chapter 7 Motion and rates",
+          "status": "ready"
+        },
+        {
+          "code": "7D",
+          "title": "Rates and integration",
+          "ch": 7,
+          "slug": "7D-rates-integration",
+          "folder": "Chapter 7 Motion and rates",
+          "status": "ready"
+        },
+        {
+          "code": "7E",
+          "title": "Exponential growth and decay",
+          "ch": 7,
+          "slug": "7E-exponential-growth-decay",
+          "folder": "Chapter 7 Motion and rates",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "t6",
+      "n": 6,
+      "title": "Random variables",
+      "term": "Term 2 \u00b7 Task 3",
+      "sections": [
+        {
+          "code": "9A",
+          "title": "The language of probability distributions",
+          "ch": 9,
+          "slug": "9A-probability-distributions",
+          "folder": "Chapter 9 Random variables",
+          "status": "ready"
+        },
+        {
+          "code": "9B",
+          "title": "Mean or expected value",
+          "ch": 9,
+          "slug": "9B-mean-expected-value",
+          "folder": "Chapter 9 Random variables",
+          "status": "ready"
+        },
+        {
+          "code": "9C",
+          "title": "Variance and standard deviation",
+          "ch": 9,
+          "slug": "9C-variance-standard-deviation",
+          "folder": "Chapter 9 Random variables",
+          "status": "ready"
+        },
+        {
+          "code": "10A",
+          "title": "Cumulative frequency and grouping",
+          "ch": 10,
+          "slug": "10A-cumulative-frequency",
+          "folder": "Chapter 10 The normal distribution",
+          "status": "ready"
+        },
+        {
+          "code": "10B",
+          "title": "Continuous distributions",
+          "ch": 10,
+          "slug": "10B-continuous-distributions",
+          "folder": "Chapter 10 The normal distribution",
+          "status": "ready"
+        },
+        {
+          "code": "10C",
+          "title": "Mean and variance of a distribution",
+          "ch": 10,
+          "slug": "10C-mean-variance-distribution",
+          "folder": "Chapter 10 The normal distribution",
+          "status": "ready"
+        },
+        {
+          "code": "10D",
+          "title": "The standard normal distribution",
+          "ch": 10,
+          "slug": "10D-standard-normal",
+          "folder": "Chapter 10 The normal distribution",
+          "status": "ready"
+        },
+        {
+          "code": "10E",
+          "title": "General normal distributions",
+          "ch": 10,
+          "slug": "10E-general-normal",
+          "folder": "Chapter 10 The normal distribution",
+          "status": "ready"
+        },
+        {
+          "code": "10F",
+          "title": "Applications of the normal distribution",
+          "ch": 10,
+          "slug": "10F-normal-applications",
+          "folder": "Chapter 10 The normal distribution",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "id": "t7",
+      "n": 7,
+      "title": "Financial mathematics",
+      "term": "Term 2 \u00b7 Task 3",
+      "sections": [
+        {
+          "code": "8A",
+          "title": "Applications of APs and GPs",
+          "ch": 8,
+          "slug": "8A-applications-aps-gps",
+          "folder": "Chapter 8 Financial mathematics",
+          "status": "ready"
+        },
+        {
+          "code": "8B",
+          "title": "The use of logarithms with GPs",
+          "ch": 8,
+          "slug": "8B-logarithms-with-gps",
+          "folder": "Chapter 8 Financial mathematics",
+          "status": "ready"
+        },
+        {
+          "code": "8C",
+          "title": "Simple and compound interest",
+          "ch": 8,
+          "slug": "8C-simple-compound-interest",
+          "folder": "Chapter 8 Financial mathematics",
+          "status": "ready"
+        },
+        {
+          "code": "8D",
+          "title": "Investing money by regular instalments",
+          "ch": 8,
+          "slug": "8D-regular-instalments",
+          "folder": "Chapter 8 Financial mathematics",
+          "status": "ready"
+        },
+        {
+          "code": "8E",
+          "title": "Paying off a loan",
+          "ch": 8,
+          "slug": "8E-paying-off-loan",
+          "folder": "Chapter 8 Financial mathematics",
+          "status": "ready"
+        },
+        {
+          "code": "8F",
+          "title": "The pension from a super fund or annuity",
+          "ch": 8,
+          "slug": "8F-pension-annuity",
+          "folder": "Chapter 8 Financial mathematics",
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

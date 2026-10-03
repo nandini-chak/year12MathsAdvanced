@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2I Tutorial · Primitive functions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="2I" data-page="tutorial" data-nav-depth="2" data-auth-sub="2I Tutorial">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 6 The trigonometric functions/6B-diff-trigonometric/concept.html">← 6B</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 3 Integration/3A-areas-definite-integral/concept.html">3A →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Tutorial · theory</span>
+    <h1>2I · Primitive functions</h1>
+    <p>Paraphrased from Cambridge Chapter 2 §2I. Not a PDF reprint.</p>
+  </header>
+  <div class="wrap">
+    <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
+      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-2-Worked-Solutions.pdf.</div>
+    </details>
+    <section class="card">
+      <h2 class="section-h">Theory and ideas</h2>
+      <p>98 Chapter 2 Curve-sketching using the derivative 2I 2I Primitive functions Learning intentions • Understand a primitive of f(x) as a function F(x) with derivative F′(x) = f(x). • Understand how constants of integration arise, and find them using initial conditions. • Develop standard forms for powers of x, and for powers of linear functions of x. This section reverses the process of differentiation, and asks, ‘What can we say about a function if we only know its derivative?’ The results of this section will be needed when integration is introduced in Chapter 3. Primitives are functions with the same derivative The following four functions all have the same derivative 2x — they are therefore called primitives of 2x. Look at their four closely related graphs below. x2, x2 + 3, x2 −3, x2 −6. These four functions are all the same apart from a constant term. This situation is true generally — any two functions with the same derivative on an open interval differ only by a constant. 18 Functions with the same derivative A If a function F(x) has derivative zero. for all x in an open interval, then F(x) is a constant function on that interval. B If F′(x) = G′(x), for all x in an open interval, then F(x) and G(x) differ by a constant on that interval. Proof A Because its derivative is zero, F(x) has gradient zero throughout the interval. The curve y = F(x) is therefore a horizontal line, and F(x) is a constant function. B The difference F(x) −G(x) has derivative F′(x) −G′(x) = 0. Hence F(x) −G(x) is a constant function by part A. Note: Following normal practice, we ignore qualifications about open intervals unless there is a problem. See the Challenge subheading at the end of this section. The family of primatives with the same derivative Continuing with the example above, the various functions whose derivatives are 2x are all of the form: F(x) = x2 + C, where C is a constant. By taking different values of the constant C, these primatives form an infinite family of curves. Each curve is the parabola y = x2 translated upwards or downwards. x y 2 7 3 −3 −6</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>2I Primitive functions 99 Using an initial condition to pick out a particular solution Suppose now that we know also that the graph of the primitive we are seeking passes through a particular point, say the point (2, 7), as shown on the graph to the right. Now we can evaluate the constant C by substituting that point into: F(x) = x2 + C7 = 4 + C so C = 3 and hence F(x) = x2 + 3. Thus in place of the infinite family of functions, there is now a particular solution. The extra condition that allows the evaluation of C is called an initial condition. 19 A primitive of a function • A function F(x) is called a primitive or an anti-derivative of f(x) if the derivative of F(x) is f(x): F′(x) = f(x). • If F(x) is any primitive of f(x) , then the primitive of f(x), or for emphasis the general primitive of f(x), is: F(x) + C, where C is a constant. • An initial condition will enable the constant C to be evaluated. For example, each of these functions is a primitive of x2 + 1: 1 3 x3 + x, 1 3 x3 + x + 7, 1 3 x3 + x −13, 1 3 x3 + x + 4π, but the primitive of x2 + 1 is 1 3 x3 + x + C, where C is a constant. A standard form for finding primitives We have seen that 1 2 x2 is a primitive of x, and 1 3 x3 is a primitive of x2. More generally, reversing d dx(xn+1) = (n + 1)xn gives the general standard form: 20 A standard form for finding primitives If dy dx = xn, where n , −1, then y = xn+1 n + 1 + C, for some constant C. ‘Increase the index by 1 and divide by the new index.’ Example 27 Using the standard form for primitives of powers of x Find the primitives of: x3 + x2 + x + 1 a 5x3 + 7 b Solution Let dy dx = x3 + x2 + x + 1. Then y = 1 4 x4 + 1 3 x3 + 1 2 x2 + x + C, for some constant C. a Let f ′(x) = 5x3 + 7. Then f(x) = 5 4 x4 + 7x + C, for some constant C. b</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>100 Chapter 2 Curve-sketching using the derivative 2I Example 28 Finding primitives of negative and fractional powers of x Rewrite each function with negative or fractional indices, and find the primitive. 1 x2 a √x b Solution Let f ′(x) = 1 x2 = x−2. Then f(x) = −x−1 = −1 x + C, where C is a constant. a Let dy dx = √x = x 1 2 . Then y = 2 3 x 3 2 + C, where C is a constant. b A standard form for powers of a linear function Last year, we used the chain rule to develop the standard form for differentiation: d dx(ax + b)n = an(ax + b)n−1 . Reversing this, (ax + b)n−1 has primitive (ax + b)n an , and replacing n −1 by n, and n by n + 1 , (ax + b)n has primitive (ax + b)n+1 a(n + 1) . where the values a = 0 and n = −1 both need to be excluded from this result. 21 Extending the standard form to powers of linear functions If dy dx = (ax + b)n, where a , 0 and n , −1, then y = (ax + b)n+1 a(n + 1) + C, for some constant C. ‘Increase the index by 1, then divide by the new index and by the coefficient of x.’ Example 29 Using the standard form for a power of a linear function: Find the primitives of: (3x + 1)4 a (1 −3x)6 b 1 (x + 1)2 c √ x + 1 d Solution Let dy dx = (3x + 1)4. Then y = (3x + 1)5 5 × 3 = (3x + 1)5 15 + C, where C is a constant. a Let dy dx = (1 −3x)6. Then y = (1 −3x)7 7 × (−3) y = −(1 −3x)7 21 + C, where C is a constant. b</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>2I Primitive functions 101 Let dy dx = 1 (x + 1)2 = (x + 1)−2. Then y = (x + 1)−1 −1 = − 1 x + 1 + C, where C is a constant. c Let dy dx = √ x + 1 = (x + 1) 1 2 . Then y = (x + 1) 3 2 3 2 y = 2 3(x + 1) 3 2 + C, where C is a constant. d Note: It is acceptable to insert the constant C only on the final line. Finding a particular solution, given an initial condition As explained above, if an initial condition is known, then substitute the condition into the general primitive to find the constant, and hence the particular solution. 22 Finding a particular solution, given its derivative and an initial condition • First find the primitive, taking care to include the constant of integration. • Then use the initial condition to find the constant and the particular solution. Example 30 Applying an initial condition to find the particular solution. Given that dy dx = 6x2 + 1, and y = 12 when x = 2, find y as a function of x. Solution dy dx = 6x2 + 1, so y = 2x3 + x + C, for some constant C. Substituting x = 2 and y = 12, 12 = 16 + 2 + C, so C = −6, and hence y = 2x3 + x −6. Example 31 Finding a primitive from the second derivative Given that f ′′(x) = 12(x −1)2, and f(0) = f(1) = 0, find f(4). Solution We know that f ′′(x) = 12(x −1)2. Taking the primitive, f ′(x) = 4(x −1)3 + C, for some constant C, and taking the primitive again, f(x) = (x −1)4 + Cx + D, for some constant D. Because f(0) = 0, 0 = 1 + 0 + D D = −1. Because f(1) = 0, 0 = 0 + C −1. Hence C = 1, so f(4) = 81 + 4 −1 = 84.</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>102 Chapter 2 Curve-sketching using the derivative 2I Two notes on alternative terminology Initial conditions: In this course, conditions that allow arbitrary constants to be evaluated are called initial conditions. Later courses may define, in various ways, two terms ‘initial conditions’ and ‘boundary conditions’, but the term ‘boundary condition’ does not occur in our course. Primitives: The word ‘anti-derivative’ is used just twice in the Syllabus documents, and then only in the Support Document — one of these instances simply announces that ‘anti-derivative’ is a synonym for ‘primitive’. The authors have therefore used the term ‘primitive’ throughout. (Chapter 3 introduces a third similar, but necessary, term ‘indefinite integral’.) Challenge: Discontinuities and the arbitrary constant — clarification only The discussion of the arbitrary constant above really only applies when the domain of the derivative is an interval — see Box 18 above. When the domain is broken into two or more intervals, usually by an asymptote, the constants of integration in different intervals of the domain are unrelated. This issue rarely comes up in applications, which almost always involve only one branch of the function. See Challenge Question 20 in</p>
+    </section>
+    <p><a class="btn" href="problems.html">Exercise 2I →</a>
+       <a class="btn ghost" href="concept.html">← Concept</a></p>
+    <footer class="site">Next: Exercise 2I, then section 3A.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>

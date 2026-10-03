@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>10E Concept · General normal distributions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../course.css" />
+</head>
+<body data-section="10E" data-page="concept" data-nav-depth="2" data-auth-sub="10E Concept">
+  <div class="shell"><div class="main">
+  <div class="site-bar"><span>My Dream Australian Academy</span><a href="../../../index.html">Site home</a></div>
+<nav class="jump">
+<a href="../../index.html">Course</a>
+<a href="../../Chapter 10 The normal distribution/10D-standard-normal/concept.html">← 10D</a>
+<a href="concept.html">Concept</a>
+<a href="tutorial.html">Tutorial</a>
+<a href="problems.html">Exercise</a>
+<a href="../../Chapter 10 The normal distribution/10F-normal-applications/concept.html">10F →</a>
+</nav>
+  <header class="hero">
+    <span class="kicker">Theme 6 · Random variables · Term 2 · Task 3</span>
+    <h1>10E · General normal distributions</h1>
+    <p>Direct path: Concept → Tutorial → Exercise → next section. No extra hubs.</p>
+  </header>
+  <div class="wrap">
+    <section class="card" id="idea">
+      <h2 class="section-h">What this section is about</h2>
+      <p>• Apply stretching and shifting to transform the standard normal to any normal. • Establish the mean and standard deviation of a transformed normal distribution. • Develop and use z-scores to deal with a transformed normal distribution. • Work with quartiles and the empirical rule with a transformed normal. P X x    x                In Section 10A we graphed the probabilities of obtaining x heads when 20 coins are tossed, and joined the 21 points to form a polygon. The polygon suggests that we should be approximating it with a bell-shaped normal curve. But the curve suggested by the graph is certainly not the standard normal curve, for two reasons: • The mean is not zero. • A glance at the inflections shows that the standard deviation is not 1. This section extends the normal distribution to bell-shaped curves in general. Note: For the rest of this chapter, we will drop the approximately equals sign ≑in most situations, because nearly all our numbers are estimates or approximations. Shifting and stretching the standard normal distribution We can estimate the means and the standard deviation from the graph and from the experiment. • We know that the polygon above is symmetric about x = 10, because, for example, the probabilities of obtaining 7 heads from 20 tosses, and 13 heads from 20 tosses, are equal. Thus the mean is exactly 10. • We can roughly estimate the standard deviation by looking at where the points of inflection would be if the points were joined up by a curve. The steepest intervals are the interval from x = 7 to x = 8, and the interval from x = 12 to x = 13. Let us estimate the points of inflection to be at x = 7.5 and x = 12.5. That would give a standard deviation of about 2.5. Some further theory in the Extension 1 course (the binomial distribution) tells us that the true standard deviation is σ = √ 5, which is approximately 2.236. In this situation, we would want to stretch and then shift the standa</p>
+    </section>
+    <section class="notes" id="prior">
+      <h2>Prior knowledge — quick recap</h2>
+      <p>Skim the ideas below, then open the Tutorial for full theory and examples. Worked exercises come after.</p>
+      <p>490 Chapter 10 Continuous probability distributions 10E 10E General normal distributions Learning intentions • Apply stretching and shifting to transform the standard normal to any normal. • Establish the mean and standard deviation of a transformed normal distribution. • Develop and use z-scores to deal with a transformed normal distribution. • Work with quartiles and the empirical rule with a transformed normal. P X x    x                In Section 10A we graphed the probabilities of obtaining x heads when 20 coins are tossed, and joined the 21 points to form a polygon. The polygon suggests that we should be approximating it with a bell-shaped normal curve. But the curve suggested by the graph is certainly not the standard normal curve, for two reasons: • The mean is not zero. • A glance at the inflections shows that the standard deviation is not 1. This section extends the normal distribution to bell-shaped curves in general. Note: For the rest of this chapter, we will drop the approximately equals sign ≑in most situations, because nearly all our numbers are estimates or approximations. Shifting and stretching the standard normal distribution We can estimate the means and the standard deviation from the graph and from the experiment. • We know that the polygon above is symmetric about x = 10, because, for example, the probabilities of obtaining 7 heads from 20 tosses, and 13 heads from 20 tosses, are equal. Thus the mean is exactly 10. • We can roughly estimate the standard deviation by looking at where the points of inflection would be if the points were joined up by a curve. The steepest intervals are the interval from x = 7 to x = 8, and the interval from x = 12 to x = 13. Let us estimate the points of inflection to be at x = 7.5 and x = 12.5. That would give a standard deviation of about 2.5. Some further theory in the Extension 1 course (the binomial distribution) tells us that the true standard deviation is σ = √ 5, which is approximately 2.236. In this situation, we would want to stretch and then shift the standard normal distribution to get a curve that may help understand the graph above. That is, we would need to produce a normal distribution with µ = 10 and σ = √ 5 ≑2.236. Stretching to accommodate the standard deviation First, stretch the standard normal distribution horizontally by a factor of σ. This is done by replacing x by x σ , as discussed in Section 5D of the Year 11 book. The standard normal is y = φ(x) = 1 √ 2π e−x2 2 , so the result is: y = φ  x σ  = 1 √ 2π e−x2 2σ2 (always look at 1 √ 2π and think 2 5 or 0.4) . When this stretching is done, the inflections at x = 1 and x = −1 become inflections at x = σ and x = −σ. This</p>
+<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
+<p>10E General normal distributions 491 is because stretching transforms concave-up pieces to concave-up pieces, and concave-down pieces to concave- down pieces. This function, however, is not a probability density function, because the stretching has increased the area under the curve by a factor of σ, so that the area is now σ and not 1. To correct this, we have to stretch vertically by a factor of 1 σ , giving what is once again a probability density function: y = 1 σ φ  x σ  , that is, y = 1 σ √ 2π e−x2 2σ2 . Shifting to accommodate the mean Once the standard deviation has been sorted out, shift</p>
+    </section>
+    <section class="card">
+      <h2 class="section-h">Continue</h2>
+      <p><a class="btn" href="tutorial.html">Tutorial · theory →</a>
+         <a class="btn ghost" href="problems.html">Skip to Exercise 10E</a></p>
+    </section>
+    <footer class="site">Waterfall: Theme 6 · 10E Concept → Tutorial → Exercise.</footer>
+  </div>
+
+  </div></div>
+  <script src="../../course-auth.js"></script>
+  <script src="../../course-nav.js"></script>
+  <script>
+  document.querySelectorAll(".tex").forEach(function(n){
+    if(n.getAttribute("data-texed")) return;
+    n.setAttribute("data-texed","1");
+    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
+  });
+  </script>
+</body></html>
