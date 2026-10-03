@@ -45,6 +45,15 @@ html.auth-locked .shell { visibility: hidden; }
     linear-gradient(145deg, rgba(12, 35, 64, 0.96), rgba(22, 52, 92, 0.92)),
     var(--navy);
 }
+.auth-credit {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1rem;
+  margin: 0;
+  font-size: 0.78rem;
+  color: rgba(247, 241, 228, 0.55);
+  letter-spacing: 0.02em;
+}
 .auth-card {
   width: min(24rem, 100%);
   background: var(--card);

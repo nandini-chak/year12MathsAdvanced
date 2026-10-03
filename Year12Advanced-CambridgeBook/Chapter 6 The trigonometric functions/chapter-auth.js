@@ -20,7 +20,8 @@
       '<label for="auth-pass">Password</label>' +
       '<input id="auth-pass" type="password" required />' +
       '<p class="auth-error" role="alert" hidden>That user and password do not match.</p>' +
-      '<button class="btn" type="submit">Sign in</button></form>';
+      '<button class="btn" type="submit">Sign in</button></form>' +
+      '<p class="auth-credit">Created by Nandini C</p>';
     document.body.appendChild(gate);
     const form = gate.querySelector("form");
     const user = gate.querySelector("#auth-user");
