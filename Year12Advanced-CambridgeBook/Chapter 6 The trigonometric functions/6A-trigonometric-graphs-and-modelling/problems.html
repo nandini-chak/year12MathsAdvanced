@@ -382,8 +382,12 @@
       });
     }
     function bind(){
+      if(document.body.getAttribute("data-sol-bound")) return;
+      document.body.setAttribute("data-sol-bound","1");
       document.querySelectorAll("article.q").forEach(function(art){
-        const btn=art.querySelector("button.show"), sol=art.querySelector(".sol");
+        const btn=art.querySelector(":scope > button.show, button.show");
+        const sol=art.querySelector(".sol");
+        if(!btn || !sol) return;
         btn.addEventListener("click",function(){
           const on=!sol.classList.contains("open");
           sol.classList.toggle("open",on);
@@ -391,18 +395,19 @@
           btn.textContent=on?"Hide worked solution":"Show worked solution";
         });
       });
-      document.getElementById("allOn").onclick=function(){
+      var on=document.getElementById("allOn"), off=document.getElementById("allOff");
+      if(on) on.onclick=function(){
         document.querySelectorAll("article.q").forEach(function(art){
-          art.querySelector(".sol").classList.add("open");
-          const b=art.querySelector("button.show");
-          b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution";
+          var sol=art.querySelector(".sol"), b=art.querySelector("button.show");
+          if(sol) sol.classList.add("open");
+          if(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }
         });
       };
-      document.getElementById("allOff").onclick=function(){
+      if(off) off.onclick=function(){
         document.querySelectorAll("article.q").forEach(function(art){
-          art.querySelector(".sol").classList.remove("open");
-          const b=art.querySelector("button.show");
-          b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution";
+          var sol=art.querySelector(".sol"), b=art.querySelector("button.show");
+          if(sol) sol.classList.remove("open");
+          if(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }
         });
       };
     }
@@ -533,7 +538,7 @@
       drawWave("q9c",{xmin:-PI,xmax:PI,ymin:-1.6,ymax:1.6}, x=>Math.cos(2*(x-PI/2)), {stroke:"#b45309"});
       // Q10
       drawWave("q10a",{xmin:0,xmax:2*PI,ymin:-1.6,ymax:1.6}, x=>Math.sin(3*x+PI/2));
-      drawWave("q10b",{xmin:0,xmax:2*PI,ymin:-4.5,ymax:-3.5}, x=>0.25*Math.sin(4*x-PI)-4, {mean:-4,stroke:"#0f766e",ylim:20});
+      drawWave("q10b",{xmin:0,xmax:2*PI,ymin:-4.6,ymax:-3.4}, x=>0.25*Math.sin(4*x-PI)-4, {mean:-4,stroke:"#0f766e",ylim:20,ticks:[[0,"0"],[PI,"π"],[2*PI,"2π"]]});
       drawWave("q10c",{xmin:0,xmax:2*PI,ymin:-7,ymax:7}, x=>-6*Math.sin(0.5*x+PI/4), {stroke:"#b45309"});
       // Q11 with solution dots
       (function(){
@@ -626,12 +631,20 @@
       });
     }
 
-    function boot(){
-      if(!window.katex){ setTimeout(boot,100); return; }
-      typeset(); draw(); bind();
+    function bootMath(){
+      try { typeset(); draw(); } catch(e){ console.error(e); }
     }
-    window.addEventListener("load", boot);
-    setTimeout(boot, 400);
+    function boot(){
+      bind();
+      if(window.katex) bootMath();
+      else setTimeout(function wait(){
+        if(window.katex) bootMath();
+        else setTimeout(wait,100);
+      }, 50);
+    }
+    if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", boot);
+    else boot();
+    window.addEventListener("load", bootMath);
   })();
   </script>
 </body>
