@@ -40,8 +40,11 @@
       </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
-        <p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step"><strong>a ·</strong> n 1 2 3 4 5 6 an 18 6 2 2 3 2 9 2 27 S n 18 24 26 262 3 268 9 2626 27 b S ∞= a 1 −r = 18/1 −1 3 = 18 2 3 ! = 3 2(18) = 27 c S ∞−S 6 = 27 −2626 27 = 1/27</p>
+        <p class="formula-quick"><strong>Formula:</strong> For a GP, <span class="tex">a_n=a_1 r^{n-1}</span> and partial sums build in the table; limiting sum <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
+        <p class="step"><strong>a ·</strong> Copy the values into the table. Each <span class="tex">a_n</span> is the previous term times <span class="tex">r</span>; each <span class="tex">S_n</span> adds the next term.</p>
+        <table class="sol-table" style="border-collapse:collapse;margin:.6rem 0;font-size:.88rem;width:auto;max-width:100%"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td><strong>n</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td><strong>a_n</strong></td><td>18</td><td>6</td><td>2/3</td><td>2/9</td><td>2/27</td><td>…</td></tr><tr><td><strong>S_n</strong></td><td>18</td><td>24</td><td>26</td><td>262/3</td><td>268/9</td><td>2626/27</td></tr></tbody></table>
+        <p class="step"><strong>b ·</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> with the <span class="tex">a</span> and <span class="tex">r</span> from the question. b S ∞= a 1 −r = 18/1 −1 3 = 18 2 3 ! = 3 2(18) = 27 </p>
+        <p class="step"><strong>c ·</strong> Subtract the 6th partial sum from the limiting sum: c S ∞−S 6 = 27 −2626 27 = 1/27</p>
       </div>
     </article>
     <article class="q" id="q2">
@@ -51,8 +54,11 @@
       </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
-        <p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step"><strong>a ·</strong> n 1 2 3 4 5 6 an 24 −12/6 −3 11/2 −3 4 S n 24 12 18 15 161 2 153 4 b S ∞= a 1 −r = 24/1 − −1 2 ! = 24 3 2 = 2 3(24) = 16 c S ∞−S 6 = 16 −153 4 = 1/4</p>
+        <p class="formula-quick"><strong>Formula:</strong> For a GP, <span class="tex">a_n=a_1 r^{n-1}</span> and partial sums build in the table; limiting sum <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
+        <p class="step"><strong>a ·</strong> Copy the values into the table. Each <span class="tex">a_n</span> is the previous term times <span class="tex">r</span>; each <span class="tex">S_n</span> adds the next term.</p>
+        <table class="sol-table" style="border-collapse:collapse;margin:.6rem 0;font-size:.88rem;width:auto;max-width:100%"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td><strong>n</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td><strong>a_n</strong></td><td>24</td><td>−12</td><td>6</td><td>−3</td><td>11</td><td>2</td></tr><tr><td><strong>S_n</strong></td><td>24</td><td>12</td><td>18</td><td>15</td><td>161/2</td><td>153/4</td></tr></tbody></table>
+        <p class="step"><strong>b ·</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> with the <span class="tex">a</span> and <span class="tex">r</span> from the question. b S ∞= a 1 −r = 24/1 − −1 2 ! = 24 3 2 = 2 3(24) = 16 </p>
+        <p class="step"><strong>c ·</strong> Subtract the 6th partial sum from the limiting sum: c S ∞−S 6 = 16 −153 4 = 1/4</p>
       </div>
     </article>
     <article class="q" id="q3">
@@ -154,84 +160,95 @@ Sn</p>
       <div class="sol">
         <p class="formula-quick"><strong>Formula (infinite GP):</strong> When <span class="tex">|r|&lt;1</span>, limiting sum <span class="tex">S_\infty=\dfrac{a_1}{1-r}</span>.</p>
         <p class="step">an 10 10 10 10 10 10 S n 10 20 30 40 50 60 S n →∞as n →∞.</p>
-        <p class="step">b n 1 2 3 4 5 6 an 10 −10/10 −10/10 −10 S n 10 0 10 0 10 0 S n oscillates between 0 and 10 as n →∞.</p>
-        <p class="step">c n 1 2 3 4 5 6 an 10 20 40 80 160 320 S n 10 30 70 150 310 630 S n →∞as n →∞.</p>
-        <p class="step">4 d n 1 2 3 4 5 6 an 10 −20/40 −80 160 −320 S n 10 −10/30 −50 110 −210 S n oscillates between larger and larger positive and negative numbers as n →∞.</p>
-        <p class="step">9 For the series, a = 80 and r = 40 80 = 1/2.</p>
-        <p class="step">Thus S 4 = a (1 −rn) 1 −r = 80 1 − 1 2 !4 1 −1 2 = 150 and S ∞= a 1 −r = 80/1 −1 2 = 80 1 2 = 160.</p>
-        <p class="step">So S ∞−S 4 = 160 −150 = 10.</p>
-        <p class="step">a For the series, a = 100 and r = 10 100 = 1/10.</p>
-        <p class="step">Thus S 4 = a (1 −rn) 1 −r = 100 1 − 1 10 !4 1 −1 10 = 111 1 10 and S ∞= a 1 −r = 100/1 −1 10 = 100 9 10 !</p>
-        <p class="step">= 1000 9 .</p>
-        <p class="step">So S ∞−S 4 = 1000/9 −111 1 10 = 1/90.</p>
-        <p class="step">b For the series, a = 100 and r = −80 100 = −4/5.</p>
-        <p class="step">Thus S 4 = a (1 −rn) 1 −r = 100 1 − −4 5 !4 1 − −4 5 !</p>
-        <p class="step">= 164 5 and S ∞= a 1 −r = 100/1 − −4 5 !</p>
-        <p class="step">= 100 9 5 !</p>
-        <p class="step">= 500 9 .</p>
-        <p class="step">So S ∞−S 4 = 500/9 −164 5 = 2234/45.</p>
-        <p class="step">c 10 a The numbers installing reflective house numbers in each subsequent month is 20% of that in the previous month.</p>
-        <p class="step">This is equivalent to multiplying the number in the previous month by 20% = 0.2.</p>
-        <p class="step">Hence, this gives us a GP as all terms have a common ratio of 0.2.</p>
-        <p class="step">b This is a GP with a = 10 000 × 0.2 = 2000 and r = 0.2 S ∞= a 1 −r = 2000/1 −0.2 = 2500 c S n = a (rn −1) r −1 S 4 = 2000  0.24 −1  0.2 −1 = 2496 S ∞−S 4 = 2500 −2496 = 4 11 a This is a GP with a = 1000 and r = 0.9.</p>
-        <p class="step">5 S ∞= a 1 −r = 1000/1 −0.9 = 1000/0.1 = 10 000 Thus the advertisements will eventually bring in 10 000 sales.</p>
-        <p class="step">b The first 10 advertisements are S 10 = a (1 −rn) 1 −r = 1000  1 −0.910 1 −0.9 = 6513.2 .</p>
-        <p class="step">Thus S ∞−S 10 = 10 000 −6513.2 .</p>
-        <p class="step"> 3487 12 a The left-hand side forms a GP with a = 5 and r = x.</p>
-        <p class="step">S ∞= a 1 −r = 5/1 −x Hence, solving the equation gives: S ∞= 10/51 −x = 10 5 = 10 −10x 10x = 5 x = 1 2 b The left-hand side forms a GP with a = 5 and r = x.</p>
-        <p class="step">S ∞= a 1 −r = 5/1 −x Hence, solving the equation gives: S ∞= 3/51 −x = 3 5 = 3 −3x 3x = −2 x = −2 3 c The left-hand side forms a GP with a = 5 and r = −x.</p>
-        <p class="step">S ∞= a 1 −r = 5/1 −(−x) = 5 1 + x Hence, solving the equation gives: S ∞= 15/51 + x = 15 5 = 15 + 15x 15x = −10 x = −2 3 d The left-hand side forms a GP with a = x and r = 1/3.</p>
-        <p class="step">6 S ∞= a 1 −r = x 1 −1 3 = x 2 3 = 3x 2 Hence, solving the equation gives: S ∞= 2/32 x = 2 x = 4 3 e The left-hand side forms a GP with a = x and r = −1/3.</p>
-        <p class="step">S ∞= a 1 −r = x 1 − −1 3 !</p>
-        <p class="step">= x 4 3 = 3x 4 Hence, solving the equation gives: S ∞= 2/34 x = 2 x = 8 3 f The left-hand side forms a GP with a = x and r = 2/3.</p>
-        <p class="step">S ∞= a 1 −r = x 1 −2 3 = x 1 3 = 3x Hence, solving the equation gives: S ∞= 2 3x = 2 x = 2 3 13 a This is a GP with a = 7 and r = x.</p>
-        <p class="step">For a limiting sum, |r| &lt; 1, so |x| &lt; 1 or −1 &lt; x &lt; 1.</p>
-        <p class="step">So S ∞= a 1 −r = 7/1 −x.</p>
-        <p class="step">7 b This is a GP with a = 2x and r = 6x2 2x = 3x.</p>
-        <p class="step">For a limiting sum, |r| &lt; 1, so |3x| &lt; 1 or −1 3 &lt; x &lt; 1/3.</p>
-        <p class="step">So S ∞= a 1 −r = 2x 1 −3x.</p>
-        <p class="step">c This is a GP with a = 1 and r = x −1.</p>
-        <p class="step">For a limiting sum, |r| &lt; 1, so |x −1| &lt; 1 or −1 &lt; x −1 &lt; 1 or 0 &lt; x &lt; 2.</p>
-        <p class="step">So S ∞= 1/1 −(x −1) = 1/2 −x.</p>
-        <p class="step">d This is a GP with a = 1 and r = 1 + x.</p>
-        <p class="step">For a limiting sum, |r| &lt; 1, so |1 + x| &lt; 1 or −1 &lt; 1 + x &lt; 1 or −2 &lt; x &lt; 0.</p>
-        <p class="step">So S ∞= a 1 −r = 1/1 −(1 + x) = −1 x.</p>
-        <p class="step">14 a This is a GP with a = 1 and r = 1.01.</p>
-        <p class="step">As |r| = 1.01 &gt; 1, no limiting sum exists.</p>
-        <p class="step">b This is a GP with a = 1 and r = −0.99.</p>
-        <p class="step">As |r| = 0.99 &lt; 1, there is a limiting sum, which is: S ∞= a 1 −r = 1/1 −(−0.99) = 1 1 + 0.99 = 1/1.99 = 100 199 c This is a GP with a = 1 and r = 1.01−1.</p>
-        <p class="step">As |r| = 1.01−1 &lt; 1, there is a limiting sum, which is: 8 S ∞= a 1 −r = 1/1 −1.01−1 = 1/1 − 1/1.01 = 1/1.01/1.01 − 1/1.01 = 1/0.01/1.01 !</p>
-        <p class="step">= 1.01/0.01 = 101 d This is a GP with a = 0.72 and r = −0.12/0.72 = −1/6.</p>
-        <p class="step">As |r| = 1 6 &lt; 1, there is a limiting sum, which is: S ∞= a 1 −r = 0.72/1 − −1 6 !</p>
-        <p class="step">= 0.72 1 + 1 6 = 0.72 7 6 = 6 7(0.72) = 108 175 15 This is a GP with a = 16 √ 5 and r = 4 √ 5 16 √ 5 = 1/4.</p>
-        <p class="step">S ∞= a 1 −r = 16 √ 5/1 −1 4 = 16 √ 5 3 4 = 4 3  16 √ 5  = 64 √ 5 3 a This is a GP with a = 108 √ 7 and r = −36 √ 7 108 √ 7 = −1/3.</p>
-        <p class="step">S ∞= a 1 −r = 108 √ 7/1 − −1 3 !</p>
-        <p class="step">= 108 √ 7 4 3 = 3 4  108 √ 7  = 81 √ 7 b 9 This is a GP with a = 7 and r = √ 7 7 .</p>
-        <p class="step">S ∞= a 1 −r = 7/1 − √ 7 7 = 7/7 − √ 7 7 = 49/7 − √ 7 = 49/7 − √ 7 × 7 + √ 7 7 + √ 7 = 49(7 + √ 7) 49 −7 = 49(7 + √ 7) 42 = 7(7 + √ 7) 6 c This is a GP with a = 4 and r = − √ 2 2 .</p>
-        <p class="step">S ∞= a 1 −r = 4/1 − − √ 2 2  = 4 1 + √ 2 2 = 8 2 + √ 2 = 8 2 + √ 2 × 2 − √ 2/2 − √ 2 = 8(2 − √ 2) 4 −2 = 8(2 − √ 2) 2 = 4(2 − √ 2) d This is a GP with a = 5 and r = −2 √ 5 5 = −2 √ 5 .</p>
-        <p class="step">S ∞= a 1 −r = 5/1 − −2 √ 5 !</p>
-        <p class="step">= 5 1 + 2 √ 5 = 5 √ 5 √ 5 + 2 = 5 √ 5 √ 5 + 2 × √ 5 −2 √ 5 −2 = 5 √ 5( √ 5 −2) 5 −4 = 5 √ 5( √ 5 −2) = 25 −10 √ 5 = 5(5 −2 √ 5) e This is a GP with a = 9 and r = 3 √ 10 9 = √ 10 3 .</p>
-        <p class="step">But r = √ 10 3 &gt; 1, and hence there is no limiting sum.</p>
-        <p class="step">f 10 This is a GP with a = 1 and r = 1 − √ 3.</p>
-        <p class="step">S ∞= a 1 −r = 1/1 −  1 − √ 3  = 1 √ 3 = √ 3 3 g This is a GP with a = 1 and r = 2 − √ 3.</p>
-        <p class="step">S ∞= a 1 −r = 1/1 −  2 − √ 3  = 1 √ 3 −1 = 1 √ 3 −1 × √ 3 + 1 √ 3 + 1 = √ 3 + 1/3 −1 = 1 2( √ 3 + 1) h 16 a P∞ n=1 1 3 !n = 1 3 + 1 32 + 1 33 + .</p>
-        <p class="step">This is a GP with a = 1 3 and r = 1/3, hence the sum is given by: S ∞= a 1 −r = 1/31 −1 3 = 1 3 2 3 = 2 b P∞ n=1 7 × 1 2 !n = 7 2 + 7 22 + 7 23 + .</p>
-        <p class="step">This is a GP with a = 7 2 and r = 1/2, hence the sum is given by: S ∞= a 1 −r = 7/21 −1 2 = 7 2 1 2 = 7 c P∞ n=1 40 × −3 5 !n = −40 3 5 !</p>
-        <p class="step">+ 40 3 5 !2 −40 3 5 !3 + .</p>
-        <p class="step">This is a GP with a = −120 5 = −24 and r = −3/5, hence the sum is given by: 11 S ∞= a 1 −r = −24/1 − −3 5 !</p>
-        <p class="step">= −24 8 5 = −15 17 Consider one period consisting of 2 years, whereupon annual rainfall will increase and decrease accord- ingly.</p>
-        <p class="step">Hence, the rainfall forms a GP with common ratio r = 1.2 × 0.8 = 0.96.</p>
-        <p class="step">In the first period (2 years, starting at 400mm), 400 + 400(1.2) = 880mm fell i.e.</p>
-        <p class="step">let a = 880.</p>
-        <p class="step">Since r &lt; 1, a limiting sum exists and the total rainfall that will eventually have fallen is: S ∞= a 1 −r = 880/1 −0.96 = 22 000mm 18 a S ∞= 5a1 a 1 −r = 5a 1/1 −r = 5/1 −r = 1 5 r = 4 5 b a2 = ar = 6 r = 6 a S ∞= 27 a 1 −r = 27 a 1 −6 a = 27 a2 a −6 = 27 a2 = 27a −162 a2 −27a + 162 = 0 (a −9)(a −18) = 0 a = 9 or a = 18 c S ∞−S 1 = 5a1 S ∞−a1 = 5a1 S ∞= 6a1 a 1 −r = 6a 1/1 −r = 6/16 = 1 −r r = 1 −1 6 r = 5 6 Hence the ratio of the sum of the terms is r = 5/6.</p>
-        <p class="step">12 d The sum of all terms from the third term on is equal to the sum of all terms with the sum of the first two terms subtracted from it.</p>
-        <p class="step">That is: S = S ∞−S 2 = a 1 −r − a  1 −r2 1 −r = a 1 −r −a −ar2/1 −r = a −a + ar2/1 −r = ar2/1 −r i S = a1 ar2/1 −r = a r2/1 −r = 1 r2 = 1 −r r2 + r −1 = 0 Using the quadratic formula: r = −1 ± p 12 −4(1)(−1) 2(1) = −1 ± √ 1 + 4 2 = −1 ± √ 5 2 But r = −1/2 − √ 5 &lt; −1, so it is not a possible solution, hence the solution is r = −1 2 + 1 2 √ 5 ii S = a2 ar2/1 −r = ar r2/1 −r = r r2 = r −r2 2r2 −r = 0 r(2r −1) = 0 r = 0 or 1 2 but r , 0 Hence, r = 1/2.</p>
-        <p class="step">iii S = a1 + a2 ar2/1 −r = a + ar r2/1 −r = 1 + r r2 = (1 + r)(1 −r) r2 = 1 −r2 2r2 = 1 r2 = 1 2 r = ± 1 √ 2 13 r = 1 √ 2 × √ 2 √ 2 or r = −1 √ 2 × √ 2 √ 2 r = √ 2 2 or r = − √ 2 2 19 a This is a GP with a = 1 and r = x2 −1.</p>
-        <p class="step">To have a limiting sum, |r| &lt; 1, so: x2 −1 &lt; 1 −1 &lt; x2 −1 &lt; 1 0 &lt; x2 &lt; 2 Hence: − √ 2 &lt; x &lt; √ 2 and x , 0 (since x2 , 0).</p>
-        <p class="step">S ∞= a 1 −r = 1/1 −(x2 −1) = 1/2 −x2 b This is a GP with a = 1 and r = 1 1 + x2 .</p>
-        <p class="step">To have a limiting sum, |r| &lt; 1, so: 1 1 + x2 &lt; 1 1 &lt; 1 + x2 x2 + 1 &gt; 1 or x2 + 1 &lt; −1 Hence: x2 &gt; 0 or x2 &lt; −2 (not possible) Thus there is a limiting sum for x , 0.</p>
-        <p class="step">S ∞= a 1 −r = 1/1 − 1 1 + x2 = 1 + x2 1 + x2 −1 = 1 + x2 x2 20 This is a GP with a = v and r = v w = S ∞= a 1 −r = v 1 −v a w = v 1 −v w −wv = v w = v + wv w = v(1 + w) v = w 1 + w b 14 This is a GP with a = w and r = −w2 w = −w S ∞= a 1 −r = w 1 −(−w) = w 1 + w = v (from part b) c If v = 1/3, then w = 1/31 −1 3 = 1 3 2 3 = 1/2.</p>
-        <p class="step">Hence the limiting sum is: S ∞= w 1 + w = 1/21 + 1 2 = 1 2 3 2 = 1 3 = v d 15</p>
+        <p class="step"><strong>b ·</strong> n 1 2 3 4 5 6 an 10 −10/10 −10/10 −10 S n 10 0 10 0 10 0 S n oscillates between 0 and 10 as n →∞.</p>
+        <p class="step"><strong>c ·</strong> n 1 2 3 4 5 6 an 10 20 40 80 160 320 S n 10 30 70 150 310 630 S n →∞as n →∞. 4</p>
+        <p class="step"><strong>d ·</strong> n 1 2 3 4 5 6 an 10 −20/40 −80 160 −320 S n 10 −10/30 −50 110 −210 S n oscillates between larger and larger positive and negative numbers as n →∞. 9 For the series, a = 80 and r = 40 80 = 1/2. Thus S 4 = a (1 −rn) 1 −r = 80 1 − 1 2 !4 1 −1 2 = 150 and S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 80/1 −1 2 = 80 1 2 = 160. So S ∞−S 4 = 160 −150 = 10.</p>
+        <p class="step"><strong>a ·</strong> For the series, a = 100 and r = 10 100 = 1/10. Thus S 4 = a (1 −rn) 1 −r = 100 1 − 1 10 !4 1 −1 10 = 111 1 10 and S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 100/1 −1 10 = 100 9 10 ! = 1000 9 . So S ∞−S 4 = 1000/9 −111 1 10 = 1/90.</p>
+        <p class="step"><strong>b ·</strong> For the series, a = 100 and r = −80 100 = −4/5. Thus S 4 = a (1 −rn) 1 −r = 100 1 − −4 5 !4 1 − −4 5 ! = 164 5 and S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 100/1 − −4 5 ! = 100 9 5 ! = 500 9 . So S ∞−S 4 = 500/9 −164 5 = 2234/45.</p>
+        <p class="step"><strong>c ·</strong> 10</p>
+        <p class="step"><strong>a ·</strong> The numbers installing reflective house numbers in each subsequent month is 20% of that in the previous month. This is equivalent to multiplying the number in the previous month by 20% = 0.2. Hence, this gives us a GP as all terms have a common ratio of 0.2.</p>
+        <p class="step"><strong>b ·</strong> This is a GP with a = 10 000 × 0.2 = 2000 and r = 0.2 S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 2000/1 −0.2 = 2500</p>
+        <p class="step"><strong>c ·</strong> S n = a (rn −1) r −1 S 4 = 2000  0.24 −1  0.2 −1 = 2496 S ∞−S 4 = 2500 −2496 = 4/11</p>
+        <p class="step"><strong>a ·</strong> This is a GP with a = 1000 and r = 0.9. 5 S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1000/1 −0.9 = 1000/0.1 = 10 000 Thus the advertisements will eventually bring in 10 000 sales.</p>
+        <p class="step"><strong>b ·</strong> The first 10 advertisements are S 10 = a (1 −rn) 1 −r = 1000  1 −0.910 1 −0.9 = 6513.2 . . . Thus S ∞−S 10 = 10 000 −6513.2 . . .  3487/12</p>
+        <p class="step"><strong>a ·</strong> The left-hand side forms a GP with a = 5 and r = x. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 5/1 −x Hence, solving the equation gives: S ∞= 10/51 −x = 10 5 = 10 −10x 10x = 5 x = 1/2</p>
+        <p class="step"><strong>b ·</strong> The left-hand side forms a GP with a = 5 and r = x. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 5/1 −x Hence, solving the equation gives: S ∞= 3/51 −x = 3 5 = 3 −3x 3x = −2 x = −2/3</p>
+        <p class="step"><strong>c ·</strong> The left-hand side forms a GP with a = 5 and r = −x. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 5/1 −(−x) = 5 1 + x Hence, solving the equation gives: S ∞= 15/51 + x = 15 5 = 15 + 15x 15x = −10 x = −2/3</p>
+        <p class="step"><strong>d ·</strong> The left-hand side forms a GP with a = x and r = 1/3. 6 S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = x 1 −1 3 = x 2 3 = 3x 2 Hence, solving the equation gives: S ∞= 2/32 x = 2 x = 4/3</p>
+        <p class="step"><strong>e ·</strong> The left-hand side forms a GP with a = x and r = −1/3. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = x 1 − −1 3 ! = x 4 3 = 3x 4 Hence, solving the equation gives: S ∞= 2/34 x = 2 x = 8/3</p>
+        <p class="step"><strong>f ·</strong> The left-hand side forms a GP with a = x and r = 2/3. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = x 1 −2 3 = x 1 3 = 3x Hence, solving the equation gives: S ∞= 2 3x = 2 x = 2 3/13</p>
+        <p class="step"><strong>a ·</strong> This is a GP with a = 7 and r = x. For a limiting sum, |r| &lt; 1, so |x| &lt; 1 or −1 &lt; x &lt; 1. So S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 7/1 −x. 7</p>
+        <p class="step"><strong>b ·</strong> This is a GP with a = 2x and r = 6x2 2x = 3x. For a limiting sum, |r| &lt; 1, so |3x| &lt; 1 or −1 3 &lt; x &lt; 1/3. So S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 2x 1 −3x.</p>
+        <p class="step"><strong>c ·</strong> This is a GP with a = 1 and r = x −1. For a limiting sum, |r| &lt; 1, so |x −1| &lt; 1 or −1 &lt; x −1 &lt; 1 or 0 &lt; x &lt; 2. So S ∞= 1/1 −(x −1) = 1/2 −x.</p>
+        <p class="step"><strong>d ·</strong> This is a GP with a = 1 and r = 1 + x. For a limiting sum, |r| &lt; 1, so |1 + x| &lt; 1 or −1 &lt; 1 + x &lt; 1 or −2 &lt; x &lt; 0. So S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/1 −(1 + x) = −1 x. 14</p>
+        <p class="step"><strong>a ·</strong> This is a GP with a = 1 and r = 1.01. As |r| = 1.01 &gt; 1, no limiting sum exists.</p>
+        <p class="step"><strong>b ·</strong> This is a GP with a = 1 and r = −0.99. As |r| = 0.99 &lt; 1, there is a limiting sum, which is: S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/1 −(−0.99) = 1 1 + 0.99 = 1/1.99 = 100 199</p>
+        <p class="step"><strong>c ·</strong> This is a GP with a = 1 and r = 1.01−1. As |r| = 1.01−1 &lt; 1, there is a limiting sum, which is: 8 S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/1 −1.01−1 = 1/1 − 1/1.01 = 1/1.01/1.01 − 1/1.01 = 1/0.01/1.01 ! = 1.01/0.01 = 101</p>
+        <p class="step"><strong>d ·</strong> This is a GP with a = 0.72 and r = −0.12/0.72 = −1/6. As |r| = 1 6 &lt; 1, there is a limiting sum, which is: S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.72/1 − −1 6 ! = 0.72 1 + 1 6 = 0.72 7 6 = 6 7(0.72) = 108 175 15 This is a GP with a = 16 √ 5 and r = 4 √ 5 16 √ 5 = 1/4. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 16 √ 5/1 −1 4 = 16 √ 5 3 4 = 4 3  16 √ 5  = 64 √ 5/3</p>
+        <p class="step"><strong>a ·</strong> This is a GP with a = 108 √ 7 and r = −36 √ 7 108 √ 7 = −1/3. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 108 √ 7/1 − −1 3 ! = 108 √ 7 4 3 = 3 4  108 √ 7  = 81 √ 7</p>
+        <p class="step"><strong>b ·</strong> 9 This is a GP with a = 7 and r = √ 7 7 . S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 7/1 − √ 7 7 = 7/7 − √ 7 7 = 49/7 − √ 7 = 49/7 − √ 7 × 7 + √ 7 7 + √ 7 = 49(7 + √ 7) 49 −7 = 49(7 + √ 7) 42 = 7(7 + √ 7) 6</p>
+        <p class="step"><strong>c ·</strong> This is a GP with a = 4 and r = − √ 2 2 . S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 4/1 − − √ 2 2  = 4 1 + √ 2 2 = 8 2 + √ 2 = 8 2 + √ 2 × 2 − √ 2/2 − √ 2 = 8(2 − √ 2) 4 −2 = 8(2 − √ 2) 2 = 4(2 − √ 2)</p>
+        <p class="step"><strong>d ·</strong> This is a GP with a = 5 and r = −2 √ 5 5 = −2 √ 5 . S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 5/1 − −2 √ 5 ! = 5 1 + 2 √ 5 = 5 √ 5 √ 5 + 2 = 5 √ 5 √ 5 + 2 × √ 5 −2 √ 5 −2 = 5 √ 5( √ 5 −2) 5 −4 = 5 √ 5( √ 5 −2) = 25 −10 √ 5 = 5(5 −2 √ 5)</p>
+        <p class="step"><strong>e ·</strong> This is a GP with a = 9 and r = 3 √ 10 9 = √ 10 3 . But r = √ 10 3 &gt; 1, and hence there is no limiting sum.</p>
+        <p class="step"><strong>f ·</strong> 10 This is a GP with a = 1 and r = 1 − √ 3. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/1 −  1 − √ 3  = 1 √ 3 = √ 3/3</p>
+        <p class="step"><strong>g ·</strong> This is a GP with a = 1 and r = 2 − √ 3. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/1 −  2 − √ 3  = 1 √ 3 −1 = 1 √ 3 −1 × √ 3 + 1 √ 3 + 1 = √ 3 + 1/3 −1 = 1 2( √ 3 + 1)</p>
+        <p class="step"><strong>h ·</strong> 16</p>
+        <p class="step"><strong>a ·</strong> P∞ n=1 1 3 !n = 1 3 + 1 32 + 1 33 + . . . This is a GP with a = 1 3 and r = 1/3, hence the sum is given by: S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/31 −1 3 = 1 3 2 3 = 2</p>
+        <p class="step"><strong>b ·</strong> P∞ n=1 7 × 1 2 !n = 7 2 + 7 22 + 7 23 + . . . This is a GP with a = 7 2 and r = 1/2, hence the sum is given by: S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 7/21 −1 2 = 7 2 1 2 = 7</p>
+        <p class="step"><strong>c ·</strong> P∞ n=1 40 × −3 5 !n = −40 3 5 ! + 40 3 5 !2 −40 3 5 !3 + . . . This is a GP with a = −120 5 = −24 and r = −3/5, hence the sum is given by: 11 S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = −24/1 − −3 5 ! = −24 8 5 = −15 17 Consider one period consisting of 2 years, whereupon annual rainfall will increase and decrease accord- ingly. Hence, the rainfall forms a GP with common ratio r = 1.2 × 0.8 = 0.96. In the first period (2 years, starting at 400mm), 400 + 400(1.2) = 880mm fell i.e. let a = 880. Since r &lt; 1, a limiting sum exists and the total rainfall that will eventually have fallen is: S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 880/1 −0.96 = 22 000mm 18</p>
+        <p class="step"><strong>a ·</strong> S ∞= 5a1</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 5a 1/1 −r = 5/1 −r = 1 5 r = 4/5</p>
+        <p class="step"><strong>b ·</strong> a2 = ar = 6 r = 6</p>
+        <p class="step"><strong>a ·</strong> S ∞= 27</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 27</p>
+        <p class="step"><strong>a ·</strong> 1 −6</p>
+        <p class="step"><strong>a ·</strong> = 27 a2</p>
+        <p class="step"><strong>a ·</strong> −6 = 27 a2 = 27a −162 a2 −27a + 162 = 0 (a −9)(a −18) = 0</p>
+        <p class="step"><strong>a ·</strong> = 9 or a = 18</p>
+        <p class="step"><strong>c ·</strong> S ∞−S 1 = 5a1 S ∞−a1 = 5a1 S ∞= 6a1</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 6a 1/1 −r = 6/16 = 1 −r r = 1 −1 6 r = 5 6 Hence the ratio of the sum of the terms is r = 5/6. 12</p>
+        <p class="step"><strong>d ·</strong> The sum of all terms from the third term on is equal to the sum of all terms with the sum of the first two terms subtracted from it. That is: S = S ∞−S 2 =</p>
+        <p class="step"><strong>a ·</strong> 1 −r −</p>
+        <p class="step"><strong>a ·</strong>  1 −r2 1 −r =</p>
+        <p class="step"><strong>a ·</strong> 1 −r −a −ar2/1 −r = a −a + ar2/1 −r = ar2/1 −r i S = a1 ar2/1 −r = a r2/1 −r = 1 r2 = 1 −r r2 + r −1 = 0 Using the quadratic formula: r = −1 ± p 12 −4(1)(−1) 2(1) = −1 ± √ 1 + 4 2 = −1 ± √ 5 2 But r = −1/2 − √ 5 &lt; −1, so it is not a possible solution, hence the solution is r = −1 2 + 1 2 √ 5 ii S = a2 ar2/1 −r = ar r2/1 −r = r r2 = r −r2 2r2 −r = 0 r(2r −1) = 0 r = 0 or 1 2 but r , 0 Hence, r = 1/2. iii S = a1 + a2 ar2/1 −r = a + ar r2/1 −r = 1 + r r2 = (1 + r)(1 −r) r2 = 1 −r2 2r2 = 1 r2 = 1 2 r = ± 1 √ 2 13 r = 1 √ 2 × √ 2 √ 2 or r = −1 √ 2 × √ 2 √ 2 r = √ 2 2 or r = − √ 2 2/19</p>
+        <p class="step"><strong>a ·</strong> This is a GP with a = 1 and r = x2 −1. To have a limiting sum, |r| &lt; 1, so: x2 −1 &lt; 1 −1 &lt; x2 −1 &lt; 1 0 &lt; x2 &lt; 2 Hence: − √ 2 &lt; x &lt; √ 2 and x , 0 (since x2 , 0). S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/1 −(x2 −1) = 1/2 −x2</p>
+        <p class="step"><strong>b ·</strong> This is a GP with a = 1 and r = 1 1 + x2 . To have a limiting sum, |r| &lt; 1, so: 1 1 + x2 &lt; 1 1 &lt; 1 + x2 x2 + 1 &gt; 1 or x2 + 1 &lt; −1 Hence: x2 &gt; 0 or x2 &lt; −2 (not possible) Thus there is a limiting sum for x , 0. S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1/1 − 1 1 + x2 = 1 + x2 1 + x2 −1 = 1 + x2 x2 20 This is a GP with a = v and r = v w = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = v 1 −v</p>
+        <p class="step"><strong>a ·</strong> w = v 1 −v w −wv = v w = v + wv w = v(1 + w) v = w 1 + w</p>
+        <p class="step"><strong>b ·</strong> 14 This is a GP with a = w and r = −w2 w = −w S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = w 1 −(−w) = w 1 + w = v (from part b)</p>
+        <p class="step"><strong>c ·</strong> If v = 1/3, then w = 1/31 −1 3 = 1 3 2 3 = 1/2. Hence the limiting sum is: S ∞= w 1 + w = 1/21 + 1 2 = 1 2 3 2 = 1 3 = v</p>
+        <p class="step"><strong>d ·</strong> 15</p>
       </div>
     </article>
     <article class="q" id="q9">

@@ -108,4 +108,7 @@ footer.site{margin-top:2rem;color:var(--muted);font-size:.86rem}
 ul.prior-list{margin:.2rem 0 0;padding-left:1.15rem}
 ul.prior-list li{margin:.28rem 0;line-height:1.35}
 .notes .note-block{display:none} /* legacy long prior blocks — prefer .prior-list */
+.sol-table th,.sol-table td{border:1px solid var(--line);padding:.35rem .5rem;text-align:center}
+.sol-table th{background:#fbfaf7;font-weight:600}
+.sol-table td:first-child{text-align:left;background:#faf8f4}
 @media print{.site-bar,nav.jump,.chapter-nav,.no-print,.teacher-note{display:none!important}.shell{display:block}}
