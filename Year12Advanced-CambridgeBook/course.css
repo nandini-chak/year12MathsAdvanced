@@ -86,6 +86,8 @@ svg.plot .curve.image{stroke:var(--image)}
 .legend .i i{border-color:var(--image)}
 .q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.05rem;margin-top:1rem}
 .q h2{font-size:1.05rem;margin:0 0 .45rem;font-family:var(--display)}
+.q-part{margin:.85rem 0 1rem;padding:.65rem .75rem .75rem;background:#fbfaf7;border:1px solid var(--line);border-radius:12px}
+.q-part > .btn.show{margin:0}
 .sol{display:none;margin-top:.7rem;padding-top:.7rem;border-top:1px dashed var(--line)}
 .sol.open{display:block}
 .sol .formula-quick{margin:.55rem 0 .75rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.4}
