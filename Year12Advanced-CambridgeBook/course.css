@@ -88,6 +88,10 @@ svg.plot .curve.image{stroke:var(--image)}
 .q h2{font-size:1.05rem;margin:0 0 .45rem;font-family:var(--display)}
 .sol{display:none;margin-top:.7rem;padding-top:.7rem;border-top:1px dashed var(--line)}
 .sol.open{display:block}
+.sol .formula-quick{margin:.55rem 0 .75rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.4}
+.sol .step{margin:.45rem 0;line-height:1.45}
+.sol .step strong{color:var(--navy)}
+.sol .final{margin:.35rem 0 .6rem;font-weight:600}
 .ok{font-size:.82rem;color:var(--ok);margin:.4rem 0 0}
 .band{display:inline-block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.15rem .45rem;border-radius:999px;background:#eef2ff;color:var(--navy);margin-left:.35rem}
 .band.dev{background:#ecfdf5}.band.ch{background:#fff4e5}
