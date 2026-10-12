@@ -38,10 +38,13 @@
       <div class="stem">
         <p>Approximate ∫6 2 f(x) dx in each part by using the formula 1 2(a + b)h for the area of a trapezium. x</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a ∫6 2 f(x) dx ≑1 2(12 + 8)(6 −2) = 40 b ∫6 2 f(x) dx ≑1 2(6.2 + 4.8)(6 −2) = 22 c ∫6 2 f(x) dx ≑1 2 (−4 + (−9)) (6 −2) = −26</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q2">
@@ -49,11 +52,14 @@
       <div class="stem">
         <p>Three function values are given in the table below. x</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a ∫10 2 f(x) dx  1 2(12 + 20)(6 −2) + 1 2(20 + 30)(6 −2) = 164 b ∫10 2 f(x) dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + .</p>
         <p class="step">.)) = 10 −2 2 × 2 ( f(2) + f(10) + 2 f(6)) = 10 −2 4 (12 + 30 + 2 × 20) = 164</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q3">
@@ -61,11 +67,14 @@
       <div class="stem">
         <p>Three function values are given in the table below. x −5</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a ∫5 −5 f(x) dx ≑1 2(2.4 + 2.6) (0 −(−5)) + 1 2(2.6 + 4.4)(5 −0) = 30 b ∫5 −5 f(x) dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + .</p>
         <p class="step">.)) = 5 −(−5) 2 × 2 ( f(−5) + f(5) + 2 f(0)) = 10 4 (2.4 + 4.4 + 2 × 2.6) = 30</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q4">
@@ -73,18 +82,60 @@
       <div class="stem">
         <p>Show, by means of a diagram, that the trapezoidal rule will: a overestimate ∫b a f(x) dx, if f ′′(x) &gt; 0 for a ≤x ≤b, b underestimate ∫b a f(x) dx, if f ′′(x) &lt; 0 for a ≤x ≤b.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
-        <p class="step"><strong>a ·</strong> The curve is concave up, so the chord is above the curve, and the area under the chord will be greater than the area under the curve. The diagram below shades the area that is overestimated in a typical concave up curve.</p>
-        <p class="step"><strong>b ·</strong> The curve is concave down, so the chord is underneath the curve, and the area under the chord will be less than the area under the curve. The diagram below shades the area that is underestimated in a typical concave down curve. 5 x 0 1 2 3 4 y 0 3 4 3 0 a ∫4 0 f(x) dx ≑b −a 2n ( f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 4 −0 2 × 4 ( f(0) + f(4) + 2 (f(1) + f(2) + f(3))) = 4 8 (0 + 0 + 2(3 + 4 + 3)) = 10 b ∫4 0 x(4 −x) dx = ∫4 0  4x −x2 dx = &quot; 2x2 −x3 3 #4 0 = 2 × 42 −43 3 ! − 2 × 02 −03 3 ! = 32 −64/3 −0 + 0 = 102 3 The curve is concave down and hence the trapezoidal estimate will not cover the entire region under the curve. This is shown in the diagram below c The error is 102/3 −10 = 2/3, hence the percentage error is 2 3 ÷ 102 3 = 61 4% d 6 a x 1 2 3 4 5 y 6 3 2 3 2 6 5 b ∫5 1 f(x) dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 5 −1 2 × 4 (f(1) + f(5) + 2 (f(2) + f(3) + f(4))) = 4 8 6 + 6 5 + 2 3 + 2 + 3 2 !! = 10 1 10 c y = 6 x = 6x−1 dy dx = −6x−2 d2y dx2 = 12x−3 = 12 x3 Thus, for all x &gt; 0, d2y dx2 &gt; 0, so the curve is concave up over the entire region in which we are using the trapezoidal rule. This in turn means that we will overestimate the area of the curve. 7 a x 4 5 6 7 8 9 y 2/2.2361/2.4495/2.6458/2.8285 3 b ∫9 4 f(x) dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 9 −4 2 × 5 (f(1) + f(5) + 2 (f(2) + f(3) + f(4))) = 5 10 (2 + 3 + 2(2.2361 + 2.4495 + 2.6458 + 2.8285))  12.660 (to three decimal places) or 12.7 (to three significant figures) c ∫9 4 √x dx = ∫9 4 x 1 2 dx = 2 3 x 3 2  9 4 = 2 3 9/32 −4 3 2  = 2 3[27 −8] = 2 3[19] = 122 3 Now, if y = √x = x 1 2 , then dy dx = 1 2 x −1 2 and d2y dx2 = −1 4 x −3 2 = − 1 4x√x. This means that for all x &gt; 0, d2y dx2 &lt; 0, and hence the curve will be concave down over the region which we are using the trapezoidal rule to approximate area. This, in turn, means that the area will be underestimated. 8 ∫1 0 2−x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 1 −0 2 × 2 ( f(0) + f(1) + 2 ( f(0.5))) = 1 4 1 + 1 2 + 2 × 1 √ 2 ! ≑0.73 (to two significant figures) a ∫0 −2 2−x dx ≑b −a 2n ( f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 0 −(−2) 2 × 2 (f(−2) + f(0) + 2 ( f(−1))) = 1 2(4 + 1 + 2 × 2) ≑4.5 (to two significant figures) b ∫3 1 3√ 9 −2x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 3 −1 2 × 2 ( f(1) + f(3) + 2 ( f(2))) = 1 2  3√ 7 + 3√ 3 + 2 × 3√ 5  ≑3.4 (to two significant figures) c ∫−1 −13 √ 3 −x dx ≑b −a 2n ( f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = −1 −(−13) 2 × 2 ( f(−13) + f(−1) + 2 ( f(−7))) = 3 √ 16 + √ 4 + 2 × √ 10  ≑37 (to two significant figures) d 9 a ∫6 2 1 x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 6 −2 2 × 4 (f(2) + f(6) + 2 (f(3) + f(4) + f(5))) = 4 8/12 + 1 6 + 2/13 + 1 4 + 1 5 !! ≑1.12 (to three significant figures) b ∫2 0/12 + √x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 2 −0 2 × 4 (f(0) + f(2) + 2 (f(0.5) + f(1) + f(1.5))) = 1 4 1 2 + √ 0 + 1 2 + √ 2 + 2 1 2 + √ 0.5 + 1 2 + √ 1 + 1 2 + √ 1.5 !! ≑0.705 (to three significant figures) c ∫8 4 √ x2 −3 dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 8 −4 2 × 4 (f(4) + f(8) + 2 (f(5) + f(6) + f(7))) = 1 2 √ 42 −3 + √ 82 −3 + 2 √ 52 −3 + √ 62 −3 + √ 72 −3  ≑22.9 (to three significant figures) d ∫2 1 log10 x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 2 −1 2 × 4 (f(1) + f(2) + 2 (f(1.25) + f(1.5) + f(1.75))) = 1 8  log10 1 + log10 2 + 2  log10/1.25 + log10/1.5 + log10/1.75 ≑0.167 (to three significant figures) 10 Distance travelled = ∫5 0 v dt  b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 5 −0 2 × 5 ( f(0) + f(5) + 2 ( f(1) + f(2) + f(3) + f(4))) = 1 2 (1.5 + 2.7 + 2(1.3 + 1.4 + 2.0 + 2.4)) = 9.2 metres 11 Surface area of water = ∫40 0 f(x) dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 40 −0 2 × 4 ( f(0) + f(40) + 2 ( f(10) + f(20) + f(30))) = 40 8 (0 + 0 + 2(20 + 18 + 17)) = 550 m2 12 Area of vertical rock cutting = ∫300 0 f(x) dx  b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 300 −0 2 × 6 (f(0) + f(300) + 2 ( f(50) + f(100) + f(150) + f(200) + f(250))) = 25 (5 + 3 + 2(10 + 13 + 14 + 11 + 7)) = 2950 m2 13 a ∫1 0 √ 1 −x2 dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 1 −0 2 × 4 (f(0) + f(1) + 2 (f(0.25) + f(0.5) + f(0.75))) = 1 8 √ 1 −02 + √ 1 −12 + 2 p 1 −0.252 + p 1 −0.52 + p 1 −0.752  0.7489 (to four decimal places) b ∫1 0 √ 1 −x2 dx is the area of 1 4 of a circle with radius 1 unit (the right half of the semi-circle in the question). Hence ∫1 0 √ 1 −x2 dx = 1 4  π × 12 = π 4 . Thus π 4  0.7489 so π  4 × 0.7489  3.0. Hence, the approximation is less than the integral, because the curve is concave down. 14 ∫5 1 ln x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 5 −1 2 × 4 ( f(1) + f(5) + 2 ( f(2) + f(3) + f(4))) = 1 2 (ln 1 + ln 5 + 2 (ln 2 + ln 3 + ln 4)) = 1 2 (ln 1 + ln 5 + 2 ln 2 + 2 ln 3 + 2 ln 4) = 1 2  0 + ln 5 + ln 22 + ln 32 + ln 42 = 1 2 ln  5 × 22 × 32 × 42 = 1 2 ln 2880 = ln 2880 1 2 = ln √ 2880 = ln 53.6656 . . . ≑ln 54 15 a By the fundamental theorem: ∫1 −1  x3 + 1  dx = &quot; x4 4 + x #1 −1 = 1 4 + 1 ! − 1/4 −1 ! = 2 By the trapezoidal rule with three function values: ∫1 −1  x3 + 1  dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 1 −(−1) 2 × 2 ( f(−1) + f(1) + 2 (f(0))) = 1 2  (−1)3 + 1  +  13 + 1  + 2(03 + 1)  = 1 2(−1 + 1 + 1 + 1 + 2) = 2</p>
-        <p class="step"><strong>b ·</strong> The graph of f(x) = x3 + 1 is shown below. Let A = (−1, 0), P = (0, 1) and B = (1, 2). Then the curve has point symmetry about its y-intercept P(0, 1), and the trapezoidal rule gives the area under the chord APB. The result now follows by symmetry. 16</p>
-        <p class="step"><strong>a ·</strong> The straight line segment y = x represents the line of equality i.e. income is equally distributed within the population. Since the line for 2020 is slightly higher than that of 2018 (closer to the line of equality), the income equality did improve. b i Using the trapezoidal rule with a step size of h = 0.2, the area under each Lorenz curve is approxi- mated by: A ≈h 2  f(0) + 2(f(0.2) + f(0.4) + f(0.6) + f(0.8)) + f(1) Estimating the coefficients from the 2018 curve: x 0/0.2/0.4/0.6/0.8 1 y 0/0.07/0.2/0.36/0.59 1 A2018 ≈0.2 2 [0 + 2(0.07 + 0.2 + 0.36 + 0.59) + 1] = 0.344 Note: The estimate will differ to the solution slightly due to minor errors estimating the values on the graph. A similar process can be done to determine A2020. ii G2018 = 1 −2 · A2018 and G2020 = 1 −2 · A2020 c Reading directly from the graph at a population proportion of 0.5 – 2018 : 0.28, 2020 : 0.3 d Reading directly from the graph at an income proportion of 0.5 – 2018 : 0.72, 2020 : 0.69. Interpreta- tion: In 2020, 50% of the total weekly income was distributed among 69% of the population as opposed to 72%, meaning the distribution of wealth became slightly more equal among citizens. 17 a Plotting the points (0, 0), (0.2, 0.08), (0.4, 0.20), (0.6, 0.45), (0.8, 0.70), (1, 1) and joining them with a smooth curve produces the Lorenz curve. The curve lies below the line of equality y = x, indicating that wealth is not equally distributed. b i Counting squares beneath the Lorenz curve gives an approximate area of about 0.39 square units. ii Using the trapezoidal rule with a step size of h = 0.2: A ≈h 2  f(0) + 2( f(0.2) + f(0.4) + f(0.6) + f(0.8)) + f(1) x 0/0.2/0.4/0.6/0.8 1 y 0/0.08/0.20/0.45/0.70 1 A ≈0.2 2 [0 + 2(0.08 + 0.20 + 0.45 + 0.70) + 1] = 0.386 Therefore, the area under the Lorenz curve is approximately A ≈0.386 .</p>
-        <p class="step"><strong>c ·</strong> The Gini coefficient is G = 1 −2A. Using A ≈0.386, G ≈1 −2(0.386) = 0.228. Hence, G ≈0.23 .</p>
-        <p class="step"><strong>d ·</strong> Since the Gini coefficient is relatively small and the Lorenz curve is fairly close to the line of equality, this population has less inequality than the population in Worked Example 35. e Reading from the Lorenz curve at x = 0.5, the poorest 50% of the population owns approximately 32% of the total wealth. f Reading from the Lorenz curve at y = 0.5, the curve intersects at approximately x = 0.64. Therefore, the poorest 64% of the population owns approximately 50% of the total wealth. 18 a Using the trapezoidal rule with a step size of h = 0.1, AB ≈h 2  f(0) + 2( f(0.1) + f(0.2) + · · · + f(0.9)) + f(1) where x 0/0.1/0.2/0.3/0.4/0.5/0.6/0.7/0.8/0.9 1 y 0/0.03/0.07/0.13/0.20/0.28/0.37/0.48/0.60/0.75 1 AB ≈0.1 2 [0 + 2(0.03 + 0.07 + 0.13 + 0.20 + 0.28 + 0.37 + 0.48 + 0.60 + 0.75) + 1] = 0.341. Hence, the area of region B is 0.34 to two decimal places.</p>
-        <p class="step"><strong>b ·</strong> The area under the line of perfect equality is A + B = 1/2. Therefore, A = 1/2 −0.341 = 0.159. The Gini coefficient is G = A A + B = 0.159/0.5 = 0.318. Hence, G ≈0.32 .</p>
-        <p class="step"><strong>c ·</strong> Since the Gini coefficient is approximately 0.32, the country has a moderate level of wealth inequality. Wealth is not distributed equally, but the inequality is not extreme. d i The area between the line of equality y = x and the Lorenz curve y = L(x) is ∫1 0 (x −L(x)) dx. Since the total area beneath the line of equality is 1/2, the Gini coefficient is twice this area. Therefore, G = 2 ∫1 0 (x −L(x)) dx. ii Using L(x) = 0.88x2 + 0.12x, G = 2 ∫1 0 (x −0.88x2 −0.12x) dx = 2 ∫1 0 (0.88x −0.88x2) dx. G = 2 &quot; 0.44x2 −0.88 3 x3 #1 0 = 2  0.44 −0.2933  = 0.2933. Hence, G ≈0.29 to two decimal places. iii In part (b), G ≈0.32. Using the quadratic Lorenz curve gives G ≈0.29. The values are reasonably close, differing by about 0.03, so the quadratic Lorenz curve provides a good approximation. e Using the alternative approximation L(x) = 1.04x3 −0.63x2 + 0.58x, G = 2 ∫1 0 (x −L(x)) dx = 2 ∫1 0 (−1.04x3 + 0.63x2 + 0.42x) dx. G = 2 h −0.26x4 + 0.21x3 + 0.21x2i1 0 = 2(−0.26 + 0.21 + 0.21) = 0.32. Therefore, G = 0.32 . This value is essentially the same as the result obtained in part (b), indicating that the cubic polynomial provides an excellent approximation to the Lorenz curve. 19 a 5 subintervals: 2.66551 b 10 subintervals: 2.47442 c 20 subintervals: 2.41809 20 Investigation question – answers will vary. The values are read approximately from the graph, so differences in the answers are expected. a Using the graph, the flow rates at the six-hourly times are approximately t 17:40 23:40 05:40 11:40 R (m3 s−1) 3.5/5.5/10.0/8.0 Since one unit of R is 3.6 thousand cubic metres per hour, the trapezoidal rule with h = 6 gives V1 ≈3.6 &quot;6 2  3.5 + 2(5.5) + 2(10.0) + 8.0# = 437.4 thousand m3.</p>
-        <p class="step"><strong>b ·</strong> Read the additional three-hourly values from the graph: t 17:40 20:40 23:40 02:40 05:40 08:40 11:40 R 3.5/4.5/5.5/10.5/10.0/8.5/8.0 Using h = 3 hours, V2 ≈3.6 &quot;3 2  3.5 + 2(4.5 + 5.5 + 10.5 + 10.0 + 8.5) + 8.0# = 477.9 thousand m3. c V2 V1 ≈477.9 437.4 ≈1.09. So, approximately 1.1 times as much water flowed during the second 18-hour period (about 9% more). The rainfall occurs before and during the sharp rise in river flow. The flow response is delayed and spread out: rainfall first contributes to runoff, then the river flow rises to a peak and gradually falls as the stored water drains away. 10</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+<p class="step"><strong>a ·</strong> The curve is concave up, so the chord is above the curve, and the area under the chord will be greater than the area under the curve. The diagram below shades the area that is overestimated in a typical concave up curve.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> The curve is concave down, so the chord is underneath the curve, and the area under the chord will be less than the area under the curve. The diagram below shades the area that is underestimated in a typical concave down curve. 5 x 0 1 2 3 4 y 0 3 4 3 0 a ∫4 0 f(x) dx ≑b −a 2n ( f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 4 −0 2 × 4 ( f(0) + f(4) + 2 (f(1) + f(2) + f(3))) = 4 8 (0 + 0 + 2(3 + 4 + 3)) = 10 b ∫4 0 x(4 −x) dx = ∫4 0  4x −x2 dx = &quot; 2x2 −x3 3 #4 0 = 2 × 42 −43 3 ! − 2 × 02 −03 3 ! = 32 −64/3 −0 + 0 = 102 3 The curve is concave down and hence the trapezoidal estimate will not cover the entire region under the curve. This is shown in the diagram below c The error is 102/3 −10 = 2/3, hence the percentage error is 2 3 ÷ 102 3 = 61 4% d 6 a x 1 2 3 4 5 y 6 3 2 3 2 6 5 b ∫5 1 f(x) dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 5 −1 2 × 4 (f(1) + f(5) + 2 (f(2) + f(3) + f(4))) = 4 8 6 + 6 5 + 2 3 + 2 + 3 2 !! = 10 1 10 c y = 6 x = 6x−1 dy dx = −6x−2 d2y dx2 = 12x−3 = 12 x3 Thus, for all x &gt; 0, d2y dx2 &gt; 0, so the curve is concave up over the entire region in which we are using the trapezoidal rule. This in turn means that we will overestimate the area of the curve. 7 a x 4 5 6 7 8 9 y 2/2.2361/2.4495/2.6458/2.8285 3 b ∫9 4 f(x) dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 9 −4 2 × 5 (f(1) + f(5) + 2 (f(2) + f(3) + f(4))) = 5 10 (2 + 3 + 2(2.2361 + 2.4495 + 2.6458 + 2.8285))  12.660 (to three decimal places) or 12.7 (to three significant figures) c ∫9 4 √x dx = ∫9 4 x 1 2 dx = 2 3 x 3 2  9 4 = 2 3 9/32 −4 3 2  = 2 3[27 −8] = 2 3[19] = 122 3 Now, if y = √x = x 1 2 , then dy dx = 1 2 x −1 2 and d2y dx2 = −1 4 x −3 2 = − 1 4x√x. This means that for all x &gt; 0, d2y dx2 &lt; 0, and hence the curve will be concave down over the region which we are using the trapezoidal rule to approximate area. This, in turn, means that the area will be underestimated. 8 ∫1 0 2−x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 1 −0 2 × 2 ( f(0) + f(1) + 2 ( f(0.5))) = 1 4 1 + 1 2 + 2 × 1 √ 2 ! ≑0.73 (to two significant figures) a ∫0 −2 2−x dx ≑b −a 2n ( f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 0 −(−2) 2 × 2 (f(−2) + f(0) + 2 ( f(−1))) = 1 2(4 + 1 + 2 × 2) ≑4.5 (to two significant figures) b ∫3 1 3√ 9 −2x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 3 −1 2 × 2 ( f(1) + f(3) + 2 ( f(2))) = 1 2  3√ 7 + 3√ 3 + 2 × 3√ 5  ≑3.4 (to two significant figures) c ∫−1 −13 √ 3 −x dx ≑b −a 2n ( f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = −1 −(−13) 2 × 2 ( f(−13) + f(−1) + 2 ( f(−7))) = 3 √ 16 + √ 4 + 2 × √ 10  ≑37 (to two significant figures) d 9 a ∫6 2 1 x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 6 −2 2 × 4 (f(2) + f(6) + 2 (f(3) + f(4) + f(5))) = 4 8/12 + 1 6 + 2/13 + 1 4 + 1 5 !! ≑1.12 (to three significant figures) b ∫2 0/12 + √x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 2 −0 2 × 4 (f(0) + f(2) + 2 (f(0.5) + f(1) + f(1.5))) = 1 4 1 2 + √ 0 + 1 2 + √ 2 + 2 1 2 + √ 0.5 + 1 2 + √ 1 + 1 2 + √ 1.5 !! ≑0.705 (to three significant figures) c ∫8 4 √ x2 −3 dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 8 −4 2 × 4 (f(4) + f(8) + 2 (f(5) + f(6) + f(7))) = 1 2 √ 42 −3 + √ 82 −3 + 2 √ 52 −3 + √ 62 −3 + √ 72 −3  ≑22.9 (to three significant figures) d ∫2 1 log10 x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 2 −1 2 × 4 (f(1) + f(2) + 2 (f(1.25) + f(1.5) + f(1.75))) = 1 8  log10 1 + log10 2 + 2  log10/1.25 + log10/1.5 + log10/1.75 ≑0.167 (to three significant figures) 10 Distance travelled = ∫5 0 v dt  b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 5 −0 2 × 5 ( f(0) + f(5) + 2 ( f(1) + f(2) + f(3) + f(4))) = 1 2 (1.5 + 2.7 + 2(1.3 + 1.4 + 2.0 + 2.4)) = 9.2 metres 11 Surface area of water = ∫40 0 f(x) dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 40 −0 2 × 4 ( f(0) + f(40) + 2 ( f(10) + f(20) + f(30))) = 40 8 (0 + 0 + 2(20 + 18 + 17)) = 550 m2 12 Area of vertical rock cutting = ∫300 0 f(x) dx  b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 300 −0 2 × 6 (f(0) + f(300) + 2 ( f(50) + f(100) + f(150) + f(200) + f(250))) = 25 (5 + 3 + 2(10 + 13 + 14 + 11 + 7)) = 2950 m2 13 a ∫1 0 √ 1 −x2 dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + . . .)) = 1 −0 2 × 4 (f(0) + f(1) + 2 (f(0.25) + f(0.5) + f(0.75))) = 1 8 √ 1 −02 + √ 1 −12 + 2 p 1 −0.252 + p 1 −0.52 + p 1 −0.752  0.7489 (to four decimal places) b ∫1 0 √ 1 −x2 dx is the area of 1 4 of a circle with radius 1 unit (the right half of the semi-circle in the question). Hence ∫1 0 √ 1 −x2 dx = 1 4  π × 12 = π 4 . Thus π 4  0.7489 so π  4 × 0.7489  3.0. Hence, the approximation is less than the integral, because the curve is concave down. 14 ∫5 1 ln x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + . . .)) = 5 −1 2 × 4 ( f(1) + f(5) + 2 ( f(2) + f(3) + f(4))) = 1 2 (ln 1 + ln 5 + 2 (ln 2 + ln 3 + ln 4)) = 1 2 (ln 1 + ln 5 + 2 ln 2 + 2 ln 3 + 2 ln 4) = 1 2  0 + ln 5 + ln 22 + ln 32 + ln 42 = 1 2 ln  5 × 22 × 32 × 42 = 1 2 ln 2880 = ln 2880 1 2 = ln √ 2880 = ln 53.6656 . . . ≑ln 54 15 a By the fundamental theorem: ∫1 −1  x3 + 1  dx = &quot; x4 4 + x #1 −1 = 1 4 + 1 ! − 1/4 −1 ! = 2 By the trapezoidal rule with three function values: ∫1 −1  x3 + 1  dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + . . .)) = 1 −(−1) 2 × 2 ( f(−1) + f(1) + 2 (f(0))) = 1 2  (−1)3 + 1  +  13 + 1  + 2(03 + 1)  = 1 2(−1 + 1 + 1 + 1 + 2) = 2</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> The graph of f(x) = x3 + 1 is shown below. Let A = (−1, 0), P = (0, 1) and B = (1, 2). Then the curve has point symmetry about its y-intercept P(0, 1), and the trapezoidal rule gives the area under the chord APB. The result now follows by symmetry. 16</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> The straight line segment y = x represents the line of equality i.e. income is equally distributed within the population. Since the line for 2020 is slightly higher than that of 2018 (closer to the line of equality), the income equality did improve. b i Using the trapezoidal rule with a step size of h = 0.2, the area under each Lorenz curve is approxi- mated by: A ≈h 2  f(0) + 2(f(0.2) + f(0.4) + f(0.6) + f(0.8)) + f(1) Estimating the coefficients from the 2018 curve: x 0/0.2/0.4/0.6/0.8 1 y 0/0.07/0.2/0.36/0.59 1 A2018 ≈0.2 2 [0 + 2(0.07 + 0.2 + 0.36 + 0.59) + 1] = 0.344 Note: The estimate will differ to the solution slightly due to minor errors estimating the values on the graph. A similar process can be done to determine A2020. ii G2018 = 1 −2 · A2018 and G2020 = 1 −2 · A2020 c Reading directly from the graph at a population proportion of 0.5 – 2018 : 0.28, 2020 : 0.3 d Reading directly from the graph at an income proportion of 0.5 – 2018 : 0.72, 2020 : 0.69. Interpreta- tion: In 2020, 50% of the total weekly income was distributed among 69% of the population as opposed to 72%, meaning the distribution of wealth became slightly more equal among citizens. 17 a Plotting the points (0, 0), (0.2, 0.08), (0.4, 0.20), (0.6, 0.45), (0.8, 0.70), (1, 1) and joining them with a smooth curve produces the Lorenz curve. The curve lies below the line of equality y = x, indicating that wealth is not equally distributed. b i Counting squares beneath the Lorenz curve gives an approximate area of about 0.39 square units. ii Using the trapezoidal rule with a step size of h = 0.2: A ≈h 2  f(0) + 2( f(0.2) + f(0.4) + f(0.6) + f(0.8)) + f(1) x 0/0.2/0.4/0.6/0.8 1 y 0/0.08/0.20/0.45/0.70 1 A ≈0.2 2 [0 + 2(0.08 + 0.20 + 0.45 + 0.70) + 1] = 0.386 Therefore, the area under the Lorenz curve is approximately A ≈0.386 .</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+<p class="step"><strong>c ·</strong> The Gini coefficient is G = 1 −2A. Using A ≈0.386, G ≈1 −2(0.386) = 0.228. Hence, G ≈0.23 .</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+<p class="step"><strong>d ·</strong> Since the Gini coefficient is relatively small and the Lorenz curve is fairly close to the line of equality, this population has less inequality than the population in Worked Example 35. e Reading from the Lorenz curve at x = 0.5, the poorest 50% of the population owns approximately 32% of the total wealth. f Reading from the Lorenz curve at y = 0.5, the curve intersects at approximately x = 0.64. Therefore, the poorest 64% of the population owns approximately 50% of the total wealth. 18 a Using the trapezoidal rule with a step size of h = 0.1, AB ≈h 2  f(0) + 2( f(0.1) + f(0.2) + · · · + f(0.9)) + f(1) where x 0/0.1/0.2/0.3/0.4/0.5/0.6/0.7/0.8/0.9 1 y 0/0.03/0.07/0.13/0.20/0.28/0.37/0.48/0.60/0.75 1 AB ≈0.1 2 [0 + 2(0.03 + 0.07 + 0.13 + 0.20 + 0.28 + 0.37 + 0.48 + 0.60 + 0.75) + 1] = 0.341. Hence, the area of region B is 0.34 to two decimal places.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> The area under the line of perfect equality is A + B = 1/2. Therefore, A = 1/2 −0.341 = 0.159. The Gini coefficient is G = A A + B = 0.159/0.5 = 0.318. Hence, G ≈0.32 .</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+<p class="step"><strong>c ·</strong> Since the Gini coefficient is approximately 0.32, the country has a moderate level of wealth inequality. Wealth is not distributed equally, but the inequality is not extreme. d i The area between the line of equality y = x and the Lorenz curve y = L(x) is ∫1 0 (x −L(x)) dx. Since the total area beneath the line of equality is 1/2, the Gini coefficient is twice this area. Therefore, G = 2 ∫1 0 (x −L(x)) dx. ii Using L(x) = 0.88x2 + 0.12x, G = 2 ∫1 0 (x −0.88x2 −0.12x) dx = 2 ∫1 0 (0.88x −0.88x2) dx. G = 2 &quot; 0.44x2 −0.88 3 x3 #1 0 = 2  0.44 −0.2933  = 0.2933. Hence, G ≈0.29 to two decimal places. iii In part (b), G ≈0.32. Using the quadratic Lorenz curve gives G ≈0.29. The values are reasonably close, differing by about 0.03, so the quadratic Lorenz curve provides a good approximation. e Using the alternative approximation L(x) = 1.04x3 −0.63x2 + 0.58x, G = 2 ∫1 0 (x −L(x)) dx = 2 ∫1 0 (−1.04x3 + 0.63x2 + 0.42x) dx. G = 2 h −0.26x4 + 0.21x3 + 0.21x2i1 0 = 2(−0.26 + 0.21 + 0.21) = 0.32. Therefore, G = 0.32 . This value is essentially the same as the result obtained in part (b), indicating that the cubic polynomial provides an excellent approximation to the Lorenz curve. 19 a 5 subintervals: 2.66551 b 10 subintervals: 2.47442 c 20 subintervals: 2.41809 20 Investigation question – answers will vary. The values are read approximately from the graph, so differences in the answers are expected. a Using the graph, the flow rates at the six-hourly times are approximately t 17:40 23:40 05:40 11:40 R (m3 s−1) 3.5/5.5/10.0/8.0 Since one unit of R is 3.6 thousand cubic metres per hour, the trapezoidal rule with h = 6 gives V1 ≈3.6 &quot;6 2  3.5 + 2(5.5) + 2(10.0) + 8.0# = 437.4 thousand m3.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Read the additional three-hourly values from the graph: t 17:40 20:40 23:40 02:40 05:40 08:40 11:40 R 3.5/4.5/5.5/10.5/10.0/8.5/8.0 Using h = 3 hours, V2 ≈3.6 &quot;3 2  3.5 + 2(4.5 + 5.5 + 10.5 + 10.0 + 8.5) + 8.0# = 477.9 thousand m3. c V2 V1 ≈477.9 437.4 ≈1.09. So, approximately 1.1 times as much water flowed during the second 18-hour period (about 9% more). The rainfall occurs before and during the sharp rise in river flow. The flow response is delayed and spread out: rainfall first contributes to runoff, then the river flow rises to a peak and gradually falls as the stored water drains away. 10</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q5">
@@ -92,10 +143,13 @@
       <div class="stem">
         <p>a Approximate ∫5 −5 f(x) dx by adding the areas of two trapezia. b Check your answer to the previous part by using the formula for the trapezoidal rule.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">≑1.12 (to three significant figures) b ∫2</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q6">
@@ -103,13 +157,16 @@
       <div class="stem">
         <p>f(x) 6.2 4.8 b x</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a x 1 2 3 4 5 y 6 3 2 3 2 6 5 b ∫5 1 f(x) dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + .</p>
         <p class="step">.)) = 5 −1 2 × 4 (f(1) + f(5) + 2 (f(2) + f(3) + f(4))) = 4 8 6 + 6 5 + 2 3 + 2 + 3 2 !!</p>
         <p class="step">= 10 1 10 c y = 6 x = 6x−1 dy dx = −6x−2 d2y dx2 = 12x−3 = 12 x3 Thus, for all x &gt; 0, d2y dx2 &gt; 0, so the curve is concave up over the entire region in which we are using the trapezoidal rule.</p>
         <p class="step">This in turn means that we will overestimate the area of the curve.</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q7">
@@ -117,9 +174,10 @@
       <div class="stem">
         <p>a Complete this table correct to four decimal places where necessary for the function y = √x . x</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a x 4 5 6 7 8 9 y 2/2.2361/2.4495/2.6458/2.8285 3 b ∫9 4 f(x) dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + .</p>
         <p class="step">.)) = 9 −4 2 × 5 (f(1) + f(5) + 2 (f(2) + f(3) + f(4))) = 5 10 (2 + 3 + 2(2.2361 + 2.4495 + 2.6458 + 2.8285))  12.660 (to three decimal places) or 12.7 (to three significant figures) c ∫9 4 √x dx = ∫9 4 x 1 2 dx = 2 3 x 3 2  9 4 = 2 3 9/32 −4 3 2  = 2 3[27 −8] = 2 3[19] = 122 3 Now, if y = √x = x 1 2 , then dy dx = 1 2 x −1 2 and d2y dx2 = −1 4 x −3 2 = − 1 4x√x.</p>
         <p class="step">This means that for all x &gt; 0, d2y dx2 &lt; 0, and hence the curve will be concave down over the region which we are using the trapezoidal rule to approximate area.</p>
@@ -130,6 +188,8 @@
         <p class="step">.)) = 0 −(−2) 2 × 2 (f(−2) + f(0) + 2 ( f(−1))) = 1 2(4 + 1 + 2 × 2) ≑4.5 (to two significant figures) b ∫3 1 3√ 9 −2x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + .</p>
         <p class="step">.)) = 3 −1 2 × 2 ( f(1) + f(3) + 2 ( f(2))) = 1 2  3√ 7 + 3√ 3 + 2 × 3√ 5  ≑3.4 (to two significant figures) c ∫−1 −13 √ 3 −x dx ≑b −a 2n ( f(a) + f(b) + 2 (f(x1) + f(x2) + .</p>
         <p class="step">.)) = −1 −(−13) 2 × 2 ( f(−13) + f(−1) + 2 ( f(−7))) = 3 √ 16 + √ 4 + 2 × √ 10  ≑37 (to two significant figures) d</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q8">
@@ -137,10 +197,13 @@
       <div class="stem">
         <p>Use the trapezoidal rule with three function values to approximate each definite integral, writing your answer correct to two significant figures where necessary. ∫1 0 2−x dx a ∫0 −2 2−x dx b ∫3</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">√ 1 −02 + √ 1 −12 + 2 p 1 −0.252 + p 1 −0.52 + p 1 −0.752  0.7489 (to four decimal places) b ∫1</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q9">
@@ -148,9 +211,10 @@
       <div class="stem">
         <p>b Approximate ∫9</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a ∫6 2 1 x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + .</p>
         <p class="step">.)) = 6 −2 2 × 4 (f(2) + f(6) + 2 (f(3) + f(4) + f(5))) = 4 8/12 + 1 6 + 2/13 + 1 4 + 1 5 !!</p>
         <p class="step">≑1.12 (to three significant figures) b ∫2 0/12 + √x dx ≑b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + .</p>
@@ -161,6 +225,8 @@
         <p class="step">.)) = 5 −0 2 × 5 ( f(0) + f(5) + 2 ( f(1) + f(2) + f(3) + f(4))) = 1 2 (1.5 + 2.7 + 2(1.3 + 1.4 + 2.0 + 2.4)) = 9.2 metres 11 Surface area of water = ∫40 0 f(x) dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + .</p>
         <p class="step">.)) = 40 −0 2 × 4 ( f(0) + f(40) + 2 ( f(10) + f(20) + f(30))) = 40 8 (0 + 0 + 2(20 + 18 + 17)) = 550 m2 12 Area of vertical rock cutting = ∫300 0 f(x) dx  b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + .</p>
         <p class="step">.)) = 300 −0 2 × 6 (f(0) + f(300) + 2 ( f(50) + f(100) + f(150) + f(200) + f(250))) = 25 (5 + 3 + 2(10 + 13 + 14 + 11 + 7)) = 2950 m2</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q10">
@@ -168,11 +234,14 @@
       <div class="stem">
         <p>in m/s at various times t given in the table to the right. Given that the distance travelled may be found by calculating the area under the velocity/time graph, use the trapezoidal rule to estimate the distance travelled by the particle in the first 5 seconds. t</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">Distance travelled = ∫5 0 v dt  b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + .</p>
         <p class="step">.)) = 5 −0 2 × 5 ( f(0) + f(5) + 2 ( f(1) + f(2) + f(3) + f(4))) = 1 2 (1.5 + 2.7 + 2(1.3 + 1.4 + 2.0 + 2.4)) = 9.2 metres</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q11">
@@ -180,10 +249,13 @@
       <div class="stem">
         <p>The diagram to the right shows the width of a lake at 10-metre intervals. Use the trapezoidal rule to estimate the surface area of the water.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">Surface area of water = ∫40</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q12">
@@ -191,10 +263,13 @@
       <div class="stem">
         <p>The diagram to the right shows a vertical rock cutting of length 300 metres alongside a straight horizontal section of highway. The heights of the cutting are measured at 50-metre intervals. Use the trapezoidal rule to estimate the area of the vertical rock cutting. 5 10 13 14 11 7</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">Area of vertical rock cutting = ∫300</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q13">
@@ -202,9 +277,10 @@
       <div class="stem">
         <p>a Use the trapezoidal rule with five function values to approximate ∫1</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a ∫1 0 √ 1 −x2 dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f(x2) + .</p>
         <p class="step">.)) = 1 −0 2 × 4 (f(0) + f(1) + 2 (f(0.25) + f(0.5) + f(0.75))) = 1 8 √ 1 −02 + √ 1 −12 + 2 p 1 −0.252 + p 1 −0.52 + p 1 −0.752  0.7489 (to four decimal places) b ∫1 0 √ 1 −x2 dx is the area of 1 4 of a circle with radius 1 unit (the right half of the semi-circle in the question).</p>
         <p class="step">Hence ∫1 0 √ 1 −x2 dx = 1 4  π × 12 = π 4 .</p>
@@ -213,6 +289,8 @@
         <p class="step">14 ∫5 1 ln x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + .</p>
         <p class="step">.)) = 5 −1 2 × 4 ( f(1) + f(5) + 2 ( f(2) + f(3) + f(4))) = 1 2 (ln 1 + ln 5 + 2 (ln 2 + ln 3 + ln 4)) = 1 2 (ln 1 + ln 5 + 2 ln 2 + 2 ln 3 + 2 ln 4) = 1 2  0 + ln 5 + ln 22 + ln 32 + ln 42 = 1 2 ln  5 × 22 × 32 × 42 = 1 2 ln 2880 = ln 2880 1 2 = ln √ 2880 = ln 53.6656 .</p>
         <p class="step">≑ln 54</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q14">
@@ -220,11 +298,14 @@
       <div class="stem">
         <p>Use the trapezoidal rule with four subintervals, together with appropriate log laws, to show that ∫5 1 ln x dx ≑ln 54.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">∫5 1 ln x dx ≑b −a 2n ( f(a) + f(b) + 2 ( f(x1) + f(x2) + .</p>
         <p class="step">.)) = 5 −1 2 × 4 ( f(1) + f(5) + 2 ( f(2) + f(3) + f(4))) = 1 2 (ln 1 + ln 5 + 2 (ln 2 + ln 3 + ln 4)) = 1 2 (ln 1 + ln 5 + 2 ln 2 + 2 ln 3 + 2 ln 4) = 1</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q15">
@@ -232,13 +313,16 @@
       <div class="stem">
         <p>a Evaluate ∫1 −1(x3 + 1) dx using the fundamental theorem, and then using the trapezoidal rule with three function values. b Explain from the graph why the trapezoidal rule gives the correct answer in this case. 3G The trapezoidal rule 161 Three questions on the Lorenz curve and the Gini coefficient</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a By the fundamental theorem: ∫1 −1  x3 + 1  dx = &quot; x4 4 + x #1 −1 = 1 4 + 1 !</p>
         <p class="step">− 1/4 −1 !</p>
         <p class="step">= 2 By the trapezoidal rule with three function values: ∫1 −1  x3 + 1  dx  b −a 2n (f(a) + f(b) + 2 (f(x1) + f (x2) + .</p>
         <p class="step">.)) = 1 −(−1) 2 × 2 ( f(−1) + f(1) + 2 (f(0))) = 1</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q16">
@@ -246,10 +330,12 @@
       <div class="stem">
         <p>The diagram shows the Lorenz curves of weekly income by Australians for the financial years ending in 2018 and 2020. The data for this was obtained from the Australian Bureau of Statistics (ABS) web site. (To be precise, the data was for the equivalised disposable household weekly income — you may want to ask your economics teacher or Wikipedia what this means.) Answer the following questions based on this graph. a Did the income equality improve or worsen from 2018 to 2020? b i Use the trapezoidal rule, with values every 0.2 along the x-axis, to estimate the area A under each curve. ii Hence estimate the Gini coefficient G for each, where G = 1 −2A. x y 2020 2018 Population Proportion Income Proportion c About what proportion of the total weekly income did the poorest 50% of Australian citizens earn in 2018, and in 2020? d Find x so that the poorest x% of the population earned half the total weekly income in 2018, and in 2020.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
-        <p class="step"><strong>a ·</strong> The straight line segment y = x represents the line of equality i.e. income is equally distributed within the population. Since the line for 2020 is slightly higher than that of 2018 (closer to the line of equality), the income equality did improve. b i Using the trapezoidal rule with a step size of h = 0.2, the area under each Lorenz curve is approxi- mated by: A ≈h</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+<p class="step"><strong>a ·</strong> The straight line segment y = x represents the line of equality i.e. income is equally distributed within the population. Since the line for 2020 is slightly higher than that of 2018 (closer to the line of equality), the income equality did improve. b i Using the trapezoidal rule with a step size of h = 0.2, the area under each Lorenz curve is approxi- mated by: A ≈h</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q17">
@@ -257,13 +343,16 @@
       <div class="stem">
         <p>The poorest x% 0% 20% 40% 60% 80% 100% has y% of the wealth 0% 8% 20% 45% 70% 100% a Plot these values on squared paper, and complete a Lorenz graph. b i Count squares to calculate the approximate area under the Lorenz curve. ii Confirm your estimate using the trapezoidal rule. c Hence calculate the Gini coefficient. d Is there more or less inequality in this population than worked Example 35? e Very roughly, what proportion of total wealth did the poorest 50% have? f Roughly, find x so that the poorest x% of the population owns half the total wealth.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a Plotting the points (0, 0), (0.2, 0.08), (0.4, 0.20), (0.6, 0.45), (0.8, 0.70), (1, 1) and joining them with a smooth curve produces the Lorenz curve.</p>
         <p class="step">The curve lies below the line of equality y = x, indicating that wealth is not equally distributed.</p>
         <p class="step">b i Counting squares beneath the Lorenz curve gives an approximate area of about 0.39 square units.</p>
         <p class="step">ii Using the trapezoidal rule with a step size of h = 0.2: A ≈h</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q18">
@@ -271,10 +360,13 @@
       <div class="stem">
         <p>The table below represents the distribution of wealth amongst the population of a certain country. It shows the percentage of wealth y% held by the bottom x% of the population. x</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a Using the trapezoidal rule with a step size of h = 0.1, AB ≈h</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q19">
@@ -282,10 +374,13 @@
       <div class="stem">
         <p>Work through the spreadsheet example just above this exercise. Then use a spreadsheet to estimate these integrals using the trapezoidal rule with 5, 10, 20 and perhaps more trapezia. ∫11</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (trapezoidal rule):</strong> <span class="tex">A\approx \dfrac{h}{2}(y_0+2y_1+\cdots+2y_{n-1}+y_n)</span> with equal strip width <span class="tex">h</span>.</p>
         <p class="step">a 5 subintervals: 2.66551 b 10 subintervals: 2.47442 c 20 subintervals: 2.41809</p>
+
+        </div>
       </div>
     </article>
     <p style="margin-top:1.5rem">
@@ -313,6 +408,7 @@
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
+  <script src="../../course-solutions.js"></script>
   <script>
   document.querySelectorAll(".tex").forEach(function(n){
     if(n.getAttribute("data-texed")) return;
