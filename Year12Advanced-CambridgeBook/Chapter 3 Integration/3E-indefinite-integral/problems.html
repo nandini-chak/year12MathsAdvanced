@@ -23,7 +23,7 @@
   <header class="hero">
     <span class="kicker">Exercise 3E</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Validated against Cambridge worked solutions (not stamped on every question).</p>
+    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
@@ -31,83 +31,243 @@
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 3E; solutions follow <em>Chapter-3-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">Stems condensed from Cambridge Exercise 3E; answers follow <em>Chapter-3-Worked-Solutions.pdf</em>. Sketch items include a model sketch note plus redrawn working (not PDF scans).</div>
     </details>
     <article class="q" id="q1">
       <h2>1 · Exercise 3E</h2>
-      <div class="stem"><p>Find these indefinite integrals. ∫ 4 dx a ∫ 1 dx b ∫ 0 dx c ∫ (−2) dx d ∫ x dx e ∫ x2 dx f ∫ x3 dx g ∫ x7 dx h</p></div>
+      <div class="stem">
+        <p>Find these indefinite integrals. ∫ 4 dx a ∫ 1 dx b ∫ 0 dx c ∫ (−2) dx d ∫ x dx e ∫ x2 dx f ∫ x3 dx g ∫ x7 dx h</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>√ 3x + 5 dx = ∫ (3x + 5) −1 2 dx = (3x + 5)</p></div>
-    </article><article class="q" id="q2">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">a ∫ 4 dx = 4x + C b ∫ 1 dx = 1x + C = x + C c ∫ 0 dx = 0x + C = C d ∫ (−2) dx = −2x + C e ∫ x dx = x2 2 + C f ∫ x2 dx = x3 3 + C g ∫ x3 dx = x4 4 + C h ∫ x7 dx = x8 8 + C 2 ∫ 2x dx = (2x)2 2 + C = x2 + C a ∫ 4x dx = 4x2 2 + C = 2x2 + C b ∫ 3x2 dx = (3x)3 3 + C = x3 + C c ∫ 4x3 dx = (4x)4 4 + C = x4 + C d ∫ 10x9 dx = 10x10 10 + C = x10 + C e ∫ 2x3 dx = (2x)4 4 + C = x4 2 + C f ∫ 4x5 dx = (4x)6 6 + C = 2x6 3 + C g ∫ 3x8 dx = (3x)9 9 + C = x9 3 + C h 3 a ∫ (1 + x) dx = x + x2 2 + C b ∫ (4 −3y) dy = 4y −3y2 2 + C c ∫ (t4 −t2) dt = t5/5 −t3 3 + C d ∫ 2p + 5p4 dp = (2p)2 2 + 5p5 5 + C = p2 + p5 + C e ∫ 9r8 −11  dr = 9r9/9 −11r + C = r9 −11r + C f ∫ 7h13 + 3h8 dh = 7h14 14 + 3h9 9 + C = h14 2 + h9 3 + C 4 ∫ x−2 dx = x−1 −1 + C = −x−1 + C a ∫ x−3 dx = x−2 −2 + C = −x−2 2 + C b ∫ x−8 dx = x−7 −7 + C = −x−7 7 + C c ∫ 3x−4 dx = 3x−3 −3 + C = −x−3 + C d ∫ 9x−10 dx = 9x−9 −9 + C = −x−9 + C e ∫ 10x−6 dx = 10x−5 −5 + C = −2x−5 + C f 5 a ∫ x 1 2 dx = x 3 2 3 2 !</p>
+        <p class="step">+ C = 2x 3 2 3 + C b ∫ x −1 2 dx = x 1 2 1 2 !</p>
+        <p class="step">+ C = 2x 1 2 + C c ∫ x 1 3 dx = x 4 3 4 3 !</p>
+        <p class="step">+ C = 3x 4 3 4 + C d ∫ x−1 3 dx ∫ x−1/3 dx = x2/3 2/3 + C = 3 2 x2/3 + C.</p>
+        <p class="step">e ∫ x 2 3 dx = x 5 3 5 3 !</p>
+        <p class="step">+ C = 3x 5 3 5 + C f ∫ x−2 3 dx ∫ x−2/3 dx = x1/3 1/3 + C = 3x1/3 + C.</p>
+        <p class="step">6 ∫ x  4 −x2 dx = ∫ 4x −x3 dx = 2x2 −x4 4 + C a ∫ x2(5 −3x) dx = ∫ 5x2 −3x3 dx = 5x3/3 −3x4 4 + C b ∫ (x −3)2 dx = ∫ x2 −6x + 9  dx = x3/3 −3x2 + 9x + C c ∫ 1 −x22 dx = ∫ 1 −2x2 + x4 dx = x −2x3 3 + x5 5 + C d ∫ (2 −3x)(2 + 3x) dx = ∫ 4 −9x2 dx = 4x −3x3 + C e ∫ x2 −3  (1 −2x) dx = ∫ x2 −2x3 −3 + 6x  dx = x3/3 −x4/2 −3x + 3x2 + C f 7 a ∫x2 + 2x x dx = ∫ x2 x + 2x x !</p>
+        <p class="step">dx = ∫ (x + 2) dx = x2 2 + 2x + C b ∫x7 + x8 x6 dx = ∫ x7 x6 + x8 x6 !</p>
+        <p class="step">dx = ∫ x + x2 dx = x2 2 + x3 3 + C c ∫2x3 −x4 4x dx = ∫ 2x3 4x −x4 4x !</p>
+        <p class="step">dx = ∫ x2/2 −x3 4 !</p>
+        <p class="step">dx = x3/6 −x4 16 + C 8 a ∫1 x2 dx = ∫ x−2 dx = x−1 −1 + C = −1 x + C b ∫1 x3 dx = ∫ x−3 dx = x−2 −2 + C = −1 2x2 + C c ∫1 x5 dx = ∫ x−5 dx = x−4 −4 + C = −1 4x4 + C d ∫3 x4 dx = ∫ 3x−4 dx = 3x−3 −3 + C = −x−3 + C = −1 x3 + C e ∫5 x6 dx = ∫ 5x−6 dx = 5x−5 −5 + C = −1 x5 + C f ∫ 1 3x2 dx = ∫x−2 3 dx = x−1 3 × −1 + C = −1 3x + C g ∫ 1 7x5 dx = ∫x−5 7 dx = x−4 7 × −4 + C = − 1 28x4 + C h ∫ −1 5x3 dx = ∫ −x−3 5 dx = − x−2 5 × −2 + C = 1 10x2 + C 9 a ∫ (x + 2)3 dx = (x + 2)4 4 + C = 1 4(x + 2)4 + C b ∫ (4 −x)4 dx = (4 −x)5 −1 × 5 + C = −(4 −x)5 5 + C = −1 5(4 −x)5 + C c ∫ (3x + 1)4 dx = (3x + 1)5 3 × 5 + C = (3x + 1)5 15 + C = 1 15(3x + 1)5 + C d ∫ (4x −3)7 dx = (4x −3)8 4 × 8 + C = (4x −3)8 32 + C = 1 32(4x −3)8 + C e ∫ (5 −2x)6 dx = (5 −2x)7 −2 × 7 + C = −(5 −2x)7 14 + C = −1 14(5 −2x)7 + C f ∫ (1 −5x)7 dx = (1 −5x)8 −5 × 8 + C = −(1 −5x)8 40 + C = −1 40(1 −5x)8 + C g ∫ 3(2x −1)5 dx ∫ 3(2x −1)5 dx = 3(2x −1)6 2(6) + C = 1 4(2x −1)6 + C.</p>
+        <p class="step">h ∫ 4(5x −4)7 dx ∫ 4(5x −4)7 dx = 4(5x −4)8 5(8) + C = 1 10(5x −4)8 + C.</p>
+        <p class="step">i ∫ 7(3 −2x)3 dx = 7(3 −2x)4 −2 × 4 + C = −7(3 −2x)4 8 + C = −7 8(3 −2x)4 + C 10 Here a = 1 5 and n = 4, so ∫ 1 5 x −7 !4 dx = (1 5 x −7)5 (1/5)(5) + C = 1 5 x −7 !5 + C.</p>
+        <p class="step">a ∫ 3 4 x + 9 !7 dx = (3 4 x + 9)8 (3/4)(8) + C = 1 6/34 x + 9 !8 + C.</p>
+        <p class="step">b ∫ 1 −3 5 x !3 dx = (1 −3 5 x)4 (−3/5)(4) + C = −5 12/1 −3 5 x !4 + C.</p>
+        <p class="step">c 11 a ∫ 1 (x −5)4 dx = ∫ (x −5)−4 dx = (x −5)−3 1 × (−3) + C = − 1 3(x −5)3 + C b ∫ 1 (3x −4)2 dx = ∫ (3x −4)−2 dx = (3x −4)−1 3 × (−1) + C = − 1 3(3x −4) + C c ∫ 1 (2 −x)5 dx = ∫ (2 −x)−5 dx = (2 −x)−4 (−1) × (−4) + C = 1 4(2 −x)4 + C d ∫ 3 (x −7)6 dx = ∫ 3(x −7)−6 dx = 3(x −7)−5 1 × (−5) + C = − 3 5(x −7)5 + C e ∫ 8 (4x + 1)5 dx = ∫ 8(4x + 1)−5 dx = 8(4x + 1)−4 4 × (−4) + C = − 1 2(4x + 1)4 + C f ∫ 4 5(1 −4x)2 dx = ∫4 5(1 −4x)−2 dx = 4 5(1 −4x)−1 (−4) × (−1) + C = 1 5(1 −4x) + C = 1/5 −20x + C 12 ∫√x  3√x −x  dx = ∫ 3x −x√x  dx = ∫ 3x −x 3 2 dx = 3 2 x2 −2 5 x 5 2 + C a ∫√x −2  √x + 2  dx = ∫ (x −4) dx = x2/2 −4x + C = 1 2 x2 −4x + C b ∫ 2√x −1 2 dx = ∫ 4x −4√x + 1  dx = ∫ 4x −4x 1 2 + 1 dx = 2x2 −8 3 x 3 2 + x + C c 13 a 4√x = x 1 4 : ∫ x 1 4 dx = x 5 4 5 4 + C = 4 5 4√ x5 + C b 3√x = 3x 1 2 : ∫ 3x 1 2 dx = 3x 3 2 3 2 + C = 2x√x + C c 2 √x = 2x −1 2 : ∫ 2x −1 2 dx = 2x 1 2 1 2 + C = 4√x + C d 1 3√ x2 = x −2 3 : ∫ x −2 3 dx = x 1 3 1 3 + C = 3 3√x + C 14 The indefinite integral ∫1 x dx = ∫ x−1 dx If applying the standard form shown, it would equal x0 0 + C which is undefined.</p>
+        <p class="step">Dividing by zero is an invalid operation.</p>
+        <p class="step">Therefore, the standard form does not apply to this particular integral.</p>
+        <p class="step">Another way to view this is that the standard form is based on reversing the power rule for differentiation, however such a rule/operation is not always reversible.</p>
+        <p class="step">The case where n = −1 is the case where the reversal of the power rule fails.</p>
+        <p class="step">i.e.</p>
+        <p class="step">the power rule d dx x0 = 0 is not reversible.</p>
+        <p class="step">15 ∫√ 2x −1 dx = ∫ (2x −1) 1 2 dx = (2x −1) 3/22 × 3 2 + C = 1 3(2x −1) 3 2 + C a ∫√ 7 −4x dx = ∫ (7 −4x) 1 2 dx = (7 −4x) 3/2 −4 × 3 2 + C = −1 6(7 −4x) 3 2 + C b ∫ 3√ 4x −1 dx = ∫ (4x −1) 1 3 dx = (4x −1) 4/34 × 4 3 + C = 3 16(4x −1) 4 3 + C c ∫ 1 √ 3x + 5 dx = ∫ (3x + 5) −1 2 dx = (3x + 5) 1/23 × 1 2 + C = 2 3 √ 3x + 5 + C d 9</p>
+      </div>
+    </article>
+    <article class="q" id="q2">
       <h2>2 · Exercise 3E</h2>
-      <div class="stem"><p>Find the indefinite integral of each function. Use the notation of the previous question. 2x a 4x b 3x2 c 4x3 d 10x9 e 2x3 f 4x5 g 3x8 h</p></div>
+      <div class="stem">
+        <p>Find the indefinite integral of each function. Use the notation of the previous question.<br/>
+2x<br/>
+a<br/>
+4x<br/>
+b<br/>
+3x2<br/>
+c<br/>
+4x3<br/>
+d<br/>
+10x9<br/>
+e<br/>
+2x3<br/>
+f<br/>
+4x5<br/>
+g<br/>
+3x8<br/>
+h</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>+ C = −1 6(7 −4x)</p></div>
-    </article><article class="q" id="q3">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">∫ 2x dx = (2x)2 2 + C = x2 + C a ∫ 4x dx = 4x2 2 + C = 2x2 + C b ∫ 3x2 dx = (3x)3</p>
+      </div>
+    </article>
+    <article class="q" id="q3">
       <h2>3 · Exercise 3E</h2>
-      <div class="stem"><p>Find these indefinite integrals. ∫ (1 + x) dx a ∫ (4 −3y) dy b ∫ (t4 −t2) dt c ∫ (2p + 5p4) dp d ∫ (9r8 −11) dr e ∫ (7h13 + 3h8) dh f</p></div>
+      <div class="stem">
+        <p>Find these indefinite integrals. ∫ (1 + x) dx a ∫ (4 −3y) dy b ∫ (t4 −t2) dt c ∫ (2p + 5p4) dp d ∫ (9r8 −11) dr e ∫ (7h13 + 3h8) dh f</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>√ 3x + 5 + C d</p></div>
-    </article><article class="q" id="q4">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">+ C = x3 + C c ∫ 4x3 dx = (4x)4</p>
+      </div>
+    </article>
+    <article class="q" id="q4">
       <h2>4 · Exercise 3E</h2>
-      <div class="stem"><p>Find the indefinite integral of each function. (Leave negative indices in your answers.) x−2 a x−3 b x−8 c 3x−4 d 9x−10 e 10x−6 f</p></div>
+      <div class="stem">
+        <p>Find the indefinite integral of each function. (Leave negative indices in your answers.)<br/>
+x−2<br/>
+a<br/>
+x−3<br/>
+b<br/>
+x−8<br/>
+c<br/>
+3x−4<br/>
+d<br/>
+9x−10<br/>
+e<br/>
+10x−6<br/>
+f</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>3 + C c ∫</p></div>
-    </article><article class="q" id="q5">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">+ C = x4 + C d ∫ 10x9 dx = 10x10 10 + C = x10 + C e ∫ 2x3 dx = (2x)4 4 + C = x4 2 + C f ∫ 4x5 dx = (4x)6 6 + C = 2x6 3 + C g ∫ 3x8 dx = (3x)9 9 + C = x9 3 + C h 3 a ∫ (1 + x) dx = x + x2 2 + C b ∫ (4 −3y) dy = 4y −3y2 2 + C c ∫ (t4 −t2) dt = t5/5 −t3 3 + C d ∫ 2p + 5p4 dp = (2p)2 2 + 5p5</p>
+      </div>
+    </article>
+    <article class="q" id="q5">
       <h2>5 · Exercise 3E</h2>
-      <div class="stem"><p>Find these indefinite integrals. (Leave fractional indices in your answers.) ∫ x</p></div>
+      <div class="stem">
+        <p>Find these indefinite integrals. (Leave fractional indices in your answers.)<br/>
+∫<br/>
+x</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>4√ x5 + C b 3√x = 3x</p></div>
-    </article><article class="q" id="q6">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">+ C = p2 + p5 + C e ∫ 9r8 −11  dr = 9r9/9 −11r + C = r9 −11r + C f ∫ 7h13 + 3h8 dh = 7h14 14 + 3h9 9 + C = h14 2 + h9 3 + C 4 ∫ x−2 dx = x−1 −1 + C = −x−1 + C a ∫ x−3 dx = x−2 −2 + C = −x−2 2 + C b ∫ x−8 dx = x−7 −7 + C = −x−7 7 + C c ∫ 3x−4 dx = 3x−3 −3 + C = −x−3 + C d ∫ 9x−10 dx = 9x−9 −9 + C = −x−9 + C e ∫ 10x−6 dx = 10x−5 −5 + C = −2x−5 + C f 5 a ∫ x 1 2 dx = x 3 2 3 2 !</p>
+        <p class="step">+ C = 2x 3 2 3 + C b ∫ x −1 2 dx = x 1 2 1 2 !</p>
+        <p class="step">+ C = 2x 1 2 + C c ∫ x 1 3 dx = x 4 3 4 3 !</p>
+        <p class="step">+ C = 3x 4 3 4 + C d ∫ x−1 3 dx ∫ x−1/3 dx = x2/3 2/3 + C = 3 2 x2/3 + C.</p>
+        <p class="step">e ∫ x 2 3 dx = x 5 3 5 3 !</p>
+        <p class="step">+ C = 3x 5 3 5 + C f ∫ x−2 3 dx ∫ x−2/3 dx = x1/3 1/3 + C = 3x1/3 + C.</p>
+      </div>
+    </article>
+    <article class="q" id="q6">
       <h2>6 · Exercise 3E</h2>
-      <div class="stem"><p>By first expanding the brackets, find these indefinite integrals. ∫ x(4 −x2) dx a ∫ x2(5 −3x) dx b ∫ (x −3)2 dx c ∫ (1 −x2)2 dx d ∫ (2 −3x)(2 + 3x) dx e ∫ (x2 −3)(1 −2x) dx f</p></div>
+      <div class="stem">
+        <p>By first expanding the brackets, find these indefinite integrals. ∫ x(4 −x2) dx a ∫ x2(5 −3x) dx b ∫ (x −3)2 dx c ∫ (1 −x2)2 dx d ∫ (2 −3x)(2 + 3x) dx e ∫ (x2 −3)(1 −2x) dx f</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>3 4 x + 9 !8 + C. b ∫ 1 −3 5 x !3 dx = (1 −3 5 x)4 (−3 5)(4) + C = −5</p></div>
-    </article><article class="q" id="q7">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">∫ x  4 −x2 dx = ∫ 4x −x3 dx = 2x2 −x4 4 + C a ∫ x2(5 −3x) dx = ∫ 5x2 −3x3 dx = 5x3/3 −3x4 4 + C b ∫ (x −3)2 dx = ∫ x2 −6x + 9  dx = x3/3 −3x2 + 9x + C c ∫ 1 −x22 dx = ∫ 1 −2x2 + x4 dx = x −2x3 3 + x5 5 + C d ∫ (2 −3x)(2 + 3x) dx = ∫ 4 −9x2 dx = 4x −3x3 + C e ∫ x2 −3  (1 −2x) dx = ∫ x2 −2x3 −3 + 6x  dx = x3/3 −x4/2 −3x + 3x2 + C f</p>
+      </div>
+    </article>
+    <article class="q" id="q7">
       <h2>7 · Exercise 3E</h2>
-      <div class="stem"><p>Write each integrand as separate fractions, then perform the integration. ∫x2 + 2x x dx a ∫x7 + x8 x6 dx b ∫2x3 −x4 4x dx c © Pender et al. 2026 Cambridge University Press &amp; Assessment 142 Chapter 3 Integration 3E</p></div>
+      <div class="stem">
+        <p>Write each integrand as separate fractions, then perform the integration. ∫x2 + 2x x dx a ∫x7 + x8 x6 dx b ∫2x3 −x4 4x dx c</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 3E e ∫</p></div>
-    </article><article class="q" id="q8">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">a ∫x2 + 2x x dx = ∫ x2 x + 2x x !</p>
+        <p class="step">dx = ∫ (x + 2) dx = x2 2 + 2x + C b ∫x7 + x8 x6 dx = ∫ x7 x6 + x8 x6 !</p>
+        <p class="step">dx = ∫ x + x2 dx = x2 2 + x3 3 + C c ∫2x3 −x4 4x dx = ∫ 2x3 4x −x4 4x !</p>
+        <p class="step">dx = ∫ x2/2 −x3 4 !</p>
+        <p class="step">dx = x3/6 −x4 16 + C</p>
+      </div>
+    </article>
+    <article class="q" id="q8">
       <h2>8 · Exercise 3E</h2>
-      <div class="stem"><p>Write these functions with negative indices and hence find their indefinite integrals.</p></div>
+      <div class="stem">
+        <p>Write these functions with negative indices and hence find their indefinite integrals.</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 3E Another way to view this is that the standard form is based on reversing the power rule for differentiation, however such a rule/operation is not always reversible. The case where n = −1 is the case where the reversal of the power rule fails. i.e. the power rule d dx x0 = 0 is not reversible.</p></div>
-    </article><article class="q" id="q9">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">a ∫1 x2 dx = ∫ x−2 dx = x−1 −1 + C = −1 x + C b ∫1 x3 dx = ∫ x−3 dx = x−2 −2 + C = −1 2x2 + C c ∫1 x5 dx = ∫ x−5 dx = x−4 −4 + C = −1 4x4 + C d ∫3 x4 dx = ∫ 3x−4 dx = 3x−3 −3 + C = −x−3 + C = −1 x3 + C e ∫5 x6 dx = ∫ 5x−6 dx = 5x−5 −5 + C = −1 x5 + C f ∫ 1 3x2 dx = ∫x−2 3 dx = x−1 3 × −1 + C = −1 3x + C g ∫ 1 7x5 dx = ∫x−5 7 dx = x−4 7 × −4 + C = − 1 28x4 + C h ∫ −1 5x3 dx = ∫ −x−3 5 dx = − x−2 5 × −2 + C = 1 10x2 + C</p>
+      </div>
+    </article>
+    <article class="q" id="q9">
       <h2>9 · Exercise 3E</h2>
-      <div class="stem"><p>By using the rule ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C, find: ∫ (x + 2)3 dx a ∫ (4 −x)4 dx b ∫ (3x + 1)4 dx c ∫ (4x −3)7 dx d ∫ (5 −2x)6 dx e ∫ (1 −5x)7 dx f ∫ 3(2x −1)5 dx g ∫ 4(5x −4)7 dx h ∫ 7(3 −2x)3 dx i</p></div>
+      <div class="stem">
+        <p>By using the rule ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C, find: ∫ (x + 2)3 dx a ∫ (4 −x)4 dx b ∫ (3x + 1)4 dx c ∫ (4x −3)7 dx d ∫ (5 −2x)6 dx e ∫ (1 −5x)7 dx f ∫ 3(2x −1)5 dx g ∫ 4(5x −4)7 dx h ∫ 7(3 −2x)3 dx i</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>a ∫ (x + 2)3 dx = (x + 2)4</p></div>
-    </article><article class="q" id="q10">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">a ∫ (x + 2)3 dx = (x + 2)4 4 + C = 1 4(x + 2)4 + C b ∫ (4 −x)4 dx = (4 −x)5 −1 × 5 + C = −(4 −x)5 5 + C = −1 5(4 −x)5 + C c ∫ (3x + 1)4 dx = (3x + 1)5 3 × 5 + C = (3x + 1)5 15 + C = 1 15(3x + 1)5 + C d ∫ (4x −3)7 dx = (4x −3)8 4 × 8 + C = (4x −3)8 32 + C = 1 32(4x −3)8 + C e ∫ (5 −2x)6 dx = (5 −2x)7 −2 × 7 + C = −(5 −2x)7 14 + C = −1 14(5 −2x)7 + C f ∫ (1 −5x)7 dx = (1 −5x)8 −5 × 8 + C = −(1 −5x)8 40 + C = −1 40(1 −5x)8 + C g ∫ 3(2x −1)5 dx ∫ 3(2x −1)5 dx = 3(2x −1)6 2(6) + C = 1 4(2x −1)6 + C.</p>
+        <p class="step">h ∫ 4(5x −4)7 dx ∫ 4(5x −4)7 dx = 4(5x −4)8 5(8) + C = 1 10(5x −4)8 + C.</p>
+        <p class="step">i ∫ 7(3 −2x)3 dx = 7(3 −2x)4 −2 × 4 + C = −7(3 −2x)4 8 + C = −7 8(3 −2x)4 + C</p>
+      </div>
+    </article>
+    <article class="q" id="q10">
       <h2>10 · Exercise 3E</h2>
-      <div class="stem"><p>By using the rule ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C, find: ∫ 1 5 x −7 4 dx a ∫ 3 4 x + 9 7 dx b ∫ 1 −3 5 x 3 dx c</p></div>
+      <div class="stem">
+        <p>By using the rule ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C, find: ∫ 1 5 x −7 4 dx a ∫ 3 4 x + 9 7 dx b ∫ 1 −3 5 x 3 dx c</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Here a = 1 5 and n = 4, so ∫ 1 5 x −7 !4 dx = (1 5 x −7)5 (1 5)(5) + C = 1 5 x −7 !5 + C. a ∫ 3 4 x + 9 !7 dx = (3 4 x + 9)8 (3 4)(8) + C = 1</p></div>
-    </article><article class="q" id="q11">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">Here a = 1 5 and n = 4, so ∫ 1 5 x −7 !4 dx = (1 5 x −7)5 (1/5)(5) + C = 1 5 x −7 !5 + C.</p>
+        <p class="step">a ∫ 3 4 x + 9 !7 dx = (3 4 x + 9)8 (3/4)(8) + C = 1 6/34 x + 9 !8 + C.</p>
+        <p class="step">b ∫ 1 −3 5 x !3 dx = (1 −3 5 x)4 (−3/5)(4) + C = −5 12/1 −3 5 x !4 + C.</p>
+      </div>
+    </article>
+    <article class="q" id="q11">
       <h2>11 · Exercise 3E</h2>
-      <div class="stem"><p>By using the rule ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C, find: ∫</p></div>
+      <div class="stem">
+        <p>By using the rule ∫ (ax + b)n dx = (ax + b)n+1 a(n + 1) + C, find: ∫</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p><em>See worked-solutions PDF for full working / sketches.</em></p></div>
-    </article><article class="q" id="q12">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">a ∫ 1 (x −5)4 dx = ∫ (x −5)−4 dx = (x −5)−3 1 × (−3) + C = − 1 3(x −5)3 + C b ∫ 1 (3x −4)2 dx = ∫ (3x −4)−2 dx = (3x −4)−1 3 × (−1) + C = − 1 3(3x −4) + C c ∫ 1 (2 −x)5 dx = ∫ (2 −x)−5 dx = (2 −x)−4 (−1) × (−4) + C = 1 4(2 −x)4 + C d ∫ 3 (x −7)6 dx = ∫ 3(x −7)−6 dx = 3(x −7)−5 1 × (−5) + C = − 3 5(x −7)5 + C e ∫ 8 (4x + 1)5 dx = ∫ 8(4x + 1)−5 dx = 8(4x + 1)−4 4 × (−4) + C = − 1 2(4x + 1)4 + C f ∫ 4 5(1 −4x)2 dx = ∫4 5(1 −4x)−2 dx = 4 5(1 −4x)−1 (−4) × (−1) + C = 1 5(1 −4x) + C = 1/5 −20x + C</p>
+      </div>
+    </article>
+    <article class="q" id="q12">
       <h2>12 · Exercise 3E</h2>
-      <div class="stem"><p>By expanding the brackets, find: ∫√x  3√x −x  dx a ∫√x −2  √x + 2  dx b ∫ 2√x −1 2 dx c</p></div>
+      <div class="stem">
+        <p>By expanding the brackets, find: ∫√x  3√x −x  dx a ∫√x −2  √x + 2  dx b ∫ 2√x −1 2 dx c</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>∫√x  3√x −x  dx = ∫ 3x −x√x  dx = ∫ 3x −x</p></div>
-    </article><article class="q" id="q13">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">∫√x  3√x −x  dx = ∫ 3x −x√x  dx = ∫ 3x −x 3 2 dx = 3 2 x2 −2 5 x 5 2 + C a ∫√x −2  √x + 2  dx = ∫ (x −4) dx = x2/2 −4x + C = 1 2 x2 −4x + C b ∫ 2√x −1 2 dx = ∫ 4x −4√x + 1  dx = ∫ 4x −4x 1 2 + 1 dx = 2x2 −8 3 x 3 2 + x + C c</p>
+      </div>
+    </article>
+    <article class="q" id="q13">
       <h2>13 · Exercise 3E</h2>
-      <div class="stem"><p>Write these functions with fractional indices and hence find their indefinite integrals. 4√x a 3√x b</p></div>
+      <div class="stem">
+        <p>Write these functions with fractional indices and hence find their indefinite integrals. 4√x a 3√x b</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>a 4√x = x</p></div>
-    </article><article class="q" id="q14">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">a 4√x = x 1 4 : ∫ x 1 4 dx = x 5 4 5 4 + C = 4 5 4√ x5 + C b 3√x = 3x 1 2 : ∫ 3x 1 2 dx = 3x 3 2 3 2 + C = 2x√x + C c 2 √x = 2x −1 2 : ∫ 2x −1 2 dx = 2x 1 2 1 2 + C = 4√x + C d 1 3√ x2 = x −2 3 : ∫ x −2 3 dx = x 1 3 1 3 + C = 3 3√x + C</p>
+      </div>
+    </article>
+    <article class="q" id="q14">
       <h2>14 · Exercise 3E</h2>
-      <div class="stem"><p>Explain why the indefinite integral ∫1 x dx cannot be found in the usual way using the standard form ∫ xn dx = xn+1 n + 1 + C.</p></div>
+      <div class="stem">
+        <p>Explain why the indefinite integral ∫1 x dx cannot be found in the usual way using the standard form ∫ xn dx = xn+1 n + 1 + C.</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>The indefinite integral ∫1 x dx = ∫ x−1 dx If applying the standard form shown, it would equal x0 0 + C which is undefined. Dividing by zero is an invalid operation. Therefore, the standard form does not apply to this particular integral.</p></div>
-    </article><article class="q" id="q15">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">The indefinite integral ∫1 x dx = ∫ x−1 dx If applying the standard form shown, it would equal x0 0 + C which is undefined.</p>
+        <p class="step">Dividing by zero is an invalid operation.</p>
+        <p class="step">Therefore, the standard form does not apply to this particular integral.</p>
+        <p class="step">Another way to view this is that the standard form is based on reversing the power rule for differentiation, however such a rule/operation is not always reversible.</p>
+        <p class="step">The case where n = −1 is the case where the reversal of the power rule fails.</p>
+        <p class="step">i.e.</p>
+        <p class="step">the power rule d dx x0 = 0 is not reversible.</p>
+      </div>
+    </article>
+    <article class="q" id="q15">
       <h2>15 · Exercise 3E</h2>
-      <div class="stem"><p>Find each indefinite integral. ∫√ 2x −1 dx a ∫√ 7 −4x dx b ∫ 3√ 4x −1 dx c ∫</p></div>
+      <div class="stem">
+        <p>Find each indefinite integral. ∫√ 2x −1 dx a ∫√ 7 −4x dx b ∫ 3√ 4x −1 dx c ∫</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>∫√ 2x −1 dx = ∫ (2x −1)</p></div>
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula:</strong> Indefinite integral <span class="tex">\int f(x)\,dx = F(x)+C</span> where <span class="tex">F'(x)=f(x)</span>. Always include <span class="tex">+C</span> unless definite limits are used.</p>
+        <p class="step">∫√ 2x −1 dx = ∫ (2x −1) 1 2 dx = (2x −1) 3/22 × 3 2 + C = 1 3(2x −1) 3 2 + C a ∫√ 7 −4x dx = ∫ (7 −4x) 1 2 dx = (7 −4x) 3/2 −4 × 3 2 + C = −1 6(7 −4x) 3 2 + C b ∫ 3√ 4x −1 dx = ∫ (4x −1) 1 3 dx = (4x −1) 4/34 × 4 3 + C = 3 16(4x −1) 4 3 + C c ∫ 1 √ 3x + 5 dx = ∫ (3x + 5) −1 2 dx = (3x + 5) 1/23 × 1 2 + C = 2 3 √ 3x + 5 + C d 9</p>
+      </div>
     </article>
     <p style="margin-top:1.5rem">
       <a class='btn' href='../../Chapter 3 Integration/3F-areas-by-integration/concept.html'>Next: 3F Concept →</a>
