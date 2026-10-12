@@ -40,14 +40,14 @@
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
         <p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step"><strong>a ·</strong> 0.˙3 = 0.333 . . . = 0.3 + 0.03 + 0.003 + . . . = This is a GP with <span class="tex">a = 0.3</span> and <span class="tex">r = 0.1.</span> Hence, 0.˙3 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.3</span> 1 −0.1 = 0.3 0.9 = 3 9 = 1 3.</p>
-        <p class="step"><strong>b ·</strong> 0.˙1 = 0.111 . . . = 0.1 + 0.01 + 0.001 + . . . = This is a GP with <span class="tex">a = 0.1</span> and <span class="tex">r = 0.1.</span> Hence, 0.˙1 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.1</span> 1 −0.1 = 0.1 0.9 = 1 9.</p>
-        <p class="step"><strong>c ·</strong> 0.˙7 = 0.777 . . . = 0.7 + 0.07 + 0.007 + . . . = This is a GP with <span class="tex">a = 0.7</span> and <span class="tex">r = 0.1.</span> Hence, 0.˙7 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.7</span> 1 −0.1 = 0.7 0.9 = 7 9.</p>
-        <p class="step"><strong>d ·</strong> 0.˙6 = 0.666 . . . = 0.6 + 0.06 + 0.006 + . . . = This is a GP with <span class="tex">a = 0.6</span> and <span class="tex">r = 0.1.</span> Hence, 0.˙6 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.6</span> 1 −0.1 = 0.6 0.9 = 6 9 = 2 3.</p>
+        <p class="step"><strong>a ·</strong> 0.˙3 = 0.333 . . . = 0.3 + 0.03 + 0.003 + . . . = This is a GP with a = 0.3 and r = 0.1. Hence, 0.˙3 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.3/1 −0.1 = 0.3/0.9 = 3 9 = 1/3.</p>
+        <p class="step"><strong>b ·</strong> 0.˙1 = 0.111 . . . = 0.1 + 0.01 + 0.001 + . . . = This is a GP with a = 0.1 and r = 0.1. Hence, 0.˙1 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.1/1 −0.1 = 0.1/0.9 = 1/9.</p>
+        <p class="step"><strong>c ·</strong> 0.˙7 = 0.777 . . . = 0.7 + 0.07 + 0.007 + . . . = This is a GP with a = 0.7 and r = 0.1. Hence, 0.˙7 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.7/1 −0.1 = 0.7/0.9 = 7/9.</p>
+        <p class="step"><strong>d ·</strong> 0.˙6 = 0.666 . . . = 0.6 + 0.06 + 0.006 + . . . = This is a GP with a = 0.6 and r = 0.1. Hence, 0.˙6 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.6/1 −0.1 = 0.6/0.9 = 6 9 = 2/3.</p>
       </div>
     </article>
     <article class="q" id="q2">
@@ -58,8 +58,60 @@
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
         <p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step">0.˙2˙7 = 0.2727 . . . = 0.27 + 0.0027 + 0.000027 + . . . This is a GP with <span class="tex">a = 0.27</span> and <span class="tex">r = 0.01.</span> Hence: 0.˙2˙7 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.27</span> 1 −0.01 = 0.27 0.99 = 27 99 = 3</p>
+        <p class="step">0.˙2˙7 = 0.2727 . . . = 0.27 + 0.0027 + 0.000027 + . . . This is a GP with a = 0.27 and r = 0.01. Hence: 0.˙2˙7 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.27/1 −0.01 = 0.27/0.99 = 27 99 = 3/11</p>
+        <p class="step"><strong>a ·</strong> 0.˙8˙1 = 0.8181 . . . = 0.81 + 0.0081 + 0.000081 + . . . This is a GP with a = 0.81 and r = 0.01. Hence: 0.˙8˙1 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.81/1 −0.01 = 0.81/0.99 = 81 99 = 9/11</p>
+        <p class="step"><strong>b ·</strong> 0.˙0˙9 = 0.0909 . . . = 0.09 + 0.0009 + 0.000009 + . . . This is a GP with a = 0.09 and r = 0.01. Hence: 0.˙0˙9 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.09/1 −0.01 = 0.09/0.99 = 9 99 = 1/11</p>
+        <p class="step"><strong>c ·</strong> 0.˙1˙2 = 0.1212 . . . = 0.12 + 0.0012 + 0.000012 + . . . This is a GP with a = 0.12 and r = 0.01. Hence: 0.˙1˙2 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.12/1 −0.01 = 0.12/0.99 = 12 99 = 4/33</p>
+        <p class="step"><strong>d ·</strong> 0.˙7˙8 = 0.7878 . . . = 0.78 + 0.0078 + 0.000078 + . . . This is a GP with a = 0.78 and r = 0.01. Hence: 0.˙7˙8 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.78/1 −0.01 = 0.78/0.99 = 78 99 = 26/33</p>
+        <p class="step"><strong>e ·</strong> 0.˙02˙7 = 0.027027 . . . = 0.027 + 0.000027 + 0.000000027 + . . . This is a GP with a = 0.027 and r = 0.001. Hence: 0.˙02˙7 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.027/1 −0.001 = 0.027/0.999 = 27 999 = 1/37</p>
+        <p class="step"><strong>f ·</strong> 1/0.˙13˙5 = 0.135135 . . . = 0.135 + 0.000135 + 0.000000135 + . . . This is a GP with a = 0.135 and r = 0.001. Hence: 0.˙13˙5 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.135/1 −0.001 = 0.135/0.999 = 135 999 = 5/37</p>
+        <p class="step"><strong>g ·</strong> 0.˙18˙5 = 0.185185 . . . = 0.185 + 0.000185 + 0.000000185 + . . . This is a GP with a = 0.185 and r = 0.001. Hence: 0.˙18˙5 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.185/1 −0.001 = 0.185/0.999 = 185 999 = 5/27</p>
+        <p class="step"><strong>h ·</strong> 3/12.˙4 = 12.444 . . . = 12 + 0.4 + 0.04 + 0.004 + . . . All terms after 12 form a GP with a = 0.4 and r = 0.1. Hence: 12.˙4 = 12 + S ∞= 12 +</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 12 + 0.4/1 −0.1 = 12 + 0.4/0.9 = 124/9</p>
+        <p class="step"><strong>a ·</strong> 7.˙8˙1 = 7.8181 . . . = 7 + 0.81 + 0.0081 + 0.000081 + . . . All terms after 7 form a GP with a = 0.81 and r = 0.01. Hence 7.˙8˙1 = 7 + S ∞= 7 +</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 7 + 0.81/1 −0.01 = 7 + 0.81/0.99 = 7 9/11</p>
+        <p class="step"><strong>b ·</strong> 8.4˙6 = 8.466 . . . = 8.4 + 0.06 + 0.006 + . . . All terms after 8.4 form a GP with a = 0.06 and r = 0.1. Hence: 8.4˙6 = 8.4 + S ∞= 8.4 +</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 8.4 + 0.06/1 −0.1 = 8.4 + 0.06/0.9 = 8.4 + 6 90 = 8 7/15</p>
+        <p class="step"><strong>c ·</strong> 0.2˙3˙6 = 0.23636 . . . = 0.2 + 0.036 + 0.00036 + . . . All terms after 0.2 form a GP with a = 0.036 and r = 0.01. Hence: 0.2˙3˙6 = 0.2 + S ∞ = 0.2 +</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.2 + 0.036/1 −0.01 = 0.2 + 0.036/0.99 = 0.2 + 2 55 = 11 55 + 2 55 = 13/55</p>
+        <p class="step"><strong>d ·</strong> 4/0.˙9 = 0.99999 . . . = 0.9 + 0.09 + 0.009 + 0.0009 + . . . This is a GP with a = 0.9 and r = 0.09/0.9 = 0.1, so the sum will be: S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.9/1 −0.1 = 0.9/0.9 = 1 Thus 0.˙9 = 1</p>
+        <p class="step"><strong>a ·</strong> 2.7˙9 = 2.799999 . . . = 2.7 + 0.09 + 0.009 + 0.0009 + . . . All terms after 2.7 form a GP with a = 0.09 and r = 0.009/0.09 = 0.1, so the sum will be S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.09/1 −0.1 = 0.09/0.9 = 0.1 Hence 2.7˙9 = 2.7 + S ∞= 2.7 + 0.1 = 2.8</p>
+        <p class="step"><strong>a ·</strong> 0.˙95˙7 = 0.957 957 957 . . . = 0.957 + 0.000 957 + 0.000 000 957 + . . . This is a GP with a = 0.957 and r = 0.001. Hence: 0.˙95˙7 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.957/1 −0.001 = 0.957/0.999 = 957 999 = 29 303</p>
+        <p class="step"><strong>b ·</strong> 0.˙247˙5 = 0.247 524 75 . . . = 0.2475 + 0.000 0247 5 + . . . This is a GP with a = 0.2475 and r = 0.0001. Hence: 0.˙247˙5 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.2475/1 −0.0001 = 0.2475/0.9999 = 2475 9999 = 25 101/2</p>
+        <p class="step"><strong>c ·</strong> 0.˙230 76˙9 = 0.230 769 230 769 . . . = 0.2307 69 + 0.000 002 307 69 + . . . This is a GP with a = 0.230 769 and r = 0.000/01. Hence: 0.˙230 76˙9 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.230 769/1 −0.000 01 = 0.230 769/0.999 99 = 230 769 99 999 = 3/13</p>
+        <p class="step"><strong>d ·</strong> 0.˙428 57˙1 = 0.428 571 . . . = 0.428 571 + 0.000 004 285 71 + . . . This is a GP with a = 0.428 571 and r = 0.000/01. Hence: 0.˙42857˙1 = S ∞=</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.428 571/1 −0.000 01 = 0.428 571/0.999 99 = 428 571 999 990 = 3/7</p>
+        <p class="step"><strong>e ·</strong> 0.25˙5˙7 = 0.255 757 575 7 . . . = 0.25 + (0.0057 + 0.000 057 + . . .) The bracketed terms form a GP with a = 0.0057 and r = 0.01. Hence: 0.25˙5˙7 = 0.25 + S ∞ = 0.25 +</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1 4 + 0.0057/1 −0.01 = 1 4 + 0.0057/0.99 = 1 4 + 57 9900 = 211 825</p>
+        <p class="step"><strong>f ·</strong> 1.1˙03˙7 = 1.103 703 703 7 . . . = 1.1 + (0.0037 + 0.000 003 7 + . . .) The bracketed terms form a GP with a = 0.0037 and r = 0.001. Hence: 1.1˙03˙7 = 1.1 + S ∞ = 1.1 +</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 1.1 + 0.0037/1 −0.001 = 1.1 + 0.0037/0.999 = 10989 9990 + 37 9990 = 1 14 135</p>
+        <p class="step"><strong>g ·</strong> 0.0˙00 27˙1 = 0.000 271 002 710 027 1 . . . = 0.000 271 + 0.000 000 002 71 + 0.000 000 000 000 027 1 + . . . This is a GP with a = 0.000 271 and r = 0.0001. Hence: 0.0˙00 27˙1 = S ∞ =</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 0.000 271/1 −0.0001 = 0.000 271/0.9999 = 1 3690</p>
+        <p class="step"><strong>h ·</strong> 7.7˙71 428 ˙5 = 7.771 428 571 428 571 428 5 . . . = 7.7 + (0.071 428 5 + 0.000 007 142 85 + . . .) The bracketed terms form a GP with a = 0.071 428 5 and r = 0.000/01. Hence: 3/7.7˙71 428 ˙5 = 7.7 + S ∞ = 7.7 +</p>
+        <p class="step"><strong>a ·</strong> 1 −r = 7.7 + 0.071 428 5/1 −0.000 01 = 7.7 + 0.071 428 5/0.999 99 = 727 35 6 We proved that √ 2 is irrational. Since it is irrational, it cannot be written as a fraction of two integers. When √ 2 is written as a decimal instead, if it were recurring, we could use the methods of this section to write it as a fraction of two integers. Since we know that is impossible, we can conclude that √ 2 is non-recurring. 4 Name: and series Chapter 1 Review 1 The first 12 terms of the sequence are 50, 41, 32, 23, 14, 5, −4, −13, −22, −31, −40, −49</p>
+        <p class="step"><strong>a ·</strong> The positive terms are 50, 41, 32, 23, 14, 5 Counting, there are a total of 6.</p>
+        <p class="step"><strong>b ·</strong> The terms between 0 and 40 are 32, 23, 14, 5 Counting, there are a total of 4.</p>
+        <p class="step"><strong>c ·</strong> a10 = −31</p>
+        <p class="step"><strong>d ·</strong> a8 = −13</p>
+        <p class="step"><strong>e ·</strong> No, extending the sequence gives 50, 41, 32, 23, 14, 5, −4, −13, −22, −31, −40, −49, −58, −67, −76, −85, −95, −104 . . . which does not contain −100.</p>
+        <p class="step"><strong>f ·</strong> a11 = −40/2</p>
+        <p class="step"><strong>a ·</strong> a1 = 58 −6(1) = 52 a20 = 58 −6(20) = −62 a100 = 58 −6(100) = −542 1 000 000 = 58 −6(1 000 000) = −5 999 942</p>
+        <p class="step"><strong>b ·</strong> Solving an = 20/58 −6n = 20 6n = 38 n = 6.33 . . . As n is not an integer, 20 is not a term in the sequence. Solving an = 10/58 −6n = 10 6n = 48 n = 8 Thus a8 = 10 is a term. Solving an = −56/58 −6n = −56 6n = 114 n = 19 Thus a19 = −56 is a term. Solving an = −100 1 Chapter 1 Review 58 −6n = −100 6n = 158 n = 26.33 . . . As n is not an integer, −100 is not a term in the sequence.</p>
+        <p class="step"><strong>c ·</strong> an &lt; −200/58 −6n &lt; −200 6n &gt; 258 n &gt; 43 Hence the first term less than −200 is a44 = −206.</p>
+        <p class="step"><strong>d ·</strong> an &gt; −600/58 −6n &gt; −600 6n &lt; 658 n &lt; 109.666 . . . Hence the last term greater than −600 is a109 = −596</p>
       </div>
     </article>
     <article class="q" id="q3">
@@ -70,10 +122,10 @@
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
         <p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step"><span class="tex">S 1 =</span><span class="tex">a1 = 4</span> S 2 = a1 + S 1 Hence: <span class="tex">a2 = S</span> 2 −S 1 = 11 −4 = 7 <span class="tex">a3 = S</span> 3 −S 2 = 18 −11 = 7 <span class="tex">a4 = S</span> 4 −S 3 = 25 −18 = 7 <span class="tex">a5 = S</span> 5 −S 4 = 32 −25 = 7 <span class="tex">a6 = S</span> 6 −S 5 = 39 −32 = 7 Hence giving the sequence: 4, 7, 7, 7, 7, 7, . . .</p>
-        <p class="step"><strong>a ·</strong> <span class="tex">S 1 =</span><span class="tex">a1 = 0</span> S 2 = a1 + S 1 Hence: <span class="tex">a2 = S</span> 2 −S 1 = 1 −0 = 1 <span class="tex">a3 = S</span> 3 −S 2 = 3 −1 = 2 <span class="tex">a4 = S</span> 4 −S 3 = 6 −3 = 3 <span class="tex">a5 = S</span> 5 −S 4 = 10 −6 = 4 <span class="tex">a6 = S</span> 6 −S 5 = 15 −10 = 5 <span class="tex">a7 = S</span> 7 −S 6 = 21 −15 = 6 Hence giving the sequence: 0, 1, 2, 3, 4, 5, 6, . . .</p>
-        <p class="step"><strong>b ·</strong> <span class="tex">a1 = S</span> 1 = 12 + 5 = 6 an = S n −S n−1 = n2 + 5 −  (n −1)2 + 5  = n2 + 5 −  n2 −2n + 1 + 5  = 2n −1 for n &gt; 1</p>
-        <p class="step"><strong>c ·</strong> <span class="tex">a1 = S</span> 1 = 31 = 3 an = S n −S n−1 = 3n −3n−1 an = S n −S n−1 = 3n −3n−1 = 3n−1(3 −1) = <span class="tex">2 \times  3</span>n−1 for n &gt; 1</p>
+        <p class="step">S 1 = a1 = 4 S 2 = a1 + S 1 Hence: a2 = S 2 −S 1 = 11 −4 = 7 a3 = S 3 −S 2 = 18 −11 = 7 a4 = S 4 −S 3 = 25 −18 = 7 a5 = S 5 −S 4 = 32 −25 = 7 a6 = S 6 −S 5 = 39 −32 = 7 Hence giving the sequence: 4, 7, 7, 7, 7, 7, . . .</p>
+        <p class="step"><strong>a ·</strong> S 1 = a1 = 0 S 2 = a1 + S 1 Hence: a2 = S 2 −S 1 = 1 −0 = 1 a3 = S 3 −S 2 = 3 −1 = 2 a4 = S 4 −S 3 = 6 −3 = 3 a5 = S 5 −S 4 = 10 −6 = 4 a6 = S 6 −S 5 = 15 −10 = 5 a7 = S 7 −S 6 = 21 −15 = 6 Hence giving the sequence: 0, 1, 2, 3, 4, 5, 6, . . .</p>
+        <p class="step"><strong>b ·</strong> a1 = S 1 = 12 + 5 = 6 an = S n −S n−1 = n2 + 5 −  (n −1)2 + 5  = n2 + 5 −  n2 −2n + 1 + 5  = 2n −1 for n &gt; 1</p>
+        <p class="step"><strong>c ·</strong> a1 = S 1 = 31 = 3 an = S n −S n−1 = 3n −3n−1 an = S n −S n−1 = 3n −3n−1 = 3n−1(3 −1) = 2 × 3n−1 for n &gt; 1</p>
       </div>
     </article>
     <article class="q" id="q4">
@@ -85,10 +137,10 @@ b Express 2.7˙9 as 2.7 plus an infinite GP, and hence show that it equals 2.8.<
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
         <p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step">0.˙9 = 0.99999 . . . = 0.9 + 0.09 + 0.009 + 0.0009 + . . . This is a GP with <span class="tex">a = 0.9</span> and <span class="tex">r = 0.09</span> 0.9 = 0.1, so the sum will be: S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.9</span> 1 −0.1 = 0.9 0.9 = 1 Thus 0.˙9 = 1</p>
-        <p class="step"><strong>a ·</strong> 2.7˙9 = 2.799999 . . . = 2.7 + 0.09 + 0.009 + 0.0009 + . . . All terms after 2.7 form a GP with <span class="tex">a = 0.09</span> and <span class="tex">r = 0.009</span> 0.09 = 0.1, so the sum will be S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.09</span> 1 −0.1 = 0.09 0.9 = 0.1 Hence 2.7˙9 = 2.7 + S ∞= 2.7 + 0.1 = 2.8</p>
+        <p class="step"><strong>a ·</strong> P6 n=3(n2 −1) = 8 + 15 + 24 + 35 = 82</p>
+        <p class="step"><strong>b ·</strong> P2 n=−2(5n −3) = −13 + (−8) + (−3) + 2 + 8 = −15</p>
+        <p class="step"><strong>c ·</strong> P6 n=0(−1)n = 1 + (−1) + 1 + (−1) + 1 + (−1) + 1 = 1</p>
+        <p class="step"><strong>d ·</strong> P6 n=1 1 2 !n = 1 2 + 1 4 + 1 16 + 1 32 + 1 64 = 63 64 2 Chapter 1 Review</p>
       </div>
     </article>
     <article class="q" id="q5">
@@ -99,22 +151,10 @@ b Express 2.7˙9 as 2.7 plus an infinite GP, and hence show that it equals 2.8.<
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
         <p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step"><strong>a ·</strong> 0.˙95˙7 = 0.957 957 957 . . . = 0.957 + 0.000 957 + 0.000 000 957 + . . . This is a GP with <span class="tex">a = 0.957</span> and <span class="tex">r = 0.001.</span> Hence: 0.˙95˙7 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.957</span> 1 −0.001 = 0.957 0.999 = 957 999 = 29 303</p>
-        <p class="step"><strong>b ·</strong> 0.˙247˙5 = 0.247 524 75 . . . = 0.2475 + 0.000 0247 5 + . . . This is a GP with <span class="tex">a = 0.2475</span> and <span class="tex">r = 0.0001.</span> Hence: 0.˙247˙5 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.2475</span> 1 −0.0001 = 0.2475 0.9999 = 2475 9999 = 25 101 2</p>
-        <p class="step"><strong>c ·</strong> 0.˙230 76˙9 = 0.230 769 230 769 . . . = 0.2307 69 + 0.000 002 307 69 + . . . This is a GP with <span class="tex">a = 0.230</span> 769 and <span class="tex">r = 0.000</span> 01. Hence: 0.˙230 76˙9 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.230</span> 769 1 −0.000 01 = 0.230 769 0.999 99 = 230 769 99 999 = 3 13</p>
-        <p class="step"><strong>d ·</strong> 0.˙428 57˙1 = 0.428 571 . . . = 0.428 571 + 0.000 004 285 71 + . . . This is a GP with <span class="tex">a = 0.428</span> 571 and <span class="tex">r = 0.000</span> 01. Hence: 0.˙42857˙1 = S ∞=</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.428</span> 571 1 −0.000 01 = 0.428 571 0.999 99 = 428 571 999 990 = 3 7</p>
-        <p class="step"><strong>e ·</strong> 0.25˙5˙7 = 0.255 757 575 7 . . . = 0.25 + (0.0057 + 0.000 057 + . . .) The bracketed terms form a GP with <span class="tex">a = 0.0057</span> and <span class="tex">r = 0.01.</span> Hence: 0.25˙5˙7 = 0.25 + S ∞ = 0.25 +</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 1</span> 4 + 0.0057 1 −0.01 = 1 4 + 0.0057 0.99 = 1 4 + 57 9900 = 211 825</p>
-        <p class="step"><strong>f ·</strong> 1.1˙03˙7 = 1.103 703 703 7 . . . = 1.1 + (0.0037 + 0.000 003 7 + . . .) The bracketed terms form a GP with <span class="tex">a = 0.0037</span> and <span class="tex">r = 0.001.</span> Hence: 1.1˙03˙7 = 1.1 + S ∞ = 1.1 +</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 1.1</span> + 0.0037 1 −0.001 = 1.1 + 0.0037 0.999 = 10989 9990 + 37 9990 = 1 14 135</p>
-        <p class="step"><strong>g ·</strong> 0.0˙00 27˙1 = 0.000 271 002 710 027 1 . . . = 0.000 271 + 0.000 000 002 71 + 0.000 000 000 000 027 1 + . . . This is a GP with <span class="tex">a = 0.000</span> 271 and <span class="tex">r = 0.0001.</span> Hence: 0.0˙00 27˙1 = S ∞ =</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 0.000</span> 271 1 −0.0001 = 0.000 271 0.9999 = 1 3690</p>
-        <p class="step"><strong>h ·</strong> 7.7˙71 428 ˙5 = 7.771 428 571 428 571 428 5 . . . = 7.7 + (0.071 428 5 + 0.000 007 142 85 + . . .) The bracketed terms form a GP with <span class="tex">a = 0.071</span> 428 5 and <span class="tex">r = 0.000</span> 01. Hence: 3 7.7˙71 428 ˙5 = 7.7 + S ∞ = 7.7 +</p>
-        <p class="step"><strong>a ·</strong> 1 −<span class="tex">r = 7.7</span> + 0.071 428 5 1 −0.000 01 = 7.7 + 0.071 428 5 0.999 99 = 727 35 6 We proved that √ 2 is irrational. Since it is irrational, it cannot be written as a fraction of two integers. When √ 2 is written as a decimal instead, if it were recurring, we could use the methods of this section to write it as a fraction of two integers. Since we know that is impossible, we can conclude that √ 2 is non-recurring. 4 Name: and series Chapter 1 Review</p>
+        <p class="step">The first eight terms are: a1 = 5 × (−1)1 = −5 a2 = 5 × (−1)2 = 5 a3 = 5 × (−1)3 = −5 a4 = 5 × (−1)4 = 5 a5 = 5 × (−1)5 = −5 a6 = 5 × (−1)6 = 5 a7 = 5 × (−1)7 = −5 a8 = 5 × (−1)8 = 5 Thus the sequence is: −5, 5, −5, 5, −5, 5, −5, 5</p>
+        <p class="step"><strong>a ·</strong> The sum of the first seven terms is: S 7 = a(1 −rn) 1 −r = −5  1 −(−1)7 1 −(−1) = −5(2) 2 = −5 S 8 = a(1 −rn) 1 −r = −5  1 −(−1)8 1 −(−1) = −5(0) 2 = 0</p>
+        <p class="step"><strong>b ·</strong> For this particular sequence, one simply adds −5 if the previous term is 0 and adds 5 if the previous term was −5. This means that an = −5 if n is odd and an = 0 if n is even.</p>
+        <p class="step"><strong>c ·</strong> Noting that an = −5 if n is odd and an = 0 if n is even. a20 = 0 a75 = −5 a111 = −5</p>
       </div>
     </article>
     <article class="q" id="q6">
@@ -125,11 +165,12 @@ b Express 2.7˙9 as 2.7 plus an infinite GP, and hence show that it equals 2.8.<
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
       <div class="sol">
         <p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step"><strong>a ·</strong> a2 −<span class="tex">a1 = 83</span> −76 = 7 a3 −<span class="tex">a2 = 90</span> −83 = 7 Hence there is a common difference between the terms, so it is an AP with common difference of 7.</p>
-        <p class="step"><strong>b ·</strong> a2 −<span class="tex">a1 = 100</span> −(−21) = −121 a3 −<span class="tex">a2 = (-21)</span> −(−142) = −121 Hence there is a common difference between the terms, so it is an AP with common difference of −121.</p>
-        <p class="step"><strong>c ·</strong> a2 −<span class="tex">a1 = 9</span> −4 = 5 a3 −<span class="tex">a2 = 4</span> −1 = 3 a3 <span class="tex">a2 = 9</span> 4 = 2.25 a2 <span class="tex">a1 = 4</span> 1 = 4 There is no common ratio nor common difference. Hence it is neither an AP nor a GP.</p>
-        <p class="step"><strong>d ·</strong> a3 <span class="tex">a2 = 54</span> 18 = 3 a2 <span class="tex">a1 = 18</span> 6 = 3 Hence, as there is a common ratio, this is a GP with <span class="tex">r = 3.</span></p>
-        <p class="step"><strong>e ·</strong> a2 −<span class="tex">a1 = 10</span> −6 = 4 a3 −<span class="tex">a2 = 15</span> −10 = 5 a3 <span class="tex">a2 = 15</span> 10 = 3</p>
+        <p class="step"><strong>a ·</strong> a2 −a1 = 83 −76 = 7 a3 −a2 = 90 −83 = 7 Hence there is a common difference between the terms, so it is an AP with common difference of 7.</p>
+        <p class="step"><strong>b ·</strong> a2 −a1 = 100 −(−21) = −121 a3 −a2 = (−21) −(−142) = −121 Hence there is a common difference between the terms, so it is an AP with common difference of −121.</p>
+        <p class="step"><strong>c ·</strong> a2 −a1 = 9 −4 = 5 a3 −a2 = 4 −1 = 3 a3 a2 = 9 4 = 2.25 a2 a1 = 4 1 = 4 There is no common ratio nor common difference. Hence it is neither an AP nor a GP.</p>
+        <p class="step"><strong>d ·</strong> a3 a2 = 54 18 = 3 a2 a1 = 18 6 = 3 Hence, as there is a common ratio, this is a GP with r = 3.</p>
+        <p class="step"><strong>e ·</strong> a2 −a1 = 10 −6 = 4 a3 −a2 = 15 −10 = 5 a3 a2 = 15 10 = 3 2 a2 a1 = 10 6 = 5 3 There is no common ratio nor common difference. Hence it is neither an AP nor a GP.</p>
+        <p class="step"><strong>f ·</strong> a3 a2 = 12 −24 = −1 2 a2 a1 = −24 48 = −1 2 Hence, as there is a common ratio, this is a GP with r = −1/2. 3 Chapter 1 Review</p>
       </div>
     </article>
     <p style="margin-top:1.5rem">
