@@ -37,10 +37,13 @@
       <div class="stem">
         <p>x dx = 1. b This question uses the result in part a to estimate e from a graph of y = 1 x . The diagram to the right shows the graph of y = 1 x from x = 0 to x = 3. The graph has been drawn on graph paper with a scale of 10 little divisions to 1 unit, so that 100 of these little squares make 1 square unit. Count the number of squares in the column from x = 1.0 to 1.1, then the squares in the column from x = 1.1 to 1.2, and so on. y x</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">a ∫e 1 1 x dx = [ln |x|]e 1 = ln e −ln 1 = 1 −0 = 1 b Based on the diagram above, the 100 square mark occurs at approximately 2.7.</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q2">
@@ -48,25 +51,97 @@
       <div class="stem">
         <p>Find the area between the curve y = 1 x and the x-axis for: e ≤x ≤e2 a e2 ≤x ≤e5 b</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">a Area = ∫e2 e 1 x dx = [ln x]e2 e = ln(e2) −ln(e) = 2 −1 = 1 unit2. b Area = ∫e5 e2 1 x dx = [ln x]e5 e2 = 5 −2 = 3 unit2. 3 Area = ∫2 1 1 x dx = [ln |x|]2 1 = ln 2 −ln 1 = ln 2 square units a Area = ∫3 2 1 x dx = [ln |x|]3 2 = (ln 3 −ln 2) square units b Area = ∫1 1 3 1 x dx = [ln |x|]1 1 3 = ln 1 −ln 1 3 = 0 −(−ln 3) = ln 3 square units c Area = ∫2 1 2 1 x dx = [ln |x|]2 1 2 = ln 2 −ln 1 2 = ln 2 −(−ln 2) = 2 ln 2 square units d 4 a i Area = ∫1 0 1 3x + 2 dx = &quot;1 3 ln |3x + 2| #1 0 = 1 3 ln |3(1) + 2| −1 3 ln |3(0) + 2| = 1 3 (ln 5 −ln 2) square units ≑0.3054 square units ii Area = ∫6 0 1 3x + 2 dx = &quot;1 3 ln |3x + 2| #6 0 = 1 3 ln |3(6) + 2| −1 3 ln |3(0) + 2| = 1 3 (ln 20 −ln 2) = 1 3 ln 20 2 ! = 1 3 ln 10 square units ≑0.7675 square units b i Area = ∫4 3 1 2x −5 dx = &quot;1 2 ln |2x −5| #4 3 = 1 2 ln |2(4) −5| −1 2 ln |2(3) −5| = 1 2 (ln 3 −ln 1) = 1 2 ln 3 square units ≑0.5493 square units ii Area = ∫16 4 1 2x −5 dx = &quot;1 2 ln |2x −5| #16 4 = 1 2 ln |2(16) −5| −1 2 ln |2(4) −5| = 1 2 (ln 27 −ln 3) = 1 2 ln 27 3 = 1 2 ln 9 = 1 2 ln 32 = ln 3 square units ≑1.099 square units 5 Area = ∫2 1 1 x + 1 ! dx = [ln |x| + x]2 1 = (ln |2| + 2) −(ln |1| + 1) = (ln 2 + 2) −(0 + 1) = (ln 2 + 1) square units a Area = ∫2 1 2 1 x + x ! dx = &quot; ln |x| + x2 2 #2 1 2 = ln |2| + 22 2 ! −  ln 1 2 + 1 2 !2 2  = ln 2 + 2 + ln 2 −1 8 = 2 ln 2 + 15 8 ! square units b Area = ∫3 1 1 x + x2 ! dx = &quot; ln |x| + x3 3 #3 1 = ln |3| + 33 3 ! − ln |1| + 13 3 ! = ln 3 + 27/3 −1 3 = ln 3 + 82 3 ! square units c 6</p>
-        <p class="step"><strong>a ·</strong> Area = ∫3 1/3 −3 x ! dx = [3x −3 ln |x|]3 1 = (3(3) −3 ln |3|) −(3(1) −3 ln |1|) = 9 −3 ln 3 −3 + 0 = (6 −3 ln 3) square units</p>
-        <p class="step"><strong>b ·</strong> Area = ∫3 1/2 −1 x ! dx = [2x −ln |x|]3 1 = (2(3) −ln |3|) −(2(1) −ln |1|) = 6 −ln 3 −2 + 0 = (4 −ln 3) square units 7 Area = ∫4 1/2 −2 x ! dx − ∫4 1 1 2(x −1) dx = ∫4 1/2 −2 x −x 2 + 1 2 ! dx = ∫4 1/52 −2 x −x 2 ! dx = &quot;5x 2 −2 ln |x| −x2 4 #4 1 = 5(4) 2 −2 ln |4| −(4)2 4 ! − 5(1) 2 −2 ln |1| −(1)2 4 ! = 10 −2 ln 4 −4 −5 2 + 0 + 1 4 = 33/4 −2 ln 4 ! square units a Rearrange x + 2y −5 = 0 to become y = 5 −x 2 . Area = ∫4/15 −x 2 dx − ∫4 1 2 x dx = ∫4 1/52 −x 2 −2 x ! dx = &quot;5x 2 −x2/4 −2 ln |x| #4 1 = 5(4) 2 −(4)2/4 −2 ln |4| ! − 5(1) 2 −(1)2/4 −2 ln |1| ! = 10 −4 −2 ln 4 −5 2 + 1 4 + 0 = 33/4 −2 ln 4 ! square units b 8 a</p>
-        <p class="step"><strong>b ·</strong> Area = ∫8 4/1 −4 x ! dx = [x −4 ln |x|]8 4 = (8 −4 ln |8|) −(4 −4 ln |4|) = 4 −4 × 3 ln 2 + 4 × 2 ln 2 = 4 −12 ln 2 + 8 ln 2 = 4 −4 ln 2 = 4(1 −ln 2) square units 9</p>
-        <p class="step"><strong>a ·</strong> Area = ∫2 1/2 − 2 −2 x !! dx = ∫2 1 2 x dx = [2 ln |x|]2 1 = (2 ln |2|) −(2 ln |1|) = 2 ln 2 square units</p>
-        <p class="step"><strong>b ·</strong> Area = ∫0 −1/1 − 1 x + 2 ! dx = [x −ln |x + 2|]0 −1 = (0 −ln |0 + 2|) −((−1) −ln |(−1) + 2|) = 0 −ln 2 + 1 + ln 1 = (1 −ln 2) square units 10</p>
-        <p class="step"><strong>a ·</strong> Area = ∫4 1/0 − −1 x !! dx = [ln |x|]4 1 = ln |4| −ln |1| = ln 4 −ln 1 = ln 4 square units</p>
-        <p class="step"><strong>b ·</strong> Area = ∫3 1/0 − 3 x −3 !! dx = [3x −3 ln |x|]3 1 = (3(3) −3 ln |3|) −(3(1) −3 ln |1|) = 9 −3 ln 3 −3 −3 ln 1 = (6 −3 ln 3) square units 11</p>
-        <p class="step"><strong>a ·</strong> Area = ∫1 1 2 1 x −1 ! dx + ∫2 1/0 − 1 x −1 !! dx = [ln |x| −x]1 1 2 + [x −ln |x|]2 1 = &quot; (ln |1| −1) − ln 1/2 −1 2 !# + [(2 −ln |2|) −(1 −ln |1|)] = 0 −1 −ln 1 2 + 1 2 + 2 −ln 2 −1 + ln 1 = 0 −1 + 1 2 + 2 −1 + ln 2 −ln 2 + ln 1 = 1 2 square unit</p>
-        <p class="step"><strong>b ·</strong> Area = ∫2 1/0 −1 + 2 x ! dx + ∫3 2/1 −2 x ! dx = [2 ln |x| −x]2 1 + [x −2 ln |x|]3 2 = [(2 ln |2| −2) −(2 ln |1| −1)] + [(3 −2 ln |3|) −(2 −2 ln |2|)] = 2 ln 2 −2 −2 ln 1 + 1 + 3 −2 ln 3 −2 + 2 ln 2 = 1 −2 + 3 −2 + 2 ln 2 −2 ln 1 −2 ln 3 + 2 ln 2 = 2 ln 4 −2 ln 3 = 2 ln 4 3 square units 12</p>
-        <p class="step"><strong>a ·</strong> Let u = x2 + 1 u′ = 2x</p>
-        <p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C ∫2 0 x x2 + 1 dx = 1 2 ∫2 0 2x x2 + 1 dx = &quot;1 2 ln x2 + 1 #2 0 = 1 2 ln (2)2 + 1 ! − 1 2 ln (0)2 + 1 ! = 1 2 ln 5 −1 2 ln 1 = 1 2 ln 5 square units ≑0.805 square units 13</p>
-        <p class="step"><strong>a ·</strong> Let u = x2 + 2x + 3 u′ = 2x + 2 = 2(x + 1)</p>
-        <p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C Area = ∫1 0 x + 1 x2 + 2x + 3 dx = 1 2 ∫1 0 2x + 2 x2 + 2x + 3 dx = &quot;1 2 ln x2 + 2x + 3 #1 0 = 1 2 ln (1)2 + 2(1) + 3 ! − 1 2 ln (0)2 + 2(0) + 3 ! = 1 2 ln 6 −1 2 ln 3 = 1 2 ln 2 square units 14 a First, solve the equations simultaneously to determine the intersection points. y = 1 x, y = 4 −3x 1 x = 4 −3x 1 = 4x −3x2 3x2 −4x + 1 = 0 (3x −1)(x −1) = 0 x = 1/3, x = 1 When x = 1/3, y = 1 1 3 = 3 When x = 1, y = 1 1 = 1 The intersection points are 1/3, 3 ! , (1, 1)</p>
-        <p class="step"><strong>b ·</strong> Given that there are only two intersection points, we only need to determine which curve lies above the other. Pick a value of x ∈ 1/3, 1 ! between the points of intersection. Try x = 2/3, let f(x) = 1 x, g(x) = 4 −3x f 2 3 ! = 3/2, g 2 3 ! = 4 −3 2 3 ! = 2 As g 2 3 ! &gt; f 2 3 ! , the line g(x) lies above f(x) Area between the curves = ∫1 1 3/4 −3x −1 x ! dx = &quot; 4x −3 2 x2 −ln |x| #1 1 3 = 4(1) −3 2(1)2 −ln |1| ! − 4 1 3 ! −3 2 1 3 !2 −ln 1 3  = 4 −3/2 −0 −4 3 + 1 6 + ln 1 3 = 4/3 −ln 3 ! square units 15 a</p>
-        <p class="step"><strong>b ·</strong> The appropriate integral is a sum of integrals from x = 0 to x = 1 and from x = 1 to x = e. Area = ∫1 0 x dx + ∫e 1 1 x dx = &quot; x2 2 #1 0 + [ln |x|]e 1 = 12/2 −02 2 ! + (ln |e| −ln |1|) = 1 2 + 1 = 3 2 square units 16 ∫2 1 1 x dx = [ln |x|]2 1 = (ln |2|) −(ln |1|) = ln 2 ≑0.693 a Two trapezoids are formed. At x = 1, y = 1 1 = 1. At x = 3/2, y = 1 3 2 = 2/3. At x = 2, y = 1/2. Dimensions of trapezoid 1: a1 = y(1) = 1 b1 = y 3 2 ! = 2 3 h1 = 3/2 −1 = 1 2 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 1 + 2 3 ! 1 2 ! = 5 12 Dimensions of trapezoid 2: a2 = y 3 2 ! = 2 3 b2 = y(2) = 1 2 h2 = 2 −3 2 = 1 2 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2/23 + 1 2 ! 1 2 ! = 7 24 Total area, A1 + A2 = 5 12 + 7 24 = 17 24 ≑0.708 square units b 17 Area = ∫3 1 1 x dx = [ln |x|]3 1 = ln 3 −ln 1 = ln 3 ≑1.0986 square units a Two equal subintervals between 1 and 3, At x = 1, y = 1 1 = 1. At x = 2, y = 1/2. At x = 3, y = 1/3. Dimensions of trapezoid 1: a1 = y(1) = 1 b1 = y(2) = 1 2 h1 = 2 −1 = 1 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 1 + 1 2 ! (1) = 3 4 Dimensions of trapezoid 2: a2 = y(2) = 1 2 b2 = y(3) = 1 3 h2 = 3 −2 = 1 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2/12 + 1 3 ! (1) = 5 12 Total area, A1 + A2 = 3 4 + 5 12 = 7 6 ≑1.1667 square units b 18 Four subintervals require 5 function values between 1 ≤x ≤5 At x = 1, y = ln 1 = 0 At x = 2, y = ln 2 At x = 3, y = ln 3 At x = 4, y = ln 4 = 2 ln 2 At x = 5, y = ln 5 Dimensions of trapezoid 1: a1 = y(1) = 0 b1 = y(2) = ln 2 h1 = 2 −1 = 1 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 (0 + ln 2) (1) = 1 2 ln 2 Dimensions of trapezoid 2: a2 = y(2) = ln 2 b2 = y(3) = ln 3 h2 = 3 −2 = 1 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2 (ln 2 + ln 3) (1) = 1 2 ln 6 Dimensions of trapezoid 3: a3 = y(3) = ln 3 b3 = y(4) = ln 4 h3 = 4 −3 = 1 Area of trapezoid 3, A3 = 1 2 (a3 + b3) (h3) = 1 2 (ln 3 + ln 4) (1) = 1 2 ln 12 Dimensions of trapezoid 4: a4 = y(4) = ln 4 b4 = y(5) = ln 5 h4 = 5 −4 = 1 Area of trapezoid 4, A4 = 1 2 (a4 + b4) (h4) = 1 2 (ln 4 + ln 5) (1) = 1 2 ln 20 Total area of trapezoids, A1 + A2 + A3 + A4 = 1 2 ln 2 + 1 2 ln 6 + 1 2 ln 12 + 1 2 ln 20 = 1 2 (ln (2 × 6 × 12 × 20)) = 1 2 ln 2880 ≑3.9828 square units 19 a b To calculate this area, we need to express x in terms of y and integrate with respect to y. y = loge x ⇒x = ey ∫1 0 ey dy = ey1 0 = e −1 So the required area is (e −1) square units. c To calculate this area, we subtract the area found in part b from the area of a rectangle of length e and width 1. (e × 1) − ∫1 0 ey dy = e −ey1 0 = e −(e −1) = 1 So the required area is 1 square unit. d Using the primitive ∫ loge x dx = x loge x −x + C, we can calculate the area directly: ∫e 1 loge x dx = x loge x −xe 1 = e loge e −e −1 loge 1 −1 = (e −e) −(0 −1) = 1 20 a See textbook solution for sketch. b x = 2 ⇒y = loge 2, x = 5 ⇒y = loge 5 y = loge x ⇒ey = x The area between the curve and the y-axis from y = loge 2 to y = loge 5 is: ∫loge 5 loge 2 ey dy = [ey]loge 5 loge 2 = eloge 5 −eloge 2 = 5 −2 = 3u2 c Using the formula for the area of a rectangle, eliminate all unnecessary areas: ∫5 2 loge x dx = 5 × loge 5 (whole rectangle) −3 (previous calculation) −2 × loge 2 (smaller rectangle) d ∫5 2 loge x dx = x loge x −x5 2 = 5 loge 5 −5 −(2 loge 2 −2) = 5 loge 5 −3 −2 loge 2 21 The required area is given by ∫−1 −e 1 x + 1 ! dx. ∫−1 −e 1 x + 1 ! dx = [ln |x| + x]−1 −e = (0 −1) −(1 −e) = e −2 So the required area is (e −2) square units. a In this region the sign of y is negative, so the required area is given by − ∫−e−1 −1 1 x + 1 ! dx. ∫−e−1 −1 1 x + 1 ! dx = [ln |x| + x]−e−1 −1 =  ln e−1 −e−1 −(ln 1 −1) = −1 −e−1 −0 + 1 = −e−1 So the required area is e−1 square units. b The required area is given by (e −2) + e−1 or  e −2 + e−1 square units. c 13</p>
+<p class="step"><strong>a ·</strong> Area = ∫3 1/3 −3 x ! dx = [3x −3 ln |x|]3 1 = (3(3) −3 ln |3|) −(3(1) −3 ln |1|) = 9 −3 ln 3 −3 + 0 = (6 −3 ln 3) square units</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫3 1/2 −1 x ! dx = [2x −ln |x|]3 1 = (2(3) −ln |3|) −(2(1) −ln |1|) = 6 −ln 3 −2 + 0 = (4 −ln 3) square units 7 Area = ∫4 1/2 −2 x ! dx − ∫4 1 1 2(x −1) dx = ∫4 1/2 −2 x −x 2 + 1 2 ! dx = ∫4 1/52 −2 x −x 2 ! dx = &quot;5x 2 −2 ln |x| −x2 4 #4 1 = 5(4) 2 −2 ln |4| −(4)2 4 ! − 5(1) 2 −2 ln |1| −(1)2 4 ! = 10 −2 ln 4 −4 −5 2 + 0 + 1 4 = 33/4 −2 ln 4 ! square units a Rearrange x + 2y −5 = 0 to become y = 5 −x 2 . Area = ∫4/15 −x 2 dx − ∫4 1 2 x dx = ∫4 1/52 −x 2 −2 x ! dx = &quot;5x 2 −x2/4 −2 ln |x| #4 1 = 5(4) 2 −(4)2/4 −2 ln |4| ! − 5(1) 2 −(1)2/4 −2 ln |1| ! = 10 −4 −2 ln 4 −5 2 + 1 4 + 0 = 33/4 −2 ln 4 ! square units b 8 a</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫8 4/1 −4 x ! dx = [x −4 ln |x|]8 4 = (8 −4 ln |8|) −(4 −4 ln |4|) = 4 −4 × 3 ln 2 + 4 × 2 ln 2 = 4 −12 ln 2 + 8 ln 2 = 4 −4 ln 2 = 4(1 −ln 2) square units 9</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> Area = ∫2 1/2 − 2 −2 x !! dx = ∫2 1 2 x dx = [2 ln |x|]2 1 = (2 ln |2|) −(2 ln |1|) = 2 ln 2 square units</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫0 −1/1 − 1 x + 2 ! dx = [x −ln |x + 2|]0 −1 = (0 −ln |0 + 2|) −((−1) −ln |(−1) + 2|) = 0 −ln 2 + 1 + ln 1 = (1 −ln 2) square units 10</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> Area = ∫4 1/0 − −1 x !! dx = [ln |x|]4 1 = ln |4| −ln |1| = ln 4 −ln 1 = ln 4 square units</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫3 1/0 − 3 x −3 !! dx = [3x −3 ln |x|]3 1 = (3(3) −3 ln |3|) −(3(1) −3 ln |1|) = 9 −3 ln 3 −3 −3 ln 1 = (6 −3 ln 3) square units 11</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> Area = ∫1 1 2 1 x −1 ! dx + ∫2 1/0 − 1 x −1 !! dx = [ln |x| −x]1 1 2 + [x −ln |x|]2 1 = &quot; (ln |1| −1) − ln 1/2 −1 2 !# + [(2 −ln |2|) −(1 −ln |1|)] = 0 −1 −ln 1 2 + 1 2 + 2 −ln 2 −1 + ln 1 = 0 −1 + 1 2 + 2 −1 + ln 2 −ln 2 + ln 1 = 1 2 square unit</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫2 1/0 −1 + 2 x ! dx + ∫3 2/1 −2 x ! dx = [2 ln |x| −x]2 1 + [x −2 ln |x|]3 2 = [(2 ln |2| −2) −(2 ln |1| −1)] + [(3 −2 ln |3|) −(2 −2 ln |2|)] = 2 ln 2 −2 −2 ln 1 + 1 + 3 −2 ln 3 −2 + 2 ln 2 = 1 −2 + 3 −2 + 2 ln 2 −2 ln 1 −2 ln 3 + 2 ln 2 = 2 ln 4 −2 ln 3 = 2 ln 4 3 square units 12</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> Let u = x2 + 1 u′ = 2x</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C ∫2 0 x x2 + 1 dx = 1 2 ∫2 0 2x x2 + 1 dx = &quot;1 2 ln x2 + 1 #2 0 = 1 2 ln (2)2 + 1 ! − 1 2 ln (0)2 + 1 ! = 1 2 ln 5 −1 2 ln 1 = 1 2 ln 5 square units ≑0.805 square units 13</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> Let u = x2 + 2x + 3 u′ = 2x + 2 = 2(x + 1)</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C Area = ∫1 0 x + 1 x2 + 2x + 3 dx = 1 2 ∫1 0 2x + 2 x2 + 2x + 3 dx = &quot;1 2 ln x2 + 2x + 3 #1 0 = 1 2 ln (1)2 + 2(1) + 3 ! − 1 2 ln (0)2 + 2(0) + 3 ! = 1 2 ln 6 −1 2 ln 3 = 1 2 ln 2 square units 14 a First, solve the equations simultaneously to determine the intersection points. y = 1 x, y = 4 −3x 1 x = 4 −3x 1 = 4x −3x2 3x2 −4x + 1 = 0 (3x −1)(x −1) = 0 x = 1/3, x = 1 When x = 1/3, y = 1 1 3 = 3 When x = 1, y = 1 1 = 1 The intersection points are 1/3, 3 ! , (1, 1)</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Given that there are only two intersection points, we only need to determine which curve lies above the other. Pick a value of x ∈ 1/3, 1 ! between the points of intersection. Try x = 2/3, let f(x) = 1 x, g(x) = 4 −3x f 2 3 ! = 3/2, g 2 3 ! = 4 −3 2 3 ! = 2 As g 2 3 ! &gt; f 2 3 ! , the line g(x) lies above f(x) Area between the curves = ∫1 1 3/4 −3x −1 x ! dx = &quot; 4x −3 2 x2 −ln |x| #1 1 3 = 4(1) −3 2(1)2 −ln |1| ! − 4 1 3 ! −3 2 1 3 !2 −ln 1 3  = 4 −3/2 −0 −4 3 + 1 6 + ln 1 3 = 4/3 −ln 3 ! square units 15 a</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> The appropriate integral is a sum of integrals from x = 0 to x = 1 and from x = 1 to x = e. Area = ∫1 0 x dx + ∫e 1 1 x dx = &quot; x2 2 #1 0 + [ln |x|]e 1 = 12/2 −02 2 ! + (ln |e| −ln |1|) = 1 2 + 1 = 3 2 square units 16 ∫2 1 1 x dx = [ln |x|]2 1 = (ln |2|) −(ln |1|) = ln 2 ≑0.693 a Two trapezoids are formed. At x = 1, y = 1 1 = 1. At x = 3/2, y = 1 3 2 = 2/3. At x = 2, y = 1/2. Dimensions of trapezoid 1: a1 = y(1) = 1 b1 = y 3 2 ! = 2 3 h1 = 3/2 −1 = 1 2 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 1 + 2 3 ! 1 2 ! = 5 12 Dimensions of trapezoid 2: a2 = y 3 2 ! = 2 3 b2 = y(2) = 1 2 h2 = 2 −3 2 = 1 2 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2/23 + 1 2 ! 1 2 ! = 7 24 Total area, A1 + A2 = 5 12 + 7 24 = 17 24 ≑0.708 square units b 17 Area = ∫3 1 1 x dx = [ln |x|]3 1 = ln 3 −ln 1 = ln 3 ≑1.0986 square units a Two equal subintervals between 1 and 3, At x = 1, y = 1 1 = 1. At x = 2, y = 1/2. At x = 3, y = 1/3. Dimensions of trapezoid 1: a1 = y(1) = 1 b1 = y(2) = 1 2 h1 = 2 −1 = 1 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 1 + 1 2 ! (1) = 3 4 Dimensions of trapezoid 2: a2 = y(2) = 1 2 b2 = y(3) = 1 3 h2 = 3 −2 = 1 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2/12 + 1 3 ! (1) = 5 12 Total area, A1 + A2 = 3 4 + 5 12 = 7 6 ≑1.1667 square units b 18 Four subintervals require 5 function values between 1 ≤x ≤5 At x = 1, y = ln 1 = 0 At x = 2, y = ln 2 At x = 3, y = ln 3 At x = 4, y = ln 4 = 2 ln 2 At x = 5, y = ln 5 Dimensions of trapezoid 1: a1 = y(1) = 0 b1 = y(2) = ln 2 h1 = 2 −1 = 1 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 (0 + ln 2) (1) = 1 2 ln 2 Dimensions of trapezoid 2: a2 = y(2) = ln 2 b2 = y(3) = ln 3 h2 = 3 −2 = 1 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2 (ln 2 + ln 3) (1) = 1 2 ln 6 Dimensions of trapezoid 3: a3 = y(3) = ln 3 b3 = y(4) = ln 4 h3 = 4 −3 = 1 Area of trapezoid 3, A3 = 1 2 (a3 + b3) (h3) = 1 2 (ln 3 + ln 4) (1) = 1 2 ln 12 Dimensions of trapezoid 4: a4 = y(4) = ln 4 b4 = y(5) = ln 5 h4 = 5 −4 = 1 Area of trapezoid 4, A4 = 1 2 (a4 + b4) (h4) = 1 2 (ln 4 + ln 5) (1) = 1 2 ln 20 Total area of trapezoids, A1 + A2 + A3 + A4 = 1 2 ln 2 + 1 2 ln 6 + 1 2 ln 12 + 1 2 ln 20 = 1 2 (ln (2 × 6 × 12 × 20)) = 1 2 ln 2880 ≑3.9828 square units 19 a b To calculate this area, we need to express x in terms of y and integrate with respect to y. y = loge x ⇒x = ey ∫1 0 ey dy = ey1 0 = e −1 So the required area is (e −1) square units. c To calculate this area, we subtract the area found in part b from the area of a rectangle of length e and width 1. (e × 1) − ∫1 0 ey dy = e −ey1 0 = e −(e −1) = 1 So the required area is 1 square unit. d Using the primitive ∫ loge x dx = x loge x −x + C, we can calculate the area directly: ∫e 1 loge x dx = x loge x −xe 1 = e loge e −e −1 loge 1 −1 = (e −e) −(0 −1) = 1 20 a See textbook solution for sketch. b x = 2 ⇒y = loge 2, x = 5 ⇒y = loge 5 y = loge x ⇒ey = x The area between the curve and the y-axis from y = loge 2 to y = loge 5 is: ∫loge 5 loge 2 ey dy = [ey]loge 5 loge 2 = eloge 5 −eloge 2 = 5 −2 = 3u2 c Using the formula for the area of a rectangle, eliminate all unnecessary areas: ∫5 2 loge x dx = 5 × loge 5 (whole rectangle) −3 (previous calculation) −2 × loge 2 (smaller rectangle) d ∫5 2 loge x dx = x loge x −x5 2 = 5 loge 5 −5 −(2 loge 2 −2) = 5 loge 5 −3 −2 loge 2 21 The required area is given by ∫−1 −e 1 x + 1 ! dx. ∫−1 −e 1 x + 1 ! dx = [ln |x| + x]−1 −e = (0 −1) −(1 −e) = e −2 So the required area is (e −2) square units. a In this region the sign of y is negative, so the required area is given by − ∫−e−1 −1 1 x + 1 ! dx. ∫−e−1 −1 1 x + 1 ! dx = [ln |x| + x]−e−1 −1 =  ln e−1 −e−1 −(ln 1 −1) = −1 −e−1 −0 + 1 = −e−1 So the required area is e−1 square units. b The required area is given by (e −2) + e−1 or  e −2 + e−1 square units. c 13</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q3">
@@ -74,17 +149,49 @@
       <div class="stem">
         <p>Continue until the number of squares equals 100 — the x-value at this point will be an estimate of e.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">x −3 !! dx = [3x −3 ln |x|]3 1 = (3(3) −3 ln |3|) −(3(1) −3 ln |1|) = 9 −3 ln 3 −3 −3 ln 1 = (6 −3 ln 3) square units 11</p>
-        <p class="step"><strong>a ·</strong> Area = ∫1 1 2 1 x −1 ! dx + ∫2 1/0 − 1 x −1 !! dx = [ln |x| −x]1 1 2 + [x −ln |x|]2 1 = &quot; (ln |1| −1) − ln 1/2 −1 2 !# + [(2 −ln |2|) −(1 −ln |1|)] = 0 −1 −ln 1 2 + 1 2 + 2 −ln 2 −1 + ln 1 = 0 −1 + 1 2 + 2 −1 + ln 2 −ln 2 + ln 1 = 1 2 square unit</p>
-        <p class="step"><strong>b ·</strong> Area = ∫2 1/0 −1 + 2 x ! dx + ∫3 2/1 −2 x ! dx = [2 ln |x| −x]2 1 + [x −2 ln |x|]3 2 = [(2 ln |2| −2) −(2 ln |1| −1)] + [(3 −2 ln |3|) −(2 −2 ln |2|)] = 2 ln 2 −2 −2 ln 1 + 1 + 3 −2 ln 3 −2 + 2 ln 2 = 1 −2 + 3 −2 + 2 ln 2 −2 ln 1 −2 ln 3 + 2 ln 2 = 2 ln 4 −2 ln 3 = 2 ln 4 3 square units 12</p>
-        <p class="step"><strong>a ·</strong> Let u = x2 + 1 u′ = 2x</p>
-        <p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C ∫2 0 x x2 + 1 dx = 1 2 ∫2 0 2x x2 + 1 dx = &quot;1 2 ln x2 + 1 #2 0 = 1 2 ln (2)2 + 1 ! − 1 2 ln (0)2 + 1 ! = 1 2 ln 5 −1 2 ln 1 = 1 2 ln 5 square units ≑0.805 square units 13</p>
-        <p class="step"><strong>a ·</strong> Let u = x2 + 2x + 3 u′ = 2x + 2 = 2(x + 1)</p>
-        <p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C Area = ∫1 0 x + 1 x2 + 2x + 3 dx = 1 2 ∫1 0 2x + 2 x2 + 2x + 3 dx = &quot;1 2 ln x2 + 2x + 3 #1 0 = 1 2 ln (1)2 + 2(1) + 3 ! − 1 2 ln (0)2 + 2(0) + 3 ! = 1 2 ln 6 −1 2 ln 3 = 1 2 ln 2 square units 14 a First, solve the equations simultaneously to determine the intersection points. y = 1 x, y = 4 −3x 1 x = 4 −3x 1 = 4x −3x2 3x2 −4x + 1 = 0 (3x −1)(x −1) = 0 x = 1/3, x = 1 When x = 1/3, y = 1 1 3 = 3 When x = 1, y = 1 1 = 1 The intersection points are 1/3, 3 ! , (1, 1)</p>
-        <p class="step"><strong>b ·</strong> Given that there are only two intersection points, we only need to determine which curve lies above the other. Pick a value of x ∈ 1/3, 1 ! between the points of intersection. Try x = 2/3, let f(x) = 1 x, g(x) = 4 −3x f 2 3 ! = 3/2, g 2 3 ! = 4 −3 2 3 ! = 2 As g 2 3 ! &gt; f 2 3 ! , the line g(x) lies above f(x) Area between the curves = ∫1 1 3/4 −3x −1 x ! dx = &quot; 4x −3 2 x2 −ln |x| #1 1 3 = 4(1) −3 2(1)2 −ln |1| ! − 4 1 3 ! −3 2 1 3 !2 −ln 1 3  = 4 −3/2 −0 −4 3 + 1 6 + ln 1 3 =</p>
+<p class="step"><strong>a ·</strong> Area = ∫1 1 2 1 x −1 ! dx + ∫2 1/0 − 1 x −1 !! dx = [ln |x| −x]1 1 2 + [x −ln |x|]2 1 = &quot; (ln |1| −1) − ln 1/2 −1 2 !# + [(2 −ln |2|) −(1 −ln |1|)] = 0 −1 −ln 1 2 + 1 2 + 2 −ln 2 −1 + ln 1 = 0 −1 + 1 2 + 2 −1 + ln 2 −ln 2 + ln 1 = 1 2 square unit</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫2 1/0 −1 + 2 x ! dx + ∫3 2/1 −2 x ! dx = [2 ln |x| −x]2 1 + [x −2 ln |x|]3 2 = [(2 ln |2| −2) −(2 ln |1| −1)] + [(3 −2 ln |3|) −(2 −2 ln |2|)] = 2 ln 2 −2 −2 ln 1 + 1 + 3 −2 ln 3 −2 + 2 ln 2 = 1 −2 + 3 −2 + 2 ln 2 −2 ln 1 −2 ln 3 + 2 ln 2 = 2 ln 4 −2 ln 3 = 2 ln 4 3 square units 12</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> Let u = x2 + 1 u′ = 2x</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C ∫2 0 x x2 + 1 dx = 1 2 ∫2 0 2x x2 + 1 dx = &quot;1 2 ln x2 + 1 #2 0 = 1 2 ln (2)2 + 1 ! − 1 2 ln (0)2 + 1 ! = 1 2 ln 5 −1 2 ln 1 = 1 2 ln 5 square units ≑0.805 square units 13</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="step"><strong>a ·</strong> Let u = x2 + 2x + 3 u′ = 2x + 2 = 2(x + 1)</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C Area = ∫1 0 x + 1 x2 + 2x + 3 dx = 1 2 ∫1 0 2x + 2 x2 + 2x + 3 dx = &quot;1 2 ln x2 + 2x + 3 #1 0 = 1 2 ln (1)2 + 2(1) + 3 ! − 1 2 ln (0)2 + 2(0) + 3 ! = 1 2 ln 6 −1 2 ln 3 = 1 2 ln 2 square units 14 a First, solve the equations simultaneously to determine the intersection points. y = 1 x, y = 4 −3x 1 x = 4 −3x 1 = 4x −3x2 3x2 −4x + 1 = 0 (3x −1)(x −1) = 0 x = 1/3, x = 1 When x = 1/3, y = 1 1 3 = 3 When x = 1, y = 1 1 = 1 The intersection points are 1/3, 3 ! , (1, 1)</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Given that there are only two intersection points, we only need to determine which curve lies above the other. Pick a value of x ∈ 1/3, 1 ! between the points of intersection. Try x = 2/3, let f(x) = 1 x, g(x) = 4 −3x f 2 3 ! = 3/2, g 2 3 ! = 4 −3 2 3 ! = 2 As g 2 3 ! &gt; f 2 3 ! , the line g(x) lies above f(x) Area between the curves = ∫1 1 3/4 −3x −1 x ! dx = &quot; 4x −3 2 x2 −ln |x| #1 1 3 = 4(1) −3 2(1)2 −ln |1| ! − 4 1 3 ! −3 2 1 3 !2 −ln 1 3  = 4 −3/2 −0 −4 3 + 1 6 + ln 1 3 =</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q4">
@@ -92,10 +199,13 @@
       <div class="stem">
         <p>In each part give the exact answer and then an approximation correct to four significant figures. Use the standard form ∫</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">Dimensions of trapezoid 2: a2 = y(2) = 1</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q5">
@@ -103,9 +213,10 @@
       <div class="stem">
         <p>Find the exact area between: a the curve y = 1 x + 1 and the x-axis from x = 1 to x = 2, b the curve y = 1 x + x and the x-axis from x = 1 2 to x = 2, c the curve y = 1 x + x2 and the x-axis from x = 1 to x = 3.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">Area = ∫2 1 1 x + 1 !</p>
         <p class="step">dx = [ln |x| + x]2 1 = (ln |2| + 2) −(ln |1| + 1) = (ln 2 + 2) −(0 + 1) = (ln 2 + 1) square units a Area = ∫2 1 2 1 x + x !</p>
         <p class="step">dx = &quot; ln |x| + x2 2 #2 1 2 = ln |2| + 22 2 !</p>
@@ -115,6 +226,8 @@
         <p class="step">− ln |1| + 13 3 !</p>
         <p class="step">= ln 3 + 27/3 −1 3 = ln 3 + 82 3 !</p>
         <p class="step">square units c</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q6">
@@ -123,10 +236,13 @@
         <p>Give your answer to each question below in exact form.<br/>
 y</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">≑1.1667 square units b</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q7">
@@ -134,9 +250,10 @@ y</p>
       <div class="stem">
         <p>Find the area of the region bounded by y = 2 −2 x and the line y = 1 2(x −1). a 1 4 y x Find the area of the region between y = 2 x and the line x + 2y −5 = 0. b</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">Area = ∫4 1/2 −2 x !</p>
         <p class="step">dx − ∫4 1 1 2(x −1) dx = ∫4 1/2 −2 x −x 2 + 1 2 !</p>
         <p class="step">dx = ∫4 1/52 −2 x −x 2 !</p>
@@ -149,6 +266,8 @@ y</p>
         <p class="step">− 5(1) 2 −(1)2/4 −2 ln |1| !</p>
         <p class="step">= 10 −4 −2 ln 4 −5 2 + 1 4 + 0 = 33/4 −2 ln 4 !</p>
         <p class="step">square units b</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q8">
@@ -156,10 +275,12 @@ y</p>
       <div class="stem">
         <p>a Sketch the region bounded by y = 1, x = 8 and the curve y = 4 x . b Determine the exact area of this region. 5E Applications of integration 243</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
-        <p class="step"><strong>b ·</strong> Area = ∫8 4/1 −4 x ! dx = [x −4 ln |x|]8 4 = (8 −4 ln |8|) −(4 −4 ln |4|) = 4 −4 × 3 ln 2 + 4 × 2 ln 2 = 4 −12 ln 2 + 8 ln 2 = 4 −4 ln 2 = 4(1 −ln 2) square units</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+<p class="step"><strong>b ·</strong> Area = ∫8 4/1 −4 x ! dx = [x −4 ln |x|]8 4 = (8 −4 ln |8|) −(4 −4 ln |4|) = 4 −4 × 3 ln 2 + 4 × 2 ln 2 = 4 −12 ln 2 + 8 ln 2 = 4 −4 ln 2 = 4(1 −ln 2) square units</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q9">
@@ -167,11 +288,18 @@ y</p>
       <div class="stem">
         <p>Find the area of the region in the first quadrant bounded by y = 2 −2 x and y = 2, and lying between x = 1 and x = 2. a y −1 −2 x 1 Find the area of the region bounded by the curve y = 1 x + 2 , the y-axis and the horizontal line y = 1. b</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
-        <p class="step"><strong>a ·</strong> Area = ∫2 1/2 − 2 −2 x !! dx = ∫2 1 2 x dx = [2 ln |x|]2 1 = (2 ln |2|) −(2 ln |1|) = 2 ln 2 square units</p>
-        <p class="step"><strong>b ·</strong> Area = ∫0 −1/1 − 1 x + 2 ! dx = [x −ln |x + 2|]0 −1 = (0 −ln |0 + 2|) −((−1) −ln |(−1) + 2|) = 0 −ln 2 + 1 + ln 1 = (1 −ln 2) square units</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+<p class="step"><strong>a ·</strong> Area = ∫2 1/2 − 2 −2 x !! dx = ∫2 1 2 x dx = [2 ln |x|]2 1 = (2 ln |2|) −(2 ln |1|) = 2 ln 2 square units</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫0 −1/1 − 1 x + 2 ! dx = [x −ln |x + 2|]0 −1 = (0 −ln |0 + 2|) −((−1) −ln |(−1) + 2|) = 0 −ln 2 + 1 + ln 1 = (1 −ln 2) square units</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q10">
@@ -179,11 +307,18 @@ y</p>
       <div class="stem">
         <p>Find the area of the region bounded by y = −1 x, the x-axis, x = 1 and x = 4. a y 1 −3 x 3 −2 Find the area of the region bounded by y = 3 x −3, the x-axis and x = 3. b</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
-        <p class="step"><strong>a ·</strong> Area = ∫4 1/0 − −1 x !! dx = [ln |x|]4 1 = ln |4| −ln |1| = ln 4 −ln 1 = ln 4 square units</p>
-        <p class="step"><strong>b ·</strong> Area = ∫3 1/0 − 3 x −3 !! dx = [3x −3 ln |x|]3 1 = (3(3) −3 ln |3|) −(3(1) −3 ln |1|) = 9 −3 ln 3 −3 −3 ln 1 = (6 −3 ln 3) square units</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+<p class="step"><strong>a ·</strong> Area = ∫4 1/0 − −1 x !! dx = [ln |x|]4 1 = ln |4| −ln |1| = ln 4 −ln 1 = ln 4 square units</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫3 1/0 − 3 x −3 !! dx = [3x −3 ln |x|]3 1 = (3(3) −3 ln |3|) −(3(1) −3 ln |1|) = 9 −3 ln 3 −3 −3 ln 1 = (6 −3 ln 3) square units</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q11">
@@ -191,11 +326,18 @@ y</p>
       <div class="stem">
         <p>Find the area of the region bounded by y = 1 x −1, the x-axis, x = 1 2 and x = 2. a x y 1 1 2 3 Find the area of the region bounded by y = 1 −2 x, the x-axis, x = 1 and x = 3. b</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
-        <p class="step"><strong>a ·</strong> Area = ∫1 1 2 1 x −1 ! dx + ∫2 1/0 − 1 x −1 !! dx = [ln |x| −x]1 1 2 + [x −ln |x|]2 1 = &quot; (ln |1| −1) − ln 1/2 −1 2 !# + [(2 −ln |2|) −(1 −ln |1|)] = 0 −1 −ln 1 2 + 1 2 + 2 −ln 2 −1 + ln 1 = 0 −1 + 1 2 + 2 −1 + ln 2 −ln 2 + ln 1 = 1 2 square unit</p>
-        <p class="step"><strong>b ·</strong> Area = ∫2 1/0 −1 + 2 x ! dx + ∫3 2/1 −2 x ! dx = [2 ln |x| −x]2 1 + [x −2 ln |x|]3 2 = [(2 ln |2| −2) −(2 ln |1| −1)] + [(3 −2 ln |3|) −(2 −2 ln |2|)] = 2 ln 2 −2 −2 ln 1 + 1 + 3 −2 ln 3 −2 + 2 ln 2 = 1 −2 + 3 −2 + 2 ln 2 −2 ln 1 −2 ln 3 + 2 ln 2 = 2 ln 4 −2 ln 3 = 2 ln 4 3 square units</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+<p class="step"><strong>a ·</strong> Area = ∫1 1 2 1 x −1 ! dx + ∫2 1/0 − 1 x −1 !! dx = [ln |x| −x]1 1 2 + [x −ln |x|]2 1 = &quot; (ln |1| −1) − ln 1/2 −1 2 !# + [(2 −ln |2|) −(1 −ln |1|)] = 0 −1 −ln 1 2 + 1 2 + 2 −ln 2 −1 + ln 1 = 0 −1 + 1 2 + 2 −1 + ln 2 −ln 2 + ln 1 = 1 2 square unit</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Area = ∫2 1/0 −1 + 2 x ! dx + ∫3 2/1 −2 x ! dx = [2 ln |x| −x]2 1 + [x −2 ln |x|]3 2 = [(2 ln |2| −2) −(2 ln |1| −1)] + [(3 −2 ln |3|) −(2 −2 ln |2|)] = 2 ln 2 −2 −2 ln 1 + 1 + 3 −2 ln 3 −2 + 2 ln 2 = 1 −2 + 3 −2 + 2 ln 2 −2 ln 1 −2 ln 3 + 2 ln 2 = 2 ln 4 −2 ln 3 = 2 ln 4 3 square units</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q12">
@@ -203,10 +345,13 @@ y</p>
       <div class="stem">
         <p>a What is the derivative of x2 + 1? b Find the area under the curve y = x x2 + 1 between x = 0 and x = 2.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">Total area, A1 + A2 = 3 4 + 5</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q13">
@@ -214,11 +359,18 @@ y</p>
       <div class="stem">
         <p>a Write down the derivative of x2 + 2x + 3. b Find the area under the curve y = x + 1 x2 + 2x + 3 between x = 0 and x = 1.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
-        <p class="step"><strong>a ·</strong> Let u = x2 + 2x + 3 u′ = 2x + 2 = 2(x + 1)</p>
-        <p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C Area = ∫1</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+<p class="step"><strong>a ·</strong> Let u = x2 + 2x + 3 u′ = 2x + 2 = 2(x + 1)</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="step"><strong>b ·</strong> Given the standard form ∫u′ u dx = ln |u| + C Area = ∫1</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q14">
@@ -226,11 +378,14 @@ y</p>
       <div class="stem">
         <p>a Find the two points of intersection of the line y = 4 −3x and the curve y = 1 x . b Determine the exact area between the line and the curve.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">a First, solve the equations simultaneously to determine the intersection points.</p>
         <p class="step">y = 1 x, y = 4 −3x</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q15">
@@ -238,10 +393,12 @@ y</p>
       <div class="stem">
         <p>a Sketch the region bounded by the x-axis, the line y = x, the hyperbola y = 1 x and the line x = e. b Find the area of the region.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
-        <p class="step"><strong>b ·</strong> The appropriate integral is a sum of integrals from x = 0 to x = 1 and from x = 1 to x = e. Area = ∫1 0 x dx + ∫e</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+<p class="step"><strong>b ·</strong> The appropriate integral is a sum of integrals from x = 0 to x = 1 and from x = 1 to x = e. Area = ∫1 0 x dx + ∫e</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q16">
@@ -249,9 +406,10 @@ y</p>
       <div class="stem">
         <p>a Find the exact value of ∫2</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">∫2 1 1 x dx = [ln |x|]2 1 = (ln |2|) −(ln |1|) = ln 2 ≑0.693 a Two trapezoids are formed.</p>
         <p class="step">At x = 1, y = 1 1 = 1.</p>
         <p class="step">At x = 3/2, y = 1 3 2 = 2/3.</p>
@@ -263,6 +421,8 @@ y</p>
         <p class="step">= 2 3 b2 = y(2) = 1 2 h2 = 2 −3 2 = 1 2 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2/23 + 1 2 !</p>
         <p class="step">1 2 !</p>
         <p class="step">= 7 24 Total area, A1 + A2 = 5 12 + 7 24 = 17 24 ≑0.708 square units b</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q17">
@@ -270,15 +430,18 @@ y</p>
       <div class="stem">
         <p>In this question give approximations correct to four decimal places. a Find the area between the curve y = 1 x and the x-axis, for 1 ≤x ≤3, by evaluating an appropriate integral. Then approximate the result. b Estimate the area using the trapezoidal rule with two trapezia (that is, three function values).</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">Area = ∫3 1 1 x dx = [ln |x|]3 1 = ln 3 −ln 1 = ln 3 ≑1.0986 square units a Two equal subintervals between 1 and 3, At x = 1, y = 1 1 = 1.</p>
         <p class="step">At x = 2, y = 1/2.</p>
         <p class="step">At x = 3, y = 1/3.</p>
         <p class="step">Dimensions of trapezoid 1: a1 = y(1) = 1 b1 = y(2) = 1 2 h1 = 2 −1 = 1 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 1 + 1 2 !</p>
         <p class="step">(1) = 3 4 Dimensions of trapezoid 2: a2 = y(2) = 1 2 b2 = y(3) = 1 3 h2 = 3 −2 = 1 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2/12 + 1 3 !</p>
         <p class="step">(1) = 5 12 Total area, A1 + A2 = 3 4 + 5 12 = 7 6 ≑1.1667 square units b 18 Four subintervals require 5 function values between 1 ≤x ≤5 At x = 1, y = ln 1 = 0 At x = 2, y = ln 2 At x = 3, y = ln 3 At x = 4, y = ln 4 = 2 ln 2 At x = 5, y = ln 5 Dimensions of trapezoid 1: a1 = y(1) = 0 b1 = y(2) = ln 2 h1 = 2 −1 = 1 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 (0 + ln 2) (1) = 1 2 ln 2 Dimensions of trapezoid 2: a2 = y(2) = ln 2 b2 = y(3) = ln 3 h2 = 3 −2 = 1 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2 (ln 2 + ln 3) (1) = 1 2 ln 6 Dimensions of trapezoid 3: a3 = y(3) = ln 3 b3 = y(4) = ln 4 h3 = 4 −3 = 1 Area of trapezoid 3, A3 = 1 2 (a3 + b3) (h3) = 1 2 (ln 3 + ln 4) (1) = 1 2 ln 12 Dimensions of trapezoid 4: a4 = y(4) = ln 4 b4 = y(5) = ln 5 h4 = 5 −4 = 1 Area of trapezoid 4, A4 = 1 2 (a4 + b4) (h4) = 1 2 (ln 4 + ln 5) (1) = 1 2 ln 20 Total area of trapezoids, A1 + A2 + A3 + A4 = 1 2 ln 2 + 1 2 ln 6 + 1 2 ln 12 + 1 2 ln 20 = 1 2 (ln (2 × 6 × 12 × 20)) = 1 2 ln 2880 ≑3.9828 square units</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q18">
@@ -286,10 +449,13 @@ y</p>
       <div class="stem">
         <p>Use the trapezoidal rule with four trapezia to approximate the area between the curve y = ln x and the x-axis from x = 1 to x = 5. Answer correct to four decimal places.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">Four subintervals require 5 function values between 1 ≤x ≤5 At x = 1, y = ln 1 = 0 At x = 2, y = ln 2 At x = 3, y = ln 3 At x = 4, y = ln 4 = 2 ln 2 At x = 5, y = ln 5 Dimensions of trapezoid 1: a1 = y(1) = 0 b1 = y(2) = ln 2 h1 = 2 −1 = 1 Area of trapezoid 1, A1 = 1 2 (a1 + b1) (h1) = 1 2 (0 + ln 2) (1) = 1 2 ln 2 Dimensions of trapezoid 2: a2 = y(2) = ln 2 b2 = y(3) = ln 3 h2 = 3 −2 = 1 Area of trapezoid 2, A2 = 1 2 (a2 + b2) (h2) = 1 2 (ln 2 + ln 3) (1) = 1 2 ln 6 Dimensions of trapezoid 3: a3 = y(3) = ln 3 b3 = y(4) = ln 4 h3 = 4 −3 = 1 Area of trapezoid 3, A3 = 1 2 (a3 + b3) (h3) = 1 2 (ln 3 + ln 4) (1) = 1 2 ln 12 Dimensions of trapezoid 4: a4 = y(4) = ln 4 b4 = y(5) = ln 5 h4 = 5 −4 = 1 Area of trapezoid 4, A4 = 1 2 (a4 + b4) (h4) = 1 2 (ln 4 + ln 5) (1) = 1 2 ln 20 Total area of trapezoids, A1 + A2 + A3 + A4 = 1 2 ln 2 + 1 2 ln 6 + 1 2 ln 12 + 1 2 ln 20 = 1 2 (ln (2 × 6 × 12 × 20)) = 1 2 ln 2880 ≑3.9828 square units</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q19">
@@ -297,11 +463,14 @@ y</p>
       <div class="stem">
         <p>a Sketch the curve y = loge x, for 0 &lt; x ≤e. b Find the exact area between the curve and the y-axis from y = 0 to y = 1. c Hence find the area between the curve and the x-axis from x = 1 to x = e. d Confirm this using the primitive ∫ loge x dx = x loge x −x (established in Section 5D).</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">a b To calculate this area, we need to express x in terms of y and integrate with respect to y.</p>
         <p class="step">y = loge x ⇒x = ey ∫1 0 ey dy = ey1</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q20">
@@ -309,11 +478,14 @@ y</p>
       <div class="stem">
         <p>Repeat parts a–d of Question 19 to find the area between y = loge x and the x-axis from x = 2 to x = 5.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">a See textbook solution for sketch.</p>
         <p class="step">b x = 2 ⇒y = loge 2, x = 5 ⇒y = loge 5 y = loge x ⇒ey = x The area between the curve and the y-axis from y = loge 2 to y = loge 5 is: ∫loge 5 loge 2 ey dy = [ey]loge 5 loge 2 = eloge 5 −eloge 2 = 5 −2 = 3u2 c Using the formula for the area of a rectangle, eliminate all unnecessary areas: ∫5 2 loge x dx = 5 × loge 5 (whole rectangle) −3 (previous calculation) −2 × loge 2 (smaller rectangle) d ∫5 2 loge x dx = x loge x −x5 2 = 5 loge 5 −5 −(2 loge 2 −2) = 5 loge 5 −3 −2 loge 2</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q21">
@@ -321,9 +493,10 @@ y</p>
       <div class="stem">
         <p>The hyperbola y = 1 x + 1 meets the x-axis at (−1, 0). Find the area contained between the x-axis and the curve from: x = −e to x = −1 a x = −1 to x = −e−1 b x = −e to x = −e−1 c</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formula (area):</strong> <span class="tex">A=\int_a^b f(x)\,dx</span> for area under a curve; between curves use top minus bottom.</p>
         <p class="step">The required area is given by ∫−1 −e 1 x + 1 !</p>
         <p class="step">∫−1 −e 1 x + 1 !</p>
         <p class="step">dx = [ln |x| + x]−1 −e = (0 −1) −(1 −e) = e −2 So the required area is (e −2) square units.</p>
@@ -331,6 +504,8 @@ y</p>
         <p class="step">∫−e−1 −1 1 x + 1 !</p>
         <p class="step">dx = [ln |x| + x]−e−1 −1 =  ln e−1 −e−1 −(ln 1 −1) = −1 −e−1 −0 + 1 = −e−1 So the required area is e−1 square units.</p>
         <p class="step">b The required area is given by (e −2) + e−1 or  e −2 + e−1 square units.</p>
+
+        </div>
       </div>
     </article>
     <p style="margin-top:1.5rem">
@@ -358,6 +533,7 @@ y</p>
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
+  <script src="../../course-solutions.js"></script>
   <script>
   document.querySelectorAll(".tex").forEach(function(n){
     if(n.getAttribute("data-texed")) return;
