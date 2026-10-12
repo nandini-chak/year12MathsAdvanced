@@ -23,7 +23,7 @@
   <header class="hero">
     <span class="kicker">Exercise 1D</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Validated against Cambridge worked solutions (not stamped on every question).</p>
+    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
@@ -31,118 +31,260 @@
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 1D; solutions follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">Stems condensed from Cambridge Exercise 1D; answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
     </details>
     <article class="q" id="q1">
       <h2>1 · Exercise 1D</h2>
-      <div class="stem"><p>Find the value of x if each set of numbers below forms an arithmetic sequence. (Hint: Form an equation using the identity a2 −a1 = a3 −a2, then solve it to find x.) 5, x, 17 a 32, x, 14 b −12, x, −50 c −23, x, 7 d x, 22, 32 e −20, −5, x f</p></div>
+      <div class="stem">
+        <p>Find the value of x if each set of numbers below forms an arithmetic sequence. (Hint: Form an equation using the identity a2 −<span class="tex">a1 = a3</span> −a2, then solve it to find x.) 5, x, 17 a 32, x, 14 b −12, x, −50 c −23, x, 7 d x, 22, 32 e −20, −5, x f</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>= 1 a a2 + ab = 1 (1) For an AP: a3 −a2 = a2 −a1 a −b −1 2 = 1 2 −b a = 1 (2) 1 + b = 1 (2) in (1) b = 0 Hence a = 1, b = 0. b a1 = a a2 = a + d a4 = a + 3d For a GP: a + d a = a + 3d a + d (a + d)2 = a(a + 3d) a2 + 2ad + d2 = a2 + 3ad d2 −ad = 0 d(d −a) = 0 Hence d = 0 or a c a1 = a a2 = a + d a4 = a + 4d For a GP: a + d a = a + 4d a + d (a + d)2 = a(a + 4d) a2 + 2ad + d2 = a2 + 4ad d2 −2ad = 0 d(d −2a) = 0 Hence d = 0 or 2a d</p></div>
-    </article><article class="q" id="q2">
+      <div class="sol">
+        <p class="step"><strong>a ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 x −5 = 17 −x 2x = 22 <span class="tex">x = 11</span></p>
+        <p class="step"><strong>b ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 x −32 = 14 −x 2x = 46 <span class="tex">x = 23</span></p>
+        <p class="step"><strong>c ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 x −(−12) = (−50) −x 2x = −62 <span class="tex">x = -31</span></p>
+        <p class="step"><strong>d ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 x −(−23) = 7 −x 2x = −16 <span class="tex">x = -8</span></p>
+        <p class="step"><strong>e ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 22 −<span class="tex">x = 32</span> −22 22 −<span class="tex">x = 10</span> <span class="tex">x = 12</span></p>
+        <p class="step"><strong>f ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 −5 −(−20) = x −(−5) 15 = x + 5 <span class="tex">x = 10</span></p>
+      </div>
+    </article>
+    <article class="q" id="q2">
       <h2>2 · Exercise 1D</h2>
-      <div class="stem"><p>Each triple of numbers forms a geometric sequence. Find the value of x. (Hint: Form an equation using the identity a2 a1 = a3 a2 , then solve it to find x.) 2, x, 18 a 48, x, 3 b −10, x, −90 c −98, x, −2 d x, 20, 80 e −1, 4, x f</p></div>
+      <div class="stem">
+        <p>Each triple of numbers forms a geometric sequence. Find the value of x. (Hint: Form an equation using the identity a2 <span class="tex">a1 = a3</span> a2 , then solve it to find x.) 2, x, 18 a 48, x, 3 b −10, x, −90 c −98, x, −2 d x, 20, 80 e −1, 4, x f</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>! 1 12  0.9439a1  17 18a1</p></div>
-    </article><article class="q" id="q3">
+      <div class="sol">
+        <p class="step">a2 <span class="tex">a1 = a3</span> a2 x 2 = 18 x <span class="tex">x2 = 36</span> <span class="tex">x = 6</span> or −6</p>
+        <p class="step"><strong>a ·</strong> a2 <span class="tex">a1 = a3</span> a2 x 48 = 3 x <span class="tex">x2 = 144</span> <span class="tex">x = 12</span> or −12</p>
+        <p class="step"><strong>b ·</strong> a2 <span class="tex">a1 = a3</span> a2 x −10 = −90 x <span class="tex">x2 = 900</span> <span class="tex">x = 30</span> or −30</p>
+        <p class="step"><strong>c ·</strong> a2 <span class="tex">a1 = a3</span> a2 x −98 = −2 x <span class="tex">x2 = 196</span> <span class="tex">x = 14</span> or −14</p>
+      </div>
+    </article>
+    <article class="q" id="q3">
       <h2>3 · Exercise 1D</h2>
-      <div class="stem"><p>Find x if each triple of three numbers forms: i an AP, ii a GP. 4, x, 16 a 1, x, 49 b 16, x, 25 c −5, x, −20 d x, 10, 50 e x, 12, 24 f x, −1, 1 g x, 6, −12 h 20, 30, x i −36, 24, x j −1 4, −3, x k 7, −7, x l © Pender et al. 2026 Cambridge University Press &amp; Assessment 1D Solving problems involving APs and GPs</p></div>
+      <div class="stem">
+        <p>Find x if each triple of three numbers forms: i an AP, ii a GP. 4, x, 16 a 1, x, 49 b 16, x, 25 c −5, x, −20 d x, 10, 50 e x, 12, 24 f x, −1, 1 g x, 6, −12 h 20, 30, x i −36, 24, x j −1 4, −3, x k 7, −7, x l</p>
+<p>1D Solving problems involving APs and GPs 23</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>and r = 3. b a4 + a6 + a8 = −6 As this is an AP, a8 = a6 + 2d and a4 = a6 −2d, hence a6 + 2d + a6 + a6 −2d = −6 3a6 = −6 a6 = −2 c</p></div>
-    </article><article class="q" id="q4">
+      <div class="sol">
+        <p class="step"><strong>a ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 x −4 = 16 −x 2x = 20 <span class="tex">x = 10</span> ii a2 <span class="tex">a1 = a3</span> a2 x 4 = 16 x <span class="tex">x2 = 64</span> <span class="tex">x = 8</span> or −8</p>
+        <p class="step"><strong>b ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 x −1 = 49 −x 2x = 50 <span class="tex">x = 25</span> ii a2 <span class="tex">a1 = a3</span> a2 x 1 = 49 x <span class="tex">x2 = 49</span> <span class="tex">x = 7</span> or −7</p>
+        <p class="step"><strong>c ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 x −16 = 25 −x 2x = 41 <span class="tex">x = 201</span> 2 ii a2 <span class="tex">a1 = a3</span> a2 x 16 = 25 x <span class="tex">x2 = 400</span> <span class="tex">x = 20</span> or −20 2</p>
+        <p class="step"><strong>d ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 x −(−5) = −20 −x 2x = −25 <span class="tex">x = -121</span> 2 ii a2 <span class="tex">a1 = a3</span> a2 x −5 = −20 x <span class="tex">x2 = 100</span> <span class="tex">x = 10</span> or −10</p>
+        <p class="step"><strong>e ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 10 −<span class="tex">x = 50</span> −10 10 −<span class="tex">x = 40</span> <span class="tex">x = -30</span> ii a2 <span class="tex">a1 = a3</span> a2 10 <span class="tex">x = 50</span> 10 10 <span class="tex">x = 5</span> 5x = 10 <span class="tex">x = 2</span></p>
+        <p class="step"><strong>f ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 12 −<span class="tex">x = 24</span> −12 12 −<span class="tex">x = 12</span> <span class="tex">x = 0</span> ii a2 <span class="tex">a1 = a3</span> a2 12 <span class="tex">x = 24</span> 12 12 <span class="tex">x = 2</span> 2x = 12 <span class="tex">x = 6</span> 3</p>
+        <p class="step"><strong>g ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 −1 −<span class="tex">x = 1</span> −(−1) −1 −<span class="tex">x = 2</span> <span class="tex">x = -3</span> ii a2 <span class="tex">a1 = a3</span> a2 −1 <span class="tex">x = 1</span> −1 −1 <span class="tex">x = -1</span> <span class="tex">x = 1</span></p>
+        <p class="step"><strong>h ·</strong> i a2 −<span class="tex">a1 = a3</span> −a2 6 −<span class="tex">x = -12</span> −6 6 −<span class="tex">x = -18</span> <span class="tex">x = 24</span> ii a2 <span class="tex">a1 = a3</span> a2 6 <span class="tex">x = -12</span> 6 6 <span class="tex">x = -2</span> −2x = 6 <span class="tex">x = -3</span> i i a2 −<span class="tex">a1 = a3</span> −a2 30 −20 = x −30 10 = x −30 <span class="tex">x = 40</span> ii a2 <span class="tex">a1 = a3</span> a2 30 20 = x 30 <span class="tex">x = 900</span> 20 <span class="tex">x = 45</span> 4 j i a2 −<span class="tex">a1 = a3</span> −a2 24 −(−36) = x −24 60 = x −24 <span class="tex">x = 84</span> ii a2 <span class="tex">a1 = a3</span> a2 −24 36 = x 24 <span class="tex">x = -576</span> 36 <span class="tex">x = -16</span> k i a2 −<span class="tex">a1 = a3</span> −a2 −3 − −1 4 ! = x −(−3) −23 4 = x + 3 <span class="tex">x = -53</span> 4 ii a2 <span class="tex">a1 = a3</span> a2 −3 −1 4 = −x 3 −x 3 = 12 <span class="tex">x = -36</span> l i a2 −<span class="tex">a1 = a3</span> −a2 −7 −7 = x −(−7) −14 = x + 7 <span class="tex">x = -21</span> ii a2 <span class="tex">a1 = a3</span> a2 −7 7 = x −7 −x 7 = −1 <span class="tex">x = 7</span></p>
+      </div>
+    </article>
+    <article class="q" id="q4">
       <h2>4 · Exercise 1D</h2>
-      <div class="stem"><p>In these questions, substitute the last term into an = a + (n −1)d or an = arn−1. a Find the first six terms of the AP with first term a = 7 and sixth term a6 = 42. b Find the first four terms of the GP with first term a = 27 and fourth term a4 = 8. c Find the first eleven terms of the AP with a = 40 and a11 = 5. d Find the first seven terms of the GP with a = 1 and a7 = 1 000 000. e Find the first five terms of the AP with a = 3 and a5 = 48. f Find the first five terms of the GP with a = 3 and a5 = 48.</p></div>
+      <div class="stem">
+        <p>In these questions, substitute the last term into an = a + (n −1)d or an = arn−1. a Find the first six terms of the AP with first term <span class="tex">a = 7</span> and sixth term <span class="tex">a6 = 42.</span> b Find the first four terms of the GP with first term <span class="tex">a = 27</span> and fourth term <span class="tex">a4 = 8.</span> c Find the first eleven terms of the AP with <span class="tex">a = 40</span> and a11 = 5. d Find the first seven terms of the GP with <span class="tex">a = 1</span> and <span class="tex">a7 = 1</span> 000 000. e Find the first five terms of the AP with <span class="tex">a = 3</span> and <span class="tex">a5 = 48.</span> f Find the first five terms of the GP with <span class="tex">a = 3</span> and <span class="tex">a5 = 48.</span></p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>By trial and error, the closest integer solution is n = 6, so the sixth pipe is about three-quarters of the length of the first pipe. Put an = 5 6a1 arn−1 = 5 6a  1</p></div>
-    </article><article class="q" id="q5">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
+        <p class="step"><strong>a ·</strong> <span class="tex">a_n = 7 + (n -1)d Put</span><span class="tex">a6 = 42</span> 5 7 + (6 −1)<span class="tex">d = 42</span> 7 + 5d = 42 5d = 42 −7 5d = 35</p>
+        <p class="step"><strong>d ·</strong> = 7 an = 7 + 7(n −1) an = 7n <span class="tex">a1 = 7</span> <span class="tex">a2 = 14</span> <span class="tex">a3 = 21</span> <span class="tex">a4 = 28</span> <span class="tex">a5 = 35</span> <span class="tex">a6 = 42</span></p>
+        <p class="step"><strong>b ·</strong> <span class="tex">a_n = 27rn-1 Put</span><span class="tex">a4 = 8</span> 8 = 27r4−1 8 = 27r3 <span class="tex">r3 = 8</span> 27 <span class="tex">r = 2</span></p>
+      </div>
+    </article>
+    <article class="q" id="q5">
       <h2>5 · Exercise 1D</h2>
-      <div class="stem"><p>Use simultaneous equations and the formula an = a + (n −1)d to solve these problems. a Find the first term and common difference of the AP with a10 = 18 and a20 = 48. b Find the first term and common difference of the AP with a2 = 3 and a10 = 35. c Find the first term and common difference of the AP with a5 = 24 and a9 = −12. d Find the first term and common difference of the AP with a4 = 6 and a12 = 34.</p></div>
+      <div class="stem">
+        <p>Use simultaneous equations and the formula an = a + (n −1)d to solve these problems. a Find the first term and common difference of the AP with a10 = 18 and a20 = 48. b Find the first term and common difference of the AP with <span class="tex">a2 = 3</span> and a10 = 35. c Find the first term and common difference of the AP with <span class="tex">a5 = 24</span> and <span class="tex">a9 = -12.</span> d Find the first term and common difference of the AP with <span class="tex">a4 = 6</span> and a12 = 34.</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>The numbers are: √ 5 + 1, √ 5, √ 5 −1. ii a2 a1 = a3 a2 x √ 5 + 1 = √ 5 −1 x x2 = √ 5 + 1  √ 5 −1  x2 = 5 −1 = 4 x = −2 or 2 The numbers are: √ 5 + 1, −2, √ 5 −1 or √ 5 + 1, 2, √ 5 −1. g i a2 −a1 = a3 −a2 x − √ 2 = √ 8 −x x − √ 2 = 2 √ 2 −x 2x = 3 √</p></div>
-    </article><article class="q" id="q6">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
+        <p class="step"><strong>a ·</strong> an = a + (n −1)d a10 = 18 gives 18 = a + 9d (1) a20 = 48 gives 48 = a + 19d (2) Subtract (1) from (2): 30 = 10d</p>
+        <p class="step"><strong>d ·</strong> = 3 Substitute <span class="tex">d = 3</span> into (1): 18 = a + <span class="tex">9 \times  3</span></p>
+        <p class="step"><strong>a ·</strong> = −9</p>
+        <p class="step"><strong>b ·</strong> <span class="tex">a_n = a + (n -1)d</span><span class="tex">a2 = 3</span> gives 3 = a + d (1) a10 = 35 gives 35 = a + 9d (2) Subtract (1) from (2): 32 = 8d</p>
+        <p class="step"><strong>d ·</strong> = 4 Substitute <span class="tex">d = 4</span> into (1): 3 = a + 4</p>
+        <p class="step"><strong>a ·</strong> = −1</p>
+        <p class="step"><strong>c ·</strong> <span class="tex">a_n = a + (n -1)d</span><span class="tex">a5 = 24</span> gives 24 = a + 4d (1) <span class="tex">a9 = -12</span> gives −12 = a + 8d (2) Subtract (1) from (2): −36 = 4d</p>
+        <p class="step"><strong>d ·</strong> = −9 Substitute <span class="tex">d = -9</span><span class="tex">into (1): 24 = a + 4 \times  (-9)</span></p>
+        <p class="step"><strong>a ·</strong> = 60</p>
+        <p class="step"><strong>d ·</strong> <span class="tex">a_n = a + (n -1)d</span><span class="tex">a4 = 6</span> gives 6 = a + 3d (1) a12 = 34 gives 34 = a + 11d (2) Subtract (1) from (2): 28 = 8d</p>
+        <p class="step"><strong>d ·</strong> = 31 2 Substitute <span class="tex">d = 31</span> 2 into (1): 6 = a + <span class="tex">3 \times  31</span></p>
+      </div>
+    </article>
+    <article class="q" id="q6">
       <h2>6 · Exercise 1D</h2>
-      <div class="stem"><p>Use simultaneous equations and the formula an = arn−1 to solve these problems. a Find the first term and common ratio of the GP with a3 = 16 and a6 = 128. b Find the first term and common ratio of the GP with a3 = 1 and a6 = 64. c Find the first term and common ratio of the GP with a2 = 1 3 and a6 = 27. d Find the first term and common ratio of the GP with a5 = 6 and a9 = 24.</p></div>
+      <div class="stem">
+        <p>Use simultaneous equations and the formula an = arn−1 to solve these problems. a Find the first term and common ratio of the GP with <span class="tex">a3 = 16</span> and <span class="tex">a6 = 128.</span> b Find the first term and common ratio of the GP with <span class="tex">a3 = 1</span> and <span class="tex">a6 = 64.</span> c Find the first term and common ratio of the GP with <span class="tex">a2 = 1</span> 3 and <span class="tex">a6 = 27.</span> d Find the first term and common ratio of the GP with <span class="tex">a5 = 6</span> and <span class="tex">a9 = 24.</span></p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>By trial and error, the closest integer solution is n = 4, so the fourth pipe is about five-sixths of the length of the first pipe. e a3 = ar2 = a1 1</p></div>
-    </article><article class="q" id="q7">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{{n-1}}</span>.</p>
+        <p class="step">a6 <span class="tex">a3 = ar6-1</span> ar3−1 = ar5 ar2 = r3 a6 <span class="tex">a3 = 128</span> 16 = 8 <span class="tex">r3 = 8</span> <span class="tex">r = 2</span> <span class="tex">a3 = ar3-1</span> = ar2 = a(2)2 = 4a and <span class="tex">a3 = 16</span> 4a = 16</p>
+        <p class="step"><strong>a ·</strong> = 4</p>
+        <p class="step"><strong>a ·</strong> a6 <span class="tex">a3 = ar6-1</span> ar3−1 = ar5 ar2 = r3 a6 <span class="tex">a3 = 64</span> 1 = 64 <span class="tex">r3 = 64</span> <span class="tex">r = 4</span> <span class="tex">a3 = ar3-1</span> = ar2 = a(4)2 = 16a and <span class="tex">a3 = 1</span> 16a = 1</p>
+        <p class="step"><strong>a ·</strong> = 1 16</p>
+        <p class="step"><strong>b ·</strong> a6 <span class="tex">a2 = ar6-1</span> ar2−1 = ar5 ar = r4 a6 <span class="tex">a2 = 27</span> 1 3 = 81 <span class="tex">r4 = 81</span> <span class="tex">r = 3</span> or −3 When <span class="tex">r = 3</span>, <span class="tex">a6 = ar6-1</span> = ar5 = a(3)5 = 243a and <span class="tex">a6 = 27</span> 243a = 27</p>
+        <p class="step"><strong>a ·</strong> = 1</p>
+      </div>
+    </article>
+    <article class="q" id="q7">
       <h2>7 · Exercise 1D</h2>
-      <div class="stem"><p>a The third term of an AP is 7 and the seventh term is 31. Find the eighth term. b The common difference of an AP is −7 and the 10th term is 3. Find the second term. c The common ratio of a GP is 2 and the sixth term is 6. Find the second term.</p></div>
+      <div class="stem">
+        <p>a The third term of an AP is 7 and the seventh term is 31. Find the eighth term.<br/>
+b The common difference of an AP is −7 and the 10th term is 3. Find the second term.<br/>
+c The common ratio of a GP is 2 and the sixth term is 6. Find the second term.</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>(note that ln 1 7 &lt; 0, so the sign must be reversed) n −1 &lt; 9.46 . . . n &lt; 10.46 . . . Hence there are 10 terms greater than 10−6. a a2 a1 = 5 25 = 1</p></div>
-    </article><article class="q" id="q8">
+      <div class="sol">
+        <p><span class="tex">a2 = -6</span> <span class="tex">a3 = 12</span> <span class="tex">a4 = -24</span> <span class="tex">a5 = 48</span></p>
+      </div>
+    </article>
+    <article class="q" id="q8">
       <h2>8 · Exercise 1D</h2>
-      <div class="stem"><p>Use either trial-and-error or logarithms to solve these problems. Where n is an integer. a Find the smallest value of n such that 3n &gt; 1 000 000. b Find the largest value of n such that 5n &lt; 1 000 000. c Find the smallest value of n such that 7n &gt; 1 000 000 000. d Find the largest value of n such that 12n &lt; 1 000 000 000.</p></div>
+      <div class="stem">
+        <p>Use either trial-and-error or logarithms to solve these problems. Where n is an integer. a Find the smallest value of n such that 3n &gt; 1 000 000. b Find the largest value of n such that 5n &lt; 1 000 000. c Find the smallest value of n such that 7n &gt; 1 000 000 000. d Find the largest value of n such that 12n &lt; 1 000 000 000.</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>x x2 = √ 2 × 8 x2 = √</p></div>
-    </article><article class="q" id="q9">
+      <div class="sol">
+        <p>x <span class="tex">x2 = √</span> <span class="tex">2 \times  8</span> <span class="tex">x2 = √</span></p>
+      </div>
+    </article>
+    <article class="q" id="q9">
       <h2>9 · Exercise 1D</h2>
-      <div class="stem"><p>Let an be the sequence 2, 4, 8, ... of powers of 2. a Show that the sequence is a GP, and show that the nth term is an = 2n. b Find how many terms are less than 1 000 000. (You will need to solve the inequation an &lt; 1 000 000 using trial-and-error or logarithms.) c Use the same method to find how many terms are less than 1 000 000 000. d Use the same method to find how many terms are less than 1020. e How many terms are between 1 000 000 and 1 000 000 000? f How many terms are between 1 000 000 000 and 1020?</p></div>
+      <div class="stem">
+        <p>Let an be the sequence 2, 4, 8, ... of powers of 2. a Show that the sequence is a GP, and show that the nth term is an = 2n. b Find how many terms are less than 1 000 000. (You will need to solve the inequation an &lt; 1 000 000 using trial-and-error or logarithms.) c Use the same method to find how many terms are less than 1 000 000 000. d Use the same method to find how many terms are less than 1020. e How many terms are between 1 000 000 and 1 000 000 000? f How many terms are between 1 000 000 000 and 1020?</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>an = 64 × 1.5n−1</p></div>
-    </article><article class="q" id="q10">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{{n-1}}</span>.</p>
+        <p class="step">When <span class="tex">r = -3</span>, <span class="tex">a6 = ar6-1</span> = ar5 = a(−3)5 = −243a and <span class="tex">a6 = 27</span> −243a = 27</p>
+        <p class="step"><strong>a ·</strong> = −1 9</p>
+        <p class="step"><strong>c ·</strong> a9 <span class="tex">a5 = ar9-1</span> ar5−1 = ar8 ar4 = r4 a9 <span class="tex">a5 = 24</span> 6 = 4 <span class="tex">r4 = 4</span> <span class="tex">r = √</span> 2 or − √</p>
+      </div>
+    </article>
+    <article class="q" id="q10">
       <h2>10 · Exercise 1D</h2>
-      <div class="stem"><p>Find a formula for an for these GPs. Then find how many terms exceed 10−6. (You will need to solve the inequation an &gt; 10−6 using trial-and-error or logarithms.) 98, 14, 2, ... a 25, 5, 1, . . . b 1, 0.9, 0.81, . . . c © Pender et al. 2026 Cambridge University Press &amp; Assessment</p></div>
+      <div class="stem">
+        <p>Find a formula for an for these GPs. Then find how many terms exceed 10−6. (You will need to solve the inequation an &gt; 10−6 using trial-and-error or logarithms.) 98, 14, 2, ... a 25, 5, 1, . . . b 1, 0.9, 0.81, . . . c</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>a2 a1 = 14 98 = 1</p></div>
-    </article><article class="q" id="q11">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{{n-1}}</span>.</p>
+        <p class="step">a2 <span class="tex">a1 = 14</span> 98 = 1 7 This is a GP with <span class="tex">a = 98</span>, <span class="tex">r = 1</span> 7, so an = 98 1 7 !n−1 . an &gt; 10−6 98 1 7 !n−1 &gt; 10−6 1 7 !n−1 &gt; 10−6 98 ln 1 7 !n−1 &gt; ln 10−6 98 (n −1) ln 1 7 &gt; ln 10−6 98 n −1 &lt; ln 10−6 98 ln 1 7 (note that ln 1 7 &lt; 0, so the sign must be reversed) n −1 &lt; 9.46 . . . n &lt; 10.46 . . . Hence there are 10 terms greater than 10−6.</p>
+        <p class="step"><strong>a ·</strong> a2 <span class="tex">a1 = 5</span> 25 = 1 5 This is a GP with <span class="tex">a = 25</span>, <span class="tex">r = 1</span> 5, so an = 25 1 5 !n−1 . an &gt; 10−6 25 1 5 !n−1 &gt; 10−6 1 5 !n−1 &gt; 10−6 25 ln 1 5 !n−1 &gt; ln 10−6 25 (n −1) ln 1 5 &gt; ln 10−6 25 n −1 &lt; ln 10−6 25 ln 1 5 n −1 &lt; 10.58 . . . n &lt; 11.58 . . . Hence there are 11 terms greater than 10−6.</p>
+        <p class="step"><strong>b ·</strong> a2 <span class="tex">a1 = 0.9</span> 1 = 0.9 This is a GP with <span class="tex">a = 1</span>, <span class="tex">r = 0.9</span>, so an = (0.9)n−1. an &gt; 10−6 (0.9)n−1 &gt; 10−6 (n −1) ln 0.9 &gt; ln 10−6 n −1 &lt; ln 10−6 ln 0.9 n −1 &lt; 131.13 . . . n &lt; 132.13 . . . Hence there are 132 terms greater than 10−6.</p>
+      </div>
+    </article>
+    <article class="q" id="q11">
       <h2>11 · Exercise 1D</h2>
-      <div class="stem"><p>When light passes through one sheet of very thin glass, its intensity is reduced by 3%. (Hint: 97% of the light gets though each sheet.) a If the light passes through 50 sheets of this glass, find by what percentage (correct to the nearest 1%) the intensity will be reduced. b What is the minimum number of sheets that will reduce the intensity below 1%?</p></div>
+      <div class="stem">
+        <p>When light passes through one sheet of very thin glass, its intensity is reduced by 3%. (Hint: 97% of the light gets though each sheet.) a If the light passes through 50 sheets of this glass, find by what percentage (correct to the nearest 1%) the intensity will be reduced. b What is the minimum number of sheets that will reduce the intensity below 1%?</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 1D</p></div>
-    </article><article class="q" id="q12">
+      <div class="sol">
+        <p class="formula-quick"><strong>Quick fact:</strong> Word problems: write <span class="tex">a_1</span> (first value) and <span class="tex">d</span> or <span class="tex">r</span> from the story, then use AP/GP formulas.</p>
+        <p class="step"><strong>a ·</strong> This is a GP with an = 0.97n, where an is the intensity of the light, and n represents the number of sheets of glass. For 50 sheets of glass: a50 = 0.9750 = 0.22 or 22% Hence the light’s intensity is reduced by 1 −22% = 78% after passing through 50 sheets of glass.</p>
+        <p class="step"><strong>b ·</strong> an &lt; 0.01 0.97n &lt; 0.01 ln(0.97n) &lt; ln(0.01) n ln(0.97) &lt; ln(0.01) n &gt; ln(0.01) ln(0.97) n &gt; 151.19 . . . a152 = 0.97152 = 0.975 . . . % Hence a minimum of 152 sheets of glass are required to reduce the light’s intensity to below 1%. 11</p>
+      </div>
+    </article>
+    <article class="q" id="q12">
       <h2>12 · Exercise 1D</h2>
-      <div class="stem"><p>a One year, donations to a charity go up 20%, and the next year they drop 20%. i What is the result at the end of the two years, and why? ii What difference would it make if they had instead fallen 20% and then risen 20%? iii If this continues, how many years does it take for donations to drop by 40%? b Shares in AI Hallucinations go up 10% on Monday, and again on Tuesday, on Wednesday, and on Thursday. Then on Friday they go down by 40%. i What is the result at the end of the week, and why? ii What difference would it make if the same four falls and the same single rise had occurred on different days of the week? iii How many weeks of this will it take for AI Hallucinations to drop by 99%?</p></div>
+      <div class="stem">
+        <p>a One year, donations to a charity go up 20%, and the next year they drop 20%. i What is the result at the end of the two years, and why? ii What difference would it make if they had instead fallen 20% and then risen 20%? iii If this continues, how many years does it take for donations to drop by 40%? b Shares in AI Hallucinations go up 10% on Monday, and again on Tuesday, on Wednesday, and on Thursday. Then on Friday they go down by 40%. i What is the result at the end of the week, and why? ii What difference would it make if the same four falls and the same single rise had occurred on different days of the week? iii How many weeks of this will it take for AI Hallucinations to drop by 99%?</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p> n−1 = 5</p></div>
-    </article><article class="q" id="q13">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{{n-1}}</span>.</p>
+        <p class="step"><strong>a ·</strong> i Donations one year are 1.2 times higher that of the previous year (20% increase), while the donations the following year are 0.8 times that of the previous one i.e. 0.8 of 1.2 (1.<span class="tex">2 \times  0</span>.8 = 0.96). Overall, the donations at the end of the two years are 0.96 times that of the initial donations, indicating a 4% drop. ii Using the same argument in (i), donations the first year are 0.8 times that of the previous year, which in turn experiences a 20% jump on the new amount i.e. 0.<span class="tex">8 \times  1</span>.2 = 0.96. Due to the commutative nature of multiplication, nothing changes. iii Every two years, donations drop by 4%, producing a GP with first term 100% and common ratio <span class="tex">r = 0.96.</span> Using the formula for the nth term of a GP: an = arn−1 60 = 100 · 0.96n−<span class="tex">\tfrac{1}{35}</span> = 0.96n−1 n −1 = ln(<span class="tex">\tfrac{3}{5}</span>) ln(0.96) n −1 ≈12.5 Since each term in the sequence represents a difference of 2 years, it will take 26 years for the donations to drop by 40%. Note: 2(n −1) gives the number of years that have elapsed i.e. 25.0269... years, meaning it will take 26 whole years for this phenomenon to occur.</p>
+        <p class="step"><strong>b ·</strong> i Since the shares rise by 10% 4 days out of 5, each new amount is multiplied by 1.1, while the final amount on Friday is multiplied by 0.6, representing the 40% drop of the accumulated amount i.e. (1.1)<span class="tex">4 \times  0</span>.6 = 0.87846. Thus, shares drop about 100 −87.846 ≈12.15%. ii Due to the commutative nature of multiplication, whichever amount you multiply in any order (given it rises 4 times and falls once according to the percentages), the same result will be produced. iii If the shares drop by 99%, 1% of the initial share price will remain. This forms a GP with first term 100% and common ratio <span class="tex">r = 0.87846</span> (same fall each week). Using the formula for the nth term of a GP: an = arn−1 1 = 100 · 0.87846n−1 1 100 = 0.87846n−1 n −1 = ln(<span class="tex">\tfrac{1}{100}</span>) ln(0.87846) n −1 = 35.537... Since n −1 gives the number of weeks elapsed, it will take 36 whole weeks for this phenomenon to occur. 12</p>
+      </div>
+    </article>
+    <article class="q" id="q13">
       <h2>13 · Exercise 1D</h2>
-      <div class="stem"><p>a Find a and d for the AP in which a6 + a8 = 44 and a10 + a13 = 35. b Find a and r for the GP in which a2 + a3 = 4 and a4 + a5 = 36. c The fourth, sixth and eighth terms of an AP add to −6. Find the sixth term.</p></div>
+      <div class="stem">
+        <p>a Find a and d for the AP in which a6 + <span class="tex">a8 = 44</span> and a10 + a13 = 35.<br/>
+b Find a and r for the GP in which a2 + <span class="tex">a3 = 4</span> and a4 + <span class="tex">a5 = 36.</span><br/>
+c The fourth, sixth and eighth terms of an AP add to −6. Find the sixth term.</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 1D x2 −7x + 6 = 0 (x −1)(x −6) = 0 x = 1 or x = 6 When x = 1, the numbers are: 1, 2, 4. When x = 6, the numbers are: −4, 2, −1.</p></div>
-    </article><article class="q" id="q14">
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
+        <p class="step">a6 + <span class="tex">a8 = 44</span></p>
+        <p class="step"><strong>a ·</strong> + (6 −1)d + a + (8 −1)<span class="tex">d = 44</span> 2a + 12d = 44 (1) a10 + a13 = 35</p>
+        <p class="step"><strong>a ·</strong> + (10 −1)d + a + (13 −1)<span class="tex">d = 35</span></p>
+        <p class="step"><strong>a ·</strong> + 9d + a + 12d = 35 2a + 21d = 35 (2) 9d = −9 (2) −(1)</p>
+        <p class="step"><strong>d ·</strong> = −1 (3) 2a + 12(−1) = 44 (3) in (1) 2a = 56</p>
+        <p class="step"><strong>a ·</strong> = 28 So <span class="tex">a = 28</span> and <span class="tex">d = -1.</span></p>
+        <p class="step"><strong>a ·</strong> a2 + <span class="tex">a3 = 4</span> ar2−1 + ar3−1 = 4 ar1 + ar2 = 4 ar(1 + r) = 4 (1) a4 + <span class="tex">a5 = 36</span> ar3 + ar4 = 36 ar3(1 + r) = 36 (2) <span class="tex">r2 = 9</span> (2) ÷ (1) <span class="tex">r = ±3</span> When <span class="tex">r = -3</span>, (3) a(−3)(1 −3) = 4 (3) in (1) 6a = 4</p>
+        <p class="step"><strong>a ·</strong> = 2</p>
+      </div>
+    </article>
+    <article class="q" id="q14">
       <h2>14 · Exercise 1D</h2>
-      <div class="stem"><p>Each set of three numbers forms an AP. Find x and write out the numbers. x −1, 17, x + 15 a 2x + 2, x −4, 5x b x −3, 5, 2x + 7 c 3x −2, x, x + 10 d</p></div>
+      <div class="stem">
+        <p>Each set of three numbers forms an AP. Find x and write out the numbers. x −1, 17, x + 15 a 2x + 2, x −4, 5x b x −3, 5, 2x + 7 c 3x −2, x, x + 10 d</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 1D Hence, these numbers cannot form an AP. ii a2 a1 = a3 a2 x + 1 x −4 = x + 11 x + 1 (x + 1)(x + 1) = (x + 11)(x −4) x2 + 2x + 1 = x2 + 7x −44 2x + 1 = 7x −44 5x = 45 x = 9 The numbers are: 5, 10, 20. e i a2 −a1 = a3 −a2 (x + 2) −(x −2) = (5x −2) −(x + 2) 4 = 4x −4 4x = 8 x = 2 The numbers are: 0, 4, 8. ii a2 a1 = a3 a2 x + 2 x −2 = 5x −2 x + 2 (x + 2)(x + 2) = (5x −2)(x −2) x2 + 4x + 4 = 5x2 −12x + 4 0 = 4x2 −16x 0 = x2 −4x 0 = x(x −4) x = 0 or x = 4 The numbers are: −2, 2, −2 or 2, 6, 18. f i a2 −a1 = a3 −a2 x − √ 5 + 1  = √ 5 −1  −x 2x = 2 √</p></div>
-    </article><article class="q" id="q15">
+      <div class="sol">
+        <p class="step">a2 −<span class="tex">a1 = a3</span> −a2 17 −(x −1) = (x + 15) −17 18 −<span class="tex">x = x</span> −2 2x = 20 <span class="tex">x = 10</span> The numbers are: 9, 17, 25.</p>
+        <p class="step"><strong>a ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 (x −4) −(2x + 2) = 5x −(x −4) −x −6 = 4x + 4 5x = −10 <span class="tex">x = -2</span> The numbers are: −2, −6, −10.</p>
+        <p class="step"><strong>b ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 5 −(x −3) = (2x + 7) −5 8 −<span class="tex">x = 2x</span> + 2 3x = 6 <span class="tex">x = 2</span> The numbers are: −1, 5, 11.</p>
+        <p class="step"><strong>c ·</strong> a2 −<span class="tex">a1 = a3</span> −a2 x −(3x −2) = (x + 10) −x −2x + 2 = 10 −2x = 8 <span class="tex">x = -4</span> The numbers are: −14, −4, 6.</p>
+      </div>
+    </article>
+    <article class="q" id="q15">
       <h2>15 · Exercise 1D</h2>
-      <div class="stem"><p>Each set of three numbers forms a GP. Find x and write out the numbers. x, x + 1, x a 2 −x, 2, 5 −x b</p></div>
+      <div class="stem">
+        <p>Each set of three numbers forms a GP. Find x and write out the numbers. x, x + 1, x a 2 −x, 2, 5 −x b</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 1D ii a2 a1 = a3 a2 x √</p></div>
-    </article><article class="q" id="q16">
+      <div class="sol">
+        <p class="step"><strong>a ·</strong> a3 <span class="tex">a2 = a2</span> a1 x x + 1 = x + 1 x <span class="tex">x2 = (x</span> + 1)2 <span class="tex">x2 = x2</span> + 2x + 1 2x = −1 <span class="tex">x = -1</span></p>
+      </div>
+    </article>
+    <article class="q" id="q16">
       <h2>16 · Exercise 1D</h2>
-      <div class="stem"><p>Find x and write out the three numbers if they form: i an AP, ii a GP. x, 24, 96 a 0.2, x, 0.000 02 b x, 0.2, 0.002 c x −4, x + 1, x + 11 d x −2, x + 2, 5x −2 e √ 5 + 1, x, √ 5 −1 f √ 2, x, √</p></div>
+      <div class="stem">
+        <p>Find x and write out the three numbers if they form: i an AP, ii a GP. x, 24, 96 a 0.2, x, 0.000 02 b x, 0.2, 0.002 c x −4, x + 1, x + 11 d x −2, x + 2, 5x −2 e √ 5 + 1, x, √ 5 −1 f √ 2, x, √ 8 g 24, x, 26 h 7, x, −7 i 17 Inflation is raging in the country of Duro. In their first year of operation, a car service cost the same $64 at the new Flash Garage and at the new Shiny Garage. Each year after that, Shiny Garage has lifted its price by $150, and Flash Garage has lifted its price by 50%. In which year will Flash Garage be charging more than Shiny Garage, and by how much?</p>
+<p>1D Solving problems involving APs and GPs 25</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 1D</p></div>
-    </article><article class="q" id="q17">
-      <h2>17 · Exercise 1D</h2>
-      <div class="stem"><p>Inflation is raging in the country of Duro. In their first year of operation, a car service cost the same $64 at the new Flash Garage and at the new Shiny Garage. Each year after that, Shiny Garage has lifted its price by $150, and Flash Garage has lifted its price by 50%. In which year will Flash Garage be charging more than Shiny Garage, and by how much? © Pender et al. 2026 Cambridge University Press &amp; Assessment 1D Solving problems involving APs and GPs</p></div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 1D an = arn−1 = 25  2−3n−1 = 25−3n+3 = 28−3n b a3 −a2 = log2 24 −log2 96 = log2  23 × 3  −log2  25 × 3  = 3 + log2 3 −5 −log2 3 = −2 a2 −a1 = log2 6 −log2 24 = log2  21 × 3  −log2  23 × 3  = log2 2 + log2 3 −3 log2 2 −log2 3 = 1 + log2 3 −3 −log2 3 = −2 This is an AP with d = −2 and a = log2 96. an = a + (n −1)d an = log2 96 + (n −1)(−2) = 5 + log2 3 −2n + 2 = 7 −2n + log2 3 c an = a + (n −1)d, hence the ratio of any two terms of the proposed GP ban ban−1 = ba+(n−1)d ba+(n−2)d = ba+(n−1)d−(a+(n−2)d) = bd which does not depend on n, hence there is a common ratio of bd and this is a GP with first term ba. d an = arn−1, hence the difference of any two terms of the proposed AP logb an −logb an−1 = logb  arn−1 −logb  arn−2 = logb a + logb rn−1 −  logb a + logb rn−2 = logb a + (n −1) logb r − logb a + (n −2) logb r = logb a + n logb r −logb r −logb a −n logb r + 2 logb r = logb r which does not depend on n, hence there is a common difference of logb r and this is an AP with first term logb a.</p></div>
-    </article><article class="q" id="q18">
+      <div class="sol">
+        <p class="step"><span class="tex">a2 = 3</span> <span class="tex">16 \times  21</span> = 3 8</p>
+        <p class="step"><strong>c ·</strong> 9 8 3n &gt; 1 000 000 ln (3n) &gt; ln (1 000 000) n ln 3 &gt; ln (1 000 000) n &gt; ln (1 000 000) ln 3 n &gt; 12.575 . . . The smallest integer solution is <span class="tex">n = 13.</span></p>
+        <p class="step"><strong>a ·</strong> 5n &lt; 1 000 000 ln (5n) &lt; ln (1 000 000) n ln 5 &lt; ln (1 000 000) n &lt; ln (1 000 000) ln 5 n &lt; 8.584 . . . The largest integer solution is <span class="tex">n = 8.</span></p>
+        <p class="step"><strong>b ·</strong> 7n &gt; 1 000 000 000 ln (7n) &gt; ln (1 000 000 000) n ln 7 &gt; ln (1 000 000 000) n &gt; ln (1 000 000 000) ln 7 n &gt; 10.64 . . . The smallest integer solution is <span class="tex">n = 11.</span></p>
+        <p class="step"><strong>c ·</strong> 12n &lt; 1 000 000 000 ln (12n) &lt; ln (1 000 000 000) n ln 12 &lt; ln (1 000 000 000) n &lt; ln (1 000 000 000) ln 12 n &lt; 8.339 . . . The largest integer solution is <span class="tex">n = 8.</span></p>
+      </div>
+    </article>
+    <article class="q" id="q18">
       <h2>18 · Exercise 1D</h2>
-      <div class="stem"><p>a Find a and b if a, b, 1 forms a GP, and b, a, 10 forms an AP. b Find a and b if a, 1, a + b forms a GP, and b, 1 2, a −b forms an AP. c The first, second and fourth terms of an AP an = a + (n −1)d form a geometric sequence. Show that either d = 0 or d = a. d The first, second and fifth terms of an AP an = a + (n −1)d form a geometric sequence. Show that either d = 0 or d = 2a.</p></div>
+      <div class="stem">
+        <p>a Find a and b if a, b, 1 forms a GP, and b, a, 10 forms an AP. b Find a and b if a, 1, a + b forms a GP, and b, 1 2, a −b forms an AP. c The first, second and fourth terms of an AP an = a + (n −1)d form a geometric sequence. Show that either <span class="tex">d = 0</span> or <span class="tex">d = a.</span> d The first, second and fifth terms of an AP an = a + (n −1)d form a geometric sequence. Show that either <span class="tex">d = 0</span> or <span class="tex">d = 2a.</span> 19 [The relationship between APs and GPs] a The AP 1, 3, 5, 7, 9, ... has first term 1 and difference 2. Show that the sequence 21, 23, 25, 27, 29, . . . is a GP, and find its first term and common ratio. b The GP 3, 6, 12, 24, 48 ... has first term 3 and ratio 2. Show that the sequence log2 3, log2 6, log2 12, log2 24, log2 48 is an AP, and find its first term and common difference. 20 [The relationship between APs and GPs] a Show that 25, 22, 2−1, 2−4, . . . is a GP. Then find its nth term. b Show that log2 96, log2 24, log2 6, .. . is an AP. Then show that an = 7 −2n + log2 3. c Show that for any positive base b , 1, if an is an AP with first term a and difference d, then ban is a GP with first term ba and ratio bd. d Show that for any positive base b , 1, if an is a GP with first term a &gt; 0 and ratio r &gt; 0, then logb an is an AP with first term logb a and difference logb r. 21 [Extension — geometric sequences in musical intruments] The pipe lengths in a rank of organ pipes decrease from left to right. The lengths form a GP, and the 13th pipe along is exactly half the length of the first pipe (making an interval called an octave). a Show that the ratio of the GP is <span class="tex">r = (</span> 1 2) 1 12 . b Show that the eighth pipe along is just over two-thirds the length of the first pipe (this interval is called a perfect fifth). c Show that the fifth pipe along is just under four-fifths the length of the first pipe (a major third). d Find which pipes are about three-quarters (a perfect fourth) and five-sixths (a minor third) the length of the first pipe. e What simple fractions are closest to the relative lengths of the third pipe (a major second) and the second pipe (a minor second)?</p>
+      </div>
       <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>Exercise 1D d Put an = 3 4a1 arn−1 = 3 4a  1</p></div>
-    </article><article class="q" id="q19">
-      <h2>19 · Exercise 1D</h2>
-      <div class="stem"><p>[The relationship between APs and GPs] a The AP 1, 3, 5, 7, 9, ... has first term 1 and difference 2. Show that the sequence 21, 23, 25, 27, 29, . . . is a GP, and find its first term and common ratio. b The GP 3, 6, 12, 24, 48 ... has first term 3 and ratio 2. Show that the sequence log2 3, log2 6, log2 12, log2 24, log2 48 is an AP, and find its first term and common difference.</p></div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>a2 a1 = 23 21 = 4 a3 a2 = 25 23 = 4 a4 a3 = 27 25 = 4 a5 a4 = 29 27 = 4 All terms have a common ratio, so this is a GP with a = 21 = 2 and r = 4. a a2 −a1 = log2 6 −log2 3 = log2(2 × 3) −log2 3 = log2 2 + log2 3 −log2 3 = log2 2 a3 −a2 = log2 12 −log2 6 = log2(2 × 6) −log2 6 = log2 2 + log2 6 −log2 6 = log2 2 a4 −a3 = log2 24 −log2 12 = log2(2 × 12) −log2 12 = log2 2 + log2 12 −log2 12 = log2 2 a5 −a4 = log2 48 −log2 24 = log2(2 × 24) −log2 24 = log2 2 + log2 24 −log2 24 = log2 2 All terms have the same common difference, so this is an AP with d = log2 2 = 1 and a = log2 3. b</p></div>
-    </article><article class="q" id="q20">
-      <h2>20 · Exercise 1D</h2>
-      <div class="stem"><p>[The relationship between APs and GPs] a Show that 25, 22, 2−1, 2−4, . . . is a GP. Then find its nth term. b Show that log2 96, log2 24, log2 6, .. . is an AP. Then show that an = 7 −2n + log2 3. c Show that for any positive base b , 1, if an is an AP with first term a and difference d, then ban is a GP with first term ba and ratio bd. d Show that for any positive base b , 1, if an is a GP with first term a &gt; 0 and ratio r &gt; 0, then logb an is an AP with first term logb a and difference logb r.</p></div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>a All terms have ratio r = an an−1 = 2−3 and a = 25. Hence,</p></div>
-    </article><article class="q" id="q21">
-      <h2>21 · Exercise 1D</h2>
-      <div class="stem"><p>[Extension — geometric sequences in musical intruments] The pipe lengths in a rank of organ pipes decrease from left to right. The lengths form a GP, and the 13th pipe along is exactly half the length of the first pipe (making an interval called an octave). a Show that the ratio of the GP is r = ( 1 2)</p></div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>a Put a13 = 1 2a1 ar12 = 1 2a r12 = 1</p></div>
-    </article><article class="q" id="q24">
-      <h2>24 · Exercise 1D</h2>
-      <div class="stem"><p>Chapter 1 Sequences and series 1D</p></div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol"><p>x = 4 4x = 24 x = 6 The numbers are: 6, 24, 96. b i a2 −a1 = a3 −a2 x −0.2 = 0.000 02 −x 2x = 0.200 02 x = 0.100 01 The numbers are: 0.2, 0.100 01, 0.000 02. ii a2 a1 = a3 a2 x 0.2 = 0.000 02 x x2 = 0.000 004 x = 0.002 or x = −0.002 The numbers are: 0.2, 0.002, 0.000 02 or 0.2, −0.002, 0.000 02. c i a2 −a1 = a3 −a2 0.2 −x = 0.002 −0.2 −x = −0.398 x = 0.398 The numbers are: 0.398, 0.2, 0.002. ii a2 a1 = a3 a2 0.2 x = 0.002 0.2 0.2 x = 0.01 0.01x = 0.2 x = 20 The numbers are: 20, 0.2, 0.002. d i a2 −a1 = a3 −a2 (x + 1) −(x −4) = (x + 11) −(x + 1) 5 = 10 FALSE</p></div>
+      <div class="sol">
+        <p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
+        <p class="step">For a GP: a3 <span class="tex">a2 = a2</span> a1 1</p>
+        <p class="step"><strong>b ·</strong> = b</p>
+        <p class="step"><strong>a ·</strong> = b2 (1) For an AP: a3 −<span class="tex">a2 = a2</span> −a1 10 −<span class="tex">a = a</span> −b 2a −b −10 = 0 (2) 2b2 −b −10 = 0 (1) in (2) (2b −5)(b + 2) = 0 Hence <span class="tex">b = 5</span> 2 = 21 2 and <span class="tex">a = 5</span> 2 !2 = 61 4, or <span class="tex">b = -2</span> and <span class="tex">a = (-2)2</span> = 4.</p>
+        <p class="step"><strong>a ·</strong> For a GP: a3 <span class="tex">a2 = a2</span> a1</p>
+        <p class="step"><strong>a ·</strong> + b 1 = 1</p>
+        <p class="step"><strong>a ·</strong> <span class="tex">a2 + ab = 1 (1) For a_n AP: a3 -</span><span class="tex">a2 = a2</span> −a1</p>
+        <p class="step"><strong>a ·</strong> −b −1 2 = 1 2 −b</p>
+        <p class="step"><strong>a ·</strong> = 1 (2) 1 + <span class="tex">b = 1</span> (2) in (1)</p>
+        <p class="step"><strong>b ·</strong> = 0 Hence <span class="tex">a = 1</span>, <span class="tex">b = 0.</span></p>
+        <p class="step"><strong>b ·</strong> <span class="tex">a1 = a</span> <span class="tex">a2 = a</span> + d <span class="tex">a4 = a</span> + 3d For a GP:</p>
+        <p class="step"><strong>a ·</strong> + d</p>
+        <p class="step"><strong>a ·</strong> = a + 3d</p>
+        <p class="step"><strong>a ·</strong> + d (a + d)2 = a(a + 3d) a2 + 2ad + <span class="tex">d2 = a2</span> + 3ad d2 −ad = 0 d(d −a) = 0 Hence <span class="tex">d = 0</span> or a</p>
+        <p class="step"><strong>c ·</strong> <span class="tex">a1 = a</span> <span class="tex">a2 = a</span> + d <span class="tex">a4 = a</span> + 4d For a GP:</p>
+        <p class="step"><strong>a ·</strong> + d</p>
+        <p class="step"><strong>a ·</strong> = a + 4d</p>
+        <p class="step"><strong>a ·</strong> + d (a + d)2 = a(a + 4d) a2 + 2ad + <span class="tex">d2 = a2</span> + 4ad d2 −2ad = 0 d(d −2a) = 0 Hence <span class="tex">d = 0</span> or 2a</p>
+      </div>
     </article>
     <p style="margin-top:1.5rem">
       <a class='btn' href='../../Chapter 1 Sequences and series/1E-adding-up-terms/concept.html'>Next: 1E Concept →</a>
