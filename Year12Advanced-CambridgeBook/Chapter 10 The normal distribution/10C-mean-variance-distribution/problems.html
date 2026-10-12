@@ -38,10 +38,12 @@
       <div class="stem">
         <p>A function is defined by f(x) =</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
-        <p class="step"><strong>a ·</strong> The function is never negative and ∫10 0 1 10 dx =  x</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+<p class="step"><strong>a ·</strong> The function is never negative and ∫10 0 1 10 dx =  x</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q2">
@@ -49,9 +51,12 @@
       <div class="stem">
         <p>The previous question provides a mathematical model for selecting a random real number in the interval [0, 10]. Use your calculator (or a spreadsheet) to generate a random number between 0 and 10 to as many decimal places as possible. Many calculators return a random number between 0 and 1, and you will need to multiply this answer by 10 (your answer will include a decimal part — this is a continuous distribution). a Generate 20 such numbers, recording them in a table. b Calculate the mean and standard deviation using your calculator. c Do your results agree with the theoretical probabilities in the previous question? d Our model includes the possibility of selecting a 10, but it is virtually certain that 10 will not be returned by the calculator’s random number function. Does this affect the validity of our model and your results?</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p><em>See Cambridge worked-solutions PDF for this item.</em></p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p><em>See Cambridge worked-solutions PDF for this item.</em></p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q3">
@@ -59,11 +64,14 @@
       <div class="stem">
         <p>Define the function f(x) by f(x) = 3 2 x2, with domain [−1, 1]. a Confirm that it is a valid PDF, and find any modes. b Find the expected value µ = E(X). c Find the variance Var(X) and the standard deviation σ. d Calculate ∫µ+σ µ−σ f(x) dx to determine what percentage of the population defined by this distribution lies within one standard deviation of the mean.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
         <p class="step">−5(10)2 + 25(10) !</p>
         <p class="step">− (0)3/3 −5(0)2 + 25(0) !# = 1 10 × 250 3 = 25 3 Therefore, σ = r</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q4">
@@ -71,15 +79,18 @@
       <div class="stem">
         <p>Repeat Question 3 for: a f(x) = 2x, with domain [0, 1] b f(x) = |x|, with domain [−1, 1] c f(x) =</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">a i The function is never negative and ∫1 0 2x dx = h x2i1 0 = 1.</p>
         <p class="step">Therefore, f(x) is a valid probability density function.</p>
         <p class="step">The mode is found by identifying the x-coordinate of any global maximum.</p>
         <p class="step">In the interval [0, 1], the graph of f(x) = 2x has a global maximum at (1, 2).</p>
         <p class="step">Hence the mode is 1.</p>
         <p class="step">ii E(X) = ∫b a x f(x) dx then = ∫1 0 x × 2x dx = 2 3 h x3i1 0 = 2 3 iii Var(X) = ∫b a (x −µ)2 f(x) dx then = ∫1 0 x −2 3 !2 × 2x dx =  x2  9x2 −16x + 8 </p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q5">
@@ -87,14 +98,17 @@
       <div class="stem">
         <p>Consider the function defined by f(x) = 1 c , for 0 ≤x ≤c, where c &gt; 0. a Is this function a valid PDF? b Calculate E(X). Is your answer as expected? c Calculate Var(X). d Compare your answer with the special case in Question 1. 10C Mean and variance of a distribution</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">a ∫c 0 1 c dx =  x c c 0 = c c −0 c = 1 and the function is never negative.</p>
         <p class="step">Therefore, f(x) is a valid probability density function.</p>
         <p class="step">b E(X) = ∫c 0 1 c × x dx = &quot; x2 2c #c 0 = (c)2 2c −(0)2 2c = c 2 Yes, for a measure of centre of this uniform distribution, the mean is as expected.</p>
         <p class="step">c Var(X) = ∫b a (x −µ)2 f(x) dx then = ∫c 0  x −c 2 2 × 1 c dx = 1 c &quot; x3/3 −c x2 2 + c2 4 x !#c 0 = 1 c &quot; (c)3/3 −c(c)2 2 + c2 4 (c) !</p>
         <p class="step">− (0)3/3 −c(0)2 2 + c2 4 (0) !# = 1 c × c3</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q6">
@@ -102,11 +116,14 @@
       <div class="stem">
         <p>Consider the function defined by f(x) =</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">a Yes, f(x) &gt; 0 for all x in the domain and ∫b a f(x) dx = 1 b E(X) = ∫b a x f(x)dx = 1 b −a × &quot; x2 2 #b a = a + b 2 using simple factorisation - Due to the uniform nature of the distribution, the expected value should be the theoretical centre.</p>
         <p class="step">c Var(X) = E(X2) −E2(X) = ∫b a x2 f(x)dx − a + b 2 !2 = (b −a)2</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q7">
@@ -114,9 +131,12 @@
       <div class="stem">
         <p>a Show that the function f(x) is a valid PDF, where f(x) = </p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p><em>See Cambridge worked-solutions PDF for this item.</em></p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p><em>See Cambridge worked-solutions PDF for this item.</em></p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q8">
@@ -124,10 +144,12 @@
       <div class="stem">
         <p>The graph to the right shows the probability density function f(x) for a continuous distribution. a Comment on whether the distribution is positively or negatively skewed. b Comment on what effect you expect the long tail to have on the mean for the distribution. c Match the labels a, b and c with the mean, median and mode of the distribution.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
-        <p class="step"><strong>a ·</strong> The tail falls towards the right of the graph, and therefore, this distribution is positively skewed b Due to the existence of extreme values (to the right), this will increase the mean of the distribution i.e. in the direction of the tail. A good way to think of this is the idea of adding a large number to a data set - this larger number will be added to the sum (when calculating mean), hence increasing the value. c a: mode - f(x) is the highest here i.e. the highest probability of occurring (most popular) b: median c: mean - the mean &gt; median due to the effect of the large values of x on the expectation summation.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
+<p class="step"><strong>a ·</strong> The tail falls towards the right of the graph, and therefore, this distribution is positively skewed b Due to the existence of extreme values (to the right), this will increase the mean of the distribution i.e. in the direction of the tail. A good way to think of this is the idea of adding a large number to a data set - this larger number will be added to the sum (when calculating mean), hence increasing the value. c a: mode - f(x) is the highest here i.e. the highest probability of occurring (most popular) b: median c: mean - the mean &gt; median due to the effect of the large values of x on the expectation summation.</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q9">
@@ -135,10 +157,12 @@
       <div class="stem">
         <p>The graph to the right shows the probability density function f(x) for a continuous distribution. a Comment on whether the distribution is positively or negatively skewed. b Comment on what effect you expect the long tail to have on the mean for the distribution. c Match the labels a, b and c with the mean, median and mode of the distribution.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
-        <p class="step"><strong>a ·</strong> The tail falls towards the left of the graph, and therefore, this distribution is negatively skewed b Due to the existence of smaller values (to the left), this will decrease the mean of the distribution i.e. in the direction of the tail. c a: mean - the mean &lt; median due to the effect of the smaller values of x on the expectation summation. b: median c: mode - f(x) is greatest at this point.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
+<p class="step"><strong>a ·</strong> The tail falls towards the left of the graph, and therefore, this distribution is negatively skewed b Due to the existence of smaller values (to the left), this will decrease the mean of the distribution i.e. in the direction of the tail. c a: mean - the mean &lt; median due to the effect of the smaller values of x on the expectation summation. b: median c: mode - f(x) is greatest at this point.</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q10">
@@ -146,12 +170,15 @@
       <div class="stem">
         <p>a The graph to the right shows a symmetric probability density function f(x). For this distribution: i write down the mode; ii explain why the median is x = 0; iii comment on the symmetry of the function x f(x) and write down the mean. b A second symmetric probability density function g(x) is shown to the right below. i Write down the mode and median for this distribution. ii Explain in words the meaning behind the formula E(X + k) = E(X) + k for any random variable X and constant k. iii Write down the mean for the distribution. c What do you notice about the mode, mean and mean for this symmetric distribution? d Give an example of a symmetric distribution where the mode is NOT the mean or median. 0.2 0.4 0.6 0.8 -0.2 -0.4 -0.6 -0.8 x 0.2 0.4 0.6 0.8 f(x) 0.2 0.4 0.6 0.8</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">10 0 = 1.</p>
         <p class="step">Therefore, f(x) is a valid probability density function.</p>
         <p class="step">b E(X) = ∫b a x f(x) dx then = ∫10 0 x × 1 10 dx = &quot; x2</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q11">
@@ -159,11 +186,14 @@
       <div class="stem">
         <p>a Graph the probability distribution function f(x) = </p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">a See textbook solutions b Based on the graph, f(x) is the greatest at x = 0.</p>
         <p class="step">Therefore, x = 0 is the mode and since −2 ≤x &lt; 2, the median is also x = 0 c E(X) = ∫0 −2/14 xdx + ∫1 0/12 x(1 −x)dx + ∫2 1/12 x(x −1)dx = 0 d They all equal 0; see textbook solution</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q12">
@@ -171,12 +201,15 @@
       <div class="stem">
         <p>We claimed that two expressions for the variance of a continuous distribution are equal, ∫b a (x −µ)2 f(x) dx = ∫b a x2 f(x) dx −µ2 . Prove this identity, starting with the LHS and expanding the integrand.</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">LHS = ∫b a x2 f(x) dx − ∫b a 2µx f(x) dx + ∫b a µ2 f(x) dx.</p>
         <p class="step">By the definition of a PDF, Term 3 = µ2 ∫b a f(x) dx = µ2.</p>
         <p class="step">By the formula for the mean, Term 2 = −2µ ∫b a x f(x) dx = −2µ2.</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q13">
@@ -184,10 +217,12 @@
       <div class="stem">
         <p>In Question 1 of Exercise 10A, we demonstrated that the area under a relative frequency polygon equals the area under a relative frequency histogram, and that both are equal to the total probability 1. a Confirm that the relative frequency polygon in that question may be written piecewise as: f(x) = </p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
-        <p class="step"><strong>a ·</strong> Since the path is a polygon, we only need check the equations given agree where the intervals join. When 0 &lt; x &lt; 1: 2 10 x = 0, 2/10 at x = 0, 1 When 1 ≤x ≤2: 1 10(3x −1) = 2/10, 5/10 at x = 1, 2 When 2 ≤x ≤3: 1 10(−2x + 9) = 5/10, 3/10 at x = 2, 3 When 3 ≤x ≤4: 1 10(−3x + 12) = 3/10, 0 at x = 3, 4 The graph is continuous on the interval 0 ≤x ≤4 and the values agree with the graph drawn previously in Q6 (or the tabulated relative frequencies). b E(X) = ∫1</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+<p class="step"><strong>a ·</strong> Since the path is a polygon, we only need check the equations given agree where the intervals join. When 0 &lt; x &lt; 1: 2 10 x = 0, 2/10 at x = 0, 1 When 1 ≤x ≤2: 1 10(3x −1) = 2/10, 5/10 at x = 1, 2 When 2 ≤x ≤3: 1 10(−2x + 9) = 5/10, 3/10 at x = 2, 3 When 3 ≤x ≤4: 1 10(−3x + 12) = 3/10, 0 at x = 3, 4 The graph is continuous on the interval 0 ≤x ≤4 and the values agree with the graph drawn previously in Q6 (or the tabulated relative frequencies). b E(X) = ∫1</p>
+        </div>
       </div>
     </article>
     <article class="q" id="q14">
@@ -195,11 +230,14 @@
       <div class="stem">
         <p>This question and the next both involve improper integrals where the upper limit is ∞. Infinity is not a number, so you cannot substitute ∞. Instead, take the limit of the primitive as x →∞. Define f(x) = 3 x4 , where x ≥1. a Show that f(x) is a valid PDF. b Evaluate E(X) and Var(X). c Calculate each probability. P(X ≤4) i P(X ≥2) ii P(2 ≤X ≤5) iii d Find the cumulative distribution function F(x) = P(X ≤x).</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">a f(x) ≥0 since f(x) is a square (or since x ≥0).</p>
         <p class="step">Further, ∫∞</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q15">
@@ -207,10 +245,13 @@
       <div class="stem">
         <p>Consider the function f(x) = e−x, where x ≥0. In Question 20 of Exercise 10B, we showed that f(x) is a valid PDF. a Differentiate xe−x, and hence integrate xe−x. b Evaluate E(X) = ∫∞</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Quick facts:</strong> For a continuous random variable on <span class="tex">[a,b]</span>, <span class="tex">P(a\le X\le b)=\int_a^b f(x)\,dx</span> where <span class="tex">f(x)\ge 0</span> and total area under the curve is <span class="tex">1</span>.</p>
         <p class="step">a d dx xe−x = e−x −xe−x, so xe−x = ∫ e−x dx − ∫ xe−x dx = −e−x − ∫ xe−x dx thus ∫ xe−x dx = −e−x −xe−x b E(X) = −e−x −xe−x∞</p>
+
+        </div>
       </div>
     </article>
     <article class="q" id="q16">
@@ -218,10 +259,13 @@
       <div class="stem">
         <p>There are many other distributions that find applications in statistics. One such is the Weibull Distribution, which is applied to investigate events such as time before electronic components fail or time that users might spend on a web page. Here is the probability density function: f(x) = 1.5x0.5e−x1.5, x &gt; 0 In this investigation we provide instructions to examine this distribution using the Desmos online graphing calculator, but you could use another application, such as WolframAlpha. a Graph the function. Note the use of the braces {} to specify the restriction on the domain, by entering: f (x) = 1.5x0.5e−x1.5 {x &gt; 0} b Comment on the shape of the distribution — is it symmetric or skew? c Explain why the shape of the distribution is particularly suited for time spent on a web page. d Write down the mode of the distribution, that is the x-value where the peak occurs. e To confirm that the total probability is 1, we need to integrate the function from x = 0. Since it drops off very quickly, it is probably enough to integrate from 0 to 5: ∫5 0 f(x) dx You can enter int_0∧5f(x)dx in Desmos. Write down the result correct to 4 decimal places. f Desmos also understands integrals on infinite domains: enter int_0∧infinity f(x)dx and record the result. g Find P(X &lt; 0.5), correct to 4 decimal places. h By trial and error, find the median value m, that is the value such that: ∫m</p>
       </div>
-      <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-      <div class="sol">
-        <p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <div class="sol">
+<p class="formula-quick"><strong>Formulas:</strong> <span class="tex">E(X)=\int x f(x)\,dx</span>, <span class="tex">\mathrm{Var}(X)=E(X^2)-[E(X)]^2</span> for a continuous density <span class="tex">f(x)</span>.</p>
         <p class="step">Follow Investigation instructions and check answer section for suggested responses to questions.</p>
+
+        </div>
       </div>
     </article>
     <p style="margin-top:1.5rem">
@@ -249,6 +293,7 @@
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
+  <script src="../../course-solutions.js"></script>
   <script>
   document.querySelectorAll(".tex").forEach(function(n){
     if(n.getAttribute("data-texed")) return;
