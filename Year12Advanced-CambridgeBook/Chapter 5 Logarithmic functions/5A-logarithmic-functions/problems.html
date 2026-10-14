@@ -30,7 +30,7 @@
     </div>
     <details class="teacher-note no-print">
       <summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems aligned to Cambridge Exercise 5A; numerical answers follow <em>Chapter-5-Worked-Solutions.pdf</em>. Q1–6 rewritten with low-floor step-by-step reasoning and formula callouts. Each part has its own Show/Hide button. Sketch questions keep redrawn SVG models inside the relevant part.</div>
+      <div class="body">Stems aligned to Cambridge Exercise 5A; numerical answers follow <em>Chapter-5-Worked-Solutions.pdf</em>. Q1–6 and Q11–20 rewritten with low-floor step-by-step reasoning and formula callouts (stems aligned to Cambridge). Each part has its own Show/Hide button. Sketch questions keep redrawn SVG models inside the relevant part.</div>
     </details>
 
     <article class="q" id="q1">
@@ -416,206 +416,463 @@
       <div class="plot-frame"><svg id="q10plot" class="plot" viewBox="0 0 720 260"></svg>
         <div class="legend"><span class="p"><i></i>ln(−x)</span><span class="i"><i></i>ln(−2x)</span></div></div>
 
-        </div>
-      </div>
-    </article>
-
-    <article class="q" id="q11">
+            <article class="q" id="q11">
       <h2>11 · Exponential quadratics <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Solve.</p>
-        <p>a <span class="tex">2^x+7=2^{-x}</span> · b <span class="tex">3^{2x+1}=12</span></p>
-        <p>c i <span class="tex">e^{2x}-3e^x=0</span> · ii <span class="tex">e^{2x}-5e^x+4=0</span> · iii <span class="tex">e^{2x}-6e^x+5=0</span> · iv <span class="tex">e^{2x}-3e^x+2=0</span></p></div>
+      <div class="stem">
+        <p>a Use the substitution <span class="tex">u=2^x</span> to solve <span class="tex">4^x-9\times 2^x+14=0</span>.</p>
+        <p>b Use a similar substitution to solve <span class="tex">3^{2x}-8\times 3^x-9=0</span>.</p>
+        <p>c Solve for <span class="tex">x</span>:</p>
+        <p>i <span class="tex">25^x-26\times 5^x+25=0</span> · ii <span class="tex">9^x-5\times 3^x+4=0</span></p>
+        <p>iii <span class="tex">3^{2x}-3^x-20=0</span> · iv <span class="tex">4^x-3\times 2^{x+1}+2^3=0</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">x=1</span> or <span class="tex">x=\log_2 7</span></p>
+          <p class="formula-quick"><strong>Method:</strong> Write every power with the <strong>same base</strong>. Remember <span class="tex">4^x=(2^2)^x=(2^x)^2</span>. Then put <span class="tex">u=2^x</span> (always positive) and solve an ordinary quadratic.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Rewrite: <span class="tex">4^x=(2^x)^2</span>, so the equation is <span class="tex">(2^x)^2-9\cdot 2^x+14=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=2^x</span>. Then <span class="tex">u^2-9u+14=0</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Factor: <span class="tex">(u-2)(u-7)=0</span>, so <span class="tex">u=2</span> or <span class="tex">u=7</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Back-substitute. If <span class="tex">2^x=2</span>, then <span class="tex">x=1</span>. If <span class="tex">2^x=7</span>, then <span class="tex">x=\log_2 7</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">x=1</span> or <span class="tex">x=\log_2 7</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">x=2</span></p>
+          <p class="formula-quick"><strong>Same method:</strong> Write <span class="tex">3^{2x}=(3^x)^2</span>, put <span class="tex">u=3^x</span> (always positive), solve the quadratic, then reject any negative <span class="tex">u</span>.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Equation becomes <span class="tex">(3^x)^2-8\cdot 3^x-9=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=3^x</span>. Then <span class="tex">u^2-8u-9=0</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Factor: <span class="tex">(u+1)(u-9)=0</span>, so <span class="tex">u=-1</span> or <span class="tex">u=9</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">3^x=-1</span> is impossible (powers of 3 are never negative). <span class="tex">3^x=9=3^2</span> → <span class="tex">x=2</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">x=2</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · ci</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c i</button>
         <div class="sol">
-<p class="step"><strong>ci ·</strong> <span class="tex">x=0</span> or <span class="tex">x=2</span> · ii <span class="tex">x=0</span> or <span class="tex">x=\log_e 4</span> · iii <span class="tex">x=\log_e 5</span> · iv <span class="tex">x=1</span> or <span class="tex">x=2</span></p>
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">25^x=(5^2)^x=(5^x)^2</span>. Put <span class="tex">u=5^x</span>.</p>
+          <p class="step"><strong>c i ·</strong> <span class="tex">(5^x)^2-26\cdot 5^x+25=0</span>. Let <span class="tex">u=5^x</span>: <span class="tex">u^2-26u+25=0</span>.</p>
+          <p class="step">Factor: <span class="tex">(u-1)(u-25)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=25</span>.</p>
+          <p class="step"><span class="tex">5^x=1\Rightarrow x=0</span>. <span class="tex">5^x=25=5^2\Rightarrow x=2</span>.</p>
+          <p class="final"><strong>Answer c i:</strong> <span class="tex">x=0</span> or <span class="tex">x=2</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c ii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">9^x=(3^x)^2</span>. Put <span class="tex">u=3^x</span>.</p>
+          <p class="step"><strong>c ii ·</strong> <span class="tex">u^2-5u+4=0</span> → <span class="tex">(u-1)(u-4)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><span class="tex">3^x=1\Rightarrow x=0</span>. <span class="tex">3^x=4\Rightarrow x=\log_3 4</span>.</p>
+          <p class="final"><strong>Answer c ii:</strong> <span class="tex">x=0</span> or <span class="tex">x=\log_3 4</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c iii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">3^{2x}=(3^x)^2</span>. Put <span class="tex">u=3^x</span>. Reject negative <span class="tex">u</span>.</p>
+          <p class="step"><strong>c iii ·</strong> <span class="tex">u^2-u-20=0</span> → <span class="tex">(u+4)(u-5)=0</span> → <span class="tex">u=-4</span> or <span class="tex">u=5</span>.</p>
+          <p class="step"><span class="tex">3^x=-4</span> impossible. <span class="tex">3^x=5\Rightarrow x=\log_3 5</span>.</p>
+          <p class="final"><strong>Answer c iii:</strong> <span class="tex">x=\log_3 5</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c iv</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same method + tidy first:</strong> <span class="tex">2^{x+1}=2\cdot 2^x</span> and <span class="tex">2^3=8</span>. Put <span class="tex">u=2^x</span>.</p>
+          <p class="step"><strong>c iv ·</strong> Start with <span class="tex">4^x-3\cdot 2^{x+1}+8=0</span>.</p>
+          <p class="step">Rewrite: <span class="tex">(2^x)^2-3\cdot(2\cdot 2^x)+8=0</span> → <span class="tex">u^2-6u+8=0</span>.</p>
+          <p class="step">Factor: <span class="tex">(u-2)(u-4)=0</span> → <span class="tex">u=2</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><span class="tex">2^x=2\Rightarrow x=1</span>. <span class="tex">2^x=4=2^2\Rightarrow x=2</span>.</p>
+          <p class="final"><strong>Answer c iv:</strong> <span class="tex">x=1</span> or <span class="tex">x=2</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q12">
-      <h2>12 · Log and exponential equations <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Solve for <span class="tex">x</span> (exact form).</p>
-        <p>a <span class="tex">e^x-1=0</span> · b <span class="tex">\ln x=\ln 2</span> · c <span class="tex">(\ln x)^2=(\ln 3)(\ln x)</span> · d <span class="tex">e^x(e^x-1)=0</span></p></div>
+      <h2>12 · Quadratics in <span class="tex">e^x</span> <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>Use the substitution <span class="tex">u=e^x</span> or <span class="tex">u=e^{2x}</span> to reduce each equation to a quadratic and solve. Write answers as logarithms base <span class="tex">e</span>, unless they simplify further.</p>
+        <p>a <span class="tex">e^{2x}-2e^x+1=0</span> · b <span class="tex">e^{2x}+e^x-6=0</span></p>
+        <p>c <span class="tex">e^{4x}-10e^{2x}+9=0</span> · d <span class="tex">e^{4x}-e^{2x}=0</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">x=0</span></p>
+          <p class="formula-quick"><strong>Method:</strong> Notice <span class="tex">e^{2x}=(e^x)^2</span>. Put <span class="tex">u=e^x</span> (always <span class="tex">&gt;0</span>). Solve the quadratic, then take <span class="tex">x=\ln u</span>.</p>
+          <p class="step"><strong>a ·</strong> Let <span class="tex">u=e^x</span>. Equation: <span class="tex">u^2-2u+1=0</span> → <span class="tex">(u-1)^2=0</span> → <span class="tex">u=1</span>.</p>
+          <p class="step"><span class="tex">e^x=1\Rightarrow x=\ln 1=0</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">x=0</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">x=2</span> (equivalently <span class="tex">\ln x=\ln 2</span>)</p>
+          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=e^x</span>. Reject any negative root for <span class="tex">u</span>.</p>
+          <p class="step"><strong>b ·</strong> <span class="tex">u^2+u-6=0</span> → <span class="tex">(u+3)(u-2)=0</span> → <span class="tex">u=-3</span> or <span class="tex">u=2</span>.</p>
+          <p class="step"><span class="tex">e^x=-3</span> impossible. <span class="tex">e^x=2\Rightarrow x=\ln 2</span> (also written <span class="tex">\log_e 2</span>).</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">x=\log_e 2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">x=1</span> or <span class="tex">x=3</span> (<span class="tex">\ln x=0</span> or <span class="tex">\ln x=\ln 3</span>)</p>
+          <p class="formula-quick"><strong>Tip:</strong> Here powers of <span class="tex">e^{2x}</span> appear. Put <span class="tex">u=e^{2x}</span> (still always positive).</p>
+          <p class="step"><strong>c ·</strong> Let <span class="tex">u=e^{2x}</span>. Then <span class="tex">u^2-10u+9=0</span> → <span class="tex">(u-1)(u-9)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=9</span>.</p>
+          <p class="step"><span class="tex">e^{2x}=1\Rightarrow 2x=0\Rightarrow x=0</span>.</p>
+          <p class="step"><span class="tex">e^{2x}=9\Rightarrow (e^x)^2=9\Rightarrow e^x=3</span> (not <span class="tex">-3</span>) → <span class="tex">x=\log_e 3</span>.</p>
+          <p class="final"><strong>Answer c:</strong> <span class="tex">x=0</span> or <span class="tex">x=\log_e 3</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> <span class="tex">x=0</span> (only root with <span class="tex">x</span> real; the factor <span class="tex">e^x=0</span> has no solution)</p>
+          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=e^{2x}</span>. Remember <span class="tex">e^{\text{anything}}</span> is never zero.</p>
+          <p class="step"><strong>d ·</strong> <span class="tex">u^2-u=0</span> → <span class="tex">u(u-1)=0</span> → <span class="tex">u=0</span> or <span class="tex">u=1</span>.</p>
+          <p class="step"><span class="tex">e^{2x}=0</span> impossible. <span class="tex">e^{2x}=1\Rightarrow x=0</span>.</p>
+          <p class="final"><strong>Answer d:</strong> <span class="tex">x=0</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q13">
-      <h2>13 · Mixed exponentials <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Solve.</p>
-        <p>a <span class="tex">e^x+e^{-x}=e^2+e^{-2}</span> · b <span class="tex">e^{2x}-(e^3+1)e^x+e^3=0</span></p></div>
+      <h2>13 · Quadratics in <span class="tex">\ln x</span> <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>Use a substitution to solve:</p>
+        <p>a <span class="tex">(\log_e x)^2-5\log_e x+4=0</span> · b <span class="tex">(\log_e x)^2=3\log_e x</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> Let <span class="tex">u=e^x</span>. Then <span class="tex">u+\tfrac1u=e^2+e^{-2}</span> → <span class="tex">x=e</span> or <span class="tex">x=e^4</span> (Cambridge key).</p>
+          <p class="formula-quick"><strong>Method:</strong> Put <span class="tex">u=\log_e x</span>. Solve the quadratic for <span class="tex">u</span>, then convert with <span class="tex">x=e^u</span>. Domain: <span class="tex">x&gt;0</span>.</p>
+          <p class="step"><strong>a ·</strong> Let <span class="tex">u=\log_e x</span>. Then <span class="tex">u^2-5u+4=0</span> → <span class="tex">(u-1)(u-4)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><span class="tex">\log_e x=1\Rightarrow x=e</span>. <span class="tex">\log_e x=4\Rightarrow x=e^4</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">x=e</span> or <span class="tex">x=e^4</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> With <span class="tex">u=e^x</span>: <span class="tex">u^2-(e^3+1)u+e^3=0</span> → <span class="tex">u=1</span> or <span class="tex">u=e^3</span> (equivalently <span class="tex">x=0</span> or <span class="tex">x=3</span>).</p>
+          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=\log_e x</span>. Bring all terms to one side before factoring (do not cancel <span class="tex">u</span> too early — you would lose a root).</p>
+          <p class="step"><strong>b ·</strong> <span class="tex">u^2=3u</span> → <span class="tex">u^2-3u=0</span> → <span class="tex">u(u-3)=0</span> → <span class="tex">u=0</span> or <span class="tex">u=3</span>.</p>
+          <p class="step"><span class="tex">\log_e x=0\Rightarrow x=1</span>. <span class="tex">\log_e x=3\Rightarrow x=e^3</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">x=1</span> or <span class="tex">x=e^3</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q14">
-      <h2>14 · Index and log pairs <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Evaluate.</p>
-        <p>a i <span class="tex">e^{\ln e}</span> ii <span class="tex">e^{\ln 1}</span> iii <span class="tex">\ln 1</span></p>
-        <p>b i <span class="tex">\ln 20</span> ii <span class="tex">\ln 5</span> iii <span class="tex">\ln 8</span> (write as single logarithms where possible)</p></div>
+      <h2>14 · Log laws practise <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>a Use the laws for logarithms to simplify:</p>
+        <p>i <span class="tex">\log_e e^e</span> · ii <span class="tex">\log_e(\log_e e^e)</span> · iii <span class="tex">\log_e\!\big(\log_e(\log_e e^e)\big)</span></p>
+        <p>b Express as a single logarithm:</p>
+        <p>i <span class="tex">\ln 5+\ln 4</span> · ii <span class="tex">\ln 30-\log_e 6</span> · iii <span class="tex">\ln 12-\ln 15+\ln 10</span></p>
+      </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · ai</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a i</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>ai ·</strong> <span class="tex">e</span> ii 1 iii 0</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">\log_e(e^k)=k</span> for any real <span class="tex">k</span>.</p>
+          <p class="step"><strong>a i ·</strong> Here the power is <span class="tex">e</span> itself: <span class="tex">\log_e(e^e)=e</span>.</p>
+          <p class="final"><strong>Answer a i:</strong> <span class="tex">e</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · bi</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a ii</button>
         <div class="sol">
-<p class="step"><strong>bi ·</strong> <span class="tex">\ln 20</span> ii <span class="tex">\ln 5</span> iii <span class="tex">\ln 8</span> (from log laws on the expressions in the book)</p>
+          <p class="formula-quick"><strong>Same formula:</strong> First simplify the inside using (a i), then take log again.</p>
+          <p class="step"><strong>a ii ·</strong> From (a i), inside is <span class="tex">e</span>. So <span class="tex">\log_e(\log_e e^e)=\log_e e=1</span>.</p>
+          <p class="final"><strong>Answer a ii:</strong> <span class="tex">1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a iii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same method · peel the onion:</strong> Use the previous answer as the new inside.</p>
+          <p class="step"><strong>a iii ·</strong> From (a ii), inside is <span class="tex">1</span>. So <span class="tex">\log_e(1)=0</span>.</p>
+          <p class="final"><strong>Answer a iii:</strong> <span class="tex">0</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b i</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Product law:</strong> <span class="tex">\ln a+\ln b=\ln(ab)</span> (when <span class="tex">a&gt;0</span>, <span class="tex">b&gt;0</span>).</p>
+          <p class="step"><strong>b i ·</strong> <span class="tex">\ln 5+\ln 4=\ln(5\times 4)=\ln 20</span>.</p>
+          <p class="final"><strong>Answer b i:</strong> <span class="tex">\ln 20</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b ii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quotient law:</strong> <span class="tex">\ln a-\ln b=\ln\!\left(\dfrac{a}{b}\right)</span>. Note <span class="tex">\ln</span> and <span class="tex">\log_e</span> are the same.</p>
+          <p class="step"><strong>b ii ·</strong> <span class="tex">\ln 30-\log_e 6=\ln\!\left(\dfrac{30}{6}\right)=\ln 5</span>.</p>
+          <p class="final"><strong>Answer b ii:</strong> <span class="tex">\ln 5</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b iii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Combine laws:</strong> <span class="tex">\ln a-\ln b+\ln c=\ln\!\left(\dfrac{a\cdot c}{b}\right)</span>.</p>
+          <p class="step"><strong>b iii ·</strong> <span class="tex">\ln 12-\ln 15+\ln 10=\ln\!\left(\dfrac{12\times 10}{15}\right)=\ln\!\left(\dfrac{120}{15}\right)=\ln 8</span>.</p>
+          <p class="final"><strong>Answer b iii:</strong> <span class="tex">\ln 8</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q15">
-      <h2>15 · Planet diameters on a log scale <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Planets are placed by diameter on a logarithmic axis. Comment on spacing and why the Sun is usually omitted.</p></div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-        <p class="step">Equal steps on a log axis represent equal <strong>ratios</strong> of diameter, so small rocky planets cluster and gas giants spread across orders of magnitude. The Sun is excluded because a log scale needs positive arguments and <span class="tex">\ln x\to-\infty</span> as <span class="tex">x\to 0^+</span>; treating the Sun would dominate or break the scale unless a separate inset or linear panel is used.</p>
-
-        </div>
+      <h2>15 · Planet distances on linear and log scales <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>Distances of the eight planets from the Sun in astronomical units (AU), with 1 AU = Earth–Sun distance:</p>
+        <p>Mercury 0.39 · Venus 0.72 · Earth 1 · Mars 1.52 · Jupiter 5.2 · Saturn 9.5 · Uranus 19.2 · Neptune 30.1 (Sun at 0).</p>
+        <p>a Place the Sun and eight planets on a <strong>linear</strong> number line. Comment.</p>
+        <p>b i Place the eight planets on a <strong>log</strong> scale (omit the Sun). ii Label with actual AU distances. iii Comment on the grouping.</p>
+        <p>c Give a plausible astronomical reason for the grouping.</p>
+        <p>d Why has the Sun been excluded from the log-scale graph?</p>
       </div>
-    </article>
-
-    <article class="q" id="q16">
-      <h2>16 · Orders of magnitude <span class="band ch">Challenge</span></h2>
-      <div class="stem"><p>a A quantity increases from 100 to 31&nbsp;600. By what factor? b How many orders of magnitude is that?</p></div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> Factor <span class="tex">316</span> (<span class="tex">31600\div 100</span>)</p>
+          <p class="formula-quick"><strong>Linear scale:</strong> Equal gaps mean equal <strong>differences</strong> (e.g. 5 AU, 10 AU, 15 AU look evenly spaced).</p>
+          <p class="step"><strong>a ·</strong> On 0 to about 35 AU, Mercury–Mars sit almost on top of each other near 0, while Jupiter–Neptune are spread out across most of the line.</p>
+          <div class="plot-frame" style="padding:.5rem">
+            <svg viewBox="0 0 720 90" width="100%" height="90" aria-label="Linear AU number line">
+              <line x1="40" y1="45" x2="680" y2="45" stroke="#9aa3b0" stroke-width="2"/>
+              <text x="40" y="70" font-size="11" fill="#475569">0</text>
+              <text x="200" y="70" font-size="11" fill="#475569">10</text>
+              <text x="360" y="70" font-size="11" fill="#475569">20</text>
+              <text x="520" y="70" font-size="11" fill="#475569">30</text>
+              <!-- positions: AU*640/32 + 40 roughly max 32 -->
+              <circle cx="40" cy="45" r="4" fill="#b45309"/><text x="34" y="28" font-size="9" fill="#b45309">Sun</text>
+              <circle cx="48" cy="45" r="3" fill="#1d4ed8"/>
+              <circle cx="54" cy="45" r="3" fill="#1d4ed8"/>
+              <circle cx="60" cy="45" r="3" fill="#1d4ed8"/>
+              <circle cx="70" cy="45" r="3" fill="#1d4ed8"/>
+              <circle cx="144" cy="45" r="4" fill="#0f766e"/><text x="128" y="28" font-size="9" fill="#0f766e">Jup</text>
+              <circle cx="230" cy="45" r="4" fill="#0f766e"/><text x="214" y="28" font-size="9" fill="#0f766e">Sat</text>
+              <circle cx="424" cy="45" r="4" fill="#0f766e"/><text x="404" y="28" font-size="9" fill="#0f766e">Ura</text>
+              <circle cx="642" cy="45" r="4" fill="#0f766e"/><text x="616" y="28" font-size="9" fill="#0f766e">Nep</text>
+            </svg>
+            <p style="font-size:.85rem;color:#64748b;margin:.25rem 0 0">Inner four (Me/Ve/Ea/Ma) cluster near the Sun; outer planets spread out.</p>
+          </div>
+          <p class="final"><strong>Comment:</strong> The four rocky planets bunch near the Sun; the gas/ice giants are widely spaced.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">\log_{10}(316)\approx 2.5</span>; total orders from 100 to 31&nbsp;600: <span class="tex">\log_{10}(31600/100)\approx 5.4</span></p>
-        </div>
-      </div>
-    </article>
-
-    <article class="q" id="q17">
-      <h2>17 · Sound intensity <span class="band ch">Challenge</span></h2>
-      <div class="stem"><p>a If intensity drops to <span class="tex">\tfrac15</span> of its original value, what percentage decrease is that? b If intensity increases by a factor of 10, how many decibels is the increase?</p></div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> About <span class="tex">80\%</span> decrease (keeping <span class="tex">20\%</span>)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">10\log_{10}(10)=10</span> dB → <strong>10 dB</strong> increase</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="q" id="q18">
-      <h2>18 · Change-of-base equations <span class="band ch">Challenge</span></h2>
-      <div class="stem"><p>Solve.</p>
-        <p>a <span class="tex">\log_4 x=3</span> · b <span class="tex">\log_{10} x=\log_{10}\!\left(\tfrac{1+\sqrt5}{2}\right)</span> · c <span class="tex">\log_{1/5} x=2</span></p></div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">x=64</span> or <span class="tex">\log_4 3\approx 0.792</span> (book lists both forms for the two related items)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">x=\tfrac{1+\sqrt5}{2}</span> or <span class="tex">\log_{10}\!\left(\tfrac{1+\sqrt5}{2}\right)\approx 0.209</span></p>
+          <p class="formula-quick"><strong>Log scale:</strong> Equal gaps mean equal <strong>ratios</strong>. Using <span class="tex">\ln</span> of each AU (any base works): Mercury ≈ −0.94, Venus ≈ −0.33, Earth 0, Mars ≈ 0.42, Jupiter ≈ 1.65, Saturn ≈ 2.25, Uranus ≈ 2.95, Neptune ≈ 3.40.</p>
+          <p class="step"><strong>b i–ii ·</strong> Plot those log values on a number line, but label each point with the original AU (0.39, 0.72, …).</p>
+          <div class="plot-frame" style="padding:.5rem">
+            <svg viewBox="0 0 720 110" width="100%" height="110" aria-label="Log AU number line">
+              <line x1="40" y1="50" x2="680" y2="50" stroke="#9aa3b0" stroke-width="2"/>
+              <text x="80" y="78" font-size="10" fill="#475569">−1</text>
+              <text x="200" y="78" font-size="10" fill="#475569">0</text>
+              <text x="320" y="78" font-size="10" fill="#475569">1</text>
+              <text x="440" y="78" font-size="10" fill="#475569">2</text>
+              <text x="560" y="78" font-size="10" fill="#475569">3</text>
+              <!-- map ln from -1 to 3.5 onto 80..620 -->
+              <circle cx="88" cy="50" r="4" fill="#1d4ed8"/><text x="70" y="30" font-size="9" fill="#1d4ed8">0.39</text>
+              <circle cx="160" cy="50" r="4" fill="#1d4ed8"/><text x="142" y="30" font-size="9" fill="#1d4ed8">0.72</text>
+              <circle cx="200" cy="50" r="4" fill="#1d4ed8"/><text x="190" y="30" font-size="9" fill="#1d4ed8">1</text>
+              <circle cx="250" cy="50" r="4" fill="#1d4ed8"/><text x="232" y="30" font-size="9" fill="#1d4ed8">1.52</text>
+              <circle cx="398" cy="50" r="4" fill="#0f766e"/><text x="382" y="30" font-size="9" fill="#0f766e">5.2</text>
+              <circle cx="470" cy="50" r="4" fill="#0f766e"/><text x="452" y="30" font-size="9" fill="#0f766e">9.5</text>
+              <circle cx="554" cy="50" r="4" fill="#0f766e"/><text x="532" y="30" font-size="9" fill="#0f766e">19.2</text>
+              <circle cx="608" cy="50" r="4" fill="#0f766e"/><text x="586" y="30" font-size="9" fill="#0f766e">30.1</text>
+            </svg>
+          </div>
+          <p class="step"><strong>b iii ·</strong> Planets look much more evenly spaced. There is still a clear gap between the inner group (Mercury–Mars) and the outer group (Jupiter–Neptune).</p>
+          <p class="final"><strong>Answer b:</strong> Log scale spreads the inner planets and compresses the outer ones into a clearer two-group picture.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">x=-1</span> or <span class="tex">\log_{1/5}2\approx -0.431</span></p>
+          <p class="step"><strong>c ·</strong> The gap between Mars and Jupiter is where the <strong>asteroid belt</strong> sits. A plausible reason for the two groups is that the inner rocky planets formed differently from the outer gas/ice giants (and that gap marks leftover debris).</p>
+          <p class="final"><strong>Answer c:</strong> Asteroid belt / different formation of inner vs outer planets (any sensible astronomy reason is fine).</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Domain fact:</strong> You cannot take <span class="tex">\log</span> of 0 (or a negative). As <span class="tex">x\to 0^+</span>, <span class="tex">\log x\to-\infty</span>.</p>
+          <p class="step"><strong>d ·</strong> The Sun is at AU = 0. A log scale would need to stretch to <span class="tex">-\infty</span> to include it — impossible on a finite number line.</p>
+          <p class="final"><strong>Answer d:</strong> Because <span class="tex">\log 0</span> is undefined (the log heads to <span class="tex">-\infty</span>).</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q16">
+      <h2>16 · Richter scale <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p>On the Richter scale, each increase of 1 means the quake is <strong>10 times</strong> more intense (base-10 log scale).</p>
+        <p>a By what factor is a magnitude-6.5 quake more intense than a magnitude-4 quake? (Nearest integer.)</p>
+        <p>b An earthquake measured 6. An aftershock had 25% of that magnitude. What did the aftershock measure? (1 d.p.)</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Intensity ratio = <span class="tex">10^{(\text{difference in Richter readings})}</span>.</p>
+          <p class="step"><strong>a ·</strong> Difference: <span class="tex">6.5-4=2.5</span>.</p>
+          <p class="step">Factor: <span class="tex">10^{2.5}=10^2\times 10^{0.5}=100\times\sqrt{10}\approx 100\times 3.162=316.2</span>.</p>
+          <p class="final"><strong>Answer a:</strong> about <strong>316</strong> times more intense.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same idea backwards:</strong> If intensity is multiplied by <span class="tex">k</span>, the Richter reading changes by <span class="tex">\log_{10} k</span>.</p>
+          <p class="step"><strong>b ·</strong> Aftershock intensity = 25% = 0.25 of the original.</p>
+          <p class="step">Change in reading: <span class="tex">\log_{10}(0.25)\approx -0.6021</span>.</p>
+          <p class="step">New reading: <span class="tex">6+(-0.6021)=5.3979\approx 5.4</span> (1 d.p.).</p>
+          <p class="final"><strong>Answer b:</strong> <strong>5.4</strong> on the Richter scale.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q17">
+      <h2>17 · Decibel (sound) scale <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p>0 dB = least audible sound. Each +10 dB means <strong>10 times</strong> louder (also base-10).</p>
+        <p>a A sound falls from 45 dB to 38 dB. What percentage of the original loudness remains? (Nearest whole percent.)</p>
+        <p>b A lawnmower is 80 dB. A concert peak is 500 times louder. How many decibels was that peak? (Nearest dB.)</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Loudness ratio = <span class="tex">10^{(\Delta\text{dB})/10}</span>. (Because +10 dB = ×10, so divide the dB change by 10 before raising 10 to that power.)</p>
+          <p class="step"><strong>a ·</strong> Drop: <span class="tex">38-45=-7</span> dB.</p>
+          <p class="step">Ratio of loudness: <span class="tex">10^{-7/10}=10^{-0.7}\approx 0.1995</span>.</p>
+          <p class="step">As a percentage: about <span class="tex">20\%</span> of the original loudness remains.</p>
+          <p class="final"><strong>Answer a:</strong> about <strong>20%</strong>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Extra dB = <span class="tex">10\log_{10}(\text{factor})</span>. Then add to the starting dB.</p>
+          <p class="step"><strong>b ·</strong> Factor = 500. Extra dB: <span class="tex">10\log_{10} 500=10\times\log_{10}(5\times 10^2)=10(2+\log_{10}5)\approx 10(2+0.6990)=26.99</span>.</p>
+          <p class="step">Peak: <span class="tex">80+26.99\approx 107</span> dB.</p>
+          <p class="final"><strong>Answer b:</strong> <strong>107</strong> dB.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q18">
+      <h2>18 · Substitution <span class="tex">u=a^x</span> <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p>Use a substitution of the form <span class="tex">u=a^x</span> to solve. Give each solution as a rational number, or approximate to 3 d.p.</p>
+        <p>a <span class="tex">2^{4x}-7\times 2^{2x}+12=0</span> · b <span class="tex">100^x-10^x-1=0</span></p>
+        <p>c <span class="tex">\left(\dfrac15\right)^{2x}-7\left(\dfrac15\right)^x+10=0</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Method:</strong> Notice <span class="tex">2^{4x}=(2^{2x})^2</span> and <span class="tex">2^{2x}=4^x</span>. Put <span class="tex">u=2^{2x}=4^x</span>.</p>
+          <p class="step"><strong>a ·</strong> Let <span class="tex">u=2^{2x}</span>. Then <span class="tex">u^2-7u+12=0</span> → <span class="tex">(u-3)(u-4)=0</span> → <span class="tex">u=3</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><span class="tex">4^x=4\Rightarrow x=1</span>. <span class="tex">4^x=3\Rightarrow x=\log_4 3=\dfrac{\ln 3}{\ln 4}\approx 0.792</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">x=1</span> or <span class="tex">x\approx 0.792</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">100^x=(10^2)^x=(10^x)^2</span>. Put <span class="tex">u=10^x</span> (always positive).</p>
+          <p class="step"><strong>b ·</strong> <span class="tex">u^2-u-1=0</span>. Quadratic formula: <span class="tex">u=\dfrac{1\pm\sqrt{5}}{2}</span>.</p>
+          <p class="step">Only the positive root works: <span class="tex">u=\dfrac{1+\sqrt5}{2}</span> (the other is negative).</p>
+          <p class="step"><span class="tex">10^x=\dfrac{1+\sqrt5}{2}\Rightarrow x=\log_{10}\!\left(\dfrac{1+\sqrt5}{2}\right)\approx 0.209</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">x\approx 0.209</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=\left(\dfrac15\right)^x</span>. Then use <span class="tex">\left(\dfrac15\right)^x=5^{-x}</span> if you need to simplify a solution.</p>
+          <p class="step"><strong>c ·</strong> <span class="tex">u^2-7u+10=0</span> → <span class="tex">(u-2)(u-5)=0</span> → <span class="tex">u=2</span> or <span class="tex">u=5</span>.</p>
+          <p class="step"><span class="tex">\left(\dfrac15\right)^x=5</span>: note <span class="tex">5=5^1=\left(\dfrac15\right)^{-1}</span>, so <span class="tex">x=-1</span>.</p>
+          <p class="step"><span class="tex">\left(\dfrac15\right)^x=2\Rightarrow x=\log_{1/5}2=\dfrac{\ln 2}{\ln(1/5)}\approx -0.431</span>.</p>
+          <p class="final"><strong>Answer c:</strong> <span class="tex">x=-1</span> or <span class="tex">x\approx -0.431</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q19">
-      <h2>19 · Sequence of transforms <span class="band ch">Challenge</span></h2>
-      <div class="stem"><p>Starting from <span class="tex">y=\ln x</span>, describe a sequence of transformations that produces <span class="tex">y=2\ln(x+3)-1</span>, and sketch the result.</p></div>
+      <h2>19 · Sequence of transforms of <span class="tex">\ln x</span> <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p>Starting from <span class="tex">y=\log_e x</span>:</p>
+        <p>a Use (and describe) a dilation to sketch <span class="tex">y=\log_e(2x)</span>.</p>
+        <p>b Then a translation to sketch <span class="tex">y=\log_e 2(x-1)</span>.</p>
+        <p>c Then a dilation to sketch <span class="tex">y=\dfrac12\log_e 2(x-1)</span>.</p>
+        <p>d Then a translation to sketch <span class="tex">y=\dfrac12\log_e 2(x-1)-2</span>.</p>
+      </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · sequence</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Reading order:</strong> Inside brackets first (horizontal), then vertical stretch, then vertical shift. Domain: argument of ln must be positive.</p>
-          <p class="step"><strong>Step 1 ·</strong> Shift left 3: <span class="tex">y=\ln(x+3)</span>. Domain becomes <span class="tex">x&gt;-3</span>; asymptote moves to <span class="tex">x=-3</span>.</p>
-          <p class="step"><strong>Step 2 ·</strong> Vertical stretch factor 2: <span class="tex">y=2\ln(x+3)</span>.</p>
-          <p class="step"><strong>Step 3 ·</strong> Shift down 1: <span class="tex">y=2\ln(x+3)-1</span>.</p>
-          <p class="step"><strong>Sketch tip:</strong> Mark the new asymptote <span class="tex">x=-3</span>, the intercept where <span class="tex">2\ln(x+3)-1=0</span> (solve if needed), and that the curve still rises slowly to the right.</p>
+          <p class="formula-quick"><strong>Horizontal dilation:</strong> Replacing <span class="tex">x</span> by <span class="tex">nx</span> is a horizontal stretch with factor <span class="tex">1/n</span> (toward the <span class="tex">y</span>-axis if <span class="tex">n&gt;1</span>).</p>
+          <p class="step"><strong>a ·</strong> From <span class="tex">y=\log_e x</span> to <span class="tex">y=\log_e(2x)</span>: horizontal dilation with factor <span class="tex">\tfrac12</span>.</p>
+          <p class="step">Asymptote stays <span class="tex">x=0</span>. The curve rises faster for small positive <span class="tex">x</span>.</p>
+          <div class="plot-frame"><svg id="q19a" class="plot" viewBox="0 0 720 260"></svg>
+            <div class="legend"><span class="p"><i></i>ln x</span><span class="i"><i></i>ln(2x)</span></div></div>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Horizontal translation:</strong> <span class="tex">y=f(x-h)</span> shifts the graph <strong>right</strong> by <span class="tex">h</span> when <span class="tex">h&gt;0</span>.</p>
+          <p class="step"><strong>b ·</strong> From <span class="tex">y=\log_e(2x)</span> to <span class="tex">y=\log_e\!\big(2(x-1)\big)</span>: shift <strong>right by 1</strong>.</p>
+          <p class="step">New asymptote: <span class="tex">x=1</span>. Domain: <span class="tex">x&gt;1</span>.</p>
+          <div class="plot-frame"><svg id="q19b" class="plot" viewBox="0 0 720 260"></svg>
+            <div class="legend"><span class="p"><i></i>ln(2x)</span><span class="i"><i></i>ln 2(x−1)</span></div></div>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Vertical dilation:</strong> <span class="tex">y=A\,f(x)</span> stretches vertically by factor <span class="tex">|A|</span>.</p>
+          <p class="step"><strong>c ·</strong> Multiply by <span class="tex">\tfrac12</span>: vertical stretch with factor <span class="tex">\tfrac12</span> (half as tall).</p>
+          <p class="step">Asymptote still <span class="tex">x=1</span>.</p>
+          <div class="plot-frame"><svg id="q19c" class="plot" viewBox="0 0 720 260"></svg>
+            <div class="legend"><span class="p"><i></i>ln 2(x−1)</span><span class="i"><i></i>½ ln 2(x−1)</span></div></div>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Vertical translation:</strong> Subtracting 2 shifts the graph <strong>down by 2</strong>.</p>
+          <p class="step"><strong>d ·</strong> Final equation: <span class="tex">y=\dfrac12\log_e\!\big(2(x-1)\big)-2</span>.</p>
+          <p class="step">Asymptote still <span class="tex">x=1</span>; whole curve sits 2 units lower.</p>
+          <div class="plot-frame"><svg id="q19d" class="plot" viewBox="0 0 720 260"></svg>
+            <div class="legend"><span class="p"><i></i>½ ln 2(x−1)</span><span class="i"><i></i>final −2</span></div></div>
         </div>
       </div>
     </article>
 
     <article class="q" id="q20">
       <h2>20 · Dilation or translation? <span class="band ch">Challenge</span></h2>
-      <div class="stem"><p>Explain two valid interpretations of <span class="tex">y=\ln(2x)</span>: as a horizontal dilation of <span class="tex">y=\ln x</span>, and as a vertical shift. Relate to <span class="tex">\ln(2x)=\ln x+\ln 2</span>.</p></div>
+      <div class="stem">
+        <p>a Interpret the change from <span class="tex">y=\log_e x</span> to <span class="tex">y=\log_e(5x)</span> <strong>as a dilation</strong>, then <strong>as a translation</strong>.</p>
+        <p>b Interpret the change from <span class="tex">y=\log_e x</span> to <span class="tex">y=\log_e x+2</span> <strong>as a translation</strong>, then <strong>as a dilation</strong> (hint: write 2 as <span class="tex">\log_e e^2</span>).</p>
+      </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-        <p class="step"><strong>Horizontal dilation:</strong> replace <span class="tex">x</span> by <span class="tex">2x</span>, so dilation factor <span class="tex">\tfrac12</span> toward the <span class="tex">y</span>-axis — the graph meets the axis at the same <span class="tex">y</span>-intercept but rises faster for <span class="tex">x&gt;0</span>.</p>
-        <p class="step"><strong>Vertical translation:</strong> log laws give <span class="tex">\ln(2x)=\ln x+\ln 2</span>, so the same graph is <span class="tex">y=\ln x</span> shifted up by <span class="tex">\ln 2</span>. Both descriptions are correct; they highlight the dual nature of log transforms.</p>
-
+          <p class="formula-quick"><strong>Two readings of the same graph:</strong> Product law <span class="tex">\log_e(5x)=\log_e x+\log_e 5</span> links a horizontal dilation to a vertical shift.</p>
+          <p class="step"><strong>a · As a dilation:</strong> Replace <span class="tex">x</span> by <span class="tex">5x</span> → horizontal stretch with factor <span class="tex">\tfrac15</span>.</p>
+          <p class="step"><strong>As a translation:</strong> <span class="tex">\log_e(5x)=\log_e x+\log_e 5</span>, so shift <span class="tex">y=\log_e x</span> <strong>up by</strong> <span class="tex">\log_e 5</span>.</p>
+          <p class="final"><strong>Answer a:</strong> Horizontal dilation factor <span class="tex">1/5</span>, <em>or</em> vertical shift up by <span class="tex">\log_e 5</span>.</p>
         </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same idea the other way:</strong> <span class="tex">2=\log_e(e^2)</span>, so <span class="tex">\log_e x+2=\log_e x+\log_e(e^2)=\log_e(e^2 x)</span>.</p>
+          <p class="step"><strong>b · As a translation:</strong> Shift <span class="tex">y=\log_e x</span> <strong>up by 2</strong>.</p>
+          <p class="step"><strong>As a dilation:</strong> Same graph is <span class="tex">y=\log_e(e^2 x)</span> → horizontal stretch with factor <span class="tex">e^{-2}</span> (because replace <span class="tex">x</span> by <span class="tex">e^2 x</span>).</p>
+          <p class="final"><strong>Answer b:</strong> Shift up 2, <em>or</em> horizontal dilation factor <span class="tex">e^{-2}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+</div>
       </div>
     </article>
 
@@ -669,6 +926,18 @@
       if(svg10){const P=new Plot(svg10,w10);P.clear();P.axes();P.asym(0);
         P.poly(sample(x=>x<0?Math.log(-x):NaN,w10),{stroke:"#0f766e",dash:"7 6",width:2.2});
         P.poly(sample(x=>x<0?Math.log(-2*x):NaN,w10),{stroke:"#1d4ed8",width:2.5});}
+      const w19={xmin:-1,xmax:5,ymin:-4,ymax:3};
+      function draw19(id, fnParent, fnNew, asymX){
+        const svg=document.getElementById(id); if(!svg) return;
+        const P=new Plot(svg,w19); P.clear(); P.axes();
+        if(asymX!=null) P.asym(asymX);
+        P.poly(sample(fnParent,w19),{stroke:"#0f766e",dash:"7 6",width:2.2});
+        P.poly(sample(fnNew,w19),{stroke:"#1d4ed8",width:2.5});
+      }
+      draw19("q19a", x=>x>0?Math.log(x):NaN, x=>x>0?Math.log(2*x):NaN, 0);
+      draw19("q19b", x=>x>0?Math.log(2*x):NaN, x=>x>1?Math.log(2*(x-1)):NaN, 1);
+      draw19("q19c", x=>x>1?Math.log(2*(x-1)):NaN, x=>x>1?0.5*Math.log(2*(x-1)):NaN, 1);
+      draw19("q19d", x=>x>1?0.5*Math.log(2*(x-1)):NaN, x=>x>1?0.5*Math.log(2*(x-1))-2:NaN, 1);
     }
     window.addEventListener("load",function(){try{typeset();draw();}catch(e){console.error(e);}bind();});
   })();
