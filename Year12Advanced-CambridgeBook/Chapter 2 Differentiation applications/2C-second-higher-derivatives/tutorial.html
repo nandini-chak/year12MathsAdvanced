@@ -23,16 +23,33 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>2C · Second and higher derivatives</h1>
-    <p>Paraphrased from Cambridge Chapter 2 §2C. Not a PDF reprint.</p>
+    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
       <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-2-Worked-Solutions.pdf.</div>
     </details>
-    <section class="card">
-      <h2 class="section-h">Theory and ideas</h2>
-      <p>2C Second and higher derivatives 67 2C Second and higher derivatives Learning intentions • Review second and higher derivatives. The derivative of the derivative of a function is called the second derivative of the function. There are various notations, including: d2y dx2 and f ′′(x) and f (2)(x) and y′′ and y(2). This short section reviews higher derivatives from Section 9D of the Year 11 book in preparation for the geometric use of the second derivative in the next section. Example 10 Finding second and higher derivatives of a function Find the successive derivatives of y = x4 + x3 + x2 + x + 1. Solution y = x4 + x3 + x2 + x + 1 d2y dx2 = 12x2 + 6x + 2 d4y dx4 = 24 dy dx = 4x3 + 3x2 + 2x + 1 d3y dx3 = 24x + 6 d5y dx5 = 0 Because the fifth derivative is zero, all the higher derivatives are also zero. See the last question in</p>
+    
+    <section class="card" id="theory">
+      <h2 class="section-h">Theory · key ideas</h2>
+      <p class="lede">Differentiate again to get higher derivatives.</p>
+      <ul>
+        <li><span class="tex">f''(x)</span> = derivative of <span class="tex">f'(x)</span> (how the slope changes).</li>
+        <li>Notations: <span class="tex">\dfrac{d^2y}{dx^2}</span>, <span class="tex">y''</span>, <span class="tex">f''(x)</span>.</li>
+        <li>Keep going for <span class="tex">f'''</span>, <span class="tex">f^{(4)}</span>, …</li>
+        <li>Next: use <span class="tex">f''</span> for concavity (§2D).</li>
+      </ul>
+      <div class="formula"><span class="tex">\dfrac{d^2y}{dx^2}=f''(x)</span></div>
+      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
     </section>
+    <section class="card" id="mini">
+      <h2 class="section-h">Worked mini-examples</h2>
+      <div class="worked">
+        <h3>Example · compute <span class="tex">f''</span></h3>
+        <p class="step"><strong>Step 1 ·</strong> If <span class="tex">f(x)=x^3-6x^2</span>, then <span class="tex">f'(x)=3x^2-12x</span>, <span class="tex">f''(x)=6x-12</span>.</p>
+      </div>
+    </section>
+
     <p><a class="btn" href="problems.html">Exercise 2C →</a>
        <a class="btn ghost" href="concept.html">← Concept</a></p>
     <footer class="site">Next: Exercise 2C, then section 2D.</footer>

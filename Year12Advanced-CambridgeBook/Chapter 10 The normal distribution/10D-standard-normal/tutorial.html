@@ -23,19 +23,33 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>10D · The standard normal distribution</h1>
-    <p>Paraphrased from Cambridge Chapter 10 §10D. Not a PDF reprint.</p>
+    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
       <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-10-Worked-Solutions.pdf.</div>
     </details>
-    <section class="card">
-      <h2 class="section-h">Theory and ideas</h2>
-      <p>478 Chapter 10 Continuous probability distributions 10D 10D The standard normal distribution Learning intentions • Understand and sketch the standard normal PDF φ(z), with its inflections. • Understand and sketch the CDF Φ(z) of the standard normal. • Use both these functions to find and approximate probabilities. • Understand the link between standard deviation and inflections. • Understand and use the empirical rule. • Calculate and work with quartiles. Gauss and the early statisticians realised that one particular class of distributions — the Gaussian or normal distribution and its translations and dilations — is particularly important. Normal distributions occur in a wide variety of situations, and for reasons that are explained in an Extension 1 topic, they are involved in the sampling of every distribution, continuous or discrete. Their graphs are generally referred to as bell-shaped curves, and every normal distribution can be obtained from every other normal distribution by shifting and stretching. We saw the shape of such a curve emerging when 20 coins were tossed at the end of Section 10A. The graph of the standard normal distribution is sketched to the right. The equation of its probability density function is: φ(z) = e−1 2 z2 √ 2π (the Greek letter φ is phi, corresponding to Latin f) . ( )z     z</p>
-<p>  It is standard practice to use Z rather than X for the standard normal random variable, and z rather than x for its values, so that the PDF is φ(z). Sketching the curve We already have all the tools for sketching this function from its equation. The first step is to stop looking at the complicated denominator √ 2π, which is just a constant. Use your calculator to find that 1 √ 2π ≑0.4, and start thinking of the formula as φ(z) ≑2 5 e−1 2 z2, which looks much more friendly. • The y-intercept is φ(0) = 1 √ 2π ≑0.4, because e0 = 1. • When z is non-zero, the index −1 2z2 is negative, so e−1 2 z2 &lt; e0 = 1. Hence the value at z = 0 is a global maximum, and the mode is therefore z = 0. • The function is defined for all values of z, and is positive for all values of z. • The function is even, with line symmetry in the y-axis, because replacing z by −z leaves the equation unchanged. • As z →∞, and as z →−∞, the index −1 2z2 quickly becomes a large negative number, so e−1 2 z2 quickly becomes an extremely small positive number. Thus the z-axis is therefore a horizontal asymptote in both directions. • There are points of inflection at z = −1 and z = 1 — both these inflections have y-coordinate e−1 2 √ 2π ≑0.24. We have left the difficult derivation of these inflections to the first of two Challenge paragraphs at the end of this section.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>10D The standard normal distribution 479 Why is φ(z) a probability density function? We have now established that φ(z) has the graph shown above, but why is it a probability density function? Certainly we can see that it is always positive. But we also need to establish that: ∫∞ −∞φ(z) dz = 1. Unfortunately, this integral cannot be established using the techniques in this course. This fact is one of a small number of things that readers will have to accept for now, and perhaps prove in later years. Making the total area under the curve have the value 1 is the reason why the denominator √ 2π has been put there, and proving the result requires a proof that ∫∞ −∞e−1 2 z2 dz = √ 2π ≑2.5. The best that can be done is to confirm this result by trapezoidal rule approximations along the lines of Question 19 of</p>
+    
+    <section class="card" id="theory">
+      <h2 class="section-h">Theory · key ideas</h2>
+      <p class="lede">Standard normal: bell curve with mean 0 and SD 1.</p>
+      <ul>
+        <li>PDF <span class="tex">\phi(z)</span>; CDF <span class="tex">\Phi(z)</span> = area to the left.</li>
+        <li>Empirical rule ≈ 68% / 95% / 99.7% within 1 / 2 / 3 SDs.</li>
+        <li>Use tables or calculator for probabilities.</li>
+        <li>Inflections near <span class="tex">z=\pm 1</span>.</li>
+      </ul>
+      <div class="formula"><span class="tex">Z\sim N(0,1)</span></div>
+      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
     </section>
+    <section class="card" id="mini">
+      <h2 class="section-h">Worked mini-examples</h2>
+      <div class="worked">
+        <h3>Example · left-tail</h3>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">P(Z\le 1)\approx 0.84</span> (about 84%).</p>
+      </div>
+    </section>
+
     <p><a class="btn" href="problems.html">Exercise 10D →</a>
        <a class="btn ghost" href="concept.html">← Concept</a></p>
     <footer class="site">Next: Exercise 10D, then section 10E.</footer>

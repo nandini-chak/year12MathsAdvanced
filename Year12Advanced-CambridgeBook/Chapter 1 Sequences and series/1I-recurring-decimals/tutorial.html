@@ -23,18 +23,34 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>1I · Recurring decimals and geometric series</h1>
-    <p>Paraphrased from Cambridge Chapter 1 §1I. Not a PDF reprint.</p>
+    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
       <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-1-Worked-Solutions.pdf.</div>
     </details>
-    <section class="card">
-      <h2 class="section-h">Theory and ideas</h2>
-      <p>48 Chapter 1 Sequences and series 1I 1I Recurring decimals and geometric series Learning intentions • Interpret a recurring decimal as a GP with a limiting sum. • Hence convert a recurring decimal to a fraction. Every rational number can be written as a fraction, so can be written as terminating or recurring decimal — use long division if necessary. Conversely, every recurring decimal can be written as a fraction, but this procedure has not been so straightforward. Now, however, we can express a recurring decimal as an infinite GP — its value is the limiting sum of that GP, which is easily expressed as a fraction. Example 35 Interpret a recurring decimal as a GP with limiting sum Express these recurring decimals as infinite GPs. Then use the formula for the limiting sum to find their values as fractions reduced to lowest terms. 0.˙2˙7 a 2.6˙4˙5 b Solution Expanding the decimal, 0.˙2˙7 = 0.272727 . . . = 0.27 + 0.0027 + 0.000027 + · · · This is an infinite GP with first term a = 0.27 and ratio r = 0.01. Hence 0.˙2˙7 = a 1 −r = 0.27 0.99 = 27 99 = 3 11 . This example is a little more complicated, because the first part is not recurring. Expanding the decimal, 2.6˙4˙5 = 2.645454545 . . . = 2.6 + (0.045 + 0.00045 + · · · ) This is 2.6 plus an infinite GP with first term a = 0.045 and ratio r = 0.01. Hence 2.6˙4˙5 = 2.6 + 0.045 0.99 = 26 10 + 45 990 = 286 110 + 5 110 = 291 110 . 17 Expressing a recurring decimal as a fraction • To convert a recurring decimal as a fraction, write the recurring part as a GP. • The ratio will be between 0 and 1, so the series will have an infinite sum.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>1I Recurring decimals and geometric series 49</p>
+    
+    <section class="card" id="theory">
+      <h2 class="section-h">Theory · key ideas</h2>
+      <p class="lede">A recurring decimal is an infinite GP — convert it to a fraction with the limiting-sum formula.</p>
+      <ul>
+        <li>Write the repeating part as a GP of place values.</li>
+        <li>Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> with <span class="tex">|r|&lt;1</span>.</li>
+        <li>Simplify to a fraction in lowest terms.</li>
+        <li>Every recurring decimal is rational.</li>
+      </ul>
+      <div class="formula"><span class="tex">0.\dot{d}=\dfrac{d}{9},\;0.\dot{d_1d_2}=\dfrac{d_1d_2}{99},\;\ldots</span></div>
+      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
     </section>
+    <section class="card" id="mini">
+      <h2 class="section-h">Worked mini-examples</h2>
+      <div class="worked">
+        <h3>Example · <span class="tex">0.\dot3</span></h3>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.333\ldots=\dfrac{3}{10}+\dfrac{3}{100}+\dfrac{3}{1000}+\cdots</span> with <span class="tex">a=\tfrac3{10}</span>, <span class="tex">r=\tfrac1{10}</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{3/10}{1-1/10}=\dfrac13</span>.</p>
+      </div>
+    </section>
+
     <p><a class="btn" href="problems.html">Exercise 1I →</a>
        <a class="btn ghost" href="concept.html">← Concept</a></p>
     <footer class="site">Next: Exercise 1I, then section 2A.</footer>

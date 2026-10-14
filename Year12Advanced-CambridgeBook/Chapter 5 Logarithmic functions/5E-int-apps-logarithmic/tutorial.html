@@ -23,18 +23,32 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>5E · Applications of integration (logarithmic)</h1>
-    <p>Paraphrased from Cambridge Chapter 5 §5E. Not a PDF reprint.</p>
+    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
       <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-5-Worked-Solutions.pdf.</div>
     </details>
-    <section class="card">
-      <h2 class="section-h">Theory and ideas</h2>
-      <p>240 Chapter 5 Logarithmic functions 5E 5E Applications of integration Learning intentions • Use integration to find areas associated with hyperbolic graphs. The usual applications of integration can now be applied to the reciprocal function, whose primitive was previously unavailable. Finding areas by integration The next worked example involves sketching a hyperbolic curve and finding an area associated with it. Example 21 Find an area associated with a hyperbolic curve a Find the x-intercept and y-intercept of y = 12 x + 3 −2 . b Sketch the curve for x &gt; −3 using transformations of y = 1 x, and write down its asymptotes. c Shade the region contained between the curve and the x-axis, and between the y-axis and the line x = 6. d Find the shaded area, in exact form, and then correct to four decimal places. Solution a When x = 0, y = 2, and when y = 0, x = 3. b Shift y = 1 x left 3, then dilate vertically with factor 12, then shift down 2. Now x = −3 is a vertical asymptote, and y = −2 is a horizontal asymptote. c The asymptote is x = −3, so the areas are all to the right of the asymptote, and there is no need for absolute value signs.      x y ∫3 0 12 x + 3 −2 ! dx = 12 loge(x + 3) −2x3 0 = (12 loge 6 −6) −(12 loge 3 −0) = 12 loge 3 + 12 loge 2 −6 −12 loge 3 = 12 loge 2 −6, which is positive, as expected. ∫6 3 12 x + 3 −2 ! dx = 12 loge(x + 3) −2x6 3 = (12 loge 9 −12) −(12 loge 6 −6) = 24 loge 3 −12 −12 loge 3 −12 loge 2 + 6 = 12 loge 3 −12 loge 2 −6, which is negative, as expected. Hence total area = (12 loge 2 −6) −(12 loge 3 −12 loge 2 −6) = 24 loge 2 −12 loge 3 (or 12 loge 4 3) ≑3.4522.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>5E Applications of integration 241</p>
+    
+    <section class="card" id="theory">
+      <h2 class="section-h">Theory · key ideas</h2>
+      <p class="lede">Areas and models whose integrals produce logs.</p>
+      <ul>
+        <li>Set up → integrate → interpret.</li>
+        <li>Watch domains where logs exist.</li>
+        <li>Use absolute value in indefinite answers when needed.</li>
+        <li>Sketch helps with limits and signs.</li>
+      </ul>
+      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
     </section>
+    <section class="card" id="mini">
+      <h2 class="section-h">Worked mini-examples</h2>
+      <div class="worked">
+        <h3>Example · definite log</h3>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">\displaystyle\int_1^e \dfrac1x\,dx=[\ln x]_1^e=1-0=1</span>.</p>
+      </div>
+    </section>
+
     <p><a class="btn" href="problems.html">Exercise 5E →</a>
        <a class="btn ghost" href="concept.html">← Concept</a></p>
     <footer class="site">Next: Exercise 5E, then section 6D.</footer>
