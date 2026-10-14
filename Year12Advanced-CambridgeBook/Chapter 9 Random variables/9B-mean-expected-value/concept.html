@@ -27,9 +27,16 @@
   </header>
   <div class="wrap">
     <section class="card" id="idea">
-      <h2 class="section-h">What this section is about</h2>
-      <p>• Calculate the mean, or expected value, of a discrete probability distribution. • Relate this to the mean of a dataset of trials of the experiment. • Understand the effects on the mean of translations and dilations of the data. When dealing with data, statistics is always asking two questions, ‘Where is the centre of the dataset? ’ and ‘How spread out is it? ’ Probability distributions throw up the same two questions, which this chapter answers for discrete distributions. This section introduces the mean, or expected value, as a measure of central tendency, and the next section will introduce the variance — standard deviation squared — as a measure of spread. The mean of a dataset, written using relative frequencies The first experiment in the previous section was, ‘Toss four coins and count the number of heads’, and the dataset below was obtained after 1000 trials. Number x of heads 0 1 2 3 4 Sum Frequency 66 226 395 260 53 1000 Relative frequency 0.066 0.226 0.395 0.260 0.053 1 To find the mean x of this set, we can do better than the usual method of ‘adding up the scores and dividing by the number of scores’. Juggling the arithmetic, and using the non-standard symbol fr(x) for the relative frequency of x, the mean is: x = 0 × 66 + 1 × 226 + 2 × 395 + 3 × 260 + 4 × 53 1000 = 0 × 66 1000 + 1 × 226 1000 + 2 × 395 1000 + 3 × 260 1000 + 4 × 53 1000 = 0 × fr(0) + 1 × fr(1) + 2 × fr(2) + 3 × fr(3) + 4 × fr(4) This object is called weighted mean — the five scores are each multiplied, or weighted, by their relative frequencies, and then the products are added up. Notice that the relative frequencies always add to exactly 1. Generalising this gives a far more elegant formula for the mean of a dataset as the weighted mean of the scores — weighted according to their relative frequencies: x = X (score) × (relative frequency), summing over all scores in the dataset. In symbols, still using sigma notation, the result is very concise: x = X x fr(x) . Sigma notation was introduc</p>
-    </section>
+            <h2 class="section-h">What this section is about</h2>
+      <p class="lede">The mean (expected value) is a long-run average of the random variable.</p>
+      <ul>
+        <li><strong>Formula:</strong> <span class="tex">E(X)=\sum x\,P(x)</span> (discrete).</li>
+        <li><strong>Picture it:</strong> weight each value by how likely it is.</li>
+        <li><strong>Properties:</strong> <span class="tex">E(aX+b)=aE(X)+b</span>.</li>
+        <li><strong>We practise:</strong> build the table, then compute the mean carefully.</li>
+      </ul>
+      <p>Full detail and examples live in the <a href="tutorial.html">Tutorial · theory</a> — this page only sets the scene.</p>
+</section>
         <section class="notes" id="prior">
       <h2>Prior knowledge — quick notes</h2>
       <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>

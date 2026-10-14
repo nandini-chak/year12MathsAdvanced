@@ -27,9 +27,16 @@
   </header>
   <div class="wrap">
     <section class="card" id="idea">
-      <h2 class="section-h">What this section is about</h2>
-      <p>• Develop a condition for a GP to have a limiting sum, and develop its formula. There is a sad story of a perishing frog, dying of thirst only 8 metres from the edge of a waterhole. He first jumps 4 metres towards it, his second jump is 2 metres, then each successive jump is half the previous jump. Does the frog perish? The jumps form a GP, whose terms an and sums Sn are as follows: an 4 2 1 1 2 1 4 1 8 1 16 · · · Sn 4 6 7 7 1 2 7 3 4 7 7 8 7 15 16 · · · The successive jumps 4, 2, 1, 1 2, 1 4, ... have limit zero, because they are halving each time. It seems too that the successive sums Sn have limit 8, meaning that the frog’s total distance gets ‘as close as we like’ to 8 metres. So provided that the frog can stick his tongue out even the merest fraction of a millimetre, eventually he will get some water to drink and be saved. The limiting sum of a GP We can describe all this more precisely by looking at the sum Sn of the first n terms and examining what happens as n →∞. The series 4 + 2 + 1 + 1 2 + · · · is a GP with a = 4 and r = 1 2. Using the formula for the sum to n terms of the series: Sn = a(1 −rn) 1 −r (using this formula because r &lt; 1) = 4  1 −( 1 2)n 1 −1 2 = 4 ×  1 −( 1 2)n ÷ 1 2 = 8  1 −( 1 2)n . As n increases, the term ( 1 2)n gets closer and closer to zero: ( 1 2)2 = 1 4, ( 1 2)3 = 1 8, ( 1 2)4 = 1 16, ( 1 2)5 = 1 32, ( 1 2)6 = 1 64, . . . so that ( 1 2)n has limit zero as n →∞. Hence Sn does indeed have limit 8(1 −0) = 8, as the table of values suggested. There are several different common notations and words for this situation: 15 Notations for the limiting sum Take as an example the series 4 + 2 + 1 + 1 2 + · · · . • Sn →8 as n →∞. (‘Sn has limit 8 as n increases without bound.’) • limn→∞Sn = 8. (‘The limit of Sn, as n increases without bound, is 8.’) • The series 4 + 2 + 1 + 1 2 + · · · has limiting sum S∞= 8. • The series 4 + 2 + 1 + 1 2 + · · · converges to the limit S∞= 8. • 4 + 2 + 1 + 1 2 + · · · = 8. The usual symbol for the limiting</p>
-    </section>
+            <h2 class="section-h">What this section is about</h2>
+      <p class="lede">Some infinite GPs have a <strong>limiting sum</strong> — the totals get as close as we like to a fixed number.</p>
+      <ul>
+        <li><strong>Picture it:</strong> frog jumps <span class="tex">4,2,1,\tfrac12,\ldots</span> metres — totals approach 8 (water!).</li>
+        <li><strong>Condition:</strong> need <span class="tex">|r|&lt;1</span> so later terms shrink toward 0.</li>
+        <li><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</li>
+        <li><strong>If</strong> <span class="tex">|r|\ge 1</span>: no finite limiting sum (terms do not die away).</li>
+      </ul>
+      <p>Full detail and examples live in the <a href="tutorial.html">Tutorial · theory</a> — this page only sets the scene.</p>
+</section>
         <section class="notes" id="prior">
       <h2>Prior knowledge — quick notes</h2>
       <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>

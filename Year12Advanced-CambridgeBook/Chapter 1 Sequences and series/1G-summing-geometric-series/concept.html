@@ -27,11 +27,16 @@
   </header>
   <div class="wrap">
     <section class="card" id="idea">
-      <h2 class="section-h">What this section is about</h2>
-      <p>• Develop formulae for the partial sums of a GP, and use them in problems. There is also a simple formula for finding the sum of the first n terms of a GP. The approach, however, is quite different from the approach used for APs. Adding up the terms of a GP This method is easier to understand with a general GP. Let us find the sum Sn of the first n terms of the GP a + ar + ar2 + · · · Writing out the sum, Sn = a + ar + ar2 + · · · + arn−2 + arn−1. (1) Multiplying both sides by r, rSn = ar + ar2 + ar3 + · · · + arn−1 + arn. (2) Subtracting (1) from (2), (r −1)Sn = arn −a, because the other terms cancel out. Then provided that r , 1, Sn = a(rn −1) r −1 . If r &lt; 1, there is a more convenient form. Taking opposites of top and bottom: Sn = a(1 −rn) 1 −r . A note on the proof: The method used here is a special case of an important and far more general identity that generalises the difference of squares: xn −1 = (x −1)(xn−1 + xn−2 + · · · + x2 + x + 1) . See Question 13 in the following exercise for the proof and some applications. Method for summing a GP Thus again there are two forms to remember: 14 Two formulae for summing a GP Suppose that the first term a, the ratio r, and the number n of terms are known. • When r &gt; 1, use the formula Sn = a(rn −1) r −1 . • When r &lt; 1, use the formula Sn = a(1 −rn) 1 −r . And when r = 1, all the terms are equal, so Sn = an.</p>
-<p>© Pender et al. 2026 Cambridge University Press &amp; Assessment</p>
-<p>1G Summing a geometric series 39</p>
-    </section>
+            <h2 class="section-h">What this section is about</h2>
+      <p class="lede">Add the first <span class="tex">n</span> terms of a GP (different method from APs).</p>
+      <ul>
+        <li><strong>Method:</strong> write <span class="tex">S_n</span>, multiply by <span class="tex">r</span>, subtract — most terms cancel.</li>
+        <li><strong>Formula:</strong> <span class="tex">S_n=a\dfrac{r^n-1}{r-1}</span> when <span class="tex">r\neq 1</span>.</li>
+        <li><strong>If</strong> <span class="tex">|r|&lt;1</span>, often use <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span> (same idea, tidier).</li>
+        <li><strong>Special case:</strong> if <span class="tex">r=1</span>, every term is <span class="tex">a</span> so <span class="tex">S_n=na</span>.</li>
+      </ul>
+      <p>Full detail and examples live in the <a href="tutorial.html">Tutorial · theory</a> — this page only sets the scene.</p>
+</section>
         <section class="notes" id="prior">
       <h2>Prior knowledge — quick notes</h2>
       <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>

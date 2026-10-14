@@ -27,9 +27,16 @@
   </header>
   <div class="wrap">
     <section class="card" id="idea">
-      <h2 class="section-h">What this section is about</h2>
-      <p>• Define and use the cumulative density function (CDF) of a continuous distribution. • Differentiate to find the probability density functions (PDF), and characterise it. • Develop a formal definition of a continuous random distribution. • Integrate a PDF to find the CDF. • Extend these ideas to continuous distributions with unbounded domains. In a continuous probability distribution, the domain of the values is typically from a closed interval on the number line, such as [0, 6]. There are thus infinitely many values, which cannot be listed. We want any particular value to have probability zero, and we want to talk instead about a probability such as P (2 ≤X ≤5), which is the probability that the value lies in the subinterval [2, 5] of [0, 6]. We will formally define a continuous random variable in Box 6 of this section. A cumulative distribution function, or CDF A point-chook is wandering randomly around Farmer Brown’s circular enclosure of radius 6 metres. It is just as likely to be in any one place as any other. She wants to know how far the chook could be right now from the water at the centre O of the circle. There are infinitely many distances from the centre within the enclosure. The probability that the chook is say exactly 2 metres from the centre is zero. Thus the tabular methods used with discrete probability distributions are useless here. We can, however, approach the situation using cumulative frequency. Let F(x) be the probability that when Farmer Brown looks out, the chook is no more than x metres from the centre: F(x) = area of inner circle area of whole circle = πx2 π × 62 = 1 36 x2 , where 0 ≤x ≤6. This function is a cumulative distribution function or CDF. It is continuous on 0 ≤x ≤6, and increases from F(0) = 0 on the left to F(6) = 1 on the right — any cumulative function is always non-decreasing. It can also be used to solve many more problems. For example, we can find the probability that the chook is between 2 metres and 5 metres from the ce</p>
-    </section>
+            <h2 class="section-h">What this section is about</h2>
+      <p class="lede">Continuous random variables use areas under a density curve — not probabilities at single points.</p>
+      <ul>
+        <li><strong>PDF</strong> <span class="tex">f(x)</span>: curve whose area = probability.</li>
+        <li><strong>CDF</strong> <span class="tex">F(x)=P(X\le x)</span>: running total from the left.</li>
+        <li><strong>Link:</strong> <span class="tex">F'=f</span> (where smooth); integrate PDF to get CDF/probabilities.</li>
+        <li><strong>Single point:</strong> <span class="tex">P(X=a)=0</span> for a continuous variable.</li>
+      </ul>
+      <p>Full detail and examples live in the <a href="tutorial.html">Tutorial · theory</a> — this page only sets the scene.</p>
+</section>
         <section class="notes" id="prior">
       <h2>Prior knowledge — quick notes</h2>
       <p class="prior-lead">Keep these in mind. For full teaching detail, open the <a href="tutorial.html">Tutorial</a> (or the earlier section where you first met the idea).</p>
