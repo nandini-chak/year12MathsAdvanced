@@ -30,160 +30,299 @@
     </div>
     <details class="teacher-note no-print">
       <summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems rephrased from Cambridge Exercise 5A; solutions follow <em>Chapter-5-Worked-Solutions.pdf</em>. Worked solutions use elaborative low-floor steps and formula quick-facts. Keep any redrawn SVG sketches below the written working. Q15: the Sun is excluded on a log-size plot because <span class=\"tex\">\ln x\to-\infty</span> as <span class=\"tex\">x\to 0^+</span>.</div>
+      <div class="body">Stems aligned to Cambridge Exercise 5A; numerical answers follow <em>Chapter-5-Worked-Solutions.pdf</em>. Q1–6 rewritten with low-floor step-by-step reasoning and formula callouts. Each part has its own Show/Hide button. Sketch questions keep redrawn SVG models inside the relevant part.</div>
     </details>
 
     <article class="q" id="q1">
-      <h2>1 · Decimal logarithms <span class="band">Foundation</span></h2>
-      <div class="stem"><p>Evaluate, correct to 3 d.p.</p>
-        <p>a <span class="tex">\ln 10</span> · b <span class="tex">\ln 0.1</span> · c <span class="tex">\ln 10^5</span> · d <span class="tex">\ln 10^{-5}</span> · e <span class="tex">\ln 50</span> · f <span class="tex">\ln 0.02</span></p></div>
+      <h2>1 · Calculator ln values <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p>Use the calculator’s <strong>ln</strong> button to approximate, correct to <strong>four significant figures</strong>. (Remember: <span class="tex">\ln</span> means <span class="tex">\log_e</span>.)</p>
+        <p>a <span class="tex">\log_e 10</span> · b <span class="tex">\log_e 0.1</span> · c <span class="tex">\ln 123\,456</span> · d <span class="tex">\ln 0.000\,006</span> · e <span class="tex">\log_e 50</span> · f <span class="tex">\log_e 0.02</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">\approx 2.303</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> On the calculator, <strong>ln</strong> means <span class="tex">\log_e</span> (natural log). <strong>log</strong> usually means base 10. Four significant figures means four non-zero leading digits of accuracy (e.g. 2.303 has four sig figs).</p>
+          <p class="step"><strong>a ·</strong> Press <span class="tex">\ln</span> then 10. Display ≈ <span class="tex">2.302585\ldots</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">2.303</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">\approx -2.303</span></p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">\log_e\!\left(\dfrac{1}{a}\right)=-\log_e a</span> when <span class="tex">a&gt;0</span>.</p>
+          <p class="step"><strong>b · Same method ·</strong> Notice <span class="tex">0.1=\dfrac{1}{10}</span>, so <span class="tex">\log_e 0.1=-\log_e 10</span>.</p>
+          <p class="step">From (a), <span class="tex">\log_e 10\approx 2.303</span>, so <span class="tex">\log_e 0.1\approx -2.303</span>.</p>
+          <p class="step">Calculator check: <span class="tex">\ln 0.1\approx -2.302585</span> → rounds to <span class="tex">-2.303</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">-2.303</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">\approx 11.72</span></p>
+          <p class="formula-quick"><strong>Method:</strong> Same calculator button. Type the full number carefully (no spaces): 123456.</p>
+          <p class="step"><strong>c · Same method ·</strong> Enter <span class="tex">\ln 123456</span>. Display ≈ <span class="tex">11.72365\ldots</span>.</p>
+          <p class="final"><strong>Answer c:</strong> <span class="tex">11.72</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> <span class="tex">\approx -12.02</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> A number smaller than 1 gives a <strong>negative</strong> natural log. 0.000006 can be typed as <span class="tex">6\times 10^{-6}</span>.</p>
+          <p class="step"><strong>d · Same method ·</strong> Enter <span class="tex">\ln 0.000006</span> (or <span class="tex">\ln(6\times 10^{-6})</span>). Display ≈ <span class="tex">-12.02375\ldots</span>.</p>
+          <p class="final"><strong>Answer d:</strong> <span class="tex">-12.02</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> <span class="tex">\approx 3.912</span></p>
+          <p class="formula-quick"><strong>Method:</strong> Calculator <span class="tex">\ln</span> button. Optional check with product law: <span class="tex">\log_e(ab)=\log_e a+\log_e b</span>.</p>
+          <p class="step"><strong>e · Same method ·</strong> Enter <span class="tex">\ln 50</span>. Display ≈ <span class="tex">3.912023\ldots</span>.</p>
+          <p class="step">Optional: <span class="tex">50=5\times 10</span> → <span class="tex">\ln 50=\ln 5+\ln 10</span>.</p>
+          <p class="final"><strong>Answer e:</strong> <span class="tex">3.912</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> <span class="tex">\approx -3.912</span></p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">\log_e\!\left(\dfrac{1}{a}\right)=-\log_e a</span>.</p>
+          <p class="step"><strong>f · Same method ·</strong> <span class="tex">0.02=\dfrac{1}{50}</span>, so <span class="tex">\log_e 0.02=-\log_e 50\approx -3.912</span>.</p>
+          <p class="final"><strong>Answer f:</strong> <span class="tex">-3.912</span> (4 s.f.).</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q2">
-      <h2>2 · Exact log values <span class="band">Foundation</span></h2>
-      <div class="stem"><p>Evaluate exactly.</p>
-        <p>a <span class="tex">\ln e^3</span> · b <span class="tex">\ln e^{-1}</span> · c <span class="tex">\ln e^{-2}</span> · d <span class="tex">\ln\sqrt{e}</span> · e <span class="tex">\ln 5+\ln e^2</span> · f <span class="tex">\ln 2+\ln 5-\ln 40</span> · g <span class="tex">e^{\ln 1}</span> · h <span class="tex">e^{2\ln e}</span></p></div>
+      <h2>2 · Exact values with identities <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p>Use the identities <span class="tex">\log_e(e^x)=x</span> (all real <span class="tex">x</span>) and <span class="tex">e^{\log_e x}=x</span> (<span class="tex">x&gt;0</span>) to simplify:</p>
+        <p>a <span class="tex">\log_e e^3</span> · b <span class="tex">\log_e e^{-1}</span> · c <span class="tex">\log_e\!\left(\dfrac{1}{e^2}\right)</span> · d <span class="tex">\log_e\sqrt{e}</span></p>
+        <p>e <span class="tex">e^{\ln 5}</span> · f <span class="tex">e^{\ln 0.05}</span> · g <span class="tex">e^{\ln 1}</span> · h <span class="tex">e^{\ln e}</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> 3 · b <span class="tex">-1</span> · c <span class="tex">-2</span> · d <span class="tex">\tfrac12</span> · e 5 · f 0.05 · g 1 · h <span class="tex">e</span></p>
-        </div>
-      </div>
-    </article>
-
-    <article class="q" id="q3">
-      <h2>3 · Special values <span class="band">Foundation</span></h2>
-      <div class="stem"><p>Show that <span class="tex">\ln 1=0</span> and <span class="tex">\ln e=1</span> using logarithm and exponential identities.</p></div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-        <p class="step"><span class="tex">e^0=1</span>, so by definition <span class="tex">\ln 1=0</span>. Also <span class="tex">e^1=e</span>, so <span class="tex">\ln e=1</span>. Alternatively <span class="tex">e^{\ln e}=e</span> and <span class="tex">\log_e(e^x)=x</span> with <span class="tex">x=1</span>.</p>
-
-        </div>
-      </div>
-    </article>
-
-    <article class="q" id="q4">
-      <h2>4 · Solve for x <span class="band">Foundation</span></h2>
-      <div class="stem"><p>a <span class="tex">\ln x=6</span> · b <span class="tex">\ln x=-2</span> · c <span class="tex">e^x=24</span> · d <span class="tex">e^x=\tfrac13</span></p></div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">x=e^6</span></p>
+          <p class="formula-quick"><strong>Identity:</strong> <span class="tex">\log_e(e^k)=k</span>. The log and the exponential cancel; leave the power.</p>
+          <p class="step"><strong>a ·</strong> <span class="tex">\log_e(e^3)=3</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">3</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">x=e^{-2}</span></p>
+          <p class="formula-quick"><strong>Same identity:</strong> <span class="tex">\log_e(e^k)=k</span>.</p>
+          <p class="step"><strong>b · Same method ·</strong> <span class="tex">k=-1</span>, so <span class="tex">\log_e(e^{-1})=-1</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">-1</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">x=\ln 24</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">\dfrac{1}{e^2}=e^{-2}</span>, then use <span class="tex">\log_e(e^k)=k</span>.</p>
+          <p class="step"><strong>c · Same method ·</strong> <span class="tex">\log_e\!\left(\dfrac{1}{e^2}\right)=\log_e(e^{-2})=-2</span>.</p>
+          <p class="final"><strong>Answer c:</strong> <span class="tex">-2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> <span class="tex">x=\ln\!\left(\tfrac13\right)</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">\sqrt{e}=e^{1/2}</span>, then <span class="tex">\log_e(e^k)=k</span>.</p>
+          <p class="step"><strong>d · Same method ·</strong> <span class="tex">\log_e\sqrt{e}=\log_e(e^{1/2})=\tfrac12</span>.</p>
+          <p class="final"><strong>Answer d:</strong> <span class="tex">\tfrac12</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Identity:</strong> <span class="tex">e^{\log_e x}=x</span> for <span class="tex">x&gt;0</span>. The e and the log cancel; leave the inside.</p>
+          <p class="step"><strong>e ·</strong> <span class="tex">e^{\ln 5}=5</span>.</p>
+          <p class="final"><strong>Answer e:</strong> <span class="tex">5</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same identity:</strong> <span class="tex">e^{\log_e x}=x</span> (<span class="tex">x&gt;0</span>).</p>
+          <p class="step"><strong>f · Same method ·</strong> <span class="tex">e^{\ln 0.05}=0.05</span>.</p>
+          <p class="final"><strong>Answer f:</strong> <span class="tex">0.05</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same identity:</strong> <span class="tex">e^{\log_e x}=x</span>.</p>
+          <p class="step"><strong>g · Same method ·</strong> <span class="tex">e^{\ln 1}=1</span>.</p>
+          <p class="final"><strong>Answer g:</strong> <span class="tex">1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same identity:</strong> <span class="tex">e^{\log_e x}=x</span>.</p>
+          <p class="step"><strong>h · Same method ·</strong> <span class="tex">e^{\ln e}=e</span>.</p>
+          <p class="final"><strong>Answer h:</strong> <span class="tex">e</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q3">
+      <h2>3 · Why ln 1 = 0 and ln e = 1 <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p>a Use a calculator to confirm <span class="tex">\log_e 1=0</span>.</p>
+        <p>b Write 1 as a power of <span class="tex">e</span>, then use <span class="tex">\log_e(e^x)=x</span> to show <span class="tex">\log_e 1=0</span>.</p>
+        <p>c Use a calculator to confirm <span class="tex">\log_e e=1</span>.</p>
+        <p>d Write <span class="tex">e</span> as a power of <span class="tex">e</span>, then use the same identity to show <span class="tex">\log_e e=1</span>.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><strong>a ·</strong> Calculator: <span class="tex">\ln 1</span> displays <span class="tex">0</span>.</p>
+          <p class="final"><strong>Confirmed:</strong> <span class="tex">\log_e 1=0</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Identity:</strong> <span class="tex">\log_e(e^x)=x</span>. Also <span class="tex">e^0=1</span>.</p>
+          <p class="step"><strong>b ·</strong> Write <span class="tex">1=e^0</span>.</p>
+          <p class="step">Then <span class="tex">\log_e 1=\log_e(e^0)=0</span> by the identity with <span class="tex">x=0</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>c ·</strong> Calculator: <span class="tex">\ln e</span> displays <span class="tex">1</span>.</p>
+          <p class="final"><strong>Confirmed:</strong> <span class="tex">\log_e e=1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same identity:</strong> <span class="tex">\log_e(e^x)=x</span>. Also <span class="tex">e=e^1</span>.</p>
+          <p class="step"><strong>d · Same method ·</strong> Write <span class="tex">e=e^1</span>.</p>
+          <p class="step">Then <span class="tex">\log_e e=\log_e(e^1)=1</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q4">
+      <h2>4 · Convert log ↔ exponential form <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p>Convert each exponential equation to logarithmic form, and each logarithmic equation to exponential form.</p>
+        <p>a <span class="tex">x=e^6</span> · b <span class="tex">\log_e x=-2</span> · c <span class="tex">x=\ln 24</span> · d <span class="tex">e^x=\tfrac13</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Dictionary:</strong> <span class="tex">x=e^k</span> means the same as <span class="tex">\log_e x=k</span>. (Read: “log base e of <span class="tex">x</span> equals the power”.)</p>
+          <p class="step"><strong>a ·</strong> Given <span class="tex">x=e^6</span> (exponential form).</p>
+          <p class="step">Logarithmic form: <span class="tex">\log_e x=6</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">\log_e x=6</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same dictionary the other way:</strong> <span class="tex">\log_e x=k</span> means <span class="tex">x=e^k</span>.</p>
+          <p class="step"><strong>b · Same method ·</strong> Given <span class="tex">\log_e x=-2</span>.</p>
+          <p class="step">Exponential form: <span class="tex">x=e^{-2}</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">x=e^{-2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">x=\ln 24</span> means <span class="tex">x=\log_e 24</span>, which is the same as <span class="tex">e^x=24</span>.</p>
+          <p class="step"><strong>c · Same method ·</strong> Given <span class="tex">x=\ln 24</span>.</p>
+          <p class="step">Exponential form: <span class="tex">e^x=24</span>.</p>
+          <p class="final"><strong>Answer c:</strong> <span class="tex">e^x=24</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Same dictionary:</strong> <span class="tex">e^x=a</span> means <span class="tex">x=\log_e a</span>.</p>
+          <p class="step"><strong>d · Same method ·</strong> Given <span class="tex">e^x=\tfrac13</span>.</p>
+          <p class="step">Logarithmic form: <span class="tex">x=\log_e\!\left(\tfrac13\right)</span> (or <span class="tex">x=-\log_e 3</span>).</p>
+          <p class="final"><strong>Answer d:</strong> <span class="tex">x=\log_e\!\left(\tfrac13\right)</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q5">
       <h2>5 · Change of base <span class="band">Foundation</span></h2>
-      <div class="stem"><p>Evaluate, correct to 3 d.p.</p>
-        <p>a <span class="tex">\log_2 7</span> · b <span class="tex">\log_{10} 25</span> · c <span class="tex">\log_3 0.04</span></p></div>
+      <div class="stem">
+        <p>Use the change-of-base formula to express each logarithm in terms of logs base <span class="tex">e</span>. Then approximate correct to <strong>four significant figures</strong>.</p>
+        <p>a <span class="tex">\log_2 7</span> · b <span class="tex">\log_{10} 25</span> · c <span class="tex">\log_3 0.04</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">\dfrac{\ln 7}{\ln 2}\approx 2.807</span></p>
+          <p class="formula-quick"><strong>Change-of-base formula:</strong> <span class="tex">\log_b x=\dfrac{\log_e x}{\log_e b}=\dfrac{\ln x}{\ln b}</span>.</p>
+          <p class="step"><strong>a ·</strong> Write <span class="tex">\log_2 7=\dfrac{\ln 7}{\ln 2}</span>.</p>
+          <p class="step">Calculator: <span class="tex">\ln 7\approx 1.945910</span>, <span class="tex">\ln 2\approx 0.693147</span>.</p>
+          <p class="step">Divide: <span class="tex">1.945910\div 0.693147\approx 2.807354</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">\dfrac{\ln 7}{\ln 2}\approx 2.807</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">\dfrac{\ln 25}{\ln 10}\approx 1.398</span></p>
+          <p class="formula-quick"><strong>Same formula:</strong> <span class="tex">\log_{10} 25=\dfrac{\ln 25}{\ln 10}</span>.</p>
+          <p class="step"><strong>b · Same method ·</strong> <span class="tex">\ln 25\approx 3.218876</span>, <span class="tex">\ln 10\approx 2.302585</span>.</p>
+          <p class="step">Divide: ≈ <span class="tex">1.397940</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">\dfrac{\ln 25}{\ln 10}\approx 1.398</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">\dfrac{\ln 0.04}{\ln 3}\approx -2.930</span></p>
+          <p class="formula-quick"><strong>Same formula:</strong> <span class="tex">\log_3 0.04=\dfrac{\ln 0.04}{\ln 3}</span>. Expect a negative value because <span class="tex">0.04&lt;1</span>.</p>
+          <p class="step"><strong>c · Same method ·</strong> <span class="tex">\ln 0.04\approx -3.218876</span>, <span class="tex">\ln 3\approx 1.098612</span>.</p>
+          <p class="step">Divide: ≈ <span class="tex">-2.930</span>.</p>
+          <p class="final"><strong>Answer c:</strong> <span class="tex">\dfrac{\ln 0.04}{\ln 3}\approx -2.930</span> (4 s.f.).</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q6">
-      <h2>6 · More logarithms <span class="band">Foundation</span></h2>
-      <div class="stem"><p>Evaluate, correct to 3 d.p.</p>
-        <p>a <span class="tex">\ln 6+\ln 2</span> · b <span class="tex">\ln 20-\ln 5</span> · c <span class="tex">2\ln 3-\ln 27</span> · d <span class="tex">\ln 2+\ln 3-\ln 12</span></p></div>
+      <h2>6 · Solve with logarithms <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p>Use logarithms to solve these equations correct to <strong>four significant figures</strong>. (Any base is fine — ln or log₁₀.)</p>
+        <p>a <span class="tex">5^x=20</span> · b <span class="tex">3^x=137</span> · c <span class="tex">7^x=0.7</span> · d <span class="tex">2^x=0.0123</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">\approx 1.861</span></p>
+          <p class="formula-quick"><strong>Method:</strong> Take log of both sides. Use <span class="tex">\log(a^x)=x\log a</span>, then divide. Any log base works.</p>
+          <p class="step"><strong>a ·</strong> Start with <span class="tex">5^x=20</span>.</p>
+          <p class="step">Take log: <span class="tex">\log(5^x)=\log 20</span> → <span class="tex">x\log 5=\log 20</span>.</p>
+          <p class="step">Divide: <span class="tex">x=\dfrac{\log 20}{\log 5}\approx 1.861</span>.</p>
+          <p class="final"><strong>Answer a:</strong> <span class="tex">x\approx 1.861</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">\approx 4.478</span> (book: <span class="tex">\ln 4</span>)</p>
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">x=\dfrac{\log(\text{RHS})}{\log(\text{base})}</span>.</p>
+          <p class="step"><strong>b · Same method ·</strong> <span class="tex">3^x=137</span> → <span class="tex">x=\dfrac{\log 137}{\log 3}\approx 4.478</span>.</p>
+          <p class="final"><strong>Answer b:</strong> <span class="tex">x\approx 4.478</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">\approx -0.1833</span></p>
+          <p class="formula-quick"><strong>Same method:</strong> Expect a <strong>negative</strong> <span class="tex">x</span> because the right-hand side is less than 1.</p>
+          <p class="step"><strong>c · Same method ·</strong> <span class="tex">7^x=0.7</span> → <span class="tex">x=\dfrac{\log 0.7}{\log 7}\approx -0.1833</span>.</p>
+          <p class="final"><strong>Answer c:</strong> <span class="tex">x\approx -0.1833</span> (4 s.f.).</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> <span class="tex">\approx -6.345</span></p>
+          <p class="formula-quick"><strong>Same method:</strong> RHS &lt; 1 → negative solution.</p>
+          <p class="step"><strong>d · Same method ·</strong> <span class="tex">2^x=0.0123</span> → <span class="tex">x=\dfrac{\log 0.0123}{\log 2}\approx -6.345</span>.</p>
+          <p class="final"><strong>Answer d:</strong> <span class="tex">x\approx -6.345</span> (4 s.f.).</p>
         </div>
       </div>
     </article>
@@ -196,14 +335,14 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">y=e^x</span> — inverse of <span class="tex">\ln x</span>, through <span class="tex">(0,1)</span>.</p>
+<p class="formula-quick"><strong>Reflection fact:</strong> Reflecting <span class="tex">y=e^x</span> in the line <span class="tex">y=x</span> swaps coordinates and gives the inverse <span class="tex">y=\log_e x</span>. Reflecting in the <span class="tex">y</span>-axis replaces <span class="tex">x</span> by <span class="tex">-x</span>.</p>
+          <p class="step"><strong>a ·</strong> Reflection in <span class="tex">y=x</span> maps <span class="tex">y=e^x</span> to <span class="tex">y=\log_e x</span> (its inverse). The tangent to <span class="tex">e^x</span> at <span class="tex">(0,1)</span> has gradient 1, so after reflection the tangent to <span class="tex">\log_e x</span> at <span class="tex">(1,0)</span> also has gradient 1.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">y=\ln(-x)</span>, domain <span class="tex">x&lt;0</span>.</p>
+          <p class="step"><strong>b ·</strong> Reflection in the <span class="tex">y</span>-axis: replace <span class="tex">x</span> by <span class="tex">-x</span> to get <span class="tex">y=\log_e(-x)</span>, domain <span class="tex">x&lt;0</span>. This is also a horizontal dilation with factor <span class="tex">-1</span>.</p>
       <div class="plot-frame"><svg id="q7plot" class="plot" viewBox="0 0 720 280"></svg>
         <div class="legend"><span class="p"><i></i>ln x</span><span class="i"><i></i>ln(−x)</span><span class="i" style="--c:#b45309"><i></i>e^x</span></div></div>
         </div>
@@ -455,22 +594,13 @@
       <h2>19 · Sequence of transforms <span class="band ch">Challenge</span></h2>
       <div class="stem"><p>Starting from <span class="tex">y=\ln x</span>, describe a sequence of transformations that produces <span class="tex">y=2\ln(x+3)-1</span>, and sketch the result.</p></div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · S</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · sequence</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>S ·</strong> hift left 3: <span class="tex">y=\ln(x+3)</span> (domain <span class="tex">x&gt;-3</span>).</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · V</button>
-        <div class="sol">
-<p class="step"><strong>V ·</strong> ertical stretch factor 2: <span class="tex">y=2\ln(x+3)</span>.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · S</button>
-        <div class="sol">
-<p class="step"><strong>S ·</strong> hift down 1: <span class="tex">y=2\ln(x+3)-1</span>.</p>
+          <p class="formula-quick"><strong>Reading order:</strong> Inside brackets first (horizontal), then vertical stretch, then vertical shift. Domain: argument of ln must be positive.</p>
+          <p class="step"><strong>Step 1 ·</strong> Shift left 3: <span class="tex">y=\ln(x+3)</span>. Domain becomes <span class="tex">x&gt;-3</span>; asymptote moves to <span class="tex">x=-3</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Vertical stretch factor 2: <span class="tex">y=2\ln(x+3)</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Shift down 1: <span class="tex">y=2\ln(x+3)-1</span>.</p>
+          <p class="step"><strong>Sketch tip:</strong> Mark the new asymptote <span class="tex">x=-3</span>, the intercept where <span class="tex">2\ln(x+3)-1=0</span> (solve if needed), and that the curve still rises slowly to the right.</p>
         </div>
       </div>
     </article>
@@ -502,7 +632,11 @@
     function typeset(){document.querySelectorAll(".tex").forEach(function(n){if(n.getAttribute("data-texed"))return;n.setAttribute("data-texed","1");if(window.katex)katex.render(n.textContent,n,{throwOnError:false});});}
     function bind(){ /* per-part: course-solutions.js */ }
     const NS="http://www.w3.org/2000/svg";
-    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=svg.viewBox.baseVal.height||280;this.pad=40;}
+    function Plot(svg,w){
+      this.svg=svg; this.w=w;
+      const vb=(svg.getAttribute("viewBox")||"0 0 720 280").trim().split(/\s+/).map(Number);
+      this.W=vb[2]||720; this.H=vb[3]||280; this.pad=40;
+    }
     Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
     Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
     Plot.prototype.el=function(t,a){const n=document.createElementNS(NS,t);Object.keys(a||{}).forEach(k=>{if(a[k]!=null)n.setAttribute(k,a[k]);});this.svg.appendChild(n);return n;};
@@ -511,8 +645,17 @@
       this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.2});};
     Plot.prototype.asym=function(x0){const a=this.xy(x0,this.w.ymin),b=this.xy(x0,this.w.ymax);
       this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#e2e8f0","stroke-width":1,"stroke-dasharray":"4 4"});};
-    Plot.prototype.poly=function(pts,o){o=o||{};const d=pts.filter(Boolean).map((p,i)=>{const q=this.xy(p[0],p[1]);return(i?"L":"M")+q[0]+" "+q[1];}).join(" ");
-      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.4,"stroke-dasharray":o.dash||null});};
+    Plot.prototype.poly=function(pts,o){
+      o=o||{}; let d="", started=false;
+      pts.forEach(function(p){
+        if(!p){ started=false; return; }
+        const q=this.xy(p[0],p[1]);
+        d+=(started?"L":"M")+q[0]+" "+q[1];
+        started=true;
+      }.bind(this));
+      if(!d) return;
+      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.4,"stroke-dasharray":o.dash||null});
+    };
     function sample(fn,w,n){n=n||300;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||Math.abs(y)>40){pts.push(null);continue;}pts.push([x,y]);}return pts;}
     function draw(){
       const w7={xmin:-3,xmax:3,ymin:-2,ymax:3};

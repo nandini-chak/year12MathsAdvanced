@@ -13,7 +13,11 @@
     @media (max-width: 720px) { .studio { grid-template-columns: 1fr; } }
     .studio-controls label { display: block; font-size: 0.88rem; margin: 0.5rem 0 0.2rem; color: var(--muted); }
     .studio-controls input[type=range] { width: 100%; }
-    .eq-live { font-size: 1.05rem; margin: 0.4rem 0 0.8rem; min-height: 2.2rem; }
+    .eq-live { font-size: 1.05rem; margin: 0.4rem 0 0.8rem; min-height: 2.2rem; padding: .45rem .6rem; background: #fff; border-left: 4px solid #0f766e; border-radius: 0 8px 8px 0; }
+    .callout { margin: .7rem 0; padding: .65rem .85rem; background: #eef6ff; border-left: 4px solid var(--blue); border-radius: 0 10px 10px 0; font-size: .95rem; line-height: 1.45; }
+    .worked { margin: .6rem 0; padding: .7rem .85rem; background: #fbfaf7; border: 1px solid var(--line); border-radius: 12px; }
+    .worked h3 { margin: 0 0 .4rem; font-size: 1rem; color: var(--navy); }
+    .worked .step { margin: .35rem 0; }
   </style>
 </head>
 <body data-section="5A" data-page="tutorial" data-nav-depth="2" data-auth-sub="5A Tutorial · theory">
@@ -22,7 +26,7 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory &amp; ideas</span>
     <h1>Review of the logarithmic function base e</h1>
-    <p>Definitions, graphs, transforms, change of base, quadratic substitutions, and logarithmic scales. Use after the Concept page.</p>
+    <p>Slow, step-by-step notes for low-confidence students: what <span class="tex">\ln</span> means, how the graph looks, how to move it, and how to solve equations.</p>
   </header>
   <nav class="jump">
     <a href="concept.html">← Concept</a>
@@ -33,90 +37,133 @@
     <a href="problems.html">Exercise 5A</a>
   </nav>
   <div class="wrap">
-    <details class="teacher-note no-print" open>
+    <details class="teacher-note no-print">
       <summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">This tutorial paraphrases Cambridge §5A with original wording. The studio uses <span class="tex">y=A\ln(n(x-b))+c</span> with domain restrictions when <span class="tex">n(x-b)&gt;0</span>. Slider values update the equation and graph together.</div>
+      <div class="body">Written for very low grade / low-confidence Year 12 students. The studio uses <span class="tex">y=A\ln(n(x-b))+c</span> with domain <span class="tex">n(x-b)&gt;0</span>. Slider values update the equation and graph together.</div>
     </details>
 
     <section class="card" id="def">
-      <h2 class="section-h">Natural logarithm and its graph</h2>
-      <p><span class="tex">y=\log_e x</span> (also <span class="tex">\ln x</span>) is the inverse of <span class="tex">y=e^x</span>. Identities (for valid domains):</p>
-      <div class="formula"><span class="tex">\log_e(e^x)=x,\qquad e^{\log_e x}=x\quad (x&gt;0)</span></div>
+      <h2 class="section-h">1 · What is ln x?</h2>
+      <p class="callout"><strong>Plain words:</strong> <span class="tex">\ln x</span> means “natural log of <span class="tex">x</span>” — the power you raise <span class="tex">e</span> to, to get <span class="tex">x</span>. So if <span class="tex">y=\ln x</span>, then <span class="tex">e^y=x</span>.</p>
+      <div class="formula"><span class="tex">\ln(e^x)=x,\qquad e^{\ln x}=x\quad (x&gt;0)</span></div>
       <ul>
-        <li>Domain <span class="tex">(0,\infty)</span>, range <span class="tex">\mathbb R</span>.</li>
-        <li>Vertical asymptote <span class="tex">x=0</span>; <span class="tex">x</span>-intercept <span class="tex">(1,0)</span>.</li>
-        <li>Gradient at <span class="tex">x=1</span> is 1; the curve is concave down.</li>
+        <li><strong>Domain:</strong> only <span class="tex">x&gt;0</span> (you cannot take <span class="tex">\ln</span> of 0 or a negative).</li>
+        <li><strong>Range:</strong> all real numbers.</li>
+        <li><strong>Vertical asymptote:</strong> the line <span class="tex">x=0</span> (the graph never touches the <span class="tex">y</span>-axis).</li>
+        <li><strong>Crosses the <span class="tex">x</span>-axis</strong> at <span class="tex">(1,0)</span>, because <span class="tex">\ln 1=0</span>.</li>
+        <li>At <span class="tex">x=1</span> the gradient (slope) is 1. The curve bends down (concave down).</li>
       </ul>
-      <div class="plot-frame"><svg id="exParent" class="plot" viewBox="0 0 720 300"></svg>
-        <div class="legend"><span class="p"><i></i>y = ln x</span></div>
+      <div class="plot-frame"><svg id="exParent" class="plot" viewBox="0 0 720 300" role="img" aria-label="Graph of y equals ln x"></svg>
+        <div class="legend"><span class="p"><i></i><span class="tex">y=\ln x</span> (dashed teal)</span></div>
       </div>
+      <p class="callout"><strong>How to read the sketch:</strong> As <span class="tex">x</span> goes toward 0 from the right, <span class="tex">y</span> goes down to <span class="tex">-\infty</span>. As <span class="tex">x</span> gets large, <span class="tex">y</span> grows slowly upward.</p>
     </section>
 
     <section class="card" id="studio">
-      <h2 class="section-h">Log graph studio</h2>
-      <p>Explore <span class="tex">y=A\ln\big(n(x-b)\big)+c</span>. Compare with the parent <span class="tex">y=\ln x</span> (dashed teal).</p>
+      <h2 class="section-h">2 · Log graph studio</h2>
+      <p>Move the sliders to change <span class="tex">y=A\ln\big(n(x-b)\big)+c</span>. The dashed teal curve is always the parent <span class="tex">y=\ln x</span>.</p>
       <div class="studio">
-        <div class="plot-frame"><svg id="studioPlot" class="plot" viewBox="0 0 720 320"></svg>
-          <div class="legend"><span class="p"><i></i>y = ln x</span><span class="i"><i></i>transformed</span></div>
+        <div class="plot-frame"><svg id="studioPlot" class="plot" viewBox="0 0 720 320" role="img" aria-label="Interactive log graph studio"></svg>
+          <div class="legend">
+            <span class="p"><i></i><span class="tex">y=\ln x</span></span>
+            <span class="i"><i></i>transformed</span>
+          </div>
         </div>
         <div class="studio-controls card" style="margin:0;padding:0.85rem">
           <p class="eq-live"><span class="tex" id="studioEq">y=\ln x</span></p>
-          <label for="slA">A (vertical scale)</label>
+          <label for="slA">A (vertical stretch / flip)</label>
           <input id="slA" type="range" min="-3" max="3" step="0.1" value="1" />
-          <label for="slN">n (inside brackets)</label>
+          <label for="slN">n (inside the brackets)</label>
           <input id="slN" type="range" min="-2" max="2" step="0.1" value="1" />
           <label for="slB">b (horizontal shift)</label>
           <input id="slB" type="range" min="-2" max="2" step="0.1" value="0" />
           <label for="slC">c (vertical shift)</label>
           <input id="slC" type="range" min="-3" max="3" step="0.1" value="0" />
+          <p class="callout" style="margin-top:.7rem;font-size:.88rem"><strong>Quick guide:</strong> <span class="tex">A&gt;1</span> stretches up; <span class="tex">A&lt;0</span> flips over the <span class="tex">x</span>-axis. Positive <span class="tex">b</span> shifts <strong>right</strong>. Positive <span class="tex">c</span> shifts <strong>up</strong>. The graph only exists where <span class="tex">n(x-b)&gt;0</span>.</p>
           <details class="teacher-note no-print" style="margin-top:0.6rem"><summary><span class="ico">T</span> Teacher note</summary>
-            <div class="body">When <span class="tex">n&lt;0</span>, the graph reflects in the <span class="tex">y</span>-axis after the shift. Try <span class="tex">n=2</span> vs <span class="tex">\ln(2x)=\ln x+\ln 2</span> to see horizontal dilation as vertical shift.</div></details>
+            <div class="body">When <span class="tex">n&lt;0</span>, the graph reflects after the shift. Compare <span class="tex">n=2</span> with the identity <span class="tex">\ln(2x)=\ln x+\ln 2</span> (horizontal dilation = vertical shift).</div></details>
         </div>
       </div>
     </section>
 
     <section class="card" id="ex1">
       <h2 class="section-h">Example 1 · Reading values from ln x</h2>
-      <p>Use a calculator or identities. For instance <span class="tex">\ln 10\approx 2.303</span> and <span class="tex">\ln(0.1)=-\ln 10</span>.</p>
+      <p class="callout"><strong>Method:</strong> Use the <span class="tex">\ln</span> button on a calculator (not log base 10, unless the question asks for <span class="tex">\log_{10}</span>). Round to 3 decimal places when asked.</p>
+      <div class="worked">
+        <h3>Worked mini-examples</h3>
+        <p class="step"><strong>Step ·</strong> <span class="tex">\ln 10</span>: calculator → about <span class="tex">2.302585\ldots</span> → <strong>2.303</strong> (3 d.p.).</p>
+        <p class="step"><strong>Step ·</strong> <span class="tex">\ln 0.1</span>: notice <span class="tex">0.1=1/10</span>, so <span class="tex">\ln 0.1=\ln(1/10)=-\ln 10\approx -2.303</span>.</p>
+        <p class="step"><strong>Step ·</strong> <span class="tex">\ln(10^5)=5\ln 10</span> (power law) ≈ <span class="tex">5\times 2.303=11.515</span> → check on calculator ≈ <strong>11.513</strong> (book may show 11.51 / 11.52 depending on rounding of <span class="tex">\ln 10</span>).</p>
+      </div>
     </section>
 
     <section class="card" id="ex2">
-      <h2 class="section-h">Example 2 · Simplify with log laws</h2>
-      <p><span class="tex">\ln(e^3)=3</span>, <span class="tex">e^{\ln 5}=5</span>, and <span class="tex">\ln\frac{1}{2}=-\ln 2</span>. Always check that arguments of <span class="tex">\ln</span> stay positive.</p>
+      <h2 class="section-h">Example 2 · Exact values with log laws</h2>
+      <p class="callout"><strong>Formulas to keep:</strong>
+        <span class="tex">\ln(e^k)=k</span>,
+        <span class="tex">e^{\ln a}=a</span> (<span class="tex">a&gt;0</span>),
+        <span class="tex">\ln(ab)=\ln a+\ln b</span>,
+        <span class="tex">\ln(a/b)=\ln a-\ln b</span>,
+        <span class="tex">\ln(a^n)=n\ln a</span>.
+      </p>
+      <div class="worked">
+        <h3>Same method each time</h3>
+        <p class="step"><strong>1 ·</strong> <span class="tex">\ln(e^3)=3</span> — the ln and the e cancel; leave the power.</p>
+        <p class="step"><strong>2 ·</strong> <span class="tex">e^{\ln 5}=5</span> — the e and the ln cancel; leave the inside.</p>
+        <p class="step"><strong>3 ·</strong> <span class="tex">\ln\tfrac12=-\ln 2</span> — use <span class="tex">\ln(1/a)=-\ln a</span>.</p>
+        <p class="step"><strong>Check:</strong> every argument of <span class="tex">\ln</span> must stay positive.</p>
+      </div>
     </section>
 
     <section class="card" id="ex3">
-      <h2 class="section-h">Example 3 · Graph transforms</h2>
-      <p>From <span class="tex">y=\ln x</span>:</p>
+      <h2 class="section-h">Example 3 · Graph transforms (with sketch)</h2>
+      <p>Start from <span class="tex">y=\ln x</span>. Apply one change at a time:</p>
       <ul>
-        <li><span class="tex">y=\ln x+1</span> — up 1.</li>
-        <li><span class="tex">y=\ln(x-2)</span> — right 2 (domain <span class="tex">x&gt;2</span>).</li>
-        <li><span class="tex">y=-\ln x</span> — reflect in <span class="tex">x</span>-axis.</li>
-        <li><span class="tex">y=\ln(-x)</span> — reflect in <span class="tex">y</span>-axis (domain <span class="tex">x&lt;0</span>).</li>
+        <li><span class="tex">y=\ln x+1</span> — shift <strong>up</strong> 1.</li>
+        <li><span class="tex">y=\ln(x-2)</span> — shift <strong>right</strong> 2 (new domain <span class="tex">x&gt;2</span>; asymptote moves to <span class="tex">x=2</span>).</li>
+        <li><span class="tex">y=-\ln x</span> — reflect in the <span class="tex">x</span>-axis (flip upside down).</li>
+        <li><span class="tex">y=\ln(-x)</span> — reflect in the <span class="tex">y</span>-axis (lives on the left; domain <span class="tex">x&lt;0</span>).</li>
       </ul>
-      <div class="plot-frame"><svg id="ex3" class="plot" viewBox="0 0 720 280"></svg>
-        <div class="legend"><span class="p"><i></i>ln x</span><span class="i"><i></i>ln(−x)</span></div>
+      <div class="plot-frame"><svg id="ex3" class="plot" viewBox="0 0 720 280" role="img" aria-label="ln x and ln of minus x"></svg>
+        <div class="legend"><span class="p"><i></i><span class="tex">\ln x</span></span><span class="i"><i></i><span class="tex">\ln(-x)</span></span></div>
       </div>
+      <p class="callout"><strong>Remember:</strong> the dashed teal curve is only drawn for <span class="tex">x&gt;0</span>. The solid blue curve is only drawn for <span class="tex">x&lt;0</span>. Both share the same asymptote <span class="tex">x=0</span>.</p>
     </section>
 
     <section class="card" id="ex4">
       <h2 class="section-h">Example 4 · Change of base</h2>
-      <p>For any base <span class="tex">b&gt;0</span>, <span class="tex">b\ne 1</span>:</p>
-      <div class="formula"><span class="tex">\log_b x=\dfrac{\ln x}{\ln b}</span></div>
-      <p>So <span class="tex">\log_2 7=\dfrac{\ln 7}{\ln 2}\approx 2.807</span>.</p>
+      <p class="callout"><strong>Formula:</strong> For any allowed base <span class="tex">b</span>,
+        <span class="tex">\log_b x=\dfrac{\ln x}{\ln b}</span>.
+        Use this when the calculator only has <span class="tex">\ln</span> (or only <span class="tex">\log_{10}</span>).
+      </p>
+      <div class="worked">
+        <h3>Worked · log₂ 7</h3>
+        <p class="step"><strong>Step 1 ·</strong> Write <span class="tex">\log_2 7=\dfrac{\ln 7}{\ln 2}</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> Calculator: <span class="tex">\ln 7\approx 1.945910</span>, <span class="tex">\ln 2\approx 0.693147</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> Divide: <span class="tex">1.945910\div 0.693147\approx 2.807</span> (3 d.p.).</p>
+      </div>
     </section>
 
     <section class="card" id="ex5">
       <h2 class="section-h">Example 5 · Quadratic in e^x</h2>
-      <p>Let <span class="tex">u=e^x</span>. Then <span class="tex">e^{2x}-5e^x+6=0</span> becomes <span class="tex">u^2-5u+6=0</span>, so <span class="tex">u=2</span> or <span class="tex">u=3</span> and <span class="tex">x=\ln 2</span> or <span class="tex">x=\ln 3</span>.</p>
+      <p class="callout"><strong>Method:</strong> Let <span class="tex">u=e^x</span> (always positive). Rewrite every power of <span class="tex">e</span> in terms of <span class="tex">u</span>, solve the ordinary quadratic, then take <span class="tex">x=\ln u</span>.</p>
+      <div class="worked">
+        <h3>Worked · e²ˣ − 5eˣ + 6 = 0</h3>
+        <p class="step"><strong>Step 1 ·</strong> Put <span class="tex">u=e^x</span>. Then <span class="tex">e^{2x}=(e^x)^2=u^2</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> Equation becomes <span class="tex">u^2-5u+6=0</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> Factor: <span class="tex">(u-2)(u-3)=0</span>, so <span class="tex">u=2</span> or <span class="tex">u=3</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> Back-substitute: <span class="tex">e^x=2\Rightarrow x=\ln 2</span>; <span class="tex">e^x=3\Rightarrow x=\ln 3</span>.</p>
+      </div>
     </section>
 
     <section class="card" id="ex6">
       <h2 class="section-h">Example 6 · Linear vs logarithmic scale</h2>
-      <p>On a linear axis, equal steps are equal differences. On a log axis, equal steps are equal <strong>ratios</strong> — useful for sizes spanning many orders of magnitude (planets, sound intensity, pH).</p>
+      <p>On a <strong>linear</strong> axis, equal gaps mean equal <em>differences</em> (…, 10, 20, 30, …).</p>
+      <p>On a <strong>log</strong> axis, equal gaps mean equal <em>ratios</em> (…, 10, 100, 1000, …). That is useful when sizes span many orders of magnitude (planets, sound intensity, pH).</p>
       <p><a class="btn" href="problems.html">Practise Exercise 5A</a></p>
     </section>
     <footer class="site">Theory tutorial for §5A. Path: Concept → Tutorial → Exercise 5A.</footer>
+    <p class="credit-note">Created by Nandini C</p>
   </div>
   </div></div>
   <script src="../../course-auth.js"></script>
@@ -124,34 +171,102 @@
   <script>
   (function(){
     const NS="http://www.w3.org/2000/svg";
-    function Plot(svg,w){this.svg=svg;this.w=w;this.W=720;this.H=svg.viewBox.baseVal.height||300;this.pad=42;}
-    Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
-    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
-    Plot.prototype.el=function(t,a){const n=document.createElementNS(NS,t);Object.keys(a||{}).forEach(k=>{if(a[k]!=null)n.setAttribute(k,a[k]);});this.svg.appendChild(n);return n;};
-    Plot.prototype.axes=function(){const a=this.xy(this.w.xmin,0),b=this.xy(this.w.xmax,0),c=this.xy(0,this.w.ymin),d=this.xy(0,this.w.ymax);
-      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#9aa3b0","stroke-width":1.2});
-      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.2});};
-    Plot.prototype.asym=function(x0){const a=this.xy(x0,this.w.ymin),b=this.xy(x0,this.w.ymax);
-      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#e2e8f0","stroke-width":1,"stroke-dasharray":"4 4"});};
-    Plot.prototype.poly=function(pts,o){o=o||{};const d=pts.filter(Boolean).map((p,i)=>{const q=this.xy(p[0],p[1]);return(i?"L":"M")+q[0]+" "+q[1];}).join(" ");
-      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.5,"stroke-dasharray":o.dash||null});};
-    function sample(fn,w,n){n=n||360;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||Math.abs(y)>50){pts.push(null);continue;}pts.push([x,y]);}return pts;}
-    function draw(id,w,fns,asymX){
-      const svg=document.getElementById(id);if(!svg)return;
-      const P=new Plot(svg,w);P.clear();P.axes();
-      if(asymX!=null)P.asym(asymX);
-      fns.forEach(f=>P.poly(sample(f.fn,P.w),{stroke:f.stroke,dash:f.dash,width:f.width||2.4}));
+
+    function Plot(svg,w){
+      this.svg=svg; this.w=w;
+      const vb=(svg.getAttribute("viewBox")||"0 0 720 300").trim().split(/\s+/).map(Number);
+      this.W=vb[2]||720; this.H=vb[3]||300; this.pad=46;
     }
-    function fmtNum(v){return Math.abs(v-Math.round(v))<0.05?String(Math.round(v)):v.toFixed(1);}
+    Plot.prototype.clear=function(){ while(this.svg.firstChild) this.svg.removeChild(this.svg.firstChild); };
+    Plot.prototype.xy=function(x,y){
+      const p=this.pad,W=this.W,H=this.H,w=this.w;
+      return [p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p), H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];
+    };
+    Plot.prototype.el=function(t,a){
+      const n=document.createElementNS(NS,t);
+      Object.keys(a||{}).forEach(k=>{ if(a[k]!=null) n.setAttribute(k,a[k]); });
+      this.svg.appendChild(n); return n;
+    };
+    Plot.prototype.axes=function(ticksX,ticksY){
+      const a=this.xy(this.w.xmin,0), b=this.xy(this.w.xmax,0);
+      const c=this.xy(0,this.w.ymin), d=this.xy(0,this.w.ymax);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#9aa3b0","stroke-width":1.4});
+      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.4});
+      this.el("polygon",{points:(b[0])+","+b[1]+" "+(b[0]-10)+","+(b[1]-4)+" "+(b[0]-10)+","+(b[1]+4),fill:"#9aa3b0"});
+      this.el("polygon",{points:d[0]+","+d[1]+" "+(d[0]-4)+","+(d[1]+10)+" "+(d[0]+4)+","+(d[1]+10),fill:"#9aa3b0"});
+      this.el("text",{x:b[0]-8,y:b[1]+16,fill:"#5c6678","font-size":"12","font-weight":"600"}).textContent="x";
+      this.el("text",{x:d[0]+8,y:d[1]+4,fill:"#5c6678","font-size":"12","font-weight":"600"}).textContent="y";
+      (ticksX||[]).forEach(([x,lab])=>{
+        if(x<this.w.xmin||x>this.w.xmax) return;
+        const q=this.xy(x,0);
+        this.el("line",{x1:q[0],y1:q[1]-4,x2:q[0],y2:q[1]+4,stroke:"#9aa3b0"});
+        if(lab!=null) this.el("text",{x:q[0],y:q[1]+16,"text-anchor":"middle",fill:"#5c6678","font-size":"11"}).textContent=lab;
+      });
+      (ticksY||[]).forEach(([y,lab])=>{
+        if(y<this.w.ymin||y>this.w.ymax) return;
+        const q=this.xy(0,y);
+        this.el("line",{x1:q[0]-4,y1:q[1],x2:q[0]+4,y2:q[1],stroke:"#9aa3b0"});
+        if(lab!=null) this.el("text",{x:q[0]-8,y:q[1]+4,"text-anchor":"end",fill:"#5c6678","font-size":"11"}).textContent=lab;
+      });
+    };
+    Plot.prototype.asym=function(x0){
+      const a=this.xy(x0,this.w.ymin), b=this.xy(x0,this.w.ymax);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#cbd5e1","stroke-width":1.2,"stroke-dasharray":"4 4"});
+    };
+    Plot.prototype.dot=function(x,y,lab,ox,oy){
+      const q=this.xy(x,y);
+      this.el("circle",{cx:q[0],cy:q[1],r:4,fill:"#0f766e",stroke:"#fff","stroke-width":1.5});
+      if(lab) this.el("text",{x:q[0]+(ox||10),y:q[1]+(oy||-8),fill:"#334155","font-size":"12","font-weight":"600"}).textContent=lab;
+    };
+    Plot.prototype.poly=function(pts,o){
+      o=o||{}; let d="", started=false;
+      pts.forEach(p=>{
+        if(!p){ started=false; return; }
+        const q=this.xy(p[0],p[1]);
+        d+=(started?"L":"M")+q[0].toFixed(2)+" "+q[1].toFixed(2);
+        started=true;
+      });
+      if(!d) return;
+      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.5,"stroke-dasharray":o.dash||null,"stroke-linejoin":"round","stroke-linecap":"round"});
+    };
+
+    function sample(fn,w,n,ylim){
+      n=n||420; ylim=ylim||40;
+      const pts=[];
+      for(let i=0;i<=n;i++){
+        const x=w.xmin+(w.xmax-w.xmin)*i/n;
+        let y; try{ y=fn(x); }catch(e){ y=NaN; }
+        if(!isFinite(y)||Math.abs(y)>ylim){ pts.push(null); continue; }
+        pts.push([x,y]);
+      }
+      return pts;
+    }
+
+    function draw(id,w,fns,opts){
+      opts=opts||{};
+      const svg=document.getElementById(id); if(!svg) return;
+      const P=new Plot(svg,w); P.clear();
+      P.axes(opts.ticksX||[], opts.ticksY||[]);
+      if(opts.asym!=null) P.asym(opts.asym);
+      fns.forEach(f=>P.poly(sample(f.fn,w,f.n||420,f.ylim||40),{stroke:f.stroke,dash:f.dash,width:f.width||2.5}));
+      (opts.dots||[]).forEach(d=>P.dot(d[0],d[1],d[2],d[3],d[4]));
+    }
+
+    function fmtNum(v){
+      if(Math.abs(v)<0.05) return "0";
+      return Math.abs(v-Math.round(v))<0.05?String(Math.round(v)):v.toFixed(1);
+    }
     function buildEq(A,n,b,c){
       let inside="x";
       if(Math.abs(b)>0.05) inside="x"+(b>0?"-"+fmtNum(b):"+"+fmtNum(-b));
       if(Math.abs(n-1)>0.05) inside=fmtNum(n)+"("+inside+")";
       let core="\\ln("+inside+")";
-      if(Math.abs(A-1)>0.05||Math.abs(A+1)<0.05) core=(Math.abs(A-1)<0.05?"":fmtNum(A))+core;
+      if(Math.abs(A+1)<0.05) core="-"+core;
+      else if(Math.abs(A-1)>0.05) core=fmtNum(A)+core;
       if(Math.abs(c)>0.05) core=core+(c>0?"+"+fmtNum(c):fmtNum(c));
       return "y="+core;
     }
+
     function studioDraw(){
       const A=+document.getElementById("slA").value;
       const n=+document.getElementById("slN").value;
@@ -159,24 +274,66 @@
       const c=+document.getElementById("slC").value;
       const eqEl=document.getElementById("studioEq");
       eqEl.textContent=buildEq(A,n,b,c);
-      if(window.katex){eqEl.removeAttribute("data-texed");katex.render(eqEl.textContent,eqEl,{throwOnError:false});eqEl.setAttribute("data-texed","1");}
+      if(window.katex){
+        eqEl.removeAttribute("data-texed");
+        katex.render(eqEl.textContent,eqEl,{throwOnError:false});
+        eqEl.setAttribute("data-texed","1");
+      }
+      const asym = (Math.abs(n)>1e-6) ? b : 0;
       const w={xmin:-4,xmax:6,ymin:-4,ymax:4};
       draw("studioPlot",w,[
-        {fn:x=>Math.log(x),stroke:"#0f766e",dash:"7 6",width:2.2},
-        {fn:x=>{const t=n*(x-b);if(t<=0)return NaN;return A*Math.log(t)+c;},stroke:"#1d4ed8",width:2.6}
-      ],0);
+        {fn:x=> x>0 ? Math.log(x) : NaN, stroke:"#0f766e", dash:"7 6", width:2.2},
+        {fn:x=>{ const t=n*(x-b); if(!(t>0)) return NaN; return A*Math.log(t)+c; }, stroke:"#1d4ed8", width:2.7}
+      ],{
+        asym:asym,
+        ticksX:[[-2,"-2"],[0,"0"],[2,"2"],[4,"4"]],
+        ticksY:[[-2,"-2"],[2,"2"]]
+      });
     }
+
+    function typeset(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent,n,{throwOnError:false});
+      });
+    }
+
     function boot(){
-      document.querySelectorAll(".tex").forEach(function(n){if(n.getAttribute("data-texed"))return;n.setAttribute("data-texed","1");if(window.katex)katex.render(n.textContent,n,{throwOnError:false});});
-      draw("exParent",{xmin:0.05,xmax:6,ymin:-3,ymax:2.5},[{fn:x=>Math.log(x),stroke:"#0f766e",dash:"7 6"}],0);
+      typeset();
+      draw("exParent",{xmin:0.08,xmax:6,ymin:-3,ymax:2.6},[
+        {fn:x=>Math.log(x), stroke:"#0f766e", dash:"7 6", width:2.6}
+      ],{
+        asym:0,
+        ticksX:[[1,"1"],[2,"2"],[3,"3"],[5,"5"]],
+        ticksY:[[-2,"-2"],[-1,"-1"],[1,"1"],[2,"2"]],
+        dots:[[1,0,"(1, 0)",12,-10]]
+      });
       draw("ex3",{xmin:-5,xmax:5,ymin:-3,ymax:3},[
-        {fn:x=>x>0?Math.log(x):NaN,stroke:"#0f766e",dash:"7 6"},
-        {fn:x=>x<0?Math.log(-x):NaN,stroke:"#1d4ed8"}
-      ],0);
-      ["slA","slN","slB","slC"].forEach(id=>document.getElementById(id).addEventListener("input",studioDraw));
+        {fn:x=> x>0 ? Math.log(x) : NaN, stroke:"#0f766e", dash:"7 6", width:2.4},
+        {fn:x=> x<0 ? Math.log(-x) : NaN, stroke:"#1d4ed8", width:2.6}
+      ],{
+        asym:0,
+        ticksX:[[-4,"-4"],[-2,"-2"],[2,"2"],[4,"4"]],
+        ticksY:[[-2,"-2"],[2,"2"]],
+        dots:[[1,0,"",0,0],[-1,0,"",0,0]]
+      });
+      ["slA","slN","slB","slC"].forEach(function(id){
+        const el=document.getElementById(id);
+        if(el) el.addEventListener("input", studioDraw);
+      });
       studioDraw();
     }
-    window.addEventListener("load",boot);setTimeout(boot,400);
+
+    function waitKatex(tries){
+      tries=tries||0;
+      if(window.katex || tries>40){ boot(); return; }
+      setTimeout(function(){ waitKatex(tries+1); }, 50);
+    }
+    if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", function(){ waitKatex(0); });
+    else waitKatex(0);
+    window.addEventListener("load", boot);
   })();
   </script>
 </body>
