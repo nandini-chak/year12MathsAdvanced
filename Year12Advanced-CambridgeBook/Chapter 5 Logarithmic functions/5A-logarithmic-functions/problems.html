@@ -30,7 +30,7 @@
     </div>
     <details class="teacher-note no-print">
       <summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems aligned to Cambridge Exercise 5A; numerical answers follow <em>Chapter-5-Worked-Solutions.pdf</em>. Q1–6 and Q11–20 rewritten with low-floor step-by-step reasoning and formula callouts (stems aligned to Cambridge). Each part has its own Show/Hide button. Sketch questions keep redrawn SVG models inside the relevant part.</div>
+      <div class="body">Stems aligned to Cambridge Exercise 5A; numerical answers and sketch landmarks follow <em>Chapter-5-Worked-Solutions.pdf</em>. Each algebra move is on its own line. Sketch axes are numbered with the same landmarks as the worked solutions (−1, 1, e, 1/2, and so on). Each part has its own Show/Hide button.</div>
     </details>
 
     <article class="q" id="q1">
@@ -328,93 +328,167 @@
     </article>
 
     <article class="q" id="q7">
-      <h2>7 · Reflections of ln x <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Describe and sketch:</p>
-        <p>a reflection of <span class="tex">y=\ln x</span> in the line <span class="tex">y=x</span> (gradient 1 at <span class="tex">(1,0)</span>);</p>
-        <p>b reflection in the <span class="tex">y</span>-axis (horizontal dilation factor <span class="tex">-1</span>).</p></div>
+      <h2>7 · From <span class="tex">e^x</span> to <span class="tex">\ln x</span> and <span class="tex">\ln(-x)</span> <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>a What transformation maps <span class="tex">y=e^x</span> to <span class="tex">y=\log_e x</span>, and how can this be used to find the gradient of <span class="tex">y=\log_e x</span> at its <span class="tex">x</span>-intercept?</p>
+        <p>b What transformation maps <span class="tex">y=\log_e x</span> to <span class="tex">y=\log_e(-x)</span>, and how can this also be read as a dilation?</p>
+        <p>c Sketch <span class="tex">y=\log_e x</span> and <span class="tex">y=\log_e(-x)</span> on one set of axes.</p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Reflection fact:</strong> Reflecting <span class="tex">y=e^x</span> in the line <span class="tex">y=x</span> swaps coordinates and gives the inverse <span class="tex">y=\log_e x</span>. Reflecting in the <span class="tex">y</span>-axis replaces <span class="tex">x</span> by <span class="tex">-x</span>.</p>
-          <p class="step"><strong>a ·</strong> Reflection in <span class="tex">y=x</span> maps <span class="tex">y=e^x</span> to <span class="tex">y=\log_e x</span> (its inverse). The tangent to <span class="tex">e^x</span> at <span class="tex">(0,1)</span> has gradient 1, so after reflection the tangent to <span class="tex">\log_e x</span> at <span class="tex">(1,0)</span> also has gradient 1.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Reflecting in the line <span class="tex">y=x</span> swaps the coordinates. The graph of the inverse is what you get. <span class="tex">y=\log_e x</span> is the inverse of <span class="tex">y=e^x</span>.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> The transformation is a reflection in the line <span class="tex">y=x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> That reflection turns <span class="tex">y=e^x</span> into <span class="tex">y=\log_e x</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> A line of gradient 1 reflects to another line of gradient 1. (The mirror <span class="tex">y=x</span> is itself at 45°, so “steepness 1” stays “steepness 1”.)</p>
+          <p class="step"><strong>Step 4 ·</strong> The tangent to <span class="tex">y=e^x</span> at the <span class="tex">y</span>-intercept <span class="tex">(0,1)</span> has gradient 1.</p>
+          <p class="step"><strong>Step 5 ·</strong> After the swap, that same tangent touches <span class="tex">y=\log_e x</span> at <span class="tex">(1,0)</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> So the gradient of <span class="tex">y=\log_e x</span> at its <span class="tex">x</span>-intercept is also 1.</p>
+          <p class="final"><strong>Answer a:</strong> Reflection in <span class="tex">y=x</span>. Gradient at <span class="tex">(1,0)</span> is 1.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="step"><strong>b ·</strong> Reflection in the <span class="tex">y</span>-axis: replace <span class="tex">x</span> by <span class="tex">-x</span> to get <span class="tex">y=\log_e(-x)</span>, domain <span class="tex">x&lt;0</span>. This is also a horizontal dilation with factor <span class="tex">-1</span>.</p>
-      <div class="plot-frame"><svg id="q7plot" class="plot" viewBox="0 0 720 280"></svg>
-        <div class="legend"><span class="p"><i></i>ln x</span><span class="i"><i></i>ln(−x)</span><span class="i" style="--c:#b45309"><i></i>e^x</span></div></div>
+          <p class="formula-quick"><strong>Quick fact:</strong> Replacing <span class="tex">x</span> by <span class="tex">-x</span> reflects the graph in the <span class="tex">y</span>-axis. The same replacement is a horizontal dilation with factor <span class="tex">-1</span> (the minus sign flips the graph to the other side).</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Start with <span class="tex">y=\log_e x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Replace <span class="tex">x</span> by <span class="tex">-x</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The new equation is <span class="tex">y=\log_e(-x)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> The inside must be positive: <span class="tex">-x&gt;0</span>, so <span class="tex">x&lt;0</span>. The graph sits on the left of the <span class="tex">y</span>-axis.</p>
+          <p class="final"><strong>Answer b:</strong> Reflection in the <span class="tex">y</span>-axis, which is also a horizontal dilation with factor <span class="tex">-1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Numbers to put on the axes:</strong> <span class="tex">\log_e 1=0</span>, so both curves cross the <span class="tex">x</span>-axis at <span class="tex">1</span> and <span class="tex">-1</span>. <span class="tex">\log_e e=1</span>, so the height is 1 at <span class="tex">x=e</span> and at <span class="tex">x=-e</span>.</p>
+          <p class="step"><strong>c · Step 1 ·</strong> <span class="tex">y=\log_e x</span> is only drawn for <span class="tex">x&gt;0</span>. It crosses the <span class="tex">x</span>-axis at <span class="tex">1</span> and passes through <span class="tex">(e,1)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">y=\log_e(-x)</span> is the mirror in the <span class="tex">y</span>-axis. It crosses at <span class="tex">-1</span> and passes through <span class="tex">(-e,1)</span>.</p>
+          <div class="plot-frame"><svg id="q7plot" class="plot" viewBox="0 0 720 340"></svg>
+            <div class="legend"><span class="i"><i></i>ln x</span><span class="p"><i></i>ln(−x)</span></div>
+          </div>
+          <p class="final"><strong>Answer c:</strong> Both curves, with axis marks at <span class="tex">-e</span>, <span class="tex">-1</span>, <span class="tex">1</span>, <span class="tex">e</span> and height <span class="tex">1</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q8">
-      <h2>8 · Transform ln x <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Describe the transformation of <span class="tex">y=\ln x</span> and state the new equation.</p>
-        <p>a up 1 · b down 2 · c horizontal stretch factor 2 · d vertical stretch factor <span class="tex">\tfrac13</span></p></div>
+      <h2>8 · One change to <span class="tex">\ln x</span> <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>Sketch each curve using <strong>one</strong> transformation of <span class="tex">y=\log_e x</span>, and describe that transformation.</p>
+        <p>a <span class="tex">y=\log_e x+1</span> · b <span class="tex">y=\log_e x-2</span> · c <span class="tex">y=\log_e\!\left(\tfrac12 x\right)</span> · d <span class="tex">y=\tfrac13\log_e x</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">y=\ln x+1</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">y=f(x)+k</span> moves the graph <strong>up</strong> by <span class="tex">k</span> when <span class="tex">k&gt;0</span>. Every <span class="tex">y</span>-value increases by <span class="tex">k</span>. The <span class="tex">x</span>-values stay put.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> The parent <span class="tex">y=\log_e x</span> crosses the <span class="tex">x</span>-axis at <span class="tex">1</span>, and has height <span class="tex">1</span> at <span class="tex">x=e</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Adding 1 lifts every point up by 1.</p>
+          <p class="step"><strong>Step 3 ·</strong> The point <span class="tex">(1,0)</span> moves to <span class="tex">(1,1)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> The point <span class="tex">(e,1)</span> moves to <span class="tex">(e,2)</span>.</p>
+          <div class="plot-frame"><svg id="q8a" class="plot" viewBox="0 0 720 340"></svg></div>
+          <p class="final"><strong>Answer a:</strong> Shift <span class="tex">y=\log_e x</span> up 1 unit. Equation <span class="tex">y=\log_e x+1</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">y=\ln x-2</span></p>
+          <p class="formula-quick"><strong>Same idea:</strong> Subtracting 2 moves every point <strong>down</strong> by 2.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Parent points: <span class="tex">(1,0)</span> and <span class="tex">(e,1)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Down 2: <span class="tex">(1,0)</span> moves to <span class="tex">(1,-2)</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">(e,1)</span> moves to <span class="tex">(e,-1)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> The new <span class="tex">x</span>-intercept is where the height is 0 again: <span class="tex">\log_e x-2=0</span>, so <span class="tex">\log_e x=2</span>, so <span class="tex">x=e^2</span>.</p>
+          <div class="plot-frame"><svg id="q8b" class="plot" viewBox="0 0 720 340"></svg></div>
+          <p class="final"><strong>Answer b:</strong> Shift <span class="tex">y=\log_e x</span> down 2 units.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">y=\ln\!\left(\tfrac x2\right)=\ln x-\ln 2</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> A horizontal dilation with factor <span class="tex">k</span> multiplies every <span class="tex">x</span>-distance from the <span class="tex">y</span>-axis by <span class="tex">k</span>. In the equation, replace <span class="tex">x</span> by <span class="tex">x/k</span>.</p>
+          <p class="step"><strong>c · Step 1 ·</strong> The equation is <span class="tex">y=\log_e\!\left(\tfrac12 x\right)=\log_e\!\left(\dfrac{x}{2}\right)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The parent had <span class="tex">x</span> inside the log. Now it has <span class="tex">x/2</span>. That is “replace <span class="tex">x</span> by <span class="tex">x/2</span>”, so the factor is <span class="tex">k=2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Old <span class="tex">x</span>-intercept <span class="tex">1</span> is stretched to <span class="tex">1\times 2=2</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Old point <span class="tex">(e,1)</span> moves to <span class="tex">(2e,1)</span>. The height stays 1; only the <span class="tex">x</span>-value doubles.</p>
+          <div class="plot-frame"><svg id="q8c" class="plot" viewBox="0 0 720 340"></svg></div>
+          <p class="final"><strong>Answer c:</strong> Horizontal stretch of <span class="tex">y=\log_e x</span> with factor 2.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> <span class="tex">y=\tfrac13\ln x</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">y=A\,f(x)</span> multiplies every height by <span class="tex">A</span>. Here <span class="tex">A=\tfrac13</span>, so the graph becomes one-third as tall. <span class="tex">x</span>-values do not move.</p>
+          <p class="step"><strong>d · Step 1 ·</strong> The number <span class="tex">\tfrac13</span> is in front of the whole log, so this is a vertical dilation with factor <span class="tex">\tfrac13</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The <span class="tex">x</span>-intercept stays at <span class="tex">1</span>, because one-third of height 0 is still 0.</p>
+          <p class="step"><strong>Step 3 ·</strong> The old point <span class="tex">(e,1)</span> moves to <span class="tex">\left(e,\tfrac13\right)</span>.</p>
+          <div class="plot-frame"><svg id="q8d" class="plot" viewBox="0 0 720 340"></svg></div>
+          <p class="final"><strong>Answer d:</strong> Vertical stretch of <span class="tex">y=\log_e x</span> with factor <span class="tex">\tfrac13</span>.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q9">
-      <h2>9 · Transform ln(−x) <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Starting from <span class="tex">y=\ln(-x)</span>:</p>
-        <p>a shift down 1 · b reflect in the <span class="tex">x</span>-axis · c vertical stretch factor 3</p></div>
+      <h2>9 · One change to <span class="tex">\ln(-x)</span> <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>Sketch each curve using <strong>one</strong> transformation of <span class="tex">y=\log_e(-x)</span>, and describe that transformation.</p>
+        <p>a <span class="tex">y=\log_e(-x)-1</span> · b <span class="tex">y=-\log_e(-x)</span> · c <span class="tex">y=3\log_e(-x)</span></p>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-<p class="step"><strong>a ·</strong> <span class="tex">y=\ln(-x)-1</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Subtracting 1 moves every point <strong>down</strong> by 1. Parent landmarks: crosses the <span class="tex">x</span>-axis at <span class="tex">-1</span>, and has height <span class="tex">1</span> at <span class="tex">x=-e</span>.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Point <span class="tex">(-1,0)</span> moves down to <span class="tex">(-1,-1)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Point <span class="tex">(-e,1)</span> moves down to <span class="tex">(-e,0)</span>. That is the new <span class="tex">x</span>-intercept.</p>
+          <div class="plot-frame"><svg id="q9a" class="plot" viewBox="0 0 720 340"></svg></div>
+          <p class="final"><strong>Answer a:</strong> Shift <span class="tex">y=\log_e(-x)</span> down 1 unit.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> <span class="tex">y=-\ln(-x)</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> A minus sign in front of the whole log reflects the graph in the <span class="tex">x</span>-axis. Heights change sign; <span class="tex">x</span>-values stay put.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> The <span class="tex">x</span>-intercept stays at <span class="tex">-1</span>, because the opposite of height 0 is still 0.</p>
+          <p class="step"><strong>Step 2 ·</strong> The point <span class="tex">(-e,1)</span> flips to <span class="tex">(-e,-1)</span>.</p>
+          <div class="plot-frame"><svg id="q9b" class="plot" viewBox="0 0 720 340"></svg></div>
+          <p class="final"><strong>Answer b:</strong> Reflect <span class="tex">y=\log_e(-x)</span> in the <span class="tex">x</span>-axis.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> <span class="tex">y=3\ln(-x)</span></p>
+          <p class="formula-quick"><strong>Quick fact:</strong> The 3 in front multiplies every height by 3. This is a vertical dilation with factor 3.</p>
+          <p class="step"><strong>c · Step 1 ·</strong> The <span class="tex">x</span>-intercept stays at <span class="tex">-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The point <span class="tex">(-e,1)</span> moves to <span class="tex">(-e,3)</span>.</p>
+          <div class="plot-frame"><svg id="q9c" class="plot" viewBox="0 0 720 340"></svg></div>
+          <p class="final"><strong>Answer c:</strong> Vertical stretch of <span class="tex">y=\log_e(-x)</span> with factor 3.</p>
         </div>
       </div>
     </article>
 
     <article class="q" id="q10">
-      <h2>10 · Horizontal dilation <span class="band dev">Development</span></h2>
-      <div class="stem"><p>Apply a horizontal dilation factor <span class="tex">\tfrac12</span> to <span class="tex">y=\ln(-x)</span>. Write the equation and sketch.</p></div>
+      <h2>10 · Read the dilation from the graph <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p>The graph below is a dilation of <span class="tex">y=\log_e(-x)</span>. Describe the dilation, and write down the equation of the curve.</p>
+        <div class="plot-frame"><svg id="q10given" class="plot" viewBox="0 0 720 340"></svg></div>
+      </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
         <div class="sol">
-<p class="formula-quick"><strong>Log laws:</strong> <span class="tex">\ln(ab)=\ln a+\ln b</span>, <span class="tex">\ln(a/b)=\ln a-\ln b</span>, <span class="tex">\ln(a^n)=n\ln a</span>. Inverse facts: <span class="tex">\ln e^x=x</span>, <span class="tex">e^{\ln x}=x</span> (<span class="tex">x&gt;0</span>).</p>
-        <p class="step">Replace <span class="tex">x</span> by <span class="tex">2x</span>: <span class="tex">y=\ln(-2x)</span> (domain <span class="tex">x&lt;0</span>).</p>
-      <div class="plot-frame"><svg id="q10plot" class="plot" viewBox="0 0 720 260"></svg>
-        <div class="legend"><span class="p"><i></i>ln(−x)</span><span class="i"><i></i>ln(−2x)</span></div></div>
+          <p class="formula-quick"><strong>Quick fact:</strong> A horizontal dilation with factor <span class="tex">k</span> multiplies every distance from the <span class="tex">y</span>-axis by <span class="tex">k</span>. To write the new equation, replace <span class="tex">x</span> by <span class="tex">x/k</span>. If <span class="tex">k=\tfrac12</span>, then <span class="tex">x/k=x\div\tfrac12=2x</span>. Dividing by <span class="tex">\tfrac12</span> is the same as multiplying by 2. That is why a factor of <span class="tex">\tfrac12</span> puts a 2 inside the log.</p>
+          <p class="step"><strong>Step 1 ·</strong> Read the given graph. It crosses the <span class="tex">x</span>-axis at <span class="tex">-\tfrac12</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The dashed lines show height <span class="tex">1</span> at <span class="tex">x=-\dfrac{e}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Compare with the parent <span class="tex">y=\log_e(-x)</span>. That parent crosses the <span class="tex">x</span>-axis at <span class="tex">-1</span>, because <span class="tex">\log_e 1=0</span> means <span class="tex">-x=1</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> The parent has height <span class="tex">1</span> at <span class="tex">x=-e</span>, because <span class="tex">\log_e e=1</span> means <span class="tex">-x=e</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> New intercept <span class="tex">-\tfrac12</span> is half of <span class="tex">-1</span>. New height-1 point <span class="tex">-\dfrac{e}{2}</span> is half of <span class="tex">-e</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Every <span class="tex">x</span>-distance from the <span class="tex">y</span>-axis has been halved. The dilation factor is <span class="tex">k=\tfrac12</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Replace <span class="tex">x</span> in the parent by <span class="tex">x\div\tfrac12</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">x\div\tfrac12=2x</span>. This is why we multiply by 2.</p>
+          <p class="step"><strong>Step 9 ·</strong> Parent <span class="tex">y=\log_e(-x)</span> becomes <span class="tex">y=\log_e(-2x)</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Check the inside: <span class="tex">-2x&gt;0</span> means <span class="tex">x&lt;0</span>. The curve stays on the left of the <span class="tex">y</span>-axis.</p>
+          <div class="plot-frame"><svg id="q10plot" class="plot" viewBox="0 0 720 340"></svg>
+            <div class="legend"><span class="p"><i></i>ln(−x)</span><span class="i"><i></i>ln(−2x)</span></div>
+          </div>
+          <p class="final"><strong>Answer:</strong> Horizontal dilation of <span class="tex">y=\log_e(-x)</span> with factor <span class="tex">\tfrac12</span>. Equation <span class="tex">y=\log_e(-2x)</span>.</p>
         </div>
       </div>
     </article>
@@ -431,61 +505,118 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Method:</strong> Write every power with the <strong>same base</strong>. Remember <span class="tex">4^x=(2^2)^x=(2^x)^2</span>. Then put <span class="tex">u=2^x</span> (always positive) and solve an ordinary quadratic.</p>
-          <p class="step"><strong>a · Step 1 ·</strong> Rewrite: <span class="tex">4^x=(2^x)^2</span>, so the equation is <span class="tex">(2^x)^2-9\cdot 2^x+14=0</span>.</p>
-          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=2^x</span>. Then <span class="tex">u^2-9u+14=0</span>.</p>
-          <p class="step"><strong>Step 3 ·</strong> Factor: <span class="tex">(u-2)(u-7)=0</span>, so <span class="tex">u=2</span> or <span class="tex">u=7</span>.</p>
-          <p class="step"><strong>Step 4 ·</strong> Back-substitute. If <span class="tex">2^x=2</span>, then <span class="tex">x=1</span>. If <span class="tex">2^x=7</span>, then <span class="tex">x=\log_2 7</span>.</p>
+          <p class="formula-quick"><strong>Method:</strong> Write every power with the same base. <span class="tex">4=2^2</span>, so <span class="tex">4^x=(2^2)^x=(2^x)^2</span>. Then put <span class="tex">u=2^x</span> and solve an ordinary quadratic.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Start with <span class="tex">4^x-9\times 2^x+14=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Write <span class="tex">4^x</span> as <span class="tex">(2^2)^x</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">(2^2)^x=(2^x)^2</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> The equation is <span class="tex">(2^x)^2-9\times 2^x+14=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Let <span class="tex">u=2^x</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Then <span class="tex">u^2-9u+14=0</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Look for two numbers that multiply to 14 and add to 9. They are 2 and 7.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">(u-2)(u-7)=0</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> So <span class="tex">u=2</span> or <span class="tex">u=7</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Put <span class="tex">2^x</span> back: <span class="tex">2^x=2</span> or <span class="tex">2^x=7</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> First case: <span class="tex">2^x=2</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> <span class="tex">2=2^1</span>, so <span class="tex">x=1</span>.</p>
+          <p class="step"><strong>Step 13 ·</strong> Second case: <span class="tex">2^x=7</span>.</p>
+          <p class="step"><strong>Step 14 ·</strong> 7 is not a whole-number power of 2, so <span class="tex">x=\log_2 7</span>.</p>
           <p class="final"><strong>Answer a:</strong> <span class="tex">x=1</span> or <span class="tex">x=\log_2 7</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> Write <span class="tex">3^{2x}=(3^x)^2</span>, put <span class="tex">u=3^x</span> (always positive), solve the quadratic, then reject any negative <span class="tex">u</span>.</p>
-          <p class="step"><strong>b · Step 1 ·</strong> Equation becomes <span class="tex">(3^x)^2-8\cdot 3^x-9=0</span>.</p>
-          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=3^x</span>. Then <span class="tex">u^2-8u-9=0</span>.</p>
-          <p class="step"><strong>Step 3 ·</strong> Factor: <span class="tex">(u+1)(u-9)=0</span>, so <span class="tex">u=-1</span> or <span class="tex">u=9</span>.</p>
-          <p class="step"><strong>Step 4 ·</strong> <span class="tex">3^x=-1</span> is impossible (powers of 3 are never negative). <span class="tex">3^x=9=3^2</span> → <span class="tex">x=2</span>.</p>
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">3^{2x}=(3^x)^2</span>. Put <span class="tex">u=3^x</span>.</p>
+          <p class="formula-quick"><strong>Why a power of 3 is never negative:</strong> <span class="tex">3^1=3</span>, <span class="tex">3^2=9</span>, <span class="tex">3^0=1</span>, <span class="tex">3^{-1}=\tfrac13</span>, <span class="tex">3^{-2}=\tfrac19</span>. Multiplying positive 3s stays positive. Taking 1 divided by a positive number stays positive. So <span class="tex">3^x</span> is always greater than 0. It can never equal <span class="tex">-1</span>, or any other negative number.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Start with <span class="tex">3^{2x}-8\times 3^x-9=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">3^{2x}=(3^x)^2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The equation is <span class="tex">(3^x)^2-8\times 3^x-9=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Let <span class="tex">u=3^x</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Then <span class="tex">u^2-8u-9=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Two numbers that multiply to <span class="tex">-9</span> and add to <span class="tex">-8</span>: <span class="tex">1</span> and <span class="tex">-9</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">(u+1)(u-9)=0</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> So <span class="tex">u=-1</span> or <span class="tex">u=9</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> First case: <span class="tex">3^x=-1</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> No solution. A power of 3 is never negative, so it cannot equal <span class="tex">-1</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Second case: <span class="tex">3^x=9</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> <span class="tex">9=3^2</span>, so <span class="tex">x=2</span>.</p>
           <p class="final"><strong>Answer b:</strong> <span class="tex">x=2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c i</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">25^x=(5^2)^x=(5^x)^2</span>. Put <span class="tex">u=5^x</span>.</p>
-          <p class="step"><strong>c i ·</strong> <span class="tex">(5^x)^2-26\cdot 5^x+25=0</span>. Let <span class="tex">u=5^x</span>: <span class="tex">u^2-26u+25=0</span>.</p>
-          <p class="step">Factor: <span class="tex">(u-1)(u-25)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=25</span>.</p>
-          <p class="step"><span class="tex">5^x=1\Rightarrow x=0</span>. <span class="tex">5^x=25=5^2\Rightarrow x=2</span>.</p>
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">25=5^2</span>, so <span class="tex">25^x=(5^x)^2</span>. Put <span class="tex">u=5^x</span>.</p>
+          <p class="step"><strong>c i · Step 1 ·</strong> Start with <span class="tex">25^x-26\times 5^x+25=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">25^x=(5^2)^x=(5^x)^2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The equation is <span class="tex">(5^x)^2-26\times 5^x+25=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Let <span class="tex">u=5^x</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Then <span class="tex">u^2-26u+25=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Two numbers that multiply to 25 and add to 26: 1 and 25.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">(u-1)(u-25)=0</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> So <span class="tex">u=1</span> or <span class="tex">u=25</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> First case: <span class="tex">5^x=1</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> <span class="tex">1=5^0</span>, so <span class="tex">x=0</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Second case: <span class="tex">5^x=25</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> <span class="tex">25=5^2</span>, so <span class="tex">x=2</span>.</p>
           <p class="final"><strong>Answer c i:</strong> <span class="tex">x=0</span> or <span class="tex">x=2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c ii</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">9^x=(3^x)^2</span>. Put <span class="tex">u=3^x</span>.</p>
-          <p class="step"><strong>c ii ·</strong> <span class="tex">u^2-5u+4=0</span> → <span class="tex">(u-1)(u-4)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=4</span>.</p>
-          <p class="step"><span class="tex">3^x=1\Rightarrow x=0</span>. <span class="tex">3^x=4\Rightarrow x=\log_3 4</span>.</p>
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">9=3^2</span>, so <span class="tex">9^x=(3^x)^2</span>. Put <span class="tex">u=3^x</span>.</p>
+          <p class="step"><strong>c ii · Step 1 ·</strong> Start with <span class="tex">9^x-5\times 3^x+4=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">9^x=(3^2)^x=(3^x)^2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The equation is <span class="tex">(3^x)^2-5\times 3^x+4=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Let <span class="tex">u=3^x</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Then <span class="tex">u^2-5u+4=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Two numbers that multiply to 4 and add to 5: 1 and 4.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">(u-1)(u-4)=0</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> So <span class="tex">u=1</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> First case: <span class="tex">3^x=1</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> <span class="tex">1=3^0</span>, so <span class="tex">x=0</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Second case: <span class="tex">3^x=4</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> 4 is not a whole-number power of 3, so <span class="tex">x=\log_3 4</span>.</p>
           <p class="final"><strong>Answer c ii:</strong> <span class="tex">x=0</span> or <span class="tex">x=\log_3 4</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c iii</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">3^{2x}=(3^x)^2</span>. Put <span class="tex">u=3^x</span>. Reject negative <span class="tex">u</span>.</p>
-          <p class="step"><strong>c iii ·</strong> <span class="tex">u^2-u-20=0</span> → <span class="tex">(u+4)(u-5)=0</span> → <span class="tex">u=-4</span> or <span class="tex">u=5</span>.</p>
-          <p class="step"><span class="tex">3^x=-4</span> impossible. <span class="tex">3^x=5\Rightarrow x=\log_3 5</span>.</p>
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">3^{2x}=(3^x)^2</span>. Put <span class="tex">u=3^x</span>. A power of 3 is always positive, so a negative <span class="tex">u</span> is thrown away.</p>
+          <p class="step"><strong>c iii · Step 1 ·</strong> Start with <span class="tex">3^{2x}-3^x-20=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=3^x</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Then <span class="tex">u^2-u-20=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Two numbers that multiply to <span class="tex">-20</span> and add to <span class="tex">-1</span>: <span class="tex">4</span> and <span class="tex">-5</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">(u+4)(u-5)=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> So <span class="tex">u=-4</span> or <span class="tex">u=5</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> First case: <span class="tex">3^x=-4</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> No solution. A power of 3 is never negative.</p>
+          <p class="step"><strong>Step 9 ·</strong> Second case: <span class="tex">3^x=5</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> So <span class="tex">x=\log_3 5</span>.</p>
           <p class="final"><strong>Answer c iii:</strong> <span class="tex">x=\log_3 5</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c iv</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method + tidy first:</strong> <span class="tex">2^{x+1}=2\cdot 2^x</span> and <span class="tex">2^3=8</span>. Put <span class="tex">u=2^x</span>.</p>
-          <p class="step"><strong>c iv ·</strong> Start with <span class="tex">4^x-3\cdot 2^{x+1}+8=0</span>.</p>
-          <p class="step">Rewrite: <span class="tex">(2^x)^2-3\cdot(2\cdot 2^x)+8=0</span> → <span class="tex">u^2-6u+8=0</span>.</p>
-          <p class="step">Factor: <span class="tex">(u-2)(u-4)=0</span> → <span class="tex">u=2</span> or <span class="tex">u=4</span>.</p>
-          <p class="step"><span class="tex">2^x=2\Rightarrow x=1</span>. <span class="tex">2^x=4=2^2\Rightarrow x=2</span>.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">2^{x+1}=2^x\times 2^1=2\times 2^x</span>. Also <span class="tex">2^3=8</span>. Then put <span class="tex">u=2^x</span>.</p>
+          <p class="step"><strong>c iv · Step 1 ·</strong> Start with <span class="tex">4^x-3\times 2^{x+1}+2^3=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">2^3=8</span>, so the equation is <span class="tex">4^x-3\times 2^{x+1}+8=0</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">4^x=(2^x)^2</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">2^{x+1}=2\times 2^x</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> So <span class="tex">3\times 2^{x+1}=3\times 2\times 2^x=6\times 2^x</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> The equation is <span class="tex">(2^x)^2-6\times 2^x+8=0</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Let <span class="tex">u=2^x</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> Then <span class="tex">u^2-6u+8=0</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> Two numbers that multiply to 8 and add to 6: 2 and 4.</p>
+          <p class="step"><strong>Step 10 ·</strong> <span class="tex">(u-2)(u-4)=0</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> So <span class="tex">u=2</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> First case: <span class="tex">2^x=2</span>.</p>
+          <p class="step"><strong>Step 13 ·</strong> <span class="tex">2=2^1</span>, so <span class="tex">x=1</span>.</p>
+          <p class="step"><strong>Step 14 ·</strong> Second case: <span class="tex">2^x=4</span>.</p>
+          <p class="step"><strong>Step 15 ·</strong> <span class="tex">4=2^2</span>, so <span class="tex">x=2</span>.</p>
           <p class="final"><strong>Answer c iv:</strong> <span class="tex">x=1</span> or <span class="tex">x=2</span>.</p>
         </div>
       </div>
@@ -501,37 +632,71 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Method:</strong> Notice <span class="tex">e^{2x}=(e^x)^2</span>. Put <span class="tex">u=e^x</span> (always <span class="tex">&gt;0</span>). Solve the quadratic, then take <span class="tex">x=\ln u</span>.</p>
-          <p class="step"><strong>a ·</strong> Let <span class="tex">u=e^x</span>. Equation: <span class="tex">u^2-2u+1=0</span> → <span class="tex">(u-1)^2=0</span> → <span class="tex">u=1</span>.</p>
-          <p class="step"><span class="tex">e^x=1\Rightarrow x=\ln 1=0</span>.</p>
+          <p class="formula-quick"><strong>Method:</strong> <span class="tex">e^{2x}=(e^x)^2</span>. Put <span class="tex">u=e^x</span>. A power of <span class="tex">e</span> is always positive.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Start with <span class="tex">e^{2x}-2e^x+1=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">e^{2x}=(e^x)^2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Let <span class="tex">u=e^x</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Then <span class="tex">u^2-2u+1=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">(u-1)(u-1)=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> So <span class="tex">u=1</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">e^x=1</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">1=e^0</span>, so <span class="tex">x=0</span>.</p>
           <p class="final"><strong>Answer a:</strong> <span class="tex">x=0</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=e^x</span>. Reject any negative root for <span class="tex">u</span>.</p>
-          <p class="step"><strong>b ·</strong> <span class="tex">u^2+u-6=0</span> → <span class="tex">(u+3)(u-2)=0</span> → <span class="tex">u=-3</span> or <span class="tex">u=2</span>.</p>
-          <p class="step"><span class="tex">e^x=-3</span> impossible. <span class="tex">e^x=2\Rightarrow x=\ln 2</span> (also written <span class="tex">\log_e 2</span>).</p>
+          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=e^x</span>. <span class="tex">e^x</span> is never negative, for the same reason a power of 3 is never negative: <span class="tex">e</span> is positive, and powers of a positive number stay positive.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Start with <span class="tex">e^{2x}+e^x-6=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=e^x</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Then <span class="tex">u^2+u-6=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Two numbers that multiply to <span class="tex">-6</span> and add to <span class="tex">1</span>: <span class="tex">3</span> and <span class="tex">-2</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">(u+3)(u-2)=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> So <span class="tex">u=-3</span> or <span class="tex">u=2</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> First case: <span class="tex">e^x=-3</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> No solution. A power of <span class="tex">e</span> is never negative.</p>
+          <p class="step"><strong>Step 9 ·</strong> Second case: <span class="tex">e^x=2</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> So <span class="tex">x=\log_e 2</span> (the same as <span class="tex">\ln 2</span>).</p>
           <p class="final"><strong>Answer b:</strong> <span class="tex">x=\log_e 2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Tip:</strong> Here powers of <span class="tex">e^{2x}</span> appear. Put <span class="tex">u=e^{2x}</span> (still always positive).</p>
-          <p class="step"><strong>c ·</strong> Let <span class="tex">u=e^{2x}</span>. Then <span class="tex">u^2-10u+9=0</span> → <span class="tex">(u-1)(u-9)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=9</span>.</p>
-          <p class="step"><span class="tex">e^{2x}=1\Rightarrow 2x=0\Rightarrow x=0</span>.</p>
-          <p class="step"><span class="tex">e^{2x}=9\Rightarrow (e^x)^2=9\Rightarrow e^x=3</span> (not <span class="tex">-3</span>) → <span class="tex">x=\log_e 3</span>.</p>
+          <p class="formula-quick"><strong>Which substitution:</strong> The powers are <span class="tex">e^{4x}</span> and <span class="tex">e^{2x}</span>. <span class="tex">e^{4x}=(e^{2x})^2</span>, so put <span class="tex">u=e^{2x}</span>.</p>
+          <p class="step"><strong>c · Step 1 ·</strong> Start with <span class="tex">e^{4x}-10e^{2x}+9=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">e^{4x}=(e^{2x})^2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Let <span class="tex">u=e^{2x}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Then <span class="tex">u^2-10u+9=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Two numbers that multiply to 9 and add to 10: 1 and 9.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">(u-1)(u-9)=0</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> So <span class="tex">u=1</span> or <span class="tex">u=9</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> First case: <span class="tex">e^{2x}=1</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> <span class="tex">1=e^0</span>, so <span class="tex">2x=0</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> <span class="tex">x=0</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Second case: <span class="tex">e^{2x}=9</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> <span class="tex">e^{2x}=(e^x)^2</span> and <span class="tex">9=3^2</span>, so <span class="tex">(e^x)^2=3^2</span>.</p>
+          <p class="step"><strong>Step 13 ·</strong> So <span class="tex">e^x=3</span> or <span class="tex">e^x=-3</span>.</p>
+          <p class="step"><strong>Step 14 ·</strong> <span class="tex">e^x=-3</span> has no solution, because a power of <span class="tex">e</span> is never negative.</p>
+          <p class="step"><strong>Step 15 ·</strong> <span class="tex">e^x=3</span> gives <span class="tex">x=\log_e 3</span>.</p>
           <p class="final"><strong>Answer c:</strong> <span class="tex">x=0</span> or <span class="tex">x=\log_e 3</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=e^{2x}</span>. Remember <span class="tex">e^{\text{anything}}</span> is never zero.</p>
-          <p class="step"><strong>d ·</strong> <span class="tex">u^2-u=0</span> → <span class="tex">u(u-1)=0</span> → <span class="tex">u=0</span> or <span class="tex">u=1</span>.</p>
-          <p class="step"><span class="tex">e^{2x}=0</span> impossible. <span class="tex">e^{2x}=1\Rightarrow x=0</span>.</p>
+          <p class="formula-quick"><strong>Same substitution:</strong> Put <span class="tex">u=e^{2x}</span>. A power of <span class="tex">e</span> is never 0: <span class="tex">e^2</span>, <span class="tex">e^1</span>, <span class="tex">e^0=1</span>, <span class="tex">e^{-1}=\tfrac1e</span> are all positive. None of them is zero.</p>
+          <p class="step"><strong>d · Step 1 ·</strong> Start with <span class="tex">e^{4x}-e^{2x}=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">e^{4x}=(e^{2x})^2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Let <span class="tex">u=e^{2x}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Then <span class="tex">u^2-u=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Factor: <span class="tex">u(u-1)=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> So <span class="tex">u=0</span> or <span class="tex">u=1</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> First case: <span class="tex">e^{2x}=0</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> No solution. A power of <span class="tex">e</span> is never zero.</p>
+          <p class="step"><strong>Step 9 ·</strong> Second case: <span class="tex">e^{2x}=1</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> <span class="tex">1=e^0</span>, so <span class="tex">2x=0</span> and <span class="tex">x=0</span>.</p>
           <p class="final"><strong>Answer d:</strong> <span class="tex">x=0</span>.</p>
         </div>
       </div>
@@ -546,18 +711,33 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Method:</strong> Put <span class="tex">u=\log_e x</span>. Solve the quadratic for <span class="tex">u</span>, then convert with <span class="tex">x=e^u</span>. Domain: <span class="tex">x&gt;0</span>.</p>
-          <p class="step"><strong>a ·</strong> Let <span class="tex">u=\log_e x</span>. Then <span class="tex">u^2-5u+4=0</span> → <span class="tex">(u-1)(u-4)=0</span> → <span class="tex">u=1</span> or <span class="tex">u=4</span>.</p>
-          <p class="step"><span class="tex">\log_e x=1\Rightarrow x=e</span>. <span class="tex">\log_e x=4\Rightarrow x=e^4</span>.</p>
+          <p class="formula-quick"><strong>Method:</strong> Put <span class="tex">u=\log_e x</span>. Solve for <span class="tex">u</span>, then use <span class="tex">\log_e x=k</span> means <span class="tex">x=e^k</span>. The log is only defined for <span class="tex">x&gt;0</span>.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Let <span class="tex">u=\log_e x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The equation becomes <span class="tex">u^2-5u+4=0</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Two numbers that multiply to 4 and add to 5: 1 and 4.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">(u-1)(u-4)=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> So <span class="tex">u=1</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> First case: <span class="tex">\log_e x=1</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> That means <span class="tex">x=e^1=e</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> Second case: <span class="tex">\log_e x=4</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> That means <span class="tex">x=e^4</span>.</p>
           <p class="final"><strong>Answer a:</strong> <span class="tex">x=e</span> or <span class="tex">x=e^4</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=\log_e x</span>. Bring all terms to one side before factoring (do not cancel <span class="tex">u</span> too early — you would lose a root).</p>
-          <p class="step"><strong>b ·</strong> <span class="tex">u^2=3u</span> → <span class="tex">u^2-3u=0</span> → <span class="tex">u(u-3)=0</span> → <span class="tex">u=0</span> or <span class="tex">u=3</span>.</p>
-          <p class="step"><span class="tex">\log_e x=0\Rightarrow x=1</span>. <span class="tex">\log_e x=3\Rightarrow x=e^3</span>.</p>
+          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=\log_e x</span>. Move every term to one side before you factor. Do not divide both sides by <span class="tex">u</span>. Dividing would hide the answer <span class="tex">u=0</span>.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Let <span class="tex">u=\log_e x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The equation is <span class="tex">u^2=3u</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Subtract <span class="tex">3u</span> from both sides: <span class="tex">u^2-3u=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Factor: <span class="tex">u(u-3)=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> So <span class="tex">u=0</span> or <span class="tex">u=3</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> First case: <span class="tex">\log_e x=0</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">\log_e x=0</span> means <span class="tex">x=e^0</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">e^0=1</span>, so <span class="tex">x=1</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> Second case: <span class="tex">\log_e x=3</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> That means <span class="tex">x=e^3</span>.</p>
           <p class="final"><strong>Answer b:</strong> <span class="tex">x=1</span> or <span class="tex">x=e^3</span>.</p>
         </div>
       </div>
@@ -615,7 +795,10 @@
         <button class="btn show" type="button" aria-expanded="false">Show solution · b iii</button>
         <div class="sol">
           <p class="formula-quick"><strong>Combine laws:</strong> <span class="tex">\ln a-\ln b+\ln c=\ln\!\left(\dfrac{a\cdot c}{b}\right)</span>.</p>
-          <p class="step"><strong>b iii ·</strong> <span class="tex">\ln 12-\ln 15+\ln 10=\ln\!\left(\dfrac{12\times 10}{15}\right)=\ln\!\left(\dfrac{120}{15}\right)=\ln 8</span>.</p>
+          <p class="step"><strong>b iii · Step 1 ·</strong> Plus means multiply inside the log, minus means divide: <span class="tex">\ln 12-\ln 15+\ln 10=\ln\!\left(\dfrac{12\times 10}{15}\right)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">12\times 10=120</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">120\div 15=8</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> So the single log is <span class="tex">\ln 8</span>.</p>
           <p class="final"><strong>Answer b iii:</strong> <span class="tex">\ln 8</span>.</p>
         </div>
       </div>
@@ -634,57 +817,113 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Linear scale:</strong> Equal gaps mean equal <strong>differences</strong> (e.g. 5 AU, 10 AU, 15 AU look evenly spaced).</p>
-          <p class="step"><strong>a ·</strong> On 0 to about 35 AU, Mercury–Mars sit almost on top of each other near 0, while Jupiter–Neptune are spread out across most of the line.</p>
+          <p class="formula-quick"><strong>Linear scale:</strong> Equal gaps on the line mean equal <strong>differences</strong>. From 0 to 5 AU is the same picture-distance as from 25 to 30 AU.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Draw a number line from 0 to 35. Mark 0, 5, 10, 15, 20, 25, 30 and 35.</p>
+          <p class="step"><strong>Step 2 ·</strong> Put the Sun at 0. Then place each planet at its AU number.</p>
+          <p class="step"><strong>Step 3 ·</strong> Mercury 0.39, Venus 0.72, Earth 1 and Mars 1.52 all sit in the first 2 AU. On a line that runs to 35, those four dots land almost on top of each other.</p>
+          <p class="step"><strong>Step 4 ·</strong> Jupiter 5.2, Saturn 9.5, Uranus 19.2 and Neptune 30.1 are spread across the rest of the line.</p>
           <div class="plot-frame" style="padding:.5rem">
-            <svg viewBox="0 0 720 90" width="100%" height="90" aria-label="Linear AU number line">
-              <line x1="40" y1="45" x2="680" y2="45" stroke="#9aa3b0" stroke-width="2"/>
-              <text x="40" y="70" font-size="11" fill="#475569">0</text>
-              <text x="200" y="70" font-size="11" fill="#475569">10</text>
-              <text x="360" y="70" font-size="11" fill="#475569">20</text>
-              <text x="520" y="70" font-size="11" fill="#475569">30</text>
-              <!-- positions: AU*640/32 + 40 roughly max 32 -->
-              <circle cx="40" cy="45" r="4" fill="#b45309"/><text x="34" y="28" font-size="9" fill="#b45309">Sun</text>
-              <circle cx="48" cy="45" r="3" fill="#1d4ed8"/>
-              <circle cx="54" cy="45" r="3" fill="#1d4ed8"/>
-              <circle cx="60" cy="45" r="3" fill="#1d4ed8"/>
-              <circle cx="70" cy="45" r="3" fill="#1d4ed8"/>
-              <circle cx="144" cy="45" r="4" fill="#0f766e"/><text x="128" y="28" font-size="9" fill="#0f766e">Jup</text>
-              <circle cx="230" cy="45" r="4" fill="#0f766e"/><text x="214" y="28" font-size="9" fill="#0f766e">Sat</text>
-              <circle cx="424" cy="45" r="4" fill="#0f766e"/><text x="404" y="28" font-size="9" fill="#0f766e">Ura</text>
-              <circle cx="642" cy="45" r="4" fill="#0f766e"/><text x="616" y="28" font-size="9" fill="#0f766e">Nep</text>
+            <svg viewBox="0 0 720 150" width="100%" height="150" aria-label="Linear AU number line">
+              <line x1="48" y1="78" x2="690" y2="78" stroke="#64748b" stroke-width="2"/>
+              <polygon points="690,78 682,74 682,82" fill="#64748b"/>
+              <text x="48" y="100" font-size="12" fill="#475569" text-anchor="middle">0</text>
+              <text x="140" y="100" font-size="12" fill="#475569" text-anchor="middle">5</text>
+              <text x="231" y="100" font-size="12" fill="#475569" text-anchor="middle">10</text>
+              <text x="323" y="100" font-size="12" fill="#475569" text-anchor="middle">15</text>
+              <text x="415" y="100" font-size="12" fill="#475569" text-anchor="middle">20</text>
+              <text x="507" y="100" font-size="12" fill="#475569" text-anchor="middle">25</text>
+              <text x="598" y="100" font-size="12" fill="#475569" text-anchor="middle">30</text>
+              <text x="690" y="100" font-size="12" fill="#475569" text-anchor="middle">35</text>
+              <circle cx="48" cy="78" r="4.5" fill="#b45309"/>
+              <text x="48" y="128" font-size="11" fill="#b45309" text-anchor="middle">Sun 0</text>
+              <circle cx="55" cy="78" r="3.5" fill="#1d4ed8"/>
+              <circle cx="61" cy="78" r="3.5" fill="#1d4ed8"/>
+              <circle cx="66" cy="78" r="3.5" fill="#1d4ed8"/>
+              <circle cx="76" cy="78" r="3.5" fill="#1d4ed8"/>
+              <text x="66" y="28" font-size="11" fill="#1d4ed8" text-anchor="start">Mercury 0.39, Venus 0.72,</text>
+              <text x="66" y="44" font-size="11" fill="#1d4ed8" text-anchor="start">Earth 1, Mars 1.52</text>
+              <line x1="66" y1="50" x2="66" y2="70" stroke="#1d4ed8" stroke-width="1"/>
+              <circle cx="143" cy="78" r="4.5" fill="#0f766e"/>
+              <text x="143" y="124" font-size="12" fill="#0f766e" text-anchor="middle">Jupiter 5.2</text>
+              <circle cx="222" cy="78" r="4.5" fill="#0f766e"/>
+              <text x="222" y="58" font-size="12" fill="#0f766e" text-anchor="middle">Saturn 9.5</text>
+              <circle cx="400" cy="78" r="4.5" fill="#0f766e"/>
+              <text x="400" y="58" font-size="12" fill="#0f766e" text-anchor="middle">Uranus 19.2</text>
+              <circle cx="600" cy="78" r="4.5" fill="#0f766e"/>
+              <text x="600" y="58" font-size="12" fill="#0f766e" text-anchor="middle">Neptune 30.1</text>
             </svg>
-            <p style="font-size:.85rem;color:#64748b;margin:.25rem 0 0">Inner four (Me/Ve/Ea/Ma) cluster near the Sun; outer planets spread out.</p>
           </div>
-          <p class="final"><strong>Comment:</strong> The four rocky planets bunch near the Sun; the gas/ice giants are widely spaced.</p>
+          <p class="final"><strong>Comment:</strong> The four inner planets bunch next to the Sun. The four outer planets are widely spaced.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b i</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Log scale:</strong> Equal gaps mean equal <strong>ratios</strong>. Using <span class="tex">\ln</span> of each AU (any base works): Mercury ≈ −0.94, Venus ≈ −0.33, Earth 0, Mars ≈ 0.42, Jupiter ≈ 1.65, Saturn ≈ 2.25, Uranus ≈ 2.95, Neptune ≈ 3.40.</p>
-          <p class="step"><strong>b i–ii ·</strong> Plot those log values on a number line, but label each point with the original AU (0.39, 0.72, …).</p>
+          <p class="formula-quick"><strong>Log scale:</strong> We do <strong>not</strong> plot the AU number itself. We plot the logarithm of the AU. Equal gaps then mean equal <strong>ratios</strong> (times by the same amount), not equal differences. Any base works. This solution uses <span class="tex">\ln</span> (log base <span class="tex">e</span>). Leave the Sun out: its distance is 0, and a log of 0 does not exist (see part d).</p>
+          <p class="step"><strong>b i · Step 1 ·</strong> Pick Mercury and do it slowly. Distance = 0.39 AU.</p>
+          <p class="step"><strong>Step 2 ·</strong> Press <span class="tex">\ln 0.39</span> on the calculator. The display is about <span class="tex">-0.94</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> What that means: <span class="tex">e^{-0.94}\approx 0.39</span>. The log is negative because 0.39 is less than 1 (closer to the Sun than Earth is).</p>
+          <p class="step"><strong>Step 4 ·</strong> Same button for every other planet. Only the AU number changes.</p>
+          <p class="step"><strong>Step 5 ·</strong> Venus: <span class="tex">\ln 0.72\approx -0.33</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Earth: <span class="tex">\ln 1=0</span>, because <span class="tex">e^0=1</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Mars: <span class="tex">\ln 1.52\approx 0.42</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> Jupiter: <span class="tex">\ln 5.2\approx 1.65</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> Saturn: <span class="tex">\ln 9.5\approx 2.25</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Uranus: <span class="tex">\ln 19.2\approx 2.95</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Neptune: <span class="tex">\ln 30.1\approx 3.40</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> Draw a number line from about <span class="tex">-1</span> to about <span class="tex">3.5</span> and put a dot at each of those eight log values. Do not put the Sun on this line.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b ii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>What to write under the dots:</strong> The dot is placed using the log. The label under the dot is the planet’s <strong>name</strong> and its <strong>real AU distance</strong>, not the log number. The tick numbers on the line (−1, 0, 1, 2, 3) are the logs.</p>
+          <p class="step"><strong>b ii ·</strong> Under Mercury’s dot write “Mercury 0.39 AU”, not “−0.94”. Do the same for every planet.</p>
           <div class="plot-frame" style="padding:.5rem">
-            <svg viewBox="0 0 720 110" width="100%" height="110" aria-label="Log AU number line">
-              <line x1="40" y1="50" x2="680" y2="50" stroke="#9aa3b0" stroke-width="2"/>
-              <text x="80" y="78" font-size="10" fill="#475569">−1</text>
-              <text x="200" y="78" font-size="10" fill="#475569">0</text>
-              <text x="320" y="78" font-size="10" fill="#475569">1</text>
-              <text x="440" y="78" font-size="10" fill="#475569">2</text>
-              <text x="560" y="78" font-size="10" fill="#475569">3</text>
-              <!-- map ln from -1 to 3.5 onto 80..620 -->
-              <circle cx="88" cy="50" r="4" fill="#1d4ed8"/><text x="70" y="30" font-size="9" fill="#1d4ed8">0.39</text>
-              <circle cx="160" cy="50" r="4" fill="#1d4ed8"/><text x="142" y="30" font-size="9" fill="#1d4ed8">0.72</text>
-              <circle cx="200" cy="50" r="4" fill="#1d4ed8"/><text x="190" y="30" font-size="9" fill="#1d4ed8">1</text>
-              <circle cx="250" cy="50" r="4" fill="#1d4ed8"/><text x="232" y="30" font-size="9" fill="#1d4ed8">1.52</text>
-              <circle cx="398" cy="50" r="4" fill="#0f766e"/><text x="382" y="30" font-size="9" fill="#0f766e">5.2</text>
-              <circle cx="470" cy="50" r="4" fill="#0f766e"/><text x="452" y="30" font-size="9" fill="#0f766e">9.5</text>
-              <circle cx="554" cy="50" r="4" fill="#0f766e"/><text x="532" y="30" font-size="9" fill="#0f766e">19.2</text>
-              <circle cx="608" cy="50" r="4" fill="#0f766e"/><text x="586" y="30" font-size="9" fill="#0f766e">30.1</text>
+            <svg viewBox="0 0 720 168" width="100%" height="168" aria-label="Log scale of planet distances with names">
+              <line x1="70" y1="86" x2="680" y2="86" stroke="#64748b" stroke-width="2"/>
+              <polygon points="680,86 672,82 672,90" fill="#64748b"/>
+              <text x="94" y="78" font-size="12" fill="#475569" text-anchor="middle">−1</text>
+              <text x="216" y="78" font-size="12" fill="#475569" text-anchor="middle">0</text>
+              <text x="338" y="78" font-size="12" fill="#475569" text-anchor="middle">1</text>
+              <text x="460" y="78" font-size="12" fill="#475569" text-anchor="middle">2</text>
+              <text x="582" y="78" font-size="12" fill="#475569" text-anchor="middle">3</text>
+              <text x="668" y="74" font-size="12" fill="#334155">ln(AU)</text>
+              <circle cx="102" cy="86" r="4.5" fill="#1d4ed8"/>
+              <text x="102" y="28" font-size="12" fill="#1d4ed8" text-anchor="middle">Mercury</text>
+              <text x="102" y="112" font-size="12" fill="#1e293b" text-anchor="middle">0.39 AU</text>
+              <circle cx="176" cy="86" r="4.5" fill="#1d4ed8"/>
+              <text x="176" y="48" font-size="12" fill="#1d4ed8" text-anchor="middle">Venus</text>
+              <text x="176" y="128" font-size="12" fill="#1e293b" text-anchor="middle">0.72 AU</text>
+              <circle cx="216" cy="86" r="4.5" fill="#1d4ed8"/>
+              <text x="216" y="28" font-size="12" fill="#1d4ed8" text-anchor="middle">Earth</text>
+              <text x="216" y="112" font-size="12" fill="#1e293b" text-anchor="middle">1 AU</text>
+              <circle cx="268" cy="86" r="4.5" fill="#1d4ed8"/>
+              <text x="268" y="48" font-size="12" fill="#1d4ed8" text-anchor="middle">Mars</text>
+              <text x="268" y="128" font-size="12" fill="#1e293b" text-anchor="middle">1.52 AU</text>
+              <circle cx="418" cy="86" r="4.5" fill="#0f766e"/>
+              <text x="418" y="28" font-size="12" fill="#0f766e" text-anchor="middle">Jupiter</text>
+              <text x="418" y="112" font-size="12" fill="#1e293b" text-anchor="middle">5.2 AU</text>
+              <circle cx="491" cy="86" r="4.5" fill="#0f766e"/>
+              <text x="491" y="48" font-size="12" fill="#0f766e" text-anchor="middle">Saturn</text>
+              <text x="491" y="128" font-size="12" fill="#1e293b" text-anchor="middle">9.5 AU</text>
+              <circle cx="576" cy="86" r="4.5" fill="#0f766e"/>
+              <text x="576" y="28" font-size="12" fill="#0f766e" text-anchor="middle">Uranus</text>
+              <text x="576" y="112" font-size="12" fill="#1e293b" text-anchor="middle">19.2 AU</text>
+              <circle cx="631" cy="86" r="4.5" fill="#0f766e"/>
+              <text x="631" y="48" font-size="12" fill="#0f766e" text-anchor="middle">Neptune</text>
+              <text x="631" y="128" font-size="12" fill="#1e293b" text-anchor="middle">30.1 AU</text>
             </svg>
           </div>
-          <p class="step"><strong>b iii ·</strong> Planets look much more evenly spaced. There is still a clear gap between the inner group (Mercury–Mars) and the outer group (Jupiter–Neptune).</p>
-          <p class="final"><strong>Answer b:</strong> Log scale spreads the inner planets and compresses the outer ones into a clearer two-group picture.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b iii</button>
+        <div class="sol">
+          <p class="step"><strong>b iii · Step 1 ·</strong> On the log line the eight planets are much more evenly spaced than on the linear line.</p>
+          <p class="step"><strong>Step 2 ·</strong> There is still one obvious gap: between Mars (1.52 AU) and Jupiter (5.2 AU).</p>
+          <p class="step"><strong>Step 3 ·</strong> That gap splits the planets into two groups. Inner group: Mercury, Venus, Earth, Mars. Outer group: Jupiter, Saturn, Uranus, Neptune.</p>
+          <p class="final"><strong>Comment:</strong> The log scale spreads the inner planets apart and pulls the outer planets closer, but the two groups are still visible.</p>
         </div>
       </div>
       <div class="q-part">
@@ -697,9 +936,17 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Domain fact:</strong> You cannot take <span class="tex">\log</span> of 0 (or a negative). As <span class="tex">x\to 0^+</span>, <span class="tex">\log x\to-\infty</span>.</p>
-          <p class="step"><strong>d ·</strong> The Sun is at AU = 0. A log scale would need to stretch to <span class="tex">-\infty</span> to include it — impossible on a finite number line.</p>
-          <p class="final"><strong>Answer d:</strong> Because <span class="tex">\log 0</span> is undefined (the log heads to <span class="tex">-\infty</span>).</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">\log</span> of a number asks “what power gives this number?”. <span class="tex">10^n</span> and <span class="tex">e^n</span> are always positive. They never equal 0, and they never equal a negative number. So <span class="tex">\log 0</span> does not exist.</p>
+          <p class="step"><strong>d · Step 1 ·</strong> The Sun’s distance in the table is 0 AU.</p>
+          <p class="step"><strong>Step 2 ·</strong> A log scale needs <span class="tex">\log(0)</span>. There is no power that equals 0.</p>
+          <p class="step"><strong>Step 3 ·</strong> Try numbers that get closer to 0, to see what the log does.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\log_{10}(0.1)=-1</span>, because <span class="tex">10^{-1}=0.1</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">\log_{10}(0.01)=-2</span>, because <span class="tex">10^{-2}=0.01</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">\log_{10}(0.001)=-3</span>, because <span class="tex">10^{-3}=0.001</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> As the distance slides toward 0, the log slides toward <span class="tex">-\infty</span> (more and more negative, with no end).</p>
+          <p class="step"><strong>Step 8 ·</strong> A number line on a page has a left-hand end. It cannot be stretched all the way to negative infinity.</p>
+          <p class="step"><strong>Step 9 ·</strong> So the Sun cannot be placed on the log-scale graph. That is why part b says to omit it.</p>
+          <p class="final"><strong>Answer d:</strong> The Sun is at 0 AU. <span class="tex">\log 0</span> is not a real number; the log runs off to <span class="tex">-\infty</span>.</p>
         </div>
       </div>
     </article>
@@ -714,19 +961,34 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Formula:</strong> Intensity ratio = <span class="tex">10^{(\text{difference in Richter readings})}</span>.</p>
-          <p class="step"><strong>a ·</strong> Difference: <span class="tex">6.5-4=2.5</span>.</p>
-          <p class="step">Factor: <span class="tex">10^{2.5}=10^2\times 10^{0.5}=100\times\sqrt{10}\approx 100\times 3.162=316.2</span>.</p>
+          <p class="formula-quick"><strong>How the Richter scale works:</strong> It is a base-10 log scale of intensity. Going <strong>up by 1</strong> multiplies the intensity by <span class="tex">10</span>. Going up by 2 multiplies by <span class="tex">10^2=100</span>. Going up by <span class="tex">d</span> multiplies by <span class="tex">10^d</span>. The formula is: intensity factor <span class="tex">=10^{(\text{bigger reading}-\text{smaller reading})}</span>.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> The two readings are 6.5 and 4.</p>
+          <p class="step"><strong>Step 2 ·</strong> Difference: <span class="tex">6.5-4=2.5</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The 6.5 quake is 2.5 steps higher on the scale.</p>
+          <p class="step"><strong>Step 4 ·</strong> Each step of 1 multiplies intensity by 10, so 2.5 steps multiplies by <span class="tex">10^{2.5}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Split the power: <span class="tex">2.5=2+0.5</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">10^{2.5}=10^2\times 10^{0.5}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">10^2=100</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">10^{0.5}=\sqrt{10}</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> Calculator: <span class="tex">\sqrt{10}\approx 3.162</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> <span class="tex">100\times 3.162=316.2</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Nearest integer: 316.2 is closer to 316 than to 317.</p>
           <p class="final"><strong>Answer a:</strong> about <strong>316</strong> times more intense.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same idea backwards:</strong> If intensity is multiplied by <span class="tex">k</span>, the Richter reading changes by <span class="tex">\log_{10} k</span>.</p>
-          <p class="step"><strong>b ·</strong> Aftershock intensity = 25% = 0.25 of the original.</p>
-          <p class="step">Change in reading: <span class="tex">\log_{10}(0.25)\approx -0.6021</span>.</p>
-          <p class="step">New reading: <span class="tex">6+(-0.6021)=5.3979\approx 5.4</span> (1 d.p.).</p>
+          <p class="formula-quick"><strong>Read “25% of the magnitude” on a log scale:</strong> 25% applies to the <strong>intensity</strong> (how strong the shaking is). The Richter number 6 is already a logarithm of that intensity. If intensity is multiplied by <span class="tex">k</span>, the Richter number changes by <span class="tex">\log_{10} k</span>.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> 25% means <span class="tex">\dfrac{25}{100}=0.25</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The aftershock intensity is <span class="tex">0.25</span> times the original intensity.</p>
+          <p class="step"><strong>Step 3 ·</strong> We need the change in the Richter number: <span class="tex">\log_{10}(0.25)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Calculator: <span class="tex">\log_{10}(0.25)\approx -0.602</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> The minus sign means the reading goes <strong>down</strong>.</p>
+          <p class="step"><strong>Step 6 ·</strong> New reading <span class="tex">=6+(-0.602)=5.398</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> One decimal place: look at the second decimal digit, which is 9.</p>
+          <p class="step"><strong>Step 8 ·</strong> 9 is 5 or more, so the first decimal 3 rounds up to 4.</p>
+          <p class="step"><strong>Step 9 ·</strong> <span class="tex">5.398</span> rounds to <span class="tex">5.4</span>.</p>
           <p class="final"><strong>Answer b:</strong> <strong>5.4</strong> on the Richter scale.</p>
         </div>
       </div>
@@ -742,19 +1004,37 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Formula:</strong> Loudness ratio = <span class="tex">10^{(\Delta\text{dB})/10}</span>. (Because +10 dB = ×10, so divide the dB change by 10 before raising 10 to that power.)</p>
-          <p class="step"><strong>a ·</strong> Drop: <span class="tex">38-45=-7</span> dB.</p>
-          <p class="step">Ratio of loudness: <span class="tex">10^{-7/10}=10^{-0.7}\approx 0.1995</span>.</p>
-          <p class="step">As a percentage: about <span class="tex">20\%</span> of the original loudness remains.</p>
-          <p class="final"><strong>Answer a:</strong> about <strong>20%</strong>.</p>
+          <p class="formula-quick"><strong>How decibels work, from the question itself:</strong> 0 dB is the least audible sound. 10 dB is <span class="tex">10^1=10</span> times louder. 20 dB is <span class="tex">10^2=100</span> times louder. 30 dB is <span class="tex">10^3=1000</span> times louder. The pattern: loudness compared with 0 dB is <span class="tex">10^{(\text{decibels})/10}</span>. Divide the decibel number by 10 first, then raise 10 to that power.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Original sound: 45 dB.</p>
+          <p class="step"><strong>Step 2 ·</strong> Compared with the least audible sound, its loudness factor is <span class="tex">10^{45/10}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">45\div 10=4.5</span>, so the factor is <span class="tex">10^{4.5}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Quieter sound: 38 dB.</p>
+          <p class="step"><strong>Step 5 ·</strong> Its loudness factor is <span class="tex">10^{38/10}=10^{3.8}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> The percentage we want is quieter ÷ original, then times 100%.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">\dfrac{10^{3.8}}{10^{4.5}}=10^{3.8-4.5}</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">3.8-4.5=-0.7</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> So the ratio is <span class="tex">10^{-0.7}</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Calculator: <span class="tex">10^{-0.7}\approx 0.1995</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> As a percentage: <span class="tex">0.1995\times 100=19.95\%</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> Nearest whole percent: 19.95% rounds to 20%.</p>
+          <p class="final"><strong>Answer a:</strong> about <strong>20%</strong> of the original loudness.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Formula:</strong> Extra dB = <span class="tex">10\log_{10}(\text{factor})</span>. Then add to the starting dB.</p>
-          <p class="step"><strong>b ·</strong> Factor = 500. Extra dB: <span class="tex">10\log_{10} 500=10\times\log_{10}(5\times 10^2)=10(2+\log_{10}5)\approx 10(2+0.6990)=26.99</span>.</p>
-          <p class="step">Peak: <span class="tex">80+26.99\approx 107</span> dB.</p>
+          <p class="formula-quick"><strong>Backwards from part a:</strong> If the loudness is multiplied by a factor <span class="tex">k</span>, the extra decibels satisfy <span class="tex">10^{(\text{extra})/10}=k</span>. So extra decibels <span class="tex">=10\log_{10} k</span>. Then add those extra decibels to the starting reading.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> The lawnmower is 80 dB.</p>
+          <p class="step"><strong>Step 2 ·</strong> The concert is 500 times louder, so the factor is <span class="tex">k=500</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Extra decibels <span class="tex">=10\log_{10} 500</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Write 500 as <span class="tex">5\times 100=5\times 10^2</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">\log_{10} 500=\log_{10} 5+\log_{10}(10^2)</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">\log_{10}(10^2)=2</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Calculator: <span class="tex">\log_{10} 5\approx 0.6990</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">\log_{10} 500\approx 0.6990+2=2.6990</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> Extra decibels <span class="tex">=10\times 2.6990=26.990</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Concert reading <span class="tex">=80+26.990=106.990</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Nearest whole decibel: 106.990 rounds to 107.</p>
           <p class="final"><strong>Answer b:</strong> <strong>107</strong> dB.</p>
         </div>
       </div>
@@ -770,29 +1050,61 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Method:</strong> Notice <span class="tex">2^{4x}=(2^{2x})^2</span> and <span class="tex">2^{2x}=4^x</span>. Put <span class="tex">u=2^{2x}=4^x</span>.</p>
-          <p class="step"><strong>a ·</strong> Let <span class="tex">u=2^{2x}</span>. Then <span class="tex">u^2-7u+12=0</span> → <span class="tex">(u-3)(u-4)=0</span> → <span class="tex">u=3</span> or <span class="tex">u=4</span>.</p>
-          <p class="step"><span class="tex">4^x=4\Rightarrow x=1</span>. <span class="tex">4^x=3\Rightarrow x=\log_4 3=\dfrac{\ln 3}{\ln 4}\approx 0.792</span>.</p>
+          <p class="formula-quick"><strong>Method:</strong> <span class="tex">2^{4x}=(2^{2x})^2</span>. Put <span class="tex">u=2^{2x}</span>. Also <span class="tex">2^{2x}=(2^2)^x=4^x</span>, which makes the last step easier.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Start with <span class="tex">2^{4x}-7\times 2^{2x}+12=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=2^{2x}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Then <span class="tex">u^2-7u+12=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Two numbers that multiply to 12 and add to 7: 3 and 4.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">(u-3)(u-4)=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> So <span class="tex">u=3</span> or <span class="tex">u=4</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Because <span class="tex">u=4^x</span>, this is <span class="tex">4^x=3</span> or <span class="tex">4^x=4</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> First case: <span class="tex">4^x=4</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> <span class="tex">4=4^1</span>, so <span class="tex">x=1</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Second case: <span class="tex">4^x=3</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> <span class="tex">x=\log_4 3</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> Change of base: <span class="tex">\log_4 3=\dfrac{\ln 3}{\ln 4}</span>.</p>
+          <p class="step"><strong>Step 13 ·</strong> Calculator: <span class="tex">\dfrac{\ln 3}{\ln 4}\approx 0.792</span> (3 d.p.).</p>
           <p class="final"><strong>Answer a:</strong> <span class="tex">x=1</span> or <span class="tex">x\approx 0.792</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">100^x=(10^2)^x=(10^x)^2</span>. Put <span class="tex">u=10^x</span> (always positive).</p>
-          <p class="step"><strong>b ·</strong> <span class="tex">u^2-u-1=0</span>. Quadratic formula: <span class="tex">u=\dfrac{1\pm\sqrt{5}}{2}</span>.</p>
-          <p class="step">Only the positive root works: <span class="tex">u=\dfrac{1+\sqrt5}{2}</span> (the other is negative).</p>
-          <p class="step"><span class="tex">10^x=\dfrac{1+\sqrt5}{2}\Rightarrow x=\log_{10}\!\left(\dfrac{1+\sqrt5}{2}\right)\approx 0.209</span>.</p>
+          <p class="formula-quick"><strong>Same method:</strong> <span class="tex">100^x=(10^x)^2</span>. Put <span class="tex">u=10^x</span>. A power of 10 is always positive, so a negative <span class="tex">u</span> is thrown away.</p>
+          <p class="formula-quick"><strong>Quadratic formula:</strong> For <span class="tex">au^2+bu+c=0</span>, <span class="tex">u=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}</span>. Here <span class="tex">a=1</span>, <span class="tex">b=-1</span>, <span class="tex">c=-1</span>.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Start with <span class="tex">100^x-10^x-1=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">100^x=(10^x)^2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Let <span class="tex">u=10^x</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Then <span class="tex">u^2-u-1=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">u=\dfrac{-(-1)\pm\sqrt{(-1)^2-4(1)(-1)}}{2}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">u=\dfrac{1\pm\sqrt{1+4}}{2}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">u=\dfrac{1\pm\sqrt{5}}{2}</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">\sqrt{5}\approx 2.236</span>, so <span class="tex">\dfrac{1-2.236}{2}</span> is negative.</p>
+          <p class="step"><strong>Step 9 ·</strong> <span class="tex">10^x</span> cannot be negative. Throw away <span class="tex">u=\dfrac{1-\sqrt{5}}{2}</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Keep <span class="tex">u=\dfrac{1+\sqrt{5}}{2}</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> <span class="tex">10^x=\dfrac{1+\sqrt{5}}{2}</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> <span class="tex">x=\log_{10}\!\left(\dfrac{1+\sqrt{5}}{2}\right)</span>.</p>
+          <p class="step"><strong>Step 13 ·</strong> Calculator: <span class="tex">x\approx 0.209</span> (3 d.p.).</p>
           <p class="final"><strong>Answer b:</strong> <span class="tex">x\approx 0.209</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=\left(\dfrac15\right)^x</span>. Then use <span class="tex">\left(\dfrac15\right)^x=5^{-x}</span> if you need to simplify a solution.</p>
-          <p class="step"><strong>c ·</strong> <span class="tex">u^2-7u+10=0</span> → <span class="tex">(u-2)(u-5)=0</span> → <span class="tex">u=2</span> or <span class="tex">u=5</span>.</p>
-          <p class="step"><span class="tex">\left(\dfrac15\right)^x=5</span>: note <span class="tex">5=5^1=\left(\dfrac15\right)^{-1}</span>, so <span class="tex">x=-1</span>.</p>
-          <p class="step"><span class="tex">\left(\dfrac15\right)^x=2\Rightarrow x=\log_{1/5}2=\dfrac{\ln 2}{\ln(1/5)}\approx -0.431</span>.</p>
+          <p class="formula-quick"><strong>Same method:</strong> Put <span class="tex">u=\left(\dfrac15\right)^x</span>. Useful rewrite: <span class="tex">\left(\dfrac15\right)^{-1}=5</span>.</p>
+          <p class="step"><strong>c · Step 1 ·</strong> Start with <span class="tex">\left(\dfrac15\right)^{2x}-7\left(\dfrac15\right)^x+10=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Let <span class="tex">u=\left(\dfrac15\right)^x</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Then <span class="tex">u^2-7u+10=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Two numbers that multiply to 10 and add to 7: 2 and 5.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">(u-2)(u-5)=0</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> So <span class="tex">u=2</span> or <span class="tex">u=5</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> First case: <span class="tex">\left(\dfrac15\right)^x=5</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">5=\left(\dfrac15\right)^{-1}</span>, because <span class="tex">\left(\dfrac15\right)^{-1}=5</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> So <span class="tex">x=-1</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> Second case: <span class="tex">\left(\dfrac15\right)^x=2</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> <span class="tex">x=\log_{1/5} 2</span>.</p>
+          <p class="step"><strong>Step 12 ·</strong> Change of base: <span class="tex">x=\dfrac{\ln 2}{\ln(1/5)}</span>.</p>
+          <p class="step"><strong>Step 13 ·</strong> Calculator: <span class="tex">x\approx -0.431</span> (3 d.p.). The answer is negative because a base smaller than 1 turns the power the other way.</p>
           <p class="final"><strong>Answer c:</strong> <span class="tex">x=-1</span> or <span class="tex">x\approx -0.431</span>.</p>
         </div>
       </div>
@@ -802,49 +1114,64 @@
       <h2>19 · Sequence of transforms of <span class="tex">\ln x</span> <span class="band ch">Challenge</span></h2>
       <div class="stem">
         <p>Starting from <span class="tex">y=\log_e x</span>:</p>
-        <p>a Use (and describe) a dilation to sketch <span class="tex">y=\log_e(2x)</span>.</p>
-        <p>b Then a translation to sketch <span class="tex">y=\log_e 2(x-1)</span>.</p>
-        <p>c Then a dilation to sketch <span class="tex">y=\dfrac12\log_e 2(x-1)</span>.</p>
-        <p>d Then a translation to sketch <span class="tex">y=\dfrac12\log_e 2(x-1)-2</span>.</p>
+        <p>a Use, and describe, a dilation of <span class="tex">y=\log_e x</span> to sketch <span class="tex">y=\log_e(2x)</span>.</p>
+        <p>b Then a translation to sketch <span class="tex">y=\log_e\!\big(2(x-1)\big)</span>. (The book writes <span class="tex">\log_e 2(x-1)</span>. That means the log of the whole product <span class="tex">2(x-1)</span>.)</p>
+        <p>c Then a dilation to sketch <span class="tex">y=\dfrac12\log_e\!\big(2(x-1)\big)</span>.</p>
+        <p>d Then a translation to sketch <span class="tex">y=\dfrac12\log_e\!\big(2(x-1)\big)-2</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Horizontal dilation:</strong> Replacing <span class="tex">x</span> by <span class="tex">nx</span> is a horizontal stretch with factor <span class="tex">1/n</span> (toward the <span class="tex">y</span>-axis if <span class="tex">n&gt;1</span>).</p>
-          <p class="step"><strong>a ·</strong> From <span class="tex">y=\log_e x</span> to <span class="tex">y=\log_e(2x)</span>: horizontal dilation with factor <span class="tex">\tfrac12</span>.</p>
-          <p class="step">Asymptote stays <span class="tex">x=0</span>. The curve rises faster for small positive <span class="tex">x</span>.</p>
-          <div class="plot-frame"><svg id="q19a" class="plot" viewBox="0 0 720 260"></svg>
-            <div class="legend"><span class="p"><i></i>ln x</span><span class="i"><i></i>ln(2x)</span></div></div>
+          <p class="formula-quick"><strong>Quick fact (same as Question 10):</strong> A horizontal dilation with factor <span class="tex">k</span> multiplies distances from the <span class="tex">y</span>-axis by <span class="tex">k</span>. In the equation, replace <span class="tex">x</span> by <span class="tex">x/k</span>. For <span class="tex">k=\tfrac12</span>, <span class="tex">x/k=2x</span>. That is why a 2 appears inside the log.</p>
+          <p class="step"><strong>a · Step 1 ·</strong> Parent <span class="tex">y=\log_e x</span> crosses the <span class="tex">x</span>-axis at <span class="tex">1</span>, because <span class="tex">\log_e 1=0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> It has height 1 at <span class="tex">x=e</span>, because <span class="tex">\log_e e=1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The new equation has <span class="tex">2x</span> inside the log, so <span class="tex">x</span> was replaced by <span class="tex">2x</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">2x=x\div\tfrac12</span>, so the factor is <span class="tex">k=\tfrac12</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Halve the old <span class="tex">x</span>-values. The intercept <span class="tex">1</span> moves to <span class="tex">\tfrac12</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> The point <span class="tex">(e,1)</span> moves to <span class="tex">\left(\dfrac{e}{2},1\right)</span>. Height stays 1.</p>
+          <p class="step"><strong>Step 7 ·</strong> The vertical asymptote stays the <span class="tex">y</span>-axis (<span class="tex">x=0</span>).</p>
+          <div class="plot-frame"><svg id="q19a" class="plot" viewBox="0 0 720 340"></svg>
+            <div class="legend"><span class="i"><i></i>ln(2x)</span></div></div>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Horizontal translation:</strong> <span class="tex">y=f(x-h)</span> shifts the graph <strong>right</strong> by <span class="tex">h</span> when <span class="tex">h&gt;0</span>.</p>
-          <p class="step"><strong>b ·</strong> From <span class="tex">y=\log_e(2x)</span> to <span class="tex">y=\log_e\!\big(2(x-1)\big)</span>: shift <strong>right by 1</strong>.</p>
-          <p class="step">New asymptote: <span class="tex">x=1</span>. Domain: <span class="tex">x&gt;1</span>.</p>
-          <div class="plot-frame"><svg id="q19b" class="plot" viewBox="0 0 720 260"></svg>
-            <div class="legend"><span class="p"><i></i>ln(2x)</span><span class="i"><i></i>ln 2(x−1)</span></div></div>
+          <p class="formula-quick"><strong>Quick fact:</strong> Replacing <span class="tex">x</span> by <span class="tex">(x-1)</span> shifts the graph <strong>right by 1</strong>. Add 1 to every old <span class="tex">x</span>-value. Heights stay the same.</p>
+          <p class="step"><strong>b · Step 1 ·</strong> Start from the graph in part a: <span class="tex">y=\log_e(2x)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The new inside is <span class="tex">2(x-1)</span>, so <span class="tex">x</span> has been replaced by <span class="tex">x-1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Shift right by 1.</p>
+          <p class="step"><strong>Step 4 ·</strong> Old intercept <span class="tex">\tfrac12</span> moves to <span class="tex">\tfrac12+1=\tfrac32</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Old point <span class="tex">\left(\dfrac{e}{2},1\right)</span> moves to <span class="tex">\left(\dfrac{e}{2}+1,\,1\right)</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Old asymptote <span class="tex">x=0</span> moves to <span class="tex">x=1</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Inside must be positive: <span class="tex">2(x-1)&gt;0</span>, so <span class="tex">x&gt;1</span>.</p>
+          <div class="plot-frame"><svg id="q19b" class="plot" viewBox="0 0 720 340"></svg>
+            <div class="legend"><span class="i"><i></i>ln 2(x−1)</span></div></div>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Vertical dilation:</strong> <span class="tex">y=A\,f(x)</span> stretches vertically by factor <span class="tex">|A|</span>.</p>
-          <p class="step"><strong>c ·</strong> Multiply by <span class="tex">\tfrac12</span>: vertical stretch with factor <span class="tex">\tfrac12</span> (half as tall).</p>
-          <p class="step">Asymptote still <span class="tex">x=1</span>.</p>
-          <div class="plot-frame"><svg id="q19c" class="plot" viewBox="0 0 720 260"></svg>
-            <div class="legend"><span class="p"><i></i>ln 2(x−1)</span><span class="i"><i></i>½ ln 2(x−1)</span></div></div>
+          <p class="formula-quick"><strong>Quick fact:</strong> A number in front of the whole log multiplies every height by that number. <span class="tex">x</span>-values do not move. Factor <span class="tex">\tfrac12</span> makes the graph half as tall.</p>
+          <p class="step"><strong>c · Step 1 ·</strong> Start from part b. The point at height 1 is <span class="tex">\left(\dfrac{e}{2}+1,\,1\right)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Multiply the height by <span class="tex">\tfrac12</span>: <span class="tex">1\times\tfrac12=\tfrac12</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> That point is now <span class="tex">\left(\dfrac{e}{2}+1,\,\tfrac12\right)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> The <span class="tex">x</span>-intercept stays at <span class="tex">\tfrac32</span>, because half of height 0 is still 0.</p>
+          <p class="step"><strong>Step 5 ·</strong> The asymptote stays <span class="tex">x=1</span>.</p>
+          <div class="plot-frame"><svg id="q19c" class="plot" viewBox="0 0 720 340"></svg>
+            <div class="legend"><span class="i"><i></i>½ ln 2(x−1)</span></div></div>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-          <p class="formula-quick"><strong>Vertical translation:</strong> Subtracting 2 shifts the graph <strong>down by 2</strong>.</p>
-          <p class="step"><strong>d ·</strong> Final equation: <span class="tex">y=\dfrac12\log_e\!\big(2(x-1)\big)-2</span>.</p>
-          <p class="step">Asymptote still <span class="tex">x=1</span>; whole curve sits 2 units lower.</p>
-          <div class="plot-frame"><svg id="q19d" class="plot" viewBox="0 0 720 260"></svg>
-            <div class="legend"><span class="p"><i></i>½ ln 2(x−1)</span><span class="i"><i></i>final −2</span></div></div>
+          <p class="formula-quick"><strong>Quick fact:</strong> Subtracting 2 moves every point <strong>down by 2</strong>. Subtract 2 from every old height. <span class="tex">x</span>-values do not move.</p>
+          <p class="step"><strong>d · Step 1 ·</strong> Start from part c. One marked point is <span class="tex">\left(\dfrac{e}{2}+1,\,\tfrac12\right)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> New height: <span class="tex">\tfrac12-2=-\tfrac32</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The old <span class="tex">x</span>-intercept <span class="tex">\left(\tfrac32,\,0\right)</span> drops to <span class="tex">\left(\tfrac32,\,-2\right)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> The asymptote stays <span class="tex">x=1</span>. A vertical shift does not move a vertical asymptote.</p>
+          <div class="plot-frame"><svg id="q19d" class="plot" viewBox="0 0 720 340"></svg>
+            <div class="legend"><span class="i"><i></i>final curve, down 2</span></div></div>
         </div>
       </div>
     </article>
@@ -888,19 +1215,83 @@
     function typeset(){document.querySelectorAll(".tex").forEach(function(n){if(n.getAttribute("data-texed"))return;n.setAttribute("data-texed","1");if(window.katex)katex.render(n.textContent,n,{throwOnError:false});});}
     function bind(){ /* per-part: course-solutions.js */ }
     const NS="http://www.w3.org/2000/svg";
+    const NAVY="#1d4ed8", TEAL="#0f766e";
     function Plot(svg,w){
       this.svg=svg; this.w=w;
-      const vb=(svg.getAttribute("viewBox")||"0 0 720 280").trim().split(/\s+/).map(Number);
-      this.W=vb[2]||720; this.H=vb[3]||280; this.pad=40;
+      const vb=(svg.getAttribute("viewBox")||"0 0 720 340").trim().split(/\s+/).map(Number);
+      this.W=vb[2]||720; this.H=vb[3]||340;
+      this.padL=68; this.padR=36; this.padT=26; this.padB=40;
     }
     Plot.prototype.clear=function(){while(this.svg.firstChild)this.svg.removeChild(this.svg.firstChild);};
-    Plot.prototype.xy=function(x,y){const p=this.pad,W=this.W,H=this.H,w=this.w;return[p+(x-w.xmin)/(w.xmax-w.xmin)*(W-2*p),H-p-(y-w.ymin)/(w.ymax-w.ymin)*(H-2*p)];};
+    Plot.prototype.xy=function(x,y){
+      const w=this.w;
+      const X=this.padL+(x-w.xmin)/(w.xmax-w.xmin)*(this.W-this.padL-this.padR);
+      const Y=this.H-this.padB-(y-w.ymin)/(w.ymax-w.ymin)*(this.H-this.padT-this.padB);
+      return [X,Y];
+    };
     Plot.prototype.el=function(t,a){const n=document.createElementNS(NS,t);Object.keys(a||{}).forEach(k=>{if(a[k]!=null)n.setAttribute(k,a[k]);});this.svg.appendChild(n);return n;};
-    Plot.prototype.axes=function(){const a=this.xy(this.w.xmin,0),b=this.xy(this.w.xmax,0),c=this.xy(0,this.w.ymin),d=this.xy(0,this.w.ymax);
-      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#9aa3b0","stroke-width":1.2});
-      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:"#9aa3b0","stroke-width":1.2});};
-    Plot.prototype.asym=function(x0){const a=this.xy(x0,this.w.ymin),b=this.xy(x0,this.w.ymax);
-      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#e2e8f0","stroke-width":1,"stroke-dasharray":"4 4"});};
+    Plot.prototype.text=function(x,y,str,o){
+      o=o||{};
+      const n=this.el("text",{x:x,y:y,"text-anchor":o.anchor||"middle","font-size":o.size||13,fill:o.fill||"#1e293b","font-family":"Source Sans 3, Segoe UI, sans-serif","font-weight":o.weight||"650",stroke:"#fbfaf7","stroke-width":"5","paint-order":"stroke","stroke-linejoin":"round"});
+      n.textContent=str;
+      return n;
+    };
+    Plot.prototype.axes=function(){
+      const a=this.xy(this.w.xmin,0), b=this.xy(this.w.xmax,0), c=this.xy(0,this.w.ymin), d=this.xy(0,this.w.ymax);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0]-7,y2:b[1],stroke:"#64748b","stroke-width":1.4});
+      this.el("line",{x1:c[0],y1:c[1],x2:d[0],y2:d[1]+7,stroke:"#64748b","stroke-width":1.4});
+      this.el("polygon",{points:b[0]+","+b[1]+" "+(b[0]-9)+","+(b[1]-4)+" "+(b[0]-9)+","+(b[1]+4),fill:"#64748b"});
+      this.el("polygon",{points:d[0]+","+d[1]+" "+(d[0]-4)+","+(d[1]+9)+" "+(d[0]+4)+","+(d[1]+9),fill:"#64748b"});
+      this.text(b[0]-4,b[1]-12,"x",{anchor:"end",size:14,fill:"#334155"});
+      this.text(d[0]+10,d[1]+14,"y",{anchor:"start",size:14,fill:"#334155"});
+    };
+    Plot.prototype.asym=function(x0){
+      if(Math.abs(x0)<0.02) return;
+      const a=this.xy(x0,this.w.ymin), b=this.xy(x0,this.w.ymax);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#94a3b8","stroke-width":1.2,"stroke-dasharray":"4 4"});
+    };
+    Plot.prototype.guide=function(x,y){
+      const a=this.xy(x,0), b=this.xy(x,y), c=this.xy(0,y);
+      this.el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"#94a3b8","stroke-width":1.1,"stroke-dasharray":"3 3"});
+      this.el("line",{x1:c[0],y1:c[1],x2:b[0],y2:b[1],stroke:"#94a3b8","stroke-width":1.1,"stroke-dasharray":"3 3"});
+    };
+    Plot.prototype.dot=function(x,y,color){
+      const p=this.xy(x,y);
+      this.el("circle",{cx:p[0],cy:p[1],r:3.4,fill:color||NAVY,stroke:"#fbfaf7","stroke-width":1.2});
+    };
+    Plot.prototype.ticks=function(skipX,skipY){
+      skipX=skipX||[]; skipY=skipY||[];
+      const near=function(arr,v,tol){return arr.some(function(s){return Math.abs(s-v)<tol;});};
+      const w=this.w;
+      for(let x=Math.ceil(w.xmin+0.08); x<=Math.floor(w.xmax-0.15); x++){
+        if(x===0 || near(skipX,x,0.45)) continue;
+        const p=this.xy(x,0);
+        this.el("line",{x1:p[0],y1:p[1]-3,x2:p[0],y2:p[1]+3,stroke:"#94a3b8"});
+        this.text(p[0],p[1]+16,(x<0?"−":"")+Math.abs(x),{size:12,weight:"500",fill:"#475569"});
+      }
+      for(let y=Math.ceil(w.ymin+0.08); y<=Math.floor(w.ymax-0.15); y++){
+        if(y===0 || near(skipY,y,0.55)) continue;
+        const p=this.xy(0,y);
+        this.el("line",{x1:p[0]-3,y1:p[1],x2:p[0]+3,y2:p[1],stroke:"#94a3b8"});
+        this.text(p[0]-8,p[1]+4,(y<0?"−":"")+Math.abs(y),{anchor:"end",size:12,weight:"500",fill:"#475569"});
+      }
+    };
+    Plot.prototype.xlabel=function(x,str,above){
+      const p=this.xy(x,0);
+      this.el("line",{x1:p[0],y1:p[1]-5,x2:p[0],y2:p[1]+5,stroke:"#1e293b","stroke-width":1.3});
+      this.text(p[0], above?p[1]-11:p[1]+18, str, {size:13});
+    };
+    Plot.prototype.tag=function(x,y,str,dx,dy,anchor){
+      const p=this.xy(x,y);
+      this.text(p[0]+(dx||0), p[1]+(dy||0), str, {anchor:anchor||"middle", size:13});
+    };
+    Plot.prototype.ylabel=function(y,str,opt){
+      opt=opt||{};
+      const p=this.xy(0,y);
+      this.el("line",{x1:p[0]-5,y1:p[1],x2:p[0]+5,y2:p[1],stroke:"#1e293b","stroke-width":1.3});
+      const right=opt.side==="right";
+      this.text(right?p[0]+8:p[0]-8, p[1]+(opt.dy==null?4:opt.dy), str, {anchor:right?"start":"end", size:13});
+    };
     Plot.prototype.poly=function(pts,o){
       o=o||{}; let d="", started=false;
       pts.forEach(function(p){
@@ -910,33 +1301,149 @@
         started=true;
       }.bind(this));
       if(!d) return;
-      this.el("path",{d:d,fill:"none",stroke:o.stroke||"#1d4ed8","stroke-width":o.width||2.4,"stroke-dasharray":o.dash||null});
+      this.el("path",{d:d,fill:"none",stroke:o.stroke||NAVY,"stroke-width":o.width||2.4,"stroke-dasharray":o.dash||null});
     };
-    function sample(fn,w,n){n=n||300;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||Math.abs(y)>40){pts.push(null);continue;}pts.push([x,y]);}return pts;}
+    function sample(fn,w,n){n=n||360;const pts=[];for(let i=0;i<=n;i++){const x=w.xmin+(w.xmax-w.xmin)*i/n;let y;try{y=fn(x);}catch(e){y=NaN;}if(!isFinite(y)||y<w.ymin-1||y>w.ymax+1){pts.push(null);continue;}pts.push([x,y]);}return pts;}
+    function sketch(id,w,curves,opt){
+      const svg=document.getElementById(id); if(!svg) return;
+      opt=opt||{};
+      const P=new Plot(svg,w); P.clear();
+      (opt.asym||[]).forEach(function(x){P.asym(x);});
+      P.axes();
+      (opt.guides||[]).forEach(function(g){P.guide(g[0],g[1]);});
+      curves.forEach(function(c){P.poly(sample(c.fn,w),c);});
+      (opt.dots||[]).forEach(function(d){P.dot(d[0],d[1],d[2]);});
+      const sx=(opt.xl||[]).map(function(L){return L[0];}).concat(opt.skipX||[]);
+      const sy=(opt.yl||[]).map(function(L){return L[0];}).concat(opt.skipY||[]);
+      P.ticks(sx,sy);
+      (opt.xl||[]).forEach(function(L){P.xlabel(L[0],L[1],!!L[2]);});
+      (opt.yl||[]).forEach(function(L){P.ylabel(L[0],L[1],L[2]||null);});
+      (opt.tags||[]).forEach(function(t){P.tag(t[0],t[1],t[2],t[3],t[4],t[5]);});
+    }
     function draw(){
-      const w7={xmin:-3,xmax:3,ymin:-2,ymax:3};
-      const svg7=document.getElementById("q7plot");
-      if(svg7){const P=new Plot(svg7,w7);P.clear();P.axes();P.asym(0);
-        P.poly(sample(x=>x>0?Math.log(x):NaN,w7),{stroke:"#0f766e",dash:"7 6",width:2.2});
-        P.poly(sample(x=>x<0?Math.log(-x):NaN,w7),{stroke:"#1d4ed8",width:2.4});
-        P.poly(sample(x=>Math.exp(x),w7),{stroke:"#b45309",width:2.2});}
-      const w10={xmin:-4,xmax:1,ymin:-3,ymax:2};
-      const svg10=document.getElementById("q10plot");
-      if(svg10){const P=new Plot(svg10,w10);P.clear();P.axes();P.asym(0);
-        P.poly(sample(x=>x<0?Math.log(-x):NaN,w10),{stroke:"#0f766e",dash:"7 6",width:2.2});
-        P.poly(sample(x=>x<0?Math.log(-2*x):NaN,w10),{stroke:"#1d4ed8",width:2.5});}
-      const w19={xmin:-1,xmax:5,ymin:-4,ymax:3};
-      function draw19(id, fnParent, fnNew, asymX){
-        const svg=document.getElementById(id); if(!svg) return;
-        const P=new Plot(svg,w19); P.clear(); P.axes();
-        if(asymX!=null) P.asym(asymX);
-        P.poly(sample(fnParent,w19),{stroke:"#0f766e",dash:"7 6",width:2.2});
-        P.poly(sample(fnNew,w19),{stroke:"#1d4ed8",width:2.5});
-      }
-      draw19("q19a", x=>x>0?Math.log(x):NaN, x=>x>0?Math.log(2*x):NaN, 0);
-      draw19("q19b", x=>x>0?Math.log(2*x):NaN, x=>x>1?Math.log(2*(x-1)):NaN, 1);
-      draw19("q19c", x=>x>1?Math.log(2*(x-1)):NaN, x=>x>1?0.5*Math.log(2*(x-1)):NaN, 1);
-      draw19("q19d", x=>x>1?0.5*Math.log(2*(x-1)):NaN, x=>x>1?0.5*Math.log(2*(x-1))-2:NaN, 1);
+      const E=Math.E;
+      const lnPos=function(x){return x>0.02?Math.log(x):NaN;};
+      const lnNeg=function(x){return x<-0.02?Math.log(-x):NaN;};
+      sketch("q7plot",{xmin:-4.2,xmax:4.2,ymin:-2.2,ymax:2.4},[
+        {fn:lnPos,stroke:NAVY,width:2.5},
+        {fn:lnNeg,stroke:TEAL,dash:"7 5",width:2.3}
+      ],{
+        guides:[[E,1],[-E,1]],
+        dots:[[1,0,NAVY],[E,1,NAVY],[-1,0,TEAL],[-E,1,TEAL]],
+        xl:[[-E,"−e",true],[-1,"−1"],[1,"1"],[E,"e",true]],
+        yl:[[1,"1",{side:"right",dy:-12}]]
+      });
+      sketch("q8a",{xmin:-0.5,xmax:4.2,ymin:-1.4,ymax:2.8},[
+        {fn:function(x){return x>0.02?Math.log(x)+1:NaN;},stroke:NAVY}
+      ],{
+        guides:[[1,1],[E,2]],
+        dots:[[1,1,NAVY],[E,2,NAVY]],
+        xl:[[1,"1"],[E,"e"]],
+        yl:[[1,"1"],[2,"2"]]
+      });
+      sketch("q8b",{xmin:-0.5,xmax:8.6,ymin:-3.3,ymax:1.3},[
+        {fn:function(x){return x>0.02?Math.log(x)-2:NaN;},stroke:NAVY}
+      ],{
+        guides:[[1,-2],[E,-1],[E*E,0]],
+        dots:[[1,-2,NAVY],[E,-1,NAVY],[E*E,0,NAVY]],
+        xl:[[1,"1"],[E,"e"],[E*E,"e²"]],
+        yl:[[-1,"−1"],[-2,"−2"]]
+      });
+      sketch("q8c",{xmin:-0.4,xmax:6.6,ymin:-1.8,ymax:2.1},[
+        {fn:function(x){return x>0.02?Math.log(x/2):NaN;},stroke:NAVY}
+      ],{
+        guides:[[2,0],[2*E,1]],
+        dots:[[2,0,NAVY],[2*E,1,NAVY]],
+        xl:[[2,"2"],[2*E,"2e"]],
+        yl:[[1,"1"]]
+      });
+      sketch("q8d",{xmin:-0.5,xmax:4.2,ymin:-1.4,ymax:1.5},[
+        {fn:function(x){return x>0.02?(1/3)*Math.log(x):NaN;},stroke:NAVY}
+      ],{
+        guides:[[1,0],[E,1/3]],
+        dots:[[1,0,NAVY],[E,1/3,NAVY]],
+        xl:[[1,"1"],[E,"e"]],
+        yl:[[1/3,"1/3"]]
+      });
+      sketch("q9a",{xmin:-4.6,xmax:1.3,ymin:-2.4,ymax:1.5},[
+        {fn:function(x){return x<-0.02?Math.log(-x)-1:NaN;},stroke:NAVY}
+      ],{
+        guides:[[-1,-1],[-E,0]],
+        dots:[[-1,-1,NAVY],[-E,0,NAVY]],
+        xl:[[-E,"−e"],[-1,"−1",true]],
+        yl:[[-1,"−1",{side:"right"}]]
+      });
+      sketch("q9b",{xmin:-4.6,xmax:1.3,ymin:-2.2,ymax:2.2},[
+        {fn:function(x){return x<-0.02?-Math.log(-x):NaN;},stroke:NAVY}
+      ],{
+        guides:[[-E,-1]],
+        dots:[[-1,0,NAVY],[-E,-1,NAVY]],
+        xl:[[-E,"−e"],[-1,"−1"]],
+        yl:[[-1,"−1",{side:"right",dy:14}]]
+      });
+      sketch("q9c",{xmin:-4.6,xmax:1.3,ymin:-2.2,ymax:3.6},[
+        {fn:function(x){return x<-0.02?3*Math.log(-x):NaN;},stroke:NAVY}
+      ],{
+        guides:[[-E,3]],
+        dots:[[-1,0,NAVY],[-E,3,NAVY]],
+        xl:[[-E,"−e"],[-1,"−1"]],
+        yl:[[3,"3",{side:"right"}]]
+      });
+      const w10={xmin:-4.3,xmax:1.4,ymin:-2.3,ymax:1.9};
+      sketch("q10given",w10,[
+        {fn:function(x){return x<-0.02?Math.log(-2*x):NaN;},stroke:NAVY}
+      ],{
+        guides:[[-0.5,0],[-E/2,1]],
+        dots:[[-0.5,0,NAVY],[-E/2,1,NAVY]],
+        xl:[[-E/2,"−e/2"],[-0.5,"−1/2"]],
+        yl:[[1,"1",{side:"right",dy:-12}]]
+      });
+      sketch("q10plot",w10,[
+        {fn:lnNeg,stroke:TEAL,dash:"7 5",width:2.2},
+        {fn:function(x){return x<-0.02?Math.log(-2*x):NaN;},stroke:NAVY,width:2.5}
+      ],{
+        guides:[[-E,1],[-E/2,1]],
+        dots:[[-1,0,TEAL],[-E,1,TEAL],[-0.5,0,NAVY],[-E/2,1,NAVY]],
+        xl:[[-E,"−e"],[-0.5,"−1/2"]],
+        skipX:[-1],
+        yl:[[1,"1",{side:"right",dy:-12}]],
+        tags:[[-1,0,"−1",-22,18,"middle"],[-E/2,1,"−e/2",14,-18,"start"]]
+      });
+      sketch("q19a",{xmin:-0.6,xmax:3.5,ymin:-2.2,ymax:2.2},[
+        {fn:function(x){return x>0.02?Math.log(2*x):NaN;},stroke:NAVY}
+      ],{
+        guides:[[0.5,0],[E/2,1]],
+        dots:[[0.5,0,NAVY],[E/2,1,NAVY]],
+        xl:[[0.5,"1/2"],[E/2,"e/2"]],
+        yl:[[1,"1"]]
+      });
+      sketch("q19b",{xmin:-0.4,xmax:4.3,ymin:-2.2,ymax:2.2},[
+        {fn:function(x){return x>1.02?Math.log(2*(x-1)):NaN;},stroke:NAVY}
+      ],{
+        asym:[1],
+        guides:[[1.5,0],[E/2+1,1]],
+        dots:[[1.5,0,NAVY],[E/2+1,1,NAVY]],
+        xl:[[1,"1"],[1.5,"3/2"],[E/2+1,"e/2+1"]],
+        yl:[[1,"1"]]
+      });
+      sketch("q19c",{xmin:-0.4,xmax:4.3,ymin:-1.8,ymax:1.6},[
+        {fn:function(x){return x>1.02?0.5*Math.log(2*(x-1)):NaN;},stroke:NAVY}
+      ],{
+        asym:[1],
+        guides:[[1.5,0],[E/2+1,0.5]],
+        dots:[[1.5,0,NAVY],[E/2+1,0.5,NAVY]],
+        xl:[[1,"1"],[1.5,"3/2"],[E/2+1,"e/2+1"]],
+        yl:[[0.5,"1/2",{dy:-10}]]
+      });
+      sketch("q19d",{xmin:-0.4,xmax:4.4,ymin:-4.2,ymax:1.15},[
+        {fn:function(x){return x>1.02?0.5*Math.log(2*(x-1))-2:NaN;},stroke:NAVY}
+      ],{
+        asym:[1],
+        guides:[[1.5,-2],[E/2+1,-1.5]],
+        dots:[[1.5,-2,NAVY],[E/2+1,-1.5,NAVY]],
+        xl:[[1,"1"],[1.5,"3/2"],[E/2+1,"e/2+1"]],
+        yl:[[-2,"−2",{dy:12}],[-1.5,"−3/2",{side:"right",dy:-8}]]
+      });
     }
     window.addEventListener("load",function(){try{typeset();draw();}catch(e){console.error(e);}bind();});
   })();
