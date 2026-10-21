@@ -8,6 +8,11 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .stem p{margin:.42rem 0;line-height:1.5}
+    .stem .intro{margin-bottom:.7rem}
+    .howto{margin:.8rem 0 0;padding:.7rem .85rem;background:#f4f7fb;border-radius:12px;line-height:1.45}
+  </style>
 </head>
 <body data-section="1A" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 1A">
   <div class="shell"><div class="main">
@@ -22,621 +27,1292 @@
   <header class="hero">
     <span class="kicker">Exercise 1A</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
+    <p>Attempt on paper first. Each part has its own solution button. Open one part at a time.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
       <button class="btn show" type="button" id="allOn">Show all solutions</button>
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
+    <p class="howto"><strong>How to read the symbol <span class="tex">a_n</span>.</strong> It means “the <span class="tex">n</span>th term”. The <span class="tex">n</span> is a <em>subscript</em> — it sits lower than the <span class="tex">a</span>. It is not the two letters “an” written side by side. <span class="tex">a_1</span> is the first term, <span class="tex">a_2</span> is the second term, and so on.</p>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 1A; answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">Parts are printed one per line. Formulas use a subscript <span class="tex">a_n</span>. Answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Each part has its own Show/Hide button. Worked steps are written for students who need every substitution shown.</div>
     </details>
+
     <article class="q" id="q1">
-      <h2>1 · Exercise 1A</h2>
+      <h2>1 · Exercise 1A <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Alex collects stamps. He found a collection of 700 stamps in the attic a few years ago, and every month since then he has been buying 150 interesting stamps to add to his collection. Thus the numbers of stamps at the end of each month after his discovery form a sequence 850, 1000, . . . a Copy and continue the sequence to at least 12 terms followed by dots . . . . b After how many months did his collection first exceed 2000 stamps?</p>
+        <p class="intro">Alex collects stamps. He found 700 stamps in the attic. Every month after that he buys 150 more stamps. The numbers of stamps at the end of each month form the sequence <span class="tex">850, 1000, \ldots</span></p>
+        <p><strong>(a)</strong> Copy the sequence and continue it for at least 12 terms, then write dots <span class="tex">\ldots</span></p>
+        <p><strong>(b)</strong> After how many months did the collection first go over 2000 stamps?</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-<p class="step"><strong>a ·</strong> Each term is 150 more than the previous term. The sequence is as follows: 850, 1000, 1150, 1300, 1450, 1600, 1750, 1900, 2050, 2200, 2350, 2500, 2650, 2800</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> If the same number is added every time, the next term = previous term + that number.</p>
+          <p class="step"><strong>Step 1 ·</strong> The jump from 850 to 1000 is <span class="tex">1000-850=150</span>. He adds 150 stamps each month, so keep adding 150.</p>
+          <p class="step"><span class="tex">a_1=850</span></p>
+          <p class="step"><span class="tex">a_2=850+150=1000</span></p>
+          <p class="step"><span class="tex">a_3=1000+150=1150</span></p>
+          <p class="step"><span class="tex">a_4=1150+150=1300</span></p>
+          <p class="step"><span class="tex">a_5=1300+150=1450</span></p>
+          <p class="step"><span class="tex">a_6=1450+150=1600</span></p>
+          <p class="step"><span class="tex">a_7=1600+150=1750</span></p>
+          <p class="step"><span class="tex">a_8=1750+150=1900</span></p>
+          <p class="step"><span class="tex">a_9=1900+150=2050</span></p>
+          <p class="step"><span class="tex">a_{10}=2050+150=2200</span></p>
+          <p class="step"><span class="tex">a_{11}=2200+150=2350</span></p>
+          <p class="step"><span class="tex">a_{12}=2350+150=2500</span></p>
+          <p class="final">850, 1000, 1150, 1300, 1450, 1600, 1750, 1900, 2050, 2200, 2350, 2500, <span class="tex">\ldots</span></p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Looking at the sequence from part (a), a9 = 2050. Alex’s stamp collection first exceeded 2000 stamps after 9 months.</p>
+          <p class="step"><strong>Step 1 ·</strong> Use the list from part (a). We want the first term that is bigger than 2000.</p>
+          <p class="step"><span class="tex">a_8=1900</span>, and 1900 is still under 2000.</p>
+          <p class="step"><span class="tex">a_9=2050</span>, and 2050 is over 2000.</p>
+          <p class="final">The collection first went over 2000 stamps after 9 months.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q2">
       <h2>2 · Exercise 1A</h2>
       <div class="stem">
-        <p>Write down the next four terms of each sequence. 5, 10, 15, ... a 6, 16, 26, . . . b 2, 4, 8, . . . c 3, 6, 12, ... d 38, 34, 30, . . . e 39, 30, 21, . . . f 24, 12, 6, ... g 81, 27, 9, . . . h −1, 1, −1, . . . i 1, 4, 9, ... j 1 2, 2 3, 3 4, . . . k 16, −8, 4, . . . l</p>
+        <p class="intro">Write down the <strong>next four terms</strong> of each sequence. Each part is a separate list.</p>
+        <p><strong>(a)</strong> <span class="tex">5, 10, 15, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">6, 16, 26, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">2, 4, 8, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">3, 6, 12, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">38, 34, 30, \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">39, 30, 21, \ldots</span></p>
+        <p><strong>(g)</strong> <span class="tex">24, 12, 6, \ldots</span></p>
+        <p><strong>(h)</strong> <span class="tex">81, 27, 9, \ldots</span></p>
+        <p><strong>(i)</strong> <span class="tex">-1, 1, -1, \ldots</span></p>
+        <p><strong>(j)</strong> <span class="tex">1, 4, 9, \ldots</span></p>
+        <p><strong>(k)</strong> <span class="tex">\tfrac{1}{2}, \tfrac{2}{3}, \tfrac{3}{4}, \ldots</span></p>
+        <p><strong>(l)</strong> <span class="tex">16, -8, 4, \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-<p class="step"><strong>a ·</strong> Each term is 5 more than the previous term. The sequence is as follows: 5, 10, 15, 20, 25, 30, 35</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Find the rule from one term to the next, then use that same rule four more times. Write each new term on its own line.</p>
+          <p class="step"><strong>Rule ·</strong> <span class="tex">10-5=5</span> and <span class="tex">15-10=5</span>. Add 5 each time.</p>
+          <p class="step"><span class="tex">15+5=20</span></p>
+          <p class="step"><span class="tex">20+5=25</span></p>
+          <p class="step"><span class="tex">25+5=30</span></p>
+          <p class="step"><span class="tex">30+5=35</span></p>
+          <p class="final">Next four terms: 20, 25, 30, 35.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Each term is 10 more than the previous term. The sequence is as follows: 6, 16, 26, 36, 46, 56, 66</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">16-6=10</span> and <span class="tex">26-16=10</span>. Add 10 each time.</p>
+          <p class="step"><span class="tex">26+10=36</span></p>
+          <p class="step"><span class="tex">36+10=46</span></p>
+          <p class="step"><span class="tex">46+10=56</span></p>
+          <p class="step"><span class="tex">56+10=66</span></p>
+          <p class="final">Next four terms: 36, 46, 56, 66.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Each term is double the previous term. The sequence is as follows: 2, 4, 8, 16, 32, 64, 128</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">4=2\times 2</span> and <span class="tex">8=4\times 2</span>. Double each time (multiply by 2).</p>
+          <p class="step"><span class="tex">8\times 2=16</span></p>
+          <p class="step"><span class="tex">16\times 2=32</span></p>
+          <p class="step"><span class="tex">32\times 2=64</span></p>
+          <p class="step"><span class="tex">64\times 2=128</span></p>
+          <p class="final">Next four terms: 16, 32, 64, 128.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Each term is double the previous term. The sequence is as follows: 3, 6, 12, 24, 48, 96, 192</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">6=3\times 2</span> and <span class="tex">12=6\times 2</span>. Double each time.</p>
+          <p class="step"><span class="tex">12\times 2=24</span></p>
+          <p class="step"><span class="tex">24\times 2=48</span></p>
+          <p class="step"><span class="tex">48\times 2=96</span></p>
+          <p class="step"><span class="tex">96\times 2=192</span></p>
+          <p class="final">Next four terms: 24, 48, 96, 192.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> Each term is 4 less than the previous term. The sequence is as follows: 38, 34, 30, 26, 22, 18, 14</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">34-38=-4</span> and <span class="tex">30-34=-4</span>. Subtract 4 each time.</p>
+          <p class="step"><span class="tex">30-4=26</span></p>
+          <p class="step"><span class="tex">26-4=22</span></p>
+          <p class="step"><span class="tex">22-4=18</span></p>
+          <p class="step"><span class="tex">18-4=14</span></p>
+          <p class="final">Next four terms: 26, 22, 18, 14.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> Each term is 9 less than the previous term. The sequence is as follows: 39, 30, 21, 12, 3, −6, −15</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">30-39=-9</span> and <span class="tex">21-30=-9</span>. Subtract 9 each time.</p>
+          <p class="step"><span class="tex">21-9=12</span></p>
+          <p class="step"><span class="tex">12-9=3</span></p>
+          <p class="step"><span class="tex">3-9=-6</span></p>
+          <p class="step"><span class="tex">-6-9=-15</span></p>
+          <p class="final">Next four terms: 12, 3, −6, −15.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> Each term is half the previous term. The sequence is as follows: 24, 12, 6, 3, 11/2, 3/4, 3/8</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">12=24\div 2</span> and <span class="tex">6=12\div 2</span>. Halve each time (divide by 2).</p>
+          <p class="step"><span class="tex">6\div 2=3</span></p>
+          <p class="step"><span class="tex">3\div 2=\tfrac{3}{2}</span></p>
+          <p class="step"><span class="tex">\tfrac{3}{2}\div 2=\tfrac{3}{4}</span></p>
+          <p class="step"><span class="tex">\tfrac{3}{4}\div 2=\tfrac{3}{8}</span></p>
+          <p class="final">Next four terms: <span class="tex">3, \tfrac{3}{2}, \tfrac{3}{4}, \tfrac{3}{8}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> Each term is the previous term divided by 3. The sequence is as follows: 81, 27, 9, 3, 1, 1/3, 1/9 i Each term is the previous term multiplied by −1. The sequence is as follows: −1, 1, −1, 1, −1, 1, −1 j Each term is squared. The sequence is as follows: 1, 4, 9, 16, 25, 36, 49 k Each term is of the form an = n n + 1. The sequence is as follows: 1/2, 2/3, 3/4, 4/5, 5/6, 6/7, 7/8 l Each term is the previous term divided by −2. The sequence is as follows: 16, −8, 4, −2, 1, −1/2, 1/4/1</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">27=81\div 3</span> and <span class="tex">9=27\div 3</span>. Divide by 3 each time.</p>
+          <p class="step"><span class="tex">9\div 3=3</span></p>
+          <p class="step"><span class="tex">3\div 3=1</span></p>
+          <p class="step"><span class="tex">1\div 3=\tfrac{1}{3}</span></p>
+          <p class="step"><span class="tex">\tfrac{1}{3}\div 3=\tfrac{1}{9}</span></p>
+          <p class="final">Next four terms: <span class="tex">3, 1, \tfrac{1}{3}, \tfrac{1}{9}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">1=(-1)\times(-1)</span> and <span class="tex">-1=1\times(-1)</span>. Multiply by −1 each time. The sign flips.</p>
+          <p class="step"><span class="tex">-1\times(-1)=1</span></p>
+          <p class="step"><span class="tex">1\times(-1)=-1</span></p>
+          <p class="step"><span class="tex">-1\times(-1)=1</span></p>
+          <p class="step"><span class="tex">1\times(-1)=-1</span></p>
+          <p class="final">Next four terms: 1, −1, 1, −1.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">1=1^2</span>, <span class="tex">4=2^2</span>, <span class="tex">9=3^2</span>. These are the square numbers. The next squares use 4, 5, 6 and 7.</p>
+          <p class="step"><span class="tex">4^2=4\times 4=16</span></p>
+          <p class="step"><span class="tex">5^2=5\times 5=25</span></p>
+          <p class="step"><span class="tex">6^2=6\times 6=36</span></p>
+          <p class="step"><span class="tex">7^2=7\times 7=49</span></p>
+          <p class="final">Next four terms: 16, 25, 36, 49.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · k</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The <span class="tex">n</span>th term is <span class="tex">a_n=\dfrac{n}{n+1}</span>. The top number goes up by 1, and the bottom number is always one more than the top.</p>
+          <p class="step">The three given terms are term 1, term 2 and term 3. The next four are terms 4 to 7.</p>
+          <p class="step"><span class="tex">a_4=\dfrac{4}{5}</span></p>
+          <p class="step"><span class="tex">a_5=\dfrac{5}{6}</span></p>
+          <p class="step"><span class="tex">a_6=\dfrac{6}{7}</span></p>
+          <p class="step"><span class="tex">a_7=\dfrac{7}{8}</span></p>
+          <p class="final">Next four terms: <span class="tex">\tfrac{4}{5}, \tfrac{5}{6}, \tfrac{6}{7}, \tfrac{7}{8}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · l</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">-8=16\div(-2)</span> and <span class="tex">4=(-8)\div(-2)</span>. Divide by −2 each time.</p>
+          <p class="step"><span class="tex">4\div(-2)=-2</span></p>
+          <p class="step"><span class="tex">-2\div(-2)=1</span></p>
+          <p class="step"><span class="tex">1\div(-2)=-\tfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">\left(-\tfrac{1}{2}\right)\div(-2)=\tfrac{1}{4}</span></p>
+          <p class="final">Next four terms: <span class="tex">-2, 1, -\tfrac{1}{2}, \tfrac{1}{4}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q3">
       <h2>3 · Exercise 1A</h2>
       <div class="stem">
-        <p>Find the first four terms of each sequence. You will need to substitute n = 1, n = 2, n = 3 and n = 4 into the formula for the nth term an. an = 6n a an = 5n −2 b an = 2n c an = 5n d an = 20 −n e an = 6 −2n f an = 3 × 2n g an = 7 × 10n h an = n3 i an = n(n + 1) j an = (−1)n k an = (−3)n l</p>
+        <p class="intro">Find the first four terms of each sequence. Put <span class="tex">n=1</span>, then <span class="tex">n=2</span>, then <span class="tex">n=3</span>, then <span class="tex">n=4</span> into the formula for <span class="tex">a_n</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">a_n=6n</span></p>
+        <p><strong>(b)</strong> <span class="tex">a_n=5n-2</span></p>
+        <p><strong>(c)</strong> <span class="tex">a_n=2^n</span></p>
+        <p><strong>(d)</strong> <span class="tex">a_n=5^n</span></p>
+        <p><strong>(e)</strong> <span class="tex">a_n=20-n</span></p>
+        <p><strong>(f)</strong> <span class="tex">a_n=6-2n</span></p>
+        <p><strong>(g)</strong> <span class="tex">a_n=3\times 2^n</span></p>
+        <p><strong>(h)</strong> <span class="tex">a_n=7\times 10^n</span></p>
+        <p><strong>(i)</strong> <span class="tex">a_n=n^3</span></p>
+        <p><strong>(j)</strong> <span class="tex">a_n=n(n+1)</span></p>
+        <p><strong>(k)</strong> <span class="tex">a_n=(-1)^n</span></p>
+        <p><strong>(l)</strong> <span class="tex">a_n=(-3)^n</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step">an = 6n a1 = 6 a2 = 6 × 2 = 12 a3 = 6 × 3 = 18 a4 = 6 × 4 = 24</p>
-<p class="step"><strong>a ·</strong> an = 5n −2 a1 = 5 −2 = 3 a2 = 10 −2 = 8 a3 = 15 −2 = 13 a4 = 20 −2 = 18</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">a_n</span> is the <span class="tex">n</span>th term. Replace the letter <span class="tex">n</span> with 1, then 2, then 3, then 4. Do not change the 6.</p>
+          <p class="step"><span class="tex">a_1=6\times 1=6</span></p>
+          <p class="step"><span class="tex">a_2=6\times 2=12</span></p>
+          <p class="step"><span class="tex">a_3=6\times 3=18</span></p>
+          <p class="step"><span class="tex">a_4=6\times 4=24</span></p>
+          <p class="final">First four terms: 6, 12, 18, 24.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> an = 2n a1 = 21 = 2 a2 = 22 = 4 a3 = 23 = 8 a4 = 24 = 16</p>
+          <p class="step"><strong>Same method ·</strong> In <span class="tex">a_n=5n-2</span>, work out <span class="tex">5n</span> first, then subtract 2.</p>
+          <p class="step"><span class="tex">a_1=5\times 1-2=5-2=3</span></p>
+          <p class="step"><span class="tex">a_2=5\times 2-2=10-2=8</span></p>
+          <p class="step"><span class="tex">a_3=5\times 3-2=15-2=13</span></p>
+          <p class="step"><span class="tex">a_4=5\times 4-2=20-2=18</span></p>
+          <p class="final">First four terms: 3, 8, 13, 18.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> an = 5n a1 = 51 = 5 a2 = 52 = 25 a3 = 53 = 125 a4 = 54 = 625</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">2^n</span> means 2 multiplied by itself <span class="tex">n</span> times. The small <span class="tex">n</span> up high is a power, not a subscript. <span class="tex">2^1=2</span>, <span class="tex">2^2=2\times 2</span>, <span class="tex">2^3=2\times 2\times 2</span>.</p>
+          <p class="step"><span class="tex">a_1=2^1=2</span></p>
+          <p class="step"><span class="tex">a_2=2^2=2\times 2=4</span></p>
+          <p class="step"><span class="tex">a_3=2^3=2\times 2\times 2=8</span></p>
+          <p class="step"><span class="tex">a_4=2^4=2\times 2\times 2\times 2=16</span></p>
+          <p class="final">First four terms: 2, 4, 8, 16.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> an = 20 −n a1 = 20 −1 = 19 a2 = 20 −2 = 18 a3 = 20 −3 = 17 a4 = 20 −4 = 16</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">5^n</span> means 5 multiplied by itself <span class="tex">n</span> times.</p>
+          <p class="step"><span class="tex">a_1=5^1=5</span></p>
+          <p class="step"><span class="tex">a_2=5^2=5\times 5=25</span></p>
+          <p class="step"><span class="tex">a_3=5^3=5\times 5\times 5=125</span></p>
+          <p class="step"><span class="tex">a_4=5^4=125\times 5=625</span></p>
+          <p class="final">First four terms: 5, 25, 125, 625.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> an = 6 −2n a1 = 6 −2 = 4 a2 = 6 −4 = 2 a3 = 6 −6 = 0 a4 = 6 −8 = −2</p>
+          <p class="step"><strong>Same method ·</strong> In <span class="tex">a_n=20-n</span>, start at 20 and subtract <span class="tex">n</span>.</p>
+          <p class="step"><span class="tex">a_1=20-1=19</span></p>
+          <p class="step"><span class="tex">a_2=20-2=18</span></p>
+          <p class="step"><span class="tex">a_3=20-3=17</span></p>
+          <p class="step"><span class="tex">a_4=20-4=16</span></p>
+          <p class="final">First four terms: 19, 18, 17, 16.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> an = 3 × 2n a1 = 3 × 2 = 6 a2 = 3 × 4 = 12 a3 = 3 × 8 = 24 a4 = 3 × 16 = 48</p>
+          <p class="step"><strong>Same method ·</strong> In <span class="tex">a_n=6-2n</span>, work out <span class="tex">2n</span> first, then subtract it from 6.</p>
+          <p class="step"><span class="tex">a_1=6-2\times 1=6-2=4</span></p>
+          <p class="step"><span class="tex">a_2=6-2\times 2=6-4=2</span></p>
+          <p class="step"><span class="tex">a_3=6-2\times 3=6-6=0</span></p>
+          <p class="step"><span class="tex">a_4=6-2\times 4=6-8=-2</span></p>
+          <p class="final">First four terms: 4, 2, 0, −2.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> an = 7 × 10n a1 = 7 × 10 = 70 a2 = 7 × 100 = 700 a3 = 7 × 1 000 = 7000 a4 = 7 × 10 000 = 70 000</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> In <span class="tex">3\times 2^n</span> the power is only on the 2. Work out <span class="tex">2^n</span> first, then multiply by 3.</p>
+          <p class="step"><span class="tex">a_1=3\times 2^1=3\times 2=6</span></p>
+          <p class="step"><span class="tex">a_2=3\times 2^2=3\times 4=12</span></p>
+          <p class="step"><span class="tex">a_3=3\times 2^3=3\times 8=24</span></p>
+          <p class="step"><span class="tex">a_4=3\times 2^4=3\times 16=48</span></p>
+          <p class="final">First four terms: 6, 12, 24, 48.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> an = n3 a1 = 13 = 1 a2 = 23 = 8 a3 = 33 = 27 a4 = 43 = 64 i an = n(n + 1) a1 = 1(2) = 2 a2 = 2(3) = 6 a3 = 3(4) = 12 a4 = 4(5) = 20 j an = (−1)n a1 = (−1)1 = −1 a2 = (−1)2 = 1 a3 = (−1)3 = −1 a4 = (−1)4 = 1 k an = (−3)n a1 = (−3)1 = −3 a2 = (−3)2 = 9 a3 = (−3)3 = −27 a4 = (−3)4 = 81 l</p>
+          <p class="step"><strong>Same method ·</strong> In <span class="tex">7\times 10^n</span>, work out the power of 10 first, then multiply by 7. <span class="tex">10^1=10</span>, <span class="tex">10^2=100</span>, <span class="tex">10^3=1000</span>, <span class="tex">10^4=10000</span>.</p>
+          <p class="step"><span class="tex">a_1=7\times 10=70</span></p>
+          <p class="step"><span class="tex">a_2=7\times 100=700</span></p>
+          <p class="step"><span class="tex">a_3=7\times 1000=7000</span></p>
+          <p class="step"><span class="tex">a_4=7\times 10000=70000</span></p>
+          <p class="final">First four terms: 70, 700, 7000, 70 000.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">n^3</span> means <span class="tex">n\times n\times n</span>.</p>
+          <p class="step"><span class="tex">a_1=1^3=1\times 1\times 1=1</span></p>
+          <p class="step"><span class="tex">a_2=2^3=2\times 2\times 2=8</span></p>
+          <p class="step"><span class="tex">a_3=3^3=3\times 3\times 3=27</span></p>
+          <p class="step"><span class="tex">a_4=4^3=4\times 4\times 4=64</span></p>
+          <p class="final">First four terms: 1, 8, 27, 64.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=n(n+1)</span> means “the term number, times one more than the term number”.</p>
+          <p class="step"><span class="tex">a_1=1\times(1+1)=1\times 2=2</span></p>
+          <p class="step"><span class="tex">a_2=2\times(2+1)=2\times 3=6</span></p>
+          <p class="step"><span class="tex">a_3=3\times(3+1)=3\times 4=12</span></p>
+          <p class="step"><span class="tex">a_4=4\times(4+1)=4\times 5=20</span></p>
+          <p class="final">First four terms: 2, 6, 12, 20.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · k</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">(-1)^n</span> flips sign. An odd power is −1. An even power is <span class="tex">(-1)\times(-1)=+1</span>.</p>
+          <p class="step"><span class="tex">a_1=(-1)^1=-1</span></p>
+          <p class="step"><span class="tex">a_2=(-1)^2=(-1)\times(-1)=1</span></p>
+          <p class="step"><span class="tex">a_3=(-1)^3=1\times(-1)=-1</span></p>
+          <p class="step"><span class="tex">a_4=(-1)^4=(-1)\times(-1)=1</span></p>
+          <p class="final">First four terms: −1, 1, −1, 1.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · l</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">(-3)^n</span> means −3 multiplied by itself <span class="tex">n</span> times. A negative times a negative is positive, so even powers are positive and odd powers are negative.</p>
+          <p class="step"><span class="tex">a_1=(-3)^1=-3</span></p>
+          <p class="step"><span class="tex">a_2=(-3)^2=(-3)\times(-3)=9</span></p>
+          <p class="step"><span class="tex">a_3=(-3)^3=9\times(-3)=-27</span></p>
+          <p class="step"><span class="tex">a_4=(-3)^4=(-27)\times(-3)=81</span></p>
+          <p class="final">First four terms: −3, 9, −27, 81.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q4">
       <h2>4 · Exercise 1A</h2>
       <div class="stem">
-        <p>Write down the first four terms of each sequence described below. a The first term is 6, and every term after that is 2 more than the previous term. b The first term is 11, and every term after that is 50 more than the previous term. c The first term is 15, and every term after that is 3 less than the previous term. d The first term is 12, and every term after that is 8 less than the previous term. e The first term is 5, and every term after that is twice the previous term. f The first term is 1 3, and every term after that is three times the previous term. g The first term is 18, and every term after that is half the previous term. h The first term is −100, and every term after that is one fifth of the previous term.</p>
+        <p class="intro">Write down the first four terms of each sequence.</p>
+        <p><strong>(a)</strong> The first term is 6. Every term after that is 2 more than the previous term.</p>
+        <p><strong>(b)</strong> The first term is 11. Every term after that is 50 more than the previous term.</p>
+        <p><strong>(c)</strong> The first term is 15. Every term after that is 3 less than the previous term.</p>
+        <p><strong>(d)</strong> The first term is 12. Every term after that is 8 less than the previous term.</p>
+        <p><strong>(e)</strong> The first term is 5. Every term after that is twice the previous term.</p>
+        <p><strong>(f)</strong> The first term is <span class="tex">\tfrac{1}{3}</span>. Every term after that is three times the previous term.</p>
+        <p><strong>(g)</strong> The first term is 18. Every term after that is half the previous term.</p>
+        <p><strong>(h)</strong> The first term is −100. Every term after that is one fifth of the previous term.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> Start with 6 as the first term, and add 2 to find the next term: 6, 8, 10, 12</p>
+          <p class="step">Start at 6. Add 2 to get each next term.</p>
+          <p class="step"><span class="tex">6+2=8</span></p>
+          <p class="step"><span class="tex">8+2=10</span></p>
+          <p class="step"><span class="tex">10+2=12</span></p>
+          <p class="final">6, 8, 10, 12.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Start with 11 as the first term, and add 50 to find the next term: 11, 61, 111, 161</p>
+          <p class="step"><strong>Same method ·</strong> Start at 11. Add 50 each time.</p>
+          <p class="step"><span class="tex">11+50=61</span></p>
+          <p class="step"><span class="tex">61+50=111</span></p>
+          <p class="step"><span class="tex">111+50=161</span></p>
+          <p class="final">11, 61, 111, 161.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Start with 15 as the first term, then subtract 3 to find the next term: 15, 12, 9, 6</p>
+          <p class="step"><strong>Same method ·</strong> Start at 15. Subtract 3 each time.</p>
+          <p class="step"><span class="tex">15-3=12</span></p>
+          <p class="step"><span class="tex">12-3=9</span></p>
+          <p class="step"><span class="tex">9-3=6</span></p>
+          <p class="final">15, 12, 9, 6.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Start with 12 as the first term, then subtract 8 to find the next term: 12, 4, −4, −12</p>
+          <p class="step"><strong>Same method ·</strong> Start at 12. Subtract 8 each time.</p>
+          <p class="step"><span class="tex">12-8=4</span></p>
+          <p class="step"><span class="tex">4-8=-4</span></p>
+          <p class="step"><span class="tex">-4-8=-12</span></p>
+          <p class="final">12, 4, −4, −12.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> Start with 5 as the first term, then double it to find the next term: 5, 10, 20, 40</p>
+          <p class="step"><strong>Same method ·</strong> Start at 5. Multiply by 2 each time.</p>
+          <p class="step"><span class="tex">5\times 2=10</span></p>
+          <p class="step"><span class="tex">10\times 2=20</span></p>
+          <p class="step"><span class="tex">20\times 2=40</span></p>
+          <p class="final">5, 10, 20, 40.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> Start with 1 3 as the first term, then triple it to find the next term: 1/3, 1, 3, 9</p>
+          <p class="step"><strong>Same method ·</strong> Start at <span class="tex">\tfrac{1}{3}</span>. Multiply by 3 each time.</p>
+          <p class="step"><span class="tex">\tfrac{1}{3}\times 3=1</span></p>
+          <p class="step"><span class="tex">1\times 3=3</span></p>
+          <p class="step"><span class="tex">3\times 3=9</span></p>
+          <p class="final"><span class="tex">\tfrac{1}{3}, 1, 3, 9</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> Start with 18 as the first term, then halve it to find the next term: 18, 9, 9/2, 9/4</p>
+          <p class="step"><strong>Same method ·</strong> Start at 18. Divide by 2 each time.</p>
+          <p class="step"><span class="tex">18\div 2=9</span></p>
+          <p class="step"><span class="tex">9\div 2=\tfrac{9}{2}</span></p>
+          <p class="step"><span class="tex">\tfrac{9}{2}\div 2=\tfrac{9}{4}</span></p>
+          <p class="final"><span class="tex">18, 9, \tfrac{9}{2}, \tfrac{9}{4}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> Start with −100 as the first term, then divide by 5 to find the next term: −100, −20, −4, −4/5</p>
+          <p class="step"><strong>Same method ·</strong> “One fifth” means divide by 5. The negative sign stays, because a negative divided by a positive is still negative.</p>
+          <p class="step"><span class="tex">-100\div 5=-20</span></p>
+          <p class="step"><span class="tex">-20\div 5=-4</span></p>
+          <p class="step"><span class="tex">-4\div 5=-\tfrac{4}{5}</span></p>
+          <p class="final"><span class="tex">-100, -20, -4, -\tfrac{4}{5}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q5">
       <h2>5 · Exercise 1A</h2>
       <div class="stem">
-        <p>Write out the first twelve terms of the sequence 7, 12, 17, 22, . . . How many terms are less than 30? a How many terms are less than 60? b How many terms lie between 20 and 40? c How many terms lie between 10 and 50? d What is the 10th term? e What number term is 37? f Is 87 a term in the sequence? g Is 201 a term in the sequence? h Find the first term greater than 45. i Find the last term less than 43. j</p>
+        <p class="intro">The sequence is <span class="tex">7, 12, 17, 22, \ldots</span> Write out the first twelve terms, then answer each part.</p>
+        <p><strong>(a)</strong> How many terms are less than 30?</p>
+        <p><strong>(b)</strong> How many terms are less than 60?</p>
+        <p><strong>(c)</strong> How many terms lie between 20 and 40?</p>
+        <p><strong>(d)</strong> How many terms lie between 10 and 50?</p>
+        <p><strong>(e)</strong> What is the 10th term?</p>
+        <p><strong>(f)</strong> What number term is 37?</p>
+        <p><strong>(g)</strong> Is 87 a term in the sequence?</p>
+        <p><strong>(h)</strong> Is 201 a term in the sequence?</p>
+        <p><strong>(i)</strong> Find the first term greater than 45.</p>
+        <p><strong>(j)</strong> Find the last term less than 43.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · first 12 terms</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">12-7=5</span> and <span class="tex">17-12=5</span>, so add 5 each time. If the first term is <span class="tex">a</span> and we add <span class="tex">d</span> each time, then <span class="tex">a_n=a+(n-1)d</span>.</p>
+          <p class="step">Here <span class="tex">a=7</span> and <span class="tex">d=5</span>, so <span class="tex">a_n=7+(n-1)\times 5=7+5n-5=5n+2</span>.</p>
+          <p class="step"><span class="tex">a_1=7</span></p>
+          <p class="step"><span class="tex">a_2=12</span></p>
+          <p class="step"><span class="tex">a_3=17</span></p>
+          <p class="step"><span class="tex">a_4=22</span></p>
+          <p class="step"><span class="tex">a_5=27</span></p>
+          <p class="step"><span class="tex">a_6=32</span></p>
+          <p class="step"><span class="tex">a_7=37</span></p>
+          <p class="step"><span class="tex">a_8=42</span></p>
+          <p class="step"><span class="tex">a_9=47</span></p>
+          <p class="step"><span class="tex">a_{10}=52</span></p>
+          <p class="step"><span class="tex">a_{11}=57</span></p>
+          <p class="step"><span class="tex">a_{12}=62</span></p>
+          <p class="final">7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62.</p>
+        </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-        <p class="step">Each term is 5 more than the previous term. The sequence is as follows: 7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62</p>
-<p class="step"><strong>a ·</strong> Counting the number of terms: 2/7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62/5 terms are less than 30.</p>
+          <p class="step">From the list, tick the terms that are smaller than 30.</p>
+          <p class="step">7 is less than 30.</p>
+          <p class="step">12 is less than 30.</p>
+          <p class="step">17 is less than 30.</p>
+          <p class="step">22 is less than 30.</p>
+          <p class="step">27 is less than 30.</p>
+          <p class="step">32 is not less than 30, and every later term is bigger still.</p>
+          <p class="final">5 terms are less than 30.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Counting the number of terms: 7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62/11 terms are less than 60.</p>
+          <p class="step"><strong>Same method ·</strong> Count the terms smaller than 60. From the list, 7 through 57 are under 60. The 12th term is 62, which is not under 60.</p>
+          <p class="step">That is terms 1 to 11.</p>
+          <p class="final">11 terms are less than 60.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Counting the number of terms: 7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62/4 terms lie between 20 and 40.</p>
+          <p class="step"><strong>Same method ·</strong> “Between 20 and 40” means bigger than 20 and smaller than 40.</p>
+          <p class="step">17 is not bigger than 20.</p>
+          <p class="step">22, 27, 32 and 37 are between 20 and 40.</p>
+          <p class="step">42 is not smaller than 40.</p>
+          <p class="final">4 terms lie between 20 and 40.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Counting the number of terms: 7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62/8 terms lie between 10 and 50.</p>
+          <p class="step"><strong>Same method ·</strong> Bigger than 10 and smaller than 50.</p>
+          <p class="step">7 is not bigger than 10.</p>
+          <p class="step">12, 17, 22, 27, 32, 37, 42 and 47 fit.</p>
+          <p class="step">52 is not smaller than 50.</p>
+          <p class="final">8 terms lie between 10 and 50.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> 7, 12, 17, 22, 27, 32, 37, 42, 47, 52, 57, 62 The tenth term is 52.</p>
+          <p class="step">Count along the list to position 10.</p>
+          <p class="step"><span class="tex">a_{10}=52</span>.</p>
+          <p class="step">Check with the formula from the first panel: <span class="tex">a_n=5n+2</span>, so <span class="tex">a_{10}=5\times 10+2=52</span>.</p>
+          <p class="final">The 10th term is 52.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> 37 is the 7th term.</p>
+          <p class="step">Find 37 in the list: <span class="tex">a_7=37</span>.</p>
+          <p class="final">37 is the 7th term.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> This sequence is in the form: an = 5n + 2 Put an = 87 Then 87 = 5n + 2 85 = 5n n = 17 Hence 87 is the 17th term.</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=5n+2</span>. A number is in the sequence only if the <span class="tex">n</span> we get is a whole number (1, 2, 3, …).</p>
+          <p class="step">Put <span class="tex">a_n=87</span>.</p>
+          <p class="step"><span class="tex">87=5n+2</span></p>
+          <p class="step">Subtract 2 from both sides: <span class="tex">85=5n</span></p>
+          <p class="step">Divide by 5: <span class="tex">n=85\div 5=17</span></p>
+          <p class="step">17 is a whole number. Check: <span class="tex">5\times 17+2=85+2=87</span>.</p>
+          <p class="final">Yes. 87 is the 17th term.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> This sequence is in the form: an = 5n + 2 Put an = 201 Then 201 = 5n + 2 199 = 5n n = 394 5 Hence 201 is not a term of this sequence. i This sequence is in the form: an = 5n + 2 Put an &gt; 45 Then 5n + 2 &gt; 45 5n &gt; 43 n &gt; 83 5 Hence, the first term greater than 45 is the 9th term. a9 = 47 j This sequence is in the form: an = 5n + 2 Put an &lt; 43 Then 5n + 2 &lt; 43 5n &lt; 41 n &lt; 81 5 Hence, the last term less than 43 is the 8th term. a8 = 42/3</p>
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_n=5n+2</span>. Put <span class="tex">a_n=201</span>.</p>
+          <p class="step"><span class="tex">201=5n+2</span></p>
+          <p class="step">Subtract 2: <span class="tex">199=5n</span></p>
+          <p class="step">Divide by 5: <span class="tex">n=199\div 5=39.8</span></p>
+          <p class="step">39.8 is not a whole number, so 201 is not in the list.</p>
+          <p class="final">No. 201 is not a term of this sequence.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> We want <span class="tex">a_n&gt;45</span>, so <span class="tex">5n+2&gt;45</span>.</p>
+          <p class="step">Subtract 2: <span class="tex">5n&gt;43</span></p>
+          <p class="step">Divide by 5: <span class="tex">n&gt;43\div 5=8.6</span></p>
+          <p class="step">The next whole number after 8.6 is 9.</p>
+          <p class="step"><span class="tex">a_9=5\times 9+2=45+2=47</span></p>
+          <p class="final">The first term greater than 45 is the 9th term, <span class="tex">a_9=47</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> We want <span class="tex">a_n&lt;43</span>, so <span class="tex">5n+2&lt;43</span>.</p>
+          <p class="step">Subtract 2: <span class="tex">5n&lt;41</span></p>
+          <p class="step">Divide by 5: <span class="tex">n&lt;41\div 5=8.2</span></p>
+          <p class="step">The largest whole number under 8.2 is 8.</p>
+          <p class="step"><span class="tex">a_8=5\times 8+2=40+2=42</span></p>
+          <p class="final">The last term less than 43 is the 8th term, <span class="tex">a_8=42</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q6">
       <h2>6 · Exercise 1A</h2>
       <div class="stem">
-        <p>and series 1A</p>
+        <p class="intro">The sequence is <span class="tex">\tfrac{3}{4},\; 1\tfrac{1}{2},\; 3,\; 6,\; \ldots</span> Write out the first twelve terms, then answer each part.</p>
+        <p><strong>(a)</strong> How many terms are less than 30?</p>
+        <p><strong>(b)</strong> How many terms are less than 400?</p>
+        <p><strong>(c)</strong> How many terms lie between 20 and 100?</p>
+        <p><strong>(d)</strong> How many terms lie between 1 and 1000?</p>
+        <p><strong>(e)</strong> What is the 10th term?</p>
+        <p><strong>(f)</strong> What number term is 192?</p>
+        <p><strong>(g)</strong> Is 96 a term in the sequence?</p>
+        <p><strong>(h)</strong> Is 100 a term in the sequence?</p>
+        <p><strong>(i)</strong> Find the first term greater than 200.</p>
+        <p><strong>(j)</strong> Find the last term less than 50.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · first 12 terms</button>
+        <div class="sol">
+          <p class="step"><strong>Rule ·</strong> <span class="tex">1\tfrac{1}{2}=\tfrac{3}{2}</span>, and <span class="tex">\tfrac{3}{4}\times 2=\tfrac{3}{2}</span>. Also <span class="tex">3=\tfrac{3}{2}\times 2</span> and <span class="tex">6=3\times 2</span>. Each term is double the one before.</p>
+          <p class="step"><span class="tex">a_1=\tfrac{3}{4}</span></p>
+          <p class="step"><span class="tex">a_2=\tfrac{3}{4}\times 2=\tfrac{3}{2}=1\tfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">a_3=\tfrac{3}{2}\times 2=3</span></p>
+          <p class="step"><span class="tex">a_4=3\times 2=6</span></p>
+          <p class="step"><span class="tex">a_5=6\times 2=12</span></p>
+          <p class="step"><span class="tex">a_6=12\times 2=24</span></p>
+          <p class="step"><span class="tex">a_7=24\times 2=48</span></p>
+          <p class="step"><span class="tex">a_8=48\times 2=96</span></p>
+          <p class="step"><span class="tex">a_9=96\times 2=192</span></p>
+          <p class="step"><span class="tex">a_{10}=192\times 2=384</span></p>
+          <p class="step"><span class="tex">a_{11}=384\times 2=768</span></p>
+          <p class="step"><span class="tex">a_{12}=768\times 2=1536</span></p>
+          <p class="final"><span class="tex">\tfrac{3}{4},\; 1\tfrac{1}{2},\; 3,\; 6,\; 12,\; 24,\; 48,\; 96,\; 192,\; 384,\; 768,\; 1536</span>.</p>
+        </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-        <p class="step">Each term is double the previous term: 3/4, 11/2, 3, 6, 12, 24, 48, 96, 192, 384, 768, 1536</p>
-<p class="step"><strong>a ·</strong> Counting the number of terms: 3/4, 11/2, 3, 6, 12, 24, 48, 96, 192, 384, 768, 1536/6 terms are less than 30.</p>
+          <p class="step">Terms under 30: <span class="tex">\tfrac{3}{4}</span>, <span class="tex">1\tfrac{1}{2}</span>, 3, 6, 12, 24.</p>
+          <p class="step">The next term is 48, which is not under 30.</p>
+          <p class="final">6 terms are less than 30.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Counting the number of terms: 3/4, 11/2, 3, 6, 12, 24, 48, 96, 192, 384, 768, 1536/10 terms are less than 400.</p>
+          <p class="step"><strong>Same method ·</strong> Terms under 400 go up to <span class="tex">a_{10}=384</span>. The next term is 768, which is over 400.</p>
+          <p class="final">10 terms are less than 400.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Counting the number of terms: 3/4, 11/2, 3, 6, 12, 24, 48, 96, 192, 384, 768, 1536/3 terms are between 20 and 100.</p>
+          <p class="step"><strong>Same method ·</strong> Bigger than 20 and smaller than 100: 24, 48, 96.</p>
+          <p class="step">12 is not bigger than 20. 192 is not smaller than 100.</p>
+          <p class="final">3 terms lie between 20 and 100.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Counting the number of terms: 3/4, 11/2, 3, 6, 12, 24, 48, 96, 192, 384, 768, 1536/10 terms are between 1 and 1000.</p>
+          <p class="step"><strong>Same method ·</strong> Bigger than 1 and smaller than 1000.</p>
+          <p class="step"><span class="tex">\tfrac{3}{4}</span> is not bigger than 1.</p>
+          <p class="step"><span class="tex">1\tfrac{1}{2}</span>, 3, 6, 12, 24, 48, 96, 192, 384, 768 all fit. That is 10 terms.</p>
+          <p class="step">1536 is not smaller than 1000.</p>
+          <p class="final">10 terms lie between 1 and 1000.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> 384 is the 10th term.</p>
+          <p class="step">From the list, position 10 is 384.</p>
+          <p class="final">The 10th term is 384.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> 192 is the 9th term.</p>
+          <p class="step">From the list, <span class="tex">a_9=192</span>.</p>
+          <p class="final">192 is the 9th term.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> Looking at the sequence: Yes, a8 = 96</p>
+          <p class="step">Look down the list: <span class="tex">a_8=96</span>.</p>
+          <p class="final">Yes. 96 is the 8th term.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> Looking at the sequence: No, 100 is not a term in the sequence. i Looking at the sequence: a9 = 192 a10 = 384 Hence the tenth term, a10 = 384, is the first term greater than 200. j Looking at the sequence: a8 = 96 a7 = 48 Hence the seventh term, a7 = 48, is the last term less than 50.</p>
+          <p class="step">The list jumps from 96 to 192. 100 is not one of those values.</p>
+          <p class="final">No. 100 is not a term in the sequence.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="step"><span class="tex">a_9=192</span>, which is not greater than 200.</p>
+          <p class="step"><span class="tex">a_{10}=384</span>, which is greater than 200.</p>
+          <p class="final">The first term greater than 200 is the 10th term, <span class="tex">a_{10}=384</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
+        <div class="sol">
+          <p class="step"><span class="tex">a_7=48</span>, which is less than 50.</p>
+          <p class="step"><span class="tex">a_8=96</span>, which is not less than 50.</p>
+          <p class="final">The last term less than 50 is the 7th term, <span class="tex">a_7=48</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q7">
-      <h2>7 · Exercise 1A</h2>
+      <h2>7 · Exercise 1A <span class="band dev">Development</span></h2>
       <div class="stem">
-        <p>For each sequence, write out the first five terms. Then explain how each term is obtained from the previous term. an = 12 + n a an = 4 + 5n b an = 15 −5n c an = 3 × 2n d an = 7 × (−1)n e an = 80 × ( 1 2)n f</p>
+        <p class="intro">For each sequence, write the first five terms. Then say how each term is made from the one before it.</p>
+        <p><strong>(a)</strong> <span class="tex">a_n=12+n</span></p>
+        <p><strong>(b)</strong> <span class="tex">a_n=4+5n</span></p>
+        <p><strong>(c)</strong> <span class="tex">a_n=15-5n</span></p>
+        <p><strong>(d)</strong> <span class="tex">a_n=3\times 2^n</span></p>
+        <p><strong>(e)</strong> <span class="tex">a_n=7\times(-1)^n</span></p>
+        <p><strong>(f)</strong> <span class="tex">a_n=80\times\left(\tfrac{1}{2}\right)^n</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> an = 12 + n a1 = 12 + 1 = 13 a2 = 12 + 2 = 14 a3 = 12 + 3 = 15 a4 = 12 + 4 = 16 a5 = 12 + 5 = 17 The first term is 13, and every term after that is 1 more than the previous one.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Put <span class="tex">n=1,2,3,4,5</span> into <span class="tex">a_n</span>. The first term is <span class="tex">a_1</span>, not the number sitting next to the plus sign by itself.</p>
+          <p class="step"><span class="tex">a_1=12+1=13</span></p>
+          <p class="step"><span class="tex">a_2=12+2=14</span></p>
+          <p class="step"><span class="tex">a_3=12+3=15</span></p>
+          <p class="step"><span class="tex">a_4=12+4=16</span></p>
+          <p class="step"><span class="tex">a_5=12+5=17</span></p>
+          <p class="step">The jump is <span class="tex">14-13=1</span>. Each term is 1 more than the previous term. The first term is 13.</p>
+          <p class="final">13, 14, 15, 16, 17. Add 1 each time.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> an = 4 + 5n a1 = 4 + 5 = 9 a2 = 4 + 10 = 14 a3 = 4 + 15 = 19 a4 = 4 + 20 = 24 4 a5 = 4 + 25 = 29 The first term is 9, and every term after that is 5 more than the previous one.</p>
+          <p class="step"><strong>Same method ·</strong> In <span class="tex">a_n=4+5n</span>, work out <span class="tex">5n</span> first, then add 4.</p>
+          <p class="step"><span class="tex">a_1=4+5\times 1=4+5=9</span></p>
+          <p class="step"><span class="tex">a_2=4+5\times 2=4+10=14</span></p>
+          <p class="step"><span class="tex">a_3=4+5\times 3=4+15=19</span></p>
+          <p class="step"><span class="tex">a_4=4+5\times 4=4+20=24</span></p>
+          <p class="step"><span class="tex">a_5=4+5\times 5=4+25=29</span></p>
+          <p class="step">The jump is <span class="tex">14-9=5</span>. Each term is 5 more than the previous term. The first term is 9.</p>
+          <p class="final">9, 14, 19, 24, 29. Add 5 each time.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> an = 15 −5n a1 = 15 −5 = 10 a2 = 15 −10 = 5 a3 = 15 −15 = 0 a4 = 15 −20 = −5 a5 = 15 −25 = −10 The first term is 10, and every term after that is 5 less than the previous one.</p>
+          <p class="step"><strong>Same method ·</strong> In <span class="tex">a_n=15-5n</span>, work out <span class="tex">5n</span> first, then subtract it from 15.</p>
+          <p class="step"><span class="tex">a_1=15-5\times 1=15-5=10</span></p>
+          <p class="step"><span class="tex">a_2=15-5\times 2=15-10=5</span></p>
+          <p class="step"><span class="tex">a_3=15-5\times 3=15-15=0</span></p>
+          <p class="step"><span class="tex">a_4=15-5\times 4=15-20=-5</span></p>
+          <p class="step"><span class="tex">a_5=15-5\times 5=15-25=-10</span></p>
+          <p class="step">The jump is <span class="tex">5-10=-5</span>. Each term is 5 less than the previous term. The first term is 10.</p>
+          <p class="final">10, 5, 0, −5, −10. Subtract 5 each time.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> an = 3 × 2n a1 = 3 × 2 = 6 a2 = 3 × 4 = 12 a3 = 3 × 8 = 24 a4 = 3 × 16 = 48 a5 = 3 × 32 = 96 The first term is 6, and every term after that is double the previous one.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> The power is only on the 2. Work out <span class="tex">2^n</span> first, then multiply by 3.</p>
+          <p class="step"><span class="tex">a_1=3\times 2^1=3\times 2=6</span></p>
+          <p class="step"><span class="tex">a_2=3\times 2^2=3\times 4=12</span></p>
+          <p class="step"><span class="tex">a_3=3\times 2^3=3\times 8=24</span></p>
+          <p class="step"><span class="tex">a_4=3\times 2^4=3\times 16=48</span></p>
+          <p class="step"><span class="tex">a_5=3\times 2^5=3\times 32=96</span></p>
+          <p class="step"><span class="tex">12=6\times 2</span>, so each term is double the one before. The first term is 6.</p>
+          <p class="final">6, 12, 24, 48, 96. Double each time.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> an = 7 × (−1)n a1 = 7 × (−1)1 = −7 a2 = 7 × (−1)2 = 7 a3 = 7 × (−1)3 = −7 a4 = 7 × (−1)4 = 7 a5 = 7 × (−1)5 = −7 The first term is −7, and every term after that is the previous one multiplied by −1.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">(-1)^n</span> is −1 when <span class="tex">n</span> is odd, and +1 when <span class="tex">n</span> is even. Then multiply by 7.</p>
+          <p class="step"><span class="tex">a_1=7\times(-1)^1=7\times(-1)=-7</span></p>
+          <p class="step"><span class="tex">a_2=7\times(-1)^2=7\times 1=7</span></p>
+          <p class="step"><span class="tex">a_3=7\times(-1)^3=7\times(-1)=-7</span></p>
+          <p class="step"><span class="tex">a_4=7\times(-1)^4=7\times 1=7</span></p>
+          <p class="step"><span class="tex">a_5=7\times(-1)^5=7\times(-1)=-7</span></p>
+          <p class="step">Each term is the previous term multiplied by −1. The first term is −7.</p>
+          <p class="final">−7, 7, −7, 7, −7. Multiply by −1 each time.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> an = 80 × 1 2 !n a1 = 80 × 1 2 !1 = 40 a2 = 80 × 1 2 !2 = 20 a3 = 80 × 1 2 !3 = 10 a4 = 80 × 1 2 !4 = 5 a5 = 80 × 1 2 !5 = 21 2 The first term is 40, and every term after that is half the previous term.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">\left(\tfrac{1}{2}\right)^n</span> means <span class="tex">\tfrac{1}{2}</span> multiplied by itself <span class="tex">n</span> times. That is the same as dividing by <span class="tex">2^n</span>. Then multiply by 80.</p>
+          <p class="step"><span class="tex">a_1=80\times\tfrac{1}{2}=40</span></p>
+          <p class="step"><span class="tex">a_2=80\times\left(\tfrac{1}{2}\right)^2=80\times\tfrac{1}{4}=20</span></p>
+          <p class="step"><span class="tex">a_3=80\times\left(\tfrac{1}{2}\right)^3=80\times\tfrac{1}{8}=10</span></p>
+          <p class="step"><span class="tex">a_4=80\times\left(\tfrac{1}{2}\right)^4=80\times\tfrac{1}{16}=5</span></p>
+          <p class="step"><span class="tex">a_5=80\times\left(\tfrac{1}{2}\right)^5=80\times\tfrac{1}{32}=\tfrac{80}{32}=\tfrac{5}{2}</span></p>
+          <p class="step">Each term is half the previous term. The first term is 40, not 80, because <span class="tex">n</span> starts at 1.</p>
+          <p class="final"><span class="tex">40, 20, 10, 5, \tfrac{5}{2}</span>. Halve each time.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q8">
       <h2>8 · Exercise 1A</h2>
       <div class="stem">
-        <p>The nth term of a sequence is given by an = 3n + 1. a Put an = 40, and hence show that 40 is the 13th term of the sequence. b Put an = 30, and hence show that 30 is not a term of the sequence. c Similarly, find whether 100, 200 and 1000 are terms of the sequence.</p>
+        <p class="intro">The <span class="tex">n</span>th term is <span class="tex">a_n=3n+1</span>.</p>
+        <p><strong>(a)</strong> Put <span class="tex">a_n=40</span>, and show that 40 is the 13th term.</p>
+        <p><strong>(b)</strong> Put <span class="tex">a_n=30</span>, and show that 30 is not a term.</p>
+        <p><strong>(c)</strong> In the same way, decide whether 100, 200 and 1000 are terms.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-        <p class="step">an = 3n + 1 Put an = 40 Then 40 = 3n + 1 39 = 3n n = 13 Hence this is a term in the sequence, as 13 is an integer.</p>
-<p class="step"><strong>a ·</strong> an = 3n + 1 Put an = 30 Then 30 = 3n + 1 29 = 3n n = 9.666666 . . . Hence this is not a term in the sequence, as 9.666666 . . . is not an integer.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Set <span class="tex">a_n</span> equal to the number you are testing, and solve for <span class="tex">n</span>. The number is a term only if <span class="tex">n</span> is a whole number.</p>
+          <p class="step"><span class="tex">a_n=3n+1</span></p>
+          <p class="step">Put <span class="tex">a_n=40</span>: <span class="tex">40=3n+1</span></p>
+          <p class="step">Subtract 1 from both sides: <span class="tex">39=3n</span></p>
+          <p class="step">Divide by 3: <span class="tex">n=39\div 3=13</span></p>
+          <p class="step">13 is a whole number. Check: <span class="tex">3\times 13+1=39+1=40</span>.</p>
+          <p class="final">Yes. 40 is the 13th term.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> 5 an = 3n + 1 Put an = 100 Then 100 = 3n + 1 99 = 3n n = 33 Hence this is a term in the sequence, as 33 is an integer. an = 3n + 1 Put an = 200 Then 200 = 3n + 1 199 = 3n n = 66.333333 . . . Hence this is not a term in the sequence, as 66.333333 . . . is not an integer. an = 3n + 1 Put an = 1000 Then 1000 = 3n + 1 999 = 3n n = 333 Hence this is a term in the sequence, as 333 is an integer.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=3n+1</span>. Put <span class="tex">a_n=30</span>.</p>
+          <p class="step"><span class="tex">30=3n+1</span></p>
+          <p class="step">Subtract 1: <span class="tex">29=3n</span></p>
+          <p class="step">Divide by 3: <span class="tex">n=29\div 3=9\tfrac{2}{3}</span> (about 9.666…)</p>
+          <p class="step"><span class="tex">9\tfrac{2}{3}</span> is not a whole number, so there is no term number that gives 30.</p>
+          <p class="final">30 is not a term of the sequence.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_n=3n+1</span>. Test each number on its own.</p>
+          <p class="step"><strong>100 ·</strong> <span class="tex">100=3n+1</span>, so <span class="tex">99=3n</span>, so <span class="tex">n=99\div 3=33</span>. 33 is a whole number, so 100 is the 33rd term. Check: <span class="tex">3\times 33+1=100</span>.</p>
+          <p class="step"><strong>200 ·</strong> <span class="tex">200=3n+1</span>, so <span class="tex">199=3n</span>, so <span class="tex">n=199\div 3=66\tfrac{1}{3}</span>. Not a whole number, so 200 is not a term.</p>
+          <p class="step"><strong>1000 ·</strong> <span class="tex">1000=3n+1</span>, so <span class="tex">999=3n</span>, so <span class="tex">n=999\div 3=333</span>. 333 is a whole number, so 1000 is the 333rd term. Check: <span class="tex">3\times 333+1=1000</span>.</p>
+          <p class="final">100 is a term. 200 is not a term. 1000 is a term.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q9">
       <h2>9 · Exercise 1A</h2>
       <div class="stem">
-        <p>Answer each question by forming an equation and solving it. a Find whether 16, 35 and 111 are terms of the sequence an = 2n −5. b Find whether 44, 200 and 306 are terms of the sequence an = 10n −6. c Find whether 40, 72 and 200 are terms of the sequence an = 2n2. d Find whether 8, 96 and 128 are terms of the sequence an = 2n.</p>
-<p>1A Sequences and how to specify them 7</p>
+        <p class="intro">Answer each part by writing an equation and solving it.</p>
+        <p><strong>(a)</strong> Are 16, 35 and 111 terms of <span class="tex">a_n=2n-5</span>?</p>
+        <p><strong>(b)</strong> Are 44, 200 and 306 terms of <span class="tex">a_n=10n-6</span>?</p>
+        <p><strong>(c)</strong> Are 40, 72 and 200 terms of <span class="tex">a_n=2n^2</span>?</p>
+        <p><strong>(d)</strong> Are 8, 96 and 128 terms of <span class="tex">a_n=2^n</span>?</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-        <p class="step">an = 2n −5 Put an = 16 Then 16 = 2n −5 21 = 2n n = 101 2 Put an = 35 Then 35 = 2n −5 40 = 2n n = 20 Put an = 111 Then 111 = 2n −5 116 = 2n n = 58 Hence 16 is not a term in this sequence. 35 is the 20th term in the sequence, and 111 is the 58th term in the sequence.</p>
-<p class="step"><strong>a ·</strong> an = 10n −6 Put an = 44 Then 44 = 10n −6 50 = 10n n = 5 Put an = 200 Then 200 = 10n −6 206 = 10n n = 20/6</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=2n-5</span>. Put the test number in place of <span class="tex">a_n</span>, then solve for <span class="tex">n</span>. Keep the number only if <span class="tex">n</span> is a whole number.</p>
+          <p class="step"><strong>16 ·</strong> <span class="tex">16=2n-5</span>. Add 5: <span class="tex">21=2n</span>. Divide by 2: <span class="tex">n=\tfrac{21}{2}=10.5</span>. Not a whole number, so 16 is not a term.</p>
+          <p class="step"><strong>35 ·</strong> <span class="tex">35=2n-5</span>. Add 5: <span class="tex">40=2n</span>. Divide by 2: <span class="tex">n=20</span>. Whole number. Check: <span class="tex">2\times 20-5=35</span>. So 35 is the 20th term.</p>
+          <p class="step"><strong>111 ·</strong> <span class="tex">111=2n-5</span>. Add 5: <span class="tex">116=2n</span>. Divide by 2: <span class="tex">n=58</span>. Whole number. Check: <span class="tex">2\times 58-5=111</span>. So 111 is the 58th term.</p>
+          <p class="final">16 is not a term. 35 is the 20th term. 111 is the 58th term.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> Formula <span class="tex">a_n=10n-6</span>.</p>
+          <p class="step"><strong>44 ·</strong> <span class="tex">44=10n-6</span>. Add 6: <span class="tex">50=10n</span>. Divide by 10: <span class="tex">n=5</span>. Whole number. Check: <span class="tex">10\times 5-6=44</span>. So 44 is the 5th term.</p>
+          <p class="step"><strong>200 ·</strong> <span class="tex">200=10n-6</span>. Add 6: <span class="tex">206=10n</span>. Divide by 10: <span class="tex">n=20.6</span>. Not a whole number, so 200 is not a term.</p>
+          <p class="step"><strong>306 ·</strong> <span class="tex">306=10n-6</span>. Add 6: <span class="tex">312=10n</span>. Divide by 10: <span class="tex">n=31.2</span>. Not a whole number, so 306 is not a term.</p>
+          <p class="final">44 is the 5th term. 200 is not a term. 306 is not a term.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=2n^2</span> means 2 times <span class="tex">n\times n</span>. Divide by 2 first, then ask whether the result is a perfect square (<span class="tex">1, 4, 9, 16, 25, 36, 49, 64, 81, 100, \ldots</span>).</p>
+          <p class="step"><strong>40 ·</strong> <span class="tex">40=2n^2</span>, so <span class="tex">n^2=20</span>. <span class="tex">4^2=16</span> and <span class="tex">5^2=25</span>, so <span class="tex">\sqrt{20}</span> is between 4 and 5 (about 4.47). Not a whole number, so 40 is not a term.</p>
+          <p class="step"><strong>72 ·</strong> <span class="tex">72=2n^2</span>, so <span class="tex">n^2=36</span>. <span class="tex">6\times 6=36</span>, so <span class="tex">n=6</span>. Check: <span class="tex">2\times 36=72</span>. So 72 is the 6th term.</p>
+          <p class="step"><strong>200 ·</strong> <span class="tex">200=2n^2</span>, so <span class="tex">n^2=100</span>. <span class="tex">10\times 10=100</span>, so <span class="tex">n=10</span>. Check: <span class="tex">2\times 100=200</span>. So 200 is the 10th term.</p>
+          <p class="final">40 is not a term. 72 is the 6th term. 200 is the 10th term.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=2^n</span> is the list of powers of 2: 2, 4, 8, 16, 32, 64, 128, 256, … A number is a term only if it appears in that list. The book also writes the position as <span class="tex">n=\log_2</span> (the number).</p>
+          <p class="step"><strong>8 ·</strong> <span class="tex">2^3=8</span>, so <span class="tex">n=3</span>. Also <span class="tex">\log_2 8=3</span>. So 8 is the 3rd term.</p>
+          <p class="step"><strong>96 ·</strong> <span class="tex">2^6=64</span> and <span class="tex">2^7=128</span>. 96 sits between them, so it is not a power of 2. <span class="tex">\log_2 96</span> is about 6.58, not a whole number. So 96 is not a term.</p>
+          <p class="step"><strong>128 ·</strong> <span class="tex">2^7=128</span>, so <span class="tex">n=7</span>. Also <span class="tex">\log_2 128=7</span>. So 128 is the 7th term.</p>
+          <p class="final">8 is the 3rd term. 96 is not a term. 128 is the 7th term.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q10">
       <h2>10 · Exercise 1A</h2>
       <div class="stem">
-        <p>The nth term of a sequence is given by an = 10n + 4. a Put an &lt; 100, and hence show that the nine terms a1 to a9 are less than 100. b Put an &gt; 56, and hence show that the first term greater than 56 is a6 = 64. c Similarly, find how many terms are less than 500. d Find the first term greater than 203, giving its number and its value.</p>
+        <p class="intro">The <span class="tex">n</span>th term is <span class="tex">a_n=10n+4</span>.</p>
+        <p><strong>(a)</strong> Put <span class="tex">a_n&lt;100</span>, and show that the nine terms <span class="tex">a_1</span> to <span class="tex">a_9</span> are less than 100.</p>
+        <p><strong>(b)</strong> Put <span class="tex">a_n&gt;56</span>, and show that the first term greater than 56 is <span class="tex">a_6=64</span>.</p>
+        <p><strong>(c)</strong> In the same way, find how many terms are less than 500.</p>
+        <p><strong>(d)</strong> Find the first term greater than 203. Give its number and its value.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=10n+4</span>. To keep the terms under a number, write an inequality and solve for <span class="tex">n</span>. Then use only the whole-number values of <span class="tex">n</span>.</p>
+          <p class="step">Put <span class="tex">a_n&lt;100</span>: <span class="tex">10n+4&lt;100</span></p>
+          <p class="step">Subtract 4: <span class="tex">10n&lt;96</span></p>
+          <p class="step">Divide by 10: <span class="tex">n&lt;9.6</span></p>
+          <p class="step">Whole numbers <span class="tex">n</span> can be 1, 2, …, 9. That is 9 terms.</p>
+          <p class="step">Check the edge: <span class="tex">a_9=10\times 9+4=94</span>, which is under 100. <span class="tex">a_{10}=10\times 10+4=104</span>, which is not under 100.</p>
+          <p class="final">There are 9 terms less than 100: <span class="tex">a_1</span> to <span class="tex">a_9</span>.</p>
+        </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-        <p class="step">Put an = 306 Then 306 = 10n −6 312 = 10n n = 31 2 10 Hence 200 and 306 are not terms in this sequence. 44 is the 5th term in the sequence.</p>
-<p class="step"><strong>b ·</strong> 6 an = 2n2 Put an = 40 Then 40 = 2n2 20 = n2 n = 4.47214 . . . Put an = 72 Then 72 = 2n2 36 = n2 n = 6 Put an = 200 Then 200 = 2n2 100 = n2 n = 10 Hence 40 is not a term in this sequence. 72 is the 6th term in this sequence, and 200 is the 10th term in this sequence.</p>
+          <p class="step"><strong>Same formula ·</strong> Put <span class="tex">a_n&gt;56</span>: <span class="tex">10n+4&gt;56</span></p>
+          <p class="step">Subtract 4: <span class="tex">10n&gt;52</span></p>
+          <p class="step">Divide by 10: <span class="tex">n&gt;5.2</span></p>
+          <p class="step">The next whole number after 5.2 is 6.</p>
+          <p class="step"><span class="tex">a_6=10\times 6+4=64</span></p>
+          <p class="final">The first term greater than 56 is <span class="tex">a_6=64</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> an = 2n Put an = 8 Then 8 = 2n n = log2 8 n = 3 Put an = 96 Then 96 = 2n n = log2 96 n = 6.58496 . . . Put an = 128 Then 128 = 2n n = log2 128 n = 7 Hence 96 is not a term in this sequence. 8 is the 3rd term in the sequence and 128 is the 7th term in the sequence.</p>
+          <p class="step"><strong>Same formula ·</strong> Put <span class="tex">a_n&lt;500</span>: <span class="tex">10n+4&lt;500</span></p>
+          <p class="step">Subtract 4: <span class="tex">10n&lt;496</span></p>
+          <p class="step">Divide by 10: <span class="tex">n&lt;49.6</span></p>
+          <p class="step">Whole numbers from 1 to 49. That is 49 terms.</p>
+          <p class="step">Check: <span class="tex">a_{49}=10\times 49+4=494</span>, under 500. <span class="tex">a_{50}=504</span>, not under 500.</p>
+          <p class="final">49 terms are less than 500.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> 10 an = 10n + 4 Put an &lt; 100. Then 10n + 4 &lt; 100 10n &lt; 96 n &lt; 9.6 Hence there are 9 terms, a1 to a9, less than 100.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> an = 10n + 4 Put an &gt; 56. Then 10n + 4 &gt; 56 10n &gt; 52 n &gt; 5.2 Hence a6 = 64 is the first term greater than 56.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an = 10n + 4 Put an &lt; 500. Then 10n + 4 &lt; 500 10n &lt; 496 n &lt; 49.6 Hence there are 49 terms less than 500.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> an = 10n + 4 Put an &gt; 203. Then 10n + 4 &gt; 203 10n &gt; 199 n &gt; 19.9 Hence a20 = 204 is the first term greater than 203.</p>
+          <p class="step"><strong>Same formula ·</strong> Put <span class="tex">a_n&gt;203</span>: <span class="tex">10n+4&gt;203</span></p>
+          <p class="step">Subtract 4: <span class="tex">10n&gt;199</span></p>
+          <p class="step">Divide by 10: <span class="tex">n&gt;19.9</span></p>
+          <p class="step">The next whole number is 20.</p>
+          <p class="step"><span class="tex">a_{20}=10\times 20+4=204</span></p>
+          <p class="final">The first term greater than 203 is the 20th term, <span class="tex">a_{20}=204</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q11">
       <h2>11 · Exercise 1A</h2>
       <div class="stem">
-        <p>Answer each question by forming an inequation and solving it. a How many terms of the sequence an = 2n −5 are less than 100? b How many terms of the sequence an = 4n + 6 are less than 300? c What is the first term of the sequence an = 3n + 5 greater than 127? d What is the first term of the sequence an = 7n −44 greater than 100?</p>
+        <p class="intro">Answer each part by writing an inequality and solving it.</p>
+        <p><strong>(a)</strong> How many terms of <span class="tex">a_n=2n-5</span> are less than 100?</p>
+        <p><strong>(b)</strong> How many terms of <span class="tex">a_n=4n+6</span> are less than 300?</p>
+        <p><strong>(c)</strong> What is the first term of <span class="tex">a_n=3n+5</span> that is greater than 127?</p>
+        <p><strong>(d)</strong> What is the first term of <span class="tex">a_n=7n-44</span> that is greater than 100?</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> an = 2n −5 Put an &lt; 100 Then 2n −5 &lt; 100 2n &lt; 105 n &lt; 52.5 Hence there are 52 terms less than 100.</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=2n-5</span>. Write <span class="tex">a_n&lt;100</span>, solve for <span class="tex">n</span>, then count the whole-number values of <span class="tex">n</span> starting at 1.</p>
+          <p class="step"><span class="tex">2n-5&lt;100</span></p>
+          <p class="step">Add 5: <span class="tex">2n&lt;105</span></p>
+          <p class="step">Divide by 2: <span class="tex">n&lt;52.5</span></p>
+          <p class="step">Whole numbers from 1 to 52. That is 52 terms.</p>
+          <p class="step">Check: <span class="tex">a_{52}=2\times 52-5=99</span>, under 100. <span class="tex">a_{53}=2\times 53-5=101</span>, not under 100.</p>
+          <p class="final">52 terms are less than 100.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> an = 4n + 6 Put an &lt; 300 Then 4n + 6 &lt; 300 4n &lt; 294 n &lt; 73.5 Hence there are 73 terms less than 300. 7</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=4n+6</span> and <span class="tex">a_n&lt;300</span>.</p>
+          <p class="step"><span class="tex">4n+6&lt;300</span></p>
+          <p class="step">Subtract 6: <span class="tex">4n&lt;294</span></p>
+          <p class="step">Divide by 4: <span class="tex">n&lt;73.5</span></p>
+          <p class="step">Whole numbers from 1 to 73. That is 73 terms.</p>
+          <p class="step">Check: <span class="tex">a_{73}=4\times 73+6=292+6=298</span>, under 300. <span class="tex">a_{74}=302</span>, not under 300.</p>
+          <p class="final">73 terms are less than 300.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> an = 3n + 5 Put an &gt; 127 Then 3n + 5 &gt; 127 3n &gt; 122 n &gt; 40.67 Hence the first term greater than 127 is a41 = 128.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=3n+5</span> and <span class="tex">a_n&gt;127</span>.</p>
+          <p class="step"><span class="tex">3n+5&gt;127</span></p>
+          <p class="step">Subtract 5: <span class="tex">3n&gt;122</span></p>
+          <p class="step">Divide by 3: <span class="tex">n&gt;122\div 3=40.666\ldots</span></p>
+          <p class="step">The next whole number is 41.</p>
+          <p class="step"><span class="tex">a_{41}=3\times 41+5=123+5=128</span></p>
+          <p class="final">The first term greater than 127 is <span class="tex">a_{41}=128</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> an = 7n −44 Put an &gt; 100 Then 7n −44 &gt; 100 7n &gt; 144 n &gt; 20.57 Hence the first term greater than 100 is a21 = 103.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=7n-44</span> and <span class="tex">a_n&gt;100</span>.</p>
+          <p class="step"><span class="tex">7n-44&gt;100</span></p>
+          <p class="step">Add 44: <span class="tex">7n&gt;144</span></p>
+          <p class="step">Divide by 7: <span class="tex">7\times 20=140</span>, remainder 4, so <span class="tex">n&gt;20\tfrac{4}{7}</span> (about 20.57).</p>
+          <p class="step">The next whole number is 21.</p>
+          <p class="step"><span class="tex">a_{21}=7\times 21-44=147-44=103</span></p>
+          <p class="final">The first term greater than 100 is <span class="tex">a_{21}=103</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q12">
       <h2>12 · Exercise 1A</h2>
       <div class="stem">
-        <p>In each part, the two lines define a sequence an. The first line gives the first term a1. The second line defines how each subsequent term an is obtained from the previous term an−1. Write down the first four terms of each sequence. a1 = 3, an = an−1 + 2, for n ≥2. a a1 = 5, an = an−1 + 12, for n ≥2. b a1 = 6, an = an−1 −3, for n ≥2. c a1 = 12, an = an−1 −10, for n ≥2. d a1 = 5, an = 2an−1, for n ≥2. e a1 = 4, an = 5an−1, for n ≥2. f a1 = 20, an = 1 2an−1, for n ≥2. g a1 = 1, an = −an−1, for n ≥2. h</p>
+        <p class="intro">Each part gives a sequence with two lines. The first line is the first term <span class="tex">a_1</span>. The second line says how to get the next term <span class="tex">a_n</span> from the previous term <span class="tex">a_{n-1}</span>, for <span class="tex">n\ge 2</span>. Write the first four terms.</p>
+        <p><strong>(a)</strong> <span class="tex">a_1=3</span>, and <span class="tex">a_n=a_{n-1}+2</span></p>
+        <p><strong>(b)</strong> <span class="tex">a_1=5</span>, and <span class="tex">a_n=a_{n-1}+12</span></p>
+        <p><strong>(c)</strong> <span class="tex">a_1=6</span>, and <span class="tex">a_n=a_{n-1}-3</span></p>
+        <p><strong>(d)</strong> <span class="tex">a_1=12</span>, and <span class="tex">a_n=a_{n-1}-10</span></p>
+        <p><strong>(e)</strong> <span class="tex">a_1=5</span>, and <span class="tex">a_n=2a_{n-1}</span></p>
+        <p><strong>(f)</strong> <span class="tex">a_1=4</span>, and <span class="tex">a_n=5a_{n-1}</span></p>
+        <p><strong>(g)</strong> <span class="tex">a_1=20</span>, and <span class="tex">a_n=\tfrac{1}{2}a_{n-1}</span></p>
+        <p><strong>(h)</strong> <span class="tex">a_1=1</span>, and <span class="tex">a_n=-a_{n-1}</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step">a1 = 3 a2 = a1 + 2 = 3 + 2 = 5 a3 = a2 + 2 = 5 + 2 = 7 a4 = a3 + 2 = 7 + 2 = 9</p>
-<p class="step"><strong>a ·</strong> a1 = 5 a2 = a1 + 12 = 5 + 12 = 17 a3 = a2 + 12 = 17 + 12 = 29 a4 = a3 + 12 = 29 + 12 = 41</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">a_{n-1}</span> means the term just before <span class="tex">a_n</span>. The rule <span class="tex">a_n=a_{n-1}+2</span> says “next term = previous term + 2”.</p>
+          <p class="step"><span class="tex">a_1=3</span></p>
+          <p class="step"><span class="tex">a_2=a_1+2=3+2=5</span></p>
+          <p class="step"><span class="tex">a_3=a_2+2=5+2=7</span></p>
+          <p class="step"><span class="tex">a_4=a_3+2=7+2=9</span></p>
+          <p class="final">3, 5, 7, 9.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a1 = 6 a2 = a1 −3 = 6 −3 = 3 a3 = a2 −3 = 3 −3 = 0 a4 = a3 −3 = 0 −3 = −3</p>
+          <p class="step"><strong>Same method ·</strong> Next term = previous term + 12. Start at 5.</p>
+          <p class="step"><span class="tex">a_1=5</span></p>
+          <p class="step"><span class="tex">a_2=5+12=17</span></p>
+          <p class="step"><span class="tex">a_3=17+12=29</span></p>
+          <p class="step"><span class="tex">a_4=29+12=41</span></p>
+          <p class="final">5, 17, 29, 41.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a1 = 12 a2 = a1 −10 = 12 −10 = 2 a3 = a2 −10 = 2 −10 = −8 a4 = a3 −10 = −8 −10 = −18</p>
+          <p class="step"><strong>Same method ·</strong> Next term = previous term − 3. Start at 6.</p>
+          <p class="step"><span class="tex">a_1=6</span></p>
+          <p class="step"><span class="tex">a_2=6-3=3</span></p>
+          <p class="step"><span class="tex">a_3=3-3=0</span></p>
+          <p class="step"><span class="tex">a_4=0-3=-3</span></p>
+          <p class="final">6, 3, 0, −3.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a1 = 5 a2 = 2a1 = 2 × 5 = 10 a3 = 2a2 = 2 × 10 = 20 a4 = 2a3 = 2 × 20 = 40</p>
+          <p class="step"><strong>Same method ·</strong> Next term = previous term − 10. Start at 12.</p>
+          <p class="step"><span class="tex">a_1=12</span></p>
+          <p class="step"><span class="tex">a_2=12-10=2</span></p>
+          <p class="step"><span class="tex">a_3=2-10=-8</span></p>
+          <p class="step"><span class="tex">a_4=-8-10=-18</span></p>
+          <p class="final">12, 2, −8, −18.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a1 = 4 a2 = 5a1 = 5 × 4 = 20 a3 = 5a2 = 5 × 20 = 100 a4 = 5a3 = 5 × 100 = 500</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=2a_{n-1}</span> means next term = 2 × previous term. Start at 5.</p>
+          <p class="step"><span class="tex">a_1=5</span></p>
+          <p class="step"><span class="tex">a_2=2\times 5=10</span></p>
+          <p class="step"><span class="tex">a_3=2\times 10=20</span></p>
+          <p class="step"><span class="tex">a_4=2\times 20=40</span></p>
+          <p class="final">5, 10, 20, 40.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> a1 = 20 a2 = 1 2a1 = 1 2 × 20 = 10 a3 = 1 2a2 = 1 2 × 10 = 5 a4 = 1 2a3 = 1 2 × 5 = 21/2</p>
+          <p class="step"><strong>Same method ·</strong> Next term = 5 × previous term. Start at 4.</p>
+          <p class="step"><span class="tex">a_1=4</span></p>
+          <p class="step"><span class="tex">a_2=5\times 4=20</span></p>
+          <p class="step"><span class="tex">a_3=5\times 20=100</span></p>
+          <p class="step"><span class="tex">a_4=5\times 100=500</span></p>
+          <p class="final">4, 20, 100, 500.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> a1 = 1 a2 = −a1 = −1 × 1 = −1 a3 = −a2 = −1 × −1 = 1 a4 = −a3 = −1 × 1 = −1</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=\tfrac{1}{2}a_{n-1}</span> means next term = half of the previous term. Start at 20.</p>
+          <p class="step"><span class="tex">a_1=20</span></p>
+          <p class="step"><span class="tex">a_2=\tfrac{1}{2}\times 20=10</span></p>
+          <p class="step"><span class="tex">a_3=\tfrac{1}{2}\times 10=5</span></p>
+          <p class="step"><span class="tex">a_4=\tfrac{1}{2}\times 5=\tfrac{5}{2}</span></p>
+          <p class="final"><span class="tex">20, 10, 5, \tfrac{5}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_n=-a_{n-1}</span> means next term = −1 × previous term. The sign flips. Start at 1.</p>
+          <p class="step"><span class="tex">a_1=1</span></p>
+          <p class="step"><span class="tex">a_2=-1\times 1=-1</span></p>
+          <p class="step"><span class="tex">a_3=-1\times(-1)=1</span></p>
+          <p class="step"><span class="tex">a_4=-1\times 1=-1</span></p>
+          <p class="final">1, −1, 1, −1.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q13">
-      <h2>13 · Exercise 1A</h2>
+      <h2>13 · Exercise 1A <span class="band ch">Challenge</span></h2>
       <div class="stem">
-        <p>a<br/>
-i Explain why the integers, written in increasing order, do not form a sequence.<br/>
-ii How can all the integers be written as a sequence?<br/>
-b Explain why the points in order on the closed interval [0, 1] do not form a sequence.<br/>
-c Explain why the empty set is not a sequence.<br/>
-d Can a sequence have a single term?</p>
+        <p><strong>(a) (i)</strong> Explain why the integers, written in increasing order, do not form a sequence.</p>
+        <p><strong>(a) (ii)</strong> How can all the integers be written as a sequence?</p>
+        <p><strong>(b)</strong> Explain why the points in order on the closed interval <span class="tex">[0,1]</span> do not form a sequence.</p>
+        <p><strong>(c)</strong> Explain why the empty set is not a sequence.</p>
+        <p><strong>(d)</strong> Can a sequence have a single term?</p>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a i</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> To find a term from a formula, substitute <span class="tex">n=1,2,3,\ldots</span> into <span class="tex">a_n</span>. To test if a value is a term, set <span class="tex">a_n=</span> (that value) and solve for <span class="tex">n</span>; it must be a whole number.</p>
-<p class="step"><strong>a ·</strong> i A sequence must have a first term; however, the set of integers is infinite i.e. whichever term is chosen to begin with, there is another term that precedes it accordingly. ii Any sequence with a first term that captures a subset of the integers e.g. 0, 1, 2, 3, · · · and −1, −2, −3, · · · – the union of these mutually exclusive sets forms the integers.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> A sequence must have a first term. After that there is a second term, then a third, and so on.</p>
+          <p class="step">The integers in increasing order look like <span class="tex">\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots</span></p>
+          <p class="step">The dots on the left mean the list goes on forever in the negative direction.</p>
+          <p class="step">Whatever number you try to call the first term, there is always a smaller integer just before it. For example, if you start at −100, then −101 comes before it.</p>
+          <p class="final">There is no first term, so this list is not a sequence.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a ii</button>
+        <div class="sol">
+          <p class="step">Give the integers a starting term, then a clear “next” term.</p>
+          <p class="step">One sequence that includes every integer is <span class="tex">0, 1, -1, 2, -2, 3, -3, \ldots</span></p>
+          <p class="step">It starts at 0. Then it takes the next unused positive integer, then the next unused negative integer, and keeps going.</p>
+          <p class="step">The worked solutions also split the job into two lists that together cover every integer: <span class="tex">0, 1, 2, 3, \ldots</span> and <span class="tex">-1, -2, -3, \ldots</span> The single list above does the same job and has one first term.</p>
+          <p class="final">Yes. Start at 0 and then alternate the next positive and the next negative.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> The interval [0, 1] contains uncountably many points. Suppose that there is an increasing sequence 0, a2, a3, · · · , 1 and a2 &gt; 0. Trivially, a2/2 ∈(0, a2), but a2/2 is not in the previous sequence. Hence, there cannot be a second term, making it impossible to form a sequence in the given domain.</p>
+          <p class="step">The closed interval <span class="tex">[0,1]</span> is every number from 0 to 1, including 0 and 1. That includes decimals such as 0.1 and 0.01.</p>
+          <p class="step">Suppose we try to list them in order, starting at 0, and we pick some second number <span class="tex">a_2</span> with <span class="tex">a_2&gt;0</span>.</p>
+          <p class="step">Halfway from 0 to <span class="tex">a_2</span> is <span class="tex">\tfrac{a_2}{2}</span>. That number is still in <span class="tex">[0,1]</span>, and it sits strictly between 0 and <span class="tex">a_2</span>.</p>
+          <p class="step">So <span class="tex">a_2</span> was not really the next number. Whatever second number you choose, there is always another number between it and 0.</p>
+          <p class="final">There is no “next” point after 0, so these points do not form a sequence.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> The empty set has nothing in it. Since there are no numbers, there cannot be a first term, eliminating any possibility of a sequence.</p>
+          <p class="step">The empty set has no numbers in it.</p>
+          <p class="step">A sequence needs a first term.</p>
+          <p class="final">With no numbers, there is no first term, so the empty set is not a sequence.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Yes, it has a first term and the number of terms n in the sequence is 1.</p>
+          <p class="step">Yes. A sequence only has to have a first term. It is allowed to stop after that.</p>
+          <p class="step">Example: the list that contains only 7. Here <span class="tex">a_1=7</span>, and the number of terms is 1.</p>
+          <p class="final">Yes. A sequence can have a single term.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q14">
       <h2>14 · Exercise 1A</h2>
       <div class="stem">
-        <p>Write down the first four terms of each sequence. Then state which terms of the whole sequence are zero. an = sin 90n◦. a an = cos 90n◦. b an = cos 180n◦. c an = sin 180n◦. d</p>
+        <p class="intro">Write the first four terms of each sequence. Then say which terms of the whole sequence are zero. The small circle means degrees.</p>
+        <p><strong>(a)</strong> <span class="tex">a_n=\sin(90n)^{\circ}</span></p>
+        <p><strong>(b)</strong> <span class="tex">a_n=\cos(90n)^{\circ}</span></p>
+        <p><strong>(c)</strong> <span class="tex">a_n=\cos(180n)^{\circ}</span></p>
+        <p><strong>(d)</strong> <span class="tex">a_n=\sin(180n)^{\circ}</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> a1 = sin 90◦= 1 a2 = sin 180◦= 0 a3 = sin 270◦= −1 8 a4 = sin 360◦= 0 Terms are zero where n is even.</p>
+          <p class="formula-quick"><strong>Quick fact (degrees):</strong> <span class="tex">\sin 90^{\circ}=1</span>, <span class="tex">\sin 180^{\circ}=0</span>, <span class="tex">\sin 270^{\circ}=-1</span>, <span class="tex">\sin 360^{\circ}=0</span>. Adding <span class="tex">360^{\circ}</span> brings you back to the same sine value.</p>
+          <p class="step">The angle is <span class="tex">90n</span> degrees. Put <span class="tex">n=1,2,3,4</span>.</p>
+          <p class="step"><span class="tex">a_1=\sin 90^{\circ}=1</span></p>
+          <p class="step"><span class="tex">a_2=\sin 180^{\circ}=0</span></p>
+          <p class="step"><span class="tex">a_3=\sin 270^{\circ}=-1</span></p>
+          <p class="step"><span class="tex">a_4=\sin 360^{\circ}=0</span></p>
+          <p class="step">The zeros so far are when <span class="tex">n=2</span> and <span class="tex">n=4</span>, the even values. Even <span class="tex">n</span> makes the angle a multiple of <span class="tex">180^{\circ}</span>, and the sine of a multiple of <span class="tex">180^{\circ}</span> is 0. Odd <span class="tex">n</span> gives 1 or −1.</p>
+          <p class="final">First four terms: 1, 0, −1, 0. Terms are zero when <span class="tex">n</span> is even.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a1 = cos 90◦= 0 a2 = cos 180◦= −1 a3 = cos 270◦= 0 a4 = cos 360◦= 1 Terms are zero where n is odd.</p>
+          <p class="formula-quick"><strong>Quick fact (degrees):</strong> <span class="tex">\cos 90^{\circ}=0</span>, <span class="tex">\cos 180^{\circ}=-1</span>, <span class="tex">\cos 270^{\circ}=0</span>, <span class="tex">\cos 360^{\circ}=1</span>.</p>
+          <p class="step"><strong>Same method ·</strong> Angle <span class="tex">=90n</span> degrees.</p>
+          <p class="step"><span class="tex">a_1=\cos 90^{\circ}=0</span></p>
+          <p class="step"><span class="tex">a_2=\cos 180^{\circ}=-1</span></p>
+          <p class="step"><span class="tex">a_3=\cos 270^{\circ}=0</span></p>
+          <p class="step"><span class="tex">a_4=\cos 360^{\circ}=1</span></p>
+          <p class="step">The zeros are when <span class="tex">n=1</span> and <span class="tex">n=3</span>, the odd values. That pattern continues.</p>
+          <p class="final">First four terms: 0, −1, 0, 1. Terms are zero when <span class="tex">n</span> is odd.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a1 = cos 180◦= −1 a2 = cos 360◦= 1 a3 = cos 540◦= −1 a4 = cos 720◦= 1 No terms are zero.</p>
+          <p class="step"><strong>Same method ·</strong> Angle <span class="tex">=180n</span> degrees. Adding <span class="tex">360^{\circ}</span> does not change cosine, so <span class="tex">\cos 540^{\circ}=\cos 180^{\circ}</span> and <span class="tex">\cos 720^{\circ}=\cos 360^{\circ}</span>.</p>
+          <p class="step"><span class="tex">a_1=\cos 180^{\circ}=-1</span></p>
+          <p class="step"><span class="tex">a_2=\cos 360^{\circ}=1</span></p>
+          <p class="step"><span class="tex">a_3=\cos 540^{\circ}=-1</span></p>
+          <p class="step"><span class="tex">a_4=\cos 720^{\circ}=1</span></p>
+          <p class="step">These values only switch between −1 and 1. They never land on 0.</p>
+          <p class="final">First four terms: −1, 1, −1, 1. No terms are zero.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a1 = sin 180◦= 0 a2 = sin 360◦= 0 a3 = sin 540◦= 0 a4 = sin 720◦= 0 All terms are zero.</p>
+          <p class="step"><strong>Same method ·</strong> Angle <span class="tex">=180n</span> degrees. Sine of any multiple of <span class="tex">180^{\circ}</span> is 0. Also <span class="tex">\sin 540^{\circ}=\sin 180^{\circ}</span> and <span class="tex">\sin 720^{\circ}=\sin 360^{\circ}</span>.</p>
+          <p class="step"><span class="tex">a_1=\sin 180^{\circ}=0</span></p>
+          <p class="step"><span class="tex">a_2=\sin 360^{\circ}=0</span></p>
+          <p class="step"><span class="tex">a_3=\sin 540^{\circ}=0</span></p>
+          <p class="step"><span class="tex">a_4=\sin 720^{\circ}=0</span></p>
+          <p class="final">First four terms: 0, 0, 0, 0. Every term is zero.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q15">
       <h2>15 · Exercise 1A</h2>
       <div class="stem">
-        <p>The Fibonacci sequence is defined recursively by F1 = 1, F2 = 1, Fn = Fn−1 + Fn−2, for n ≥3. Write out the first 12 terms of the sequence. Explain why every third term of the sequence is even and the rest are odd.</p>
+        <p class="intro">The Fibonacci sequence starts with <span class="tex">F_1=1</span> and <span class="tex">F_2=1</span>. After that, each term is the sum of the two terms before it:</p>
+        <p><span class="tex">F_n=F_{n-1}+F_{n-2}</span> for <span class="tex">n\ge 3</span>.</p>
+        <p><strong>(a)</strong> Write the first 12 terms.</p>
+        <p><strong>(b)</strong> Explain why every third term is even, and the rest are odd.</p>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p>F1 = 1 F2 = 1 F3 = F1 + F2 = 1 + 1 = 2 F4 = F3 + F2 = 2 + 1 = 3 F5 = F4 + F3 = 3 + 2 = 5 F6 = 8 F7 = 13 F8 = 21 F9 = 34 F10 = 55 F11 = 89 F12 = 144 The sum of two odd integers is even, and the sum of an even and an odd integer is odd.</p>
-
+          <p class="formula-quick"><strong>Quick fact:</strong> From the third term onward, add the two terms you have just written.</p>
+          <p class="step"><span class="tex">F_1=1</span></p>
+          <p class="step"><span class="tex">F_2=1</span></p>
+          <p class="step"><span class="tex">F_3=F_1+F_2=1+1=2</span></p>
+          <p class="step"><span class="tex">F_4=F_3+F_2=2+1=3</span></p>
+          <p class="step"><span class="tex">F_5=F_4+F_3=3+2=5</span></p>
+          <p class="step"><span class="tex">F_6=F_5+F_4=5+3=8</span></p>
+          <p class="step"><span class="tex">F_7=F_6+F_5=8+5=13</span></p>
+          <p class="step"><span class="tex">F_8=F_7+F_6=13+8=21</span></p>
+          <p class="step"><span class="tex">F_9=F_8+F_7=21+13=34</span></p>
+          <p class="step"><span class="tex">F_{10}=F_9+F_8=34+21=55</span></p>
+          <p class="step"><span class="tex">F_{11}=F_{10}+F_9=55+34=89</span></p>
+          <p class="step"><span class="tex">F_{12}=F_{11}+F_{10}=89+55=144</span></p>
+          <p class="final">1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> odd + odd = even. even + odd = odd. odd + even = odd.</p>
+          <p class="step"><span class="tex">F_1=1</span> is odd. <span class="tex">F_2=1</span> is odd.</p>
+          <p class="step">Odd + odd = even, so <span class="tex">F_3</span> is even.</p>
+          <p class="step">Even + odd = odd, so <span class="tex">F_4</span> is odd.</p>
+          <p class="step">Odd + even = odd, so <span class="tex">F_5</span> is odd.</p>
+          <p class="step">Now we again have odd + odd, so <span class="tex">F_6</span> is even. The pattern odd, odd, even starts again.</p>
+          <p class="step">So the terms go odd, odd, even, odd, odd, even, … The even terms are positions 3, 6, 9, 12, … which are the multiples of 3.</p>
+          <p class="final">Every third term is even. The other terms are odd.</p>
         </div>
       </div>
     </article>
+
     <p style="margin-top:1.5rem">
-      <a class='btn' href='../../Chapter 1 Sequences and series/1B-arithmetic-sequences/concept.html'>Next: 1B Concept →</a>
+      <a class="btn" href="../../Chapter 1 Sequences and series/1B-arithmetic-sequences/concept.html">Next: 1B Concept →</a>
       <a class="btn ghost" href="tutorial.html">← Tutorial</a>
     </p>
   </div>
-  <script>
-  (function(){
-    function bind(btn){
-      btn.addEventListener("click", function(){
-        var sol = btn.nextElementSibling;
-        var open = sol.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
-      });
-    }
-    document.querySelectorAll(".q > .btn.show").forEach(bind);
-    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
-    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
-    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
-  })();
-  </script>
-
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script src="../../course-solutions.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>
