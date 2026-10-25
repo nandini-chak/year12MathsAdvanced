@@ -8,6 +8,11 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .stem p{margin:.42rem 0;line-height:1.5}
+    .stem .intro{margin-bottom:.7rem}
+    .howto{margin:.8rem 0 0;padding:.7rem .85rem;background:#f4f7fb;border-radius:12px;line-height:1.45}
+  </style>
 </head>
 <body data-section="1B" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 1B">
   <div class="shell"><div class="main">
@@ -23,982 +28,1344 @@
   <header class="hero">
     <span class="kicker">Exercise 1B</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
+    <p>Attempt on paper first. Each part has its own solution button. Open one part at a time.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
       <button class="btn show" type="button" id="allOn">Show all solutions</button>
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
+    <p class="howto"><strong>Two symbols to keep straight.</strong> <span class="tex">a_n</span> means the <span class="tex">n</span>th term. The <span class="tex">n</span> sits lower than the <span class="tex">a</span>. It is not the letters “an”. An <strong>AP</strong> (arithmetic sequence) adds or subtracts the same number every time. That number is the common difference <span class="tex">d</span>. The first term is <span class="tex">a</span>. The formula is <span class="tex">a_n=a+(n-1)d</span>.</p>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 1B; answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">Parts are one per line, with mixed numbers written as fractions. Questions 12, 16 and 17 are restored (they were missing or reduced to a page header). Answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Q16(c) is the cost of 15 windows, <span class="tex">\$4700</span> (the solutions PDF labels this line <span class="tex">a_{12}</span> but the arithmetic is <span class="tex">a_{15}</span>).</div>
     </details>
+
     <article class="q" id="q1">
-      <h2>1 · Exercise 1B</h2>
+      <h2>1 · Exercise 1B <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Write out the next three terms of these sequences. They are all APs. 2, 6, 10, ... a 3, 8, 13, . . . b 35, 25, 15, . . . c 11, 5, −1, ... d 4 1 2, 6, 7 1 2, . . . e 8, 7 1 2, 7, . . . f</p>
+        <p class="intro">Write the next <strong>three</strong> terms of each sequence. They are all APs.</p>
+        <p><strong>(a)</strong> <span class="tex">2, 6, 10, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">3, 8, 13, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">35, 25, 15, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">11, 5, -1, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">4\tfrac{1}{2},\; 6,\; 7\tfrac{1}{2},\; \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">8,\; 7\tfrac{1}{2},\; 7,\; \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> Each term is 4 more than the previous term. The sequence is as follows: 2, 6, 10, 14, 18, 22</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> In an AP, <span class="tex">d</span> = second term − first term. Then keep adding <span class="tex">d</span>. Check the same jump on the next pair before you continue.</p>
+          <p class="step"><span class="tex">d=6-2=4</span>, and <span class="tex">10-6=4</span>. Add 4 each time.</p>
+          <p class="step"><span class="tex">10+4=14</span></p>
+          <p class="step"><span class="tex">14+4=18</span></p>
+          <p class="step"><span class="tex">18+4=22</span></p>
+          <p class="final">Next three terms: 14, 18, 22.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Each term is 5 more than the previous term. The sequence is as follows: 3, 8, 13, 18, 23, 28</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=8-3=5</span>, and <span class="tex">13-8=5</span>. Add 5 each time.</p>
+          <p class="step"><span class="tex">13+5=18</span></p>
+          <p class="step"><span class="tex">18+5=23</span></p>
+          <p class="step"><span class="tex">23+5=28</span></p>
+          <p class="final">Next three terms: 18, 23, 28.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Each term is 10 less than the previous term. The sequence is as follows: 35, 25, 15, 5, −5, −15</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=25-35=-10</span>, and <span class="tex">15-25=-10</span>. Subtract 10 each time.</p>
+          <p class="step"><span class="tex">15+(-10)=5</span></p>
+          <p class="step"><span class="tex">5+(-10)=-5</span></p>
+          <p class="step"><span class="tex">-5+(-10)=-15</span></p>
+          <p class="final">Next three terms: 5, −5, −15.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Each term is 6 less than the previous term. The sequence is as follows: 11, 5, −1, −7, −13, −19</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=5-11=-6</span>, and <span class="tex">-1-5=-6</span>. Subtract 6 each time.</p>
+          <p class="step"><span class="tex">-1-6=-7</span></p>
+          <p class="step"><span class="tex">-7-6=-13</span></p>
+          <p class="step"><span class="tex">-13-6=-19</span></p>
+          <p class="final">Next three terms: −7, −13, −19.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> Each term is 11 2 more than the previous term. The sequence is as follows: 41/2, 6, 71/2, 9, 101/2, 12</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">4\tfrac{1}{2}=\tfrac{9}{2}</span> and <span class="tex">7\tfrac{1}{2}=\tfrac{15}{2}</span>.</p>
+          <p class="step"><span class="tex">d=6-\tfrac{9}{2}=\tfrac{12}{2}-\tfrac{9}{2}=\tfrac{3}{2}</span>, and <span class="tex">\tfrac{15}{2}-6=\tfrac{15}{2}-\tfrac{12}{2}=\tfrac{3}{2}</span>. Add <span class="tex">1\tfrac{1}{2}</span> each time.</p>
+          <p class="step"><span class="tex">7\tfrac{1}{2}+1\tfrac{1}{2}=9</span></p>
+          <p class="step"><span class="tex">9+1\tfrac{1}{2}=10\tfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">10\tfrac{1}{2}+1\tfrac{1}{2}=12</span></p>
+          <p class="final">Next three terms: <span class="tex">9,\; 10\tfrac{1}{2},\; 12</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> Each term is 1 2 less than the previous term. The sequence is as follows: 8, 71/2, 7, 61/2, 6, 51/2</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=7\tfrac{1}{2}-8=-\tfrac{1}{2}</span>, and <span class="tex">7-7\tfrac{1}{2}=-\tfrac{1}{2}</span>. Subtract <span class="tex">\tfrac{1}{2}</span> each time.</p>
+          <p class="step"><span class="tex">7-\tfrac{1}{2}=6\tfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">6\tfrac{1}{2}-\tfrac{1}{2}=6</span></p>
+          <p class="step"><span class="tex">6-\tfrac{1}{2}=5\tfrac{1}{2}</span></p>
+          <p class="final">Next three terms: <span class="tex">6\tfrac{1}{2},\; 6,\; 5\tfrac{1}{2}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q2">
       <h2>2 · Exercise 1B</h2>
       <div class="stem">
-        <p>Write out the first four terms of the APs whose first terms and common differences are: a = 3 and d = 2 a a = 7 and d = 2 b a = 7 and d = −4 c a = 17 and d = 11 d a = 30 and d = −11 e a = −9 and d = 4 f a = 4 1 2 and d = −1 2 g a = 3 1 2 and d = −2 h a = 0.9 and d = 0.7 i</p>
+        <p class="intro">Write the first four terms. <span class="tex">a</span> is the first term. <span class="tex">d</span> is the common difference.</p>
+        <p><strong>(a)</strong> <span class="tex">a=3</span> and <span class="tex">d=2</span></p>
+        <p><strong>(b)</strong> <span class="tex">a=7</span> and <span class="tex">d=2</span></p>
+        <p><strong>(c)</strong> <span class="tex">a=7</span> and <span class="tex">d=-4</span></p>
+        <p><strong>(d)</strong> <span class="tex">a=17</span> and <span class="tex">d=11</span></p>
+        <p><strong>(e)</strong> <span class="tex">a=30</span> and <span class="tex">d=-11</span></p>
+        <p><strong>(f)</strong> <span class="tex">a=-9</span> and <span class="tex">d=4</span></p>
+        <p><strong>(g)</strong> <span class="tex">a=4\tfrac{1}{2}</span> and <span class="tex">d=-\tfrac{1}{2}</span></p>
+        <p><strong>(h)</strong> <span class="tex">a=3\tfrac{1}{2}</span> and <span class="tex">d=-2</span></p>
+        <p><strong>(i)</strong> <span class="tex">a=0.9</span> and <span class="tex">d=0.7</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> Start at 3 and add 2. The sequence is as follows: 3, 5, 7, 9</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Start at <span class="tex">a</span>. The next term is always “previous term + <span class="tex">d</span>”.</p>
+          <p class="step"><span class="tex">a_1=3</span></p>
+          <p class="step"><span class="tex">a_2=3+2=5</span></p>
+          <p class="step"><span class="tex">a_3=5+2=7</span></p>
+          <p class="step"><span class="tex">a_4=7+2=9</span></p>
+          <p class="final">3, 5, 7, 9.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Start at 7 and add 2. The sequence is as follows: 7, 9, 11, 13</p>
+          <p class="step"><strong>Same method ·</strong> Start at 7. Add 2 each time.</p>
+          <p class="step"><span class="tex">7+2=9</span></p>
+          <p class="step"><span class="tex">9+2=11</span></p>
+          <p class="step"><span class="tex">11+2=13</span></p>
+          <p class="final">7, 9, 11, 13.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Start at 7 and subtract 4. The sequence is as follows: 7, 3, −1, −5</p>
+          <p class="step"><strong>Same method ·</strong> Start at 7. Add −4, which means subtract 4.</p>
+          <p class="step"><span class="tex">7-4=3</span></p>
+          <p class="step"><span class="tex">3-4=-1</span></p>
+          <p class="step"><span class="tex">-1-4=-5</span></p>
+          <p class="final">7, 3, −1, −5.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Start at 17 and add 11. The sequence is as follows: 17, 28, 39, 50</p>
+          <p class="step"><strong>Same method ·</strong> Start at 17. Add 11 each time.</p>
+          <p class="step"><span class="tex">17+11=28</span></p>
+          <p class="step"><span class="tex">28+11=39</span></p>
+          <p class="step"><span class="tex">39+11=50</span></p>
+          <p class="final">17, 28, 39, 50.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> Start at 30 and subtract 11. The sequence is as follows: 30, 19, 8, −3</p>
+          <p class="step"><strong>Same method ·</strong> Start at 30. Subtract 11 each time.</p>
+          <p class="step"><span class="tex">30-11=19</span></p>
+          <p class="step"><span class="tex">19-11=8</span></p>
+          <p class="step"><span class="tex">8-11=-3</span></p>
+          <p class="final">30, 19, 8, −3.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> Start at −9 and add 4. The sequence is as follows: −9, −5, −1, 3</p>
+          <p class="step"><strong>Same method ·</strong> Start at −9. Add 4 each time.</p>
+          <p class="step"><span class="tex">-9+4=-5</span></p>
+          <p class="step"><span class="tex">-5+4=-1</span></p>
+          <p class="step"><span class="tex">-1+4=3</span></p>
+          <p class="final">−9, −5, −1, 3.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> Start at 41 2 and subtract 1/2. The sequence is as follows: 41/2, 4, 31/2, 3</p>
+          <p class="step"><strong>Same method ·</strong> Start at <span class="tex">4\tfrac{1}{2}</span>. Subtract <span class="tex">\tfrac{1}{2}</span> each time.</p>
+          <p class="step"><span class="tex">4\tfrac{1}{2}-\tfrac{1}{2}=4</span></p>
+          <p class="step"><span class="tex">4-\tfrac{1}{2}=3\tfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">3\tfrac{1}{2}-\tfrac{1}{2}=3</span></p>
+          <p class="final"><span class="tex">4\tfrac{1}{2},\; 4,\; 3\tfrac{1}{2},\; 3</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> Start at 31 2 and subtract 2. The sequence is as follows: 31/2, 11/2, −1/2, −21 2 i Start at 0.9 and add 0.7. The sequence is as follows: 1/0.9, 1.6, 2.3, 3.0</p>
+          <p class="step"><strong>Same method ·</strong> Start at <span class="tex">3\tfrac{1}{2}</span>. Subtract 2 each time.</p>
+          <p class="step"><span class="tex">3\tfrac{1}{2}-2=1\tfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">1\tfrac{1}{2}-2=-\tfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">-\tfrac{1}{2}-2=-2\tfrac{1}{2}</span></p>
+          <p class="final"><span class="tex">3\tfrac{1}{2},\; 1\tfrac{1}{2},\; -\tfrac{1}{2},\; -2\tfrac{1}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> Start at 0.9. Add 0.7 each time.</p>
+          <p class="step"><span class="tex">0.9+0.7=1.6</span></p>
+          <p class="step"><span class="tex">1.6+0.7=2.3</span></p>
+          <p class="step"><span class="tex">2.3+0.7=3.0</span></p>
+          <p class="final">0.9, 1.6, 2.3, 3.0.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q3">
       <h2>3 · Exercise 1B</h2>
       <div class="stem">
-        <p>Find the differences a2 −a1 and a3 −a2 for each sequence to test whether it is an AP. If the sequence is an AP, state the values of the first term a and the common difference d. 3, 7, 11, ... a 11, 7, 3, . . . b 10, 17, 24, . . . c 10, 20, 40, ... d 50, 35, 20, . . . e 23, 34, 45, . . . f −12, −7, −2, ... g −40, 20, −10, . . . h 1, 11, 111, . . . i 8, −2, −12, ... j −17, 0, 17, . . . k 10, 7 1 2, 5, . . . l</p>
+        <p class="intro">For each list, work out <span class="tex">a_2-a_1</span> and <span class="tex">a_3-a_2</span>. It is an AP only if those two differences are the same. If it is an AP, write the first term <span class="tex">a</span> and the common difference <span class="tex">d</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">3, 7, 11, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">11, 7, 3, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">10, 17, 24, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">10, 20, 40, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">50, 35, 20, \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">23, 34, 45, \ldots</span></p>
+        <p><strong>(g)</strong> <span class="tex">-12, -7, -2, \ldots</span></p>
+        <p><strong>(h)</strong> <span class="tex">-40, 20, -10, \ldots</span></p>
+        <p><strong>(i)</strong> <span class="tex">1, 11, 111, \ldots</span></p>
+        <p><strong>(j)</strong> <span class="tex">8, -2, -12, \ldots</span></p>
+        <p><strong>(k)</strong> <span class="tex">-17, 0, 17, \ldots</span></p>
+        <p><strong>(l)</strong> <span class="tex">10,\; 7\tfrac{1}{2},\; 5,\; \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-        <p class="step">a2 −a1 = 7 −3 = 4 a3 −a2 = 11 −7 = 4 Hence this sequence is an AP with a = 3 and d = 4.</p>
-<p class="step"><strong>a ·</strong> a2 −a1 = 7 −11 = −4 a3 −a2 = 3 −7 = −4 Hence this sequence is an AP with a = 11 and d = −4.</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Difference = later term − earlier term. If <span class="tex">a_2-a_1=a_3-a_2</span>, the list is an AP. Then <span class="tex">a=a_1</span> and <span class="tex">d</span> is that shared difference.</p>
+          <p class="step"><span class="tex">a_2-a_1=7-3=4</span></p>
+          <p class="step"><span class="tex">a_3-a_2=11-7=4</span></p>
+          <p class="final">It is an AP with <span class="tex">a=3</span> and <span class="tex">d=4</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a2 −a1 = 17 −10 = 7 a3 −a2 = 24 −17 = 7 Hence this sequence is an AP with a = 10 and d = 7.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=7-11=-4</span></p>
+          <p class="step"><span class="tex">a_3-a_2=3-7=-4</span></p>
+          <p class="final">It is an AP with <span class="tex">a=11</span> and <span class="tex">d=-4</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a2 −a1 = 20 −10 = 10 a3 −a2 = 40 −20 = 20 Hence this sequence is not an AP, as the differences are not all the same.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=17-10=7</span></p>
+          <p class="step"><span class="tex">a_3-a_2=24-17=7</span></p>
+          <p class="final">It is an AP with <span class="tex">a=10</span> and <span class="tex">d=7</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a2 −a1 = 35 −50 = −15 a3 −a2 = 20 −35 = −15 Hence this sequence is an AP with a = 50 and d = −15.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=20-10=10</span></p>
+          <p class="step"><span class="tex">a_3-a_2=40-20=20</span></p>
+          <p class="step">10 and 20 are not the same, so the jump is not constant.</p>
+          <p class="final">Not an AP.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a2 −a1 = 34 −23 = 11 a3 −a2 = 45 −34 = 11 Hence this sequence is an AP with a = 23 and d = 11.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=35-50=-15</span></p>
+          <p class="step"><span class="tex">a_3-a_2=20-35=-15</span></p>
+          <p class="final">It is an AP with <span class="tex">a=50</span> and <span class="tex">d=-15</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> a2 −a1 = (−7) −(−12) = 5 a3 −a2 = (−7) −(−2) = 5 Hence this sequence is an AP with a = −12 and d = 5.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=34-23=11</span></p>
+          <p class="step"><span class="tex">a_3-a_2=45-34=11</span></p>
+          <p class="final">It is an AP with <span class="tex">a=23</span> and <span class="tex">d=11</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> a2 −a1 = 20 −(−40) = 60 a3 −a2 = (−10) −20 = −30 Hence this sequence is not an AP, as the differences are not all the same.</p>
+          <p class="step"><strong>Same method ·</strong> Subtracting a negative is the same as adding. <span class="tex">a_2-a_1=(-7)-(-12)=-7+12=5</span></p>
+          <p class="step"><span class="tex">a_3-a_2=(-2)-(-7)=-2+7=5</span></p>
+          <p class="final">It is an AP with <span class="tex">a=-12</span> and <span class="tex">d=5</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> a2 −a1 = 11 −1 = 10 a3 −a2 = 111 −11 = 100 Hence this sequence is not an AP, as the differences are not all the same. i a2 −a1 = (−2) −8 = −10 a3 −a2 = (−12) −(−2) = −10 Hence this sequence is an AP with a = 8 and d = −10. j a2 −a1 = 0 −(−17) = 17 a3 −a2 = 17 −0 = 17 Hence this sequence is an AP with a = −17 and d = 17. k a2 −a1 = 71/2 −10 = −21 2 a3 −a2 = 5 −71 2 = −21 2 Hence this sequence is an AP with a = 10 and d = −21/2. l</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=20-(-40)=60</span></p>
+          <p class="step"><span class="tex">a_3-a_2=(-10)-20=-30</span></p>
+          <p class="step">60 and −30 are not the same.</p>
+          <p class="final">Not an AP.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=11-1=10</span></p>
+          <p class="step"><span class="tex">a_3-a_2=111-11=100</span></p>
+          <p class="step">10 and 100 are not the same.</p>
+          <p class="final">Not an AP.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=(-2)-8=-10</span></p>
+          <p class="step"><span class="tex">a_3-a_2=(-12)-(-2)=-12+2=-10</span></p>
+          <p class="final">It is an AP with <span class="tex">a=8</span> and <span class="tex">d=-10</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · k</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=0-(-17)=17</span></p>
+          <p class="step"><span class="tex">a_3-a_2=17-0=17</span></p>
+          <p class="final">It is an AP with <span class="tex">a=-17</span> and <span class="tex">d=17</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · l</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">a_2-a_1=7\tfrac{1}{2}-10=-\tfrac{5}{2}</span></p>
+          <p class="step"><span class="tex">a_3-a_2=5-7\tfrac{1}{2}=-\tfrac{5}{2}</span></p>
+          <p class="final">It is an AP with <span class="tex">a=10</span> and <span class="tex">d=-2\tfrac{1}{2}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q4">
       <h2>4 · Exercise 1B</h2>
       <div class="stem">
-        <p>Use the formula an = a + (n −1)d to find the 11th term a11 of the APs in which: a = 7 and d = 6 a a = 15 and d = −7 b a = 10 1 2 and d = 4 c</p>
+        <p class="intro">Use <span class="tex">a_n=a+(n-1)d</span> to find the 11th term <span class="tex">a_{11}</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">a=7</span> and <span class="tex">d=6</span></p>
+        <p><strong>(b)</strong> <span class="tex">a=15</span> and <span class="tex">d=-7</span></p>
+        <p><strong>(c)</strong> <span class="tex">a=10\tfrac{1}{2}</span> and <span class="tex">d=4</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> = 7 and d = 6 an = 7 + 6(n −1) = 7 + 6n −6 = 1 + 6n a11 = 1 + 6 × 11 = 67</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d</span>. Here <span class="tex">a</span> is the first term, <span class="tex">d</span> is the common difference, and <span class="tex">n</span> is the term number. For the 11th term, <span class="tex">n-1=10</span>, so we add <span class="tex">d</span> ten times.</p>
+          <p class="step"><span class="tex">a_n=7+6(n-1)</span></p>
+          <p class="step">Expand the bracket: <span class="tex">6(n-1)=6n-6</span>, so <span class="tex">a_n=7+6n-6=6n+1</span>.</p>
+          <p class="step">Put <span class="tex">n=11</span>: <span class="tex">a_{11}=6\times 11+1=66+1=67</span>.</p>
+          <p class="step">Check with the short form: <span class="tex">a_{11}=7+10\times 6=7+60=67</span>.</p>
+          <p class="final"><span class="tex">a_{11}=67</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> = 15 and d = −7 an = 15 −7(n −1) = 15 −7n + 7 = 22 −7n a11 = 22 −7 × 11 = −55</p>
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_n=15+(-7)(n-1)=15-7(n-1)</span>.</p>
+          <p class="step">Expand: <span class="tex">-7(n-1)=-7n+7</span>, so <span class="tex">a_n=15-7n+7=22-7n</span>.</p>
+          <p class="step">Put <span class="tex">n=11</span>: <span class="tex">a_{11}=22-7\times 11=22-77=-55</span>.</p>
+          <p class="step">Check: <span class="tex">a_{11}=15+10\times(-7)=15-70=-55</span>.</p>
+          <p class="final"><span class="tex">a_{11}=-55</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> = 101 2 and d = 4 an = 101 2 + 4(n −1) = 101 2 + 4n −4 = 61 2 + 4n a11 = 61 2 + 4 × 11 = 501/2</p>
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a=10\tfrac{1}{2}=\tfrac{21}{2}</span> and <span class="tex">d=4</span>.</p>
+          <p class="step"><span class="tex">a_n=\tfrac{21}{2}+4(n-1)=\tfrac{21}{2}+4n-4</span>.</p>
+          <p class="step"><span class="tex">4=\tfrac{8}{2}</span>, so <span class="tex">\tfrac{21}{2}-4=\tfrac{21}{2}-\tfrac{8}{2}=\tfrac{13}{2}</span>.</p>
+          <p class="step"><span class="tex">a_n=4n+\tfrac{13}{2}</span>.</p>
+          <p class="step">Put <span class="tex">n=11</span>: <span class="tex">a_{11}=4\times 11+\tfrac{13}{2}=44+\tfrac{13}{2}=\tfrac{88}{2}+\tfrac{13}{2}=\tfrac{101}{2}=50\tfrac{1}{2}</span>.</p>
+          <p class="final"><span class="tex">a_{11}=50\tfrac{1}{2}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q5">
       <h2>5 · Exercise 1B</h2>
       <div class="stem">
-        <p>Use the formula an = a + (n −1)d to find the eighth term a8 of the APs in which: a = 1 and d = 4 a a = 100 and d = −7 b a = −13 and d = 6 c</p>
+        <p class="intro">Use <span class="tex">a_n=a+(n-1)d</span> to find the 8th term <span class="tex">a_8</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">a=1</span> and <span class="tex">d=4</span></p>
+        <p><strong>(b)</strong> <span class="tex">a=100</span> and <span class="tex">d=-7</span></p>
+        <p><strong>(c)</strong> <span class="tex">a=-13</span> and <span class="tex">d=6</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> a = 1 and d = 4 an = 1 + 4(n −1) = 1 + 4n −4 = −3 + 4n a8 = −3 + 4 × 8 = 29</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d</span>. For the 8th term, <span class="tex">n-1=7</span>, so we add <span class="tex">d</span> seven times.</p>
+          <p class="step"><span class="tex">a_n=1+4(n-1)=1+4n-4=4n-3</span>.</p>
+          <p class="step">Put <span class="tex">n=8</span>: <span class="tex">a_8=4\times 8-3=32-3=29</span>.</p>
+          <p class="step">Check: <span class="tex">a_8=1+7\times 4=1+28=29</span>.</p>
+          <p class="final"><span class="tex">a_8=29</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a = 100 and d = −7 an = 100 −7(n −1) = 100 −7n + 7 = 107 −7n a8 = 107 −7 × 8 = 51/2</p>
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_n=100+(-7)(n-1)=100-7n+7=107-7n</span>.</p>
+          <p class="step">Put <span class="tex">n=8</span>: <span class="tex">a_8=107-7\times 8=107-56=51</span>.</p>
+          <p class="step">Check: <span class="tex">a_8=100+7\times(-7)=100-49=51</span>.</p>
+          <p class="final"><span class="tex">a_8=51</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a = −13 and d = 6 an = −13 + 6(n −1) = −13 + 6n −6 = −19 + 6n a8 = −19 + 6 × 8 = 29</p>
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_n=-13+6(n-1)=-13+6n-6=6n-19</span>.</p>
+          <p class="step">Put <span class="tex">n=8</span>: <span class="tex">a_8=6\times 8-19=48-19=29</span>.</p>
+          <p class="step">Check: <span class="tex">a_8=-13+7\times 6=-13+42=29</span>.</p>
+          <p class="final"><span class="tex">a_8=29</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q6">
       <h2>6 · Exercise 1B</h2>
       <div class="stem">
-        <p>a Find the first term a and the common difference d of the AP 6, 16, 26, . . .<br/>
-b Find the ninth term a9, the 21st term a21 and the 100th term a100.<br/>
-c Use the formula an = a + (n −1)d to find a formula for the nth term an.</p>
+        <p class="intro">The AP is <span class="tex">6, 16, 26, \ldots</span></p>
+        <p><strong>(a)</strong> Find the first term <span class="tex">a</span> and the common difference <span class="tex">d</span>.</p>
+        <p><strong>(b)</strong> Find <span class="tex">a_9</span>, <span class="tex">a_{21}</span> and <span class="tex">a_{100}</span>.</p>
+        <p><strong>(c)</strong> Find a formula for <span class="tex">a_n</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> a2 −a1 = 16 −6 = 10 a3 −a2 = 26 −16 = 10 Hence this sequence is an AP with a = 6 and d = 10.</p>
+          <p class="step">The first term is the first number in the list: <span class="tex">a=6</span>.</p>
+          <p class="step"><span class="tex">a_2-a_1=16-6=10</span>.</p>
+          <p class="step"><span class="tex">a_3-a_2=26-16=10</span>. The jumps match, so <span class="tex">d=10</span>.</p>
+          <p class="final"><span class="tex">a=6</span> and <span class="tex">d=10</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a9 = 6 + 10(9 −1) a9 = 86 a21 = 6 + 10(21 −1) = 206 a100 = 6 + 10(100 −1) = 996</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d=6+10(n-1)</span>. The <span class="tex">(n-1)</span> means “how many jumps from the first term”.</p>
+          <p class="step"><span class="tex">a_9=6+10(9-1)=6+10\times 8=6+80=86</span>.</p>
+          <p class="step"><span class="tex">a_{21}=6+10(21-1)=6+10\times 20=6+200=206</span>.</p>
+          <p class="step"><span class="tex">a_{100}=6+10(100-1)=6+10\times 99=6+990=996</span>.</p>
+          <p class="final"><span class="tex">a_9=86</span>, <span class="tex">a_{21}=206</span>, <span class="tex">a_{100}=996</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> an = 6 + 10(n −1) = 6 + 10n −10 = 10n −4</p>
+          <p class="step"><span class="tex">a_n=6+10(n-1)</span>.</p>
+          <p class="step">Expand: <span class="tex">10(n-1)=10n-10</span>, so <span class="tex">a_n=6+10n-10=10n-4</span>.</p>
+          <p class="final"><span class="tex">a_n=10n-4</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q7">
       <h2>7 · Exercise 1B</h2>
       <div class="stem">
-        <p>a Find the first term a and the common difference d of the AP −20, −9, 2, . . .<br/>
-b Find the eighth term a8, the 31st term a31 and the 200th term a200.<br/>
-c Use the formula an = a + (n −1)d to find a formula for the nth term an.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-        <p class="step">a2 −a1 = (−9) −(−20) = 11 a3 −a2 = 2 −(−9) = 11 Hence this sequence is an AP with a = −20 and</p>
-<p class="step"><strong>d ·</strong> = 11.</p>
-        </div>
+        <p class="intro">The AP is <span class="tex">-20, -9, 2, \ldots</span></p>
+        <p><strong>(a)</strong> Find <span class="tex">a</span> and <span class="tex">d</span>.</p>
+        <p><strong>(b)</strong> Find <span class="tex">a_8</span>, <span class="tex">a_{31}</span> and <span class="tex">a_{200}</span>.</p>
+        <p><strong>(c)</strong> Find a formula for <span class="tex">a_n</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> a8 = −20 + 11(8 −1) = 57 a31 = −20 + 11(31 −1) = 310 a200 = −20 + 11(200 −1) = 2169</p>
+          <p class="step"><span class="tex">a=-20</span>.</p>
+          <p class="step"><span class="tex">a_2-a_1=(-9)-(-20)=-9+20=11</span>.</p>
+          <p class="step"><span class="tex">a_3-a_2=2-(-9)=2+9=11</span>.</p>
+          <p class="final"><span class="tex">a=-20</span> and <span class="tex">d=11</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> an = −20 + 11(n −1) = −20 + 11n −11 = 11n −31</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=-20+11(n-1)</span>.</p>
+          <p class="step"><span class="tex">a_8=-20+11(8-1)=-20+11\times 7=-20+77=57</span>.</p>
+          <p class="step"><span class="tex">a_{31}=-20+11(31-1)=-20+11\times 30=-20+330=310</span>.</p>
+          <p class="step"><span class="tex">a_{200}=-20+11(200-1)=-20+11\times 199=-20+2189=2169</span>.</p>
+          <p class="final"><span class="tex">a_8=57</span>, <span class="tex">a_{31}=310</span>, <span class="tex">a_{200}=2169</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><span class="tex">a_n=-20+11(n-1)=-20+11n-11=11n-31</span>.</p>
+          <p class="final"><span class="tex">a_n=11n-31</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q8">
       <h2>8 · Exercise 1B</h2>
       <div class="stem">
-        <p>a Find the first term a and the common difference d of the AP 300, 260, 220, . . .<br/>
-b Find the seventh term a7, the 51st term a51 and the 1000th term a1000.<br/>
-c Use the formula an = a + (n −1)d to find a formula for the nth term an.</p>
+        <p class="intro">The AP is <span class="tex">300, 260, 220, \ldots</span></p>
+        <p><strong>(a)</strong> Find <span class="tex">a</span> and <span class="tex">d</span>.</p>
+        <p><strong>(b)</strong> Find <span class="tex">a_7</span>, <span class="tex">a_{51}</span> and <span class="tex">a_{1000}</span>.</p>
+        <p><strong>(c)</strong> Find a formula for <span class="tex">a_n</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> a2 −a1 = 260 −300 = −40 a3 −a2 = 220 −260 = −40 Hence this sequence is an AP with a = 300 and d = −40.</p>
+          <p class="step"><span class="tex">a=300</span>.</p>
+          <p class="step"><span class="tex">a_2-a_1=260-300=-40</span>.</p>
+          <p class="step"><span class="tex">a_3-a_2=220-260=-40</span>.</p>
+          <p class="final"><span class="tex">a=300</span> and <span class="tex">d=-40</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a7 = 300 −40(7 −1) = 60 a51 = 300 −40(51 −1) = −1700 a1000 = 300 −40(1000 −1) = −39 660</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=300-40(n-1)</span>.</p>
+          <p class="step"><span class="tex">a_7=300-40(7-1)=300-40\times 6=300-240=60</span>.</p>
+          <p class="step"><span class="tex">a_{51}=300-40(51-1)=300-40\times 50=300-2000=-1700</span>.</p>
+          <p class="step"><span class="tex">a_{1000}=300-40(1000-1)=300-40\times 999=300-39960=-39660</span>.</p>
+          <p class="final"><span class="tex">a_7=60</span>, <span class="tex">a_{51}=-1700</span>, <span class="tex">a_{1000}=-39660</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> an = 300 −40(n −1) = 300 −40n + 40 = 340 −40n</p>
+          <p class="step"><span class="tex">a_n=300-40(n-1)=300-40n+40=340-40n</span>.</p>
+          <p class="final"><span class="tex">a_n=340-40n</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q9">
-      <h2>9 · Exercise 1B</h2>
+      <h2>9 · Exercise 1B <span class="band dev">Development</span></h2>
       <div class="stem">
-        <p>Find a3 −a2 and a2 −a1 to test whether each sequence is an AP. If the sequence is an AP, use the formula an = a + (n −1)d to find a formula for the nth term an. 8, 11, 14, . . . a 21, 15, 9, . . . b 8, 4, 2, . . . c −3, 1, 5, . . . d 1 3 4, 3, 4 1 4, . . . e 12, −5, −22, . . . f √ 2 , 2 √ 2 , 3 √ 2 , . . . g 1, 4, 9, 16, . . . h −2 1 2, 1, 4 1 2, . . . i</p>
+        <p class="intro">Work out <span class="tex">a_2-a_1</span> and <span class="tex">a_3-a_2</span>. If the list is an AP, find a formula for <span class="tex">a_n</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">8, 11, 14, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">21, 15, 9, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">8, 4, 2, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">-3, 1, 5, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">1\tfrac{3}{4},\; 3,\; 4\tfrac{1}{4},\; \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">12, -5, -22, \ldots</span></p>
+        <p><strong>(g)</strong> <span class="tex">\sqrt{2},\; 2\sqrt{2},\; 3\sqrt{2},\; \ldots</span></p>
+        <p><strong>(h)</strong> <span class="tex">1, 4, 9, 16, \ldots</span></p>
+        <p><strong>(i)</strong> <span class="tex">-2\tfrac{1}{2},\; 1,\; 4\tfrac{1}{2},\; \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> a2 −a1 = 11 −8 = 3 a3 −a2 = 14 −11 = 3 Hence this sequence is an AP with a = 8 and d = 3. an = 8 + 3(n −1) = 8 + 3n −3 = 5 + 3n</p>
+          <p class="formula-quick"><strong>Formula:</strong> If the two differences match, <span class="tex">a_n=a+(n-1)d</span>. Then expand the bracket.</p>
+          <p class="step"><span class="tex">a_2-a_1=11-8=3</span> and <span class="tex">a_3-a_2=14-11=3</span>. So it is an AP with <span class="tex">a=8</span> and <span class="tex">d=3</span>.</p>
+          <p class="step"><span class="tex">a_n=8+3(n-1)=8+3n-3=3n+5</span>.</p>
+          <p class="final"><span class="tex">a_n=3n+5</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a2 −a1 = 15 −21 = −6 a3 −a2 = 9 −15 = −6 Hence this sequence is an AP with a = 21 and d = −6. 3 an = 21 −6(n −1) = 21 −6n + 6 = 27 −6n</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">15-21=-6</span> and <span class="tex">9-15=-6</span>. So <span class="tex">a=21</span> and <span class="tex">d=-6</span>.</p>
+          <p class="step"><span class="tex">a_n=21-6(n-1)=21-6n+6=27-6n</span>.</p>
+          <p class="final"><span class="tex">a_n=27-6n</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a2 −a1 = 4 −8 = −4 a3 −a2 = 2 −4 = −2 Hence this sequence is not an AP, as the differences are not all the same.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">4-8=-4</span> and <span class="tex">2-4=-2</span>.</p>
+          <p class="step">−4 and −2 are not the same.</p>
+          <p class="final">Not an AP, so there is no formula of the AP type.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a2 −a1 = 1 −(−3) = 4 a3 −a2 = 5 −1 = 4 Hence this sequence is an AP with a = −3 and d = 4. an = −3 + 4(n −1) = −3 + 4n −4 = 4n −7</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">1-(-3)=4</span> and <span class="tex">5-1=4</span>. So <span class="tex">a=-3</span> and <span class="tex">d=4</span>.</p>
+          <p class="step"><span class="tex">a_n=-3+4(n-1)=-3+4n-4=4n-7</span>.</p>
+          <p class="final"><span class="tex">a_n=4n-7</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a2 −a1 = 3 −13 4 = 11 4 a3 −a2 = 41/4 −3 = 11 4 Hence this sequence is an AP with a = 13 4 and d = 11/4. an = 13 4 + 11 4(n −1) = 13 4 + 11 4n −11 4 = 11 4n + 1 2 = 1 4(2 + 5n)</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">1\tfrac{3}{4}=\tfrac{7}{4}</span> and <span class="tex">4\tfrac{1}{4}=\tfrac{17}{4}</span>.</p>
+          <p class="step"><span class="tex">3-\tfrac{7}{4}=\tfrac{12}{4}-\tfrac{7}{4}=\tfrac{5}{4}</span>.</p>
+          <p class="step"><span class="tex">\tfrac{17}{4}-3=\tfrac{17}{4}-\tfrac{12}{4}=\tfrac{5}{4}</span>. So <span class="tex">a=\tfrac{7}{4}</span> and <span class="tex">d=\tfrac{5}{4}</span>.</p>
+          <p class="step"><span class="tex">a_n=\tfrac{7}{4}+\tfrac{5}{4}(n-1)=\tfrac{7}{4}+\tfrac{5n}{4}-\tfrac{5}{4}=\tfrac{5n}{4}+\tfrac{2}{4}=\dfrac{5n+2}{4}</span>.</p>
+          <p class="final"><span class="tex">a_n=\dfrac{5n+2}{4}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> a2 −a1 = −5 −12 = −17 a3 −a2 = −22 −(−5) = −17 Hence this sequence is an AP with a = 12 and d = −17. an = 12 −17(n −1) = 12 −17n + 17 = 29 −17n</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">-5-12=-17</span> and <span class="tex">-22-(-5)=-17</span>. So <span class="tex">a=12</span> and <span class="tex">d=-17</span>.</p>
+          <p class="step"><span class="tex">a_n=12-17(n-1)=12-17n+17=29-17n</span>.</p>
+          <p class="final"><span class="tex">a_n=29-17n</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> a2 −a1 = 2 √ 2 − √ 2 = √ 2 a3 −a2 = 3 √ 2 −2 √ 2 = √ 2 Hence this sequence is an AP with a = √ 2 and d = √ 2. an = √ 2 + √ 2(n −1) = √ 2 + n √ 2 − √ 2 = n √ 2</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">2\sqrt{2}</span> means <span class="tex">2\times\sqrt{2}</span>. You can subtract <span class="tex">\sqrt{2}</span> the same way you subtract an ordinary number.</p>
+          <p class="step"><span class="tex">2\sqrt{2}-\sqrt{2}=\sqrt{2}</span> and <span class="tex">3\sqrt{2}-2\sqrt{2}=\sqrt{2}</span>. So <span class="tex">a=\sqrt{2}</span> and <span class="tex">d=\sqrt{2}</span>.</p>
+          <p class="step"><span class="tex">a_n=\sqrt{2}+\sqrt{2}(n-1)=\sqrt{2}+n\sqrt{2}-\sqrt{2}=n\sqrt{2}</span>.</p>
+          <p class="final"><span class="tex">a_n=n\sqrt{2}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> a2 −a1 = 4 −1 = 3 a3 −a2 = 9 −4 = 5 a4 −a3 = 16 −9 = 7 Hence this sequence is not an AP, as the differences are not all the same. i a2 −a1 = 1 −(−21/2) = 31 2 a3 −a2 = 41/2 −1 = 31 2 4 Hence this sequence is an AP with a = −21 2 and d = 31/2. an = −21 2 + 7 2(n −1) = −21 2 + 7 2n −31 2 = 7 2n −6</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">4-1=3</span>, <span class="tex">9-4=5</span>, <span class="tex">16-9=7</span>.</p>
+          <p class="step">The jumps are 3, then 5, then 7. They are not the same. These are the square numbers <span class="tex">1^2, 2^2, 3^2, 4^2</span>.</p>
+          <p class="final">Not an AP.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">-2\tfrac{1}{2}=-\tfrac{5}{2}</span> and <span class="tex">4\tfrac{1}{2}=\tfrac{9}{2}</span>.</p>
+          <p class="step"><span class="tex">1-\left(-\tfrac{5}{2}\right)=1+\tfrac{5}{2}=\tfrac{7}{2}</span>.</p>
+          <p class="step"><span class="tex">\tfrac{9}{2}-1=\tfrac{9}{2}-\tfrac{2}{2}=\tfrac{7}{2}</span>. So <span class="tex">a=-\tfrac{5}{2}</span> and <span class="tex">d=\tfrac{7}{2}</span>.</p>
+          <p class="step"><span class="tex">a_n=-\tfrac{5}{2}+\tfrac{7}{2}(n-1)=-\tfrac{5}{2}+\tfrac{7n}{2}-\tfrac{7}{2}=\tfrac{7n}{2}-6</span>.</p>
+          <p class="final"><span class="tex">a_n=\dfrac{7n}{2}-6</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q10">
       <h2>10 · Exercise 1B</h2>
       <div class="stem">
-        <p>a Use the formula an = a + (n −1)d to find the nth term an of 165, 160, 155, . . .<br/>
-b Solve an = 40 to find the number of terms in the finite sequence 165, 160, 155, . . . , 40.<br/>
-c Solve an &lt; 0 to find the first negative term of the sequence 165, 160, 155, . . .</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-        <p class="step">a2 −a1 = 160 −165 = −5 a3 −a2 = 160 −165 = −5 Hence this sequence is an AP with a = 165 and</p>
-<p class="step"><strong>d ·</strong> = −5. an = 165 −5(n −1) = 165 −5n + 5 = 170 −5n</p>
-        </div>
+        <p class="intro">The sequence is <span class="tex">165, 160, 155, \ldots</span></p>
+        <p><strong>(a)</strong> Find a formula for <span class="tex">a_n</span>.</p>
+        <p><strong>(b)</strong> The finite list ends at 40. How many terms are there?</p>
+        <p><strong>(c)</strong> Find the first negative term of <span class="tex">165, 160, 155, \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> Put an = 40 Then: 40 = 165 −5(n −1) 40 = 165 −5n + 5 40 = 170 −5n 130 = 5n n = 26 There are 26 terms in the sequence.</p>
+          <p class="step"><span class="tex">a_2-a_1=160-165=-5</span> and <span class="tex">a_3-a_2=155-160=-5</span>. So <span class="tex">a=165</span> and <span class="tex">d=-5</span>.</p>
+          <p class="step"><span class="tex">a_n=165-5(n-1)=165-5n+5=170-5n</span>.</p>
+          <p class="final"><span class="tex">a_n=170-5n</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Put an &lt; 0 Then: 0 &gt; 165 −5(n −1) 0 &gt; 165 −5n + 5 0 &gt; 170 −5n 5n &gt; 170 n &gt; 34 The first negative term is a35 = −5</p>
+          <p class="formula-quick"><strong>Formula:</strong> Put the last term in place of <span class="tex">a_n</span> and solve for <span class="tex">n</span>. That <span class="tex">n</span> is the number of terms.</p>
+          <p class="step"><span class="tex">40=170-5n</span>.</p>
+          <p class="step">Add <span class="tex">5n</span> to both sides: <span class="tex">40+5n=170</span>.</p>
+          <p class="step">Subtract 40: <span class="tex">5n=130</span>.</p>
+          <p class="step">Divide by 5: <span class="tex">n=26</span>.</p>
+          <p class="step">Check: <span class="tex">a_{26}=170-5\times 26=170-130=40</span>.</p>
+          <p class="final">There are 26 terms.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step">We want <span class="tex">a_n&lt;0</span>, so <span class="tex">170-5n&lt;0</span>.</p>
+          <p class="step">Add <span class="tex">5n</span>: <span class="tex">170&lt;5n</span>.</p>
+          <p class="step">Divide by 5: <span class="tex">n&gt;34</span>.</p>
+          <p class="step">The next whole number after 34 is 35.</p>
+          <p class="step"><span class="tex">a_{35}=170-5\times 35=170-175=-5</span>.</p>
+          <p class="final">The first negative term is <span class="tex">a_{35}=-5</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q11">
       <h2>11 · Exercise 1B</h2>
       <div class="stem">
-        <p>Use the formula an = a + (n −1)d to find the number of terms in each finite sequence. 10, 12, 14, ..., 30 a 1, 4, 7, . . . , 100 b 105, 100, 95, . . . , 30 c 100, 92, 84, ..., 4 d −12, −10 1 2, −9, . . . , 0 e 2, 5, 8, . . . , 2000 f</p>
+        <p class="intro">Find how many terms are in each finite AP. Put the last number in place of <span class="tex">a_n</span> and solve for <span class="tex">n</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">10, 12, 14, \ldots, 30</span></p>
+        <p><strong>(b)</strong> <span class="tex">1, 4, 7, \ldots, 100</span></p>
+        <p><strong>(c)</strong> <span class="tex">105, 100, 95, \ldots, 30</span></p>
+        <p><strong>(d)</strong> <span class="tex">100, 92, 84, \ldots, 4</span></p>
+        <p><strong>(e)</strong> <span class="tex">-12,\; -10\tfrac{1}{2},\; -9,\; \ldots,\; 0</span></p>
+        <p><strong>(f)</strong> <span class="tex">2, 5, 8, \ldots, 2000</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> a2 −a1 = 12 −10 = 2 a3 −a2 = 14 −12 = 2 Hence this sequence is an AP with a = 10 and d = 2. Put an = 30. Then 30 = 10 + 2(n −1) 30 = 10 + 2n −2 30 = 8 + 2n 22 = 2n n = 11 There are 11 terms in the sequence.</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d</span>. Find <span class="tex">a</span> and <span class="tex">d</span> first, then set <span class="tex">a_n</span> equal to the last term.</p>
+          <p class="step"><span class="tex">d=12-10=2</span> and <span class="tex">14-12=2</span>. So <span class="tex">a=10</span>, <span class="tex">d=2</span>.</p>
+          <p class="step"><span class="tex">30=10+2(n-1)=10+2n-2=2n+8</span>.</p>
+          <p class="step">Subtract 8: <span class="tex">22=2n</span>. Divide by 2: <span class="tex">n=11</span>.</p>
+          <p class="step">Check: <span class="tex">a_{11}=10+2\times 10=30</span>.</p>
+          <p class="final">11 terms.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a2 −a1 = 4 −1 = 3 a3 −a2 = 7 −4 = 3 Hence this sequence is an AP with a = 1 and d = 3. Put an = 100. Then 100 = 1 + 3(n −1) 100 = 1 + 3n −3 100 = 3n −2 102 = 3n n = 34 There are 34 terms in the sequence. 5</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=4-1=3</span>. So <span class="tex">a=1</span>, <span class="tex">d=3</span>.</p>
+          <p class="step"><span class="tex">100=1+3(n-1)=1+3n-3=3n-2</span>.</p>
+          <p class="step">Add 2: <span class="tex">102=3n</span>. Divide by 3: <span class="tex">n=34</span>.</p>
+          <p class="step">Check: <span class="tex">a_{34}=1+3\times 33=1+99=100</span>.</p>
+          <p class="final">34 terms.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a2 −a1 = 100 −105 = −5 a3 −a2 = 95 −100 = −5 Hence this sequence is an AP with a = 105 and d = −5. Put an = 30. Then 30 = 105 −5(n −1) 30 = 105 −5n + 5 30 = 110 −5n −80 = −5n n = 16 There are 16 terms in the sequence.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=100-105=-5</span>. So <span class="tex">a=105</span>, <span class="tex">d=-5</span>.</p>
+          <p class="step"><span class="tex">30=105-5(n-1)=105-5n+5=110-5n</span>.</p>
+          <p class="step">Add <span class="tex">5n</span>: <span class="tex">30+5n=110</span>. Subtract 30: <span class="tex">5n=80</span>. Divide by 5: <span class="tex">n=16</span>.</p>
+          <p class="step">Check: <span class="tex">a_{16}=105-5\times 15=105-75=30</span>.</p>
+          <p class="final">16 terms.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a2 −a1 = 92 −100 = −8 a3 −a2 = 84 −92 = −8 Hence this sequence is an AP with a = 100 and d = −8. Put an = 4. Then 4 = 100 −8(n −1) 4 = 100 −8n + 8 4 = 108 −8n −104 = −8n n = 13 There are 13 terms in the sequence.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=92-100=-8</span>. So <span class="tex">a=100</span>, <span class="tex">d=-8</span>.</p>
+          <p class="step"><span class="tex">4=100-8(n-1)=100-8n+8=108-8n</span>.</p>
+          <p class="step">Add <span class="tex">8n</span>: <span class="tex">4+8n=108</span>. Subtract 4: <span class="tex">8n=104</span>. Divide by 8: <span class="tex">n=13</span>.</p>
+          <p class="step">Check: <span class="tex">a_{13}=100-8\times 12=100-96=4</span>.</p>
+          <p class="final">13 terms.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a2 −a1 = −101 2 ! −(−12) = 11 2 a3 −a2 = (−9) − −101 2 ! = 11 2 Hence this sequence is an AP with a = −12 and d = 11/2. Put an = 0. Then 0 = −12 + 3 2(n −1) 0 = −12 + 3 2n −3/20 = 3 2n −27 2 3 2n = 27 2 n = 9 There are 9 terms in the sequence.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=-10\tfrac{1}{2}-(-12)=-10\tfrac{1}{2}+12=1\tfrac{1}{2}=\tfrac{3}{2}</span>.</p>
+          <p class="step">Check the next jump: <span class="tex">-9-\left(-10\tfrac{1}{2}\right)=1\tfrac{1}{2}</span>. So <span class="tex">a=-12</span> and <span class="tex">d=\tfrac{3}{2}</span>.</p>
+          <p class="step">Put the last term 0: <span class="tex">0=-12+\tfrac{3}{2}(n-1)</span>.</p>
+          <p class="step">Add 12: <span class="tex">12=\tfrac{3}{2}(n-1)</span>.</p>
+          <p class="step">Multiply both sides by <span class="tex">\tfrac{2}{3}</span>: <span class="tex">n-1=12\times\tfrac{2}{3}=8</span>, so <span class="tex">n=9</span>.</p>
+          <p class="step">Check: <span class="tex">a_9=-12+\tfrac{3}{2}\times 8=-12+12=0</span>.</p>
+          <p class="final">9 terms.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> a2 −a1 = 5 −2 = 3 a3 −a2 = 8 −5 = 3 Hence this sequence is an AP with a = 2 and d = 3. Put an = 2000. Then 6 2000 = 2 + 3(n −1) 2000 = 2 + 3n −3 2000 = 3n −1 2001 = 3n n = 667 There are 667 terms in the sequence.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=5-2=3</span>. So <span class="tex">a=2</span>, <span class="tex">d=3</span>.</p>
+          <p class="step"><span class="tex">2000=2+3(n-1)=2+3n-3=3n-1</span>.</p>
+          <p class="step">Add 1: <span class="tex">2001=3n</span>. Divide by 3: <span class="tex">n=667</span>.</p>
+          <p class="step">Check: <span class="tex">a_{667}=2+3\times 666=2+1998=2000</span>.</p>
+          <p class="final">667 terms.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q12">
       <h2>12 · Exercise 1B</h2>
       <div class="stem">
-        <p>and series 1B</p>
+        <p class="intro">Find a formula for <span class="tex">a_n</span>. Then solve <span class="tex">a_n&lt;0</span> to find the first negative term.</p>
+        <p><strong>(a)</strong> <span class="tex">20, 17, 14, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">50, 45, 40, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">67, 60, 53, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">82, 79, 76, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">345, 337, 329, \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">24\tfrac{1}{2},\; 24,\; 23\tfrac{1}{2},\; \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> a2 −a1 = 17 −20 = −3 a3 −a2 = 14 −17 = −3 Hence this sequence is an AP with a = 20 and d = −3. Put an &lt; 0. Then: 0 &gt; 20 −3(n −1) 0 &gt; 20 −3n + 3 0 &gt; 23 −3n 3n &gt; 23 n &gt; 7.66 . . . Hence the first negative term is a8 = −1</p>
+          <p class="formula-quick"><strong>Formula:</strong> Find <span class="tex">d</span>, write <span class="tex">a_n=a+(n-1)d</span>, then solve <span class="tex">a_n&lt;0</span>. The answer is the next whole-number value of <span class="tex">n</span>, and the value of that term.</p>
+          <p class="step"><span class="tex">d=17-20=-3</span>. So <span class="tex">a_n=20-3(n-1)=20-3n+3=23-3n</span>.</p>
+          <p class="step"><span class="tex">23-3n&lt;0</span>, so <span class="tex">23&lt;3n</span>, so <span class="tex">n&gt;\tfrac{23}{3}=7\tfrac{2}{3}</span>.</p>
+          <p class="step">The next whole number is 8.</p>
+          <p class="step"><span class="tex">a_8=23-3\times 8=23-24=-1</span>.</p>
+          <p class="final">The first negative term is <span class="tex">a_8=-1</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a2 −a1 = 45 −50 = −5 a3 −a2 = 40 −45 = −5 Hence this sequence is an AP with a = 50 and d = −5. Put an &lt; 0. Then: 0 &gt; 50 −5(n −1) 0 &gt; 50 −5n + 5 0 &gt; 55 −5n 5n &gt; 55 n &gt; 11 Hence the first negative term is a12 = −5</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=45-50=-5</span>. <span class="tex">a_n=50-5(n-1)=55-5n</span>.</p>
+          <p class="step"><span class="tex">55-5n&lt;0</span>, so <span class="tex">n&gt;11</span>.</p>
+          <p class="step">The next whole number is 12. <span class="tex">a_{12}=55-5\times 12=55-60=-5</span>.</p>
+          <p class="final">The first negative term is <span class="tex">a_{12}=-5</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a2 −a1 = 60 −67 = −7 a3 −a2 = 53 −60 = −7 Hence this sequence is an AP with a = 67 and d = −7. Put an &lt; 0. Then: 0 &gt; 67 −7(n −1) 0 &gt; 67 −7n + 7 0 &gt; 74 −7n 7n &gt; 74 n &gt; 10.57 Hence the first negative term is a11 = −3</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=60-67=-7</span>. <span class="tex">a_n=67-7(n-1)=74-7n</span>.</p>
+          <p class="step"><span class="tex">74-7n&lt;0</span>, so <span class="tex">n&gt;\tfrac{74}{7}\approx 10.57</span>.</p>
+          <p class="step">The next whole number is 11. <span class="tex">a_{11}=74-7\times 11=74-77=-3</span>.</p>
+          <p class="final">The first negative term is <span class="tex">a_{11}=-3</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a2 −a1 = 79 −82 = −3 a3 −a2 = 76 −79 = −3 Hence this sequence is an AP with a = 82 and d = −3. Put an &lt; 0. Then: 7 0 &gt; 82 −3(n −1) 0 &gt; 82 −3n + 3 0 &gt; 85 −3n 3n &gt; 85 n &gt; 28.33 . . . Hence the first negative term is a29 = −2</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=79-82=-3</span>. <span class="tex">a_n=82-3(n-1)=85-3n</span>.</p>
+          <p class="step"><span class="tex">85-3n&lt;0</span>, so <span class="tex">n&gt;\tfrac{85}{3}\approx 28.33</span>.</p>
+          <p class="step">The next whole number is 29. <span class="tex">a_{29}=85-3\times 29=85-87=-2</span>.</p>
+          <p class="final">The first negative term is <span class="tex">a_{29}=-2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a2 −a1 = 337 −345 = −8 a3 −a2 = 329 −337 = −8 Hence this sequence is an AP with a = 345 and d = −8. Put an &lt; 0. Then: 0 &gt; 345 −8(n −1) 0 &gt; 345 −8n + 8 0 &gt; 353 −8n 8n &gt; 353 n &gt; 44.125 Hence the first negative term is a45 = −7</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=337-345=-8</span>. <span class="tex">a_n=345-8(n-1)=353-8n</span>.</p>
+          <p class="step"><span class="tex">353-8n&lt;0</span>, so <span class="tex">n&gt;\tfrac{353}{8}=44.125</span>.</p>
+          <p class="step">The next whole number is 45. <span class="tex">a_{45}=353-8\times 45=353-360=-7</span>.</p>
+          <p class="final">The first negative term is <span class="tex">a_{45}=-7</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> a2 −a1 = 24 −241 2 = −1 2 a3 −a2 = 231/2 −24 = −1 2 Hence this sequence is an AP with a = 241 2 and d = −1/2. Put an &lt; 0. Then: 0 &gt; 241/2 −1 2(n −1) 0 &gt; 241/2 −1 2n + 1/20 &gt; 25 −1 2n 1 2n &gt; 25 n &gt; 50 Hence the first negative term is a51 = −1/2</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">d=24-24\tfrac{1}{2}=-\tfrac{1}{2}</span>. <span class="tex">a=24\tfrac{1}{2}=\tfrac{49}{2}</span>.</p>
+          <p class="step"><span class="tex">a_n=\tfrac{49}{2}-\tfrac{1}{2}(n-1)=\tfrac{49}{2}-\tfrac{n}{2}+\tfrac{1}{2}=\dfrac{50-n}{2}</span>.</p>
+          <p class="step"><span class="tex">\dfrac{50-n}{2}&lt;0</span> means <span class="tex">50-n&lt;0</span>, so <span class="tex">n&gt;50</span>.</p>
+          <p class="step">The next whole number is 51. <span class="tex">a_{51}=\dfrac{50-51}{2}=-\tfrac{1}{2}</span>.</p>
+          <p class="final">The first negative term is <span class="tex">a_{51}=-\tfrac{1}{2}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q13">
       <h2>13 · Exercise 1B</h2>
       <div class="stem">
-        <p>The nth term of an arithmetic sequence is an = 7 + 4n. a Write out the first four terms, and hence find the values of a and d. b Find the sum and the difference of the 50th and the 25th terms. c Prove that 5a1 + 4a2 = a27. d Which term of the sequence is 815? e Find the last term less than 1000 and the first term greater than 1000. f Find which terms are between 200 and 300, and how many of them there are.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-        <p class="step">an = 7 + 4n a1 = 7 + 4 = 11 a2 = 7 + 8 = 15 a3 = 7 + 12 = 19 a4 = 7 + 16 = 23 Hence this sequence is an AP with a = 11 and</p>
-<p class="step"><strong>d ·</strong> = 4.</p>
-        </div>
+        <p class="intro">The <span class="tex">n</span>th term is <span class="tex">a_n=7+4n</span>.</p>
+        <p><strong>(a)</strong> Write the first four terms. Then find <span class="tex">a</span> and <span class="tex">d</span>.</p>
+        <p><strong>(b)</strong> Find the sum of the 50th and 25th terms, and also their difference.</p>
+        <p><strong>(c)</strong> Show that <span class="tex">5a_1+4a_2=a_{27}</span>.</p>
+        <p><strong>(d)</strong> Which term is 815?</p>
+        <p><strong>(e)</strong> Find the last term less than 1000, and the first term greater than 1000.</p>
+        <p><strong>(f)</strong> Which terms lie between 200 and 300, and how many are there?</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> a25 + a50 = (7 + 4 × 25) + (7 + 4 × 50) = 107 + 207 = 314 a50 −a25 = (7 + 4 × 50) −(7 + 4 × 25) = 207 −107 = 100</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> Replace <span class="tex">n</span> by 1, then 2, then 3, then 4. The first term is <span class="tex">a_1</span>, not the 7 sitting in the formula by itself.</p>
+          <p class="step"><span class="tex">a_1=7+4\times 1=11</span></p>
+          <p class="step"><span class="tex">a_2=7+4\times 2=15</span></p>
+          <p class="step"><span class="tex">a_3=7+4\times 3=19</span></p>
+          <p class="step"><span class="tex">a_4=7+4\times 4=23</span></p>
+          <p class="step"><span class="tex">d=15-11=4</span>. The first term is 11.</p>
+          <p class="final">11, 15, 19, 23. So <span class="tex">a=11</span> and <span class="tex">d=4</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> 5a1 + 4a2 = a27 5(7 + 4 × 1) + 4(7 + 4 × 2) = 7 + 4 × 27 5(11) + 4(15) = 115 55 + 60 = 115 Hence, 5a1 + 4a2 = a27.</p>
+          <p class="step"><span class="tex">a_{25}=7+4\times 25=7+100=107</span>.</p>
+          <p class="step"><span class="tex">a_{50}=7+4\times 50=7+200=207</span>.</p>
+          <p class="step">Sum: <span class="tex">107+207=314</span>.</p>
+          <p class="step">Difference: <span class="tex">207-107=100</span>.</p>
+          <p class="final">Sum 314. Difference 100.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Put an = 815 Then 815 = 7 + 4n 808 = 4n n = 202 Hence 815 is the 202nd term in this sequence.</p>
+          <p class="step">Work out the left side and the right side separately, then compare them.</p>
+          <p class="step">Left: <span class="tex">5a_1+4a_2=5\times 11+4\times 15=55+60=115</span>.</p>
+          <p class="step">Right: <span class="tex">a_{27}=7+4\times 27=7+108=115</span>.</p>
+          <p class="final">Both sides equal 115, so <span class="tex">5a_1+4a_2=a_{27}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> 8 Put an = 1000 Then 1000 = 7 + 4n 993 = 4n n = 2481 4 Hence the last term less than 1000 is a248 = 999, and the first term greater than 1000 is a249 = 1003.</p>
+          <p class="step">Put <span class="tex">a_n=815</span>: <span class="tex">815=7+4n</span>.</p>
+          <p class="step">Subtract 7: <span class="tex">808=4n</span>.</p>
+          <p class="step">Divide by 4: <span class="tex">n=202</span>.</p>
+          <p class="step">Check: <span class="tex">7+4\times 202=7+808=815</span>.</p>
+          <p class="final">815 is the 202nd term.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> Put an &gt; 200 Then 200 &lt; 7 + 4n 193 &lt; 4n n = 481 4 Put an &lt; 300 Then 300 &gt; 7 + 4n 293 &gt; 4n n = 731 4 Hence, the terms a49 = 203, . . . , a73 = 299 are between 200 and 300. There are 25 terms between 200 and 300.</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q14">
-      <h2>14 · Exercise 1B</h2>
-      <div class="stem">
-        <p>a Let an be the sequence 8, 16, 24, ... of positive multiples of 8.<br/>
-i Show that the sequence is an AP, and find a formula for an.<br/>
-ii Find the first term of the sequence greater than 500 and the last term less than 850.<br/>
-iii Hence find the number of multiples of 8 between 500 and 850.<br/>
-b Use the same steps to find the number of multiples of 11 between 1000 and 2000.<br/>
-c Use the same steps to find the number of multiples of 7 between 800 and 2000.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> i a2 −a1 = 16 −8 = 8 a3 −a2 = 24 −16 = 8 This is an AP with d = 8 and a = 8 an = a + (n −1)d = 8 + 8(n −1) = 8 + 8n −8 = 8n ii Put an &gt; 500 Then: 8n &gt; 500 n &gt; 62.5 Hence the first term greater than 500 is a63 = 504 Put an &lt; 850 Then: 8n &lt; 850 n &lt; 106.25 Hence the last term less than 850 is a106 = 848 iii 106 −63 + 1 = 44, so there are 44 multiples of 8 between 500 and 850.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> Considering the AP with a = 11, d = 11 an = 11 + 11(n −1) = 11n Put an &gt; 1000 11n &gt; 1000 n &gt; 90.9 Hence the first term above 1000 is a91 = 1001 Put an &lt; 2000 11n &lt; 2000 n &lt; 181.81 Hence the last term below 2000 is a181 = 1991 181 −91 + 1 = 91, so there are 91 multiples of 11 between 1000 and 2000.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> Considering the AP with a = 7, d = 7 an = 7 + 7(n −1) = 7n Put an &gt; 800 7n &gt; 800 n &gt; 114.28 9 Hence the first term above 800 is a115 = 805 Put an &lt; 2000 7n &lt; 2000 n &lt; 285.71 Hence the last term below 2000 is a285 = 1995 285 −115 + 1 = 171, so there are 171 multiples of 7 between 800 and 2000.</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q15">
-      <h2>15 · Exercise 1B</h2>
-      <div class="stem">
-        <p>a The first term of an AP is a = 7 and the fourth term is a4 = 16. Use the formula an = a + (n −1)d to find the common difference d. Then write down the first four terms. b The first term of an AP is a = 100 and the sixth term is a6 = 10. Find the common difference d using the formula an = a + (n −1)d. Then write down the first five terms. c Find the 20th term of an AP with first term 28 and 11th term 108. d Find the 100th term of an AP with first term 32 and 20th term −6.</p>
-<p>1B Arithmetic sequences 13 16 Ionian Windows charges $500 for the first window, then $300 for each additional window. a Write down the cost of 1 window, 2 windows, 3 windows, 4 windows, . . . b Show that this is an AP, and write down the first term a and common difference d. c Use the formula an = a + (n −1)d to find the cost of 15 windows. d Use the formula an = a + (n −1)d to find a formula for the cost of n windows. e Form an inequation and solve it to find the maximum number of windows whose total cost is less than $10 000. 17 Many years ago, 160 km of a railway line from Nevermore to Gindarinda was built. On 1st January 2001, work was resumed, with 20 km of new track completed each month. a Write down the lengths of track 1 month later, 2 months later, 3 months later, . . . . b Show that this is an AP, and write down the first term a and common difference d. c Use the formula an = a + (n −1)d to find how much track there was after 12 months. d Use the formula an = a + (n −1)d to find a formula for the length after n months. e The distance from Nevermore to Gindarinda is 540 km. Form an equation and solve it to find how many months it took to complete the track.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-        <p class="step">a4 = 16 and a = 7 Put 16 = 7 + (4 −1)d 16 = 7 + 3d 9 = 3d</p>
-<p class="step"><strong>d ·</strong> = 3 The first four terms in the sequence are 7, 10, 13, 16.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a6 = 10 and a = 100 Put 10 = 100 + (6 −1)d 10 = 100 + 5d −90 = 5d</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −18 The first five terms in the sequence are 100, 82, 64, 46, 28.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a11 = 108 and a = 28 Put 108 = 28 + (11 −1)d 108 = 28 + 10d 80 = 10d</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = 8 a20 = 28 + 8(20 −1) = 180</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> a20 = −6 and a = 32 Put −6 = 32 + (20 −1)d −6 = 32 + 19d −38 = 19d</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −2 a100 = 32 −2(100 −1) = −166</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q18">
-      <h2>18 · Exercise 1B</h2>
-      <div class="stem">
-        <p>a Write down the first few terms of the AP generated by substituting the positive integers into the linear function f(x) = 12 −3x. Then write down a formula for the nth term. b i Find the formula of the nth term an of the AP −3, −1, 1, 3, 5 . . . . Then write down the linear function f(x) that generates this AP when the positive integers are substituted into it. ii Graph the function and mark the points (1, −3), (2, −1), (3, 1), (4, 3), (5, 5).</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> f(1) = 9, f(2) = 6, f(3) = 3 a2 −a1 = 6 −9 = −3 a3 −a2 = 3 −6 = −3 This is an AP with a = 9, d = −3. Thus an = a + (n −1)d = 9 −3(n −1) = 9 −3n + 3 = 12 −3n</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> i a2 −a1 = −1 −(−3) = 2 a3 −a2 = 1 −(−1) = 2 This is an AP with a = −3, d = 2. Thus: an = a + (n −1)d = −3 + 2(n −1) = −3 + 2n −2 = 2n −5 The linear function that generates this is f(x) = 2x −5. ii</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q19">
-      <h2>19 · Exercise 1B</h2>
-      <div class="stem">
-        <p>a Explain whether or not the infinite sequence 7, 7, 7, . . . is an AP.<br/>
-b What linear function corresponds to this sequence?</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> This is an AP because it has first term a = 7 and common difference d = 0 which is sufficient.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> Since each term is the same, the constant function y = f(x) = 7 represents this sequence i.e. no increase or decrease; each input x outputs the value 7. 11 20 This is an AP with a = 5x −9 and d = (5x −5) − (5x −9) = 4. Hence, an = a + (n −1)d = 5x −9 + (n −1) × 4 = 5x −9 + 4n −4 = 5x + 4n −13 Put a11 = 36 36 = 5x + 4(11) −13 36 = 5x + 31 5 = 5x x = 1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is an AP with a = 16 and d = (16 + 6x) −16 = 6x. Hence, an = a + (n −1)d = 16 + (n −1) × 6x Put a11 = 36 36 = 16 + (11 −1) × 6x 36 = 16 + 60x 20 = 60x x = 1/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> 21 This is an AP with a = log3 2 and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = log3/4 −log3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = log3(2 × 2) −log3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = log3 2 + log3/2 −log3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = log3 2 Hence: an = a + (n −1)d = log3 2 + (n −1) log3 2 = log3 2 + n log3/2 −log3 2 = n log3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is an AP with a = loga 54 and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga 18 −loga 54</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga 18 −loga(3 × 18)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga 18 −loga 3 −loga 18</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −loga 3 Hence: an = a + (n −1)d = loga 54 + (n −1)  −loga 3 = loga(2 × 33) + (n −1)  −loga 3 = loga 2 + 3 loga 3 −n loga 3 + loga 3 = loga 2 + (4 −n) loga 3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> This is an AP with a = x −3y and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = (2x + y) −(x −3y)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = x + 4y Hence: an = a + (n −1)d = x −3y + (n −1)(x + 4y) = x −3y + nx + 4ny −x −4y = nx + (4n −7)y</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> This is an AP with a = 5 −6 √ 5 and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = 1 + √ 5 −(5 −6 √ 5)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −4 + 7 √ 5 Hence: an = a + (n −1)d = 5 −6 √ 5 + (n −1)  −4 + 7 √ 5  = 5 −6 √ 5 −4n + 7 √ 5n + 4 −7 √ 5 = 9 −4n + (7n −13) √ 5</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> This is an AP with a = 1.36 and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −0.52 −1.36</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −1.88 Hence: an = a + (n −1)d = 1.36 + (n −1)(−1.88) = 3.24 −1.88n</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> This is an AP with a = loga(3x2) = loga 3+2 loga x and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga(3x) −loga(3x2)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga 3 + loga x −loga 3 −2 loga x</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −loga x Hence: an = loga 3 + 2 loga x + (n −1)(−loga x) an = loga 3 + (3 −n) loga x</p>
+          <p class="step">1000 is not a term. Solve <span class="tex">7+4n=1000</span> to see where it would sit: <span class="tex">4n=993</span>, <span class="tex">n=\tfrac{993}{4}=248\tfrac{1}{4}</span>.</p>
+          <p class="step">So the last whole number below that is 248, and the next is 249.</p>
+          <p class="step"><span class="tex">a_{248}=7+4\times 248=7+992=999</span>, which is less than 1000.</p>
+          <p class="step"><span class="tex">a_{249}=7+4\times 249=7+996=1003</span>, which is greater than 1000.</p>
+          <p class="final">Last term less than 1000: <span class="tex">a_{248}=999</span>. First term greater than 1000: <span class="tex">a_{249}=1003</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> 22</p>
+          <p class="step">Bigger than 200: <span class="tex">7+4n&gt;200</span>, so <span class="tex">4n&gt;193</span>, so <span class="tex">n&gt;48.25</span>. The next whole number is 49.</p>
+          <p class="step">Smaller than 300: <span class="tex">7+4n&lt;300</span>, so <span class="tex">4n&lt;293</span>, so <span class="tex">n&lt;73.25</span>. The largest whole number is 73.</p>
+          <p class="step"><span class="tex">a_{49}=7+4\times 49=7+196=203</span>.</p>
+          <p class="step"><span class="tex">a_{73}=7+4\times 73=7+292=299</span>.</p>
+          <p class="step">How many terms from 49 to 73? <span class="tex">73-49+1=25</span>.</p>
+          <p class="final">The terms are <span class="tex">a_{49}=203</span> through <span class="tex">a_{73}=299</span>. There are 25 of them.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q14">
+      <h2>14 · Exercise 1B</h2>
+      <div class="stem">
+        <p><strong>(a)</strong> Let <span class="tex">a_n</span> be the positive multiples of 8: <span class="tex">8, 16, 24, \ldots</span></p>
+        <p><strong>(a) (i)</strong> Show that this is an AP, and find a formula for <span class="tex">a_n</span>.</p>
+        <p><strong>(a) (ii)</strong> Find the first term greater than 500, and the last term less than 850.</p>
+        <p><strong>(a) (iii)</strong> How many multiples of 8 are there between 500 and 850?</p>
+        <p><strong>(b)</strong> Use the same steps to find how many multiples of 11 are between 1000 and 2000.</p>
+        <p><strong>(c)</strong> Use the same steps to find how many multiples of 7 are between 800 and 2000.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a i</button>
+        <div class="sol">
+          <p class="step"><span class="tex">16-8=8</span> and <span class="tex">24-16=8</span>. The jump is always 8, so it is an AP with <span class="tex">a=8</span> and <span class="tex">d=8</span>.</p>
+          <p class="step"><span class="tex">a_n=8+8(n-1)=8+8n-8=8n</span>.</p>
+          <p class="step">That matches the list: the <span class="tex">n</span>th multiple of 8 is <span class="tex">8\times n</span>.</p>
+          <p class="final"><span class="tex">a_n=8n</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a ii</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> i Suppose that y = f(x) models an AP. Given that the first term is zero, f(1) = 0. This is the class of linear functions with x-intercept 1. ii If the difference is d, then y = dx −d. The intercept ensures the first term is 0 (y(1) = d −d = 0) and the coefficient ensures the difference between successive terms is d (y(2) −y(1) = 2d −d = d).</p>
+          <p class="step">Greater than 500: <span class="tex">8n&gt;500</span>, so <span class="tex">n&gt;62.5</span>. Next whole number is 63.</p>
+          <p class="step"><span class="tex">a_{63}=8\times 63=504</span>.</p>
+          <p class="step">Less than 850: <span class="tex">8n&lt;850</span>, so <span class="tex">n&lt;106.25</span>. Largest whole number is 106.</p>
+          <p class="step"><span class="tex">a_{106}=8\times 106=848</span>.</p>
+          <p class="final">First above 500: <span class="tex">a_{63}=504</span>. Last below 850: <span class="tex">a_{106}=848</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a iii</button>
+        <div class="sol">
+          <p class="step">Count the term numbers from 63 to 106 inclusive: <span class="tex">106-63+1=44</span>.</p>
+          <p class="final">44 multiples of 8 between 500 and 850.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> If a sequence has difference d, then y = dx + β for some constant β. Given that the function passes 12 through (0, 0), β = 0 and y = dx. Therefore, the first term of any AP defined by this linear line is d i.e.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = d.</p>
+          <p class="step"><strong>Same method ·</strong> Positive multiples of 11 are <span class="tex">11, 22, 33, \ldots</span> so <span class="tex">a_n=11n</span>.</p>
+          <p class="step">Greater than 1000: <span class="tex">11n&gt;1000</span>, so <span class="tex">n&gt;90.90\ldots</span>. Next whole number is 91. <span class="tex">a_{91}=11\times 91=1001</span>.</p>
+          <p class="step">Less than 2000: <span class="tex">11n&lt;2000</span>, so <span class="tex">n&lt;181.81\ldots</span>. Largest whole number is 181. <span class="tex">a_{181}=11\times 181=1991</span>.</p>
+          <p class="step">Count: <span class="tex">181-91+1=91</span>.</p>
+          <p class="final">91 multiples of 11 between 1000 and 2000.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> If the sequence has difference d, then f(x) = dx + β for some constant β. Since the first term is a, f(1) = a ⇒d + β = a ⇒β = a −d. Thus, y = dx + (a −d).</p>
+          <p class="step"><strong>Same method ·</strong> Positive multiples of 7: <span class="tex">a_n=7n</span>.</p>
+          <p class="step">Greater than 800: <span class="tex">7n&gt;800</span>, so <span class="tex">n&gt;114.28\ldots</span>. Next whole number is 115. <span class="tex">a_{115}=7\times 115=805</span>.</p>
+          <p class="step">Less than 2000: <span class="tex">7n&lt;2000</span>, so <span class="tex">n&lt;285.71\ldots</span>. Largest whole number is 285. <span class="tex">a_{285}=7\times 285=1995</span>.</p>
+          <p class="step">Count: <span class="tex">285-115+1=171</span>.</p>
+          <p class="final">171 multiples of 7 between 800 and 2000.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q15">
+      <h2>15 · Exercise 1B</h2>
+      <div class="stem">
+        <p><strong>(a)</strong> <span class="tex">a=7</span> and <span class="tex">a_4=16</span>. Find <span class="tex">d</span>, then write the first four terms.</p>
+        <p><strong>(b)</strong> <span class="tex">a=100</span> and <span class="tex">a_6=10</span>. Find <span class="tex">d</span>, then write the first five terms.</p>
+        <p><strong>(c)</strong> First term 28 and 11th term 108. Find the 20th term.</p>
+        <p><strong>(d)</strong> First term 32 and 20th term −6. Find the 100th term.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d</span>. Put in the term you know, and solve for <span class="tex">d</span>.</p>
+          <p class="step"><span class="tex">a_4=16</span> means <span class="tex">7+(4-1)d=16</span>.</p>
+          <p class="step"><span class="tex">7+3d=16</span>. Subtract 7: <span class="tex">3d=9</span>. Divide by 3: <span class="tex">d=3</span>.</p>
+          <p class="step"><span class="tex">7+3=10</span>, <span class="tex">10+3=13</span>, <span class="tex">13+3=16</span>.</p>
+          <p class="final"><span class="tex">d=3</span>. First four terms: 7, 10, 13, 16.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">100+(6-1)d=10</span>.</p>
+          <p class="step"><span class="tex">100+5d=10</span>. Subtract 100: <span class="tex">5d=-90</span>. Divide by 5: <span class="tex">d=-18</span>.</p>
+          <p class="step"><span class="tex">100-18=82</span>, <span class="tex">82-18=64</span>, <span class="tex">64-18=46</span>, <span class="tex">46-18=28</span>.</p>
+          <p class="final"><span class="tex">d=-18</span>. First five terms: 100, 82, 64, 46, 28.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a=28</span> and <span class="tex">a_{11}=108</span>.</p>
+          <p class="step"><span class="tex">28+(11-1)d=108</span>, so <span class="tex">28+10d=108</span>.</p>
+          <p class="step">Subtract 28: <span class="tex">10d=80</span>. Divide by 10: <span class="tex">d=8</span>.</p>
+          <p class="step"><span class="tex">a_{20}=28+8(20-1)=28+8\times 19=28+152=180</span>.</p>
+          <p class="final"><span class="tex">a_{20}=180</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Consider f(x) = mx + b: f(1) = m + b, f(2) = 2m + b, · · · . Hence, it can be shown that the difference between each successive term is m and the first term is m + b. 13</p>
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a=32</span> and <span class="tex">a_{20}=-6</span>.</p>
+          <p class="step"><span class="tex">32+(20-1)d=-6</span>, so <span class="tex">32+19d=-6</span>.</p>
+          <p class="step">Subtract 32: <span class="tex">19d=-38</span>. Divide by 19: <span class="tex">d=-2</span>.</p>
+          <p class="step"><span class="tex">a_{100}=32-2(100-1)=32-2\times 99=32-198=-166</span>.</p>
+          <p class="final"><span class="tex">a_{100}=-166</span>.</p>
         </div>
       </div>
     </article>
-    <article class="q" id="q20">
-      <h2>20 · Exercise 1B</h2>
+
+    <article class="q" id="q16">
+      <h2>16 · Exercise 1B</h2>
       <div class="stem">
-        <p>Find the common difference of each AP. Then find x if a11 = 36. 5x −9, 5x −5, 5x −1, ... a 16, 16 + 6x, 16 + 12x, . . . b</p>
+        <p class="intro">Ionian Windows charges $500 for the first window, then $300 for each extra window.</p>
+        <p><strong>(a)</strong> Write the cost of 1 window, 2 windows, 3 windows, 4 windows, …</p>
+        <p><strong>(b)</strong> Show that this is an AP, and write <span class="tex">a</span> and <span class="tex">d</span>.</p>
+        <p><strong>(c)</strong> Find the cost of 15 windows.</p>
+        <p><strong>(d)</strong> Find a formula for the cost of <span class="tex">n</span> windows.</p>
+        <p><strong>(e)</strong> What is the largest number of windows whose total cost is less than $10 000?</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-        <p class="step">This is an AP with a = 5x −9 and d = (5x −5) − (5x −9) = 4. Hence, an = a + (n −1)d = 5x −9 + (n −1) × 4 = 5x −9 + 4n −4 = 5x + 4n −13 Put a11 = 36 36 = 5x + 4(11) −13 36 = 5x + 31 5 = 5x x = 1</p>
-<p class="step"><strong>a ·</strong> This is an AP with a = 16 and d = (16 + 6x) −16 = 6x. Hence, an = a + (n −1)d = 16 + (n −1) × 6x Put a11 = 36 36 = 16 + (11 −1) × 6x 36 = 16 + 60x 20 = 60x x = 1</p>
+          <p class="step">1 window costs the starting price: <span class="tex">a_1=500</span>.</p>
+          <p class="step">Each extra window adds 300.</p>
+          <p class="step"><span class="tex">a_2=500+300=800</span></p>
+          <p class="step"><span class="tex">a_3=800+300=1100</span></p>
+          <p class="step"><span class="tex">a_4=1100+300=1400</span></p>
+          <p class="final">$500, $800, $1100, $1400, …</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><span class="tex">800-500=300</span>, <span class="tex">1100-800=300</span>, <span class="tex">1400-1100=300</span>.</p>
+          <p class="step">The jump is the same every time, so it is an AP.</p>
+          <p class="final"><span class="tex">a=500</span> and <span class="tex">d=300</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d=500+300(n-1)</span>. For 15 windows, <span class="tex">n=15</span>, so we add the extra $300 fourteen times.</p>
+          <p class="step"><span class="tex">a_{15}=500+300\times 14=500+4200=4700</span>.</p>
+          <p class="step">The expanded formula is <span class="tex">a_n=500+300n-300=300n+200</span>. Check: <span class="tex">300\times 15+200=4500+200=4700</span>.</p>
+          <p class="final">15 windows cost $4700.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><span class="tex">a_n=500+300(n-1)=500+300n-300=300n+200</span>.</p>
+          <p class="final">Cost of <span class="tex">n</span> windows: <span class="tex">a_n=300n+200</span> dollars.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="step">We want <span class="tex">300n+200&lt;10000</span>.</p>
+          <p class="step">Subtract 200: <span class="tex">300n&lt;9800</span>.</p>
+          <p class="step">Divide by 300: <span class="tex">n&lt;\tfrac{9800}{300}=32.666\ldots</span></p>
+          <p class="step">The largest whole number is 32.</p>
+          <p class="step">Check: <span class="tex">a_{32}=300\times 32+200=9600+200=9800</span>, under 10 000. <span class="tex">a_{33}=300\times 33+200=10100</span>, over 10 000.</p>
+          <p class="final">The largest number of windows is 32.</p>
         </div>
       </div>
     </article>
+
+    <article class="q" id="q17">
+      <h2>17 · Exercise 1B</h2>
+      <div class="stem">
+        <p class="intro">160 km of railway had already been built. From 1 January 2001, workers added 20 km of new track each month.</p>
+        <p><strong>(a)</strong> Write the length of track 1 month later, 2 months later, 3 months later, …</p>
+        <p><strong>(b)</strong> Show that this is an AP, and write <span class="tex">a</span> and <span class="tex">d</span>.</p>
+        <p><strong>(c)</strong> How much track was there after 12 months?</p>
+        <p><strong>(d)</strong> Find a formula for the length after <span class="tex">n</span> months.</p>
+        <p><strong>(e)</strong> Nevermore to Gindarinda is 540 km. How many months did it take to finish the track?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step">Before the new work there were 160 km. After 1 month they have added 20 km.</p>
+          <p class="step"><span class="tex">a_1=160+20=180</span></p>
+          <p class="step"><span class="tex">a_2=180+20=200</span></p>
+          <p class="step"><span class="tex">a_3=200+20=220</span></p>
+          <p class="final">180 km, 200 km, 220 km, …</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><span class="tex">200-180=20</span> and <span class="tex">220-200=20</span>.</p>
+          <p class="final">It is an AP with <span class="tex">a=180</span> and <span class="tex">d=20</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=180+20(n-1)</span>. After 12 months, <span class="tex">n=12</span>.</p>
+          <p class="step"><span class="tex">a_{12}=180+20\times 11=180+220=400</span>.</p>
+          <p class="final">After 12 months there were 400 km of track.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><span class="tex">a_n=180+20(n-1)=180+20n-20=20n+160</span>.</p>
+          <p class="final">After <span class="tex">n</span> months: <span class="tex">a_n=20n+160</span> km.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="step">Put the finished length in place of <span class="tex">a_n</span>: <span class="tex">540=20n+160</span>.</p>
+          <p class="step">Subtract 160: <span class="tex">380=20n</span>.</p>
+          <p class="step">Divide by 20: <span class="tex">n=19</span>.</p>
+          <p class="step">Check: <span class="tex">20\times 19+160=380+160=540</span>.</p>
+          <p class="final">It took 19 months.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q18">
+      <h2>18 · Exercise 1B</h2>
+      <div class="stem">
+        <p><strong>(a)</strong> Substitute the positive whole numbers into <span class="tex">f(x)=12-3x</span>. Write the first few terms of the AP, then a formula for <span class="tex">a_n</span>.</p>
+        <p><strong>(b) (i)</strong> The AP is <span class="tex">-3, -1, 1, 3, 5, \ldots</span> Find <span class="tex">a_n</span>, then write the linear function <span class="tex">f(x)</span> that makes this AP when <span class="tex">x=1, 2, 3, \ldots</span></p>
+        <p><strong>(b) (ii)</strong> Graph that function and mark the points <span class="tex">(1,-3)</span>, <span class="tex">(2,-1)</span>, <span class="tex">(3,1)</span>, <span class="tex">(4,3)</span>, <span class="tex">(5,5)</span>.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step">Put <span class="tex">x=1</span>: <span class="tex">f(1)=12-3\times 1=9</span>.</p>
+          <p class="step">Put <span class="tex">x=2</span>: <span class="tex">f(2)=12-6=6</span>.</p>
+          <p class="step">Put <span class="tex">x=3</span>: <span class="tex">f(3)=12-9=3</span>.</p>
+          <p class="step">Put <span class="tex">x=4</span>: <span class="tex">f(4)=12-12=0</span>.</p>
+          <p class="step">Put <span class="tex">x=5</span>: <span class="tex">f(5)=12-15=-3</span>.</p>
+          <p class="step">The jump is <span class="tex">6-9=-3</span>, so <span class="tex">a=9</span> and <span class="tex">d=-3</span>.</p>
+          <p class="step"><span class="tex">a_n=9-3(n-1)=9-3n+3=12-3n</span>. This is the same rule as <span class="tex">f(x)</span>, with <span class="tex">x</span> replaced by <span class="tex">n</span>.</p>
+          <p class="final">Terms: 9, 6, 3, 0, −3, … Formula: <span class="tex">a_n=12-3n</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b i</button>
+        <div class="sol">
+          <p class="step"><span class="tex">d=(-1)-(-3)=2</span> and <span class="tex">1-(-1)=2</span>. So <span class="tex">a=-3</span> and <span class="tex">d=2</span>.</p>
+          <p class="step"><span class="tex">a_n=-3+2(n-1)=-3+2n-2=2n-5</span>.</p>
+          <p class="step">The linear function uses <span class="tex">x</span> instead of <span class="tex">n</span>: <span class="tex">f(x)=2x-5</span>.</p>
+          <p class="step">Check: <span class="tex">f(1)=2-5=-3</span>, <span class="tex">f(2)=4-5=-1</span>, <span class="tex">f(3)=6-5=1</span>.</p>
+          <p class="final"><span class="tex">a_n=2n-5</span> and <span class="tex">f(x)=2x-5</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b ii</button>
+        <div class="sol">
+          <p class="step">The line is <span class="tex">y=2x-5</span>. The five points are the AP terms sitting on that line. The coordinates are written beside each point, off the line.</p>
+          <div class="plot-card"><h4><span class="tex">y=2x-5</span></h4>
+            <div class="plot-frame">
+              <svg class="plot" viewBox="0 0 480 350" role="img" aria-label="Line y equals 2x minus 5 with five marked points">
+                <line x1="70" y1="18" x2="70" y2="328" stroke="#9aa3b0" stroke-width="1.4"/>
+                <line x1="48" y1="220" x2="450" y2="220" stroke="#9aa3b0" stroke-width="1.4"/>
+                <text x="46" y="16" font-size="14" fill="#334">y</text>
+                <text x="454" y="236" font-size="14" fill="#334">x</text>
+                <text x="52" y="236" font-size="12" fill="#667">0</text>
+                <line x1="88" y1="316" x2="410" y2="72" stroke="#1d4e89" stroke-width="2.2"/>
+                <circle cx="128" cy="286" r="5" fill="#c2410c"/>
+                <circle cx="186" cy="242" r="5" fill="#c2410c"/>
+                <circle cx="244" cy="198" r="5" fill="#c2410c"/>
+                <circle cx="302" cy="154" r="5" fill="#c2410c"/>
+                <circle cx="360" cy="110" r="5" fill="#c2410c"/>
+                <text x="138" y="328" font-size="13" fill="#7c2d12">(1, −3)</text>
+                <text x="196" y="276" font-size="13" fill="#7c2d12">(2, −1)</text>
+                <text x="254" y="228" font-size="13" fill="#7c2d12">(3, 1)</text>
+                <text x="312" y="184" font-size="13" fill="#7c2d12">(4, 3)</text>
+                <text x="370" y="140" font-size="13" fill="#7c2d12">(5, 5)</text>
+                <text x="300" y="40" font-size="15" fill="#1d4e89">y = 2x − 5</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q19">
+      <h2>19 · Exercise 1B</h2>
+      <div class="stem">
+        <p><strong>(a)</strong> Is the infinite list <span class="tex">7, 7, 7, \ldots</span> an AP? Explain.</p>
+        <p><strong>(b)</strong> What linear function matches this sequence?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><span class="tex">a_2-a_1=7-7=0</span> and <span class="tex">a_3-a_2=7-7=0</span>.</p>
+          <p class="step">The difference is the same every time. A difference of 0 is allowed: the terms stay the same.</p>
+          <p class="final">Yes. It is an AP with <span class="tex">a=7</span> and <span class="tex">d=0</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step">Every input gives the output 7. There is no rise and no fall.</p>
+          <p class="final">The function is the horizontal line <span class="tex">f(x)=7</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q20">
+      <h2>20 · Exercise 1B <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p class="intro">Find the common difference. Then find <span class="tex">x</span> if <span class="tex">a_{11}=36</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">5x-9,\; 5x-5,\; 5x-1,\; \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">16,\; 16+6x,\; 16+12x,\; \ldots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><span class="tex">d=(5x-5)-(5x-9)=5x-5-5x+9=4</span>.</p>
+          <p class="step">The <span class="tex">x</span> terms cancel, so the difference is the number 4.</p>
+          <p class="step"><span class="tex">a_{11}=(5x-9)+10\times 4=5x-9+40=5x+31</span>.</p>
+          <p class="step">Put this equal to 36: <span class="tex">5x+31=36</span>. Subtract 31: <span class="tex">5x=5</span>. Divide by 5: <span class="tex">x=1</span>.</p>
+          <p class="final"><span class="tex">d=4</span> and <span class="tex">x=1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><span class="tex">d=(16+6x)-16=6x</span>.</p>
+          <p class="step"><span class="tex">a_{11}=16+10\times 6x=16+60x</span>.</p>
+          <p class="step"><span class="tex">16+60x=36</span>. Subtract 16: <span class="tex">60x=20</span>. Divide by 60: <span class="tex">x=\tfrac{20}{60}=\tfrac{1}{3}</span>.</p>
+          <p class="final"><span class="tex">d=6x</span> and <span class="tex">x=\tfrac{1}{3}</span>.</p>
+        </div>
+      </div>
+    </article>
+
     <article class="q" id="q21">
       <h2>21 · Exercise 1B</h2>
       <div class="stem">
-        <p>Find the common difference of each AP. Then find a formula for the nth term an. log3 2, log3 4, log3 8, . . . a loga 54, loga 18, loga 6, . . . b x −3y, 2x + y, 3x + 5y, . . . c 5 −6 √ 5 , 1 + √ 5 , −3 + 8 √ 5 , . . . d 1.36, −0.52, −2.4, . . . e loga 3x2, loga 3x, loga 3, . . . f</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-        <p class="step">This is an AP with a = log3 2 and</p>
-<p class="step"><strong>d ·</strong> = log3/4 −log3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = log3(2 × 2) −log3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = log3 2 + log3/2 −log3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = log3 2 Hence: an = a + (n −1)d = log3 2 + (n −1) log3 2 = log3 2 + n log3/2 −log3 2 = n log3/2</p>
-        </div>
+        <p class="intro">Find the common difference. Then find a formula for <span class="tex">a_n</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">\log_3 2,\; \log_3 4,\; \log_3 8,\; \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">\log_a 54,\; \log_a 18,\; \log_a 6,\; \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">x-3y,\; 2x+y,\; 3x+5y,\; \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">5-6\sqrt{5},\; 1+\sqrt{5},\; -3+8\sqrt{5},\; \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">1.36,\; -0.52,\; -2.4,\; \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">\log_a(3x^2),\; \log_a(3x),\; \log_a 3,\; \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> This is an AP with a = loga 54 and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga 18 −loga 54</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga 18 −loga(3 × 18)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = loga 18 −loga 3 −loga 18</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = −loga 3 Hence: an = a + (n −1)d = loga 54 + (n −1)  −loga 3 = loga(2 × 33) + (n −1)  −loga 3 = loga 2 + 3 loga 3 −n loga 3 + loga 3 = loga 2 + (4 −n) loga 3</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">\log_b A-\log_b B=\log_b(A/B)</span>. Also <span class="tex">\log_b(A^k)=k\log_b A</span>. Here the base is 3.</p>
+          <p class="step"><span class="tex">d=\log_3 4-\log_3 2=\log_3(4/2)=\log_3 2</span>.</p>
+          <p class="step">Check the next jump: <span class="tex">\log_3 8-\log_3 4=\log_3 2</span>. Same difference.</p>
+          <p class="step"><span class="tex">a_n=\log_3 2+(n-1)\log_3 2=n\log_3 2</span>.</p>
+          <p class="final"><span class="tex">d=\log_3 2</span> and <span class="tex">a_n=n\log_3 2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> This is an AP with a = x −3y and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = (2x + y) −(x −3y)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> = x + 4y Hence: an = a + (n −1)d = x −3y + (n −1)(x + 4y) = x −3y + nx + 4ny −x −4y = nx + (4n −7)y</p>
+          <p class="step"><strong>Same log rule ·</strong> <span class="tex">d=\log_a 18-\log_a 54=\log_a(18/54)=\log_a(1/3)=-\log_a 3</span>.</p>
+          <p class="step">Also <span class="tex">\log_a 54=\log_a(2\times 3^3)=\log_a 2+3\log_a 3</span>.</p>
+          <p class="step"><span class="tex">a_n=\log_a 54+(n-1)(-\log_a 3)</span></p>
+          <p class="step"><span class="tex">=\log_a 2+3\log_a 3-n\log_a 3+\log_a 3</span></p>
+          <p class="step"><span class="tex">=\log_a 2+(4-n)\log_a 3</span>.</p>
+          <p class="final"><span class="tex">d=-\log_a 3</span> and <span class="tex">a_n=\log_a 2+(4-n)\log_a 3</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> This is an AP with a = 5 −6 √ 5 and</p>
+          <p class="step"><span class="tex">d=(2x+y)-(x-3y)=2x+y-x+3y=x+4y</span>.</p>
+          <p class="step">Check: <span class="tex">(x-3y)+(x+4y)=2x+y</span>, and <span class="tex">(2x+y)+(x+4y)=3x+5y</span>. The given third term matches.</p>
+          <p class="step"><span class="tex">a_n=x-3y+(n-1)(x+4y)=x-3y+nx+4ny-x-4y=nx+(4n-7)y</span>.</p>
+          <p class="final"><span class="tex">d=x+4y</span> and <span class="tex">a_n=nx+(4n-7)y</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> = 1 + √ 5 −(5 −6 √ 5)</p>
+          <p class="step"><span class="tex">d=(1+\sqrt{5})-(5-6\sqrt{5})=1+\sqrt{5}-5+6\sqrt{5}=-4+7\sqrt{5}</span>.</p>
+          <p class="step">Check: <span class="tex">(1+\sqrt{5})+(-4+7\sqrt{5})=-3+8\sqrt{5}</span>. That is the third term.</p>
+          <p class="step"><span class="tex">a_n=5-6\sqrt{5}+(n-1)(-4+7\sqrt{5})</span></p>
+          <p class="step"><span class="tex">=5-6\sqrt{5}-4n+7n\sqrt{5}+4-7\sqrt{5}</span></p>
+          <p class="step"><span class="tex">=9-4n+(7n-13)\sqrt{5}</span>.</p>
+          <p class="final"><span class="tex">d=-4+7\sqrt{5}</span> and <span class="tex">a_n=9-4n+(7n-13)\sqrt{5}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> = −4 + 7 √</p>
+          <p class="step"><span class="tex">d=-0.52-1.36=-1.88</span>.</p>
+          <p class="step">Check: <span class="tex">-0.52-1.88=-2.40</span>. That is the third term.</p>
+          <p class="step"><span class="tex">a_n=1.36+(n-1)(-1.88)=1.36-1.88n+1.88=3.24-1.88n</span>.</p>
+          <p class="final"><span class="tex">d=-1.88</span> and <span class="tex">a_n=3.24-1.88n</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">\log_a(AB)=\log_a A+\log_a B</span> and <span class="tex">\log_a(A^k)=k\log_a A</span>.</p>
+          <p class="step">First term: <span class="tex">\log_a(3x^2)=\log_a 3+2\log_a x</span>.</p>
+          <p class="step"><span class="tex">d=\log_a(3x)-\log_a(3x^2)=(\log_a 3+\log_a x)-(\log_a 3+2\log_a x)=-\log_a x</span>.</p>
+          <p class="step"><span class="tex">a_n=\log_a 3+2\log_a x+(n-1)(-\log_a x)=\log_a 3+(3-n)\log_a x</span>.</p>
+          <p class="final"><span class="tex">d=-\log_a x</span> and <span class="tex">a_n=\log_a 3+(3-n)\log_a x</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q22">
       <h2>22 · Exercise 1B</h2>
       <div class="stem">
-        <p>a<br/>
-i What sort of linear functions correspond to APs with first term zero?<br/>
-ii If the AP has difference d, write down the equation of the linear function.<br/>
-b What sort of sequences correspond to linear functions through the origin?<br/>
-c What linear function corresponds to an AP with first term a and difference d?<br/>
-d What AP corresponds to a linear function with gradient m and y-intercept b?</p>
+        <p><strong>(a) (i)</strong> What kind of straight-line functions give an AP whose first term is 0?</p>
+        <p><strong>(a) (ii)</strong> If that AP has difference <span class="tex">d</span>, write the equation of the line.</p>
+        <p><strong>(b)</strong> What kind of sequences come from straight lines through the origin?</p>
+        <p><strong>(c)</strong> What straight line matches an AP with first term <span class="tex">a</span> and difference <span class="tex">d</span>?</p>
+        <p><strong>(d)</strong> What AP matches a straight line with gradient <span class="tex">m</span> and <span class="tex">y</span>-intercept <span class="tex">b</span>?</p>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a i</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (AP):</strong> Common difference <span class="tex">d=a_2-a_1</span>. nth term <span class="tex">a_n=a_1+(n-1)d</span>.</p>
-<p class="step"><strong>a ·</strong> i Suppose that y = f(x) models an AP. Given that the first term is zero, f(1) = 0. This is the class of linear functions with x-intercept 1. ii If the difference is d, then y = dx −d. The intercept ensures the first term is 0 (y(1) = d −d = 0) and the coefficient ensures the difference between successive terms is d (y(2) −y(1) = 2d −d = d).</p>
+          <p class="step">The first term is the value when <span class="tex">x=1</span>. We need <span class="tex">f(1)=0</span>.</p>
+          <p class="final">These are the straight lines that cross the <span class="tex">x</span>-axis at <span class="tex">x=1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a ii</button>
+        <div class="sol">
+          <p class="step">A difference of <span class="tex">d</span> means the gradient is <span class="tex">d</span>, so the line looks like <span class="tex">y=dx+c</span>.</p>
+          <p class="step">The first term is 0: <span class="tex">f(1)=d+c=0</span>, so <span class="tex">c=-d</span>.</p>
+          <p class="step">Check the jump: <span class="tex">f(2)-f(1)=(2d-d)-(d-d)=d</span>.</p>
+          <p class="final"><span class="tex">y=dx-d</span>, which is the same as <span class="tex">y=d(x-1)</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> If a sequence has difference d, then y = dx + β for some constant β. Given that the function passes</p>
+          <p class="step">A line through the origin has equation <span class="tex">y=dx</span>. There is no extra constant.</p>
+          <p class="step">The first term is <span class="tex">f(1)=d</span>, and the difference is also <span class="tex">d</span>, because <span class="tex">f(2)-f(1)=2d-d=d</span>.</p>
+          <p class="final">The sequence is <span class="tex">d, 2d, 3d, \ldots</span> so <span class="tex">a_n=dn</span>. The first term equals the common difference.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step">Gradient <span class="tex">d</span> means <span class="tex">f(x)=dx+c</span> for some constant <span class="tex">c</span>.</p>
+          <p class="step">The first term is <span class="tex">a</span>, so <span class="tex">f(1)=d+c=a</span>. Then <span class="tex">c=a-d</span>.</p>
+          <p class="final"><span class="tex">y=dx+(a-d)</span>. This is the same as <span class="tex">y=a+(x-1)d</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step">The line is <span class="tex">f(x)=mx+b</span>.</p>
+          <p class="step">First term: <span class="tex">f(1)=m+b</span>.</p>
+          <p class="step">Next term: <span class="tex">f(2)=2m+b</span>.</p>
+          <p class="step">Difference: <span class="tex">(2m+b)-(m+b)=m</span>.</p>
+          <p class="final">The AP has first term <span class="tex">m+b</span> and common difference <span class="tex">m</span>.</p>
         </div>
       </div>
     </article>
+
     <p style="margin-top:1.5rem">
-      <a class='btn' href='../../Chapter 1 Sequences and series/1C-geometric-sequences/concept.html'>Next: 1C Concept →</a>
+      <a class="btn" href="../../Chapter 1 Sequences and series/1C-geometric-sequences/concept.html">Next: 1C Concept →</a>
       <a class="btn ghost" href="tutorial.html">← Tutorial</a>
     </p>
   </div>
-  <script>
-  (function(){
-    function bind(btn){
-      btn.addEventListener("click", function(){
-        var sol = btn.nextElementSibling;
-        var open = sol.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
-      });
-    }
-    document.querySelectorAll(".q > .btn.show").forEach(bind);
-    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
-    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
-    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
-  })();
-  </script>
-
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script src="../../course-solutions.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>
