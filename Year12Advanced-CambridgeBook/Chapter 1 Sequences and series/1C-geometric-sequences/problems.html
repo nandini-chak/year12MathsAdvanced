@@ -8,6 +8,12 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .stem p{margin:.42rem 0;line-height:1.5}
+    .stem .intro{margin-bottom:.7rem}
+    .howto{margin:.8rem 0 0;padding:.7rem .85rem;background:#f4f7fb;border-radius:12px;line-height:1.45}
+    .plot-note{margin:.35rem 0 0;font-size:.9rem;color:var(--muted)}
+  </style>
 </head>
 <body data-section="1C" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 1C">
   <div class="shell"><div class="main">
@@ -23,976 +29,1231 @@
   <header class="hero">
     <span class="kicker">Exercise 1C</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
+    <p>Attempt on paper first. Each part has its own solution button. Open one part at a time.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
       <button class="btn show" type="button" id="allOn">Show all solutions</button>
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
+    <p class="howto"><strong>Two symbols to keep straight.</strong> <span class="tex">a_n</span> means the <span class="tex">n</span>th term. The <span class="tex">n</span> sits lower than the <span class="tex">a</span>. It is not the letters “an”. A <strong>GP</strong> (geometric sequence) <em>multiplies</em> by the same number every time. That number is the common ratio <span class="tex">r</span>. The first term is <span class="tex">a</span>. The formula is <span class="tex">a_n=a r^{n-1}</span>. The power is <span class="tex">n-1</span>, one less than the term number. The 4th term uses power 3.</p>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 1C; answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">Parts are one per line. In the book the part letter sits under the item it labels. Fractions stay as fractions, and <span class="tex">n</span> is a subscript. Answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. In Q19(b) the sixth term is <span class="tex">3^6</span>, not thirty-six. In Q19(c) each term is a power of 2 multiplied by <span class="tex">x</span> (<span class="tex">2^{-16}x</span>), not <span class="tex">2</span> to the power <span class="tex">-16x</span>.</div>
     </details>
+
     <article class="q" id="q1">
-      <h2>1 · Exercise 1C</h2>
+      <h2>1 · Exercise 1C <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Write out the next three terms of each sequence. They are all GPs. 1, 2, 4, ... a 81, 27, 9, . . . b −7, −14, −28, . . . c −2500, −500, −100, ... d 3, −6, 12, . . . e −25, 50, −100, . . . f 5, −5, 5, ... g −1000, 100, −10, . . . h 0.04, 0.4, 4, . . . i</p>
+        <p class="intro">Write out the next three terms of each sequence. They are all GPs. Each line is its own sequence.</p>
+        <p><strong>(a)</strong> <span class="tex">1, 2, 4, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">81, 27, 9, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">-7, -14, -28, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">-2500, -500, -100, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">3, -6, 12, \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">-25, 50, -100, \ldots</span></p>
+        <p><strong>(g)</strong> <span class="tex">5, -5, 5, \ldots</span></p>
+        <p><strong>(h)</strong> <span class="tex">-1000, 100, -10, \ldots</span></p>
+        <p><strong>(i)</strong> <span class="tex">0.04, 0.4, 4, \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> Each term is 2 times the previous term. The next three terms are: 8, 16, 32</p>
+          <p class="formula-quick"><strong>Formula:</strong> In a GP, next term = previous term × <span class="tex">r</span>. Find <span class="tex">r</span> by dividing a term by the one before it. Both divisions must give the same number.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{2}{1}=2</span> and <span class="tex">\dfrac{4}{2}=2</span>. So <span class="tex">r=2</span>. Multiply by 2 each time.</p>
+          <p class="step"><span class="tex">4\times 2=8</span></p>
+          <p class="step"><span class="tex">8\times 2=16</span></p>
+          <p class="step"><span class="tex">16\times 2=32</span></p>
+          <p class="final">Next three terms: 8, 16, 32.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Each term is 1 3 of the previous term. The next three terms are: 3, 1, 1/3</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{27}{81}=\dfrac{1}{3}</span> and <span class="tex">\dfrac{9}{27}=\dfrac{1}{3}</span>. So <span class="tex">r=\dfrac{1}{3}</span>. Multiply by <span class="tex">\dfrac{1}{3}</span> (that is the same as dividing by 3).</p>
+          <p class="step"><span class="tex">9\times \dfrac{1}{3}=3</span></p>
+          <p class="step"><span class="tex">3\times \dfrac{1}{3}=1</span></p>
+          <p class="step"><span class="tex">1\times \dfrac{1}{3}=\dfrac{1}{3}</span></p>
+          <p class="final">Next three terms: <span class="tex">3, 1, \dfrac{1}{3}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Each term is 2 times the previous term. The next three terms are: −56, −112, −224</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-14}{-7}=2</span> and <span class="tex">\dfrac{-28}{-14}=2</span>. So <span class="tex">r=2</span>.</p>
+          <p class="step"><span class="tex">-28\times 2=-56</span></p>
+          <p class="step"><span class="tex">-56\times 2=-112</span></p>
+          <p class="step"><span class="tex">-112\times 2=-224</span></p>
+          <p class="final">Next three terms: −56, −112, −224.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> Each term is 1 5 of the previous term. The next three terms are: −20, −4, −4/5</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-500}{-2500}=\dfrac{1}{5}</span> and <span class="tex">\dfrac{-100}{-500}=\dfrac{1}{5}</span>. So <span class="tex">r=\dfrac{1}{5}</span>.</p>
+          <p class="step"><span class="tex">-100\times \dfrac{1}{5}=-20</span></p>
+          <p class="step"><span class="tex">-20\times \dfrac{1}{5}=-4</span></p>
+          <p class="step"><span class="tex">-4\times \dfrac{1}{5}=-\dfrac{4}{5}</span></p>
+          <p class="final">Next three terms: <span class="tex">-20, -4, -\dfrac{4}{5}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> Each term is −2 times the previous term. The next three terms are: −24, 48, −96</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-6}{3}=-2</span> and <span class="tex">\dfrac{12}{-6}=-2</span>. So <span class="tex">r=-2</span>. A negative ratio flips the sign each time.</p>
+          <p class="step"><span class="tex">12\times (-2)=-24</span></p>
+          <p class="step"><span class="tex">-24\times (-2)=48</span></p>
+          <p class="step"><span class="tex">48\times (-2)=-96</span></p>
+          <p class="final">Next three terms: −24, 48, −96.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> Each term is −2 times the previous term. The next three terms are: 200, −400, 800</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{50}{-25}=-2</span> and <span class="tex">\dfrac{-100}{50}=-2</span>. So <span class="tex">r=-2</span>.</p>
+          <p class="step"><span class="tex">-100\times (-2)=200</span></p>
+          <p class="step"><span class="tex">200\times (-2)=-400</span></p>
+          <p class="step"><span class="tex">-400\times (-2)=800</span></p>
+          <p class="final">Next three terms: 200, −400, 800.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> Each term is −1 times the previous term. The next three terms are: −5, 5, −5</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-5}{5}=-1</span> and <span class="tex">\dfrac{5}{-5}=-1</span>. So <span class="tex">r=-1</span>. Multiplying by −1 only flips the sign.</p>
+          <p class="step"><span class="tex">5\times (-1)=-5</span></p>
+          <p class="step"><span class="tex">-5\times (-1)=5</span></p>
+          <p class="step"><span class="tex">5\times (-1)=-5</span></p>
+          <p class="final">Next three terms: −5, 5, −5.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> Each term is −1 10 of the previous term. The next three terms are: 1, −1/10, 1 100 i Each term is 10 times the previous term. The next three terms are: 40, 400, 4000/2 Start with 1. Each term is 3 times the previous term. The sequence is: 1, 3, 9, 27</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{100}{-1000}=-\dfrac{1}{10}</span> and <span class="tex">\dfrac{-10}{100}=-\dfrac{1}{10}</span>. So <span class="tex">r=-\dfrac{1}{10}</span>.</p>
+          <p class="step"><span class="tex">-10\times \left(-\dfrac{1}{10}\right)=1</span></p>
+          <p class="step"><span class="tex">1\times \left(-\dfrac{1}{10}\right)=-\dfrac{1}{10}</span></p>
+          <p class="step"><span class="tex">-\dfrac{1}{10}\times \left(-\dfrac{1}{10}\right)=\dfrac{1}{100}</span></p>
+          <p class="final">Next three terms: <span class="tex">1, -\dfrac{1}{10}, \dfrac{1}{100}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> Start with 12. Each term is 2 times the previous term. The sequence is: 12, 24, 48, 96</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> Start with 5. Each term is −2 times the previous term. The sequence is: 5, −10, 20, −40</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> Start with 18. Each term is 1 3 of the previous term. The sequence is: 18, 6, 2, 2/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> Start with 18. Each term is −1 3 of the previous term. The sequence is: 18, −6, 2, −2/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> Start with 50. Each term is 1 5 of the previous term. The sequence is: 50, 10, 2, 2/5</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
-        <div class="sol">
-<p class="step"><strong>f ·</strong> 1 Start with 6. Each term is −1 2 of the previous term. The sequence is: 6, −3, 3/2, −3/4</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
-        <div class="sol">
-<p class="step"><strong>g ·</strong> Start with −13. Each term is 2 times the previous term. The sequence is: −13, −26, −52, −104</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
-        <div class="sol">
-<p class="step"><strong>h ·</strong> Start with −7. Each term is −1 times the previous term. The sequence is: −7, 7, −7, 7 i 3 a3 a2 = 16 8 = 2 a2 a1 = 8 4 = 2 This is a GP with a = 4 and r = 2.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a3 a2 = 4 8 = 1</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{0.4}{0.04}=10</span> and <span class="tex">\dfrac{4}{0.4}=10</span>. So <span class="tex">r=10</span>.</p>
+          <p class="step"><span class="tex">4\times 10=40</span></p>
+          <p class="step"><span class="tex">40\times 10=400</span></p>
+          <p class="step"><span class="tex">400\times 10=4000</span></p>
+          <p class="final">Next three terms: 40, 400, 4000.</p>
         </div>
       </div>
     </article>
     <article class="q" id="q2">
       <h2>2 · Exercise 1C</h2>
       <div class="stem">
-        <p>Write out the first four terms of the GPs whose first terms and common ratios are: a = 1 and r = 3 a a = 12 and r = 2 b a = 5 and r = −2 c a = 18 and r = 1 3 d a = 18 and r = −1 3 e a = 50 and r = 1 5 f a = 6 and r = −1 2 g a = −13 and r = 2 h a = −7 and r = −1 i</p>
+        <p class="intro">Write out the first four terms of the GP with the given first term <span class="tex">a</span> and common ratio <span class="tex">r</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">a=1</span> and <span class="tex">r=3</span></p>
+        <p><strong>(b)</strong> <span class="tex">a=12</span> and <span class="tex">r=2</span></p>
+        <p><strong>(c)</strong> <span class="tex">a=5</span> and <span class="tex">r=-2</span></p>
+        <p><strong>(d)</strong> <span class="tex">a=18</span> and <span class="tex">r=\dfrac{1}{3}</span></p>
+        <p><strong>(e)</strong> <span class="tex">a=18</span> and <span class="tex">r=-\dfrac{1}{3}</span></p>
+        <p><strong>(f)</strong> <span class="tex">a=50</span> and <span class="tex">r=\dfrac{1}{5}</span></p>
+        <p><strong>(g)</strong> <span class="tex">a=6</span> and <span class="tex">r=-\dfrac{1}{2}</span></p>
+        <p><strong>(h)</strong> <span class="tex">a=-13</span> and <span class="tex">r=2</span></p>
+        <p><strong>(i)</strong> <span class="tex">a=-7</span> and <span class="tex">r=-1</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Start at <span class="tex">a</span>. Each next term = previous term × <span class="tex">r</span>. Write four terms.</p>
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a_1=1</span>.</p>
+          <p class="step"><span class="tex">a_2=1\times 3=3</span></p>
+          <p class="step"><span class="tex">a_3=3\times 3=9</span></p>
+          <p class="step"><span class="tex">a_4=9\times 3=27</span></p>
+          <p class="final">1, 3, 9, 27.</p>
+        </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">a2 a1 = 8 16 = 1 2 This is a GP with a = 16 and r = 1/2.</p>
-<p class="step"><strong>b ·</strong> a3 a2 = 63 21 = 3 a2 a1 = 21 7 = 3 This is a GP with a = 7 and r = 3.</p>
+          <p class="step"><strong>Same method ·</strong> Start at 12 and multiply by 2.</p>
+          <p class="step"><span class="tex">12\times 2=24</span>, <span class="tex">24\times 2=48</span>, <span class="tex">48\times 2=96</span>.</p>
+          <p class="final">12, 24, 48, 96.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a3 a2 = −100 −20 = 5 a2 a1 = −20 −4 = 5 This is a GP with a = −4 and r = 5.</p>
+          <p class="step"><strong>Same method ·</strong> Start at 5 and multiply by −2. The sign flips each time.</p>
+          <p class="step"><span class="tex">5\times (-2)=-10</span></p>
+          <p class="step"><span class="tex">-10\times (-2)=20</span></p>
+          <p class="step"><span class="tex">20\times (-2)=-40</span></p>
+          <p class="final">5, −10, 20, −40.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a3 a2 = 6 4 = 3 2 a2 a1 = 4 2 = 2 This is not a GP, as the ratios are not all the same.</p>
+          <p class="step"><strong>Same method ·</strong> Start at 18 and multiply by <span class="tex">\dfrac{1}{3}</span>.</p>
+          <p class="step"><span class="tex">18\times \dfrac{1}{3}=6</span></p>
+          <p class="step"><span class="tex">6\times \dfrac{1}{3}=2</span></p>
+          <p class="step"><span class="tex">2\times \dfrac{1}{3}=\dfrac{2}{3}</span></p>
+          <p class="final"><span class="tex">18, 6, 2, \dfrac{2}{3}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a3 a2 = −10 −100 = 1 10 a2 a1 = −100 −1000 = 1 10 This is a GP with a = −1000 and r = 1/10.</p>
+          <p class="step"><strong>Same method ·</strong> Start at 18 and multiply by <span class="tex">-\dfrac{1}{3}</span>.</p>
+          <p class="step"><span class="tex">18\times \left(-\dfrac{1}{3}\right)=-6</span></p>
+          <p class="step"><span class="tex">-6\times \left(-\dfrac{1}{3}\right)=2</span></p>
+          <p class="step"><span class="tex">2\times \left(-\dfrac{1}{3}\right)=-\dfrac{2}{3}</span></p>
+          <p class="final"><span class="tex">18, -6, 2, -\dfrac{2}{3}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> a3 a2 = −20 40 = −1 2 a2 a1 = 40 −80 = −1 2 This is a GP with a = −80 and r = −1/2.</p>
+          <p class="step"><strong>Same method ·</strong> Start at 50 and multiply by <span class="tex">\dfrac{1}{5}</span>.</p>
+          <p class="step"><span class="tex">50\times \dfrac{1}{5}=10</span></p>
+          <p class="step"><span class="tex">10\times \dfrac{1}{5}=2</span></p>
+          <p class="step"><span class="tex">2\times \dfrac{1}{5}=\dfrac{2}{5}</span></p>
+          <p class="final"><span class="tex">50, 10, 2, \dfrac{2}{5}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> a3 a2 = 29 29 = 1 a2 a1 = 29 29 = 1 This is a GP with a = 29 and r = 1.</p>
+          <p class="step"><strong>Same method ·</strong> Start at 6 and multiply by <span class="tex">-\dfrac{1}{2}</span>.</p>
+          <p class="step"><span class="tex">6\times \left(-\dfrac{1}{2}\right)=-3</span></p>
+          <p class="step"><span class="tex">-3\times \left(-\dfrac{1}{2}\right)=\dfrac{3}{2}</span></p>
+          <p class="step"><span class="tex">\dfrac{3}{2}\times \left(-\dfrac{1}{2}\right)=-\dfrac{3}{4}</span></p>
+          <p class="final"><span class="tex">6, -3, \dfrac{3}{2}, -\dfrac{3}{4}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> a3 a2 = 9 4 a2 a1 = 4 1 = 4 This is not a GP, as the ratios are not all the same. i a3 a2 = −14 14 = −1 a2 a1 = 14 −14 = −1 This is a GP with a = −14 and r = −1. j a3 a2 = 1/61 = 1 6 a2 a1 = 1 6 This is a GP with a = 6 and r = 1/6. k a3 a2 = −3 1 = −3 a2 a1 = 1 −1 3 = −3 This is a GP with a = −1 3 and r = −3. l 4 an = arn−1 a4 = 5 × 23 = 5 × 8 = 40</p>
+          <p class="step"><strong>Same method ·</strong> Start at −13 and multiply by 2.</p>
+          <p class="step"><span class="tex">-13\times 2=-26</span></p>
+          <p class="step"><span class="tex">-26\times 2=-52</span></p>
+          <p class="step"><span class="tex">-52\times 2=-104</span></p>
+          <p class="final">−13, −26, −52, −104.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> an = arn−1 a4 = 300 × 1 10 !3 = 300 × 1 1000 = 3/10</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an = arn−1 a4 = −7 × 23 = −7 × 8 = −56</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> an = arn−1 a4 = −64 × 1 2 !3 = −64 × 1 8 = −8</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> 2 an = arn−1 a4 = 11 × (−2)3 = 11 × −8 = −88</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> an = arn−1 a4 = −15 × (−2)3 a4 = −15 × −8 a4 = 120</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> an = arn−1 a70 = 1 × 369 = 369</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an = arn−1 a70 = 5 × 769</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> an = arn−1 a70 = 8 × (−3)69 = −8 × 369/6</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a3 a2 = 28 14 = 2 a2 a1 = 14 7 = 2 This is a GP with a = 7 and r = 2.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an = arn−1 a6 = 7 × 25 = 7 × 32 = 224 a50 = 7 × 249</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> an = arn−1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 7 and r = 2 an = 7 × 2n−1 7 a3 a2 = 90 −30 = −3 a2 a1 = −30 10 = −3 This is a GP with a = 10 and r = −3.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> an = arn−1 a6 = 10 × (−3)5 = 10 × (−243) = −2430 a25 = 10 × (−3)24 = 10 × 324</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an = arn−1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 10 and r = −3 an = 10 × (−3)n−1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a3 a2 = −20 −40 = 1 2 a2 a1 = −40 −80 = 1 2 This is a GP with a = −80 and r = 1/2.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an = arn−1</p>
+          <p class="step"><strong>Same method ·</strong> Start at −7 and multiply by −1. The sign flips each time and the size stays 7.</p>
+          <p class="step"><span class="tex">-7\times (-1)=7</span></p>
+          <p class="step"><span class="tex">7\times (-1)=-7</span></p>
+          <p class="step"><span class="tex">-7\times (-1)=7</span></p>
+          <p class="final">−7, 7, −7, 7.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q3">
       <h2>3 · Exercise 1C</h2>
       <div class="stem">
-        <p>Find the ratios a3 a2 and a2 a1 for each sequence to test whether it is a GP. If the sequence is a GP, write down the first term a and the common ratio r. 4, 8, 16, ... a 16, 8, 4, . . . b 7, 21, 63, . . . c −4, −20, −100, ... d 2, 4, 6, . . . e −1000, −100, −10, . . . f −80, 40, −20, ... g 29, 29, 29, . . . h 1, 4, 9, . . . i −14, 14, −14, ... j 6, 1, 1 6, . . . k −1 3, 1, −3, . . . l</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">a10 = −80 × 1 2 !9 = −80 × 1 512 = −80 512 = −5 32 a100 = −80 × 1 2 !99</p>
-<p class="step"><strong>c ·</strong> an = arn−1</p>
-        </div>
+        <p class="intro">For each list, work out <span class="tex">\dfrac{a_2}{a_1}</span> and <span class="tex">\dfrac{a_3}{a_2}</span>. If they match, the list is a GP. Then write the first term <span class="tex">a</span> and the common ratio <span class="tex">r</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">4, 8, 16, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">16, 8, 4, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">7, 21, 63, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">-4, -20, -100, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">2, 4, 6, \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">-1000, -100, -10, \ldots</span></p>
+        <p><strong>(g)</strong> <span class="tex">-80, 40, -20, \ldots</span></p>
+        <p><strong>(h)</strong> <span class="tex">29, 29, 29, \ldots</span></p>
+        <p><strong>(i)</strong> <span class="tex">1, 4, 9, \ldots</span></p>
+        <p><strong>(j)</strong> <span class="tex">-14, 14, -14, \ldots</span></p>
+        <p><strong>(k)</strong> <span class="tex">6, 1, \dfrac{1}{6}, \ldots</span></p>
+        <p><strong>(l)</strong> <span class="tex">-\dfrac{1}{3}, 1, -3, \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> = −80 and r = 1 2 an = −80 × 1 2 !n−1 9 a3 a2 = 40 20 = 2 a2 a1 = 20 10 = 2 This is a GP with a = 10 and r = 2. an = arn−1 = 10 × 2n−1 a6 = 10 × 25 = 10 × 32 = 320</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a3 a2 = 20 60 = 1 3 a2 a1 = 60 180 = 1 3 This is a GP with a = 180 and r = 1/3. an = arn−1 = 180 × 1 3 !n−1 a6 = 180 × 1 3 !5 = 180 × 1 243 = 20/27</p>
+          <p class="formula-quick"><strong>Formula:</strong> A list is a GP only when <span class="tex">\dfrac{a_2}{a_1}=\dfrac{a_3}{a_2}</span>. That shared value is <span class="tex">r</span>. The first number is <span class="tex">a</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{a_2}{a_1}=\dfrac{8}{4}=2</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\dfrac{a_3}{a_2}=\dfrac{16}{8}=2</span>.</p>
+          <p class="final">Both ratios are 2, so this is a GP with <span class="tex">a=4</span> and <span class="tex">r=2</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a3 a2 = 100 81 a2 a1 = 81 64 This is not a GP, as the ratios are not the same.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{8}{16}=\dfrac{1}{2}</span> and <span class="tex">\dfrac{4}{8}=\dfrac{1}{2}</span>.</p>
+          <p class="final">GP with <span class="tex">a=16</span> and <span class="tex">r=\dfrac{1}{2}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a3 a2 = 65 50 = 13 10 a2 a1 = 50 35 = 10 7 This is not a GP, as the ratios are not the same.</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{21}{7}=3</span> and <span class="tex">\dfrac{63}{21}=3</span>.</p>
+          <p class="final">GP with <span class="tex">a=7</span> and <span class="tex">r=3</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a3 a2 = 12 3 = 4 a2 a1 = 3 3 4 = 4 This is a GP with a = 3 4 and r = 4. an = arn−1 = 3 4 × 4n−1 a6 = 3 4 × 45 = 3 4 × 1024 = 768</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-20}{-4}=5</span> and <span class="tex">\dfrac{-100}{-20}=5</span>.</p>
+          <p class="final">GP with <span class="tex">a=-4</span> and <span class="tex">r=5</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a3 a2 = −12 −24 = 1 2 a2 a1 = −24 −48 = 1 2 This is a GP with a = −48 and r = 1/2. an = arn−1 = −48 × 1 2 !n−1 a6 = −48 × 1 2 !5 = −48 × 1 32 = −3/2</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{4}{2}=2</span> but <span class="tex">\dfrac{6}{4}=\dfrac{3}{2}</span>.</p>
+          <p class="step">2 and <span class="tex">\dfrac{3}{2}</span> are not the same, so the multipliers do not match.</p>
+          <p class="final">Not a GP.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> 4 10 a2 a1 = −1 1 = −1 This is a GP with a = 1 and r = −1 an = arn−1 = 1 × (−1)n−1 a6 = 1 × (−1)5 = −1</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-100}{-1000}=\dfrac{1}{10}</span> and <span class="tex">\dfrac{-10}{-100}=\dfrac{1}{10}</span>.</p>
+          <p class="final">GP with <span class="tex">a=-1000</span> and <span class="tex">r=\dfrac{1}{10}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> a2 a1 = 4 −2 = −2 This is a GP with a = −2 and r = −2 an = arn−1 = −2 × (−2)n−1 = (−2)n a6 = (−2)6 = 64</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{40}{-80}=-\dfrac{1}{2}</span> and <span class="tex">\dfrac{-20}{40}=-\dfrac{1}{2}</span>.</p>
+          <p class="final">GP with <span class="tex">a=-80</span> and <span class="tex">r=-\dfrac{1}{2}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a2 a1 = 24 −8 = −3 This is a GP with a = −8 and r = −3 an = arn−1 = −8 × (−3)n−1 a6 = −8 × (−3)5 = 1944</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{29}{29}=1</span> and <span class="tex">\dfrac{29}{29}=1</span>.</p>
+          <p class="step">A ratio of 1 is allowed. Every term stays the same.</p>
+          <p class="final">GP with <span class="tex">a=29</span> and <span class="tex">r=1</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a2 a1 = −30 60 = −1 2 This is a GP with a = 60 and r = −1 2 an = arn−1 = 60 × −1 2 !n−1 a6 = 60 × −1 2 !5 = −15/8</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{4}{1}=4</span> but <span class="tex">\dfrac{9}{4}=\dfrac{9}{4}</span>.</p>
+          <p class="step">4 and <span class="tex">\dfrac{9}{4}</span> are not equal.</p>
+          <p class="final">Not a GP. (These are the square numbers 1, 4, 9.)</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a2 a1 = 512 −1024 = −1 2 This is a GP with a = −1024 and r = −1 2 an = arn−1 = −1024 × −1 2 !n−1 a6 = −1024 × −1 2 !5 = 32</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{14}{-14}=-1</span> and <span class="tex">\dfrac{-14}{14}=-1</span>.</p>
+          <p class="final">GP with <span class="tex">a=-14</span> and <span class="tex">r=-1</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · k</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a2 a1 = −3 8 1 16 = −6 This is a GP with a = 1 16 and r = −6 an = arn−1 = 1 16 × (−6)n−1 a6 = 1 16 × (−6)5 = −486</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{1}{6}=\dfrac{1}{6}</span> and <span class="tex">\dfrac{1/6}{1}=\dfrac{1}{6}</span>.</p>
+          <p class="final">GP with <span class="tex">a=6</span> and <span class="tex">r=\dfrac{1}{6}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · l</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> 11</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a = 1 and r = 2 an = arn−1 an = 2n−1 64 = 2n−1 26 = 2n−1 n −1 = 6 n = 7 Hence there are 7 terms in this finite sequence.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a = −1 and r = 3 an = arn−1 an = −3n−1 −81 = −3n−1 81 = 3n−1 34 = 3n−1 n −1 = 4 n = 5 Hence there are 5 terms in this finite sequence.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> a = 8 and r = 5 an = arn−1 an = 8 × 5n−1 125 000 = 8 × 5n−1 15 625 = 5n−1 56 = 5n−1 n −1 = 6 n = 7 5 Hence there are 7 terms in this finite sequence.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> a = 7 and r = 2 an = arn−1 an = 7 × 2n−1 224 = 7 × 2n−1 32 = 2n−1 25 = 2n−1 n −1 = 5 n = 6 Hence there are 6 terms in this finite sequence.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> a = 2 and r = 7 an = arn−1 an = 2 × 7n−1 4802 = 2 × 7n−1 2401 = 7n−1 74 = 7n−1 n −1 = 4 n = 5 Hence there are 5 terms in this finite sequence.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
-        <div class="sol">
-<p class="step"><strong>f ·</strong> a = 1 25 and r = 5 an = arn−1 an = 1 25 × 5n−1 an = 5−2 × 5n−1 an = 5n−3 625 = 5n−3 54 = 5n−3 n −3 = 4 n = 7 Hence there are 7 terms in this finite sequence. 12</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> an = 25rn−1. Put a4 = 200. 25r4−1 = 200 r3 = 8 r = 2 a1 = 25 a2 = 50 a3 = 100 a4 = 200 a5 = 400</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an = 3rn−1. Put a6 = 96. 3r6−1 = 96 r5 = 32 r = 2 6 a1 = 3 a2 = 6 a3 = 12 a4 = 24 a5 = 48 a6 = 96</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> an = 1rn−1. Put a5 = 81. r5−1 = 81 r4 = 81 r = ±3 For r = 3 a1 = 1 a2 = 3 a3 = 9 a4 = 27 a5 = 81 For r = −3 a1 = 1 a2 = −3 a3 = 9 a4 = −27 a5 = 81/13</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a = 486 and a5 = 2 27 an = arn−1 2 27 = 486 × r4 2 13 122 = r4 r = 4 r 2 13 122 = 1 9 or −1/9</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a = 1000 and a7 = 0.001 an = arn−1 1 1000 = 1000 × r6/11 000 000 = r6 r = 6 r 1 1 000 000 = 1 10 or −1/10</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> a = 32 and a6 = −243 an = arn−1 −243 = 32 × r5 −243 32 = r5 r = 5 r −243 32 = −3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> a = 5 and a7 = 40 an = arn−1 7 40 = 5 × r6 8 = r6 23 = r6 r = √ 2 or − √ 2 14 a1 = 50 a2 = 100 a3 = 200 a4 = 400 a5 = 800 a6 = 1600</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 50, r = a2 a1 = 100 50 = 2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> Put an = 6400 25 × 2n = 6400 2n = 256 n = 8 Hence a8 = 6400</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a50 × a25 = 25(2)50 × 25(2)25 = 252 × 275 = 54 × 275 a50 ÷ a25 = 25(2)50 ÷ 25(2)25 = 225</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> a9 × a11 = 25(2)9 × 25(2)11 = 25 × 25 × (2)20 = 25 × a20</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> There are 6 terms, they are: a6 = 1600 a7 = 3200 a8 = 6400 a9 = 12 800 a10 = 25 600 a11 = 51 200</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> a12 = 25 × 212 = 102 400 whereas a11 = 25 × 211 = 51 200. Hence a11 is the last term less than 100 000 and a12 = 102 400 is the first term greater than 100 000.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
-        <div class="sol">
-<p class="step"><strong>f ·</strong> 15</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> Start with 0.1. Each term is 2 times the previous term. The sequence is: 0.1, 0.2, 0.4, . . . Hence, this is a GP with a = 0.1 and r = 2. a101 is equivalent to the thickness from 100 successive folds. an = arn−1 a101 = 0.1 × 2100 a101 = 2100 10 mm ≑1.27 × 1023 km ≑1.34 × 1010 light years Note that the universe is estimated to be 13.8 billion years old. So the paper thickness is about the distance light would travel in the age of the universe. To answer tricky follow up questions from curious students: Light that reaches us today from the early universe (the CMB, as far back as we can see) was originally emitted &quot;only&quot; 42 million light-years away, when everything was a condensed plasma. While space expanded, that light had to travel for 13.8 billion years to reach us. That original piece of the plasma that we’re seeing now would currently be about 46 billion light-years away, due to the expansion of space. So the paper thickness is about 10% of the distance across the current observable universe.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> After each cut, the remaining length is halved. Starting with (1) m, after 33 repetitions, L = 1 1 2 !33 m ≈1.16 × 10−10 m ≈1.2 × 10−10 m. This is about the size of a small atom. 16</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 4/5, 4, 20, 100, 500 and an = 4 25 × 5n</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> i This is a GP with r = a2 a1 = 10 5 = 2 and a = 5. Hence an = 5(2)n−1 = 5 2(2)n. 8 f(x) = 5 2(2)x ii 17</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> Yes, it is a GP. It has first term a = 7 and common ratio r = 7 7 = 1.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> Since each term is the same, the constant function y = 7 represents this sequence i.e. f(x) = 7 for all input x. Further, as 1x = 1 for all x, y = 7 × 1x. 18 This is a GP with r = a2 a1 = 2 √ 3 √ 6 = 2 √ 2 = 2 √ 2 2 = √ 2 and</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = √ 6. Hence an = arn−1 = √ 6 √ 2 n−1 = √ 6 √ 2 √ 2 n = √ 3 √ 2 n</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is a GP with r = a2 a1 = a2x3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · ax</button>
-        <div class="sol">
-<p class="step"><strong>ax ·</strong> = ax2 and a = ax. Hence an = arn−1 = ax  ax2n−1 = axan−1x2n−2 = anx2n−1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> This is a GP with r = a2 a1 = −1 −x y = y x and a = −x y. Hence an = arn−1 = −x y ! y x n−1 = − y x −1 y x n−1 = − y x n−2 = −x2−nyn−2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> 19 This is a GP with r = a2 a1 = 2x2 2x = x and a = 2x. Hence an = arn−1 = 2x(x)n−1 = 2xn. Put a6 = 2. 2x6 = 2 x6 = 1 x = ±1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is a GP with r = a2 a1 = x2 x4 = x−2 and a = x4. Hence an = arn−1 = x4  x−2n−1 = x4x2−2n = x6−2n. Put a6 = 36. x6−12 = 36 x−6 = 36 x6 = 3−6 x6 = 1 3 !6 x = ±1/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> This is a GP with r = a2 a1 = 2−12x 2−16x = 2−12+16 = 24 and a = 2−16x. Hence an = arn−1 = 2−16x  24n−1 = 2−16x24n−4 = 24n−20x. Put a6 = 96. 24(6)−20x = 96 24x = 96 16x = 96 x = 6</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> 9/20</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a = f(1) = cb, r = f(2) f(1) = cb2 cb = b First term is cb and common ratio is b.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> We know for a sequence with first term a and ratio r that an = ar n−1 = a × rn r = a r × rn Hence a generating function for this sequence would be f(x) = a r × rx 21 Consider y = f(x) = 1 r rx = rx−1. The first term is f(1) = 1 r × r = 1 and the common ratio is f(c + 1)/ f(c) = rc/rc−1 = r where c is an arbitrary positive integer.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> Consider f(x) = rx where r is the ratio of a GP. This satisfies the condition f(0) = 1, but also note that f(1) = r – all GPs represented by this exponential function have first term a = r.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> Consider f(x) = βrx where r is the ratio. Since the first term is a, f(1) = a ⇒a = β × r ⇒β = a r . Thus, f(x) = a r × rx.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> Consider y = arx. The first term is given by y(1) = ar and the common ratio y(2) y(1) = ar2 ar = r. Hence, this function represents the GP with first term ar and ratio r.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> 10</p>
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{1}{-1/3}=-3</span> and <span class="tex">\dfrac{-3}{1}=-3</span>.</p>
+          <p class="final">GP with <span class="tex">a=-\dfrac{1}{3}</span> and <span class="tex">r=-3</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q4">
       <h2>4 · Exercise 1C</h2>
       <div class="stem">
-        <p>Use the formula an = arn−1 to find the fourth term of the GP with: a = 5 and r = 2 a a = 300 and r = 1 10 b a = −7 and r = 2 c a = −64 and r = 1 2 d a = 11 and r = −2 e a = −15 and r = −2 f</p>
+        <p class="intro">Use <span class="tex">a_n=a r^{n-1}</span> to find the <strong>fourth</strong> term of the GP with:</p>
+        <p><strong>(a)</strong> <span class="tex">a=5</span> and <span class="tex">r=2</span></p>
+        <p><strong>(b)</strong> <span class="tex">a=300</span> and <span class="tex">r=\dfrac{1}{10}</span></p>
+        <p><strong>(c)</strong> <span class="tex">a=-7</span> and <span class="tex">r=2</span></p>
+        <p><strong>(d)</strong> <span class="tex">a=-64</span> and <span class="tex">r=\dfrac{1}{2}</span></p>
+        <p><strong>(e)</strong> <span class="tex">a=11</span> and <span class="tex">r=-2</span></p>
+        <p><strong>(f)</strong> <span class="tex">a=-15</span> and <span class="tex">r=-2</span></p>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p>Exercise 1C</p>
-
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>. For the 4th term, <span class="tex">n=4</span>, so the power is <span class="tex">4-1=3</span>. That is <span class="tex">a_4=a r^{3}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">r^3=2^3=2\times 2\times 2=8</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_4=5\times 8=40</span>.</p>
+          <p class="final"><span class="tex">a_4=40</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_4=a r^{3}</span>.</p>
+          <p class="step"><span class="tex">\left(\dfrac{1}{10}\right)^3=\dfrac{1}{1000}</span>.</p>
+          <p class="step"><span class="tex">a_4=300\times \dfrac{1}{1000}=\dfrac{300}{1000}=\dfrac{3}{10}</span>.</p>
+          <p class="final"><span class="tex">a_4=\dfrac{3}{10}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_4=a r^{3}</span>.</p>
+          <p class="step"><span class="tex">2^3=8</span>.</p>
+          <p class="step"><span class="tex">a_4=-7\times 8=-56</span>.</p>
+          <p class="final"><span class="tex">a_4=-56</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_4=a r^{3}</span>.</p>
+          <p class="step"><span class="tex">\left(\dfrac{1}{2}\right)^3=\dfrac{1}{8}</span>.</p>
+          <p class="step"><span class="tex">a_4=-64\times \dfrac{1}{8}=-8</span>.</p>
+          <p class="final"><span class="tex">a_4=-8</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_4=a r^{3}</span>. The power 3 is odd, so a negative base stays negative.</p>
+          <p class="step"><span class="tex">(-2)^3=-8</span>.</p>
+          <p class="step"><span class="tex">a_4=11\times (-8)=-88</span>.</p>
+          <p class="final"><span class="tex">a_4=-88</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_4=a r^{3}</span>.</p>
+          <p class="step"><span class="tex">(-2)^3=-8</span>.</p>
+          <p class="step"><span class="tex">a_4=-15\times (-8)=120</span>. Negative times negative is positive.</p>
+          <p class="final"><span class="tex">a_4=120</span>.</p>
         </div>
       </div>
     </article>
     <article class="q" id="q5">
       <h2>5 · Exercise 1C</h2>
       <div class="stem">
-        <p>Use the formula an = arn−1 to find an expression for the 70th term of the GP with: a = 1 and r = 3 a a = 5 and r = 7 b a = 8 and r = −3 c</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p>r −243 32 = −3</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q6">
-      <h2>6 · Exercise 1C</h2>
-      <div class="stem">
-        <p>a Find the first term a and the common ratio r of the GP 7, 14, 28, . . .<br/>
-b Find the sixth term a6 and an expression for the 50th term a50.<br/>
-c Find a formula for the nth term an.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Exercise 1C a1 = 3 a2 = 6 a3 = 12 a4 = 24 a5 = 48 a6 = 96</p>
-<p class="step"><strong>c ·</strong> an = 1rn−1. Put a5 = 81. r5−1 = 81 r4 = 81 r = ±3 For r = 3 a1 = 1 a2 = 3 a3 = 9 a4 = 27 a5 = 81 For r = −3 a1 = 1 a2 = −3 a3 = 9 a4 = −27 a5 = 81</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q7">
-      <h2>7 · Exercise 1C</h2>
-      <div class="stem">
-        <p>a Find the first term a and the common ratio r of the GP 10, −30, 90, . . .<br/>
-b Find the sixth term a6 and an expression for the 25th term a25.<br/>
-c Find a formula for the nth term an.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Exercise 1C 40 = 5 × r6 8 = r6 23 = r6 r = √ 2 or − √</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q8">
-      <h2>8 · Exercise 1C</h2>
-      <div class="stem">
-        <p>a Find the first term a and the common ratio r of the GP −80, −40, −20, . . .<br/>
-b Find the 10th term a10 and an expression for the 100th term a100.<br/>
-c Find a formula for the nth term an.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p>Exercise 1C f(x) = 5 2(2)x ii</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q9">
-      <h2>9 · Exercise 1C</h2>
-      <div class="stem">
-        <p>Find a3 a2 and a2 a1 to test whether each sequence is a GP. If the sequence is a GP, use the formula an = arn−1 to find a formula for the nth term, then find a6. 10, 20, 40, . . . a 180, 60, 20, . . . b 64, 81, 100, . . . c 35, 50, 65, . . . d 3 4, 3, 12, . . . e −48, −24, −12, . . . f</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p>Exercise 1C</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q10">
-      <h2>10 · Exercise 1C</h2>
-      <div class="stem">
-        <p>Find the common ratio of each GP, find a formula for an, and find a6. 1, −1, 1, . . . a −2, 4, −8, . . . b −8, 24, −72, . . . c 60, −30, 15, . . . d −1024, 512, −256, . . . e 1 16, −3 8, 9 4, . . . f</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>c ·</strong> a = 32 and a6 = −243 an = arn−1 −243 = 32 × r5 −243 32 = r5 r =</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q11">
-      <h2>11 · Exercise 1C</h2>
-      <div class="stem">
-        <p>Use the formula an = arn−1 to find how many terms there are in each finite sequence. 1, 2, 4, ..., 64 a −1, −3, −9, . . . , −81 b 8, 40, 200, . . . , 125 000 c 7, 14, 28, ..., 224 d 2, 14, 98, . . . , 4802 e 1 25, 1 5, 1, . . . , 625 f</p>
+        <p class="intro">Use <span class="tex">a_n=a r^{n-1}</span> to write an expression for the <strong>70th</strong> term. Leave large powers as powers.</p>
+        <p><strong>(a)</strong> <span class="tex">a=1</span> and <span class="tex">r=3</span></p>
+        <p><strong>(b)</strong> <span class="tex">a=5</span> and <span class="tex">r=7</span></p>
+        <p><strong>(c)</strong> <span class="tex">a=8</span> and <span class="tex">r=-3</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> a = 1 and r = 2 an = arn−1 an = 2n−1 64 = 2n−1 26 = 2n−1 n −1 = 6 n = 7 Hence there are 7 terms in this finite sequence.</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>. For the 70th term, <span class="tex">n=70</span>, so the power is <span class="tex">70-1=69</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a_{70}=1\times 3^{69}=3^{69}</span>.</p>
+          <p class="final"><span class="tex">a_{70}=3^{69}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a = −1 and r = 3 an = arn−1 an = −3n−1 −81 = −3n−1 81 = 3n−1 34 = 3n−1 n −1 = 4 n = 5 Hence there are 5 terms in this finite sequence.</p>
+          <p class="step"><strong>Same formula ·</strong> Power is still 69.</p>
+          <p class="step"><span class="tex">a_{70}=5\times 7^{69}</span>.</p>
+          <p class="final"><span class="tex">a_{70}=5\times 7^{69}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a = 8 and r = 5 an = arn−1 an = 8 × 5n−1 125 000 = 8 × 5n−1 15 625 = 5n−1 56 = 5n−1 n −1 = 6 n = 7</p>
+          <p class="step"><strong>Same formula ·</strong> <span class="tex">a_{70}=8\times (-3)^{69}</span>.</p>
+          <p class="step">69 is an odd power, so <span class="tex">(-3)^{69}=-(3^{69})</span>.</p>
+          <p class="step"><span class="tex">a_{70}=8\times \left(-(3^{69})\right)=-8\times 3^{69}</span>.</p>
+          <p class="final"><span class="tex">a_{70}=-8\times 3^{69}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q6">
+      <h2>6 · Exercise 1C</h2>
+      <div class="stem">
+        <p class="intro">The GP is <span class="tex">7, 14, 28, \ldots</span></p>
+        <p><strong>(a)</strong> Find the first term <span class="tex">a</span> and the common ratio <span class="tex">r</span>.</p>
+        <p><strong>(b)</strong> Find the sixth term <span class="tex">a_6</span> and an expression for the 50th term <span class="tex">a_{50}</span>.</p>
+        <p><strong>(c)</strong> Find a formula for the <span class="tex">n</span>th term <span class="tex">a_n</span>.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a</span> is the first number. <span class="tex">r=\dfrac{a_2}{a_1}</span>. Check it also equals <span class="tex">\dfrac{a_3}{a_2}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first number is <span class="tex">a=7</span>.</p>
+          <p class="step"><span class="tex">\dfrac{14}{7}=2</span> and <span class="tex">\dfrac{28}{14}=2</span>.</p>
+          <p class="final"><span class="tex">a=7</span> and <span class="tex">r=2</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>. The power is one less than the term number.</p>
+          <p class="step"><strong>Sixth term ·</strong> Power <span class="tex">6-1=5</span>. <span class="tex">2^5=32</span>. So <span class="tex">a_6=7\times 32=224</span>.</p>
+          <p class="step"><strong>50th term ·</strong> Power <span class="tex">50-1=49</span>. <span class="tex">a_{50}=7\times 2^{49}</span>.</p>
+          <p class="final"><span class="tex">a_6=224</span> and <span class="tex">a_{50}=7\times 2^{49}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> Put <span class="tex">a=7</span> and <span class="tex">r=2</span> into <span class="tex">a_n=a r^{n-1}</span>.</p>
+          <p class="final"><span class="tex">a_n=7\times 2^{n-1}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q7">
+      <h2>7 · Exercise 1C</h2>
+      <div class="stem">
+        <p class="intro">The GP is <span class="tex">10, -30, 90, \ldots</span></p>
+        <p><strong>(a)</strong> Find <span class="tex">a</span> and <span class="tex">r</span>.</p>
+        <p><strong>(b)</strong> Find <span class="tex">a_6</span> and an expression for <span class="tex">a_{25}</span>.</p>
+        <p><strong>(c)</strong> Find a formula for <span class="tex">a_n</span>.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=10</span>.</p>
+          <p class="step"><span class="tex">\dfrac{-30}{10}=-3</span> and <span class="tex">\dfrac{90}{-30}=-3</span>.</p>
+          <p class="final"><span class="tex">a=10</span> and <span class="tex">r=-3</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>.</p>
+          <p class="step"><strong>Sixth term ·</strong> Power 5. <span class="tex">(-3)^5=-243</span> because the power is odd.</p>
+          <p class="step"><span class="tex">a_6=10\times (-243)=-2430</span>.</p>
+          <p class="step"><strong>25th term ·</strong> Power <span class="tex">24</span>, which is even, so <span class="tex">(-3)^{24}=3^{24}</span>.</p>
+          <p class="step"><span class="tex">a_{25}=10\times (-3)^{24}=10\times 3^{24}</span>.</p>
+          <p class="final"><span class="tex">a_6=-2430</span> and <span class="tex">a_{25}=10\times 3^{24}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><span class="tex">a_n=10\times (-3)^{n-1}</span>.</p>
+          <p class="final"><span class="tex">a_n=10\times (-3)^{n-1}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q8">
+      <h2>8 · Exercise 1C</h2>
+      <div class="stem">
+        <p class="intro">The GP is <span class="tex">-80, -40, -20, \ldots</span></p>
+        <p><strong>(a)</strong> Find <span class="tex">a</span> and <span class="tex">r</span>.</p>
+        <p><strong>(b)</strong> Find <span class="tex">a_{10}</span> and an expression for <span class="tex">a_{100}</span>.</p>
+        <p><strong>(c)</strong> Find a formula for <span class="tex">a_n</span>.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=-80</span>.</p>
+          <p class="step"><span class="tex">\dfrac{-40}{-80}=\dfrac{1}{2}</span> and <span class="tex">\dfrac{-20}{-40}=\dfrac{1}{2}</span>.</p>
+          <p class="final"><span class="tex">a=-80</span> and <span class="tex">r=\dfrac{1}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>.</p>
+          <p class="step"><strong>10th term ·</strong> Power <span class="tex">9</span>. <span class="tex">\left(\dfrac{1}{2}\right)^9=\dfrac{1}{512}</span>.</p>
+          <p class="step"><span class="tex">a_{10}=-80\times \dfrac{1}{512}=-\dfrac{80}{512}</span>.</p>
+          <p class="step">Divide top and bottom by 16: <span class="tex">-\dfrac{80\div 16}{512\div 16}=-\dfrac{5}{32}</span>.</p>
+          <p class="step"><strong>100th term ·</strong> Power 99. <span class="tex">a_{100}=-80\times \left(\dfrac{1}{2}\right)^{99}</span>.</p>
+          <p class="final"><span class="tex">a_{10}=-\dfrac{5}{32}</span> and <span class="tex">a_{100}=-80\times \left(\dfrac{1}{2}\right)^{99}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="final"><span class="tex">a_n=-80\times \left(\dfrac{1}{2}\right)^{n-1}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q9">
+      <h2>9 · Exercise 1C <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">Test whether each list is a GP by comparing <span class="tex">\dfrac{a_3}{a_2}</span> and <span class="tex">\dfrac{a_2}{a_1}</span>. If it is a GP, write a formula for <span class="tex">a_n</span> and find <span class="tex">a_6</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">10, 20, 40, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">180, 60, 20, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">64, 81, 100, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">35, 50, 65, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">\dfrac{3}{4}, 3, 12, \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">-48, -24, -12, \ldots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> If both ratios equal <span class="tex">r</span>, then <span class="tex">a_n=a r^{n-1}</span>. For <span class="tex">a_6</span> the power is <span class="tex">5</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{20}{10}=2</span> and <span class="tex">\dfrac{40}{20}=2</span>. So it is a GP with <span class="tex">a=10</span>, <span class="tex">r=2</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_n=10\times 2^{n-1}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">2^5=32</span>, so <span class="tex">a_6=10\times 32=320</span>.</p>
+          <p class="final"><span class="tex">a_n=10\times 2^{n-1}</span> and <span class="tex">a_6=320</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{60}{180}=\dfrac{1}{3}</span> and <span class="tex">\dfrac{20}{60}=\dfrac{1}{3}</span>. So <span class="tex">a=180</span>, <span class="tex">r=\dfrac{1}{3}</span>.</p>
+          <p class="step"><span class="tex">a_n=180\times \left(\dfrac{1}{3}\right)^{n-1}</span>.</p>
+          <p class="step"><span class="tex">\left(\dfrac{1}{3}\right)^5=\dfrac{1}{243}</span>, so <span class="tex">a_6=180\times \dfrac{1}{243}=\dfrac{180}{243}</span>.</p>
+          <p class="step">Divide top and bottom by 9: <span class="tex">\dfrac{20}{27}</span>.</p>
+          <p class="final"><span class="tex">a_n=180\times \left(\dfrac{1}{3}\right)^{n-1}</span> and <span class="tex">a_6=\dfrac{20}{27}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{81}{64}</span> and <span class="tex">\dfrac{100}{81}</span>.</p>
+          <p class="step">These fractions are not equal, so the multipliers do not match.</p>
+          <p class="final">Not a GP. There is no formula and no <span class="tex">a_6</span> from a GP rule.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{50}{35}=\dfrac{10}{7}</span> and <span class="tex">\dfrac{65}{50}=\dfrac{13}{10}</span>.</p>
+          <p class="step"><span class="tex">\dfrac{10}{7}</span> and <span class="tex">\dfrac{13}{10}</span> are not equal.</p>
+          <p class="final">Not a GP. (The gaps are +15, +15, so this one is an AP, not a GP.)</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{3}{3/4}=3\times \dfrac{4}{3}=4</span> and <span class="tex">\dfrac{12}{3}=4</span>. So <span class="tex">a=\dfrac{3}{4}</span>, <span class="tex">r=4</span>.</p>
+          <p class="step"><span class="tex">a_n=\dfrac{3}{4}\times 4^{n-1}</span>.</p>
+          <p class="step"><span class="tex">4^5=1024</span>, so <span class="tex">a_6=\dfrac{3}{4}\times 1024=3\times 256=768</span>.</p>
+          <p class="final"><span class="tex">a_n=\dfrac{3}{4}\times 4^{n-1}</span> and <span class="tex">a_6=768</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-24}{-48}=\dfrac{1}{2}</span> and <span class="tex">\dfrac{-12}{-24}=\dfrac{1}{2}</span>. So <span class="tex">a=-48</span>, <span class="tex">r=\dfrac{1}{2}</span>.</p>
+          <p class="step"><span class="tex">a_n=-48\times \left(\dfrac{1}{2}\right)^{n-1}</span>.</p>
+          <p class="step"><span class="tex">\left(\dfrac{1}{2}\right)^5=\dfrac{1}{32}</span>, so <span class="tex">a_6=-48\times \dfrac{1}{32}=-\dfrac{48}{32}=-\dfrac{3}{2}</span>.</p>
+          <p class="final"><span class="tex">a_n=-48\times \left(\dfrac{1}{2}\right)^{n-1}</span> and <span class="tex">a_6=-\dfrac{3}{2}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q10">
+      <h2>10 · Exercise 1C</h2>
+      <div class="stem">
+        <p class="intro">For each GP, find the common ratio, a formula for <span class="tex">a_n</span>, and the value of <span class="tex">a_6</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">1, -1, 1, \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">-2, 4, -8, \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">-8, 24, -72, \ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">60, -30, 15, \ldots</span></p>
+        <p><strong>(e)</strong> <span class="tex">-1024, 512, -256, \ldots</span></p>
+        <p><strong>(f)</strong> <span class="tex">\dfrac{1}{16}, -\dfrac{3}{8}, \dfrac{9}{4}, \ldots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=\dfrac{a_2}{a_1}</span>, then <span class="tex">a_n=a r^{n-1}</span>, and <span class="tex">a_6</span> uses power 5.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{-1}{1}=-1</span>. So <span class="tex">a=1</span>, <span class="tex">r=-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_n=1\times (-1)^{n-1}=(-1)^{n-1}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">a_6=(-1)^5=-1</span>.</p>
+          <p class="final"><span class="tex">r=-1</span>, <span class="tex">a_n=(-1)^{n-1}</span>, <span class="tex">a_6=-1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{4}{-2}=-2</span>. So <span class="tex">a=-2</span>, <span class="tex">r=-2</span>.</p>
+          <p class="step"><span class="tex">a_n=-2\times (-2)^{n-1}=(-2)^n</span>. (One extra factor of −2 turns the power from <span class="tex">n-1</span> into <span class="tex">n</span>.)</p>
+          <p class="step"><span class="tex">a_6=(-2)^6=64</span>. The power 6 is even, so the answer is positive.</p>
+          <p class="final"><span class="tex">r=-2</span>, <span class="tex">a_n=(-2)^n</span>, <span class="tex">a_6=64</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{24}{-8}=-3</span>. So <span class="tex">a=-8</span>, <span class="tex">r=-3</span>.</p>
+          <p class="step"><span class="tex">a_n=-8\times (-3)^{n-1}</span>.</p>
+          <p class="step"><span class="tex">(-3)^5=-243</span>, so <span class="tex">a_6=-8\times (-243)=1944</span>.</p>
+          <p class="final"><span class="tex">r=-3</span>, <span class="tex">a_n=-8\times (-3)^{n-1}</span>, <span class="tex">a_6=1944</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-30}{60}=-\dfrac{1}{2}</span>. So <span class="tex">a=60</span>, <span class="tex">r=-\dfrac{1}{2}</span>.</p>
+          <p class="step"><span class="tex">a_n=60\times \left(-\dfrac{1}{2}\right)^{n-1}</span>.</p>
+          <p class="step"><span class="tex">\left(-\dfrac{1}{2}\right)^5=-\dfrac{1}{32}</span>, so <span class="tex">a_6=60\times \left(-\dfrac{1}{32}\right)=-\dfrac{60}{32}=-\dfrac{15}{8}</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{1}{2}</span>, <span class="tex">a_n=60\left(-\dfrac{1}{2}\right)^{n-1}</span>, <span class="tex">a_6=-\dfrac{15}{8}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{512}{-1024}=-\dfrac{1}{2}</span>. So <span class="tex">a=-1024</span>, <span class="tex">r=-\dfrac{1}{2}</span>.</p>
+          <p class="step"><span class="tex">a_n=-1024\times \left(-\dfrac{1}{2}\right)^{n-1}</span>.</p>
+          <p class="step"><span class="tex">\left(-\dfrac{1}{2}\right)^5=-\dfrac{1}{32}</span>, so <span class="tex">a_6=-1024\times \left(-\dfrac{1}{32}\right)=\dfrac{1024}{32}=32</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{1}{2}</span>, <span class="tex">a_n=-1024\left(-\dfrac{1}{2}\right)^{n-1}</span>, <span class="tex">a_6=32</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-3/8}{1/16}=-\dfrac{3}{8}\times 16=-6</span>. Check the next ratio: <span class="tex">\dfrac{9/4}{-3/8}=\dfrac{9}{4}\times \left(-\dfrac{8}{3}\right)=-6</span>.</p>
+          <p class="step">So <span class="tex">a=\dfrac{1}{16}</span>, <span class="tex">r=-6</span>.</p>
+          <p class="step"><span class="tex">a_n=\dfrac{1}{16}\times (-6)^{n-1}</span>.</p>
+          <p class="step"><span class="tex">(-6)^5=-7776</span>, so <span class="tex">a_6=\dfrac{1}{16}\times (-7776)=-486</span>.</p>
+          <p class="final"><span class="tex">r=-6</span>, <span class="tex">a_n=\dfrac{1}{16}(-6)^{n-1}</span>, <span class="tex">a_6=-486</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q11">
+      <h2>11 · Exercise 1C</h2>
+      <div class="stem">
+        <p class="intro">Use <span class="tex">a_n=a r^{n-1}</span> to find how many terms are in each finite sequence. The last number shown is the last term.</p>
+        <p><strong>(a)</strong> <span class="tex">1, 2, 4, \ldots, 64</span></p>
+        <p><strong>(b)</strong> <span class="tex">-1, -3, -9, \ldots, -81</span></p>
+        <p><strong>(c)</strong> <span class="tex">8, 40, 200, \ldots, 125\,000</span></p>
+        <p><strong>(d)</strong> <span class="tex">7, 14, 28, \ldots, 224</span></p>
+        <p><strong>(e)</strong> <span class="tex">2, 14, 98, \ldots, 4802</span></p>
+        <p><strong>(f)</strong> <span class="tex">\dfrac{1}{25}, \dfrac{1}{5}, 1, \ldots, 625</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>. Set this equal to the last term, then match the powers. The answer <span class="tex">n</span> is how many terms there are.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>, <span class="tex">r=2</span>, so <span class="tex">a_n=2^{n-1}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The last term is 64, and <span class="tex">64=2^6</span>. So <span class="tex">2^{n-1}=2^6</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Same base, so the powers match: <span class="tex">n-1=6</span>, hence <span class="tex">n=7</span>.</p>
+          <p class="final">There are 7 terms.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{-3}{-1}=3</span>, so <span class="tex">a=-1</span>, <span class="tex">r=3</span>, and <span class="tex">a_n=-1\times 3^{n-1}=-3^{n-1}</span>.</p>
+          <p class="step">Set the last term: <span class="tex">-3^{n-1}=-81</span>. Divide both sides by −1: <span class="tex">3^{n-1}=81</span>.</p>
+          <p class="step"><span class="tex">81=3^4</span> because <span class="tex">3^2=9</span>, <span class="tex">3^3=27</span>, <span class="tex">3^4=81</span>.</p>
+          <p class="step"><span class="tex">n-1=4</span>, so <span class="tex">n=5</span>.</p>
+          <p class="final">There are 5 terms.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{40}{8}=5</span>, so <span class="tex">a=8</span>, <span class="tex">r=5</span>, and <span class="tex">a_n=8\times 5^{n-1}</span>.</p>
+          <p class="step"><span class="tex">8\times 5^{n-1}=125\,000</span>. Divide both sides by 8: <span class="tex">5^{n-1}=15\,625</span>.</p>
+          <p class="step"><span class="tex">5^2=25</span>, <span class="tex">5^3=125</span>, <span class="tex">5^4=625</span>, <span class="tex">5^5=3125</span>, <span class="tex">5^6=15\,625</span>.</p>
+          <p class="step"><span class="tex">n-1=6</span>, so <span class="tex">n=7</span>.</p>
+          <p class="final">There are 7 terms.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{14}{7}=2</span>, so <span class="tex">a=7</span>, <span class="tex">r=2</span>, and <span class="tex">a_n=7\times 2^{n-1}</span>.</p>
+          <p class="step"><span class="tex">7\times 2^{n-1}=224</span>. Divide by 7: <span class="tex">2^{n-1}=32</span>.</p>
+          <p class="step"><span class="tex">32=2^5</span>, so <span class="tex">n-1=5</span> and <span class="tex">n=6</span>.</p>
+          <p class="final">There are 6 terms.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{14}{2}=7</span>, so <span class="tex">a=2</span>, <span class="tex">r=7</span>, and <span class="tex">a_n=2\times 7^{n-1}</span>.</p>
+          <p class="step"><span class="tex">2\times 7^{n-1}=4802</span>. Divide by 2: <span class="tex">7^{n-1}=2401</span>.</p>
+          <p class="step"><span class="tex">7^2=49</span>, <span class="tex">7^3=343</span>, <span class="tex">7^4=2401</span>.</p>
+          <p class="step"><span class="tex">n-1=4</span>, so <span class="tex">n=5</span>.</p>
+          <p class="final">There are 5 terms.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> <span class="tex">\dfrac{1/5}{1/25}=5</span>, so <span class="tex">a=\dfrac{1}{25}</span>, <span class="tex">r=5</span>.</p>
+          <p class="step"><span class="tex">a_n=\dfrac{1}{25}\times 5^{n-1}</span>. And <span class="tex">\dfrac{1}{25}=5^{-2}</span>, so <span class="tex">a_n=5^{-2}\times 5^{n-1}=5^{n-3}</span>.</p>
+          <p class="step">Last term: <span class="tex">5^{n-3}=625</span>. And <span class="tex">625=5^4</span> because <span class="tex">5^4=625</span>.</p>
+          <p class="step"><span class="tex">n-3=4</span>, so <span class="tex">n=7</span>.</p>
+          <p class="final">There are 7 terms.</p>
         </div>
       </div>
     </article>
     <article class="q" id="q12">
       <h2>12 · Exercise 1C</h2>
       <div class="stem">
-        <p>a The first term of a GP is a = 25 and the fourth term is a4 = 200. Use the formula an = arn−1 to find the common ratio r, then write down the first five terms.</p>
-<p>1C Geometric sequences 19 b The first term of a GP is a = 3 and the sixth term is a6 = 96. Use the formula an = arn−1 to find the common ratio r, then write down the first six terms. c The first term of a GP is a = 1 and the fifth term is a5 = 81. Use the formula an = arn−1 to find the common ratio r, then write down the first five terms.</p>
+        <p class="intro">Use <span class="tex">a_n=a r^{n-1}</span> to find the common ratio, then write the terms asked for.</p>
+        <p><strong>(a)</strong> First term <span class="tex">a=25</span> and fourth term <span class="tex">a_4=200</span>. Find <span class="tex">r</span>, then write the first five terms.</p>
+        <p><strong>(b)</strong> First term <span class="tex">a=3</span> and sixth term <span class="tex">a_6=96</span>. Find <span class="tex">r</span>, then write the first six terms.</p>
+        <p><strong>(c)</strong> First term <span class="tex">a=1</span> and fifth term <span class="tex">a_5=81</span>. Find <span class="tex">r</span>, then write the first five terms. There are two possible ratios.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> an = 25rn−1. Put a4 = 200. 25r4−1 = 200 r3 = 8 r = 2 a1 = 25 a2 = 50 a3 = 100 a4 = 200 a5 = 400</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>. The 4th term uses power <span class="tex">3</span>, so <span class="tex">a r^{3}=a_4</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">25\times r^{3}=200</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Divide both sides by 25: <span class="tex">r^{3}=\dfrac{200}{25}=8</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">2^3=8</span>, so <span class="tex">r=2</span>. (A negative number cubed is negative, so <span class="tex">r=-2</span> does not work.)</p>
+          <p class="step"><strong>Step 4 ·</strong> Multiply by 2 each time, starting at 25.</p>
+          <p class="step"><span class="tex">25,\; 50,\; 100,\; 200,\; 400</span>.</p>
+          <p class="final"><span class="tex">r=2</span>. First five terms: 25, 50, 100, 200, 400.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> an = 3rn−1. Put a6 = 96. 3r6−1 = 96 r5 = 32 r = 2</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q13">
-      <h2>13 · Exercise 1C</h2>
-      <div class="stem">
-        <p>Use the formula an = arn−1 to find the common ratio r of a GP for which: a = 486 and a5 = 2</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a = 486 and a5 = 2</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q14">
-      <h2>14 · Exercise 1C</h2>
-      <div class="stem">
-        <p>The nth term of a geometric sequence is an = 25 × 2n. a Write out the first six terms and hence find the values of a and r. b Which term of the sequence is 6400? c Find in factored form a50 × a25 and a50 ÷ a25. d Prove that a9 × a11 = 25 × a20. e Write out the terms between 1000 and 100 000. How how many of them are there? f Verify by calculations that a11 = 51 200 is the last term less than 100 000 and that a12 = 102 400 is the first term greater than 100 000.</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">a1 = 50 a2 = 100 a3 = 200 a4 = 400 a5 = 800 a6 = 1600</p>
-<p class="step"><strong>a ·</strong> = 50, r = a2 a1 = 100 50 = 2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> Put an = 6400 25 × 2n = 6400 2n = 256 n = 8 Hence a8 = 6400</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a50 × a25 = 25(2)50 × 25(2)25 = 252 × 275 = 54 × 275 a50 ÷ a25 = 25(2)50 ÷ 25(2)25 = 225</p>
+          <p class="step"><strong>Same method ·</strong> The 6th term uses power <span class="tex">5</span>. <span class="tex">3\times r^{5}=96</span>.</p>
+          <p class="step">Divide by 3: <span class="tex">r^{5}=32</span>.</p>
+          <p class="step"><span class="tex">2^5=32</span>, so <span class="tex">r=2</span>. An odd power has only one real answer.</p>
+          <p class="step">Start at 3 and keep multiplying by 2: <span class="tex">3, 6, 12, 24, 48, 96</span>.</p>
+          <p class="final"><span class="tex">r=2</span>. First six terms: 3, 6, 12, 24, 48, 96.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a9 × a11 = 25(2)9 × 25(2)11 = 25 × 25 × (2)20 = 25 × a20</p>
+          <p class="step"><strong>Same method ·</strong> The 5th term uses power <span class="tex">4</span>. <span class="tex">1\times r^{4}=81</span>, so <span class="tex">r^{4}=81</span>.</p>
+          <p class="step"><span class="tex">3^4=81</span> and <span class="tex">(-3)^4=81</span> because the power is even. So <span class="tex">r=3</span> or <span class="tex">r=-3</span>.</p>
+          <p class="step"><strong>If <span class="tex">r=3</span> ·</strong> <span class="tex">1, 3, 9, 27, 81</span>.</p>
+          <p class="step"><strong>If <span class="tex">r=-3</span> ·</strong> signs flip: <span class="tex">1, -3, 9, -27, 81</span>.</p>
+          <p class="final"><span class="tex">r=3</span> gives 1, 3, 9, 27, 81. <span class="tex">r=-3</span> gives 1, −3, 9, −27, 81.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q13">
+      <h2>13 · Exercise 1C</h2>
+      <div class="stem">
+        <p class="intro">Use <span class="tex">a_n=a r^{n-1}</span> to find the common ratio <span class="tex">r</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">a=486</span> and <span class="tex">a_5=\dfrac{2}{27}</span></p>
+        <p><strong>(b)</strong> <span class="tex">a=1000</span> and <span class="tex">a_7=0.001</span></p>
+        <p><strong>(c)</strong> <span class="tex">a=32</span> and <span class="tex">a_6=-243</span></p>
+        <p><strong>(d)</strong> <span class="tex">a=5</span> and <span class="tex">a_7=40</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> The 5th term uses power 4: <span class="tex">a r^{4}=a_5</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">486\times r^{4}=\dfrac{2}{27}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Divide both sides by 486: <span class="tex">r^{4}=\dfrac{2}{27\times 486}</span>.</p>
+          <p class="step"><span class="tex">27\times 486=13\,122</span>, so <span class="tex">r^{4}=\dfrac{2}{13\,122}=\dfrac{1}{6561}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">6561=3^8</span> and <span class="tex">\left(\dfrac{1}{9}\right)^4=\dfrac{1}{9^4}=\dfrac{1}{(3^2)^4}=\dfrac{1}{3^8}</span>.</p>
+          <p class="step">Also <span class="tex">\left(-\dfrac{1}{9}\right)^4</span> is the same, because the power is even.</p>
+          <p class="final"><span class="tex">r=\dfrac{1}{9}</span> or <span class="tex">r=-\dfrac{1}{9}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> The 7th term uses power 6. <span class="tex">0.001=\dfrac{1}{1000}</span>.</p>
+          <p class="step"><span class="tex">1000\times r^{6}=\dfrac{1}{1000}</span>, so <span class="tex">r^{6}=\dfrac{1}{1000\times 1000}=\dfrac{1}{1\,000\,000}=10^{-6}</span>.</p>
+          <p class="step"><span class="tex">\left(\dfrac{1}{10}\right)^6=10^{-6}</span> and <span class="tex">\left(-\dfrac{1}{10}\right)^6</span> is the same, because the power is even.</p>
+          <p class="final"><span class="tex">r=\dfrac{1}{10}</span> or <span class="tex">r=-\dfrac{1}{10}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Same method ·</strong> The 6th term uses power 5. <span class="tex">32\times r^{5}=-243</span>.</p>
+          <p class="step"><span class="tex">r^{5}=\dfrac{-243}{32}</span>.</p>
+          <p class="step"><span class="tex">243=3^5</span> and <span class="tex">32=2^5</span>, so <span class="tex">\dfrac{-243}{32}=\left(-\dfrac{3}{2}\right)^5</span>.</p>
+          <p class="step">Power 5 is odd, so there is only one real answer.</p>
+          <p class="final"><span class="tex">r=-\dfrac{3}{2}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> There are 6 terms, they are: a6 = 1600 a7 = 3200 a8 = 6400 a9 = 12 800 a10 = 25 600 a11 = 51 200</p>
+          <p class="step"><strong>Same method ·</strong> The 7th term uses power 6. <span class="tex">5\times r^{6}=40</span>.</p>
+          <p class="step">Divide by 5: <span class="tex">r^{6}=8</span>.</p>
+          <p class="step"><span class="tex">8=2^3</span>. We need a number whose 6th power is <span class="tex">2^3</span>.</p>
+          <p class="step"><span class="tex">\left(\sqrt{2}\right)^6=\left(2^{1/2}\right)^6=2^{3}=8</span>. The same works for <span class="tex">-\sqrt{2}</span> because the power is even.</p>
+          <p class="final"><span class="tex">r=\sqrt{2}</span> or <span class="tex">r=-\sqrt{2}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q14">
+      <h2>14 · Exercise 1C</h2>
+      <div class="stem">
+        <p class="intro">The <span class="tex">n</span>th term of a geometric sequence is <span class="tex">a_n=25\times 2^{n}</span>.</p>
+        <p><strong>(a)</strong> Write out the first six terms and hence find <span class="tex">a</span> and <span class="tex">r</span>.</p>
+        <p><strong>(b)</strong> Which term of the sequence is 6400?</p>
+        <p><strong>(c)</strong> Find <span class="tex">a_{50}\times a_{25}</span> and <span class="tex">a_{50}\div a_{25}</span> in factored form.</p>
+        <p><strong>(d)</strong> Show that <span class="tex">a_9\times a_{11}=25\times a_{20}</span>.</p>
+        <p><strong>(e)</strong> Write out the terms between 1000 and 100 000. How many of them are there?</p>
+        <p><strong>(f)</strong> Check by calculation that <span class="tex">a_{11}=51\,200</span> is the last term less than 100 000, and that <span class="tex">a_{12}=102\,400</span> is the first term greater than 100 000.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Put <span class="tex">n=1,2,3,\ldots</span> into the given formula. The first number you get is <span class="tex">a</span>. Then <span class="tex">r</span> is second ÷ first.</p>
+          <p class="step"><span class="tex">a_1=25\times 2^{1}=50</span></p>
+          <p class="step"><span class="tex">a_2=25\times 2^{2}=25\times 4=100</span></p>
+          <p class="step"><span class="tex">a_3=25\times 8=200</span></p>
+          <p class="step"><span class="tex">a_4=25\times 16=400</span></p>
+          <p class="step"><span class="tex">a_5=25\times 32=800</span></p>
+          <p class="step"><span class="tex">a_6=25\times 64=1600</span></p>
+          <p class="step"><span class="tex">r=\dfrac{100}{50}=2</span>.</p>
+          <p class="final">First six terms: 50, 100, 200, 400, 800, 1600. So <span class="tex">a=50</span> and <span class="tex">r=2</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> Set the formula equal to 6400: <span class="tex">25\times 2^{n}=6400</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Divide by 25: <span class="tex">2^{n}=\dfrac{6400}{25}=256</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">256=2^8</span> because <span class="tex">2^8=256</span>. So <span class="tex">n=8</span>.</p>
+          <p class="final">6400 is the 8th term, <span class="tex">a_8</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Product ·</strong> <span class="tex">a_{50}=25\times 2^{50}</span> and <span class="tex">a_{25}=25\times 2^{25}</span>.</p>
+          <p class="step"><span class="tex">a_{50}\times a_{25}=25\times 25\times 2^{50}\times 2^{25}=25^{2}\times 2^{75}</span>.</p>
+          <p class="step"><span class="tex">25=5^2</span>, so <span class="tex">25^{2}=5^{4}</span>. Factored form: <span class="tex">5^{4}\times 2^{75}</span>.</p>
+          <p class="step"><strong>Quotient ·</strong> <span class="tex">\dfrac{a_{50}}{a_{25}}=\dfrac{25\times 2^{50}}{25\times 2^{25}}=2^{50-25}=2^{25}</span>.</p>
+          <p class="final"><span class="tex">a_{50}\times a_{25}=5^{4}\times 2^{75}</span> and <span class="tex">a_{50}\div a_{25}=2^{25}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><strong>Left side ·</strong> <span class="tex">a_9=25\times 2^{9}</span> and <span class="tex">a_{11}=25\times 2^{11}</span>.</p>
+          <p class="step"><span class="tex">a_9\times a_{11}=25\times 25\times 2^{9+11}=625\times 2^{20}</span>.</p>
+          <p class="step"><strong>Right side ·</strong> <span class="tex">a_{20}=25\times 2^{20}</span>, so <span class="tex">25\times a_{20}=25\times 25\times 2^{20}=625\times 2^{20}</span>.</p>
+          <p class="final">Both sides equal <span class="tex">625\times 2^{20}</span>, so <span class="tex">a_9\times a_{11}=25\times a_{20}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a12 = 25 × 212 = 102 400 whereas a11 = 25 × 211 = 51 200. Hence a11 is the last term less than 100 000 and a12 = 102 400 is the first term greater than 100 000.</p>
+          <p class="step"><strong>Step 1 ·</strong> Keep doubling from the list in part (a) until the terms pass 100 000.</p>
+          <p class="step"><span class="tex">a_6=1600</span> (this is already above 1000)</p>
+          <p class="step"><span class="tex">a_7=3200</span>, <span class="tex">a_8=6400</span>, <span class="tex">a_9=12\,800</span>, <span class="tex">a_{10}=25\,600</span>, <span class="tex">a_{11}=51\,200</span>.</p>
+          <p class="step"><span class="tex">a_{12}=102\,400</span>, which is past 100 000, so it is not “between”.</p>
+          <p class="final">The six terms are 1600, 3200, 6400, 12 800, 25 600, 51 200.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">2^{10}=1024</span>, so <span class="tex">2^{11}=2048</span> and <span class="tex">2^{12}=4096</span>.</p>
+          <p class="step"><span class="tex">a_{11}=25\times 2048=51\,200</span>, and <span class="tex">51\,200&lt;100\,000</span>.</p>
+          <p class="step"><span class="tex">a_{12}=25\times 4096=102\,400</span>, and <span class="tex">102\,400&gt;100\,000</span>.</p>
+          <p class="final"><span class="tex">a_{11}=51\,200</span> is the last term under 100 000. <span class="tex">a_{12}=102\,400</span> is the first term over 100 000.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q15">
       <h2>15 · Exercise 1C</h2>
       <div class="stem">
-        <p>a A piece of paper 0.1 mm thick is folded successively 100 times. How thick is it now? b A tape 1 metre long is cut in halves, and one part discarded. Then the remaining part is cut in halves, and one part discarded. This process is repeated 33 times. How long is the final piece of tape?</p>
+        <p><strong>(a)</strong> A piece of paper 0.1 mm thick is folded in half, again and again, 100 times. How thick is it after 100 folds?</p>
+        <p><strong>(b)</strong> A tape 1 metre long is cut in half and one part is thrown away. The remaining part is cut in half again, and one part is thrown away. This is done 33 times. How long is the final piece?</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> Start with 0.1. Each term is 2 times the previous term. The sequence is: 0.1, 0.2, 0.4, . . . Hence, this is a GP with a = 0.1 and r = 2. a101 is equivalent to the thickness from 100 successive folds. an = arn−1 a101 = 0.1 × 2100 a101 = 2100 10 mm ≑1.27 × 1023 km ≑1.34 × 1010 light years Note that the universe is estimated to be 13.8 billion years old. So the paper thickness is about the distance light would travel in the age of the universe. To answer tricky follow up questions from curious students: Light that reaches us today from the early universe (the CMB, as far back as we can see) was originally emitted &quot;only&quot; 42 million light-years away, when everything was a condensed plasma. While space expanded, that light had to travel for 13.8 billion years to reach us. That original piece of the plasma that we’re seeing now would currently be about 46 billion light-years away, due to the expansion of space. So the paper thickness is about 10% of the distance across the current observable universe.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Each fold doubles the thickness, so this is a GP with <span class="tex">r=2</span>. Term 1 is the thickness <em>before</em> any fold. After 100 folds we are at term 101, because <span class="tex">a_n=a r^{n-1}</span> and the power must be 100.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=0.1</span>, <span class="tex">r=2</span>. After 100 doubles: <span class="tex">a_{101}=0.1\times 2^{100}=\dfrac{2^{100}}{10}</span> mm.</p>
+          <p class="step"><strong>Step 2 ·</strong> Change millimetres into kilometres. <span class="tex">1\,\text{km}=1\,000\,000\,\text{mm}=10^{6}\,\text{mm}</span>.</p>
+          <p class="step">Thickness in km <span class="tex">=\dfrac{2^{100}}{10\times 10^{6}}=\dfrac{2^{100}}{10^{7}}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">2^{10}=1024\approx 1.024\times 10^{3}</span>, so <span class="tex">2^{100}=(2^{10})^{10}\approx 1.2677\times 10^{30}</span>.</p>
+          <p class="step"><span class="tex">\dfrac{1.2677\times 10^{30}}{10^{7}}\approx 1.27\times 10^{23}</span> km.</p>
+          <p class="step">A light-year is about <span class="tex">9.46\times 10^{12}</span> km, so this thickness is about <span class="tex">1.34\times 10^{10}</span> light-years. That is an enormous distance, far beyond the Solar System.</p>
+          <p class="final">About <span class="tex">1.27\times 10^{23}</span> km, which is about <span class="tex">1.34\times 10^{10}</span> light-years. Exact thickness: <span class="tex">\dfrac{2^{100}}{10}</span> mm.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> After each cut, the remaining length is halved. Starting with (1) m, after 33 repetitions, L = 1/1</p>
+          <p class="formula-quick"><strong>Formula:</strong> Each cut keeps half the length, so multiply by <span class="tex">\dfrac{1}{2}</span> each time. After 33 cuts the length is <span class="tex">1\times \left(\dfrac{1}{2}\right)^{33}</span> metres.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\left(\dfrac{1}{2}\right)^{33}=\dfrac{1}{2^{33}}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">2^{10}=1024</span>, <span class="tex">2^{20}=1\,048\,576</span>, <span class="tex">2^{30}=1\,073\,741\,824</span>.</p>
+          <p class="step"><span class="tex">2^{33}=2^{30}\times 2^{3}=1\,073\,741\,824\times 8=8\,589\,934\,592</span>.</p>
+          <p class="step"><span class="tex">\dfrac{1}{8\,589\,934\,592}\approx 1.16\times 10^{-10}</span> m.</p>
+          <p class="step">Rounded to two significant figures this is about <span class="tex">1.2\times 10^{-10}</span> m, about the size of a small atom.</p>
+          <p class="final">About <span class="tex">1.16\times 10^{-10}</span> m (about <span class="tex">1.2\times 10^{-10}</span> m).</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q16">
       <h2>16 · Exercise 1C</h2>
       <div class="stem">
-        <p>a Write down the first few terms of the GP generated by substituting the positive integers into the exponential function f(x) = 4 25 × 5x. Then write down a formula for the nth term. b i Find the formula of the nth term an of the GP 5, 10, 20, 40, 80 . . . . Then write down the exponential function f(x) that generates this GP when the positive integers are substituted into it. ii Graph the function (without the same scale on both axes) and mark the points (1, 5), (2, 10), (3, 20), (4, 40), (5, 80).</p>
+        <p><strong>(a)</strong> Write the first few terms of the GP made by putting the positive integers into <span class="tex">f(x)=\dfrac{4}{25}\times 5^{x}</span>. Then write a formula for the <span class="tex">n</span>th term.</p>
+        <p><strong>(b) (i)</strong> Find a formula for <span class="tex">a_n</span> of the GP <span class="tex">5, 10, 20, 40, 80, \ldots</span>. Then write the exponential function <span class="tex">f(x)</span> that gives this GP when the positive integers are substituted.</p>
+        <p><strong>(b) (ii)</strong> Graph that function. The two axes do not need the same scale. Mark the points <span class="tex">(1,5)</span>, <span class="tex">(2,10)</span>, <span class="tex">(3,20)</span>, <span class="tex">(4,40)</span>, <span class="tex">(5,80)</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> 4/5, 4, 20, 100, 500 and an = 4 25 × 5n</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> The positive integers are <span class="tex">x=1,2,3,\ldots</span>. The <span class="tex">n</span>th term is the function value when <span class="tex">x=n</span>.</p>
+          <p class="step"><span class="tex">f(1)=\dfrac{4}{25}\times 5=\dfrac{4}{5}</span></p>
+          <p class="step"><span class="tex">f(2)=\dfrac{4}{25}\times 25=4</span></p>
+          <p class="step"><span class="tex">f(3)=\dfrac{4}{25}\times 125=20</span></p>
+          <p class="step"><span class="tex">f(4)=\dfrac{4}{25}\times 625=100</span></p>
+          <p class="step"><span class="tex">f(5)=\dfrac{4}{25}\times 3125=500</span></p>
+          <p class="final">Terms: <span class="tex">\dfrac{4}{5}, 4, 20, 100, 500, \ldots</span> and <span class="tex">a_n=\dfrac{4}{25}\times 5^{n}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b i</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> i This is a GP with r = a2 a1 = 10 5 = 2 and a = 5. Hence an = 5(2)n−1 = 5 2(2)n.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=5</span> and <span class="tex">r=\dfrac{10}{5}=2</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_n=5\times 2^{n-1}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">2^{n-1}=\dfrac{2^{n}}{2}</span>, so <span class="tex">a_n=5\times \dfrac{2^{n}}{2}=\dfrac{5}{2}\times 2^{n}</span>.</p>
+          <p class="step">That is the same as putting <span class="tex">x=n</span> into <span class="tex">f(x)=\dfrac{5}{2}\times 2^{x}</span>.</p>
+          <p class="final"><span class="tex">a_n=5\times 2^{n-1}=\dfrac{5}{2}\times 2^{n}</span> and <span class="tex">f(x)=\dfrac{5}{2}\times 2^{x}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b ii</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> The curve is <span class="tex">y=\dfrac{5}{2}\times 2^{x}</span>. It rises slowly at first, then much faster. The <span class="tex">y</span>-axis is squeezed so that <span class="tex">y=80</span> still fits. One unit across is not the same length as one unit up.</p>
+          <div class="plot-frame">
+            <svg class="plot" viewBox="0 0 520 300" role="img" aria-label="Graph of y equals five-halves times 2 to the x, with five marked points">
+              <line class="axis" x1="48" y1="252" x2="400" y2="252" />
+              <line class="axis" x1="48" y1="252" x2="48" y2="22" />
+              <polygon points="400,252 392,247 392,257" fill="#9aa3b0" />
+              <polygon points="48,22 43,30 53,30" fill="#9aa3b0" />
+              <text x="408" y="256" font-size="13" fill="#243044">x</text>
+              <text x="36" y="16" font-size="13" fill="#243044">y</text>
+              <g font-size="12" fill="#5c6b7a" text-anchor="middle">
+                <line class="axis" x1="106" y1="252" x2="106" y2="256" /><text x="106" y="272">1</text>
+                <line class="axis" x1="164" y1="252" x2="164" y2="256" /><text x="164" y="272">2</text>
+                <line class="axis" x1="222" y1="252" x2="222" y2="256" /><text x="222" y="272">3</text>
+                <line class="axis" x1="280" y1="252" x2="280" y2="256" /><text x="280" y="272">4</text>
+                <line class="axis" x1="338" y1="252" x2="338" y2="256" /><text x="338" y="272">5</text>
+              </g>
+              <g font-size="12" fill="#5c6b7a" text-anchor="end">
+                <line class="axis" x1="44" y1="208" x2="48" y2="208" /><text x="40" y="212">20</text>
+                <line class="axis" x1="44" y1="164" x2="48" y2="164" /><text x="40" y="168">40</text>
+                <line class="axis" x1="44" y1="120" x2="48" y2="120" /><text x="40" y="124">60</text>
+                <line class="axis" x1="44" y1="76" x2="48" y2="76" /><text x="40" y="80">80</text>
+              </g>
+              <polyline class="curve image" points="48,246.5 77,244.2 106,241 135,236.4 164,230 193,220.9 222,208 251,189.8 280,164 309,127.5 338,76 356,36" />
+              <g fill="#0b3a5b" stroke="#fbfaf7" stroke-width="1.5">
+                <circle cx="106" cy="241" r="4.5" />
+                <circle cx="164" cy="230" r="4.5" />
+                <circle cx="222" cy="208" r="4.5" />
+                <circle cx="280" cy="164" r="4.5" />
+                <circle cx="338" cy="76" r="4.5" />
+              </g>
+              <text x="64" y="44" font-size="14" fill="#0b3a5b">y = (5/2) · 2^x</text>
+            </svg>
+          </div>
+          <p class="plot-note">Marked points, listed so the labels stay off the curve: (1, 5), (2, 10), (3, 20), (4, 40), (5, 80).</p>
+          <p class="final">The graph is the rising curve <span class="tex">y=\dfrac{5}{2}\times 2^{x}</span> with those five points marked. The axes do not use the same scale.</p>
         </div>
       </div>
     </article>
     <article class="q" id="q17">
       <h2>17 · Exercise 1C</h2>
       <div class="stem">
-        <p>a Explain whether or not the infinite sequence 7, 7, 7, . . . is a GP.<br/>
-b What function corresponds to this sequence, and can it be written as an exponential function?</p>
+        <p><strong>(a)</strong> Explain whether the infinite sequence <span class="tex">7, 7, 7, \ldots</span> is a GP.</p>
+        <p><strong>(b)</strong> What function matches this sequence, and can it be written as an exponential function?</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> Yes, it is a GP. It has first term a = 7 and common ratio r = 7 7 = 1.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{7}{7}=1</span> and the next ratio is also 1. The multiplier never changes.</p>
+          <p class="step"><strong>Step 2 ·</strong> A common ratio of 1 is allowed. The terms stay the same.</p>
+          <p class="final">Yes. It is a GP with <span class="tex">a=7</span> and <span class="tex">r=1</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Since each term is the same, the constant function y = 7 represents this sequence i.e. f(x) = 7 for all input x. Further, as 1x = 1 for all x, y = 7 × 1x.</p>
+          <p class="step"><strong>Step 1 ·</strong> Every term is 7, so the matching function is the constant function <span class="tex">f(x)=7</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1^{x}=1</span> for every <span class="tex">x</span>, so <span class="tex">7=7\times 1^{x}</span>.</p>
+          <p class="final">Yes. It can be written as the exponential <span class="tex">y=7\times 1^{x}</span>.</p>
         </div>
       </div>
     </article>
-    <article class="q" id="q18">
-      <h2>18 · Exercise 1C</h2>
-      <div class="stem">
-        <p>and series 1C</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">This is a GP with r = a2 a1 =</p>
 
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q19">
-      <h2>19 · Exercise 1C</h2>
+    <article class="q" id="q18">
+      <h2>18 · Exercise 1C <span class="band ch">Challenge</span></h2>
       <div class="stem">
-        <p>a Find a formula for an in 2x, 2x2, 2x3, . . . Then find x if a6 = 2.<br/>
-b Find a formula for an in x4, x2, 1, .. . Then find x if a6 = 36.<br/>
-c Find a formula for an in 2−16x, 2−12x, 2−8x, . . . Then find x if a6 = 96.</p>
+        <p class="intro">Find a formula for the <span class="tex">n</span>th term of each GP.</p>
+        <p><strong>(a)</strong> <span class="tex">\sqrt{6},\; 2\sqrt{3},\; 2\sqrt{6},\; \ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">ax,\; a^{2}x^{3},\; a^{3}x^{5},\; \ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">-\dfrac{x}{y},\; -1,\; -\dfrac{y}{x},\; \ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">This is a GP with r = a2 a1 = 2x2 2x = x and a = 2x. Hence an = arn−1 = 2x(x)n−1 = 2xn. Put a6 = 2. 2x6 = 2 x6 = 1 x = ±1</p>
-<p class="step"><strong>a ·</strong> This is a GP with r = a2 a1 = x2 x4 = x−2 and a = x4. Hence an = arn−1 = x4  x−2n−1 = x4x2−2n = x6−2n. Put a6 = 36. x6−12 = 36 x−6 = 36 x6 = 3−6 x6 = 1</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q20">
-      <h2>20 · Exercise 1C</h2>
-      <div class="stem">
-        <p>a What are the first term and common ratio of the GP generated by substituting the positive integers into the exponential function f(x) = c bx? b What is the equation of the exponential function that generates a GP with first term a and ratio r when the positive integers are substituted into it?</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> a = f(1) = cb, r = f(2) f(1) = cb2 cb = b First term is cb and common ratio is b.</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=\dfrac{\text{second}}{\text{first}}</span>, then <span class="tex">a_n=a r^{n-1}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">r=\dfrac{2\sqrt{3}}{\sqrt{6}}</span>.</p>
+          <p class="step">Write <span class="tex">\sqrt{6}=\sqrt{3}\times \sqrt{2}</span>, so <span class="tex">r=\dfrac{2\sqrt{3}}{\sqrt{3}\times \sqrt{2}}=\dfrac{2}{\sqrt{2}}</span>.</p>
+          <p class="step"><span class="tex">\dfrac{2}{\sqrt{2}}=\dfrac{2}{\sqrt{2}}\times \dfrac{\sqrt{2}}{\sqrt{2}}=\dfrac{2\sqrt{2}}{2}=\sqrt{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> First term <span class="tex">a=\sqrt{6}</span>, so <span class="tex">a_n=\sqrt{6}\,(\sqrt{2})^{n-1}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\sqrt{6}=\sqrt{3}\times \sqrt{2}</span>, so <span class="tex">\sqrt{6}\,(\sqrt{2})^{n-1}=\sqrt{3}\,(\sqrt{2})^{n}</span>.</p>
+          <p class="final"><span class="tex">a_n=\sqrt{3}\,(\sqrt{2})^{n}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> We know for a sequence with first term a and ratio r that an = ar n−1 = a × rn r = a r × rn Hence a generating function for this sequence would be f(x) = a r × rx</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q21">
-      <h2>21 · Exercise 1C</h2>
-      <div class="stem">
-        <p>a What exponential function corresponds to a GP with ratio r and first term 1?<br/>
-b What sort of sequences correspond to exponential function with y-intercept 1?<br/>
-c What exponential function corresponds to a GP with first term a and ratio r?<br/>
-d What GP corresponds to the function y = arx?</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Consider y = f(x) = 1 r rx = rx−1. The first term is f(1) = 1 r × r = 1 and the common ratio is f(c + 1)/ f(c) = rc/rc−1 = r where c is an arbitrary positive integer.</p>
-<p class="step"><strong>a ·</strong> Consider f(x) = rx where r is the ratio of a GP. This satisfies the condition f(0) = 1, but also note that f(1) = r – all GPs represented by this exponential function have first term a = r.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> Consider f(x) = βrx where r is the ratio. Since the first term is a, f(1) = a ⇒a = β × r ⇒β = a r . Thus, f(x) = a r × rx.</p>
+          <p class="step"><strong>Step 1 ·</strong> Here the letter <span class="tex">a</span> is a number in the question, not “the first term” by itself. The first term is the whole first piece, <span class="tex">ax</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{a^{2}x^{3}}{ax}=a x^{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">a_n=(ax)\,(a x^{2})^{n-1}</span>.</p>
+          <p class="step"><span class="tex">(a x^{2})^{n-1}=a^{n-1} x^{2n-2}</span>.</p>
+          <p class="step"><span class="tex">a_n=a x \times a^{n-1} x^{2n-2}=a^{n} x^{2n-1}</span>.</p>
+          <p class="final"><span class="tex">a_n=a^{n} x^{2n-1}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Consider y = arx. The first term is given by y(1) = ar and the common ratio y(2) y(1) = ar2 ar = r. Hence, this function represents the GP with first term ar and ratio r.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">r=\dfrac{-1}{-x/y}=\dfrac{y}{x}</span>. Check the next ratio: <span class="tex">\dfrac{-y/x}{-1}=\dfrac{y}{x}</span>. Same ratio.</p>
+          <p class="step"><strong>Step 2 ·</strong> First term is <span class="tex">-\dfrac{x}{y}</span>, so <span class="tex">a_n=\left(-\dfrac{x}{y}\right)\left(\dfrac{y}{x}\right)^{n-1}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{x}{y}=\left(\dfrac{y}{x}\right)^{-1}</span>, so <span class="tex">a_n=-\left(\dfrac{y}{x}\right)^{-1}\left(\dfrac{y}{x}\right)^{n-1}=-\left(\dfrac{y}{x}\right)^{n-2}</span>.</p>
+          <p class="step">That is the same as <span class="tex">-x^{2-n} y^{n-2}</span>.</p>
+          <p class="final"><span class="tex">a_n=-\left(\dfrac{y}{x}\right)^{n-2}=-x^{2-n} y^{n-2}</span>.</p>
         </div>
       </div>
     </article>
+
+    <article class="q" id="q19">
+      <h2>19 · Exercise 1C</h2>
+      <div class="stem">
+        <p><strong>(a)</strong> Find a formula for <span class="tex">a_n</span> in <span class="tex">2x,\; 2x^{2},\; 2x^{3},\; \ldots</span> Then find <span class="tex">x</span> if <span class="tex">a_6=2</span>.</p>
+        <p><strong>(b)</strong> Find a formula for <span class="tex">a_n</span> in <span class="tex">x^{4},\; x^{2},\; 1,\; \ldots</span> Then find <span class="tex">x</span> if <span class="tex">a_6=3^{6}</span>.</p>
+        <p><strong>(c)</strong> Find a formula for <span class="tex">a_n</span> in <span class="tex">2^{-16}x,\; 2^{-12}x,\; 2^{-8}x,\; \ldots</span> Then find <span class="tex">x</span> if <span class="tex">a_6=96</span>. Here <span class="tex">x</span> is multiplied by the power of 2. It is not inside the exponent.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">r=\dfrac{2x^{2}}{2x}=x</span>. First term <span class="tex">a=2x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_n=(2x)\, x^{n-1}=2x^{n}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Put <span class="tex">n=6</span>: <span class="tex">2x^{6}=2</span>. Divide by 2: <span class="tex">x^{6}=1</span>.</p>
+          <p class="step"><span class="tex">1^{6}=1</span> and <span class="tex">(-1)^{6}=1</span>, so <span class="tex">x=1</span> or <span class="tex">x=-1</span>.</p>
+          <p class="final"><span class="tex">a_n=2x^{n}</span> and <span class="tex">x=\pm 1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">r=\dfrac{x^{2}}{x^{4}}=x^{-2}=\dfrac{1}{x^{2}}</span>. First term <span class="tex">a=x^{4}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_n=x^{4}\,(x^{-2})^{n-1}=x^{4}\times x^{-2n+2}=x^{6-2n}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Put <span class="tex">n=6</span>: <span class="tex">x^{6-12}=x^{-6}=3^{6}</span>.</p>
+          <p class="step">Take the reciprocal of both sides: <span class="tex">x^{6}=3^{-6}=\left(\dfrac{1}{3}\right)^{6}</span>.</p>
+          <p class="step">So <span class="tex">x=\dfrac{1}{3}</span> or <span class="tex">x=-\dfrac{1}{3}</span> (even power).</p>
+          <p class="final"><span class="tex">a_n=x^{6-2n}</span> and <span class="tex">x=\pm \dfrac{1}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> The <span class="tex">x</span> cancels in the ratio: <span class="tex">r=\dfrac{2^{-12}x}{2^{-16}x}=2^{-12-(-16)}=2^{4}=16</span>.</p>
+          <p class="step">First term <span class="tex">a=2^{-16}x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_n=2^{-16}x \times 16^{n-1}</span>. And <span class="tex">16=2^{4}</span>, so <span class="tex">16^{n-1}=(2^{4})^{n-1}=2^{4n-4}</span>.</p>
+          <p class="step"><span class="tex">a_n=x\times 2^{-16}\times 2^{4n-4}=x\times 2^{4n-20}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Put <span class="tex">n=6</span>: <span class="tex">x\times 2^{24-20}=x\times 2^{4}=16x</span>.</p>
+          <p class="step"><span class="tex">16x=96</span>, so <span class="tex">x=\dfrac{96}{16}=6</span>.</p>
+          <p class="final"><span class="tex">a_n=x\times 2^{4n-20}</span> and <span class="tex">x=6</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q20">
+      <h2>20 · Exercise 1C</h2>
+      <div class="stem">
+        <p><strong>(a)</strong> What are the first term and the common ratio of the GP made by putting the positive integers into <span class="tex">f(x)=c\, b^{x}</span>?</p>
+        <p><strong>(b)</strong> What exponential function makes a GP with first term <span class="tex">a</span> and ratio <span class="tex">r</span> when the positive integers are substituted?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> The first term is the value at <span class="tex">x=1</span>: <span class="tex">f(1)=c\, b^{1}=cb</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The next value is <span class="tex">f(2)=c\, b^{2}</span>.</p>
+          <p class="step"><span class="tex">r=\dfrac{f(2)}{f(1)}=\dfrac{c b^{2}}{c b}=b</span>.</p>
+          <p class="final">First term <span class="tex">cb</span>, common ratio <span class="tex">b</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> A GP with first term <span class="tex">a</span> and ratio <span class="tex">r</span> has <span class="tex">a_n=a r^{n-1}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r^{n-1}=\dfrac{r^{n}}{r}</span>, so <span class="tex">a_n=\dfrac{a}{r}\times r^{n}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Replace <span class="tex">n</span> by <span class="tex">x</span>. The function is <span class="tex">f(x)=\dfrac{a}{r}\, r^{x}</span>.</p>
+          <p class="step">Check: <span class="tex">f(1)=\dfrac{a}{r}\times r=a</span>, and the ratio of the next value to this one is <span class="tex">r</span>.</p>
+          <p class="final"><span class="tex">f(x)=\dfrac{a}{r}\, r^{x}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q21">
+      <h2>21 · Exercise 1C</h2>
+      <div class="stem">
+        <p><strong>(a)</strong> What exponential function matches a GP with ratio <span class="tex">r</span> and first term 1?</p>
+        <p><strong>(b)</strong> What sort of sequences match an exponential function whose <span class="tex">y</span>-intercept is 1?</p>
+        <p><strong>(c)</strong> What exponential function matches a GP with first term <span class="tex">a</span> and ratio <span class="tex">r</span>?</p>
+        <p><strong>(d)</strong> What GP matches the function <span class="tex">y=a r^{x}</span>?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> First term 1 and ratio <span class="tex">r</span> means <span class="tex">a_n=1\times r^{n-1}=r^{n-1}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Replace <span class="tex">n</span> by <span class="tex">x</span>: <span class="tex">f(x)=r^{x-1}</span>.</p>
+          <p class="step">The same function can be written <span class="tex">f(x)=\dfrac{1}{r}\, r^{x}</span>, because <span class="tex">r^{x-1}=\dfrac{r^{x}}{r}</span>.</p>
+          <p class="step">Check with <span class="tex">r=2</span>: <span class="tex">f(1)=1</span>, <span class="tex">f(2)=2</span>, <span class="tex">f(3)=4</span>. That is a GP with first term 1 and ratio 2.</p>
+          <p class="final"><span class="tex">f(x)=r^{x-1}</span> (or <span class="tex">f(x)=\dfrac{1}{r}\, r^{x}</span>).</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> A <span class="tex">y</span>-intercept of 1 means <span class="tex">f(0)=1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The simple exponential with that intercept is <span class="tex">f(x)=r^{x}</span>, because <span class="tex">r^{0}=1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The sequence uses the positive integers, not zero. <span class="tex">f(1)=r</span>, <span class="tex">f(2)=r^{2}</span>, <span class="tex">f(3)=r^{3}</span>, and so on.</p>
+          <p class="final">They are GPs whose first term is <span class="tex">r</span> (the same number as the ratio). Example: <span class="tex">f(x)=2^{x}</span> gives 2, 4, 8, …</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> From question 20(b), <span class="tex">a_n=\dfrac{a}{r}\, r^{n}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> So the function is <span class="tex">f(x)=\dfrac{a}{r}\, r^{x}</span>.</p>
+          <p class="step">Check: <span class="tex">f(1)=\dfrac{a}{r}\times r=a</span>, which is the first term we wanted.</p>
+          <p class="final"><span class="tex">f(x)=\dfrac{a}{r}\, r^{x}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="step"><strong>Step 1 ·</strong> Put in the positive integers. First term: <span class="tex">y(1)=a r^{1}=ar</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Next term: <span class="tex">y(2)=a r^{2}</span>. Ratio <span class="tex">\dfrac{a r^{2}}{a r}=r</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> So the terms are <span class="tex">ar,\; a r^{2},\; a r^{3},\; \ldots</span></p>
+          <p class="final">The GP has first term <span class="tex">ar</span> and common ratio <span class="tex">r</span>.</p>
+        </div>
+      </div>
+    </article>
+
     <p style="margin-top:1.5rem">
-      <a class='btn' href='../../Chapter 1 Sequences and series/1D-problems-aps-gps/concept.html'>Next: 1D Concept →</a>
+      <a class="btn" href="../../Chapter 1 Sequences and series/1D-problems-aps-gps/concept.html">Next: 1D Concept →</a>
       <a class="btn ghost" href="tutorial.html">← Tutorial</a>
     </p>
-  </div>
-  <script>
-  (function(){
-    function bind(btn){
-      btn.addEventListener("click", function(){
-        var sol = btn.nextElementSibling;
-        var open = sol.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
-      });
-    }
-    document.querySelectorAll(".q > .btn.show").forEach(bind);
-    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
-    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
-    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
-  })();
-  </script>
 
+
+
+  </div>
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script src="../../course-solutions.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>

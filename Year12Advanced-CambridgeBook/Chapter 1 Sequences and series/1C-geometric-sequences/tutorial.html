@@ -34,10 +34,11 @@
       <h2 class="section-h">Theory · key ideas</h2>
       <p class="lede">A <strong>GP</strong> multiplies by the same number each step — the common ratio <span class="tex">r</span>.</p>
       <ul>
-        <li>Test: check <span class="tex">\dfrac{a_2}{a_1}</span>, <span class="tex">\dfrac{a_3}{a_2}</span>, … are all equal to <span class="tex">r</span> (terms ≠ 0).</li>
-        <li>Recursive: <span class="tex">a_n=a_{n-1}\times r</span>.</li>
-        <li>nth term: <span class="tex">a_n=ar^{n-1}</span>.</li>
-        <li>Link: like exponential growth/decay sampled at whole numbers.</li>
+        <li><strong>Test:</strong> divide each term by the one before it. If every answer is the same number <span class="tex">r</span>, the list is a GP. No term may be 0, because we cannot divide by 0.</li>
+        <li><strong>Next term:</strong> <span class="tex">a_n=a_{n-1}\times r</span>.</li>
+        <li><strong>nth term:</strong> <span class="tex">a_n=a r^{n-1}</span>. The power is one less than the term number. The 4th term uses power 3.</li>
+        <li><strong>Negative <span class="tex">r</span>:</strong> the sign flips every term.</li>
+        <li><strong>Link:</strong> putting whole numbers into an exponential function makes a GP.</li>
       </ul>
       <div class="formula"><span class="tex">a_n=ar^{n-1}</span></div>
       <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
@@ -45,13 +46,25 @@
     <section class="card" id="mini">
       <h2 class="section-h">Worked mini-examples</h2>
       <div class="worked">
-        <h3>Example · find <span class="tex">a</span> and <span class="tex">r</span></h3>
-        <p class="step"><strong>Step 1 ·</strong> <span class="tex">2,6,18,54</span>: ratios <span class="tex">3,3,3</span> → <span class="tex">a=2</span>, <span class="tex">r=3</span>.</p>
-        <p class="step"><strong>Step 2 ·</strong> Then <span class="tex">a_5=2\times 3^4=162</span>.</p>
+        <h3>Example · find <span class="tex">a</span> and <span class="tex">r</span>, then a later term</h3>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r</span> is “next ÷ previous”. Then <span class="tex">a_n=a r^{n-1}</span>. For the 5th term the power is <span class="tex">4</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> Sequence <span class="tex">2, 6, 18, 54</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">6\div 2=3</span>, <span class="tex">18\div 6=3</span>, <span class="tex">54\div 18=3</span>. The ratios match, so <span class="tex">a=2</span> and <span class="tex">r=3</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">3^4=81</span>, so <span class="tex">a_5=2\times 81=162</span>.</p>
       </div>
       <div class="worked">
-        <h3>Example · solve for <span class="tex">n</span></h3>
-        <p class="step"><strong>Step 1 ·</strong> If <span class="tex">a_n=5\times 2^{n-1}</span> and <span class="tex">a_n=320</span>, then <span class="tex">2^{n-1}=64=2^6</span> so <span class="tex">n-1=6</span>, <span class="tex">n=7</span>.</p>
+        <h3>Example · a negative ratio</h3>
+        <p class="step"><strong>Step 1 ·</strong> Sequence <span class="tex">10, -30, 90</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">-30\div 10=-3</span> and <span class="tex">90\div (-30)=-3</span>. So <span class="tex">a=10</span> and <span class="tex">r=-3</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> The 4th term uses power 3. <span class="tex">(-3)^3=-27</span>, so <span class="tex">a_4=10\times (-27)=-270</span>.</p>
+        <p class="step">The signs go plus, minus, plus, minus, because <span class="tex">r</span> is negative.</p>
+      </div>
+      <div class="worked">
+        <h3>Example · find which term</h3>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=5\times 2^{n-1}</span>. If we know the term’s value, divide by 5, then match the power of 2.</p>
+        <p class="step"><strong>Step 1 ·</strong> Suppose <span class="tex">a_n=320</span>. Then <span class="tex">5\times 2^{n-1}=320</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> Divide both sides by 5: <span class="tex">2^{n-1}=64</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">64=2^6</span>, so <span class="tex">n-1=6</span> and <span class="tex">n=7</span>. The value 320 is the 7th term.</p>
       </div>
     </section>
 
@@ -64,10 +77,18 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
 </body></html>
