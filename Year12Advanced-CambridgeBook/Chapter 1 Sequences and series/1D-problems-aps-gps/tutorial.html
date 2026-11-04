@@ -8,6 +8,14 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .formula .row{margin:.35rem 0}
+    .worked{margin:.85rem 0 0;padding:.85rem 1rem;background:#fbfaf7;border:1px solid var(--line);border-radius:12px}
+    .worked h3{margin:0 0 .45rem;font-size:1.05rem}
+    .formula-quick{margin:.15rem 0 .7rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.45}
+    .step{margin:.4rem 0;line-height:1.5}
+    .step strong{color:var(--navy)}
+  </style>
 </head>
 <body data-section="1D" data-page="tutorial" data-nav-depth="2" data-auth-sub="1D Tutorial">
   <div class="shell"><div class="main">
@@ -23,34 +31,85 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>1D · Solving problems involving APs and GPs</h1>
-    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
+    <p>Three tools: a test for three numbers, two equations when two terms are known, and a logarithm when the unknown is the term number.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-1-Worked-Solutions.pdf.</div>
+      <div class="body">Each equation sits on its own line. The three-term GP example keeps both square roots. The simultaneous examples use the book’s subtract-for-an-AP and divide-for-a-GP pattern.</div>
     </details>
-    
+
     <section class="card" id="theory">
       <h2 class="section-h">Theory · key ideas</h2>
-      <p class="lede">Mix AP and GP tools — especially three-term tests.</p>
+      <p class="lede">An AP adds the same gap. A GP multiplies by the same number. This section uses those two facts to find a missing number.</p>
       <ul>
-        <li>Three numbers <span class="tex">a,m,b</span> in AP ⇔ <span class="tex">m=\tfrac12(a+b)</span>.</li>
-        <li>Three non-zero numbers <span class="tex">a,g,b</span> in GP ⇔ <span class="tex">g^2=ab</span>.</li>
-        <li>Write the formula that matches the story, then solve the equation.</li>
-        <li>Always check: equal differences (AP) or equal ratios (GP).</li>
+        <li><strong>Three numbers in an AP.</strong> The gaps match: middle − first = third − middle. The middle is the average of the other two.</li>
+        <li><strong>Three non-zero numbers in a GP.</strong> The multipliers match: middle ÷ first = third ÷ middle. So (middle)<sup>2</sup> = first × third. A square has two roots, so write both, unless the story rules one out.</li>
+        <li><strong>Two known terms of an AP.</strong> Write <span class="tex">a_n=a+(n-1)d</span> twice. Subtract. The first term <span class="tex">a</span> cancels, and you are left with <span class="tex">d</span>.</li>
+        <li><strong>Two known terms of a GP.</strong> Write <span class="tex">a_n=a r^{n-1}</span> twice. Divide the later equation by the earlier one. The first term <span class="tex">a</span> cancels, and you are left with a power of <span class="tex">r</span>.</li>
+        <li><strong>The unknown is “which term”.</strong> You get an equation like <span class="tex">2\times 3^{n-1}&gt;1\,000\,000</span>. Try powers on a calculator, or use <span class="tex">n-1=\dfrac{\ln K}{\ln 3}</span>.</li>
       </ul>
-      <div class="formula"><span class="tex">m=\tfrac12(a+b)\quad\text{(AP)}\qquad g^2=ab\quad\text{(GP)}</span></div>
-      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
+      <div class="formula">
+        <div class="row"><span class="tex">m=\dfrac{1}{2}(a+b)\qquad\text{three terms in an AP}</span></div>
+        <div class="row"><span class="tex">g^{2}=ab\qquad\text{three non-zero terms in a GP}</span></div>
+      </div>
+      <p>More practice is on the <a href="problems.html">Exercise</a> page. Each part there has its own solution button.</p>
     </section>
+
     <section class="card" id="mini">
       <h2 class="section-h">Worked mini-examples</h2>
+
       <div class="worked">
-        <h3>Example · middle of an AP</h3>
-        <p class="step"><strong>Step 1 ·</strong> For <span class="tex">10,\,?,\,40</span> in AP: middle <span class="tex">=\tfrac12(10+40)=25</span>.</p>
+        <h3>Example · the middle of an AP</h3>
+        <p class="formula-quick"><strong>Formula:</strong> If <span class="tex">a</span>, <span class="tex">m</span>, <span class="tex">b</span> are in AP, then <span class="tex">m-a=b-m</span>. Solving that gives <span class="tex">m=\dfrac{1}{2}(a+b)</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> Find <span class="tex">m</span> if <span class="tex">3,\; m,\; 12</span> is an AP.</p>
+        <p class="step"><strong>Step 2 ·</strong> Equal gaps: <span class="tex">m-3=12-m</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> Add <span class="tex">m</span>: <span class="tex">2m-3=12</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> Add 3: <span class="tex">2m=15</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> Divide by 2: <span class="tex">m=\dfrac{15}{2}=7\dfrac{1}{2}</span>.</p>
+        <p class="step"><strong>Check ·</strong> <span class="tex">7\dfrac{1}{2}-3=4\dfrac{1}{2}</span> and <span class="tex">12-7\dfrac{1}{2}=4\dfrac{1}{2}</span>. The gaps match.</p>
       </div>
+
       <div class="worked">
-        <h3>Example · middle of a GP</h3>
-        <p class="step"><strong>Step 1 ·</strong> For <span class="tex">10,\,?,\,40</span> in GP: <span class="tex">g^2=10\times 40=400</span> → <span class="tex">g=20</span> (positive case).</p>
+        <h3>Example · the middle of a GP</h3>
+        <p class="formula-quick"><strong>Formula:</strong> If <span class="tex">a</span>, <span class="tex">g</span>, <span class="tex">b</span> are non-zero and in GP, then <span class="tex">g^{2}=ab</span>. Both a positive and a negative square root can work.</p>
+        <p class="step"><strong>Step 1 ·</strong> Find <span class="tex">g</span> if <span class="tex">3,\; g,\; 12</span> is a GP.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">g^{2}=3\times 12</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">g^{2}=36</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">6^{2}=36</span> and <span class="tex">(-6)^{2}=36</span>, so <span class="tex">g=6</span> or <span class="tex">g=-6</span>.</p>
+        <p class="step"><strong>Check ·</strong> <span class="tex">3,\; 6,\; 12</span> multiplies by 2. <span class="tex">3,\; -6,\; 12</span> multiplies by <span class="tex">-2</span>. Both are GPs.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · two terms of an AP</h3>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d</span>. Term 3 has had 2 jumps, so it is <span class="tex">a+2d</span>. Term 12 has had 11 jumps, so it is <span class="tex">a+11d</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> The 3rd term is 16 and the 12th term is 79. Find the 41st term.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">a+2d=16</span>. Call this equation (1).</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">a+11d=79</span>. Call this equation (2).</p>
+        <p class="step"><strong>Step 4 ·</strong> Subtract (1) from (2). The <span class="tex">a</span> cancels. <span class="tex">9d=63</span>, so <span class="tex">d=7</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> Put <span class="tex">d=7</span> into (1). <span class="tex">a+14=16</span>, so <span class="tex">a=2</span>.</p>
+        <p class="step"><strong>Step 6 ·</strong> The 41st term has had 40 jumps. <span class="tex">a_{41}=2+40\times 7</span>.</p>
+        <p class="step"><strong>Step 7 ·</strong> <span class="tex">40\times 7=280</span>, so <span class="tex">a_{41}=2+280=282</span>.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · two terms of a GP</h3>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>. Dividing a later term by an earlier one cancels <span class="tex">a</span>. From term 4 to term 7 is 3 multiplications, so <span class="tex">\dfrac{a_7}{a_4}=r^{3}</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> A GP has 4th term 6 and 7th term 162. Find <span class="tex">a</span> and <span class="tex">r</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">\dfrac{162}{6}=27</span>, so <span class="tex">r^{3}=27</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> The real cube root of 27 is 3. <span class="tex">r=3</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> The 4th term uses power 3. <span class="tex">a\times 3^{3}=6</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> <span class="tex">3^{3}=27</span>, so <span class="tex">27a=6</span> and <span class="tex">a=\dfrac{6}{27}=\dfrac{2}{9}</span>.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · which term is the first past a target</h3>
+        <p class="formula-quick"><strong>Quick fact:</strong> If <span class="tex">b^{n}=K</span> and <span class="tex">b&gt;1</span>, then <span class="tex">n=\dfrac{\ln K}{\ln b}</span>. The same line works for “greater than”.</p>
+        <p class="step"><strong>Step 1 ·</strong> The GP is <span class="tex">2,\; 6,\; 18,\; \ldots</span>. So <span class="tex">a=2</span> and <span class="tex">r=3</span>, and <span class="tex">a_n=2\times 3^{n-1}</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> We want the first term over <span class="tex">1\,000\,000</span>. <span class="tex">2\times 3^{n-1}&gt;1\,000\,000</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> Divide by 2. <span class="tex">3^{n-1}&gt;500\,000</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">n-1&gt;\dfrac{\ln 500\,000}{\ln 3}\approx 11.94</span>, so <span class="tex">n&gt;12.94</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> Check the whole numbers. Term 12 uses power 11: <span class="tex">2\times 3^{11}=354\,294</span>, still under. Term 13 uses power 12: <span class="tex">2\times 3^{12}=1\,062\,882</span>, over.</p>
+        <p class="step"><strong>Answer ·</strong> The first term over <span class="tex">1\,000\,000</span> is <span class="tex">a_{13}=1\,062\,882</span>.</p>
       </div>
     </section>
 
@@ -63,10 +122,19 @@
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>
