@@ -15,6 +15,10 @@
     .formula-quick{margin:.15rem 0 .7rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.45}
     .step{margin:.4rem 0;line-height:1.5}
     .step strong{color:var(--navy)}
+    .ask{margin:0 0 .65rem;padding:.6rem .75rem;background:#fff;border:1px solid var(--line);border-radius:10px;line-height:1.5}
+    .ask strong{color:var(--navy)}
+    .ask ol{margin:.35rem 0 0;padding-left:1.25rem}
+    .ask li{margin:.2rem 0}
   </style>
 </head>
 <body data-section="1D" data-page="tutorial" data-nav-depth="2" data-auth-sub="1D Tutorial">
@@ -60,56 +64,63 @@
 
       <div class="worked">
         <h3>Example · the middle of an AP</h3>
+        <p class="ask"><strong>Question.</strong> Find <span class="tex">m</span> if <span class="tex">3,\; m,\; 12</span> form an AP.</p>
         <p class="formula-quick"><strong>Formula:</strong> If <span class="tex">a</span>, <span class="tex">m</span>, <span class="tex">b</span> are in AP, then <span class="tex">m-a=b-m</span>. Solving that gives <span class="tex">m=\dfrac{1}{2}(a+b)</span>.</p>
-        <p class="step"><strong>Step 1 ·</strong> Find <span class="tex">m</span> if <span class="tex">3,\; m,\; 12</span> is an AP.</p>
-        <p class="step"><strong>Step 2 ·</strong> Equal gaps: <span class="tex">m-3=12-m</span>.</p>
-        <p class="step"><strong>Step 3 ·</strong> Add <span class="tex">m</span>: <span class="tex">2m-3=12</span>.</p>
-        <p class="step"><strong>Step 4 ·</strong> Add 3: <span class="tex">2m=15</span>.</p>
-        <p class="step"><strong>Step 5 ·</strong> Divide by 2: <span class="tex">m=\dfrac{15}{2}=7\dfrac{1}{2}</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> Equal gaps: <span class="tex">m-3=12-m</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> Add <span class="tex">m</span>: <span class="tex">2m-3=12</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> Add 3: <span class="tex">2m=15</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> Divide by 2: <span class="tex">m=\dfrac{15}{2}=7\dfrac{1}{2}</span>.</p>
         <p class="step"><strong>Check ·</strong> <span class="tex">7\dfrac{1}{2}-3=4\dfrac{1}{2}</span> and <span class="tex">12-7\dfrac{1}{2}=4\dfrac{1}{2}</span>. The gaps match.</p>
       </div>
 
       <div class="worked">
         <h3>Example · the middle of a GP</h3>
+        <p class="ask"><strong>Question.</strong> Find <span class="tex">g</span> if <span class="tex">3,\; g,\; 12</span> form a GP.</p>
         <p class="formula-quick"><strong>Formula:</strong> If <span class="tex">a</span>, <span class="tex">g</span>, <span class="tex">b</span> are non-zero and in GP, then <span class="tex">g^{2}=ab</span>. Both a positive and a negative square root can work.</p>
-        <p class="step"><strong>Step 1 ·</strong> Find <span class="tex">g</span> if <span class="tex">3,\; g,\; 12</span> is a GP.</p>
-        <p class="step"><strong>Step 2 ·</strong> <span class="tex">g^{2}=3\times 12</span>.</p>
-        <p class="step"><strong>Step 3 ·</strong> <span class="tex">g^{2}=36</span>.</p>
-        <p class="step"><strong>Step 4 ·</strong> <span class="tex">6^{2}=36</span> and <span class="tex">(-6)^{2}=36</span>, so <span class="tex">g=6</span> or <span class="tex">g=-6</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">g^{2}=3\times 12</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">g^{2}=36</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">6^{2}=36</span> and <span class="tex">(-6)^{2}=36</span>, so <span class="tex">g=6</span> or <span class="tex">g=-6</span>.</p>
         <p class="step"><strong>Check ·</strong> <span class="tex">3,\; 6,\; 12</span> multiplies by 2. <span class="tex">3,\; -6,\; 12</span> multiplies by <span class="tex">-2</span>. Both are GPs.</p>
       </div>
 
       <div class="worked">
         <h3>Example · two terms of an AP</h3>
+        <p class="ask"><strong>Question.</strong> The 3rd term of an AP is 16 and the 12th term is 79. Find the 41st term.</p>
         <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a+(n-1)d</span>. Term 3 has had 2 jumps, so it is <span class="tex">a+2d</span>. Term 12 has had 11 jumps, so it is <span class="tex">a+11d</span>.</p>
-        <p class="step"><strong>Step 1 ·</strong> The 3rd term is 16 and the 12th term is 79. Find the 41st term.</p>
-        <p class="step"><strong>Step 2 ·</strong> <span class="tex">a+2d=16</span>. Call this equation (1).</p>
-        <p class="step"><strong>Step 3 ·</strong> <span class="tex">a+11d=79</span>. Call this equation (2).</p>
-        <p class="step"><strong>Step 4 ·</strong> Subtract (1) from (2). The <span class="tex">a</span> cancels. <span class="tex">9d=63</span>, so <span class="tex">d=7</span>.</p>
-        <p class="step"><strong>Step 5 ·</strong> Put <span class="tex">d=7</span> into (1). <span class="tex">a+14=16</span>, so <span class="tex">a=2</span>.</p>
-        <p class="step"><strong>Step 6 ·</strong> The 41st term has had 40 jumps. <span class="tex">a_{41}=2+40\times 7</span>.</p>
-        <p class="step"><strong>Step 7 ·</strong> <span class="tex">40\times 7=280</span>, so <span class="tex">a_{41}=2+280=282</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a+2d=16</span>. Call this equation (1).</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">a+11d=79</span>. Call this equation (2).</p>
+        <p class="step"><strong>Step 3 ·</strong> Subtract (1) from (2). The <span class="tex">a</span> cancels. <span class="tex">9d=63</span>, so <span class="tex">d=7</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> Put <span class="tex">d=7</span> into (1). <span class="tex">a+14=16</span>, so <span class="tex">a=2</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> The 41st term has had 40 jumps. <span class="tex">a_{41}=2+40\times 7</span>.</p>
+        <p class="step"><strong>Step 6 ·</strong> <span class="tex">40\times 7=280</span>, so <span class="tex">a_{41}=2+280=282</span>.</p>
       </div>
 
       <div class="worked">
         <h3>Example · two terms of a GP</h3>
+        <p class="ask"><strong>Question.</strong> A GP has 4th term 6 and 7th term 162. Find the first term <span class="tex">a</span> and the common ratio <span class="tex">r</span>.</p>
         <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=a r^{n-1}</span>. Dividing a later term by an earlier one cancels <span class="tex">a</span>. From term 4 to term 7 is 3 multiplications, so <span class="tex">\dfrac{a_7}{a_4}=r^{3}</span>.</p>
-        <p class="step"><strong>Step 1 ·</strong> A GP has 4th term 6 and 7th term 162. Find <span class="tex">a</span> and <span class="tex">r</span>.</p>
-        <p class="step"><strong>Step 2 ·</strong> <span class="tex">\dfrac{162}{6}=27</span>, so <span class="tex">r^{3}=27</span>.</p>
-        <p class="step"><strong>Step 3 ·</strong> The real cube root of 27 is 3. <span class="tex">r=3</span>.</p>
-        <p class="step"><strong>Step 4 ·</strong> The 4th term uses power 3. <span class="tex">a\times 3^{3}=6</span>.</p>
-        <p class="step"><strong>Step 5 ·</strong> <span class="tex">3^{3}=27</span>, so <span class="tex">27a=6</span> and <span class="tex">a=\dfrac{6}{27}=\dfrac{2}{9}</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{162}{6}=27</span>, so <span class="tex">r^{3}=27</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> The real cube root of 27 is 3. <span class="tex">r=3</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> The 4th term uses power 3. <span class="tex">a\times 3^{3}=6</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">3^{3}=27</span>, so <span class="tex">27a=6</span> and <span class="tex">a=\dfrac{6}{27}=\dfrac{2}{9}</span>.</p>
       </div>
 
       <div class="worked">
         <h3>Example · which term is the first past a target</h3>
+        <div class="ask"><strong>Question.</strong> The sequence is <span class="tex">2,\; 6,\; 18,\; \ldots</span>
+          <ol>
+            <li>Write a formula for the <span class="tex">n</span>th term.</li>
+            <li>Use a calculator to find the first term greater than <span class="tex">1\,000\,000</span>.</li>
+            <li>Use logarithms to find the first term greater than <span class="tex">1\,000\,000</span>.</li>
+          </ol>
+        </div>
         <p class="formula-quick"><strong>Quick fact:</strong> If <span class="tex">b^{n}=K</span> and <span class="tex">b&gt;1</span>, then <span class="tex">n=\dfrac{\ln K}{\ln b}</span>. The same line works for “greater than”.</p>
-        <p class="step"><strong>Step 1 ·</strong> The GP is <span class="tex">2,\; 6,\; 18,\; \ldots</span>. So <span class="tex">a=2</span> and <span class="tex">r=3</span>, and <span class="tex">a_n=2\times 3^{n-1}</span>.</p>
-        <p class="step"><strong>Step 2 ·</strong> We want the first term over <span class="tex">1\,000\,000</span>. <span class="tex">2\times 3^{n-1}&gt;1\,000\,000</span>.</p>
-        <p class="step"><strong>Step 3 ·</strong> Divide by 2. <span class="tex">3^{n-1}&gt;500\,000</span>.</p>
-        <p class="step"><strong>Step 4 ·</strong> <span class="tex">n-1&gt;\dfrac{\ln 500\,000}{\ln 3}\approx 11.94</span>, so <span class="tex">n&gt;12.94</span>.</p>
-        <p class="step"><strong>Step 5 ·</strong> Check the whole numbers. Term 12 uses power 11: <span class="tex">2\times 3^{11}=354\,294</span>, still under. Term 13 uses power 12: <span class="tex">2\times 3^{12}=1\,062\,882</span>, over.</p>
-        <p class="step"><strong>Answer ·</strong> The first term over <span class="tex">1\,000\,000</span> is <span class="tex">a_{13}=1\,062\,882</span>.</p>
+        <p class="step"><strong>Part (a) ·</strong> Each term is 3 times the one before, so <span class="tex">a=2</span> and <span class="tex">r=3</span>. The formula is <span class="tex">a_n=2\times 3^{n-1}</span>.</p>
+        <p class="step"><strong>Part (b) ·</strong> Term 12 uses power 11: <span class="tex">2\times 3^{11}=354\,294</span>, still under. Term 13 uses power 12: <span class="tex">2\times 3^{12}=1\,062\,882</span>, over. So the first term over <span class="tex">1\,000\,000</span> is <span class="tex">a_{13}</span>.</p>
+        <p class="step"><strong>Part (c), step 1 ·</strong> <span class="tex">2\times 3^{n-1}&gt;1\,000\,000</span>.</p>
+        <p class="step"><strong>Part (c), step 2 ·</strong> Divide by 2. <span class="tex">3^{n-1}&gt;500\,000</span>.</p>
+        <p class="step"><strong>Part (c), step 3 ·</strong> <span class="tex">n-1&gt;\dfrac{\ln 500\,000}{\ln 3}\approx 11.94</span>, so <span class="tex">n&gt;12.94</span>.</p>
+        <p class="step"><strong>Answer ·</strong> The next whole number is 13. The first term over <span class="tex">1\,000\,000</span> is <span class="tex">a_{13}=1\,062\,882</span>. This matches the calculator check.</p>
       </div>
     </section>
 
