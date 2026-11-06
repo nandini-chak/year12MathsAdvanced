@@ -8,6 +8,14 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .stem p{margin:.42rem 0;line-height:1.5}
+    .stem .intro{margin-bottom:.7rem}
+    .howto{margin:.8rem 0 0;padding:.7rem .85rem;background:#f4f7fb;border-radius:12px;line-height:1.45}
+    .fig{margin:.7rem 0;overflow-x:auto}
+    .fig svg{max-width:100%;height:auto;display:block}
+    .fig-cap{margin:.15rem 0 .4rem;font-size:.92rem;line-height:1.4}
+  </style>
 </head>
 <body data-section="1E" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 1E">
   <div class="shell"><div class="main">
@@ -23,241 +31,873 @@
   <header class="hero">
     <span class="kicker">Exercise 1E</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
+    <p>Attempt on paper first. Each part has its own solution button. Open one part at a time.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
       <button class="btn show" type="button" id="allOn">Show all solutions</button>
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
+    <p class="howto"><strong>How to read <span class="tex">S_n</span> and <span class="tex">\sum</span>.</strong> <span class="tex">S_n</span> means the sum of the first <span class="tex">n</span> terms. The small <span class="tex">n</span> sits lower than the <span class="tex">S</span>. It is not the letters “Sn”. The sign <span class="tex">\sum</span> means “add”. The number under it is where you start. The number above it is where you stop.</p>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 1E; answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">Parts are printed one per line, with one Show/Hide button each. Answers follow <em>Chapter-1-Worked-Solutions.pdf</em>, matched to the student-book order. The printed key swaps question 6 parts (b) and (c); this page follows the exercise. Question 1(d) is <span class="tex">3\frac{3}{4}</span>. In question 12(c) the key writes <span class="tex">U_n=a_{n+1}-a_n=6n</span>. Box 11 gives <span class="tex">U_n=a_n-a_{n-1}=6(n-1)</span> for <span class="tex">n\ge 2</span>, and that is the list in the key’s table: 1, 6, 12, 18, 24, 30.</div>
     </details>
+
     <article class="q" id="q1">
-      <h2>1 · Exercise 1E</h2>
+      <h2>1 · Exercise 1E <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Find the sum S4 of the first four terms of each sequence. 3, 5, 7, 9, 11, 13, ... a 2, 6, 18, 54, 162, 486, . . . b 6, 2, −2, −6, −10, −14, ... c 2, 1, 1 2, 1 4, 1 8, . . . d</p>
+        <p class="intro">Find the sum <span class="tex">S_4</span> of the first four terms of each sequence.</p>
+        <p><strong>(a)</strong> <span class="tex">3,\;5,\;7,\;9,\;11,\;13,\;\ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">2,\;6,\;18,\;54,\;162,\;486,\;\ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">6,\;2,\;-2,\;-6,\;-10,\;-14,\;\ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">2,\;1,\;\dfrac{1}{2},\;\dfrac{1}{4},\;\dfrac{1}{8},\;\ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> S 4 = 3 + 5 + 7 + 9 = 24</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_4</span> means add the first four terms only. Stop before the fifth term.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first four terms are 3, 5, 7 and 9.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">3+5=8</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">8+7=15</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">15+9=24</span>.</p>
+          <p class="final"><span class="tex">S_4=24</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> S 4 = 2 + 6 + 18 + 54 = 80</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">S_4</span> is the first four terms added.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first four terms are 2, 6, 18 and 54.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">2+6=8</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">8+18=26</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">26+54=80</span>.</p>
+          <p class="final"><span class="tex">S_4=80</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> S 4 = 6 + 2 + (−2) + (−6) = 0</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. A negative term is subtracted.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first four terms are 6, 2, −2 and −6.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">6+2=8</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">8+(-2)=6</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">6+(-6)=0</span>.</p>
+          <p class="final"><span class="tex">S_4=0</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> S 4 = 2 + 1 + 1 2 + 1 4 = 33/4</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. Write the fractions with denominator 4 before you add.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first four terms are <span class="tex">2</span>, <span class="tex">1</span>, <span class="tex">\dfrac{1}{2}</span> and <span class="tex">\dfrac{1}{4}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">2=\dfrac{8}{4}</span>, <span class="tex">1=\dfrac{4}{4}</span>, <span class="tex">\dfrac{1}{2}=\dfrac{2}{4}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{8}{4}+\dfrac{4}{4}+\dfrac{2}{4}+\dfrac{1}{4}=\dfrac{15}{4}</span>.</p>
+          <p class="final"><span class="tex">S_4=\dfrac{15}{4}=3\dfrac{3}{4}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q2">
-      <h2>2 · Exercise 1E</h2>
+      <h2>2 · Exercise 1E <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Find the sum S3 of the first three terms of each series. 200 + 150 + 100 + 50 + 0 + · · · a 32 −16 + 8 −4 + 2 −1 + · · · b −24 −18 −12 −6 + 0 + 6 + · · · c 5.1 + 5.2 + 5.3 + 5.4 + 5.5 + 5.6 + · · · d</p>
+        <p class="intro">Find the sum <span class="tex">S_3</span> of the first three terms of each series.</p>
+        <p><strong>(a)</strong> <span class="tex">200+150+100+50+0+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">32-16+8-4+2-1+\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">-24-18-12-6+0+6+\cdots</span></p>
+        <p><strong>(d)</strong> <span class="tex">5.1+5.2+5.3+5.4+5.5+5.6+\cdots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> S 3 = 200 + 150 + 100 = 450</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_3</span> is the first three terms added. Leave the later terms out.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first three terms are 200, 150 and 100.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">200+150=350</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">350+100=450</span>.</p>
+          <p class="final"><span class="tex">S_3=450</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> S 3 = 32 −16 + 8 = 24</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. The minus sign in front of 16 means subtract 16.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first three terms are 32, −16 and 8.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">32-16=16</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">16+8=24</span>.</p>
+          <p class="final"><span class="tex">S_3=24</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> S 3 = −24 −18 −12 = −54</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. Adding two negatives makes a more negative number.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first three terms are −24, −18 and −12.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">-24+(-18)=-42</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">-42+(-12)=-54</span>.</p>
+          <p class="final"><span class="tex">S_3=-54</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> S 3 = 5.1 + 5.2 + 5.3 = 15.6</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. Add the tenths, then the units.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first three terms are 5.1, 5.2 and 5.3.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">5.1+5.2=10.3</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">10.3+5.3=15.6</span>.</p>
+          <p class="final"><span class="tex">S_3=15.6</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q3">
-      <h2>3 · Exercise 1E</h2>
+      <h2>3 · Exercise 1E <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Find the sums S1, S2, S3, S4 and S5 for each sequence. 10, 20, 30, 40, 50, 60, ... a 1, −3, 9, −27, 81, −243, . . . b 1, 4, 9, 16, 25, 36, ... c 3, 4 1 2, 6, 7 1 2, 9, 10 1 2, 12, . . . d</p>
+        <p class="intro">Find the sums <span class="tex">S_1,\;S_2,\;S_3,\;S_4</span> and <span class="tex">S_5</span> for each sequence.</p>
+        <p><strong>(a)</strong> <span class="tex">10,\;20,\;30,\;40,\;50,\;60,\;\ldots</span></p>
+        <p><strong>(b)</strong> <span class="tex">1,\;-3,\;9,\;-27,\;81,\;-243,\;\ldots</span></p>
+        <p><strong>(c)</strong> <span class="tex">1,\;4,\;9,\;16,\;25,\;36,\;\ldots</span></p>
+        <p><strong>(d)</strong> <span class="tex">3,\;4\dfrac{1}{2},\;6,\;7\dfrac{1}{2},\;9,\;10\dfrac{1}{2},\;12,\;\ldots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula:</strong> For a GP, <span class="tex">a_n=a_1 r^{n-1}</span> and partial sums build in the table; limiting sum <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
-<p class="step"><strong>a ·</strong> Copy the values into the table. Each <span class="tex">a_n</span> is the previous term times <span class="tex">r</span>; each <span class="tex">S_n</span> adds the next term.</p>
-        <table class="sol-table" style="border-collapse:collapse;margin:.6rem 0;font-size:.88rem;width:auto;max-width:100%"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td><strong>n</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td><strong>a_n</strong></td><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td></tr><tr><td><strong>S_n</strong></td><td>10</td><td>30</td><td>60</td><td>100/150</td><td>…</td></tr></tbody></table>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_1=a_1</span>. Then <span class="tex">S_n=S_{n-1}+a_n</span>. Each new sum is the previous sum plus the next term.</p>
+          <p class="step"><span class="tex">S_1=10</span></p>
+          <p class="step"><span class="tex">S_2=10+20=30</span></p>
+          <p class="step"><span class="tex">S_3=30+30=60</span></p>
+          <p class="step"><span class="tex">S_4=60+40=100</span></p>
+          <p class="step"><span class="tex">S_5=100+50=150</span></p>
+          <table class="sol-table"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>10</td><td>30</td><td>60</td><td>100</td><td>150</td></tr>
+          </tbody></table>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> with the <span class="tex">a</span> and <span class="tex">r</span> from the question. b n 1 2 3 4 5 an 1 −3/9 −27 81 S n 1 −2/7 −20 61 </p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q4">
-      <h2>4 · Exercise 1E</h2>
-      <div class="stem">
-        <p>Find the sums S4, S5 and S6 for each series. (You will need to continue each series first.) 1 −2 + 3 −4 + · · · a 81 + 27 + 9 + 3 + · · · b 30 + 20 + 10 + · · · c 0.1 + 0.01 + 0.001 + 0.0001 + · · · d</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p>1 −2 + 3 −4 + 5 −6: alternating positive and negative numbers The sums are: n</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q5">
-      <h2>5 · Exercise 1E</h2>
-      <div class="stem">
-        <p>Copy and complete these tables of a sequence and its partial sums. an 2 5 8 11 14 17 20 Sn a an 40 38 36 34 32 30 28 Sn b an 2 −4 6 −8 10 −12 14 Sn c an 7 −7 7 −7 7 −7 7 Sn d</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p>−6 S n −2</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q6">
-      <h2>6 · Exercise 1E</h2>
-      <div class="stem">
-        <p>Each table below gives the successive sums S1, S2, S3, . . . of a sequence. By taking successive differences, write out the terms of the original sequence. an Sn 1 4 9 16 25 36</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p>an 0.0001/0.00001/0.000001 S n 0.1111/0.11111/0.111111</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q9">
-      <h2>9 · Exercise 1E</h2>
-      <div class="stem">
-        <p>Use the dot diagram on the right to explain why the sum of the first n odd positive integers is n2. a Use the dot diagram on the right to explain why the sum of the first n positive integers is 1 2n(n + 1). b c Part b shows why the sums 1, 1 + 2 = 3, 1 + 2 + 3 = 6, 1 + 2 + 3 + 4 = 10, . . . are called the triangular numbers. Write out the first 15 triangular numbers.</p>
-<p>10 Rewrite each sum in sigma notation, starting each sum at n = 1. Do not evaluate it. 13 + 23 + 33 + · · · + 403 a 1 + 1 2 + 1 3 + · · · + 1 40 b 3 + 4 + 5 + · · · + 22 c 2 + 22 + 23 + · · · + 212 d −1 + 2 −3 + · · · + 10 e 1 −2 + 3 −· · · −10 f</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula:</strong> A series is a sum of terms: <span class="tex">S_n=a_1+a_2+\cdots+a_n</span>.</p>
-<p class="step"><strong>a ·</strong> By looking at the diagram, it forms the shape of a square. The area of a square, with side length n, is n2. Consequently, applying this logic, as the formation of the first n odd positive integers forms a square, the sum of them, which is equivalent to the area of the square, is n2.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> The way to calculate the sum is using the equation below: Sum = total elements in main diagonal + remaining elements</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q11">
-      <h2>11 · Exercise 1E</h2>
-      <div class="stem">
-        <p>a The partial sums of a sequence an are given by Sn = 2n. Use the formula in Box 11 to find an.<br/>
-b Confirm your answer by writing out the calculation in table form, as in Question 6.<br/>
-c In Chapter 10 of the Year 11 book, you differentiated y = ex. What is the analogy to these result?</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a1 = S 1 = 21 = 2 an = S n −S n−1 = 2n −2n−1 = 2n−1(2 −1) = 2n−1 for n ≥2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> an</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q12">
-      <h2>12 · Exercise 1E</h2>
-      <div class="stem">
-        <p>a Prove that n3 −(n −1)3 = 3n2 −3n + 1.<br/>
-b The partial sums of a sequence an are given by Sn = n3. Use the formula in Box 11 to find an.<br/>
-c The terms of the sequence an are the partial sums of a third sequence Un. Use the formula in Box 11 to<br/>
-find a formula for Un.<br/>
-d Confirm your answer by writing out in table form the successive taking of differences in parts b and c.<br/>
-e In Chapter 9 of the Year 11 volume, you differentiated powers of x. What is the analogy to these results?</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> n3 −(n −1)3 = n3 −  n3 −3n2 + 3n −1  = 3n2 −3n + 1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a1 = S 1 = 13 = 1 an = S n −S n−1 = n3 −(n −1)3 = 3n2 −3n + 1 for n ≥2</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. Watch the sign when you add a negative term.</p>
+          <p class="step"><span class="tex">S_1=1</span></p>
+          <p class="step"><span class="tex">S_2=1+(-3)=-2</span></p>
+          <p class="step"><span class="tex">S_3=-2+9=7</span></p>
+          <p class="step"><span class="tex">S_4=7+(-27)=-20</span></p>
+          <p class="step"><span class="tex">S_5=-20+81=61</span></p>
+          <table class="sol-table"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>1</td><td>−3</td><td>9</td><td>−27</td><td>81</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>1</td><td>−2</td><td>7</td><td>−20</td><td>61</td></tr>
+          </tbody></table>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> U1 = a1 = 1, Un = an+1 −an =  3(n + 1)2 −3(n + 1) + 1  −(3n2 −3n + 1) =  3n2 + 6n + 3 −3n −3 + 1  −(3n2 −3n + 1) = 6n for n ≥2</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. These terms are the square numbers <span class="tex">1^2,\;2^2,\;3^2,\;4^2,\;5^2</span>.</p>
+          <p class="step"><span class="tex">S_1=1</span></p>
+          <p class="step"><span class="tex">S_2=1+4=5</span></p>
+          <p class="step"><span class="tex">S_3=5+9=14</span></p>
+          <p class="step"><span class="tex">S_4=14+16=30</span></p>
+          <p class="step"><span class="tex">S_5=30+25=55</span></p>
+          <table class="sol-table"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>1</td><td>5</td><td>14</td><td>30</td><td>55</td></tr>
+          </tbody></table>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> an</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">4\dfrac{1}{2}=4.5</span> and <span class="tex">7\dfrac{1}{2}=7.5</span>.</p>
+          <p class="step"><span class="tex">S_1=3</span></p>
+          <p class="step"><span class="tex">S_2=3+4\dfrac{1}{2}=7\dfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">S_3=7\dfrac{1}{2}+6=13\dfrac{1}{2}</span></p>
+          <p class="step"><span class="tex">S_4=13\dfrac{1}{2}+7\dfrac{1}{2}=21</span></p>
+          <p class="step"><span class="tex">S_5=21+9=30</span></p>
+          <table class="sol-table"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>3</td><td><span class="tex">4\dfrac{1}{2}</span></td><td>6</td><td><span class="tex">7\dfrac{1}{2}</span></td><td>9</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>3</td><td><span class="tex">7\dfrac{1}{2}</span></td><td><span class="tex">13\dfrac{1}{2}</span></td><td>21</td><td>30</td></tr>
+          </tbody></table>
         </div>
       </div>
     </article>
+
+    <article class="q" id="q4">
+      <h2>4 · Exercise 1E <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p class="intro">Find the sums <span class="tex">S_4</span>, <span class="tex">S_5</span> and <span class="tex">S_6</span> for each series. Continue each series first.</p>
+        <p><strong>(a)</strong> <span class="tex">1-2+3-4+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">81+27+9+3+\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">30+20+10+\cdots</span></p>
+        <p><strong>(d)</strong> <span class="tex">0.1+0.01+0.001+0.0001+\cdots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The signs go plus, minus, plus, minus, and the sizes are 1, 2, 3, 4, 5, 6. So the six terms are <span class="tex">1,\;-2,\;3,\;-4,\;5,\;-6</span>.</p>
+          <p class="step"><span class="tex">S_1=1</span></p>
+          <p class="step"><span class="tex">S_2=1-2=-1</span></p>
+          <p class="step"><span class="tex">S_3=-1+3=2</span></p>
+          <p class="step"><span class="tex">S_4=2+(-4)=-2</span></p>
+          <p class="step"><span class="tex">S_5=-2+5=3</span></p>
+          <p class="step"><span class="tex">S_6=3+(-6)=-3</span></p>
+          <p class="final"><span class="tex">S_4=-2</span>, <span class="tex">S_5=3</span>, <span class="tex">S_6=-3</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Each term is the one before divided by 3. After 3 comes 1, then <span class="tex">\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> Six terms: <span class="tex">81,\;27,\;9,\;3,\;1,\;\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">81+27=108</span>, and <span class="tex">108+9=117</span>, and <span class="tex">117+3=120</span>. So <span class="tex">S_4=120</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_5=120+1=121</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_6=121+\dfrac{1}{3}=121\dfrac{1}{3}</span>.</p>
+          <p class="final"><span class="tex">S_4=120</span>, <span class="tex">S_5=121</span>, <span class="tex">S_6=121\dfrac{1}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Each term is 10 less than the one before. After 10 comes 0, then −10, then −20.</p>
+          <p class="step"><strong>Step 1 ·</strong> Six terms: 30, 20, 10, 0, −10, −20.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">30+20+10+0=60</span>, so <span class="tex">S_4=60</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_5=60+(-10)=50</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_6=50+(-20)=30</span>.</p>
+          <p class="final"><span class="tex">S_4=60</span>, <span class="tex">S_5=50</span>, <span class="tex">S_6=30</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Each term is the one before divided by 10. One more zero appears after the decimal point.</p>
+          <p class="step"><strong>Step 1 ·</strong> Six terms: 0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">0.1+0.01+0.001+0.0001=0.1111</span>, so <span class="tex">S_4=0.1111</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_5=0.1111+0.00001=0.11111</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_6=0.11111+0.000001=0.111111</span>.</p>
+          <p class="final"><span class="tex">S_4=0.1111</span>, <span class="tex">S_5=0.11111</span>, <span class="tex">S_6=0.111111</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q5">
+      <h2>5 · Exercise 1E <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p class="intro">Copy and complete these tables of a sequence and its partial sums.</p>
+        <p><strong>(a)</strong> <span class="tex">a_n</span>: 2, 5, 8, 11, 14, 17, 20</p>
+        <p><strong>(b)</strong> <span class="tex">a_n</span>: 40, 38, 36, 34, 32, 30, 28</p>
+        <p><strong>(c)</strong> <span class="tex">a_n</span>: 2, −4, 6, −8, 10, −12, 14</p>
+        <p><strong>(d)</strong> <span class="tex">a_n</span>: 7, −7, 7, −7, 7, −7, 7</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_1=a_1</span>, then add the next term each time.</p>
+          <p class="step"><span class="tex">2</span></p>
+          <p class="step"><span class="tex">2+5=7</span></p>
+          <p class="step"><span class="tex">7+8=15</span></p>
+          <p class="step"><span class="tex">15+11=26</span></p>
+          <p class="step"><span class="tex">26+14=40</span></p>
+          <p class="step"><span class="tex">40+17=57</span></p>
+          <p class="step"><span class="tex">57+20=77</span></p>
+          <table class="sol-table"><thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>2</td><td>5</td><td>8</td><td>11</td><td>14</td><td>17</td><td>20</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>2</td><td>7</td><td>15</td><td>26</td><td>40</td><td>57</td><td>77</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same method. The terms go down by 2, but the sums still grow, because every term is positive.</p>
+          <p class="step"><span class="tex">40</span></p>
+          <p class="step"><span class="tex">40+38=78</span></p>
+          <p class="step"><span class="tex">78+36=114</span></p>
+          <p class="step"><span class="tex">114+34=148</span></p>
+          <p class="step"><span class="tex">148+32=180</span></p>
+          <p class="step"><span class="tex">180+30=210</span></p>
+          <p class="step"><span class="tex">210+28=238</span></p>
+          <table class="sol-table"><thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>40</td><td>38</td><td>36</td><td>34</td><td>32</td><td>30</td><td>28</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>40</td><td>78</td><td>114</td><td>148</td><td>180</td><td>210</td><td>238</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same method. A negative term pulls the running total down.</p>
+          <p class="step"><span class="tex">2</span></p>
+          <p class="step"><span class="tex">2+(-4)=-2</span></p>
+          <p class="step"><span class="tex">-2+6=4</span></p>
+          <p class="step"><span class="tex">4+(-8)=-4</span></p>
+          <p class="step"><span class="tex">-4+10=6</span></p>
+          <p class="step"><span class="tex">6+(-12)=-6</span></p>
+          <p class="step"><span class="tex">-6+14=8</span></p>
+          <table class="sol-table"><thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>2</td><td>−4</td><td>6</td><td>−8</td><td>10</td><td>−12</td><td>14</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>2</td><td>−2</td><td>4</td><td>−4</td><td>6</td><td>−6</td><td>8</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">7+(-7)=0</span>, and <span class="tex">0+7=7</span>. The sums switch between 7 and 0.</p>
+          <p class="step"><span class="tex">S_1=7</span></p>
+          <p class="step"><span class="tex">S_2=7+(-7)=0</span></p>
+          <p class="step"><span class="tex">S_3=0+7=7</span></p>
+          <p class="step"><span class="tex">S_4=7+(-7)=0</span></p>
+          <p class="step"><span class="tex">S_5=0+7=7</span></p>
+          <p class="step"><span class="tex">S_6=7+(-7)=0</span></p>
+          <p class="step"><span class="tex">S_7=0+7=7</span></p>
+          <table class="sol-table"><thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody>
+            <tr><td><span class="tex">a_n</span></td><td>7</td><td>−7</td><td>7</td><td>−7</td><td>7</td><td>−7</td><td>7</td></tr>
+            <tr><td><span class="tex">S_n</span></td><td>7</td><td>0</td><td>7</td><td>0</td><td>7</td><td>0</td><td>7</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q6">
+      <h2>6 · Exercise 1E <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">Each list below is the successive sums <span class="tex">S_1,\;S_2,\;S_3,\;\ldots</span> of a sequence. By taking successive differences, write the original terms <span class="tex">a_n</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">1,\;4,\;9,\;16,\;25,\;36,\;49</span></p>
+        <p><strong>(b)</strong> <span class="tex">2,\;6,\;14,\;30,\;62,\;126,\;254</span></p>
+        <p><strong>(c)</strong> <span class="tex">-3,\;-8,\;-15,\;-24,\;-35,\;-48,\;-63</span></p>
+        <p><strong>(d)</strong> <span class="tex">8,\;0,\;8,\;0,\;8,\;0,\;8</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_1=S_1</span>. For every later place, <span class="tex">a_n=S_n-S_{n-1}</span>. That gap is the term that was added on.</p>
+          <p class="step"><span class="tex">a_1=1</span></p>
+          <p class="step"><span class="tex">a_2=4-1=3</span></p>
+          <p class="step"><span class="tex">a_3=9-4=5</span></p>
+          <p class="step"><span class="tex">a_4=16-9=7</span></p>
+          <p class="step"><span class="tex">a_5=25-16=9</span></p>
+          <p class="step"><span class="tex">a_6=36-25=11</span></p>
+          <p class="step"><span class="tex">a_7=49-36=13</span></p>
+          <p class="final">1, 3, 5, 7, 9, 11, 13.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">a_1=S_1</span>, then subtract neighbouring sums.</p>
+          <p class="step"><span class="tex">a_1=2</span></p>
+          <p class="step"><span class="tex">a_2=6-2=4</span></p>
+          <p class="step"><span class="tex">a_3=14-6=8</span></p>
+          <p class="step"><span class="tex">a_4=30-14=16</span></p>
+          <p class="step"><span class="tex">a_5=62-30=32</span></p>
+          <p class="step"><span class="tex">a_6=126-62=64</span></p>
+          <p class="step"><span class="tex">a_7=254-126=128</span></p>
+          <p class="final">2, 4, 8, 16, 32, 64, 128.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same method. Subtracting a more negative number can give a negative gap. For example <span class="tex">-8-(-3)=-5</span>.</p>
+          <p class="step"><span class="tex">a_1=-3</span></p>
+          <p class="step"><span class="tex">a_2=-8-(-3)=-5</span></p>
+          <p class="step"><span class="tex">a_3=-15-(-8)=-7</span></p>
+          <p class="step"><span class="tex">a_4=-24-(-15)=-9</span></p>
+          <p class="step"><span class="tex">a_5=-35-(-24)=-11</span></p>
+          <p class="step"><span class="tex">a_6=-48-(-35)=-13</span></p>
+          <p class="step"><span class="tex">a_7=-63-(-48)=-15</span></p>
+          <p class="final">−3, −5, −7, −9, −11, −13, −15.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same method.</p>
+          <p class="step"><span class="tex">a_1=8</span></p>
+          <p class="step"><span class="tex">a_2=0-8=-8</span></p>
+          <p class="step"><span class="tex">a_3=8-0=8</span></p>
+          <p class="step"><span class="tex">a_4=0-8=-8</span></p>
+          <p class="step"><span class="tex">a_5=8-0=8</span></p>
+          <p class="step"><span class="tex">a_6=0-8=-8</span></p>
+          <p class="step"><span class="tex">a_7=8-0=8</span></p>
+          <p class="final">8, −8, 8, −8, 8, −8, 8.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q7">
+      <h2>7 · Exercise 1E <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">The Fibonacci and Lucas sequences. Each list is the successive sums <span class="tex">S_n</span>. By taking successive differences, write the original terms.</p>
+        <p><strong>(a)</strong> <span class="tex">1,\;2,\;3,\;5,\;8,\;13,\;21,\;34</span></p>
+        <p><strong>(b)</strong> <span class="tex">3,\;4,\;7,\;11,\;18,\;29,\;47,\;76</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_1=S_1</span>, and <span class="tex">a_n=S_n-S_{n-1}</span> after that.</p>
+          <p class="step"><span class="tex">a_1=1</span></p>
+          <p class="step"><span class="tex">a_2=2-1=1</span></p>
+          <p class="step"><span class="tex">a_3=3-2=1</span></p>
+          <p class="step"><span class="tex">a_4=5-3=2</span></p>
+          <p class="step"><span class="tex">a_5=8-5=3</span></p>
+          <p class="step"><span class="tex">a_6=13-8=5</span></p>
+          <p class="step"><span class="tex">a_7=21-13=8</span></p>
+          <p class="step"><span class="tex">a_8=34-21=13</span></p>
+          <p class="final">1, 1, 1, 2, 3, 5, 8, 13.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same method, with these new sums.</p>
+          <p class="step"><span class="tex">a_1=3</span></p>
+          <p class="step"><span class="tex">a_2=4-3=1</span></p>
+          <p class="step"><span class="tex">a_3=7-4=3</span></p>
+          <p class="step"><span class="tex">a_4=11-7=4</span></p>
+          <p class="step"><span class="tex">a_5=18-11=7</span></p>
+          <p class="step"><span class="tex">a_6=29-18=11</span></p>
+          <p class="step"><span class="tex">a_7=47-29=18</span></p>
+          <p class="step"><span class="tex">a_8=76-47=29</span></p>
+          <p class="final">3, 1, 3, 4, 7, 11, 18, 29.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q8">
+      <h2>8 · Exercise 1E <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">Rewrite each partial sum without sigma notation, then evaluate it.</p>
+        <p><strong>(a)</strong> <span class="tex">\displaystyle\sum_{n=1}^{6}2n</span></p>
+        <p><strong>(b)</strong> <span class="tex">\displaystyle\sum_{n=1}^{6}(3n+2)</span></p>
+        <p><strong>(c)</strong> <span class="tex">\displaystyle\sum_{n=3}^{7}(18-3n)</span></p>
+        <p><strong>(d)</strong> <span class="tex">\displaystyle\sum_{k=5}^{8}k^{2}</span></p>
+        <p><strong>(e)</strong> <span class="tex">\displaystyle\sum_{k=1}^{4}k^{3}</span></p>
+        <p><strong>(f)</strong> <span class="tex">\displaystyle\sum_{k=0}^{5}2^{k}</span></p>
+        <p><strong>(g)</strong> <span class="tex">\displaystyle\sum_{j=2}^{4}3^{j}</span></p>
+        <p><strong>(h)</strong> <span class="tex">\displaystyle\sum_{\ell=1}^{31}(-1)^{\ell}</span></p>
+        <p><strong>(i)</strong> <span class="tex">\displaystyle\sum_{\ell=1}^{40}(-1)^{\ell-1}</span></p>
+        <p><strong>(j)</strong> <span class="tex">\displaystyle\sum_{i=5}^{105}4</span></p>
+        <p><strong>(k)</strong> <span class="tex">\displaystyle\sum_{i=0}^{4}(-1)^{i}(i+5)</span></p>
+        <p><strong>(l)</strong> <span class="tex">\displaystyle\sum_{i=0}^{4}(-1)^{i+1}(i+5)</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The counter runs from the bottom number to the top number. Here <span class="tex">n=1,2,3,4,5,6</span>, and each term is <span class="tex">2n</span>.</p>
+          <p class="step"><span class="tex">2(1)+2(2)+2(3)+2(4)+2(5)+2(6)</span></p>
+          <p class="step"><span class="tex">=2+4+6+8+10+12</span></p>
+          <p class="step"><span class="tex">2+4=6</span>, <span class="tex">6+6=12</span>, <span class="tex">12+8=20</span>, <span class="tex">20+10=30</span>, <span class="tex">30+12=42</span>.</p>
+          <p class="final">42.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method. Put <span class="tex">n=1</span> through <span class="tex">n=6</span> into <span class="tex">3n+2</span>.</p>
+          <p class="step"><span class="tex">n=1:\ 3+2=5</span></p>
+          <p class="step"><span class="tex">n=2:\ 6+2=8</span></p>
+          <p class="step"><span class="tex">n=3:\ 9+2=11</span></p>
+          <p class="step"><span class="tex">n=4:\ 12+2=14</span></p>
+          <p class="step"><span class="tex">n=5:\ 15+2=17</span></p>
+          <p class="step"><span class="tex">n=6:\ 18+2=20</span></p>
+          <p class="step">Add: <span class="tex">5+8=13</span>, <span class="tex">13+11=24</span>, <span class="tex">24+14=38</span>, <span class="tex">38+17=55</span>, <span class="tex">55+20=75</span>.</p>
+          <p class="final">75.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method, but the counter starts at 3 and stops at 7. Do not start at 1.</p>
+          <p class="step"><span class="tex">n=3:\ 18-9=9</span></p>
+          <p class="step"><span class="tex">n=4:\ 18-12=6</span></p>
+          <p class="step"><span class="tex">n=5:\ 18-15=3</span></p>
+          <p class="step"><span class="tex">n=6:\ 18-18=0</span></p>
+          <p class="step"><span class="tex">n=7:\ 18-21=-3</span></p>
+          <p class="step"><span class="tex">9+6+3+0+(-3)=15</span>.</p>
+          <p class="final">15.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method. The counter is now called <span class="tex">k</span>. Square each whole number from 5 to 8.</p>
+          <p class="step"><span class="tex">5^{2}=25</span>, <span class="tex">6^{2}=36</span>, <span class="tex">7^{2}=49</span>, <span class="tex">8^{2}=64</span>.</p>
+          <p class="step"><span class="tex">25+36=61</span>, <span class="tex">61+49=110</span>, <span class="tex">110+64=174</span>.</p>
+          <p class="final">174.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method. Cube each whole number from 1 to 4. <span class="tex">k^{3}=k\times k\times k</span>.</p>
+          <p class="step"><span class="tex">1^{3}=1</span>, <span class="tex">2^{3}=8</span>, <span class="tex">3^{3}=27</span>, <span class="tex">4^{3}=64</span>.</p>
+          <p class="step"><span class="tex">1+8=9</span>, <span class="tex">9+27=36</span>, <span class="tex">36+64=100</span>.</p>
+          <p class="final">100.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method. <span class="tex">2^{k}</span> means 2 multiplied by itself <span class="tex">k</span> times. <span class="tex">2^{0}=1</span>.</p>
+          <p class="step"><span class="tex">2^{0}=1</span>, <span class="tex">2^{1}=2</span>, <span class="tex">2^{2}=4</span>, <span class="tex">2^{3}=8</span>, <span class="tex">2^{4}=16</span>, <span class="tex">2^{5}=32</span>.</p>
+          <p class="step"><span class="tex">1+2+4+8+16+32=63</span>.</p>
+          <p class="final">63.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method. The counter is <span class="tex">j</span>, from 2 to 4. This is a power, <span class="tex">3^{j}</span>, not <span class="tex">3\times j</span>.</p>
+          <p class="step"><span class="tex">3^{2}=9</span>, <span class="tex">3^{3}=27</span>, <span class="tex">3^{4}=81</span>.</p>
+          <p class="step"><span class="tex">9+27=36</span>, <span class="tex">36+81=117</span>.</p>
+          <p class="final">117.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">(-1)^{\ell}</span> is −1 when <span class="tex">\ell</span> is odd, and +1 when <span class="tex">\ell</span> is even. There are 31 terms, an odd count, and the first term is −1.</p>
+          <p class="step"><strong>Step 1 ·</strong> The terms are <span class="tex">-1,\;1,\;-1,\;1,\;\ldots</span> and the 31st term is <span class="tex">(-1)^{31}=-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Pair them: <span class="tex">(-1)+1=0</span>. Fifteen pairs use 30 terms and add to 0.</p>
+          <p class="step"><strong>Step 3 ·</strong> One term is left, the last one, which is −1.</p>
+          <p class="final">−1.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">(-1)^{\ell-1}</span> starts at +1 when <span class="tex">\ell=1</span>, because <span class="tex">(-1)^{0}=1</span>. There are 40 terms, an even count.</p>
+          <p class="step"><strong>Step 1 ·</strong> The terms are <span class="tex">1,\;-1,\;1,\;-1,\;\ldots,\;-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Each pair <span class="tex">1+(-1)=0</span>. There are 20 such pairs.</p>
+          <p class="final">0.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The thing being added does not use <span class="tex">i</span>. Every term is 4. Count how many whole numbers run from 5 to 105 inclusive: <span class="tex">105-5+1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">105-5+1=101</span> terms.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">101\times 4=404</span>.</p>
+          <p class="final">404.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · k</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">(-1)^{i}</span> makes the signs +, −, +, −, + when <span class="tex">i</span> starts at 0. The size of the term is <span class="tex">i+5</span>.</p>
+          <p class="step"><span class="tex">i=0:\ +5</span></p>
+          <p class="step"><span class="tex">i=1:\ -6</span></p>
+          <p class="step"><span class="tex">i=2:\ +7</span></p>
+          <p class="step"><span class="tex">i=3:\ -8</span></p>
+          <p class="step"><span class="tex">i=4:\ +9</span></p>
+          <p class="step"><span class="tex">5-6=-1</span>, <span class="tex">-1+7=6</span>, <span class="tex">6-8=-2</span>, <span class="tex">-2+9=7</span>.</p>
+          <p class="final">7.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · l</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same sizes as part (k). The power is now <span class="tex">i+1</span>, so every sign flips. The signs start with minus.</p>
+          <p class="step"><span class="tex">i=0:\ -5</span></p>
+          <p class="step"><span class="tex">i=1:\ +6</span></p>
+          <p class="step"><span class="tex">i=2:\ -7</span></p>
+          <p class="step"><span class="tex">i=3:\ +8</span></p>
+          <p class="step"><span class="tex">i=4:\ -9</span></p>
+          <p class="step"><span class="tex">-5+6=1</span>, <span class="tex">1-7=-6</span>, <span class="tex">-6+8=2</span>, <span class="tex">2-9=-7</span>.</p>
+          <p class="final">−7.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q9">
+      <h2>9 · Exercise 1E <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p><strong>(a)</strong> Use the dot diagram to explain why the sum of the first <span class="tex">n</span> odd positive integers is <span class="tex">n^{2}</span>.</p>
+        <div class="fig">
+          <svg class="fig-svg" viewBox="0 0 560 230" role="img" aria-label="Four coloured L-shapes of 1, 3, 5 and 7 dots making a 4 by 4 square">
+            <circle cx="48" cy="40" r="8" fill="#1e3a5f"/>
+            <circle cx="88" cy="40" r="8" fill="#0f766e"/><circle cx="48" cy="80" r="8" fill="#0f766e"/><circle cx="88" cy="80" r="8" fill="#0f766e"/>
+            <circle cx="128" cy="40" r="8" fill="#b45309"/><circle cx="128" cy="80" r="8" fill="#b45309"/><circle cx="128" cy="120" r="8" fill="#b45309"/><circle cx="88" cy="120" r="8" fill="#b45309"/><circle cx="48" cy="120" r="8" fill="#b45309"/>
+            <circle cx="168" cy="40" r="8" fill="#6d28d9"/><circle cx="168" cy="80" r="8" fill="#6d28d9"/><circle cx="168" cy="120" r="8" fill="#6d28d9"/><circle cx="168" cy="160" r="8" fill="#6d28d9"/><circle cx="128" cy="160" r="8" fill="#6d28d9"/><circle cx="88" cy="160" r="8" fill="#6d28d9"/><circle cx="48" cy="160" r="8" fill="#6d28d9"/>
+            <rect x="250" y="36" width="16" height="16" rx="3" fill="#1e3a5f"/><text x="276" y="49" font-size="15" fill="#1e293b">1 dot → the number 1</text>
+            <rect x="250" y="70" width="16" height="16" rx="3" fill="#0f766e"/><text x="276" y="83" font-size="15" fill="#1e293b">3 dots → the number 3</text>
+            <rect x="250" y="104" width="16" height="16" rx="3" fill="#b45309"/><text x="276" y="117" font-size="15" fill="#1e293b">5 dots → the number 5</text>
+            <rect x="250" y="138" width="16" height="16" rx="3" fill="#6d28d9"/><text x="276" y="151" font-size="15" fill="#1e293b">7 dots → the number 7</text>
+            <text x="40" y="208" font-size="15" fill="#1e293b">1 + 3 + 5 + 7 = 16, and 16 is a 4 by 4 square.</text>
+          </svg>
+        </div>
+        <p><strong>(b)</strong> Use the dot diagram to explain why the sum of the first <span class="tex">n</span> positive integers is <span class="tex">\dfrac{1}{2}n(n+1)</span>.</p>
+        <div class="fig">
+          <svg class="fig-svg" viewBox="0 0 640 220" role="img" aria-label="A triangle of 10 dots beside a 4 by 5 rectangle of 20 dots">
+            <text x="24" y="22" font-size="14" fill="#1e293b">One triangle (first 4 positives)</text>
+            <circle cx="48" cy="48" r="7" fill="#1e3a5f"/><circle cx="80" cy="48" r="7" fill="#1e3a5f"/><circle cx="112" cy="48" r="7" fill="#1e3a5f"/><circle cx="144" cy="48" r="7" fill="#1e3a5f"/>
+            <circle cx="64" cy="80" r="7" fill="#1e3a5f"/><circle cx="96" cy="80" r="7" fill="#1e3a5f"/><circle cx="128" cy="80" r="7" fill="#1e3a5f"/>
+            <circle cx="80" cy="112" r="7" fill="#1e3a5f"/><circle cx="112" cy="112" r="7" fill="#1e3a5f"/>
+            <circle cx="96" cy="144" r="7" fill="#1e3a5f"/>
+            <text x="24" y="180" font-size="14" fill="#1e293b">4 + 3 + 2 + 1 = 10 dots</text>
+            <text x="300" y="22" font-size="14" fill="#1e293b">Two copies make a rectangle</text>
+            <g fill="#0f766e">
+              <circle cx="320" cy="48" r="6"/><circle cx="348" cy="48" r="6"/><circle cx="376" cy="48" r="6"/><circle cx="404" cy="48" r="6"/>
+              <circle cx="320" cy="76" r="6"/><circle cx="348" cy="76" r="6"/><circle cx="376" cy="76" r="6"/><circle cx="404" cy="76" r="6"/>
+              <circle cx="320" cy="104" r="6"/><circle cx="348" cy="104" r="6"/><circle cx="376" cy="104" r="6"/><circle cx="404" cy="104" r="6"/>
+              <circle cx="320" cy="132" r="6"/><circle cx="348" cy="132" r="6"/><circle cx="376" cy="132" r="6"/><circle cx="404" cy="132" r="6"/>
+              <circle cx="320" cy="160" r="6"/><circle cx="348" cy="160" r="6"/><circle cx="376" cy="160" r="6"/><circle cx="404" cy="160" r="6"/>
+            </g>
+            <text x="430" y="78" font-size="14" fill="#1e293b">4 across</text>
+            <text x="430" y="100" font-size="14" fill="#1e293b">5 down</text>
+            <text x="430" y="128" font-size="14" fill="#1e293b">4 × 5 = 20</text>
+            <text x="300" y="200" font-size="14" fill="#1e293b">One triangle is half: 20 ÷ 2 = 10</text>
+          </svg>
+        </div>
+        <p><strong>(c)</strong> Part (b) shows why the sums <span class="tex">1</span>, <span class="tex">1+2=3</span>, <span class="tex">1+2+3=6</span>, <span class="tex">1+2+3+4=10</span>, … are called the triangular numbers. Write the first 15 triangular numbers.</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The odd positives are 1, 3, 5, 7, …. The <span class="tex">n</span>th odd number is <span class="tex">2n-1</span>. In the diagram, each new odd number is an L-shaped border around the square you already have.</p>
+          <p class="step"><strong>Step 1 ·</strong> 1 dot is a <span class="tex">1\times 1</span> square. <span class="tex">1=1^{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Add the 3 teal dots. You now have a <span class="tex">2\times 2</span> square. <span class="tex">1+3=4=2^{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Add the 5 amber dots. You now have a <span class="tex">3\times 3</span> square. <span class="tex">1+3+5=9=3^{2}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Add the 7 purple dots. You now have a <span class="tex">4\times 4</span> square. <span class="tex">1+3+5+7=16=4^{2}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> The next odd number, 9, would make a <span class="tex">5\times 5</span> square. After <span class="tex">n</span> odd numbers, the picture is an <span class="tex">n\times n</span> square, so the sum is <span class="tex">n^{2}</span>.</p>
+          <p class="final">The sum of the first <span class="tex">n</span> odd positive integers is <span class="tex">n^{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Two copies of the same triangle fit together into a rectangle. The rectangle has <span class="tex">n</span> dots across and <span class="tex">n+1</span> dots down, so it has <span class="tex">n(n+1)</span> dots. One triangle is half of that.</p>
+          <p class="step"><strong>Step 1 ·</strong> For <span class="tex">n=4</span>, the triangle in the diagram has rows of 4, 3, 2 and 1 dots. That is <span class="tex">1+2+3+4</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Two of those triangles make the rectangle on the right: 4 across and 5 down.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">4\times 5=20</span> dots in the rectangle.</p>
+          <p class="step"><strong>Step 4 ·</strong> One triangle is half: <span class="tex">20\div 2=10</span>. And <span class="tex">\dfrac{1}{2}\times 4\times 5=10</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> The same fitting works for any <span class="tex">n</span>. The rectangle is <span class="tex">n</span> by <span class="tex">n+1</span>, so the triangle sum is <span class="tex">\dfrac{1}{2}n(n+1)</span>.</p>
+          <p class="final"><span class="tex">1+2+\cdots+n=\dfrac{1}{2}n(n+1)</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> The <span class="tex">n</span>th triangular number is <span class="tex">T_n=\dfrac{1}{2}n(n+1)</span>. Work out that product, then halve it. Use the same formula for every <span class="tex">n</span> from 1 to 15.</p>
+          <p class="step"><span class="tex">T_1=\dfrac{1}{2}\times 1\times 2=1</span></p>
+          <p class="step"><span class="tex">T_2=\dfrac{1}{2}\times 2\times 3=3</span></p>
+          <p class="step"><span class="tex">T_3=\dfrac{1}{2}\times 3\times 4=6</span></p>
+          <p class="step"><span class="tex">T_4=\dfrac{1}{2}\times 4\times 5=10</span></p>
+          <p class="step"><span class="tex">T_5=\dfrac{1}{2}\times 5\times 6=15</span></p>
+          <p class="step"><span class="tex">T_6=\dfrac{1}{2}\times 6\times 7=21</span></p>
+          <p class="step"><span class="tex">T_7=\dfrac{1}{2}\times 7\times 8=28</span></p>
+          <p class="step"><span class="tex">T_8=\dfrac{1}{2}\times 8\times 9=36</span></p>
+          <p class="step"><span class="tex">T_9=\dfrac{1}{2}\times 9\times 10=45</span></p>
+          <p class="step"><span class="tex">T_{10}=\dfrac{1}{2}\times 10\times 11=55</span></p>
+          <p class="step"><span class="tex">T_{11}=\dfrac{1}{2}\times 11\times 12=66</span></p>
+          <p class="step"><span class="tex">T_{12}=\dfrac{1}{2}\times 12\times 13=78</span></p>
+          <p class="step"><span class="tex">T_{13}=\dfrac{1}{2}\times 13\times 14=91</span></p>
+          <p class="step"><span class="tex">T_{14}=\dfrac{1}{2}\times 14\times 15=105</span></p>
+          <p class="step"><span class="tex">T_{15}=\dfrac{1}{2}\times 15\times 16=120</span></p>
+          <p class="final">1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91, 105, 120.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q10">
+      <h2>10 · Exercise 1E <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p class="intro">Rewrite each sum in sigma notation, starting each sum at <span class="tex">n=1</span>. Do not evaluate it.</p>
+        <p><strong>(a)</strong> <span class="tex">1^{3}+2^{3}+3^{3}+\cdots+40^{3}</span></p>
+        <p><strong>(b)</strong> <span class="tex">1+\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{40}</span></p>
+        <p><strong>(c)</strong> <span class="tex">3+4+5+\cdots+22</span></p>
+        <p><strong>(d)</strong> <span class="tex">2+2^{2}+2^{3}+\cdots+2^{12}</span></p>
+        <p><strong>(e)</strong> <span class="tex">-1+2-3+\cdots+10</span></p>
+        <p><strong>(f)</strong> <span class="tex">1-2+3-\cdots-10</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The <span class="tex">n</span>th term is a rule in <span class="tex">n</span>. The bottom of the sigma is 1. The top is the last value of <span class="tex">n</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> Term 1 is <span class="tex">1^{3}</span>. Term 2 is <span class="tex">2^{3}</span>. Term 40 is <span class="tex">40^{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The rule is <span class="tex">n^{3}</span>, and <span class="tex">n</span> runs from 1 to 40.</p>
+          <p class="final"><span class="tex">\displaystyle\sum_{n=1}^{40}n^{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method. The first term is <span class="tex">\dfrac{1}{1}</span>, which is 1.</p>
+          <p class="step"><strong>Step 1 ·</strong> Term 1 is <span class="tex">\dfrac{1}{1}</span>. Term 2 is <span class="tex">\dfrac{1}{2}</span>. Term 40 is <span class="tex">\dfrac{1}{40}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The rule is <span class="tex">\dfrac{1}{n}</span>, from <span class="tex">n=1</span> to <span class="tex">n=40</span>.</p>
+          <p class="final"><span class="tex">\displaystyle\sum_{n=1}^{40}\dfrac{1}{n}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The sum must start at <span class="tex">n=1</span>, but the first number in the list is 3, not 1. So the rule is “<span class="tex">n</span>, then add 2”.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">3=1+2</span>, <span class="tex">4=2+2</span>, <span class="tex">5=3+2</span>, and the last number 22 is <span class="tex">20+2</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> There are 20 terms, because <span class="tex">n</span> runs from 1 to 20.</p>
+          <p class="final"><span class="tex">\displaystyle\sum_{n=1}^{20}(n+2)</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same method. The first term is <span class="tex">2</span>, which is <span class="tex">2^{1}</span>, not <span class="tex">2^{0}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> Term 1 is <span class="tex">2^{1}</span>. Term 2 is <span class="tex">2^{2}</span>. Term 12 is <span class="tex">2^{12}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The rule is <span class="tex">2^{n}</span>, from <span class="tex">n=1</span> to <span class="tex">n=12</span>.</p>
+          <p class="final"><span class="tex">\displaystyle\sum_{n=1}^{12}2^{n}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The sizes are 1, 2, 3, …, 10. The signs start negative and the last term, 10, is positive. <span class="tex">(-1)^{n}</span> is negative for odd <span class="tex">n</span> and positive for even <span class="tex">n</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">n=1</span> gives <span class="tex">(-1)^{1}\times 1=-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">n=2</span> gives <span class="tex">(+1)\times 2=2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">n=10</span> gives <span class="tex">(+1)\times 10=10</span>.</p>
+          <p class="final"><span class="tex">\displaystyle\sum_{n=1}^{10}(-1)^{n}n</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Same sizes as part (e). This time the first term is positive and the last term, 10, is negative. Use <span class="tex">(-1)^{n-1}</span>, which starts positive.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">n=1</span> gives <span class="tex">(-1)^{0}\times 1=1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">n=2</span> gives <span class="tex">(-1)^{1}\times 2=-2</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">n=10</span> gives <span class="tex">(-1)^{9}\times 10=-10</span>.</p>
+          <p class="final"><span class="tex">\displaystyle\sum_{n=1}^{10}(-1)^{n-1}n</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q11">
+      <h2>11 · Exercise 1E <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p><strong>(a)</strong> The partial sums of a sequence <span class="tex">a_n</span> are given by <span class="tex">S_n=2^{n}</span>. Use <span class="tex">a_1=S_1</span> and <span class="tex">a_n=S_n-S_{n-1}</span> to find <span class="tex">a_n</span>.</p>
+        <p><strong>(b)</strong> Confirm your answer by writing the calculation in a table, as in question 6.</p>
+        <p><strong>(c)</strong> In the Year 11 book you differentiated <span class="tex">y=e^{x}</span>. What is the analogy with this result?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_1=S_1</span>. For <span class="tex">n\ge 2</span>, <span class="tex">a_n=S_n-S_{n-1}</span>. Here <span class="tex">S_n=2^{n}</span>, so <span class="tex">S_{n-1}=2^{n-1}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a_1=S_1=2^{1}=2</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> For <span class="tex">n\ge 2</span>, <span class="tex">a_n=2^{n}-2^{n-1}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Factor <span class="tex">2^{n-1}</span>: <span class="tex">2^{n}=2\times 2^{n-1}</span>, so <span class="tex">2^{n}-2^{n-1}=2^{n-1}(2-1)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">2-1=1</span>, so <span class="tex">a_n=2^{n-1}</span> for <span class="tex">n\ge 2</span>.</p>
+          <p class="final"><span class="tex">a_1=2</span>, and <span class="tex">a_n=2^{n-1}</span> for <span class="tex">n\ge 2</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Build <span class="tex">S_n=2^{n}</span> first. Then each later <span class="tex">a_n</span> is <span class="tex">S_n-S_{n-1}</span>.</p>
+          <p class="step"><span class="tex">a_2=4-2=2</span>, <span class="tex">a_3=8-4=4</span>, <span class="tex">a_4=16-8=8</span>, and so on. Each gap is double the previous gap.</p>
+          <table class="sol-table"><thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead><tbody>
+            <tr><td><span class="tex">S_n=2^{n}</span></td><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td><td>64</td><td>128</td></tr>
+            <tr><td><span class="tex">a_n</span></td><td>2</td><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td><td>64</td></tr>
+          </tbody></table>
+          <p class="final">The table matches part (a): 2, then 2, 4, 8, 16, 32, 64.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The derivative of <span class="tex">e^{x}</span> is <span class="tex">e^{x}</span> again. Taking differences of a sequence is the discrete cousin of differentiating.</p>
+          <p class="step"><strong>Step 1 ·</strong> Drop the opening 2 from the list in part (b). The remaining terms are 2, 4, 8, 16, 32, 64.</p>
+          <p class="step"><strong>Step 2 ·</strong> The gaps of that shorter list are <span class="tex">4-2=2</span>, <span class="tex">8-4=4</span>, <span class="tex">16-8=8</span>, and so on. You get the same list back: 2, 4, 8, 16, 32, 64.</p>
+          <p class="final">After the first term is removed, the differences reproduce the sequence, just as differentiating <span class="tex">e^{x}</span> gives <span class="tex">e^{x}</span> again.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q12">
+      <h2>12 · Exercise 1E <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p><strong>(a)</strong> Prove that <span class="tex">n^{3}-(n-1)^{3}=3n^{2}-3n+1</span>.</p>
+        <p><strong>(b)</strong> The partial sums of a sequence <span class="tex">a_n</span> are given by <span class="tex">S_n=n^{3}</span>. Use <span class="tex">a_1=S_1</span> and <span class="tex">a_n=S_n-S_{n-1}</span> to find <span class="tex">a_n</span>.</p>
+        <p><strong>(c)</strong> The terms <span class="tex">a_n</span> are themselves the partial sums of a third sequence <span class="tex">U_n</span>. Use the same rule to find a formula for <span class="tex">U_n</span>.</p>
+        <p><strong>(d)</strong> Confirm parts (b) and (c) by writing the successive differences in a table.</p>
+        <p><strong>(e)</strong> In the Year 11 book you differentiated powers of <span class="tex">x</span>. What is the analogy with these results?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">(n-1)^{3}=(n-1)(n-1)(n-1)=n^{3}-3n^{2}+3n-1</span>. Expand first, then subtract.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">(n-1)^{2}=n^{2}-2n+1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Multiply by <span class="tex">(n-1)</span>: <span class="tex">(n^{2}-2n+1)(n-1)=n^{3}-n^{2}-2n^{2}+2n+n-1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Collect: <span class="tex">n^{3}-3n^{2}+3n-1</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">n^{3}-(n^{3}-3n^{2}+3n-1)=n^{3}-n^{3}+3n^{2}-3n+1</span>.</p>
+          <p class="final"><span class="tex">n^{3}-(n-1)^{3}=3n^{2}-3n+1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_1=S_1</span>. For <span class="tex">n\ge 2</span>, <span class="tex">a_n=S_n-S_{n-1}=n^{3}-(n-1)^{3}</span>. Part (a) has already simplified that gap.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a_1=1^{3}=1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> For <span class="tex">n\ge 2</span>, <span class="tex">a_n=3n^{2}-3n+1</span>.</p>
+          <p class="step"><strong>Check ·</strong> The same expression at <span class="tex">n=1</span> is <span class="tex">3-3+1=1</span>, so it also fits the first term.</p>
+          <p class="final"><span class="tex">a_n=3n^{2}-3n+1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Now <span class="tex">a_n</span> plays the role of the partial sum. So <span class="tex">U_1=a_1</span>, and <span class="tex">U_n=a_n-a_{n-1}</span> for <span class="tex">n\ge 2</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">U_1=a_1=1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a_{n-1}=3(n-1)^{2}-3(n-1)+1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">(n-1)^{2}=n^{2}-2n+1</span>, so <span class="tex">3(n-1)^{2}=3n^{2}-6n+3</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">-3(n-1)=-3n+3</span>. Add the final +1: <span class="tex">a_{n-1}=3n^{2}-9n+7</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">U_n=(3n^{2}-3n+1)-(3n^{2}-9n+7)=6n-6=6(n-1)</span>.</p>
+          <p class="final"><span class="tex">U_1=1</span>, and <span class="tex">U_n=6(n-1)</span> for <span class="tex">n\ge 2</span>. The terms are 1, 6, 12, 18, 24, 30, …</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Row <span class="tex">S_n</span> is <span class="tex">n^{3}</span>. Row <span class="tex">a_n</span> is the first set of gaps. Row <span class="tex">U_n</span> is the gaps of the <span class="tex">a_n</span> row, with <span class="tex">U_1=a_1</span>.</p>
+          <p class="step"><span class="tex">a_2=8-1=7</span>, <span class="tex">a_3=27-8=19</span>, <span class="tex">a_4=64-27=37</span>, <span class="tex">a_5=125-64=61</span>, <span class="tex">a_6=216-125=91</span>.</p>
+          <p class="step"><span class="tex">U_2=7-1=6</span>, <span class="tex">U_3=19-7=12</span>, <span class="tex">U_4=37-19=18</span>, <span class="tex">U_5=61-37=24</span>, <span class="tex">U_6=91-61=30</span>.</p>
+          <table class="sol-table"><thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody>
+            <tr><td><span class="tex">S_n=n^{3}</span></td><td>1</td><td>8</td><td>27</td><td>64</td><td>125</td><td>216</td></tr>
+            <tr><td><span class="tex">a_n</span></td><td>1</td><td>7</td><td>19</td><td>37</td><td>61</td><td>91</td></tr>
+            <tr><td><span class="tex">U_n</span></td><td>1</td><td>6</td><td>12</td><td>18</td><td>24</td><td>30</td></tr>
+          </tbody></table>
+          <p class="final">The <span class="tex">a_n</span> row matches <span class="tex">3n^{2}-3n+1</span>. The <span class="tex">U_n</span> row matches 1, then <span class="tex">6(n-1)</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> The derivative of <span class="tex">x^{3}</span> is <span class="tex">3x^{2}</span>, a quadratic. The derivative of <span class="tex">3x^{2}</span> is <span class="tex">6x</span>, a straight-line formula.</p>
+          <p class="step"><strong>Step 1 ·</strong> The sums are the cubes <span class="tex">n^{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> One set of differences gives <span class="tex">a_n=3n^{2}-3n+1</span>, which is quadratic, like <span class="tex">3x^{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> A second set of differences gives <span class="tex">6,\;12,\;18,\;24,\;\ldots</span>, which goes up by 6 each time, like <span class="tex">6x</span>.</p>
+          <p class="final">Taking differences once turns the cubes into a quadratic list. Taking differences again turns that into a linear list. That matches differentiating <span class="tex">x^{3}</span> twice.</p>
+        </div>
+      </div>
+    </article>
+
     <p style="margin-top:1.5rem">
-      <a class='btn' href='../../Chapter 1 Sequences and series/1F-summing-arithmetic-series/concept.html'>Next: 1F Concept →</a>
+      <a class="btn" href="../../Chapter 1 Sequences and series/1F-summing-arithmetic-series/concept.html">Next: 1F Concept →</a>
       <a class="btn ghost" href="tutorial.html">← Tutorial</a>
     </p>
   </div>
-  <script>
-  (function(){
-    function bind(btn){
-      btn.addEventListener("click", function(){
-        var sol = btn.nextElementSibling;
-        var open = sol.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
-      });
-    }
-    document.querySelectorAll(".q > .btn.show").forEach(bind);
-    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
-    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
-    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
-  })();
-  </script>
-
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script src="../../course-solutions.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>
