@@ -8,6 +8,16 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .formula .row{margin:.45rem 0}
+    .worked{margin:.85rem 0 0;padding:.85rem 1rem;background:#fbfaf7;border:1px solid var(--line);border-radius:12px}
+    .worked h3{margin:0 0 .45rem;font-size:1.05rem}
+    .formula-quick{margin:.15rem 0 .7rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.45}
+    .step{margin:.4rem 0;line-height:1.5}
+    .step strong{color:var(--navy)}
+    .ask{margin:0 0 .65rem;padding:.6rem .75rem;background:#fff;border:1px solid var(--line);border-radius:10px;line-height:1.5}
+    .ask strong{color:var(--navy)}
+  </style>
 </head>
 <body data-section="1F" data-page="tutorial" data-nav-depth="2" data-auth-sub="1F Tutorial">
   <div class="shell"><div class="main">
@@ -23,34 +33,69 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>1F · Summing an arithmetic series</h1>
-    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
+    <p>Two short formulae add the first <span class="tex">n</span> terms of an AP. Use the one that matches the numbers you already know.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-1-Worked-Solutions.pdf.</div>
+      <div class="body">Each formula sits on its own row. Each example states the question, then substitutes one number at a time. Prefer <span class="tex">S_n=\dfrac{n}{2}(a+a_n)</span> when the last term is known.</div>
     </details>
-    
+
     <section class="card" id="theory">
       <h2 class="section-h">Theory · key ideas</h2>
-      <p class="lede">Sum the first <span class="tex">n</span> terms of an AP with a ready-made formula.</p>
+      <p class="lede">An AP adds the same gap each time. The sum of the first <span class="tex">n</span> terms is <span class="tex">S_n</span>. You do not have to add the terms one by one.</p>
       <ul>
-        <li>Pair first+last: write the sum forwards and backwards.</li>
-        <li><span class="tex">S_n=\dfrac n2(a+\ell)</span> when you know first and last.</li>
-        <li><span class="tex">S_n=\dfrac n2\big(2a+(n-1)d\big)</span> when you know <span class="tex">a</span> and <span class="tex">d</span>.</li>
-        <li>Pick the form that matches the given information.</li>
+        <li><strong>First and last known.</strong> Write the sum forwards and backwards. Each pair adds to first + last. There are <span class="tex">n</span> pairs, so twice the sum is <span class="tex">n</span> times that pair. Divide by 2.</li>
+        <li><strong>First term and gap known.</strong> The last term is <span class="tex">a+(n-1)d</span>. Put that into the first formula and tidy.</li>
+        <li><strong>Which one.</strong> If you can see the last term, use the first formula. If you know the gap <span class="tex">d</span> and how many terms, use the second.</li>
+        <li><strong>Count the terms.</strong> From 100 to 200 inclusive is <span class="tex">200-100+1=101</span> terms, not 100.</li>
       </ul>
-      <div class="formula"><span class="tex">S_n=\dfrac n2\big(2a+(n-1)d\big)=\dfrac n2(a+\ell)</span></div>
-      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
+      <div class="formula">
+        <div class="row"><span class="tex">S_n=\dfrac{n}{2}(a+a_n)</span></div>
+        <div class="row"><span class="tex">S_n=\dfrac{n}{2}\big(2a+(n-1)d\big)</span></div>
+      </div>
+      <p>More practice is on the <a href="problems.html">Exercise</a> page. Each part there has its own solution button.</p>
     </section>
+
     <section class="card" id="mini">
       <h2 class="section-h">Worked mini-examples</h2>
+
       <div class="worked">
-        <h3>Example · first + last</h3>
-        <p class="step"><strong>Step 1 ·</strong> Sum <span class="tex">5+15+\cdots+55</span> (6 terms): <span class="tex">S_6=\dfrac62(5+55)=180</span>.</p>
+        <h3>Example · first term and last term</h3>
+        <p class="ask"><strong>Question.</strong> Add the integers from 100 to 200 inclusive.</p>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_n=\dfrac{n}{2}(a+a_n)</span>. Here <span class="tex">a</span> is the first term, <span class="tex">a_n</span> is the last term, and <span class="tex">n</span> is how many terms you are adding.</p>
+        <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=100</span>. Last term <span class="tex">a_n=200</span>. The gap is 1.</p>
+        <p class="step"><strong>Step 2 ·</strong> How many terms: <span class="tex">n=200-100+1=101</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_{101}=\dfrac{101}{2}(100+200)</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">100+200=300</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> <span class="tex">\dfrac{101}{2}\times 300=101\times 150=15150</span>.</p>
+        <p class="step"><strong>Answer ·</strong> The sum is 15 150.</p>
       </div>
+
       <div class="worked">
-        <h3>Example · using <span class="tex">a</span> and <span class="tex">d</span></h3>
-        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=5</span>, <span class="tex">d=10</span>, <span class="tex">n=6</span>: <span class="tex">S_6=\dfrac62\big(2\times 5+5\times 10\big)=180</span> (same).</p>
+        <h3>Example · first term and common difference</h3>
+        <p class="ask"><strong>Question.</strong> The series is <span class="tex">100+94+88+82+\cdots</span>. Find <span class="tex">S_{10}</span> and <span class="tex">S_{41}</span>.</p>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_n=\dfrac{n}{2}\big(2a+(n-1)d\big)</span>. Here <span class="tex">a</span> is the first term and <span class="tex">d</span> is the gap. The <span class="tex">(n-1)</span> means you have made <span class="tex">n-1</span> jumps to reach term <span class="tex">n</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=100</span>. <span class="tex">d=94-100=-6</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> For 10 terms, <span class="tex">n-1=9</span>. <span class="tex">S_{10}=\dfrac{10}{2}\big(2\times 100+9\times(-6)\big)</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">2\times 100=200</span>. <span class="tex">9\times(-6)=-54</span>. So the bracket is <span class="tex">200-54=146</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">5\times 146=730</span>. So <span class="tex">S_{10}=730</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> For 41 terms, <span class="tex">n-1=40</span>. <span class="tex">S_{41}=\dfrac{41}{2}\big(200+40\times(-6)\big)</span>.</p>
+        <p class="step"><strong>Step 6 ·</strong> <span class="tex">40\times(-6)=-240</span>. The bracket is <span class="tex">200-240=-40</span>.</p>
+        <p class="step"><strong>Step 7 ·</strong> <span class="tex">\dfrac{41}{2}\times(-40)=41\times(-20)=-820</span>.</p>
+        <p class="step"><strong>Answer ·</strong> <span class="tex">S_{10}=730</span> and <span class="tex">S_{41}=-820</span>.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · find how many terms, then add</h3>
+        <p class="ask"><strong>Question.</strong> How many terms are in <span class="tex">41+45+49+\cdots+401</span>? Then find the sum.</p>
+        <p class="formula-quick"><strong>Formula:</strong> The <span class="tex">n</span>th term is <span class="tex">a_n=a+(n-1)d</span>. Once you know <span class="tex">n</span> and the last term, use <span class="tex">S_n=\dfrac{n}{2}(a+a_n)</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=41</span> and <span class="tex">d=45-41=4</span>. The last term is 401.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">41+(n-1)\times 4=401</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">(n-1)\times 4=360</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">n-1=90</span>, so <span class="tex">n=91</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_{91}=\dfrac{91}{2}(41+401)</span>.</p>
+        <p class="step"><strong>Step 6 ·</strong> <span class="tex">41+401=442</span>. <span class="tex">\dfrac{91}{2}\times 442=91\times 221=20111</span>.</p>
+        <p class="step"><strong>Answer ·</strong> There are 91 terms, and the sum is 20 111.</p>
       </div>
     </section>
 
@@ -58,15 +103,23 @@
        <a class="btn ghost" href="concept.html">← Concept</a></p>
     <footer class="site">Next: Exercise 1F, then section 1G.</footer>
   </div>
-
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>

@@ -8,6 +8,11 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .stem p{margin:.42rem 0;line-height:1.5}
+    .stem .intro{margin-bottom:.7rem}
+    .howto{margin:.8rem 0 0;padding:.7rem .85rem;background:#f4f7fb;border-radius:12px;line-height:1.45}
+  </style>
 </head>
 <body data-section="1I" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 1I">
   <div class="shell"><div class="main">
@@ -18,559 +23,395 @@
 <a href="concept.html">Concept</a>
 <a href="tutorial.html">Tutorial</a>
 <a href="problems.html">Exercise</a>
+<a href="../../Chapter 2 Differentiation applications/2A-increasing-decreasing-stationary/concept.html">2A →</a>
 </nav>
   <header class="hero">
     <span class="kicker">Exercise 1I</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
+    <p>Attempt on paper first. Each part has its own solution button. Open one part at a time.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
       <button class="btn show" type="button" id="allOn">Show all solutions</button>
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
+    <p class="howto"><strong>How to read a dot.</strong> A dot over a digit means that digit repeats forever. Dots over the first and last of a block mean the whole block repeats. <strong>Cancel list for this exercise:</strong> <span class="tex">9=3^{2}</span>, <span class="tex">99=3^{2}\times 11</span>, <span class="tex">999=3^{3}\times 37</span>, <span class="tex">9999=3^{2}\times 11\times 101</span>, <span class="tex">99999=3^{2}\times 41\times 271</span>, <span class="tex">999999=3^{3}\times 7\times 11\times 13\times 37</span>.</p>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 1I; answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">One button per part. In 5(g) the first 0 after the decimal point does not repeat; the block 00271 does, so the ratio is <span class="tex">0.00001</span> and the value is <span class="tex">\dfrac{1}{3690}</span>. Question 4(b) equals 2.8, which is <span class="tex">\dfrac{14}{5}</span>. Question 5(h) is <span class="tex">7\dfrac{27}{35}=\dfrac{272}{35}</span>.</div>
     </details>
+
     <article class="q" id="q1">
-      <h2>1 · Exercise 1I</h2>
+      <h2>1 · Exercise 1I <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Write each recurring decimal as an infinite GP. Then use the formula for the limiting sum of a GP to express it as a rational number in lowest terms. 0.˙3 a 0.˙1 b 0.˙7 c 0.˙6 d</p>
+        <p class="intro">Write each recurring decimal as an infinite GP. Then use the limiting-sum formula to write it as a fraction in lowest terms.</p>
+        <p><strong>(a)</strong> <span class="tex">0.\dot{3}</span></p>
+        <p><strong>(b)</strong> <span class="tex">0.\dot{1}</span></p>
+        <p><strong>(c)</strong> <span class="tex">0.\dot{7}</span></p>
+        <p><strong>(d)</strong> <span class="tex">0.\dot{6}</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-<p class="step"><strong>a ·</strong> 0.˙3 = 0.333 . . . = 0.3 + 0.03 + 0.003 + . . . = This is a GP with a = 0.3 and r = 0.1. Hence, 0.˙3 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.3/1 −0.1 = 0.3/0.9 = 3 9 = 1/3.</p>
+          <p class="formula-quick"><strong>Formula:</strong> One repeating digit. First term <span class="tex">a=\dfrac{\text{digit}}{10}</span>, ratio <span class="tex">r=\dfrac{1}{10}</span>. Because <span class="tex">|r|&lt;1</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{3}=0.3+0.03+0.003+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">a=0.3=\dfrac{3}{10}</span> and <span class="tex">r=\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=1-\dfrac{1}{10}=\dfrac{9}{10}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_\infty=\dfrac{3/10}{9/10}=\dfrac{3}{10}\times\dfrac{10}{9}=\dfrac{3}{9}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Divide top and bottom by 3: <span class="tex">\dfrac{3}{9}=\dfrac{1}{3}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{3}=\dfrac{1}{3}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> 0.˙1 = 0.111 . . . = 0.1 + 0.01 + 0.001 + . . . = This is a GP with a = 0.1 and r = 0.1. Hence, 0.˙1 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.1/1 −0.1 = 0.1/0.9 = 1/9.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">a=\dfrac{1}{10}</span>, <span class="tex">r=\dfrac{1}{10}</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{1}=0.1+0.01+0.001+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{9}{10}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{1/10}{9/10}=\dfrac{1}{9}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{1}=\dfrac{1}{9}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> 0.˙7 = 0.777 . . . = 0.7 + 0.07 + 0.007 + . . . = This is a GP with a = 0.7 and r = 0.1. Hence, 0.˙7 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.7/1 −0.1 = 0.7/0.9 = 7/9.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">a=\dfrac{7}{10}</span>, <span class="tex">r=\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{7}=0.7+0.07+0.007+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{7/10}{9/10}=\dfrac{7}{9}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> 7 and 9 share no common factor other than 1, so this is already in lowest terms.</p>
+          <p class="final"><span class="tex">0.\dot{7}=\dfrac{7}{9}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> 0.˙6 = 0.666 . . . = 0.6 + 0.06 + 0.006 + . . . = This is a GP with a = 0.6 and r = 0.1. Hence, 0.˙6 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.6/1 −0.1 = 0.6/0.9 = 6 9 = 2/3.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">a=\dfrac{6}{10}</span>, <span class="tex">r=\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{6}=0.6+0.06+0.006+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{6/10}{9/10}=\dfrac{6}{9}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Divide top and bottom by 3: <span class="tex">\dfrac{6}{9}=\dfrac{2}{3}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{6}=\dfrac{2}{3}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q2">
-      <h2>2 · Exercise 1I</h2>
+      <h2>2 · Exercise 1I <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Write each recurring decimal as an infinite GP. Then use the formula for the limiting sum of a GP to express it as a rational number in lowest terms. 0.˙2˙7 a 0.˙8˙1 b 0.˙0˙9 c 0.˙1˙2 d 0.˙7˙8 e 0.˙02˙7 f 0.˙13˙5 g 0.˙18˙5 h</p>
+        <p class="intro">Write each recurring decimal as an infinite GP. Then write it as a fraction in lowest terms.</p>
+        <p><strong>(a)</strong> <span class="tex">0.\dot{2}\dot{7}</span></p>
+        <p><strong>(b)</strong> <span class="tex">0.\dot{8}\dot{1}</span></p>
+        <p><strong>(c)</strong> <span class="tex">0.\dot{0}\dot{9}</span></p>
+        <p><strong>(d)</strong> <span class="tex">0.\dot{1}\dot{2}</span></p>
+        <p><strong>(e)</strong> <span class="tex">0.\dot{7}\dot{8}</span></p>
+        <p><strong>(f)</strong> <span class="tex">0.\dot{0}\dot{2}\dot{7}</span></p>
+        <p><strong>(g)</strong> <span class="tex">0.\dot{1}\dot{3}\dot{5}</span></p>
+        <p><strong>(h)</strong> <span class="tex">0.\dot{1}\dot{8}\dot{5}</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step">0.˙2˙7 = 0.2727 . . . = 0.27 + 0.0027 + 0.000027 + . . . This is a GP with a = 0.27 and r = 0.01. Hence: 0.˙2˙7 = S ∞=</p>
-<p class="step"><strong>a ·</strong> 1 −r = 0.27/1 −0.01 = 0.27/0.99 = 27 99 = 3/11</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 0.˙8˙1 = 0.8181 . . . = 0.81 + 0.0081 + 0.000081 + . . . This is a GP with a = 0.81 and r = 0.01. Hence: 0.˙8˙1 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.81/1 −0.01 = 0.81/0.99 = 81 99 = 9/11</p>
+          <p class="formula-quick"><strong>Formula:</strong> Two repeating digits. <span class="tex">a=0.27=\dfrac{27}{100}</span>, <span class="tex">r=\dfrac{1}{100}</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{2}\dot{7}=0.27+0.0027+0.000027+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{99}{100}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{27/100}{99/100}=\dfrac{27}{99}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">99=3^{2}\times 11</span> and <span class="tex">27=3^{3}</span>. Divide top and bottom by 9: <span class="tex">\dfrac{27}{99}=\dfrac{3}{11}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{2}\dot{7}=\dfrac{3}{11}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> 0.˙0˙9 = 0.0909 . . . = 0.09 + 0.0009 + 0.000009 + . . . This is a GP with a = 0.09 and r = 0.01. Hence: 0.˙0˙9 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.09/1 −0.01 = 0.09/0.99 = 9 99 = 1/11</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. Two digits, so <span class="tex">a=\dfrac{81}{100}</span> and <span class="tex">r=\dfrac{1}{100}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{81}{99}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">81=3^{4}</span> and <span class="tex">99=3^{2}\times 11</span>. Divide by 9: <span class="tex">\dfrac{81}{99}=\dfrac{9}{11}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{8}\dot{1}=\dfrac{9}{11}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> 0.˙1˙2 = 0.1212 . . . = 0.12 + 0.0012 + 0.000012 + . . . This is a GP with a = 0.12 and r = 0.01. Hence: 0.˙1˙2 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.12/1 −0.01 = 0.12/0.99 = 12 99 = 4/33</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. The block is 09, so <span class="tex">a=\dfrac{9}{100}</span> and <span class="tex">r=\dfrac{1}{100}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{0}\dot{9}=0.09+0.0009+0.000009+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{9}{99}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Divide by 9: <span class="tex">\dfrac{9}{99}=\dfrac{1}{11}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{0}\dot{9}=\dfrac{1}{11}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> 0.˙7˙8 = 0.7878 . . . = 0.78 + 0.0078 + 0.000078 + . . . This is a GP with a = 0.78 and r = 0.01. Hence: 0.˙7˙8 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.78/1 −0.01 = 0.78/0.99 = 78 99 = 26/33</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">a=\dfrac{12}{100}</span>, <span class="tex">r=\dfrac{1}{100}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{12}{99}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Divide by 3: <span class="tex">\dfrac{12}{99}=\dfrac{4}{33}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{1}\dot{2}=\dfrac{4}{33}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> 0.˙02˙7 = 0.027027 . . . = 0.027 + 0.000027 + 0.000000027 + . . . This is a GP with a = 0.027 and r = 0.001. Hence: 0.˙02˙7 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.027/1 −0.001 = 0.027/0.999 = 27 999 = 1/37</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same method. <span class="tex">a=\dfrac{78}{100}</span>, <span class="tex">r=\dfrac{1}{100}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{78}{99}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Divide by 3: <span class="tex">\dfrac{78}{99}=\dfrac{26}{33}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{7}\dot{8}=\dfrac{26}{33}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> 1/0.˙13˙5 = 0.135135 . . . = 0.135 + 0.000135 + 0.000000135 + . . . This is a GP with a = 0.135 and r = 0.001. Hence: 0.˙13˙5 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.135/1 −0.001 = 0.135/0.999 = 135 999 = 5/37</p>
+          <p class="formula-quick"><strong>Formula:</strong> Three repeating digits. <span class="tex">a=0.027=\dfrac{27}{1000}</span>, <span class="tex">r=\dfrac{1}{1000}</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{0}\dot{2}\dot{7}=0.027+0.000027+0.000000027+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{999}{1000}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{27}{999}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">999=3^{3}\times 37</span> and <span class="tex">27=3^{3}</span>. Divide by 27: <span class="tex">\dfrac{27}{999}=\dfrac{1}{37}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{0}\dot{2}\dot{7}=\dfrac{1}{37}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> 0.˙18˙5 = 0.185185 . . . = 0.185 + 0.000185 + 0.000000185 + . . . This is a GP with a = 0.185 and r = 0.001. Hence: 0.˙18˙5 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.185/1 −0.001 = 0.185/0.999 = 185 999 = 5/27</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
-        <div class="sol">
-<p class="step"><strong>h ·</strong> 3/12.˙4 = 12.444 . . . = 12 + 0.4 + 0.04 + 0.004 + . . . All terms after 12 form a GP with a = 0.4 and r = 0.1. Hence: 12.˙4 = 12 + S ∞= 12 +</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 12 + 0.4/1 −0.1 = 12 + 0.4/0.9 = 124/9</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 7.˙8˙1 = 7.8181 . . . = 7 + 0.81 + 0.0081 + 0.000081 + . . . All terms after 7 form a GP with a = 0.81 and r = 0.01. Hence 7.˙8˙1 = 7 + S ∞= 7 +</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 7 + 0.81/1 −0.01 = 7 + 0.81/0.99 = 7 9/11</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> 8.4˙6 = 8.466 . . . = 8.4 + 0.06 + 0.006 + . . . All terms after 8.4 form a GP with a = 0.06 and r = 0.1. Hence: 8.4˙6 = 8.4 + S ∞= 8.4 +</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 8.4 + 0.06/1 −0.1 = 8.4 + 0.06/0.9 = 8.4 + 6 90 = 8 7/15</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> 0.2˙3˙6 = 0.23636 . . . = 0.2 + 0.036 + 0.00036 + . . . All terms after 0.2 form a GP with a = 0.036 and r = 0.01. Hence: 0.2˙3˙6 = 0.2 + S ∞ = 0.2 +</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.2 + 0.036/1 −0.01 = 0.2 + 0.036/0.99 = 0.2 + 2 55 = 11 55 + 2 55 = 13/55</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> 4/0.˙9 = 0.99999 . . . = 0.9 + 0.09 + 0.009 + 0.0009 + . . . This is a GP with a = 0.9 and r = 0.09/0.9 = 0.1, so the sum will be: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.9/1 −0.1 = 0.9/0.9 = 1 Thus 0.˙9 = 1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 2.7˙9 = 2.799999 . . . = 2.7 + 0.09 + 0.009 + 0.0009 + . . . All terms after 2.7 form a GP with a = 0.09 and r = 0.009/0.09 = 0.1, so the sum will be S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.09/1 −0.1 = 0.09/0.9 = 0.1 Hence 2.7˙9 = 2.7 + S ∞= 2.7 + 0.1 = 2.8</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 0.˙95˙7 = 0.957 957 957 . . . = 0.957 + 0.000 957 + 0.000 000 957 + . . . This is a GP with a = 0.957 and r = 0.001. Hence: 0.˙95˙7 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.957/1 −0.001 = 0.957/0.999 = 957 999 = 29 303</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> 0.˙247˙5 = 0.247 524 75 . . . = 0.2475 + 0.000 0247 5 + . . . This is a GP with a = 0.2475 and r = 0.0001. Hence: 0.˙247˙5 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.2475/1 −0.0001 = 0.2475/0.9999 = 2475 9999 = 25 101/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> 0.˙230 76˙9 = 0.230 769 230 769 . . . = 0.2307 69 + 0.000 002 307 69 + . . . This is a GP with a = 0.230 769 and r = 0.000/01. Hence: 0.˙230 76˙9 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.230 769/1 −0.000 01 = 0.230 769/0.999 99 = 230 769 99 999 = 3/13</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> 0.˙428 57˙1 = 0.428 571 . . . = 0.428 571 + 0.000 004 285 71 + . . . This is a GP with a = 0.428 571 and r = 0.000/01. Hence: 0.˙42857˙1 = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.428 571/1 −0.000 01 = 0.428 571/0.999 99 = 428 571 999 990 = 3/7</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> 0.25˙5˙7 = 0.255 757 575 7 . . . = 0.25 + (0.0057 + 0.000 057 + . . .) The bracketed terms form a GP with a = 0.0057 and r = 0.01. Hence: 0.25˙5˙7 = 0.25 + S ∞ = 0.25 +</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1 4 + 0.0057/1 −0.01 = 1 4 + 0.0057/0.99 = 1 4 + 57 9900 = 211 825</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
-        <div class="sol">
-<p class="step"><strong>f ·</strong> 1.1˙03˙7 = 1.103 703 703 7 . . . = 1.1 + (0.0037 + 0.000 003 7 + . . .) The bracketed terms form a GP with a = 0.0037 and r = 0.001. Hence: 1.1˙03˙7 = 1.1 + S ∞ = 1.1 +</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1.1 + 0.0037/1 −0.001 = 1.1 + 0.0037/0.999 = 10989 9990 + 37 9990 = 1 14 135</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
-        <div class="sol">
-<p class="step"><strong>g ·</strong> 0.0˙00 27˙1 = 0.000 271 002 710 027 1 . . . = 0.000 271 + 0.000 000 002 71 + 0.000 000 000 000 027 1 + . . . This is a GP with a = 0.000 271 and r = 0.0001. Hence: 0.0˙00 27˙1 = S ∞ =</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.000 271/1 −0.0001 = 0.000 271/0.9999 = 1 3690</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same three-digit method. <span class="tex">a=\dfrac{135}{1000}</span>, <span class="tex">r=\dfrac{1}{1000}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{135}{999}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">135=3^{3}\times 5</span> and <span class="tex">999=3^{3}\times 37</span>. Divide by 27: <span class="tex">\dfrac{135}{999}=\dfrac{5}{37}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{1}\dot{3}\dot{5}=\dfrac{5}{37}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> 7.7˙71 428 ˙5 = 7.771 428 571 428 571 428 5 . . . = 7.7 + (0.071 428 5 + 0.000 007 142 85 + . . .) The bracketed terms form a GP with a = 0.071 428 5 and r = 0.000/01. Hence: 3/7.7˙71 428 ˙5 = 7.7 + S ∞ = 7.7 +</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 7.7 + 0.071 428 5/1 −0.000 01 = 7.7 + 0.071 428 5/0.999 99 = 727 35 6 We proved that √ 2 is irrational. Since it is irrational, it cannot be written as a fraction of two integers. When √ 2 is written as a decimal instead, if it were recurring, we could use the methods of this section to write it as a fraction of two integers. Since we know that is impossible, we can conclude that √ 2 is non-recurring. 4 Name: and series Chapter 1 Review 1 The first 12 terms of the sequence are 50, 41, 32, 23, 14, 5, −4, −13, −22, −31, −40, −49</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> The positive terms are 50, 41, 32, 23, 14, 5 Counting, there are a total of 6.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> The terms between 0 and 40 are 32, 23, 14, 5 Counting, there are a total of 4.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> a10 = −31</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> a8 = −13</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> No, extending the sequence gives 50, 41, 32, 23, 14, 5, −4, −13, −22, −31, −40, −49, −58, −67, −76, −85, −95, −104 . . . which does not contain −100.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
-        <div class="sol">
-<p class="step"><strong>f ·</strong> a11 = −40/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> a1 = 58 −6(1) = 52 a20 = 58 −6(20) = −62 a100 = 58 −6(100) = −542 1 000 000 = 58 −6(1 000 000) = −5 999 942</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> Solving an = 20/58 −6n = 20 6n = 38 n = 6.33 . . . As n is not an integer, 20 is not a term in the sequence. Solving an = 10/58 −6n = 10 6n = 48 n = 8 Thus a8 = 10 is a term. Solving an = −56/58 −6n = −56 6n = 114 n = 19 Thus a19 = −56 is a term. Solving an = −100 1 Chapter 1 Review 58 −6n = −100 6n = 158 n = 26.33 . . . As n is not an integer, −100 is not a term in the sequence.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> an &lt; −200/58 −6n &lt; −200 6n &gt; 258 n &gt; 43 Hence the first term less than −200 is a44 = −206.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> an &gt; −600/58 −6n &gt; −600 6n &lt; 658 n &lt; 109.666 . . . Hence the last term greater than −600 is a109 = −596</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same three-digit method. <span class="tex">a=\dfrac{185}{1000}</span>, <span class="tex">r=\dfrac{1}{1000}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{185}{999}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">185=5\times 37</span> and <span class="tex">999=27\times 37</span>. Divide by 37: <span class="tex">\dfrac{185}{999}=\dfrac{5}{27}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{1}\dot{8}\dot{5}=\dfrac{5}{27}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q3">
-      <h2>3 · Exercise 1I</h2>
+      <h2>3 · Exercise 1I <span class="band dev">Development</span></h2>
       <div class="stem">
-        <p>Write each recurring decimal as the sum of an integer or terminating decimal and an infinite GP. Then express it as a fraction in lowest terms. 12.˙4 a 7.˙8˙1 b 8.4˙6 c 0.2˙3˙6 d</p>
+        <p class="intro">Split off the digits that do not repeat. The tail is an infinite GP. Add them, and write the result in lowest terms.</p>
+        <p><strong>(a)</strong> <span class="tex">12.\dot{4}</span></p>
+        <p><strong>(b)</strong> <span class="tex">7.\dot{8}\dot{1}</span></p>
+        <p><strong>(c)</strong> <span class="tex">8.4\dot{6}</span></p>
+        <p><strong>(d)</strong> <span class="tex">0.2\dot{3}\dot{6}</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step">S 1 = a1 = 4 S 2 = a1 + S 1 Hence: a2 = S 2 −S 1 = 11 −4 = 7 a3 = S 3 −S 2 = 18 −11 = 7 a4 = S 4 −S 3 = 25 −18 = 7 a5 = S 5 −S 4 = 32 −25 = 7 a6 = S 6 −S 5 = 39 −32 = 7 Hence giving the sequence: 4, 7, 7, 7, 7, 7, . . .</p>
-<p class="step"><strong>a ·</strong> S 1 = a1 = 0 S 2 = a1 + S 1 Hence: a2 = S 2 −S 1 = 1 −0 = 1 a3 = S 3 −S 2 = 3 −1 = 2 a4 = S 4 −S 3 = 6 −3 = 3 a5 = S 5 −S 4 = 10 −6 = 4 a6 = S 6 −S 5 = 15 −10 = 5 a7 = S 7 −S 6 = 21 −15 = 6 Hence giving the sequence: 0, 1, 2, 3, 4, 5, 6, . . .</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">12.\dot{4}=12+0.\dot{4}</span>. The repeating part uses <span class="tex">a=\dfrac{4}{10}</span>, <span class="tex">r=\dfrac{1}{10}</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{4}=\dfrac{4/10}{9/10}=\dfrac{4}{9}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">12=\dfrac{108}{9}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{108}{9}+\dfrac{4}{9}=\dfrac{112}{9}</span>.</p>
+          <p class="final"><span class="tex">12.\dot{4}=\dfrac{112}{9}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> a1 = S 1 = 12 + 5 = 6 an = S n −S n−1 = n2 + 5 −  (n −1)2 + 5  = n2 + 5 −  n2 −2n + 1 + 5  = 2n −1 for n &gt; 1</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">7.\dot{8}\dot{1}=7+0.\dot{8}\dot{1}</span>. Two digits, so <span class="tex">a=\dfrac{81}{100}</span> and <span class="tex">r=\dfrac{1}{100}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> From question 2(b), <span class="tex">0.\dot{8}\dot{1}=\dfrac{9}{11}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">7=\dfrac{77}{11}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{77}{11}+\dfrac{9}{11}=\dfrac{86}{11}</span>.</p>
+          <p class="final"><span class="tex">7.\dot{8}\dot{1}=\dfrac{86}{11}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> a1 = S 1 = 31 = 3 an = S n −S n−1 = 3n −3n−1 an = S n −S n−1 = 3n −3n−1 = 3n−1(3 −1) = 2 × 3n−1 for n &gt; 1</p>
+          <p class="formula-quick"><strong>Formula:</strong> The 8.4 does not repeat. The 6 does. <span class="tex">a=0.06=\dfrac{6}{100}</span>, <span class="tex">r=\dfrac{1}{10}</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">8.4\dot{6}=8.4+0.06+0.006+0.0006+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{9}{10}</span>, so the GP is <span class="tex">\dfrac{6/100}{9/10}=\dfrac{6}{100}\times\dfrac{10}{9}=\dfrac{6}{90}=\dfrac{1}{15}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">8.4=\dfrac{84}{10}=\dfrac{42}{5}=\dfrac{126}{15}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{126}{15}+\dfrac{1}{15}=\dfrac{127}{15}=8\dfrac{7}{15}</span>.</p>
+          <p class="final"><span class="tex">8.4\dot{6}=\dfrac{127}{15}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> The 0.2 does not repeat. The block 36 does. <span class="tex">a=0.036=\dfrac{36}{1000}</span>, <span class="tex">r=\dfrac{1}{100}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.2\dot{3}\dot{6}=0.2+0.036+0.00036+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{99}{100}</span>, so the GP is <span class="tex">\dfrac{36/1000}{99/100}=\dfrac{36}{1000}\times\dfrac{100}{99}=\dfrac{36}{990}=\dfrac{2}{55}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">0.2=\dfrac{1}{5}=\dfrac{11}{55}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{11}{55}+\dfrac{2}{55}=\dfrac{13}{55}</span>.</p>
+          <p class="final"><span class="tex">0.2\dot{3}\dot{6}=\dfrac{13}{55}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q4">
-      <h2>4 · Exercise 1I</h2>
+      <h2>4 · Exercise 1I <span class="band dev">Development</span></h2>
       <div class="stem">
-        <p>a Express the repeating decimal 0.˙9 as an infinite GP, and hence show that it equals 1.<br/>
-b Express 2.7˙9 as 2.7 plus an infinite GP, and hence show that it equals 2.8.</p>
+        <p><strong>(a)</strong> Write <span class="tex">0.\dot{9}</span> as an infinite GP, and show that it equals 1.</p>
+        <p><strong>(b)</strong> Write <span class="tex">2.7\dot{9}</span> as 2.7 plus an infinite GP, and show that it equals 2.8.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-<p class="step"><strong>a ·</strong> P6 n=3(n2 −1) = 8 + 15 + 24 + 35 = 82</p>
+          <p class="formula-quick"><strong>Formula:</strong> One repeating digit. <span class="tex">a=\dfrac{9}{10}</span>, <span class="tex">r=\dfrac{1}{10}</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.\dot{9}=0.9+0.09+0.009+\cdots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{9/10}{9/10}=1</span>.</p>
+          <p class="final"><span class="tex">0.\dot{9}=1</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> P2 n=−2(5n −3) = −13 + (−8) + (−3) + 2 + 8 = −15</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> P6 n=0(−1)n = 1 + (−1) + 1 + (−1) + 1 + (−1) + 1 = 1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> P6 n=1 1 2 !n = 1 2 + 1 4 + 1 16 + 1 32 + 1 64 = 63 64 2 Chapter 1 Review</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">2.7\dot{9}=2.7+0.09+0.009+\cdots</span>. The GP has <span class="tex">a=0.09</span> and <span class="tex">r=\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1-r=\dfrac{9}{10}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> GP sum <span class="tex">=\dfrac{0.09}{0.9}=0.1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">2.7+0.1=2.8</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> As a fraction, <span class="tex">2.8=\dfrac{28}{10}=\dfrac{14}{5}</span>.</p>
+          <p class="final"><span class="tex">2.7\dot{9}=2.8=\dfrac{14}{5}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q5">
-      <h2>5 · Exercise 1I</h2>
+      <h2>5 · Exercise 1I <span class="band ch">Challenge</span></h2>
       <div class="stem">
-        <p>Use GPs to express these as fractions in lowest terms. 0.˙095˙7 a 0.˙247˙5 b 0.˙23076˙9 c 0.˙42857˙1 d 0.25˙5˙7 e 1.1˙03˙7 f 0.0˙0027˙1 g 7.7˙71428˙5 h</p>
+        <p class="intro">Use GPs to write these as fractions in lowest terms.</p>
+        <p><strong>(a)</strong> <span class="tex">0.\dot{0}\dot{9}\dot{5}\dot{7}</span></p>
+        <p><strong>(b)</strong> <span class="tex">0.\dot{2}\dot{4}\dot{7}\dot{5}</span></p>
+        <p><strong>(c)</strong> <span class="tex">0.\dot{2}\dot{3}\dot{0}\dot{7}\dot{6}\dot{9}</span></p>
+        <p><strong>(d)</strong> <span class="tex">0.\dot{4}\dot{2}\dot{8}\dot{5}\dot{7}\dot{1}</span></p>
+        <p><strong>(e)</strong> <span class="tex">0.25\dot{5}\dot{7}</span></p>
+        <p><strong>(f)</strong> <span class="tex">1.1\dot{0}\dot{3}\dot{7}</span></p>
+        <p><strong>(g)</strong> <span class="tex">0.0\dot{0}\dot{0}\dot{2}\dot{7}\dot{1}</span></p>
+        <p><strong>(h)</strong> <span class="tex">7.7\dot{7}\dot{1}\dot{4}\dot{2}\dot{8}\dot{5}</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-        <p class="step">The first eight terms are: a1 = 5 × (−1)1 = −5 a2 = 5 × (−1)2 = 5 a3 = 5 × (−1)3 = −5 a4 = 5 × (−1)4 = 5 a5 = 5 × (−1)5 = −5 a6 = 5 × (−1)6 = 5 a7 = 5 × (−1)7 = −5 a8 = 5 × (−1)8 = 5 Thus the sequence is: −5, 5, −5, 5, −5, 5, −5, 5</p>
-<p class="step"><strong>a ·</strong> The sum of the first seven terms is: S 7 = a(1 −rn) 1 −r = −5  1 −(−1)7 1 −(−1) = −5(2) 2 = −5 S 8 = a(1 −rn) 1 −r = −5  1 −(−1)8 1 −(−1) = −5(0) 2 = 0</p>
+          <p class="formula-quick"><strong>Formula:</strong> Four repeating digits. <span class="tex">a=\dfrac{957}{10000}</span>, <span class="tex">r=\dfrac{1}{10000}</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1-r=\dfrac{9999}{10000}</span>, so <span class="tex">S_\infty=\dfrac{957}{9999}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">957=3\times 11\times 29</span> and <span class="tex">9999=3^{2}\times 11\times 101</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Cancel <span class="tex">3\times 11</span>: <span class="tex">\dfrac{957}{9999}=\dfrac{29}{303}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{0}\dot{9}\dot{5}\dot{7}=\dfrac{29}{303}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> For this particular sequence, one simply adds −5 if the previous term is 0 and adds 5 if the previous term was −5. This means that an = −5 if n is odd and an = 0 if n is even.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same four-digit method. <span class="tex">a=\dfrac{2475}{10000}</span>, <span class="tex">r=\dfrac{1}{10000}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{2475}{9999}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">2475=3^{2}\times 5^{2}\times 11</span> and <span class="tex">9999=3^{2}\times 11\times 101</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Cancel <span class="tex">3^{2}\times 11</span>: <span class="tex">\dfrac{2475}{9999}=\dfrac{25}{101}</span>.</p>
+          <p class="final"><span class="tex">0.\dot{2}\dot{4}\dot{7}\dot{5}=\dfrac{25}{101}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Noting that an = −5 if n is odd and an = 0 if n is even. a20 = 0 a75 = −5 a111 = −5</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q6">
-      <h2>6 · Exercise 1I</h2>
-      <div class="stem">
-        <p>Last year we proved in Section 2A that √ 2 is irrational. Why can we now conclude that when √ 2 is written as a decimal, it is not a recurring decimal?</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Quick fact:</strong> Recurring decimals convert to fractions using a GP for the repeating tail, then <span class="tex">S_\infty</span>.</p>
-<p class="step"><strong>a ·</strong> a2 −a1 = 83 −76 = 7 a3 −a2 = 90 −83 = 7 Hence there is a common difference between the terms, so it is an AP with common difference of 7.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a2 −a1 = 100 −(−21) = −121 a3 −a2 = (−21) −(−142) = −121 Hence there is a common difference between the terms, so it is an AP with common difference of −121.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> a2 −a1 = 9 −4 = 5 a3 −a2 = 4 −1 = 3 a3 a2 = 9 4 = 2.25 a2 a1 = 4 1 = 4 There is no common ratio nor common difference. Hence it is neither an AP nor a GP.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Six repeating digits. <span class="tex">a=\dfrac{230769}{1000000}</span>, <span class="tex">r=\dfrac{1}{1000000}</span>, so <span class="tex">S_\infty=\dfrac{230769}{999999}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">999999=3^{3}\times 7\times 11\times 13\times 37</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">230769=3^{4}\times 7\times 11\times 37</span>. Check: <span class="tex">3^{4}=81</span>, <span class="tex">81\times 7=567</span>, <span class="tex">567\times 11=6237</span>, <span class="tex">6237\times 37=230769</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Cancel <span class="tex">3^{3}\times 7\times 11\times 37</span>. Left on top: 3. Left on the bottom: 13.</p>
+          <p class="final"><span class="tex">0.\dot{2}\dot{3}\dot{0}\dot{7}\dot{6}\dot{9}=\dfrac{3}{13}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> a3 a2 = 54 18 = 3 a2 a1 = 18 6 = 3 Hence, as there is a common ratio, this is a GP with r = 3.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same six-digit method. <span class="tex">S_\infty=\dfrac{428571}{999999}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">999999=3^{3}\times 7\times 11\times 13\times 37</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">428571=3^{4}\times 11\times 13\times 37</span>. Check: <span class="tex">81\times 11=891</span>, <span class="tex">891\times 13=11583</span>, <span class="tex">11583\times 37=428571</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Cancel <span class="tex">3^{3}\times 11\times 13\times 37</span>. Left on top: 3. Left on the bottom: 7.</p>
+          <p class="final"><span class="tex">0.\dot{4}\dot{2}\dot{8}\dot{5}\dot{7}\dot{1}=\dfrac{3}{7}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> a2 −a1 = 10 −6 = 4 a3 −a2 = 15 −10 = 5 a3 a2 = 15 10 = 3 2 a2 a1 = 10 6 = 5 3 There is no common ratio nor common difference. Hence it is neither an AP nor a GP.</p>
+          <p class="formula-quick"><strong>Formula:</strong> 0.25 does not repeat. The block 57 does. <span class="tex">a=0.0057=\dfrac{57}{10000}</span>, <span class="tex">r=\dfrac{1}{100}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.25\dot{5}\dot{7}=0.25+(0.0057+0.000057+\cdots)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> GP sum <span class="tex">=\dfrac{57/10000}{99/100}=\dfrac{57}{9900}=\dfrac{19}{3300}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">0.25=\dfrac{1}{4}=\dfrac{825}{3300}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{825}{3300}+\dfrac{19}{3300}=\dfrac{844}{3300}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">844=2^{2}\times 211</span> and <span class="tex">3300=2^{2}\times 3\times 5^{2}\times 11</span>. Cancel 4: <span class="tex">\dfrac{844}{3300}=\dfrac{211}{825}</span>.</p>
+          <p class="final"><span class="tex">0.25\dot{5}\dot{7}=\dfrac{211}{825}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> a3 a2 = 12 −24 = −1 2 a2 a1 = −24 48 = −1 2 Hence, as there is a common ratio, this is a GP with r = −1/2. 3 Chapter 1 Review</p>
+          <p class="formula-quick"><strong>Formula:</strong> 1.1 does not repeat. The block 037 does. <span class="tex">a=0.0037=\dfrac{37}{10000}</span>, <span class="tex">r=\dfrac{1}{1000}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1.1\dot{0}\dot{3}\dot{7}=1.1+(0.0037+0.0000037+\cdots)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> GP sum <span class="tex">=\dfrac{37/10000}{999/1000}=\dfrac{37}{9990}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1.1=\dfrac{11}{10}=\dfrac{11\times 999}{9990}=\dfrac{10989}{9990}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{10989}{9990}+\dfrac{37}{9990}=\dfrac{11026}{9990}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">11026=2\times 37\times 149</span> and <span class="tex">9990=2\times 3^{3}\times 5\times 37</span>. Cancel <span class="tex">2\times 37</span>: <span class="tex">\dfrac{11026}{9990}=\dfrac{149}{135}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">149=135+14</span>, so <span class="tex">\dfrac{149}{135}=1\dfrac{14}{135}</span>.</p>
+          <p class="final"><span class="tex">1.1\dot{0}\dot{3}\dot{7}=\dfrac{149}{135}=1\dfrac{14}{135}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> The first 0 after the point does not repeat. The block 00271 does (five digits). <span class="tex">a=0.000271</span>, <span class="tex">r=0.00001</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">0.0\dot{0}\dot{0}\dot{2}\dot{7}\dot{1}=0.0002710027100271\ldots</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=0.99999</span>, so the sum is <span class="tex">\dfrac{0.000271}{0.99999}=\dfrac{271/1000000}{99999/100000}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">=\dfrac{271}{1000000}\times\dfrac{100000}{99999}=\dfrac{271}{999990}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">99999=3^{2}\times 41\times 271</span>, so <span class="tex">999990=10\times 3^{2}\times 41\times 271</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Cancel 271: <span class="tex">\dfrac{271}{999990}=\dfrac{1}{3690}</span>. Check: <span class="tex">10\times 9\times 41=3690</span>.</p>
+          <p class="final"><span class="tex">0.0\dot{0}\dot{0}\dot{2}\dot{7}\dot{1}=\dfrac{1}{3690}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> 7.7 does not repeat. The block 714285 does (six digits). <span class="tex">a=0.0714285</span>, <span class="tex">r=0.000001</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">7.7\dot{7}\dot{1}\dot{4}\dot{2}\dot{8}\dot{5}=7.7+(0.0714285+0.0000000714285+\cdots)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> GP sum <span class="tex">=\dfrac{0.0714285}{0.999999}=\dfrac{714285/10000000}{999999/1000000}=\dfrac{714285}{9999990}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{714285}{999999}=\dfrac{5}{7}</span>, because <span class="tex">5\times 999999=4999995</span> and <span class="tex">7\times 714285=4999995</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> So the GP is <span class="tex">\dfrac{5}{7}\div 10=\dfrac{5}{70}=\dfrac{1}{14}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">7.7=\dfrac{77}{10}=\dfrac{539}{70}</span> and <span class="tex">\dfrac{1}{14}=\dfrac{5}{70}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">\dfrac{539}{70}+\dfrac{5}{70}=\dfrac{544}{70}=\dfrac{272}{35}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">272=7\times 35+27</span>, so <span class="tex">\dfrac{272}{35}=7\dfrac{27}{35}</span>.</p>
+          <p class="final"><span class="tex">7.7\dot{7}\dot{1}\dot{4}\dot{2}\dot{8}\dot{5}=7\dfrac{27}{35}</span>.</p>
         </div>
       </div>
     </article>
+
+    <article class="q" id="q6">
+      <h2>6 · Exercise 1I <span class="band ch">Challenge</span></h2>
+      <div class="stem">
+        <p>Last year it was proved that <span class="tex">\sqrt{2}</span> is irrational. Why does that mean the decimal for <span class="tex">\sqrt{2}</span> is not a recurring decimal?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Irrational means “not a fraction of two whole numbers”. Every recurring decimal in this section became such a fraction.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\sqrt{2}</span> is irrational, so it is not equal to <span class="tex">\dfrac{p}{q}</span> for whole numbers <span class="tex">p</span> and <span class="tex">q</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> If its decimal recurred, the method of this section would turn that decimal into a fraction <span class="tex">\dfrac{p}{q}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> That fraction would equal <span class="tex">\sqrt{2}</span>, which cannot happen.</p>
+          <p class="final">The decimal for <span class="tex">\sqrt{2}</span> does not recur.</p>
+        </div>
+      </div>
+    </article>
+
     <p style="margin-top:1.5rem">
-      <a class='btn' href='../../index.html'>Back to course map</a>
+      <a class="btn" href="../../Chapter 2 Differentiation applications/2A-increasing-decreasing-stationary/concept.html">Next: 2A Concept →</a>
       <a class="btn ghost" href="tutorial.html">← Tutorial</a>
     </p>
   </div>
-  <script>
-  (function(){
-    function bind(btn){
-      btn.addEventListener("click", function(){
-        var sol = btn.nextElementSibling;
-        var open = sol.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
-      });
-    }
-    document.querySelectorAll(".q > .btn.show").forEach(bind);
-    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
-    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
-    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
-  })();
-  </script>
-
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script src="../../course-solutions.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>

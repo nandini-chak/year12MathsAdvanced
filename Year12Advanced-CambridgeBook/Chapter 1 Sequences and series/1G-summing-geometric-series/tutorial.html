@@ -8,6 +8,16 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .formula .row{margin:.45rem 0}
+    .worked{margin:.85rem 0 0;padding:.85rem 1rem;background:#fbfaf7;border:1px solid var(--line);border-radius:12px}
+    .worked h3{margin:0 0 .45rem;font-size:1.05rem}
+    .formula-quick{margin:.15rem 0 .7rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.45}
+    .step{margin:.4rem 0;line-height:1.5}
+    .step strong{color:var(--navy)}
+    .ask{margin:0 0 .65rem;padding:.6rem .75rem;background:#fff;border:1px solid var(--line);border-radius:10px;line-height:1.5}
+    .ask strong{color:var(--navy)}
+  </style>
 </head>
 <body data-section="1G" data-page="tutorial" data-nav-depth="2" data-auth-sub="1G Tutorial">
   <div class="shell"><div class="main">
@@ -23,31 +33,68 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>1G · Summing a geometric series</h1>
-    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
+    <p>A GP is added by multiplying the sum by the ratio and subtracting. Most of the terms cancel.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-1-Worked-Solutions.pdf.</div>
+      <div class="body">Use <span class="tex">a(r^n-1)/(r-1)</span> when <span class="tex">r&gt;1</span>, and <span class="tex">a(1-r^n)/(1-r)</span> when <span class="tex">r&lt;1</span>. When <span class="tex">r=1</span> the fraction formula does not work: every term equals <span class="tex">a</span>, so <span class="tex">S_n=na</span>.</div>
     </details>
-    
+
     <section class="card" id="theory">
       <h2 class="section-h">Theory · key ideas</h2>
-      <p class="lede">Sum the first <span class="tex">n</span> terms of a GP by the multiply-and-subtract trick.</p>
+      <p class="lede">A GP multiplies by the same number <span class="tex">r</span> each time. The sum of the first <span class="tex">n</span> terms is <span class="tex">S_n</span>.</p>
       <ul>
-        <li>Write <span class="tex">S_n</span>, multiply by <span class="tex">r</span>, subtract — middle terms cancel.</li>
-        <li>If <span class="tex">r\neq 1</span>: <span class="tex">S_n=a\dfrac{r^n-1}{r-1}</span>.</li>
-        <li>If <span class="tex">|r|&lt;1</span>, often use <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span>.</li>
-        <li>If <span class="tex">r=1</span>: every term is <span class="tex">a</span>, so <span class="tex">S_n=na</span>.</li>
+        <li><strong>The trick.</strong> Write <span class="tex">S_n</span>. Multiply every term by <span class="tex">r</span>. Subtract. The middle terms cancel, and two ends are left.</li>
+        <li><strong>When <span class="tex">r&gt;1</span>.</strong> <span class="tex">S_n=a\dfrac{r^n-1}{r-1}</span>.</li>
+        <li><strong>When <span class="tex">r&lt;1</span>.</strong> The same formula, written the tidy way: <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span>. Use this for a negative ratio as well.</li>
+        <li><strong>When <span class="tex">r=1</span>.</strong> Every term is <span class="tex">a</span>, so <span class="tex">S_n=na</span>. The fraction would divide by zero.</li>
+        <li><strong>Count the powers.</strong> From <span class="tex">5^0</span> to <span class="tex">5^7</span> is 8 terms, because you count both ends.</li>
       </ul>
-      <div class="formula"><span class="tex">S_n=a\dfrac{r^n-1}{r-1}\quad(r\neq 1)</span></div>
-      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
+      <div class="formula">
+        <div class="row"><span class="tex">S_n=a\dfrac{r^n-1}{r-1}\qquad(r&gt;1)</span></div>
+        <div class="row"><span class="tex">S_n=a\dfrac{1-r^n}{1-r}\qquad(r&lt;1)</span></div>
+        <div class="row"><span class="tex">S_n=na\qquad(r=1)</span></div>
+      </div>
+      <p>More practice is on the <a href="problems.html">Exercise</a> page. Each part there has its own solution button.</p>
     </section>
+
     <section class="card" id="mini">
       <h2 class="section-h">Worked mini-examples</h2>
+
       <div class="worked">
-        <h3>Example · geometric sum</h3>
-        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=2</span>, <span class="tex">r=3</span>, <span class="tex">n=4</span>: <span class="tex">S_4=2\dfrac{3^4-1}{3-1}=2\times 40=80</span>.</p>
-        <p class="step"><strong>Step 2 ·</strong> Check: <span class="tex">2+6+18+54=80</span>.</p>
+        <h3>Example · a ratio bigger than 1</h3>
+        <p class="ask"><strong>Question.</strong> Add every power of 5 from <span class="tex">5^0</span> to <span class="tex">5^7</span>.</p>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_n=a\dfrac{r^n-1}{r-1}</span> when <span class="tex">r&gt;1</span>. Here <span class="tex">a</span> is the first term, <span class="tex">r</span> is the multiplier, and <span class="tex">n</span> is how many terms.</p>
+        <p class="step"><strong>Step 1 ·</strong> The terms are <span class="tex">1,\;5,\;25,\;\ldots,\;5^7</span>. So <span class="tex">a=1</span> and <span class="tex">r=5</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> Powers 0 through 7 are 8 terms. <span class="tex">n=8</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_8=\dfrac{5^8-1}{5-1}</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">5^8=390625</span>, so the top is <span class="tex">390624</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> <span class="tex">390624\div 4=97656</span>.</p>
+        <p class="step"><strong>Answer ·</strong> The sum is 97 656.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · a negative ratio</h3>
+        <p class="ask"><strong>Question.</strong> Find the sum of the first six terms of <span class="tex">2-6+18-\cdots</span>.</p>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span> when <span class="tex">r&lt;1</span>. A negative ratio is less than 1.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=2</span>. <span class="tex">r=(-6)\div 2=-3</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_6=2\times\dfrac{1-(-3)^6}{1-(-3)}</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">(-3)^6=729</span>, because the power is even. Top: <span class="tex">1-729=-728</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> Bottom: <span class="tex">1-(-3)=4</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> <span class="tex">2\times\dfrac{-728}{4}=2\times(-182)=-364</span>.</p>
+        <p class="step"><strong>Answer ·</strong> <span class="tex">S_6=-364</span>.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · the sum is given, find the first term</h3>
+        <p class="ask"><strong>Question.</strong> The sum of the first four terms of a GP with ratio 3 is 200. Find the four terms.</p>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_n=a\dfrac{r^n-1}{r-1}</span>. You know <span class="tex">S_4</span>, <span class="tex">r</span> and <span class="tex">n</span>. The unknown is <span class="tex">a</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a\dfrac{3^4-1}{3-1}=200</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">3^4=81</span>, so the top is <span class="tex">80</span>. The bottom is 2.</p>
+        <p class="step"><strong>Step 3 ·</strong> <span class="tex">a\times\dfrac{80}{2}=200</span>, so <span class="tex">40a=200</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">a=5</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> Multiply by 3 each time: 5, 15, 45, 135.</p>
+        <p class="step"><strong>Answer ·</strong> The four terms are 5, 15, 45 and 135.</p>
       </div>
     </section>
 
@@ -55,15 +102,23 @@
        <a class="btn ghost" href="concept.html">← Concept</a></p>
     <footer class="site">Next: Exercise 1G, then section 1H.</footer>
   </div>
-
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>

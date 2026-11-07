@@ -8,6 +8,12 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .stem p{margin:.42rem 0;line-height:1.5}
+    .stem .intro{margin-bottom:.7rem}
+    .howto{margin:.8rem 0 0;padding:.7rem .85rem;background:#f4f7fb;border-radius:12px;line-height:1.45}
+    .table-wrap{overflow-x:auto;margin:.45rem 0 .7rem}
+  </style>
 </head>
 <body data-section="1H" data-page="problems" data-nav-depth="2" data-auth-sub="Exercise 1H">
   <div class="shell"><div class="main">
@@ -23,1173 +29,1294 @@
   <header class="hero">
     <span class="kicker">Exercise 1H</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Reveal a solution when you want to mark. Worked solutions use full low-floor reasoning and formula quick-facts.</p>
+    <p>Attempt on paper first. Each part has its own solution button. Open one part at a time.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
       <button class="btn show" type="button" id="allOn">Show all solutions</button>
       <button class="btn show" type="button" id="allOff">Hide all solutions</button>
     </div>
+    <p class="howto"><strong>How to read <span class="tex">S_\infty</span>.</strong> <span class="tex">S_\infty</span> means the limiting sum: the number the running totals get close to if you keep adding forever. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when the size of the multiplier is less than 1, written <span class="tex">|r|&lt;1</span>. If <span class="tex">|r|\ge 1</span>, say there is no limiting sum, and say why the terms do not die away.</p>
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Stems condensed from Cambridge Exercise 1H; answers follow <em>Chapter-1-Worked-Solutions.pdf</em>. Sketches may need board redrawing from the description.</div>
+      <div class="body">Parts follow the student-book order. Finals were checked against <em>Chapter-1-Worked-Solutions.pdf</em>, Exercise 1H. Three places differ from the printed key. In 6(i) the key writes “no limiting sum as <span class="tex">|r|&gt;1</span>”, but <span class="tex">r=-1</span> so <span class="tex">|r|=1</span>. In 16(a) the key’s last line is 2; <span class="tex">\dfrac{1}{3}\div\dfrac{2}{3}=\dfrac{1}{2}</span>, and that is the sum used here. In 18(d)(ii) the key keeps only <span class="tex">r=\dfrac{1}{2}</span>; <span class="tex">r=0</span> also makes both sides zero. In 18(b) the key stops at <span class="tex">a=9</span> or <span class="tex">a=18</span>; the three terms are written out below.</div>
     </details>
+
     <article class="q" id="q1">
-      <h2>1 · Exercise 1H</h2>
+      <h2>1 · Exercise 1H <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>a Copy and complete the table of values opposite for the GP with a = 18 and r = 1 3. b Find the limiting sum using S∞= a 1 −r. c Find the difference S∞−S6. n 1 2 3 4 5</p>
+        <p class="intro">A geometric sequence has first term <span class="tex">a=18</span> and common ratio <span class="tex">r=\dfrac{1}{3}</span>. The terms are already listed.</p>
+        <p><strong>(a)</strong> Copy the table and fill in each running sum <span class="tex">S_n</span>.</p>
+        <div class="table-wrap">
+          <table class="sol-table">
+            <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tex">a_n</span></td><td>18</td><td>6</td><td>2</td><td><span class="tex">\dfrac{2}{3}</span></td><td><span class="tex">\dfrac{2}{9}</span></td><td><span class="tex">\dfrac{2}{27}</span></td></tr>
+              <tr><td><span class="tex">S_n</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>(b)</strong> Find the limiting sum using <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+        <p><strong>(c)</strong> Find the difference <span class="tex">S_\infty-S_6</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula:</strong> For a GP, <span class="tex">a_n=a_1 r^{n-1}</span> and partial sums build in the table; limiting sum <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
-<p class="step"><strong>a ·</strong> Copy the values into the table. Each <span class="tex">a_n</span> is the previous term times <span class="tex">r</span>; each <span class="tex">S_n</span> adds the next term.</p>
-        <table class="sol-table" style="border-collapse:collapse;margin:.6rem 0;font-size:.88rem;width:auto;max-width:100%"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td><strong>n</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td><strong>a_n</strong></td><td>18</td><td>6</td><td>2/3</td><td>2/9</td><td>2/27</td><td>…</td></tr><tr><td><strong>S_n</strong></td><td>18</td><td>24</td><td>26</td><td>262/3</td><td>268/9</td><td>2626/27</td></tr></tbody></table>
+          <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">S_1</span> is just the first term. Each new sum is the old sum plus the next term: <span class="tex">S_n=S_{n-1}+a_n</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_1=18</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_2=18+6=24</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_3=24+2=26</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_4=26+\dfrac{2}{3}=\dfrac{78}{3}+\dfrac{2}{3}=\dfrac{80}{3}=26\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_5=\dfrac{80}{3}+\dfrac{2}{9}=\dfrac{240}{9}+\dfrac{2}{9}=\dfrac{242}{9}=26\dfrac{8}{9}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_6=\dfrac{242}{9}+\dfrac{2}{27}=\dfrac{726}{27}+\dfrac{2}{27}=\dfrac{728}{27}=26\dfrac{26}{27}</span>.</p>
+          <div class="table-wrap">
+            <table class="sol-table">
+              <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+              <tbody>
+                <tr><td><span class="tex">a_n</span></td><td>18</td><td>6</td><td>2</td><td><span class="tex">\dfrac{2}{3}</span></td><td><span class="tex">\dfrac{2}{9}</span></td><td><span class="tex">\dfrac{2}{27}</span></td></tr>
+                <tr><td><span class="tex">S_n</span></td><td>18</td><td>24</td><td>26</td><td><span class="tex">26\dfrac{2}{3}</span></td><td><span class="tex">26\dfrac{8}{9}</span></td><td><span class="tex">26\dfrac{26}{27}</span></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> with the <span class="tex">a</span> and <span class="tex">r</span> from the question. b S ∞= a 1 −r = 18/1 −1 3 = 18 2 3 ! = 3 2(18) = 27 </p>
+          <p class="formula-quick"><strong>Formula:</strong> When <span class="tex">|r|&lt;1</span>, the limiting sum is <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. Here <span class="tex">a=18</span> and <span class="tex">r=\dfrac{1}{3}</span>. The size of <span class="tex">r</span> is <span class="tex">\dfrac{1}{3}</span>, which is less than 1, so the formula is allowed.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1-r=1-\dfrac{1}{3}=\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Dividing by a fraction is multiplying by its flip: <span class="tex">\dfrac{18}{\frac{2}{3}}=18\times\dfrac{3}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">18\times\dfrac{3}{2}=9\times 3=27</span>.</p>
+          <p class="final"><span class="tex">S_\infty=27</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Subtract the 6th partial sum from the limiting sum: c S ∞−S 6 = 27 −2626 27 = 1/27</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same limiting sum, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>, because <span class="tex">\left|\dfrac{1}{3}\right|&lt;1</span>. Then subtract the sixth running sum.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{18}{1-\frac{1}{3}}=\dfrac{18}{\frac{2}{3}}=27</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> From the table, <span class="tex">S_6=26\dfrac{26}{27}=\dfrac{728}{27}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Write 27 with denominator 27: <span class="tex">27=\dfrac{729}{27}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{729}{27}-\dfrac{728}{27}=\dfrac{1}{27}</span>.</p>
+          <p class="final"><span class="tex">S_\infty-S_6=\dfrac{1}{27}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q2">
-      <h2>2 · Exercise 1H</h2>
+      <h2>2 · Exercise 1H <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>a Copy and complete the table of values opposite for the GP with a = 24 and r = −1 2. b Find the limiting sum using S∞= a 1 −r. c Find the difference S∞−S6. n 1 2 3 4 5</p>
+        <p class="intro">A geometric sequence has first term <span class="tex">a=24</span> and common ratio <span class="tex">r=-\dfrac{1}{2}</span>.</p>
+        <p><strong>(a)</strong> Copy the table and fill in each running sum <span class="tex">S_n</span>.</p>
+        <div class="table-wrap">
+          <table class="sol-table">
+            <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+            <tbody>
+              <tr><td><span class="tex">a_n</span></td><td>24</td><td><span class="tex">-12</span></td><td>6</td><td><span class="tex">-3</span></td><td><span class="tex">1\dfrac{1}{2}</span></td><td><span class="tex">-\dfrac{3}{4}</span></td></tr>
+              <tr><td><span class="tex">S_n</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>(b)</strong> Find the limiting sum using <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+        <p><strong>(c)</strong> Find the difference <span class="tex">S_\infty-S_6</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula:</strong> For a GP, <span class="tex">a_n=a_1 r^{n-1}</span> and partial sums build in the table; limiting sum <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
-<p class="step"><strong>a ·</strong> Copy the values into the table. Each <span class="tex">a_n</span> is the previous term times <span class="tex">r</span>; each <span class="tex">S_n</span> adds the next term.</p>
-        <table class="sol-table" style="border-collapse:collapse;margin:.6rem 0;font-size:.88rem;width:auto;max-width:100%"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td><strong>n</strong></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td><strong>a_n</strong></td><td>24</td><td>−12</td><td>6</td><td>−3</td><td>11</td><td>2</td></tr><tr><td><strong>S_n</strong></td><td>24</td><td>12</td><td>18</td><td>15</td><td>161/2</td><td>153/4</td></tr></tbody></table>
+          <p class="formula-quick"><strong>Quick fact:</strong> Same running-sum rule. <span class="tex">S_1=a_1</span>, and <span class="tex">S_n=S_{n-1}+a_n</span>. A negative term pulls the sum down.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_1=24</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_2=24+(-12)=12</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_3=12+6=18</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_4=18+(-3)=15</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1\dfrac{1}{2}=\dfrac{3}{2}</span>, so <span class="tex">S_5=15+\dfrac{3}{2}=\dfrac{30}{2}+\dfrac{3}{2}=\dfrac{33}{2}=16\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_6=\dfrac{33}{2}+\left(-\dfrac{3}{4}\right)=\dfrac{66}{4}-\dfrac{3}{4}=\dfrac{63}{4}=15\dfrac{3}{4}</span>.</p>
+          <div class="table-wrap">
+            <table class="sol-table">
+              <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+              <tbody>
+                <tr><td><span class="tex">a_n</span></td><td>24</td><td><span class="tex">-12</span></td><td>6</td><td><span class="tex">-3</span></td><td><span class="tex">1\dfrac{1}{2}</span></td><td><span class="tex">-\dfrac{3}{4}</span></td></tr>
+                <tr><td><span class="tex">S_n</span></td><td>24</td><td>12</td><td>18</td><td>15</td><td><span class="tex">16\dfrac{1}{2}</span></td><td><span class="tex">15\dfrac{3}{4}</span></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> with the <span class="tex">a</span> and <span class="tex">r</span> from the question. b S ∞= a 1 −r = 24/1 − −1 2 ! = 24 3 2 = 2 3(24) = 16 </p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>. Here <span class="tex">a=24</span> and <span class="tex">r=-\dfrac{1}{2}</span>. The size is <span class="tex">\dfrac{1}{2}</span>, which is less than 1, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{2}\right)=1+\dfrac{1}{2}=\dfrac{3}{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{24}{\frac{3}{2}}=24\times\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">24\times\dfrac{2}{3}=8\times 2=16</span>.</p>
+          <p class="final"><span class="tex">S_\infty=16</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> Subtract the 6th partial sum from the limiting sum: c S ∞−S 6 = 16 −153 4 = 1/4</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">\left|-\dfrac{1}{2}\right|&lt;1</span>, so <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. Then subtract <span class="tex">S_6</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty=\dfrac{24}{1-\left(-\frac{1}{2}\right)}=\dfrac{24}{\frac{3}{2}}=16</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_6=15\dfrac{3}{4}=\dfrac{63}{4}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">16=\dfrac{64}{4}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{64}{4}-\dfrac{63}{4}=\dfrac{1}{4}</span>.</p>
+          <p class="final"><span class="tex">S_\infty-S_6=\dfrac{1}{4}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q3">
-      <h2>3 · Exercise 1H</h2>
+      <h2>3 · Exercise 1H <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Each GP below has ratio r = 1 2. Identify the first term a and hence find S∞. 1 + 1 2 + 1 4 + · · · a 8 + 4 + 2 + · · · b −4 −2 −1 −· · · c</p>
+        <p class="intro">Each series below is geometric with ratio <span class="tex">r=\dfrac{1}{2}</span>. Name the first term <span class="tex">a</span>, then find <span class="tex">S_\infty</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">1+\dfrac{1}{2}+\dfrac{1}{4}+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">8+4+2+\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">-4-2-1-\cdots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> = 1, hence: S ∞=</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>. The question gives <span class="tex">r=\dfrac{1}{2}</span>, and <span class="tex">\dfrac{1}{2}&lt;1</span>, so the formula is allowed. <span class="tex">a</span> is the first number you see.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first term is <span class="tex">a=1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=1-\dfrac{1}{2}=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{1}{2}}=2</span>.</p>
+          <p class="final"><span class="tex">a=1</span> and <span class="tex">S_\infty=2</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −1 2 = 1 1 2 = 2</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=\dfrac{1}{2}</span> and <span class="tex">|r|&lt;1</span>, so <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first term is <span class="tex">a=8</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{8}{\frac{1}{2}}=8\times 2=16</span>.</p>
+          <p class="final"><span class="tex">a=8</span> and <span class="tex">S_\infty=16</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> = 8, hence: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 8/1 −1 2 = 8 1 2 = 16</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = −4, hence: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = −4/1 −1 2 = −4 1 2 = −8</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. A negative first term is allowed. The test is still <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first term is <span class="tex">a=-4</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{-4}{\frac{1}{2}}=-4\times 2=-8</span>.</p>
+          <p class="final"><span class="tex">a=-4</span> and <span class="tex">S_\infty=-8</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q4">
-      <h2>4 · Exercise 1H</h2>
+      <h2>4 · Exercise 1H <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Each GP below has ratio r = −1 3. Identify the first term a and hence find S∞. 1 −1 3 + 1 9 −· · · a 36 −12 + 4 −· · · b −60 + 20 −6 2 3 + · · · c</p>
+        <p class="intro">Each series below is geometric with ratio <span class="tex">r=-\dfrac{1}{3}</span>. Name the first term <span class="tex">a</span>, then find <span class="tex">S_\infty</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">1-\dfrac{1}{3}+\dfrac{1}{9}-\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">36-12+4-\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">-60+20-6\dfrac{2}{3}+\cdots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> = 1, hence: S ∞=</p>
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>. Here <span class="tex">r=-\dfrac{1}{3}</span>, and its size is <span class="tex">\dfrac{1}{3}&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first term is <span class="tex">a=1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{3}\right)=\dfrac{4}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{4}{3}}=\dfrac{3}{4}</span>.</p>
+          <p class="final"><span class="tex">a=1</span> and <span class="tex">S_\infty=\dfrac{3}{4}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 − −1 3 ! = 1 4 3 = 3/4</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">\left|-\dfrac{1}{3}\right|&lt;1</span>, so <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first term is <span class="tex">a=36</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{4}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{36}{\frac{4}{3}}=36\times\dfrac{3}{4}=27</span>.</p>
+          <p class="final"><span class="tex">a=36</span> and <span class="tex">S_\infty=27</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> = 36, hence: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 36/1 − −1 3 ! = 36 4 3 = 27</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = −60, hence: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = −60/1 − −1 3 ! = −60 4 3 = −45</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. Check the first term against the given ratio before you use the formula.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first term is <span class="tex">a=-60</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Check: <span class="tex">-60\times\left(-\dfrac{1}{3}\right)=20</span>, and <span class="tex">20\times\left(-\dfrac{1}{3}\right)=-\dfrac{20}{3}=-6\dfrac{2}{3}</span>. The given ratio matches the series.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=\dfrac{4}{3}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_\infty=\dfrac{-60}{\frac{4}{3}}=-60\times\dfrac{3}{4}=-45</span>.</p>
+          <p class="final"><span class="tex">a=-60</span> and <span class="tex">S_\infty=-45</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q5">
-      <h2>5 · Exercise 1H</h2>
+      <h2>5 · Exercise 1H <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>Each GP below has first term a = 60. Identify the ratio r and hence find S∞. 60 + 15 + 3 3 4 + · · · a 60 −30 + 15 −· · · b 60 −12 + 2 2 5 −· · · c</p>
+        <p class="intro">Each series below starts with <span class="tex">a=60</span>. Find the ratio <span class="tex">r</span>, then find <span class="tex">S_\infty</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">60+15+3\dfrac{3}{4}+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">60-30+15-\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">60-12+2\dfrac{2}{5}-\cdots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> 60 + 15 + 33 4 + . . . r = 15 60 = 1/4, hence: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 60/1 −1 4 = 60 3 4 = 80</p>
+          <p class="formula-quick"><strong>Formula:</strong> The ratio is <span class="tex">r=</span> (second term) <span class="tex">\div</span> (first term). Then, if <span class="tex">|r|&lt;1</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=60</span>. The second term is 15.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{15}{60}=\dfrac{1}{4}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|\dfrac{1}{4}\right|&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\dfrac{1}{4}=\dfrac{3}{4}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{60}{\frac{3}{4}}=60\times\dfrac{4}{3}=80</span>.</p>
+          <p class="final"><span class="tex">r=\dfrac{1}{4}</span> and <span class="tex">S_\infty=80</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> 60 −30 + 15 −. . . r = −30 60 = −1/2, hence: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 60/1 − −1 2 ! = 60 3 2 = 40</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> 60 −12 + 22/5 −. . . r = −12 60 = −1/5, hence: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 60/1 − −1 5 ! = 60 6 5 = 50 2 6 r = −1 2 ! 1 = −1/2, hence there is</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 1, so S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 − −1 2 ! = 1 3 2 = 2/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> r = 1 3 ! 1 = 1/3, hence there is a limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 1, so S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 − 1 3 ! = 1 2 3 = 3/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> r = −2 3 ! 1 = −2/3, hence there is</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 1, so S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 − −2 3 ! = 1 5 3 = 3/5</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same two steps. Divide the second term by the first to get <span class="tex">r</span>. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only if <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=60</span>. The second term is <span class="tex">-30</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{-30}{60}=-\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{1}{2}\right|=\dfrac{1}{2}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{2}\right)=\dfrac{3}{2}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{60}{\frac{3}{2}}=60\times\dfrac{2}{3}=40</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{1}{2}</span> and <span class="tex">S_\infty=40</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> r = 3 5 ! 1 = 3/5, hence there is a limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 1, so S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −3 5 = 1 2 5 = 5 2 = 21/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> r = −6 4 = −1.5, hence there is no limiting sum as |r| &gt; 1.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> r = 4 12 = 1/3, hence there is a limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 12, so S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 12/1 −1 3 = 12 2 3 = 3 2(12) = 18</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
-        <div class="sol">
-<p class="step"><strong>f ·</strong> r = 100 1000 = 1/10, hence there is</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 1000, so S ∞= 1000/1 −1 10 = 1000 9 10 = 10000 9 = 11111/9</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
-        <div class="sol">
-<p class="step"><strong>g ·</strong> r = −100 1000 = −1/10, hence there is</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 1000, so S ∞= 1000/1 − −1 10 ! = 1000 11 10 = 10000 11 = 909 1/11</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
-        <div class="sol">
-<p class="step"><strong>h ·</strong> r = −1 1 = −1, hence there is no limiting sum as |r| &gt; 1. i 3 r = 90 100 = 9/10, hence there is</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 100, so S ∞= 100/1 −9 10 = 100 1 10 = 1000 j r = 2/5 −2 = −1/5, hence there is</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = −2, so S ∞= −2/1 − −1 5 ! = −2 6 5 = −10 6 = −5 3 k r = −2/15 −2 3 = 3 15 = 1/5, hence there is a limiting sum as |r| &lt; 1. Now</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = −2/3, so S ∞= −2/31 − 1 5 ! = −2 3 4 5 ! = −5 6 l 7 The ball must travel 8 metres downwards to the ground, then it bounces back up to half the height, which is 8 × 1 2 = 4 metres. This means a total of 8 + 4 = 12 metres is travelled down and up. Successive down-and-up distances are formed by taking the previous down-and-up distance and then halving the distance to go down and halving the distance to go back up. This means that each successive down-and-up sequence is half that of the previous. Hence it forms a GP with r = 1/2.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> The distance travelled in each up-and-down sequence is given by a GP with a = 12 and r = 1/2. Thus the total distance travelled is given by: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 12/1 −1 2 = 12 1 2 = 24 Ball “eventually” travelled 24 metres.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> n 1 2 3 4/5</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same two steps. <span class="tex">r</span> is second divided by first. Then test <span class="tex">|r|&lt;1</span> before using <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=60</span>. The second term is <span class="tex">-12</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{-12}{60}=-\dfrac{1}{5}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Check the third term: <span class="tex">-12\times\left(-\dfrac{1}{5}\right)=\dfrac{12}{5}=2\dfrac{2}{5}</span>. It matches the series.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\left|-\dfrac{1}{5}\right|=\dfrac{1}{5}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{5}\right)=\dfrac{6}{5}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_\infty=\dfrac{60}{\frac{6}{5}}=60\times\dfrac{5}{6}=50</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{1}{5}</span> and <span class="tex">S_\infty=50</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q6">
-      <h2>6 · Exercise 1H</h2>
+      <h2>6 · Exercise 1H <span class="band">Foundation</span></h2>
       <div class="stem">
-        <p>an<br/>
-18<br/>
-6<br/>
-2<br/>
-2<br/>
-3<br/>
-2<br/>
-9<br/>
-2<br/>
-27<br/>
-Sn</p>
+        <p class="intro">For each series, find the ratio <span class="tex">r</span> and test whether a limiting sum exists. If it does, find it.</p>
+        <p><strong>(a)</strong> <span class="tex">1-\dfrac{1}{2}+\dfrac{1}{4}-\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">1+\dfrac{1}{3}+\dfrac{1}{9}+\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">1-\dfrac{2}{3}+\dfrac{4}{9}-\cdots</span></p>
+        <p><strong>(d)</strong> <span class="tex">1+\dfrac{3}{5}+\dfrac{9}{25}+\cdots</span></p>
+        <p><strong>(e)</strong> <span class="tex">4-6+9-\cdots</span></p>
+        <p><strong>(f)</strong> <span class="tex">12+4+\dfrac{4}{3}+\cdots</span></p>
+        <p><strong>(g)</strong> <span class="tex">1000+100+10+\cdots</span></p>
+        <p><strong>(h)</strong> <span class="tex">1000-100+10-\cdots</span></p>
+        <p><strong>(i)</strong> <span class="tex">1-1+1-\cdots</span></p>
+        <p><strong>(j)</strong> <span class="tex">100+90+81+\cdots</span></p>
+        <p><strong>(k)</strong> <span class="tex">-2+\dfrac{2}{5}-\dfrac{2}{25}+\cdots</span></p>
+        <p><strong>(l)</strong> <span class="tex">-\dfrac{2}{3}-\dfrac{2}{15}-\dfrac{2}{75}-\cdots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r</span> is the second term divided by the first. A limiting sum exists only when <span class="tex">|r|&lt;1</span>. Then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. If <span class="tex">|r|\ge 1</span>, the terms do not shrink toward 0, so there is no limiting sum.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. The second term is <span class="tex">-\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\left(-\dfrac{1}{2}\right)\div 1=-\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{1}{2}\right|=\dfrac{1}{2}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{2}\right)=\dfrac{3}{2}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{3}{2}}=\dfrac{2}{3}</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{1}{2}</span> and <span class="tex">S_\infty=\dfrac{2}{3}</span>.</p>
+        </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (infinite GP):</strong> When <span class="tex">|r|&lt;1</span>, limiting sum <span class="tex">S_\infty=\dfrac{a_1}{1-r}</span>.</p>
-        <p class="step">an 10 10 10 10 10 10 S n 10 20 30 40 50 60 S n →∞as n →∞.</p>
-<p class="step"><strong>b ·</strong> n 1 2 3 4 5 6 an 10 −10/10 −10/10 −10 S n 10 0 10 0 10 0 S n oscillates between 0 and 10 as n →∞.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. The second term is <span class="tex">\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{1}{3}\div 1=\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|\dfrac{1}{3}\right|&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\dfrac{1}{3}=\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{2}{3}}=\dfrac{3}{2}</span>.</p>
+          <p class="final"><span class="tex">r=\dfrac{1}{3}</span> and <span class="tex">S_\infty=\dfrac{3}{2}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> n 1 2 3 4 5 6 an 10 20 40 80 160 320 S n 10 30 70 150 310 630 S n →∞as n →∞. 4</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. The second term is <span class="tex">-\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=-\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{2}{3}\right|=\dfrac{2}{3}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{2}{3}\right)=\dfrac{5}{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{5}{3}}=\dfrac{3}{5}</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{2}{3}</span> and <span class="tex">S_\infty=\dfrac{3}{5}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
-<p class="step"><strong>d ·</strong> n 1 2 3 4 5 6 an 10 −20/40 −80 160 −320 S n 10 −10/30 −50 110 −210 S n oscillates between larger and larger positive and negative numbers as n →∞. 9 For the series, a = 80 and r = 40 80 = 1/2. Thus S 4 = a (1 −rn) 1 −r = 80 1 − 1 2 !4 1 −1 2 = 150 and S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 80/1 −1 2 = 80 1 2 = 160. So S ∞−S 4 = 160 −150 = 10.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> For the series, a = 100 and r = 10 100 = 1/10. Thus S 4 = a (1 −rn) 1 −r = 100 1 − 1 10 !4 1 −1 10 = 111 1 10 and S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 100/1 −1 10 = 100 9 10 ! = 1000 9 . So S ∞−S 4 = 1000/9 −111 1 10 = 1/90.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> For the series, a = 100 and r = −80 100 = −4/5. Thus S 4 = a (1 −rn) 1 −r = 100 1 − −4 5 !4 1 − −4 5 ! = 164 5 and S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 100/1 − −4 5 ! = 100 9 5 ! = 500 9 . So S ∞−S 4 = 500/9 −164 5 = 2234/45.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> 10</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> The numbers installing reflective house numbers in each subsequent month is 20% of that in the previous month. This is equivalent to multiplying the number in the previous month by 20% = 0.2. Hence, this gives us a GP as all terms have a common ratio of 0.2.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> This is a GP with a = 10 000 × 0.2 = 2000 and r = 0.2 S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 2000/1 −0.2 = 2500</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> S n = a (rn −1) r −1 S 4 = 2000  0.24 −1  0.2 −1 = 2496 S ∞−S 4 = 2500 −2496 = 4/11</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is a GP with a = 1000 and r = 0.9. 5 S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1000/1 −0.9 = 1000/0.1 = 10 000 Thus the advertisements will eventually bring in 10 000 sales.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> The first 10 advertisements are S 10 = a (1 −rn) 1 −r = 1000  1 −0.910 1 −0.9 = 6513.2 . . . Thus S ∞−S 10 = 10 000 −6513.2 . . .  3487/12</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> The left-hand side forms a GP with a = 5 and r = x. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 5/1 −x Hence, solving the equation gives: S ∞= 10/51 −x = 10 5 = 10 −10x 10x = 5 x = 1/2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> The left-hand side forms a GP with a = 5 and r = x. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 5/1 −x Hence, solving the equation gives: S ∞= 3/51 −x = 3 5 = 3 −3x 3x = −2 x = −2/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> The left-hand side forms a GP with a = 5 and r = −x. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 5/1 −(−x) = 5 1 + x Hence, solving the equation gives: S ∞= 15/51 + x = 15 5 = 15 + 15x 15x = −10 x = −2/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> The left-hand side forms a GP with a = x and r = 1/3. 6 S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = x 1 −1 3 = x 2 3 = 3x 2 Hence, solving the equation gives: S ∞= 2/32 x = 2 x = 4/3</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. The second term is <span class="tex">\dfrac{3}{5}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{3}{5}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{3}{5}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\dfrac{3}{5}=\dfrac{2}{5}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{2}{5}}=\dfrac{5}{2}=2\dfrac{1}{2}</span>.</p>
+          <p class="final"><span class="tex">r=\dfrac{3}{5}</span> and <span class="tex">S_\infty=2\dfrac{1}{2}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
-<p class="step"><strong>e ·</strong> The left-hand side forms a GP with a = x and r = −1/3. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = x 1 − −1 3 ! = x 4 3 = 3x 4 Hence, solving the equation gives: S ∞= 2/34 x = 2 x = 8/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
-        <div class="sol">
-<p class="step"><strong>f ·</strong> The left-hand side forms a GP with a = x and r = 2/3. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = x 1 −2 3 = x 1 3 = 3x Hence, solving the equation gives: S ∞= 2 3x = 2 x = 2 3/13</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is a GP with a = 7 and r = x. For a limiting sum, |r| &lt; 1, so |x| &lt; 1 or −1 &lt; x &lt; 1. So S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 7/1 −x. 7</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> This is a GP with a = 2x and r = 6x2 2x = 3x. For a limiting sum, |r| &lt; 1, so |3x| &lt; 1 or −1 3 &lt; x &lt; 1/3. So S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 2x 1 −3x.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> This is a GP with a = 1 and r = x −1. For a limiting sum, |r| &lt; 1, so |x −1| &lt; 1 or −1 &lt; x −1 &lt; 1 or 0 &lt; x &lt; 2. So S ∞= 1/1 −(x −1) = 1/2 −x.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> This is a GP with a = 1 and r = 1 + x. For a limiting sum, |r| &lt; 1, so |1 + x| &lt; 1 or −1 &lt; 1 + x &lt; 1 or −2 &lt; x &lt; 0. So S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −(1 + x) = −1 x. 14</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is a GP with a = 1 and r = 1.01. As |r| = 1.01 &gt; 1, no limiting sum exists.</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> This is a GP with a = 1 and r = −0.99. As |r| = 0.99 &lt; 1, there is a limiting sum, which is: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −(−0.99) = 1 1 + 0.99 = 1/1.99 = 100 199</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> This is a GP with a = 1 and r = 1.01−1. As |r| = 1.01−1 &lt; 1, there is a limiting sum, which is: 8 S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −1.01−1 = 1/1 − 1/1.01 = 1/1.01/1.01 − 1/1.01 = 1/0.01/1.01 ! = 1.01/0.01 = 101</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> This is a GP with a = 0.72 and r = −0.12/0.72 = −1/6. As |r| = 1 6 &lt; 1, there is a limiting sum, which is: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 0.72/1 − −1 6 ! = 0.72 1 + 1 6 = 0.72 7 6 = 6 7(0.72) = 108 175 15 This is a GP with a = 16 √ 5 and r = 4 √ 5 16 √ 5 = 1/4. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 16 √ 5/1 −1 4 = 16 √ 5 3 4 = 4 3  16 √ 5  = 64 √ 5/3</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is a GP with a = 108 √ 7 and r = −36 √ 7 108 √ 7 = −1/3. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 108 √ 7/1 − −1 3 ! = 108 √ 7 4 3 = 3 4  108 √ 7  = 81 √ 7</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> 9 This is a GP with a = 7 and r = √ 7 7 . S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 7/1 − √ 7 7 = 7/7 − √ 7 7 = 49/7 − √ 7 = 49/7 − √ 7 × 7 + √ 7 7 + √ 7 = 49(7 + √ 7) 49 −7 = 49(7 + √ 7) 42 = 7(7 + √ 7) 6</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> This is a GP with a = 4 and r = − √ 2 2 . S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 4/1 − − √ 2 2  = 4 1 + √ 2 2 = 8 2 + √ 2 = 8 2 + √ 2 × 2 − √ 2/2 − √ 2 = 8(2 − √ 2) 4 −2 = 8(2 − √ 2) 2 = 4(2 − √ 2)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> This is a GP with a = 5 and r = −2 √ 5 5 = −2 √ 5 . S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 5/1 − −2 √ 5 ! = 5 1 + 2 √ 5 = 5 √ 5 √ 5 + 2 = 5 √ 5 √ 5 + 2 × √ 5 −2 √ 5 −2 = 5 √ 5( √ 5 −2) 5 −4 = 5 √ 5( √ 5 −2) = 25 −10 √ 5 = 5(5 −2 √ 5)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
-        <div class="sol">
-<p class="step"><strong>e ·</strong> This is a GP with a = 9 and r = 3 √ 10 9 = √ 10 3 . But r = √ 10 3 &gt; 1, and hence there is no limiting sum.</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. If <span class="tex">|r|\ge 1</span>, do not use <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. The terms are not shrinking toward 0.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=4</span>. The second term is <span class="tex">-6</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{-6}{4}=-\dfrac{3}{2}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{3}{2}\right|=\dfrac{3}{2}=1.5</span>, which is greater than 1.</p>
+          <p class="step"><strong>Step 4 ·</strong> Each new term is one and a half times as large as the one before, so the terms grow. The totals cannot settle on one number.</p>
+          <p class="final">There is no limiting sum, because <span class="tex">|r|=\dfrac{3}{2}&gt;1</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
-<p class="step"><strong>f ·</strong> 10 This is a GP with a = 1 and r = 1 − √ 3. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −  1 − √ 3  = 1 √ 3 = √ 3/3</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=12</span>. The second term is 4.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{4}{12}=\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{1}{3}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{12}{\frac{2}{3}}=12\times\dfrac{3}{2}=18</span>.</p>
+          <p class="final"><span class="tex">r=\dfrac{1}{3}</span> and <span class="tex">S_\infty=18</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
-<p class="step"><strong>g ·</strong> This is a GP with a = 1 and r = 2 − √ 3. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −  2 − √ 3  = 1 √ 3 −1 = 1 √ 3 −1 × √ 3 + 1 √ 3 + 1 = √ 3 + 1/3 −1 = 1 2( √ 3 + 1)</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1000</span>. The second term is 100.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{100}{1000}=\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{1}{10}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=\dfrac{9}{10}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1000}{\frac{9}{10}}=1000\times\dfrac{10}{9}=\dfrac{10000}{9}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">9\times 1111=9999</span>, so the remainder is 1. <span class="tex">\dfrac{10000}{9}=1111\dfrac{1}{9}</span>.</p>
+          <p class="final"><span class="tex">r=\dfrac{1}{10}</span> and <span class="tex">S_\infty=1111\dfrac{1}{9}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
-<p class="step"><strong>h ·</strong> 16</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1000</span>. The second term is <span class="tex">-100</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{-100}{1000}=-\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{1}{10}\right|=\dfrac{1}{10}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{10}\right)=\dfrac{11}{10}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1000}{\frac{11}{10}}=1000\times\dfrac{10}{11}=\dfrac{10000}{11}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">11\times 909=9999</span>, so the remainder is 1. <span class="tex">\dfrac{10000}{11}=909\dfrac{1}{11}</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{1}{10}</span> and <span class="tex">S_\infty=909\dfrac{1}{11}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · i</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> P∞ n=1 1 3 !n = 1 3 + 1 32 + 1 33 + . . . This is a GP with a = 1 3 and r = 1/3, hence the sum is given by: S ∞=</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. The formula <span class="tex">S_\infty=\dfrac{a}{1-r}</span> needs <span class="tex">|r|&lt;1</span>. If the size of <span class="tex">r</span> is exactly 1, the terms do not shrink toward 0.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. The second term is <span class="tex">-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{-1}{1}=-1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">|-1|=1</span>, which is not less than 1.</p>
+          <p class="step"><strong>Step 4 ·</strong> The terms are <span class="tex">1,-1,1,-1,\ldots</span>. They stay size 1. The running sums jump <span class="tex">1,0,1,0,\ldots</span> and never settle on one number.</p>
+          <p class="final">There is no limiting sum, because <span class="tex">|r|=1</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · j</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/31 −1 3 = 1 3 2 3 = 2</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=100</span>. The second term is 90.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{90}{100}=\dfrac{9}{10}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{9}{10}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{100}{\frac{1}{10}}=100\times 10=1000</span>.</p>
+          <p class="final"><span class="tex">r=\dfrac{9}{10}</span> and <span class="tex">S_\infty=1000</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · k</button>
         <div class="sol">
-<p class="step"><strong>b ·</strong> P∞ n=1 7 × 1 2 !n = 7 2 + 7 22 + 7 23 + . . . This is a GP with a = 7 2 and r = 1/2, hence the sum is given by: S ∞=</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-2</span>. The second term is <span class="tex">\dfrac{2}{5}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{2}{5}\div(-2)=\dfrac{2}{5}\times\left(-\dfrac{1}{2}\right)=-\dfrac{1}{5}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{1}{5}\right|=\dfrac{1}{5}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{5}\right)=\dfrac{6}{5}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{-2}{\frac{6}{5}}=-2\times\dfrac{5}{6}=-\dfrac{10}{6}=-\dfrac{5}{3}</span>.</p>
+          <p class="final"><span class="tex">r=-\dfrac{1}{5}</span> and <span class="tex">S_\infty=-\dfrac{5}{3}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · l</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 7/21 −1 2 = 7 2 1 2 = 7</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> P∞ n=1 40 × −3 5 !n = −40 3 5 ! + 40 3 5 !2 −40 3 5 !3 + . . . This is a GP with a = −120 5 = −24 and r = −3/5, hence the sum is given by: 11 S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = −24/1 − −3 5 ! = −24 8 5 = −15 17 Consider one period consisting of 2 years, whereupon annual rainfall will increase and decrease accord- ingly. Hence, the rainfall forms a GP with common ratio r = 1.2 × 0.8 = 0.96. In the first period (2 years, starting at 400mm), 400 + 400(1.2) = 880mm fell i.e. let a = 880. Since r &lt; 1, a limiting sum exists and the total rainfall that will eventually have fallen is: S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 880/1 −0.96 = 22 000mm 18</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> S ∞= 5a1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 5a 1/1 −r = 5/1 −r = 1 5 r = 4/5</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> a2 = ar = 6 r = 6</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> S ∞= 27</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 27</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −6</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 27 a2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> −6 = 27 a2 = 27a −162 a2 −27a + 162 = 0 (a −9)(a −18) = 0</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> = 9 or a = 18</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> S ∞−S 1 = 5a1 S ∞−a1 = 5a1 S ∞= 6a1</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 6a 1/1 −r = 6/16 = 1 −r r = 1 −1 6 r = 5 6 Hence the ratio of the sum of the terms is r = 5/6. 12</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> The sum of all terms from the third term on is equal to the sum of all terms with the sum of the first two terms subtracted from it. That is: S = S ∞−S 2 =</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r −</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong>  1 −r2 1 −r =</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r −a −ar2/1 −r = a −a + ar2/1 −r = ar2/1 −r i S = a1 ar2/1 −r = a r2/1 −r = 1 r2 = 1 −r r2 + r −1 = 0 Using the quadratic formula: r = −1 ± p 12 −4(1)(−1) 2(1) = −1 ± √ 1 + 4 2 = −1 ± √ 5 2 But r = −1/2 − √ 5 &lt; −1, so it is not a possible solution, hence the solution is r = −1 2 + 1 2 √ 5 ii S = a2 ar2/1 −r = ar r2/1 −r = r r2 = r −r2 2r2 −r = 0 r(2r −1) = 0 r = 0 or 1 2 but r , 0 Hence, r = 1/2. iii S = a1 + a2 ar2/1 −r = a + ar r2/1 −r = 1 + r r2 = (1 + r)(1 −r) r2 = 1 −r2 2r2 = 1 r2 = 1 2 r = ± 1 √ 2 13 r = 1 √ 2 × √ 2 √ 2 or r = −1 √ 2 × √ 2 √ 2 r = √ 2 2 or r = − √ 2 2/19</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> This is a GP with a = 1 and r = x2 −1. To have a limiting sum, |r| &lt; 1, so: x2 −1 &lt; 1 −1 &lt; x2 −1 &lt; 1 0 &lt; x2 &lt; 2 Hence: − √ 2 &lt; x &lt; √ 2 and x , 0 (since x2 , 0). S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 −(x2 −1) = 1/2 −x2</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> This is a GP with a = 1 and r = 1 1 + x2 . To have a limiting sum, |r| &lt; 1, so: 1 1 + x2 &lt; 1 1 &lt; 1 + x2 x2 + 1 &gt; 1 or x2 + 1 &lt; −1 Hence: x2 &gt; 0 or x2 &lt; −2 (not possible) Thus there is a limiting sum for x , 0. S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 1/1 − 1 1 + x2 = 1 + x2 1 + x2 −1 = 1 + x2 x2 20 This is a GP with a = v and r = v w = S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = v 1 −v</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> w = v 1 −v w −wv = v w = v + wv w = v(1 + w) v = w 1 + w</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
-        <div class="sol">
-<p class="step"><strong>b ·</strong> 14 This is a GP with a = w and r = −w2 w = −w S ∞=</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = w 1 −(−w) = w 1 + w = v (from part b)</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
-        <div class="sol">
-<p class="step"><strong>c ·</strong> If v = 1/3, then w = 1/31 −1 3 = 1 3 2 3 = 1/2. Hence the limiting sum is: S ∞= w 1 + w = 1/21 + 1 2 = 1 2 3 2 = 1 3 = v</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="step"><strong>d ·</strong> 15</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same test. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-\dfrac{2}{3}</span>. The second term is <span class="tex">-\dfrac{2}{15}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\left(-\dfrac{2}{15}\right)\div\left(-\dfrac{2}{3}\right)=\dfrac{2}{15}\times\dfrac{3}{2}=\dfrac{1}{5}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{1}{5}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\dfrac{1}{5}=\dfrac{4}{5}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{-\frac{2}{3}}{\frac{4}{5}}=-\dfrac{2}{3}\times\dfrac{5}{4}=-\dfrac{10}{12}=-\dfrac{5}{6}</span>.</p>
+          <p class="final"><span class="tex">r=\dfrac{1}{5}</span> and <span class="tex">S_\infty=-\dfrac{5}{6}</span>.</p>
         </div>
       </div>
     </article>
+
+    <article class="q" id="q7">
+      <h2>7 · Exercise 1H <span class="band">Foundation</span></h2>
+      <div class="stem">
+        <p class="intro">Bevin drops a bouncy ball from a height of 8 metres. Every bounce reaches half the height of the bounce before it.</p>
+        <p><strong>(a)</strong> Show that the first down-and-up trip is 12 metres, and explain why the later down-and-up trips form a geometric sequence with <span class="tex">r=\dfrac{1}{2}</span>.</p>
+        <p><strong>(b)</strong> How far does the ball travel in the end?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> A down-and-up trip is the fall to the ground plus the rise back up. A geometric sequence multiplies by the same number every time. That number is <span class="tex">r</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The ball falls 8 metres to the ground.</p>
+          <p class="step"><strong>Step 2 ·</strong> It rises half of 8, which is 4 metres.</p>
+          <p class="step"><strong>Step 3 ·</strong> Down plus up: <span class="tex">8+4=12</span> metres. That is the first down-and-up distance.</p>
+          <p class="step"><strong>Step 4 ·</strong> The next bounce starts from 4 metres. It falls 4 metres and rises half of 4, which is 2 metres. That trip is <span class="tex">4+2=6</span> metres.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">6</span> is half of <span class="tex">12</span>. Each new height is half the one before, so each new down-and-up trip is half the previous trip.</p>
+          <p class="final">The first down-and-up distance is 12 metres, and the trips form a geometric sequence with <span class="tex">r=\dfrac{1}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> The down-and-up distances are a geometric series with <span class="tex">a=12</span> and <span class="tex">r=\dfrac{1}{2}</span>. Because <span class="tex">|r|&lt;1</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. “In the end” means this limiting sum.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1-r=1-\dfrac{1}{2}=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{12}{\frac{1}{2}}=12\times 2=24</span>.</p>
+          <p class="final">The ball travels 24 metres in the end.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q8">
+      <h2>8 · Exercise 1H <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">These four examples show that a geometric sequence has no limiting sum when <span class="tex">r\ge 1</span> or <span class="tex">r\le -1</span>. Copy each table, fill it in, and describe what <span class="tex">S_n</span> does as <span class="tex">n</span> grows without end.</p>
+        <p><strong>(a)</strong> <span class="tex">r=1</span> and <span class="tex">a=10</span></p>
+        <p><strong>(b)</strong> <span class="tex">r=-1</span> and <span class="tex">a=10</span></p>
+        <p><strong>(c)</strong> <span class="tex">r=2</span> and <span class="tex">a=10</span></p>
+        <p><strong>(d)</strong> <span class="tex">r=-2</span> and <span class="tex">a=10</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> If <span class="tex">r=1</span>, every term equals the first term. The running sum is <span class="tex">S_n=na</span>. There is no limiting sum when <span class="tex">|r|\ge 1</span>, because the totals do not settle on one fixed number.</p>
+          <p class="step"><strong>Step 1 ·</strong> Each term is 10, so the six terms are 10, 10, 10, 10, 10, 10.</p>
+          <p class="step"><strong>Step 2 ·</strong> Add them one at a time: <span class="tex">10</span>, <span class="tex">20</span>, <span class="tex">30</span>, <span class="tex">40</span>, <span class="tex">50</span>, <span class="tex">60</span>.</p>
+          <div class="table-wrap">
+            <table class="sol-table">
+              <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+              <tbody>
+                <tr><td><span class="tex">a_n</span></td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td></tr>
+                <tr><td><span class="tex">S_n</span></td><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td><td>60</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="final"><span class="tex">S_n</span> keeps rising by 10 forever, so <span class="tex">S_n</span> grows without bound. There is no limiting sum.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Multiply by <span class="tex">r=-1</span> each time. That flips the sign and keeps the size the same. <span class="tex">|r|=1</span>, so there is no limiting sum.</p>
+          <p class="step"><strong>Step 1 ·</strong> The terms are <span class="tex">10,-10,10,-10,10,-10</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_1=10</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_2=10+(-10)=0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_3=0+10=10</span>, then <span class="tex">S_4=0</span>, <span class="tex">S_5=10</span>, <span class="tex">S_6=0</span>.</p>
+          <div class="table-wrap">
+            <table class="sol-table">
+              <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+              <tbody>
+                <tr><td><span class="tex">a_n</span></td><td>10</td><td><span class="tex">-10</span></td><td>10</td><td><span class="tex">-10</span></td><td>10</td><td><span class="tex">-10</span></td></tr>
+                <tr><td><span class="tex">S_n</span></td><td>10</td><td>0</td><td>10</td><td>0</td><td>10</td><td>0</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="final"><span class="tex">S_n</span> keeps switching between 10 and 0. It does not settle, so there is no limiting sum.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Multiply by <span class="tex">r=2</span> each time. <span class="tex">|r|=2&gt;1</span>, so the terms get bigger and there is no limiting sum.</p>
+          <p class="step"><strong>Step 1 ·</strong> The terms are <span class="tex">10,20,40,80,160,320</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_1=10</span>, <span class="tex">S_2=30</span>, <span class="tex">S_3=70</span>, <span class="tex">S_4=150</span>, <span class="tex">S_5=310</span>, <span class="tex">S_6=630</span>.</p>
+          <div class="table-wrap">
+            <table class="sol-table">
+              <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+              <tbody>
+                <tr><td><span class="tex">a_n</span></td><td>10</td><td>20</td><td>40</td><td>80</td><td>160</td><td>320</td></tr>
+                <tr><td><span class="tex">S_n</span></td><td>10</td><td>30</td><td>70</td><td>150</td><td>310</td><td>630</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="final"><span class="tex">S_n</span> keeps growing without bound. There is no limiting sum.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> Multiply by <span class="tex">r=-2</span> each time. The size doubles and the sign flips. <span class="tex">|r|=2&gt;1</span>, so there is no limiting sum.</p>
+          <p class="step"><strong>Step 1 ·</strong> The terms are <span class="tex">10,-20,40,-80,160,-320</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_1=10</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_2=10-20=-10</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_3=-10+40=30</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_4=30-80=-50</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_5=-50+160=110</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">S_6=110-320=-210</span>.</p>
+          <div class="table-wrap">
+            <table class="sol-table">
+              <thead><tr><th><span class="tex">n</span></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead>
+              <tbody>
+                <tr><td><span class="tex">a_n</span></td><td>10</td><td><span class="tex">-20</span></td><td>40</td><td><span class="tex">-80</span></td><td>160</td><td><span class="tex">-320</span></td></tr>
+                <tr><td><span class="tex">S_n</span></td><td>10</td><td><span class="tex">-10</span></td><td>30</td><td><span class="tex">-50</span></td><td>110</td><td><span class="tex">-210</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="final"><span class="tex">S_n</span> swings between larger and larger positive and negative values. There is no limiting sum.</p>
+        </div>
+      </div>
+    </article>
+
     <article class="q" id="q9">
-      <h2>9 · Exercise 1H</h2>
+      <h2>9 · Exercise 1H <span class="band dev">Development</span></h2>
       <div class="stem">
-        <p>For each series, find S∞and S4, then find the difference S∞−S4. 80 + 40 + 20 + · · · a 100 + 10 + 1 + · · · b 100 −80 + 64 −· · · c</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Exercise 1H This is a GP with a = 7 and r = √</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q10">
-      <h2>10 · Exercise 1H</h2>
-      <div class="stem">
-        <p>When Brownleigh Council began offering free reflective house numbers to its 10 000 home owners, 20% installed them in the first month. The number installing them in the second month was only 20% of those in the first month, and so on. a Show that the numbers installing them each month form a GP. b How many home owners will ‘eventually’ install them? (‘Eventually’ means take S∞.) c How many eventual installations were not done in the first four months?</p>
+        <p class="intro">For each series, find <span class="tex">S_\infty</span> and <span class="tex">S_4</span>, then find <span class="tex">S_\infty-S_4</span>.</p>
+        <p><strong>(a)</strong> <span class="tex">80+40+20+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">100+10+1+\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">100-80+64-\cdots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Exercise 1H This is a GP with a = 1 and r = 1 − √ 3. S ∞=</p>
-<p class="step"><strong>a ·</strong> 1 −r =</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q11">
-      <h2>11 · Exercise 1H</h2>
-      <div class="stem">
-        <p>The Wellington Widget Factory has been advertising its unbreakable widgets every month. The first advertisement brought in 1000 sales, but every successive advertisement is only bringing in 90% of the previous month’s sales. a How many widget sales will the advertisements ‘eventually’ bring in? b About how many eventual sales were not brought in by the first 10 advertisements?</p>
-<p>1H The limiting sum of a geometric series 47</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Exercise 1H S ∞=</p>
-<p class="step"><strong>a ·</strong> 1 −r = −24/1 − −3</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q12">
-      <h2>12 · Exercise 1H</h2>
-      <div class="stem">
-        <p>Find, in terms of x, an expression for the limiting sum of each series on the left. Then solve the given equation to find x. 5 + 5x + 5x2 + · · · = 10 a 5 + 5x + 5x2 + · · · = 3 b 5 −5x + 5x2 −· · · = 15 c x + x 3 + x 9 + · · · = 2 d x −x 3 + x 9 −· · · = 2 e x + 2x 3 + 4x 9 + · · · = 2 f</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (infinite GP):</strong> When <span class="tex">|r|&lt;1</span>, limiting sum <span class="tex">S_\infty=\dfrac{a_1}{1-r}</span>.</p>
-        <p class="step">Exercise 1H</p>
-<p class="step"><strong>d ·</strong> The sum of all terms from the third term on is equal to the sum of all terms with the sum of the first two terms subtracted from it. That is: S = S ∞−S 2 =</p>
+          <p class="formula-quick"><strong>Formula:</strong> When <span class="tex">r&lt;1</span>, the sum of the first <span class="tex">n</span> terms is <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span>. When <span class="tex">|r|&lt;1</span>, the limiting sum is <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=80</span>. <span class="tex">r=\dfrac{40}{80}=\dfrac{1}{2}</span>. The size is less than 1, so both formulas are allowed.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left(\dfrac{1}{2}\right)^4=\dfrac{1}{16}</span>, so <span class="tex">1-r^4=1-\dfrac{1}{16}=\dfrac{15}{16}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_4=80\times\dfrac{\frac{15}{16}}{\frac{1}{2}}=80\times\dfrac{15}{16}\times 2=80\times\dfrac{15}{8}=150</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{80}{\frac{1}{2}}=160</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_\infty-S_4=160-150=10</span>.</p>
+          <p class="final"><span class="tex">S_\infty=160</span>, <span class="tex">S_4=150</span>, and the difference is 10.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r −</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong>  1 −r2 1 −r =</p>
-        </div>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r −a −ar2/1 −r = a −a + ar2/1 −r = ar2/1 −r i S = a1 ar2/1 −r = a r2/1 −r = 1 r2 = 1 −r r2 + r −1 = 0 Using the quadratic formula: r = −1 ± p 12 −4(1)(−1) 2(1) = −1 ± √ 1 + 4</p>
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q13">
-      <h2>13 · Exercise 1H</h2>
-      <div class="stem">
-        <p>Find the condition for each GP to have a limiting sum, then find that limiting sum. 7 + 7x + 7x2 + · · · a 2x + 6x2 + 18x3 + · · · b 1 + (x −1) + (x −1)2 + · · · c 1 + (1 + x) + (1 + x)2 + · · · d</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Exercise 1H r = 1 √</p>
-
-        </div>
-      </div>
-    </article>
-    <article class="q" id="q14">
-      <h2>14 · Exercise 1H</h2>
-      <div class="stem">
-        <p>Find the limiting sum of each series, if it exists. 1 + (1.01) + (1.01)2 + · · · a 1 −0.99 + (0.99)2 −· · · b 1 + (1.01)−1 + (1.01)−2 + · · · c 0.72 −0.12 + 0.02 −· · · d</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Exercise 1H This is a GP with a = w and r = −w2 w = −w S ∞=</p>
-<p class="step"><strong>a ·</strong> 1 −r = w 1 −(−w) = w 1 + w = v (from part b)</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same two formulas. <span class="tex">S_4=a\dfrac{1-r^4}{1-r}</span> because <span class="tex">r&lt;1</span>, and <span class="tex">S_\infty=\dfrac{a}{1-r}</span> because <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=100</span>. <span class="tex">r=\dfrac{10}{100}=\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left(\dfrac{1}{10}\right)^4=\dfrac{1}{10000}</span>, so <span class="tex">1-r^4=\dfrac{9999}{10000}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=\dfrac{9}{10}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_4=100\times\dfrac{9999}{10000}\times\dfrac{10}{9}=\dfrac{9999}{90}=\dfrac{1111}{10}=111\dfrac{1}{10}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{100}{\frac{9}{10}}=\dfrac{1000}{9}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Common denominator 90: <span class="tex">\dfrac{1000}{9}=\dfrac{10000}{90}</span> and <span class="tex">\dfrac{1111}{10}=\dfrac{9999}{90}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">\dfrac{10000}{90}-\dfrac{9999}{90}=\dfrac{1}{90}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{1000}{9}</span>, <span class="tex">S_4=111\dfrac{1}{10}</span>, and the difference is <span class="tex">\dfrac{1}{90}</span>.</p>
         </div>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
-<p class="step"><strong>c ·</strong> If v = 1/3, then w =</p>
+          <p class="formula-quick"><strong>Formula:</strong> Same two formulas. A negative ratio is still less than 1, so <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span> and, if <span class="tex">|r|&lt;1</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=100</span>. <span class="tex">r=\dfrac{-80}{100}=-\dfrac{4}{5}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left|-\dfrac{4}{5}\right|=\dfrac{4}{5}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 3 ·</strong> An even power of a negative number is positive: <span class="tex">\left(-\dfrac{4}{5}\right)^4=\dfrac{256}{625}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r^4=\dfrac{625}{625}-\dfrac{256}{625}=\dfrac{369}{625}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{4}{5}\right)=\dfrac{9}{5}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_4=100\times\dfrac{369}{625}\times\dfrac{5}{9}</span>. First <span class="tex">369\div 9=41</span>, so this is <span class="tex">100\times\dfrac{41}{125}=\dfrac{4100}{125}=\dfrac{164}{5}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">S_\infty=\dfrac{100}{\frac{9}{5}}=\dfrac{500}{9}</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> Common denominator 45: <span class="tex">\dfrac{500}{9}=\dfrac{2500}{45}</span> and <span class="tex">\dfrac{164}{5}=\dfrac{1476}{45}</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> <span class="tex">\dfrac{2500}{45}-\dfrac{1476}{45}=\dfrac{1024}{45}</span>. <span class="tex">45\times 22=990</span>, remainder <span class="tex">34</span>, so <span class="tex">\dfrac{1024}{45}=22\dfrac{34}{45}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{500}{9}</span>, <span class="tex">S_4=\dfrac{164}{5}</span>, and the difference is <span class="tex">22\dfrac{34}{45}</span>.</p>
         </div>
       </div>
     </article>
-    <article class="q" id="q15">
-      <h2>15 · Exercise 1H</h2>
-      <div class="stem">
-        <p>Find the limiting sums if they exist, rationalising denominators if necessary. 16 √ 5 + 4 √ 5 + √ 5 + · · · a 108 √ 7 −36 √ 7 + 12 √ 7 −· · · b 7 + √ 7 + 1 + · · · c 4 −2 √ 2 + 2 −· · · d 5 −2 √ 5 + 4 −· · · e 9 + 3 √ 10 + 10 + · · · f 1 + (1 − √ 3 ) + (1 − √ 3 )2 + · · · g 1 + (2 − √ 3 ) + (2 − √ 3 )2 + · · · h</p>
-      </div>
-      <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show worked solution</button>
-        <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">This is a GP with a = 16 √ 5 and r = 4 √</p>
 
+    <article class="q" id="q10">
+      <h2>10 · Exercise 1H <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">Brownleigh Council offers free reflective house numbers to its 10 000 home owners. In the first month, 20% of them install the numbers. Each later month, the number of new installations is only 20% of the number in the month before.</p>
+        <p><strong>(a)</strong> Show that the monthly installation numbers form a geometric sequence.</p>
+        <p><strong>(b)</strong> How many home owners eventually install them? “Eventually” means take <span class="tex">S_\infty</span>.</p>
+        <p><strong>(c)</strong> How many of those eventual installations are not done in the first four months?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Quick fact:</strong> 20% means <span class="tex">\dfrac{20}{100}=0.2=\dfrac{1}{5}</span>. A list is geometric when you multiply by the same number every time.</p>
+          <p class="step"><strong>Step 1 ·</strong> Month 1: <span class="tex">20\%</span> of <span class="tex">10\,000</span> is <span class="tex">10\,000\times 0.2=2000</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Month 2: <span class="tex">20\%</span> of 2000 is <span class="tex">2000\times 0.2=400</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Month 3: <span class="tex">400\times 0.2=80</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Each month is the month before multiplied by <span class="tex">0.2</span>. The multiplier never changes.</p>
+          <p class="final">The monthly numbers form a geometric sequence with <span class="tex">a=2000</span> and <span class="tex">r=0.2</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a=2000</span> and <span class="tex">r=0.2</span>. <span class="tex">|r|=0.2&lt;1</span>, so <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1-r=1-0.2=0.8</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{2000}{0.8}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">0.8\times 2500=2000</span>, so <span class="tex">\dfrac{2000}{0.8}=2500</span>.</p>
+          <p class="final">Eventually 2500 home owners install the numbers.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=\dfrac{1}{5}&lt;1</span>, so <span class="tex">S_4=a\dfrac{1-r^4}{1-r}</span>. The installations still to come are <span class="tex">S_\infty-S_4</span>. From part (b), <span class="tex">S_\infty=2500</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\left(\dfrac{1}{5}\right)^4=\dfrac{1}{625}</span>, so <span class="tex">1-r^4=\dfrac{624}{625}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=\dfrac{4}{5}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_4=2000\times\dfrac{624}{625}\times\dfrac{5}{4}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">2000\div 4=500</span>, then <span class="tex">500\times 5=2500</span>, then <span class="tex">2500\div 625=4</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">4\times 624=2496</span>, so <span class="tex">S_4=2496</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">2500-2496=4</span>.</p>
+          <p class="final">4 of the eventual installations are not done in the first four months.</p>
         </div>
       </div>
     </article>
+
+    <article class="q" id="q11">
+      <h2>11 · Exercise 1H <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">The Wellington Widget Factory advertises every month. The first advertisement brings in 1000 sales. Each later advertisement brings in only 90% of the sales of the one before it.</p>
+        <p><strong>(a)</strong> How many widget sales do the advertisements eventually bring in?</p>
+        <p><strong>(b)</strong> About how many of those eventual sales are not brought in by the first 10 advertisements?</p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> 90% means <span class="tex">r=0.9</span>. The first term is <span class="tex">a=1000</span>. <span class="tex">|r|=0.9&lt;1</span>, so <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">1-r=1-0.9=0.1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{1000}{0.1}=10\,000</span>.</p>
+          <p class="final">The advertisements eventually bring in 10 000 sales.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=0.9&lt;1</span>, so <span class="tex">S_{10}=a\dfrac{1-r^{10}}{1-r}</span>. The sales still to come are <span class="tex">S_\infty-S_{10}</span>. From part (a), <span class="tex">S_\infty=10\,000</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> A calculator gives <span class="tex">0.9^{10}=0.3486784401</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-0.3486784401=0.6513215599</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=0.1</span>, so <span class="tex">S_{10}=1000\times\dfrac{0.6513215599}{0.1}=6513.215599</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">10\,000-6513.215599=3486.784401</span>.</p>
+          <p class="final">About 3487 eventual sales are not brought in by the first 10 advertisements.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q12">
+      <h2>12 · Exercise 1H <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">For each equation, write the limiting sum of the series on the left in terms of <span class="tex">x</span>. Then solve the equation.</p>
+        <p><strong>(a)</strong> <span class="tex">5+5x+5x^{2}+\cdots=10</span></p>
+        <p><strong>(b)</strong> <span class="tex">5+5x+5x^{2}+\cdots=3</span></p>
+        <p><strong>(c)</strong> <span class="tex">5-5x+5x^{2}-\cdots=15</span></p>
+        <p><strong>(d)</strong> <span class="tex">x+\dfrac{x}{3}+\dfrac{x}{9}+\cdots=2</span></p>
+        <p><strong>(e)</strong> <span class="tex">x-\dfrac{x}{3}+\dfrac{x}{9}-\cdots=2</span></p>
+        <p><strong>(f)</strong> <span class="tex">x+\dfrac{2x}{3}+\dfrac{4x}{9}+\cdots=2</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>. After you solve, check that the value of <span class="tex">x</span> really makes <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=5</span>. Next term <span class="tex">5x</span>, so <span class="tex">r=x</span> when <span class="tex">x</span> is the multiplier.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{5}{1-x}</span>, provided <span class="tex">|x|&lt;1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Set this equal to 10: <span class="tex">\dfrac{5}{1-x}=10</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">5=10(1-x)</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">5=10-10x</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">10x=5</span>, so <span class="tex">x=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">\left|\dfrac{1}{2}\right|&lt;1</span>, so this value is allowed.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{5}{1-x}</span> and <span class="tex">x=\dfrac{1}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same series as part (a). <span class="tex">a=5</span>, <span class="tex">r=x</span>, and <span class="tex">S_\infty=\dfrac{5}{1-x}</span> only when <span class="tex">|x|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{5}{1-x}=3</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">5=3(1-x)</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">5=3-3x</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">3x=3-5=-2</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">x=-\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">\left|-\dfrac{2}{3}\right|=\dfrac{2}{3}&lt;1</span>, so this value is allowed.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{5}{1-x}</span> and <span class="tex">x=-\dfrac{2}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>. Read the multiplier from the sign pattern, not only from the letter <span class="tex">x</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=5</span>. The second term is <span class="tex">-5x=5\times(-x)</span>, so <span class="tex">r=-x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=\dfrac{5}{1-(-x)}=\dfrac{5}{1+x}</span>, provided <span class="tex">|-x|&lt;1</span>, which is the same as <span class="tex">|x|&lt;1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{5}{1+x}=15</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">5=15(1+x)</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">\dfrac{5}{15}=\dfrac{1}{3}=1+x</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">x=\dfrac{1}{3}-1=-\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">|x|=\dfrac{2}{3}&lt;1</span>, so this value is allowed.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{5}{1+x}</span> and <span class="tex">x=-\dfrac{2}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>. Here the multiplier does not depend on <span class="tex">x</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=x</span>. Second term <span class="tex">\dfrac{x}{3}</span>, so <span class="tex">r=\dfrac{1}{3}</span> when <span class="tex">x\neq 0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left|\dfrac{1}{3}\right|&lt;1</span>, so the formula is allowed for any first term.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=\dfrac{2}{3}</span>, so <span class="tex">S_\infty=\dfrac{x}{\frac{2}{3}}=\dfrac{3x}{2}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{3x}{2}=2</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">3x=4</span>, so <span class="tex">x=\dfrac{4}{3}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{3x}{2}</span> and <span class="tex">x=\dfrac{4}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=x</span>. Second term <span class="tex">-\dfrac{x}{3}</span>, so <span class="tex">r=-\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left|-\dfrac{1}{3}\right|&lt;1</span>, so the formula is allowed.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=\dfrac{4}{3}</span>, so <span class="tex">S_\infty=\dfrac{x}{\frac{4}{3}}=\dfrac{3x}{4}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{3x}{4}=2</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">3x=8</span>, so <span class="tex">x=\dfrac{8}{3}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{3x}{4}</span> and <span class="tex">x=\dfrac{8}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=x</span>. Second term <span class="tex">\dfrac{2x}{3}</span>, so <span class="tex">r=\dfrac{2}{3}</span> when <span class="tex">x\neq 0</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\dfrac{2}{3}&lt;1</span>, so the formula is allowed.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=\dfrac{1}{3}</span>, so <span class="tex">S_\infty=\dfrac{x}{\frac{1}{3}}=3x</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">3x=2</span>, so <span class="tex">x=\dfrac{2}{3}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=3x</span> and <span class="tex">x=\dfrac{2}{3}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q13">
+      <h2>13 · Exercise 1H <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">For each series, find the condition on <span class="tex">x</span> that makes a limiting sum exist, then find that sum.</p>
+        <p><strong>(a)</strong> <span class="tex">7+7x+7x^{2}+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">2x+6x^{2}+18x^{3}+\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">1+(x-1)+(x-1)^{2}+\cdots</span></p>
+        <p><strong>(d)</strong> <span class="tex">1+(1+x)+(1+x)^{2}+\cdots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> A limiting sum exists only when <span class="tex">|r|&lt;1</span>. Then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=7</span> and <span class="tex">r=x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">|x|&lt;1</span> means <span class="tex">-1&lt;x&lt;1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{7}{1-x}</span>.</p>
+          <p class="final">Need <span class="tex">-1&lt;x&lt;1</span>. Then <span class="tex">S_\infty=\dfrac{7}{1-x}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">|r|&lt;1</span>, then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The first term is <span class="tex">a=2x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> If <span class="tex">x\neq 0</span>, divide the second term by the first: <span class="tex">r=\dfrac{6x^{2}}{2x}=3x</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> If <span class="tex">x=0</span>, every term is 0, so the sum is 0. The size of <span class="tex">r</span> would be 0, which is less than 1. The same formula below still gives 0.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">|3x|&lt;1</span> means <span class="tex">-\dfrac{1}{3}&lt;x&lt;\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{2x}{1-3x}</span>.</p>
+          <p class="final">Need <span class="tex">-\dfrac{1}{3}&lt;x&lt;\dfrac{1}{3}</span>. Then <span class="tex">S_\infty=\dfrac{2x}{1-3x}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">|r|&lt;1</span>, then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=x-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">|x-1|&lt;1</span> means the distance from <span class="tex">x</span> to 1 is less than 1.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">-1&lt;x-1&lt;1</span>. Add 1 to all three parts: <span class="tex">0&lt;x&lt;2</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-(x-1)=2-x</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{2-x}</span>.</p>
+          <p class="final">Need <span class="tex">0&lt;x&lt;2</span>. Then <span class="tex">S_\infty=\dfrac{1}{2-x}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">|r|&lt;1</span>, then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=1+x</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">|1+x|&lt;1</span> means <span class="tex">-1&lt;1+x&lt;1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Subtract 1: <span class="tex">-2&lt;x&lt;0</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-(1+x)=-x</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{-x}=-\dfrac{1}{x}</span>.</p>
+          <p class="final">Need <span class="tex">-2&lt;x&lt;0</span>. Then <span class="tex">S_\infty=-\dfrac{1}{x}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q14">
+      <h2>14 · Exercise 1H <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">Find the limiting sum of each series, if it exists.</p>
+        <p><strong>(a)</strong> <span class="tex">1+(1.01)+(1.01)^{2}+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">1-0.99+(0.99)^{2}-\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">1+(1.01)^{-1}+(1.01)^{-2}+\cdots</span></p>
+        <p><strong>(d)</strong> <span class="tex">0.72-0.12+0.02-\cdots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>. If <span class="tex">|r|\ge 1</span>, the terms do not shrink toward 0.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=1.01</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">|1.01|=1.01&gt;1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Each term is bigger than the one before, so the totals grow without bound.</p>
+          <p class="final">There is no limiting sum, because <span class="tex">|r|&gt;1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. The second term is <span class="tex">-0.99</span>, so <span class="tex">r=-0.99</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Check the third term: <span class="tex">(-0.99)^{2}=(0.99)^{2}</span>. It matches the series.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">|-0.99|=0.99&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-(-0.99)=1.99</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1.99=\dfrac{199}{100}</span>, so <span class="tex">S_\infty=\dfrac{1}{\frac{199}{100}}=\dfrac{100}{199}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{100}{199}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>. A negative power means a reciprocal: <span class="tex">(1.01)^{-1}=\dfrac{1}{1.01}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=\dfrac{1}{1.01}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1.01&gt;1</span>, so this ratio is positive and smaller than 1. A limiting sum exists.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=1-\dfrac{1}{1.01}=\dfrac{1.01-1}{1.01}=\dfrac{0.01}{1.01}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{0.01}{1.01}}=\dfrac{1.01}{0.01}=101</span>.</p>
+          <p class="final"><span class="tex">S_\infty=101</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=0.72</span>. <span class="tex">r=\dfrac{-0.12}{0.72}=-\dfrac{12}{72}=-\dfrac{1}{6}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left|-\dfrac{1}{6}\right|=\dfrac{1}{6}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{1}{6}\right)=\dfrac{7}{6}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">0.72=\dfrac{72}{100}=\dfrac{18}{25}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{18}{25}\times\dfrac{6}{7}=\dfrac{108}{175}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{108}{175}</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="q" id="q15">
+      <h2>15 · Exercise 1H <span class="band dev">Development</span></h2>
+      <div class="stem">
+        <p class="intro">Find each limiting sum if it exists. Rationalise a denominator when one is left.</p>
+        <p><strong>(a)</strong> <span class="tex">16\sqrt{5}+4\sqrt{5}+\sqrt{5}+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">108\sqrt{7}-36\sqrt{7}+12\sqrt{7}-\cdots</span></p>
+        <p><strong>(c)</strong> <span class="tex">7+\sqrt{7}+1+\cdots</span></p>
+        <p><strong>(d)</strong> <span class="tex">4-2\sqrt{2}+2-\cdots</span></p>
+        <p><strong>(e)</strong> <span class="tex">5-2\sqrt{5}+4-\cdots</span></p>
+        <p><strong>(f)</strong> <span class="tex">9+3\sqrt{10}+10+\cdots</span></p>
+        <p><strong>(g)</strong> <span class="tex">1+(1-\sqrt{3})+(1-\sqrt{3})^{2}+\cdots</span></p>
+        <p><strong>(h)</strong> <span class="tex">1+(2-\sqrt{3})+(2-\sqrt{3})^{2}+\cdots</span></p>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r</span> is the second term divided by the first. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=16\sqrt{5}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{4\sqrt{5}}{16\sqrt{5}}=\dfrac{4}{16}=\dfrac{1}{4}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{1}{4}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=\dfrac{3}{4}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{16\sqrt{5}}{\frac{3}{4}}=16\sqrt{5}\times\dfrac{4}{3}=\dfrac{64\sqrt{5}}{3}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{64\sqrt{5}}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=108\sqrt{7}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=\dfrac{-36\sqrt{7}}{108\sqrt{7}}=-\dfrac{36}{108}=-\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{1}{3}\right|&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=\dfrac{4}{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{108\sqrt{7}}{\frac{4}{3}}=108\sqrt{7}\times\dfrac{3}{4}=81\sqrt{7}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=81\sqrt{7}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. To clear a square root in a denominator, multiply the top and the bottom by the conjugate. The conjugate of <span class="tex">7-\sqrt{7}</span> is <span class="tex">7+\sqrt{7}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=7</span>. <span class="tex">r=\dfrac{\sqrt{7}}{7}=\dfrac{1}{\sqrt{7}}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\sqrt{7}&gt;1</span>, so <span class="tex">\dfrac{1}{\sqrt{7}}&lt;1</span>. A limiting sum exists.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=\dfrac{\sqrt{7}}{\sqrt{7}}-\dfrac{1}{\sqrt{7}}=\dfrac{\sqrt{7}-1}{\sqrt{7}}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_\infty=\dfrac{7}{\frac{\sqrt{7}-1}{\sqrt{7}}}=\dfrac{7\sqrt{7}}{\sqrt{7}-1}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Multiply top and bottom by <span class="tex">\sqrt{7}+1</span>: the bottom is <span class="tex">(\sqrt{7}-1)(\sqrt{7}+1)=7-1=6</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> The top is <span class="tex">7\sqrt{7}(\sqrt{7}+1)=7(7+\sqrt{7})</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">S_\infty=\dfrac{7(7+\sqrt{7})}{6}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{7(7+\sqrt{7})}{6}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. The conjugate of <span class="tex">2+\sqrt{2}</span> is <span class="tex">2-\sqrt{2}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=4</span>. <span class="tex">r=\dfrac{-2\sqrt{2}}{4}=-\dfrac{\sqrt{2}}{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Check the third term: <span class="tex">-2\sqrt{2}\times\left(-\dfrac{\sqrt{2}}{2}\right)=\dfrac{2\times 2}{2}=2</span>. It matches.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{\sqrt{2}}{2}\right|=\dfrac{\sqrt{2}}{2}</span>. Since <span class="tex">\sqrt{2}&lt;2</span>, this size is less than 1. A limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1+\dfrac{\sqrt{2}}{2}=\dfrac{2+\sqrt{2}}{2}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{4}{\frac{2+\sqrt{2}}{2}}=\dfrac{8}{2+\sqrt{2}}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Multiply top and bottom by <span class="tex">2-\sqrt{2}</span>. The bottom is <span class="tex">(2+\sqrt{2})(2-\sqrt{2})=4-2=2</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">S_\infty=\dfrac{8(2-\sqrt{2})}{2}=4(2-\sqrt{2})</span>.</p>
+          <p class="final"><span class="tex">S_\infty=4(2-\sqrt{2})</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. The conjugate of <span class="tex">\sqrt{5}+2</span> is <span class="tex">\sqrt{5}-2</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=5</span>. <span class="tex">r=\dfrac{-2\sqrt{5}}{5}=-\dfrac{2}{\sqrt{5}}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Check: <span class="tex">-2\sqrt{5}\times\left(-\dfrac{2}{\sqrt{5}}\right)=4</span>. It matches the third term.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|-\dfrac{2}{\sqrt{5}}\right|=\dfrac{2}{\sqrt{5}}=\dfrac{2\sqrt{5}}{5}</span>. <span class="tex">\sqrt{5}&lt;2.5</span>, so <span class="tex">2\sqrt{5}&lt;5</span> and the size is less than 1. A limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1+\dfrac{2}{\sqrt{5}}=\dfrac{\sqrt{5}+2}{\sqrt{5}}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{5\sqrt{5}}{\sqrt{5}+2}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Multiply top and bottom by <span class="tex">\sqrt{5}-2</span>. The bottom is <span class="tex">5-4=1</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> The top is <span class="tex">5\sqrt{5}(\sqrt{5}-2)=5\times 5-10\sqrt{5}=25-10\sqrt{5}=5(5-2\sqrt{5})</span>.</p>
+          <p class="final"><span class="tex">S_\infty=5(5-2\sqrt{5})</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> If <span class="tex">|r|\ge 1</span>, do not use <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. The terms are not shrinking toward 0.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=9</span>. <span class="tex">r=\dfrac{3\sqrt{10}}{9}=\dfrac{\sqrt{10}}{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\sqrt{9}=3</span> and <span class="tex">10&gt;9</span>, so <span class="tex">\sqrt{10}&gt;3</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Therefore <span class="tex">\dfrac{\sqrt{10}}{3}&gt;1</span>.</p>
+          <p class="final">There is no limiting sum, because <span class="tex">|r|&gt;1</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> only when <span class="tex">|r|&lt;1</span>. The size of a negative number is that number with the sign removed.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=1-\sqrt{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\sqrt{3}&gt;1</span>, so <span class="tex">r</span> is negative. Its size is <span class="tex">\sqrt{3}-1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\sqrt{3}&lt;2</span>, so <span class="tex">\sqrt{3}-1&lt;1</span>. A limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-(1-\sqrt{3})=\sqrt{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\sqrt{3}}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> Multiply top and bottom by <span class="tex">\sqrt{3}</span>: <span class="tex">\dfrac{\sqrt{3}}{3}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{\sqrt{3}}{3}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. The conjugate of <span class="tex">\sqrt{3}-1</span> is <span class="tex">\sqrt{3}+1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=2-\sqrt{3}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1&lt;\sqrt{3}&lt;2</span>, so <span class="tex">0&lt;2-\sqrt{3}&lt;1</span>. A limiting sum exists.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=1-(2-\sqrt{3})=\sqrt{3}-1</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\sqrt{3}-1}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> Multiply top and bottom by <span class="tex">\sqrt{3}+1</span>. The bottom is <span class="tex">3-1=2</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_\infty=\dfrac{\sqrt{3}+1}{2}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{1+\sqrt{3}}{2}</span>.</p>
+        </div>
+      </div>
+    </article>
+
     <article class="q" id="q16">
-      <h2>16 · Exercise 1H</h2>
+      <h2>16 · Exercise 1H <span class="band dev">Development</span></h2>
       <div class="stem">
-        <p>Expand each series for a few terms. Then write down a and r, and find the limiting sum. ∞ X n=1 ( 1 3)n a ∞ X n=1 7 × ( 1 2)n b ∞ X n=1 40 ×  −3 5 n c</p>
+        <p class="intro">Write out the first few terms of each series. Then name <span class="tex">a</span> and <span class="tex">r</span>, and find the limiting sum.</p>
+        <p><strong>(a)</strong> <span class="tex">\displaystyle\sum_{n=1}^{\infty}\left(\dfrac{1}{3}\right)^{n}</span></p>
+        <p><strong>(b)</strong> <span class="tex">\displaystyle\sum_{n=1}^{\infty}7\times\left(\dfrac{1}{2}\right)^{n}</span></p>
+        <p><strong>(c)</strong> <span class="tex">\displaystyle\sum_{n=1}^{\infty}40\times\left(-\dfrac{3}{5}\right)^{n}</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> P∞ n=1/1</p>
+          <p class="formula-quick"><strong>Quick fact:</strong> The sum starts at <span class="tex">n=1</span>, so the first term uses <span class="tex">n=1</span>, the next uses <span class="tex">n=2</span>, and so on. Then use <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>. Dividing by a fraction means multiplying by its flip.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">n=1</span> gives <span class="tex">\dfrac{1}{3}</span>. <span class="tex">n=2</span> gives <span class="tex">\dfrac{1}{9}</span>. <span class="tex">n=3</span> gives <span class="tex">\dfrac{1}{27}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> So <span class="tex">a=\dfrac{1}{3}</span> and <span class="tex">r=\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\left|\dfrac{1}{3}\right|&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=\dfrac{2}{3}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{\frac{1}{3}}{\frac{2}{3}}=\dfrac{1}{3}\times\dfrac{3}{2}=\dfrac{1}{2}</span>.</p>
+          <p class="final"><span class="tex">S_\infty=\dfrac{1}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same reading of the sum sign. Then <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">n=1</span> gives <span class="tex">7\times\dfrac{1}{2}=\dfrac{7}{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">n=2</span> gives <span class="tex">7\times\dfrac{1}{4}=\dfrac{7}{4}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">a=\dfrac{7}{2}</span> and <span class="tex">r=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{1}{2}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1-r=\dfrac{1}{2}</span>, so <span class="tex">S_\infty=\dfrac{\frac{7}{2}}{\frac{1}{2}}=7</span>.</p>
+          <p class="final"><span class="tex">S_\infty=7</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same reading of the sum sign. Then <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">n=1</span> gives <span class="tex">40\times\left(-\dfrac{3}{5}\right)=-\dfrac{120}{5}=-24</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">n=2</span> gives <span class="tex">40\times\dfrac{9}{25}=\dfrac{360}{25}=\dfrac{72}{5}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">a=-24</span> and <span class="tex">r=-\dfrac{3}{5}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\left|-\dfrac{3}{5}\right|=\dfrac{3}{5}&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1-r=1-\left(-\dfrac{3}{5}\right)=\dfrac{8}{5}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">S_\infty=\dfrac{-24}{\frac{8}{5}}=-24\times\dfrac{5}{8}=-15</span>.</p>
+          <p class="final"><span class="tex">S_\infty=-15</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q17">
-      <h2>17 · Exercise 1H</h2>
+      <h2>17 · Exercise 1H <span class="band ch">Challenge</span></h2>
       <div class="stem">
-        <p>The climate is changing in Azakan. A few years ago, the annual rainfall was 400 mm. The next year it rose 20%, and the next year it fell 20%, and the years have continued in this sequence. If this pattern continues, how much rain will ’eventually’ have fallen in Azakan, taking the year of 400 mm rainfall as the first year?</p>
+        <p>The climate in Azakan is changing. A few years ago the yearly rainfall was 400 mm. The next year it rose by 20%. The year after that it fell by 20%. The years keep going up by 20%, then down by 20%, in turn. If this pattern continues, how much rain falls in total, counting the 400 mm year as the first year?</p>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · 17</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">Consider one period consisting of 2 years, whereupon annual rainfall will increase and decrease accord- ingly. Hence, the rainfall forms a GP with common ratio r = 1.2 × 0.8 = 0.96. In the first period (2 years, starting at 400mm), 400 + 400(1.2) = 880mm fell i.e. let a = 880. Since r &lt; 1, a limiting sum exists and the total rainfall that will eventually have fallen is: S ∞=</p>
-<p class="step"><strong>a ·</strong> 1 −r = 880/1 −0.96 = 22 000mm</p>
+          <p class="formula-quick"><strong>Formula:</strong> Group the years in pairs. If those pairs form a geometric series with <span class="tex">|r|&lt;1</span>, then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. “Up 20%” means multiply by <span class="tex">1.2</span>. “Down 20%” means multiply by <span class="tex">0.8</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> Year 1 is 400 mm.</p>
+          <p class="step"><strong>Step 2 ·</strong> Year 2 is <span class="tex">400\times 1.2=480</span> mm.</p>
+          <p class="step"><strong>Step 3 ·</strong> The first pair is <span class="tex">400+480=880</span> mm. Call this the first term of a new series: <span class="tex">a=880</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> From one year to the year two steps later, the rainfall is multiplied by <span class="tex">1.2</span> and then by <span class="tex">0.8</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1.2\times 0.8=0.96</span>. So each new pair is <span class="tex">0.96</span> times the pair before it. That is <span class="tex">r=0.96</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">0.96&lt;1</span>, so a limiting sum exists.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">1-r=0.04</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">S_\infty=\dfrac{880}{0.04}</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> <span class="tex">0.04\times 22\,000=880</span>, so the quotient is <span class="tex">22\,000</span>.</p>
+          <p class="final">Eventually <span class="tex">22\,000</span> mm of rain falls.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q18">
-      <h2>18 · Exercise 1H</h2>
+      <h2>18 · Exercise 1H <span class="band ch">Challenge</span></h2>
       <div class="stem">
-        <p>Suppose that an = arn−1 is a GP with a limiting sum. a Find the ratio r if the limiting sum equals 5 times the first term. b Find the first three terms if the second term is 6 and the limiting sum is 27. c Find the ratio if the sum of all terms except the first equals 5 times the first term. d Show that the sum S of all terms from the third term onwards is ar2 1 −r . i Hence find r if S equals the first term. ii Find r if S equals the second term. iii Find r if S equals the sum of the first and second terms.</p>
+        <p class="intro">Suppose <span class="tex">a_n=ar^{n-1}</span> is a geometric sequence that has a limiting sum. The first term <span class="tex">a</span> is not zero.</p>
+        <p><strong>(a)</strong> Find <span class="tex">r</span> if the limiting sum is 5 times the first term.</p>
+        <p><strong>(b)</strong> Find the first three terms if the second term is 6 and the limiting sum is 27.</p>
+        <p><strong>(c)</strong> Find <span class="tex">r</span> if the sum of every term except the first is 5 times the first term.</p>
+        <p><strong>(d)</strong> Show that the sum <span class="tex">S</span> of every term from the third term on is <span class="tex">\dfrac{ar^{2}}{1-r}</span>.</p>
+        <p><strong>(d i)</strong> Find <span class="tex">r</span> if <span class="tex">S</span> equals the first term.</p>
+        <p><strong>(d ii)</strong> Find <span class="tex">r</span> if <span class="tex">S</span> equals the second term.</p>
+        <p><strong>(d iii)</strong> Find <span class="tex">r</span> if <span class="tex">S</span> equals the sum of the first and second terms.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> S ∞= 5a1</p>
+          <p class="formula-quick"><strong>Formula:</strong> Because a limiting sum exists, <span class="tex">|r|&lt;1</span> and <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The question says <span class="tex">S_\infty=5a</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\dfrac{a}{1-r}=5a</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> The first term is not zero, so divide both sides by <span class="tex">a</span>: <span class="tex">\dfrac{1}{1-r}=5</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1=5(1-r)</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1=5-5r</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">5r=4</span>, so <span class="tex">r=\dfrac{4}{5}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">\dfrac{4}{5}&lt;1</span>, so this ratio is allowed.</p>
+          <p class="final"><span class="tex">r=\dfrac{4}{5}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> 1 −r = 5a</p>
+          <p class="formula-quick"><strong>Formula:</strong> The second term of <span class="tex">a, ar, ar^{2},\ldots</span> is <span class="tex">ar</span>. Because <span class="tex">|r|&lt;1</span>, <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">ar=6</span>, so <span class="tex">r=\dfrac{6}{a}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\dfrac{a}{1-r}=27</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">1-r=1-\dfrac{6}{a}=\dfrac{a-6}{a}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Dividing by that fraction flips it: <span class="tex">a\times\dfrac{a}{a-6}=\dfrac{a^{2}}{a-6}=27</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">a^{2}=27(a-6)=27a-162</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">a^{2}-27a+162=0</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">9\times 18=162</span> and <span class="tex">9+18=27</span>, so <span class="tex">(a-9)(a-18)=0</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">a=9</span> or <span class="tex">a=18</span>.</p>
+          <p class="step"><strong>Step 9 ·</strong> If <span class="tex">a=9</span>, then <span class="tex">r=\dfrac{6}{9}=\dfrac{2}{3}</span>. The third term is <span class="tex">6\times\dfrac{2}{3}=4</span>. The terms are <span class="tex">9,6,4</span>.</p>
+          <p class="step"><strong>Step 10 ·</strong> If <span class="tex">a=18</span>, then <span class="tex">r=\dfrac{6}{18}=\dfrac{1}{3}</span>. The third term is <span class="tex">6\times\dfrac{1}{3}=2</span>. The terms are <span class="tex">18,6,2</span>.</p>
+          <p class="step"><strong>Step 11 ·</strong> Both ratios have size less than 1, so both are allowed. Check: <span class="tex">\dfrac{9}{1-\frac{2}{3}}=27</span> and <span class="tex">\dfrac{18}{1-\frac{1}{3}}=27</span>.</p>
+          <p class="final">The first three terms are <span class="tex">9,6,4</span> or <span class="tex">18,6,2</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> The full limiting sum is <span class="tex">S_\infty=\dfrac{a}{1-r}</span>, and this needs <span class="tex">|r|&lt;1</span>. Taking away the first term leaves <span class="tex">S_\infty-a</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_\infty-a=5a</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_\infty=6a</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">\dfrac{a}{1-r}=6a</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Divide by <span class="tex">a</span>, which is not zero: <span class="tex">\dfrac{1}{1-r}=6</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">1=6(1-r)=6-6r</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">6r=5</span>, so <span class="tex">r=\dfrac{5}{6}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">\dfrac{5}{6}&lt;1</span>, so this ratio is allowed.</p>
+          <p class="final"><span class="tex">r=\dfrac{5}{6}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span> when <span class="tex">|r|&lt;1</span>. The first <span class="tex">n</span> terms add to <span class="tex">S_n=a\dfrac{1-r^{n}}{1-r}</span> when <span class="tex">r\neq 1</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The tail from the third term is the whole limiting sum minus the first two terms: <span class="tex">S=S_\infty-S_2</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_2=a\dfrac{1-r^{2}}{1-r}</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Both fractions have denominator <span class="tex">1-r</span>, so <span class="tex">S=\dfrac{a-a(1-r^{2})}{1-r}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Inside the top: <span class="tex">a-a+ar^{2}=ar^{2}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S=\dfrac{ar^{2}}{1-r}</span>.</p>
+          <p class="final">The sum from the third term on is <span class="tex">\dfrac{ar^{2}}{1-r}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d i</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> From part (d), <span class="tex">S=\dfrac{ar^{2}}{1-r}</span>. For <span class="tex">r^{2}+r-1=0</span>, the quadratic formula says <span class="tex">r=\dfrac{-1\pm\sqrt{1^{2}-4(1)(-1)}}{2}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> Set the tail equal to the first term: <span class="tex">\dfrac{ar^{2}}{1-r}=a</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Divide by <span class="tex">a</span>: <span class="tex">\dfrac{r^{2}}{1-r}=1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">r^{2}=1-r</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">r^{2}+r-1=0</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">r=\dfrac{-1\pm\sqrt{1+4}}{2}=\dfrac{-1\pm\sqrt{5}}{2}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">\sqrt{5}&gt;2</span>, so <span class="tex">\dfrac{-1-\sqrt{5}}{2}</span> is less than <span class="tex">-1</span>. Its size is greater than 1, so it is not allowed.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">\dfrac{-1+\sqrt{5}}{2}</span> is between 0 and 1, because <span class="tex">\sqrt{5}</span> is between 2 and 3. Its size is less than 1.</p>
+          <p class="final"><span class="tex">r=\dfrac{-1+\sqrt{5}}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d ii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> From part (d), <span class="tex">S=\dfrac{ar^{2}}{1-r}</span>. The second term is <span class="tex">ar</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{ar^{2}}{1-r}=ar</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> If <span class="tex">r=0</span>, the left side is 0 and the second term is 0. Both sides match, and <span class="tex">|0|&lt;1</span>, so <span class="tex">r=0</span> works.</p>
+          <p class="step"><strong>Step 3 ·</strong> If <span class="tex">r\neq 0</span>, divide both sides by <span class="tex">ar</span>: <span class="tex">\dfrac{r}{1-r}=1</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">r=1-r</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">2r=1</span>, so <span class="tex">r=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">\dfrac{1}{2}&lt;1</span>, so this value is allowed.</p>
+          <p class="final"><span class="tex">r=0</span> or <span class="tex">r=\dfrac{1}{2}</span>. The printed solutions keep only <span class="tex">r=\dfrac{1}{2}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d iii</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> From part (d), <span class="tex">S=\dfrac{ar^{2}}{1-r}</span>. The first two terms add to <span class="tex">a+ar=a(1+r)</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{ar^{2}}{1-r}=a(1+r)</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> Divide by <span class="tex">a</span>: <span class="tex">\dfrac{r^{2}}{1-r}=1+r</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">r^{2}=(1+r)(1-r)</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">(1+r)(1-r)=1-r^{2}</span>, so <span class="tex">r^{2}=1-r^{2}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">2r^{2}=1</span>, so <span class="tex">r^{2}=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">r=\dfrac{1}{\sqrt{2}}</span> or <span class="tex">r=-\dfrac{1}{\sqrt{2}}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> Multiply each by <span class="tex">\dfrac{\sqrt{2}}{\sqrt{2}}</span>: <span class="tex">r=\dfrac{\sqrt{2}}{2}</span> or <span class="tex">r=-\dfrac{\sqrt{2}}{2}</span>.</p>
+          <p class="step"><strong>Step 8 ·</strong> <span class="tex">\sqrt{2}&lt;2</span>, so both have size less than 1. Both are allowed.</p>
+          <p class="final"><span class="tex">r=\dfrac{\sqrt{2}}{2}</span> or <span class="tex">r=-\dfrac{\sqrt{2}}{2}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q19">
-      <h2>19 · Exercise 1H</h2>
+      <h2>19 · Exercise 1H <span class="band ch">Challenge</span></h2>
       <div class="stem">
-        <p>Find the condition for each GP to have a limiting sum, then find that limiting sum. 1 + (x2 −1) + (x2 −1)2 + · · · a 1 + 1 1 + x2 + 1 (1 + x2)2 + · · · b</p>
+        <p class="intro">For each series, find the condition that makes a limiting sum exist, then find that sum.</p>
+        <p><strong>(a)</strong> <span class="tex">1+(x^{2}-1)+(x^{2}-1)^{2}+\cdots</span></p>
+        <p><strong>(b)</strong> <span class="tex">1+\dfrac{1}{1+x^{2}}+\dfrac{1}{(1+x^{2})^{2}}+\cdots</span></p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-<p class="step"><strong>a ·</strong> This is a GP with a = 1 and r = x2 −1. To have a limiting sum, |r| &lt; 1, so: x2 −1 &lt; 1 −1 &lt; x2 −1 &lt; 1 0 &lt; x2 &lt; 2 Hence: − √ 2 &lt; x &lt; √</p>
+          <p class="formula-quick"><strong>Formula:</strong> A limiting sum exists only when <span class="tex">|r|&lt;1</span>. Then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=x^{2}-1</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">|x^{2}-1|&lt;1</span> means <span class="tex">-1&lt;x^{2}-1&lt;1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Add 1: <span class="tex">0&lt;x^{2}&lt;2</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">x^{2}&gt;0</span> means <span class="tex">x\neq 0</span>. If <span class="tex">x=0</span>, then <span class="tex">r=-1</span> and <span class="tex">|r|=1</span>, so there is no limiting sum.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">x^{2}&lt;2</span> means <span class="tex">-\sqrt{2}&lt;x&lt;\sqrt{2}</span>.</p>
+          <p class="step"><strong>Step 6 ·</strong> <span class="tex">1-r=1-(x^{2}-1)=2-x^{2}</span>.</p>
+          <p class="step"><strong>Step 7 ·</strong> <span class="tex">S_\infty=\dfrac{1}{2-x^{2}}</span>.</p>
+          <p class="final">Need <span class="tex">-\sqrt{2}&lt;x&lt;\sqrt{2}</span> and <span class="tex">x\neq 0</span>. Then <span class="tex">S_\infty=\dfrac{1}{2-x^{2}}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">|r|&lt;1</span>, then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. A square is never negative, so <span class="tex">1+x^{2}</span> is at least 1.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=\dfrac{1}{1+x^{2}}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> This ratio is positive. It equals 1 when <span class="tex">x=0</span>, because then the denominator is 1.</p>
+          <p class="step"><strong>Step 3 ·</strong> If <span class="tex">x\neq 0</span>, then <span class="tex">x^{2}&gt;0</span>, so <span class="tex">1+x^{2}&gt;1</span> and <span class="tex">0&lt;r&lt;1</span>. A limiting sum exists.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">1-r=1-\dfrac{1}{1+x^{2}}=\dfrac{x^{2}}{1+x^{2}}</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">S_\infty=\dfrac{1}{\frac{x^{2}}{1+x^{2}}}=\dfrac{1+x^{2}}{x^{2}}</span>.</p>
+          <p class="final">Need <span class="tex">x\neq 0</span>. Then <span class="tex">S_\infty=\dfrac{1+x^{2}}{x^{2}}</span>.</p>
         </div>
       </div>
     </article>
+
     <article class="q" id="q20">
-      <h2>20 · Exercise 1H</h2>
+      <h2>20 · Exercise 1H <span class="band ch">Challenge</span></h2>
       <div class="stem">
-        <p>Suppose that the series v + v2 + v3 + · · · has a limiting sum w. a Write w in terms of v. b Find v in terms of w. c Hence find the limiting sum of the series w −w2 + w3 −· · · , assuming that |w| &lt; 1. d Test your results with v = 1 3.</p>
+        <p class="intro">The series <span class="tex">v+v^{2}+v^{3}+\cdots</span> has limiting sum <span class="tex">w</span>.</p>
+        <p><strong>(a)</strong> Write <span class="tex">w</span> in terms of <span class="tex">v</span>.</p>
+        <p><strong>(b)</strong> Write <span class="tex">v</span> in terms of <span class="tex">w</span>.</p>
+        <p><strong>(c)</strong> Using that, find the limiting sum of <span class="tex">w-w^{2}+w^{3}-\cdots</span>, assuming <span class="tex">|w|&lt;1</span>.</p>
+        <p><strong>(d)</strong> Test the results with <span class="tex">v=\dfrac{1}{3}</span>.</p>
       </div>
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
-<p class="formula-quick"><strong>Formula (GP):</strong> Common ratio <span class="tex">r=\dfrac{a_2}{a_1}</span> (divide consecutive terms). nth term <span class="tex">a_n=a_1 r^{n-1}</span>.</p>
-        <p class="step">This is a GP with a = v and r = v w = S ∞=</p>
-<p class="step"><strong>a ·</strong> 1 −r = v 1 −v</p>
+          <p class="formula-quick"><strong>Formula:</strong> This is a geometric series with first term <span class="tex">v</span> and multiplier <span class="tex">v</span>. A limiting sum exists only when <span class="tex">|v|&lt;1</span>, and then <span class="tex">w=\dfrac{v}{1-v}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> The second term divided by the first is <span class="tex">\dfrac{v^{2}}{v}=v</span>, so <span class="tex">r=v</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> The question says a limiting sum exists, so <span class="tex">|v|&lt;1</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">w=\dfrac{v}{1-v}</span>.</p>
+          <p class="final"><span class="tex">w=\dfrac{v}{1-v}</span>.</p>
         </div>
       </div>
       <div class="q-part">
-        <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
+        <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
-<p class="step"><strong>a ·</strong> w = v 1 −v w −wv = v w = v + wv w = v(1 + w) v = w 1 + w</p>
+          <p class="formula-quick"><strong>Formula:</strong> Start from part (a): <span class="tex">w=\dfrac{v}{1-v}</span>. Solve this equation for <span class="tex">v</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">w(1-v)=v</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">w-wv=v</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> Add <span class="tex">wv</span> to both sides: <span class="tex">w=v+wv</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Factor <span class="tex">v</span>: <span class="tex">w=v(1+w)</span>.</p>
+          <p class="step"><strong>Step 5 ·</strong> <span class="tex">v=\dfrac{w}{1+w}</span>.</p>
+          <p class="final"><span class="tex">v=\dfrac{w}{1+w}</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> <span class="tex">w-w^{2}+w^{3}-\cdots</span> has first term <span class="tex">w</span> and multiplier <span class="tex">-w</span>. The question gives <span class="tex">|w|&lt;1</span>, so <span class="tex">|-w|&lt;1</span> as well, and <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=w</span> and <span class="tex">r=-w</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">1-r=1-(-w)=1+w</span>.</p>
+          <p class="step"><strong>Step 3 ·</strong> <span class="tex">S_\infty=\dfrac{w}{1+w}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> Part (b) says <span class="tex">\dfrac{w}{1+w}=v</span>.</p>
+          <p class="final">The limiting sum is <span class="tex">v</span>.</p>
+        </div>
+      </div>
+      <div class="q-part">
+        <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
+        <div class="sol">
+          <p class="formula-quick"><strong>Formula:</strong> Use the two results already found: <span class="tex">w=\dfrac{v}{1-v}</span>, and the new series sums to <span class="tex">v</span>.</p>
+          <p class="step"><strong>Step 1 ·</strong> Put <span class="tex">v=\dfrac{1}{3}</span> into part (a): <span class="tex">w=\dfrac{\frac{1}{3}}{1-\frac{1}{3}}=\dfrac{\frac{1}{3}}{\frac{2}{3}}=\dfrac{1}{2}</span>.</p>
+          <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left|\dfrac{1}{2}\right|&lt;1</span>, so part (c) is allowed.</p>
+          <p class="step"><strong>Step 3 ·</strong> The new series sums to <span class="tex">\dfrac{w}{1+w}=\dfrac{\frac{1}{2}}{1+\frac{1}{2}}=\dfrac{\frac{1}{2}}{\frac{3}{2}}=\dfrac{1}{3}</span>.</p>
+          <p class="step"><strong>Step 4 ·</strong> <span class="tex">\dfrac{1}{3}</span> is the same as <span class="tex">v</span>.</p>
+          <p class="final">The test agrees: <span class="tex">w=\dfrac{1}{2}</span>, and the series <span class="tex">w-w^{2}+w^{3}-\cdots</span> sums to <span class="tex">\dfrac{1}{3}</span>, which equals <span class="tex">v</span>.</p>
         </div>
       </div>
     </article>
+
     <p style="margin-top:1.5rem">
-      <a class='btn' href='../../Chapter 1 Sequences and series/1I-recurring-decimals/concept.html'>Next: 1I Concept →</a>
+      <a class="btn" href="../../Chapter 1 Sequences and series/1I-recurring-decimals/concept.html">Next: 1I Concept →</a>
       <a class="btn ghost" href="tutorial.html">← Tutorial</a>
     </p>
-  </div>
-  <script>
-  (function(){
-    function bind(btn){
-      btn.addEventListener("click", function(){
-        var sol = btn.nextElementSibling;
-        var open = sol.classList.toggle("open");
-        btn.setAttribute("aria-expanded", open ? "true" : "false");
-        btn.textContent = open ? "Hide worked solution" : "Show worked solution";
-      });
-    }
-    document.querySelectorAll(".q > .btn.show").forEach(bind);
-    var on = document.getElementById("allOn"), off = document.getElementById("allOff");
-    if(on) on.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.add("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","true"); b.textContent="Hide worked solution"; }); };
-    if(off) off.onclick = function(){ document.querySelectorAll(".q .sol").forEach(function(s){ s.classList.remove("open"); }); document.querySelectorAll(".q > .btn.show").forEach(function(b){ b.setAttribute("aria-expanded","false"); b.textContent="Show worked solution"; }); };
-  })();
-  </script>
 
+  </div>
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script src="../../course-solutions.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>

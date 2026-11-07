@@ -8,6 +8,16 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../course.css" />
+  <style>
+    .formula .row{margin:.45rem 0}
+    .worked{margin:.85rem 0 0;padding:.85rem 1rem;background:#fbfaf7;border:1px solid var(--line);border-radius:12px}
+    .worked h3{margin:0 0 .45rem;font-size:1.05rem}
+    .formula-quick{margin:.15rem 0 .7rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.45}
+    .step{margin:.4rem 0;line-height:1.5}
+    .step strong{color:var(--navy)}
+    .ask{margin:0 0 .65rem;padding:.6rem .75rem;background:#fff;border:1px solid var(--line);border-radius:10px;line-height:1.5}
+    .ask strong{color:var(--navy)}
+  </style>
 </head>
 <body data-section="1H" data-page="tutorial" data-nav-depth="2" data-auth-sub="1H Tutorial">
   <div class="shell"><div class="main">
@@ -23,30 +33,64 @@
   <header class="hero">
     <span class="kicker">Tutorial · theory</span>
     <h1>1H · The limiting sum of a geometric series</h1>
-    <p>Short key ideas and tiny worked examples for Very Poor knowledge-level students. Not a PDF reprint.</p>
+    <p>If each new term shrinks towards zero, the running total settles on one number. That number is the limiting sum.</p>
   </header>
   <div class="wrap">
     <details class="teacher-note no-print"><summary><span class="ico">T</span> Teacher note</summary>
-      <div class="body">Classroom wording is condensed from the student chapter. Diagrams that matter for marking are redrawn on the Exercise page where needed. Answers validated against Chapter-1-Worked-Solutions.pdf.</div>
+      <div class="body">The test is <span class="tex">-1&lt;r&lt;1</span>, written <span class="tex">|r|&lt;1</span>. <span class="tex">r=-1</span> and <span class="tex">r=1</span> do not give a limiting sum. The symbol in the book is <span class="tex">S_\infty</span> or just <span class="tex">S</span>.</div>
     </details>
-    
+
     <section class="card" id="theory">
       <h2 class="section-h">Theory · key ideas</h2>
-      <p class="lede">An infinite GP can have a <strong>limiting sum</strong> when later terms shrink away.</p>
+      <p class="lede">A limiting sum is the number the partial sums get as close to as we like, when we keep adding forever.</p>
       <ul>
-        <li>Need <span class="tex">|r|&lt;1</span> so <span class="tex">r^n\to 0</span>.</li>
-        <li>Then <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</li>
-        <li>If <span class="tex">|r|\ge 1</span>, there is no finite limiting sum.</li>
-        <li>Picture: frog jumps <span class="tex">4+2+1+\tfrac12+\cdots</span> → total approaches 8.</li>
+        <li><strong>Picture.</strong> A frog is 8 m from water. It jumps 4 m, then 2 m, then 1 m, then half the previous jump each time. The jumps shrink. The totals climb towards 8 m, so the frog does reach the water.</li>
+        <li><strong>The test.</strong> The ratio must satisfy <span class="tex">|r|&lt;1</span>. Then <span class="tex">r^n</span> gets closer and closer to 0.</li>
+        <li><strong>The formula.</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. It comes from the finite sum <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span> once <span class="tex">r^n</span> has vanished.</li>
+        <li><strong>No limiting sum</strong> when <span class="tex">|r|\ge 1</span>. The terms do not die away, so the totals do not settle.</li>
       </ul>
-      <div class="formula"><span class="tex">S_\infty=\dfrac{a}{1-r}\quad(|r|<1)</span></div>
-      <p>More practice lives on the <a href="problems.html">Exercise</a> page. This tutorial stays short on purpose (Very Poor knowledge level).</p>
+      <div class="formula">
+        <div class="row"><span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span></div>
+        <div class="row"><span class="tex">S_\infty=\dfrac{a}{1-r}\qquad(|r|&lt;1)</span></div>
+      </div>
+      <p>More practice is on the <a href="problems.html">Exercise</a> page. Each part there has its own solution button.</p>
     </section>
+
     <section class="card" id="mini">
       <h2 class="section-h">Worked mini-examples</h2>
+
       <div class="worked">
-        <h3>Example · limiting sum</h3>
-        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=4</span>, <span class="tex">r=\tfrac12</span>: <span class="tex">S_\infty=\dfrac{4}{1-1/2}=8</span>.</p>
+        <h3>Example · the frog</h3>
+        <p class="ask"><strong>Question.</strong> The jumps are <span class="tex">4+2+1+\dfrac{1}{2}+\cdots</span>. Show that the sum of the first <span class="tex">n</span> jumps is <span class="tex">8\left(1-\left(\dfrac{1}{2}\right)^n\right)</span>, and find the limiting sum.</p>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_n=a\dfrac{1-r^n}{1-r}</span> when <span class="tex">r&lt;1</span>. If <span class="tex">|r|&lt;1</span>, the limiting sum is <span class="tex">S_\infty=\dfrac{a}{1-r}</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=4</span>. <span class="tex">r=2\div 4=\dfrac{1}{2}</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=4\times\dfrac{1-\left(\dfrac{1}{2}\right)^n}{1-\dfrac{1}{2}}</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> The bottom is <span class="tex">\dfrac{1}{2}</span>. Dividing by <span class="tex">\dfrac{1}{2}</span> is the same as multiplying by 2.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">4\times 2\left(1-\left(\dfrac{1}{2}\right)^n\right)=8\left(1-\left(\dfrac{1}{2}\right)^n\right)</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> <span class="tex">\left(\dfrac{1}{2}\right)^n</span> gets closer to 0 as <span class="tex">n</span> grows. So <span class="tex">S_n</span> gets closer to <span class="tex">8(1-0)=8</span>.</p>
+        <p class="step"><strong>Check ·</strong> <span class="tex">S_\infty=\dfrac{4}{1-\dfrac{1}{2}}=\dfrac{4}{\dfrac{1}{2}}=8</span>.</p>
+        <p class="step"><strong>Answer ·</strong> The limiting sum is 8. The frog reaches the water.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · the limiting sum is given</h3>
+        <p class="ask"><strong>Question.</strong> A GP has first term 10 and limiting sum 40. Find the ratio.</p>
+        <p class="formula-quick"><strong>Formula:</strong> <span class="tex">S_\infty=\dfrac{a}{1-r}</span>. Here <span class="tex">a=10</span> and <span class="tex">S_\infty=40</span>. The unknown is <span class="tex">r</span>.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">\dfrac{10}{1-r}=40</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">10=40(1-r)</span>.</p>
+        <p class="step"><strong>Step 3 ·</strong> Divide by 10: <span class="tex">1=4(1-r)</span>.</p>
+        <p class="step"><strong>Step 4 ·</strong> <span class="tex">1=4-4r</span>.</p>
+        <p class="step"><strong>Step 5 ·</strong> <span class="tex">4r=3</span>, so <span class="tex">r=\dfrac{3}{4}</span>.</p>
+        <p class="step"><strong>Check ·</strong> <span class="tex">\left|\dfrac{3}{4}\right|&lt;1</span>, so a limiting sum is allowed.</p>
+      </div>
+
+      <div class="worked">
+        <h3>Example · no limiting sum</h3>
+        <p class="ask"><strong>Question.</strong> Does <span class="tex">1+2+4+8+\cdots</span> have a limiting sum?</p>
+        <p class="formula-quick"><strong>Quick fact:</strong> A limiting sum exists only when <span class="tex">|r|&lt;1</span>. If the ratio is 1 or bigger, or −1 or smaller, the terms do not shrink to 0.</p>
+        <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=2\div 1=2</span>.</p>
+        <p class="step"><strong>Step 2 ·</strong> <span class="tex">|2|=2</span>, which is bigger than 1.</p>
+        <p class="step"><strong>Answer ·</strong> There is no limiting sum. The terms keep doubling, so the totals keep growing.</p>
       </div>
     </section>
 
@@ -54,15 +98,23 @@
        <a class="btn ghost" href="concept.html">← Concept</a></p>
     <footer class="site">Next: Exercise 1H, then section 1I.</footer>
   </div>
-
   </div></div>
   <script src="../../course-auth.js"></script>
   <script src="../../course-nav.js"></script>
   <script>
-  document.querySelectorAll(".tex").forEach(function(n){
-    if(n.getAttribute("data-texed")) return;
-    n.setAttribute("data-texed","1");
-    if(window.katex) katex.render(n.textContent, n, {throwOnError:false});
-  });
+  (function(){
+    function texAll(){
+      document.querySelectorAll(".tex").forEach(function(n){
+        if(n.getAttribute("data-texed")) return;
+        if(!window.katex) return;
+        n.setAttribute("data-texed","1");
+        katex.render(n.textContent, n, {throwOnError:false, displayMode:false});
+      });
+    }
+    function boot(){ if(window.katex) texAll(); else setTimeout(boot, 80); }
+    window.addEventListener("load", boot);
+    setTimeout(boot, 300);
+  })();
   </script>
-</body></html>
+</body>
+</html>
