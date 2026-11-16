@@ -31,7 +31,7 @@
   <header class="hero">
     <span class="kicker">Exercise 1G</span>
     <h1>Problems with worked solutions</h1>
-    <p>Attempt on paper first. Each part has its own solution button. Open one part at a time.</p>
+    <p>Attempt on paper first. Each part has its own solution button. The question for that part is repeated at the top of the solution, so you do not need to scroll up.</p>
   </header>
   <div class="wrap">
     <div style="margin-top:1rem;display:flex;gap:.4rem;flex-wrap:wrap" class="no-print">
@@ -56,6 +56,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · 1</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · 1.</strong></p><p class="intro">Let <span class="tex">S_6=2+6+18+54+162+486</span>. Multiply by 3 to make <span class="tex">3S_6</span>, then subtract <span class="tex">S_6</span> in columns, and hence find <span class="tex">S_6</span>.</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> The multiplier is 3, because <span class="tex">6\div 2=3</span> and <span class="tex">18\div 6=3</span>. Multiplying the whole sum by 3 shifts every term one place to the right. Subtraction then cancels the overlapping terms.</p>
           <p class="step"><strong>Step 1 ·</strong> Write the six terms: <span class="tex">S_6=2+6+18+54+162+486</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Multiply each term by 3. <span class="tex">2\times 3=6</span>, <span class="tex">6\times 3=18</span>, <span class="tex">18\times 3=54</span>, <span class="tex">54\times 3=162</span>, <span class="tex">162\times 3=486</span>, <span class="tex">486\times 3=1458</span>.</p>
@@ -78,6 +79,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p><strong>(a)</strong> Use <span class="tex">S_7=\dfrac{a(r^7-1)}{r-1}</span> to find <span class="tex">1+3+3^2+3^3+3^4+3^5+3^6</span>.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> The question tells us to use <span class="tex">S_7=\dfrac{a(r^7-1)}{r-1}</span>. Here <span class="tex">a</span> is the first term and <span class="tex">r</span> is the multiplier. This form fits because <span class="tex">r&gt;1</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> The terms are <span class="tex">1,\;3,\;9,\;27,\;81,\;243,\;729</span>. The first term is <span class="tex">a=1</span>. Each term is 3 times the one before, so <span class="tex">r=3</span>. There are 7 terms.</p>
           <p class="step"><strong>Step 2 ·</strong> Build the power. <span class="tex">3^2=9</span>, <span class="tex">3^3=27</span>, <span class="tex">3^4=81</span>, <span class="tex">3^5=243</span>, <span class="tex">3^6=729</span>, <span class="tex">3^7=2187</span>.</p>
@@ -90,6 +92,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p><strong>(b)</strong> Use <span class="tex">S_7=\dfrac{a(1-r^7)}{1-r}</span> to find <span class="tex">1-3+3^2-3^3+3^4-3^5+3^6</span>.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> The question tells us to use <span class="tex">S_7=\dfrac{a(1-r^7)}{1-r}</span>. Here <span class="tex">r=-3</span>, and <span class="tex">-3&lt;1</span>, so this is the form we use.</p>
           <p class="step"><strong>Step 1 ·</strong> The signs alternate, starting positive: <span class="tex">1,\;-3,\;9,\;-27,\;81,\;-243,\;729</span>. First term <span class="tex">a=1</span>. The multiplier is <span class="tex">r=-3</span>, because <span class="tex">-3\div 1=-3</span>. There are 7 terms.</p>
           <p class="step"><strong>Step 2 ·</strong> An odd power of a negative number stays negative. <span class="tex">(-3)^7=-(3^7)=-2187</span>.</p>
@@ -109,6 +112,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · 3</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · 3.</strong></p><p class="intro">On the way to St Ives a speaker meets one man. The man has 7 wives, each wife has 7 sacks, each sack has 7 cats, and each cat has 7 kits. Only the speaker is going to St Ives. How many (man, wives, sacks, cats and kits) are going the other way?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> These five counts form a GP with <span class="tex">a=1</span> and <span class="tex">r=7&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. The speaker is not in the sum.</p>
           <p class="step"><strong>Step 1 ·</strong> Man: <span class="tex">1=7^0</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Wives: <span class="tex">7</span>.</p>
@@ -140,6 +144,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(a)</strong> <span class="tex">1+2+4+8+\cdots</span> (10 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=2&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. Here <span class="tex">a=1</span> and we want 10 terms, then the same formula with <span class="tex">n</span> left in.</p>
           <p class="step"><strong>Step 1 ·</strong> First term <span class="tex">a=1</span>. Next term divided by this one: <span class="tex">2\div 1=2</span>, so <span class="tex">r=2</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">2^{10}=1024</span>.</p>
@@ -151,6 +156,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(b)</strong> <span class="tex">2+6+18+\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=3&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=2</span> and <span class="tex">6\div 2=3</span>, so <span class="tex">r=3</span>. We want 5 terms.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">3^2=9</span>, <span class="tex">3^3=27</span>, <span class="tex">3^4=81</span>, <span class="tex">3^5=243</span>.</p>
@@ -163,6 +169,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(c)</strong> <span class="tex">-1-10-100-\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=10&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. The first term is negative, so the sum is negative.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-1</span>. <span class="tex">(-10)\div(-1)=10</span>, so <span class="tex">r=10</span>. Five terms.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">10^5=100000</span>.</p>
@@ -175,6 +182,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(d)</strong> <span class="tex">-1-5-25-\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=5&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-1</span>. <span class="tex">(-5)\div(-1)=5</span>, so <span class="tex">r=5</span>. Five terms.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">5^2=25</span>, <span class="tex">5^3=125</span>, <span class="tex">5^4=625</span>, <span class="tex">5^5=3125</span>.</p>
@@ -187,6 +195,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · e.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(e)</strong> <span class="tex">1-2+4-8+\cdots</span> (10 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=-2&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. <span class="tex">(-2)\div 1=-2</span>, so <span class="tex">r=-2</span>. Ten terms.</p>
           <p class="step"><strong>Step 2 ·</strong> 10 is even, so <span class="tex">(-2)^{10}=2^{10}=1024</span>.</p>
@@ -199,6 +208,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · f.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(f)</strong> <span class="tex">2-6+18-\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=-3&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=2</span>. <span class="tex">(-6)\div 2=-3</span>, so <span class="tex">r=-3</span>. Five terms.</p>
           <p class="step"><strong>Step 2 ·</strong> 5 is odd, so <span class="tex">(-3)^5=-(3^5)=-243</span>.</p>
@@ -211,6 +221,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · g.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(g)</strong> <span class="tex">-1+10-100+\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=-10&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-1</span>. <span class="tex">10\div(-1)=-10</span>, so <span class="tex">r=-10</span>. Five terms.</p>
           <p class="step"><strong>Step 2 ·</strong> 5 is odd, so <span class="tex">(-10)^5=-100000</span>.</p>
@@ -223,6 +234,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · h.</strong></p><p class="intro">Find each sum. Use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. Then write a formula for the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of that series.</p><p><strong>(h)</strong> <span class="tex">-1+5-25+\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=-5&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-1</span>. <span class="tex">5\div(-1)=-5</span>, so <span class="tex">r=-5</span>. Five terms.</p>
           <p class="step"><strong>Step 2 ·</strong> 5 is odd, so <span class="tex">(-5)^5=-(5^5)=-3125</span>.</p>
@@ -250,6 +262,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(a)</strong> <span class="tex">8+4+2+\cdots</span> (10 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=\dfrac{1}{2}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Here <span class="tex">1-r=\dfrac{1}{2}</span>. Dividing by <span class="tex">\dfrac{1}{2}</span> means multiplying by 2.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=8</span> and <span class="tex">4\div 8=\dfrac{1}{2}</span>, so <span class="tex">r=\dfrac{1}{2}</span>. Ten terms.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left(\dfrac{1}{2}\right)^{10}=\dfrac{1}{1024}</span>.</p>
@@ -263,6 +276,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(b)</strong> <span class="tex">9+3+1+\cdots</span> (6 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=\dfrac{1}{3}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Here <span class="tex">1-r=\dfrac{2}{3}</span>. Dividing by <span class="tex">\dfrac{2}{3}</span> means multiplying by <span class="tex">\dfrac{3}{2}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=9</span> and <span class="tex">3\div 9=\dfrac{1}{3}</span>, so <span class="tex">r=\dfrac{1}{3}</span>. Six terms.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left(\dfrac{1}{3}\right)^6=\dfrac{1}{729}</span>, because <span class="tex">3^6=729</span>.</p>
@@ -276,6 +290,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(c)</strong> <span class="tex">45+15+5+\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=\dfrac{1}{3}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Dividing by <span class="tex">\dfrac{2}{3}</span> means multiplying by <span class="tex">\dfrac{3}{2}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=45</span> and <span class="tex">15\div 45=\dfrac{1}{3}</span>, so <span class="tex">r=\dfrac{1}{3}</span>. Five terms.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left(\dfrac{1}{3}\right)^5=\dfrac{1}{243}</span>.</p>
@@ -289,6 +304,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(d)</strong> <span class="tex">\dfrac{2}{3}+1+\dfrac{3}{2}+\dfrac{9}{4}+\dfrac{27}{8}</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> Five terms are written, with no dots. <span class="tex">r=\dfrac{3}{2}&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. Here <span class="tex">r-1=\dfrac{1}{2}</span>. Dividing by <span class="tex">\dfrac{1}{2}</span> means multiplying by 2.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=\dfrac{2}{3}</span>. <span class="tex">1\div\dfrac{2}{3}=\dfrac{3}{2}</span>, so <span class="tex">r=\dfrac{3}{2}</span>. There are 5 written terms.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left(\dfrac{3}{2}\right)^5=\dfrac{243}{32}</span>, because <span class="tex">3^5=243</span> and <span class="tex">2^5=32</span>.</p>
@@ -302,6 +318,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · e.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(e)</strong> <span class="tex">8-4+2-\cdots</span> (10 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule for a ratio below 1. <span class="tex">r=-\dfrac{1}{2}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Here <span class="tex">1-r=\dfrac{3}{2}</span>. Dividing by <span class="tex">\dfrac{3}{2}</span> means multiplying by <span class="tex">\dfrac{2}{3}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=8</span>. <span class="tex">(-4)\div 8=-\dfrac{1}{2}</span>, so <span class="tex">r=-\dfrac{1}{2}</span>. Ten terms.</p>
           <p class="step"><strong>Step 2 ·</strong> 10 is even, so <span class="tex">\left(-\dfrac{1}{2}\right)^{10}=\dfrac{1}{1024}</span>.</p>
@@ -315,6 +332,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · f.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(f)</strong> <span class="tex">9-3+1-\cdots</span> (6 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=-\dfrac{1}{3}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Here <span class="tex">1-r=\dfrac{4}{3}</span>. Dividing by <span class="tex">\dfrac{4}{3}</span> means multiplying by <span class="tex">\dfrac{3}{4}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=9</span>. <span class="tex">(-3)\div 9=-\dfrac{1}{3}</span>, so <span class="tex">r=-\dfrac{1}{3}</span>. Six terms.</p>
           <p class="step"><strong>Step 2 ·</strong> 6 is even, so <span class="tex">\left(-\dfrac{1}{3}\right)^6=\dfrac{1}{729}</span>.</p>
@@ -328,6 +346,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · g</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · g.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(g)</strong> <span class="tex">-45+15-5+\cdots</span> (5 terms)</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=-\dfrac{1}{3}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Dividing by <span class="tex">\dfrac{4}{3}</span> means multiplying by <span class="tex">\dfrac{3}{4}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-45</span>. <span class="tex">15\div(-45)=-\dfrac{1}{3}</span>, so <span class="tex">r=-\dfrac{1}{3}</span>. Five terms.</p>
           <p class="step"><strong>Step 2 ·</strong> 5 is odd, so <span class="tex">\left(-\dfrac{1}{3}\right)^5=-\dfrac{1}{243}</span>.</p>
@@ -341,6 +360,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · h</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · h.</strong></p><p class="intro">Find each sum, then a formula for <span class="tex">S_n</span>. In every part the number you divide by is a fraction. Dividing by a fraction means multiplying by its reciprocal.</p><p><strong>(h)</strong> <span class="tex">\dfrac{2}{3}-1+\dfrac{3}{2}-\dfrac{9}{4}+\dfrac{27}{8}</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> Five terms are written. <span class="tex">r=-\dfrac{3}{2}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Here <span class="tex">1-r=\dfrac{5}{2}</span>. Dividing by <span class="tex">\dfrac{5}{2}</span> means multiplying by <span class="tex">\dfrac{2}{5}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=\dfrac{2}{3}</span>. <span class="tex">(-1)\div\dfrac{2}{3}=-\dfrac{3}{2}</span>, so <span class="tex">r=-\dfrac{3}{2}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> 5 is odd, so <span class="tex">\left(-\dfrac{3}{2}\right)^5=-\dfrac{243}{32}</span>.</p>
@@ -365,6 +385,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">Find an expression for <span class="tex">S_n</span>. Then approximate <span class="tex">S_{10}</span> correct to four significant figures.</p><p><strong>(a)</strong> <span class="tex">1+1.2+(1.2)^2+\cdots</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=1.2&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. Four significant figures means four digits, starting from the first non-zero digit.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and the multiplier is <span class="tex">r=1.2</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{1.2^n-1}{1.2-1}=\dfrac{1.2^n-1}{0.2}</span>.</p>
@@ -378,6 +399,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">Find an expression for <span class="tex">S_n</span>. Then approximate <span class="tex">S_{10}</span> correct to four significant figures.</p><p><strong>(b)</strong> <span class="tex">1+0.95+(0.95)^2+\cdots</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=0.95&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=0.95</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{1-0.95^n}{1-0.95}=\dfrac{1-0.95^n}{0.05}</span>.</p>
@@ -391,6 +413,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p class="intro">Find an expression for <span class="tex">S_n</span>. Then approximate <span class="tex">S_{10}</span> correct to four significant figures.</p><p><strong>(c)</strong> <span class="tex">1+1.01+(1.01)^2+\cdots</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=1.01&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=1.01</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{1.01^n-1}{0.01}=100(1.01^n-1)</span>.</p>
@@ -403,6 +426,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p class="intro">Find an expression for <span class="tex">S_n</span>. Then approximate <span class="tex">S_{10}</span> correct to four significant figures.</p><p><strong>(d)</strong> <span class="tex">1+0.99+(0.99)^2+\cdots</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same rule. <span class="tex">r=0.99&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span> and <span class="tex">r=0.99</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{1-0.99^n}{0.01}=100(1-0.99^n)</span>.</p>
@@ -426,6 +450,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a i</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a i.</strong></p><p class="intro">A king puts 1 grain of wheat on the first square of a 64-square chessboard, 2 grains on the next square, 4 on the next, and so on, doubling each time.</p><p><strong>(a)</strong> How many grains are on:</p><p><strong>(i)</strong> the last square,</p></div>
           <p class="formula-quick"><strong>Formula:</strong> In a GP the <span class="tex">n</span>th term is <span class="tex">a_n=ar^{n-1}</span>. Here <span class="tex">a</span> is the first term and <span class="tex">r</span> is the multiplier.</p>
           <p class="step"><strong>Step 1 ·</strong> Square 1 has <span class="tex">1=2^0</span> grain. Square 2 has <span class="tex">2=2^1</span>. Square 3 has <span class="tex">4=2^2</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> The power is one less than the square number. Square 64 has <span class="tex">2^{63}</span> grains.</p>
@@ -435,6 +460,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a ii</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a ii.</strong></p><p class="intro">A king puts 1 grain of wheat on the first square of a 64-square chessboard, 2 grains on the next square, 4 on the next, and so on, doubling each time.</p><p><strong>(a)</strong> How many grains are on:</p><p><strong>(ii)</strong> the whole chessboard?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a=1</span> and <span class="tex">r=2&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. The chessboard has 64 squares, so <span class="tex">n=64</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_{64}=\dfrac{1\times(2^{64}-1)}{2-1}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> The bottom is 1, so <span class="tex">S_{64}=2^{64}-1</span>.</p>
@@ -444,6 +470,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">A king puts 1 grain of wheat on the first square of a 64-square chessboard, 2 grains on the next square, 4 on the next, and so on, doubling each time.</p><p><strong>(b)</strong> About 30 000 grains fill 1 litre. How many cubic kilometres of wheat are on the chessboard?</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> <span class="tex">1\,\mathrm{km}=10^3\,\mathrm{m}</span>, so <span class="tex">1\,\mathrm{km}^3=10^9\,\mathrm{m}^3</span>. One litre is <span class="tex">10^{-3}\,\mathrm{m}^3</span>. So <span class="tex">1\,\mathrm{km}^3=10^{12}</span> litres, and <span class="tex">1</span> litre <span class="tex">=10^{-12}\,\mathrm{km}^3</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> Number of litres <span class="tex">=\dfrac{2^{64}-1}{30000}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">2^{64}=18446744073709551616</span>, so <span class="tex">2^{64}-1=18446744073709551615</span>.</p>
@@ -466,6 +493,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">Find <span class="tex">S_n</span> and <span class="tex">S_{10}</span>. Clear any square root from the denominator.</p><p><strong>(a)</strong> <span class="tex">1+\sqrt{2}+2+\cdots</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=\sqrt{2}&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. To clear a square root from the bottom, multiply top and bottom by the conjugate <span class="tex">\sqrt{2}+1</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=1</span>. <span class="tex">\sqrt{2}\div 1=\sqrt{2}</span>, and <span class="tex">2\div\sqrt{2}=\sqrt{2}</span>, so <span class="tex">r=\sqrt{2}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{(\sqrt{2})^n-1}{\sqrt{2}-1}</span>.</p>
@@ -479,6 +507,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">Find <span class="tex">S_n</span> and <span class="tex">S_{10}</span>. Clear any square root from the denominator.</p><p><strong>(b)</strong> <span class="tex">2-2\sqrt{5}+10-\cdots</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=-\sqrt{5}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. The conjugate of <span class="tex">1+\sqrt{5}</span> is <span class="tex">1-\sqrt{5}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=2</span>. <span class="tex">(-2\sqrt{5})\div 2=-\sqrt{5}</span>, and <span class="tex">10\div(-2\sqrt{5})=-\sqrt{5}</span>, so <span class="tex">r=-\sqrt{5}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{2\bigl(1-(-\sqrt{5})^n\bigr)}{1-(-\sqrt{5})}=\dfrac{2\bigl(1-(-\sqrt{5})^n\bigr)}{1+\sqrt{5}}</span>.</p>
@@ -504,6 +533,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">Find each sum. Write out the first few terms first, and name <span class="tex">a</span> and <span class="tex">r</span>.</p><p><strong>(a)</strong> <span class="tex">\displaystyle\sum_{n=1}^{7} 3\times 2^{n}</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> The sigma sign means “add”. The bottom number is where the counter starts, and the top number is where it stops. Then, because <span class="tex">r&gt;1</span>, <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">n=1</span> gives <span class="tex">3\times 2=6</span>. <span class="tex">n=2</span> gives <span class="tex">3\times 4=12</span>. <span class="tex">n=3</span> gives <span class="tex">3\times 8=24</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> So <span class="tex">a=6</span> and <span class="tex">r=2</span>. The counter runs from 1 to 7, so there are 7 terms.</p>
@@ -516,6 +546,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">Find each sum. Write out the first few terms first, and name <span class="tex">a</span> and <span class="tex">r</span>.</p><p><strong>(b)</strong> <span class="tex">\displaystyle\sum_{i=3}^{8} 3^{i-1}</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same idea. Write the terms from the start value to the stop value, then use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> because <span class="tex">r&gt;1</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">i=3</span> gives <span class="tex">3^{2}=9</span>. <span class="tex">i=4</span> gives <span class="tex">3^{3}=27</span>. <span class="tex">i=5</span> gives <span class="tex">3^{4}=81</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> So <span class="tex">a=9</span> and <span class="tex">r=3</span>. From 3 to 8 is <span class="tex">8-3+1=6</span> terms.</p>
@@ -528,6 +559,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p class="intro">Find each sum. Write out the first few terms first, and name <span class="tex">a</span> and <span class="tex">r</span>.</p><p><strong>(c)</strong> <span class="tex">\displaystyle\sum_{\ell=1}^{8} 3\times 2^{3-\ell}</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> Same idea. Here <span class="tex">r=\dfrac{1}{2}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Dividing by <span class="tex">\dfrac{1}{2}</span> means multiplying by 2.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">\ell=1</span> gives <span class="tex">3\times 2^{2}=12</span>. <span class="tex">\ell=2</span> gives <span class="tex">3\times 2^{1}=6</span>. <span class="tex">\ell=3</span> gives <span class="tex">3\times 2^{0}=3</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> So <span class="tex">a=12</span> and <span class="tex">r=\dfrac{1}{2}</span>. From 1 to 8 is 8 terms.</p>
@@ -551,6 +583,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p><strong>(a)</strong> A GP has first term <span class="tex">\dfrac{1}{8}</span> and fifth term 162. Find the first five terms, and their sum.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> The <span class="tex">n</span>th term is <span class="tex">a_n=ar^{n-1}</span>. After <span class="tex">r</span> is known, use <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span> when <span class="tex">r&gt;1</span>, and <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span> when <span class="tex">r&lt;1</span>. The question asks for five terms, so the sum is <span class="tex">S_5</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=\dfrac{1}{8}</span> and <span class="tex">a_5=ar^4=162</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">\dfrac{1}{8}r^4=162</span>, so <span class="tex">r^4=162\times 8=1296</span>.</p>
@@ -567,6 +600,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p><strong>(b)</strong> A GP has first term <span class="tex">-\dfrac{3}{4}</span> and fourth term 6. Find the sum of the first six terms.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=ar^{n-1}</span>. The fourth term uses power 3. Then <span class="tex">r=-2&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=-\dfrac{3}{4}</span> and <span class="tex">ar^3=6</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">-\dfrac{3}{4}r^3=6</span>, so <span class="tex">r^3=6\times\left(-\dfrac{4}{3}\right)=-8</span>.</p>
@@ -580,6 +614,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p><strong>(c)</strong> The second term of a GP is 0.08 and the third term is 0.4. Find the sum of the first eight terms.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Divide a term by the one before it to get <span class="tex">r</span>. Then <span class="tex">r=5&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a_2=0.08</span> and <span class="tex">a_3=0.4</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">r=0.4\div 0.08=5</span>.</p>
@@ -593,6 +628,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p><strong>(d)</strong> A GP has ratio <span class="tex">r=2</span> and the sum of eight terms is 1785. Find the first term.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=2&gt;1</span>, so <span class="tex">S_8=\dfrac{a(2^8-1)}{2-1}</span>. We know the sum and we are finding <span class="tex">a</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">2^8=256</span>, so <span class="tex">2^8-1=255</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_8=a\times 255=1785</span>.</p>
@@ -603,6 +639,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · e.</strong></p><p><strong>(e)</strong> A GP has ratio <span class="tex">r=-\dfrac{1}{2}</span> and the sum of eight terms is 425. Find the first term.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=-\dfrac{1}{2}&lt;1</span>, so <span class="tex">S_8=\dfrac{a\left(1-\left(-\dfrac{1}{2}\right)^8\right)}{1-\left(-\dfrac{1}{2}\right)}</span>. Dividing by <span class="tex">\dfrac{3}{2}</span> means multiplying by <span class="tex">\dfrac{2}{3}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> 8 is even, so <span class="tex">\left(-\dfrac{1}{2}\right)^8=\dfrac{1}{256}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Top bracket: <span class="tex">1-\dfrac{1}{256}=\dfrac{255}{256}</span>. Bottom: <span class="tex">\dfrac{3}{2}</span>.</p>
@@ -629,6 +666,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p><strong>(a)</strong> Each year a sunflower paddock is weeded, and only half the previous weight of weed is dug out. In the first year, 6 tonnes are dug out.</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> “Half the previous weight” means the multiplier is <span class="tex">r=\dfrac{1}{2}</span>. Part (a) only gives the facts. The amounts are calculated in (b) and (c).</p>
           <p class="step"><strong>Step 1 ·</strong> Year 1 is the first term, so <span class="tex">a=6</span> tonnes.</p>
           <p class="step"><strong>Step 2 ·</strong> Each year the weight is halved, so <span class="tex">r=\dfrac{1}{2}</span>.</p>
@@ -638,6 +676,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p><strong>(b)</strong> How much is dug out in the 10th year?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> The <span class="tex">n</span>th term is <span class="tex">a_n=ar^{n-1}</span>. Year 10 is term number 10, so the power is 9.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=6</span> and <span class="tex">r=\dfrac{1}{2}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Year 10 amount <span class="tex">=6\times\left(\dfrac{1}{2}\right)^9</span>.</p>
@@ -649,6 +688,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p><strong>(c)</strong> What is the total dug out over 10 years, correct to four significant figures?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=\dfrac{1}{2}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Dividing by <span class="tex">\dfrac{1}{2}</span> means multiplying by 2.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=6</span>, <span class="tex">r=\dfrac{1}{2}</span>, <span class="tex">n=10</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">\left(\dfrac{1}{2}\right)^{10}=\dfrac{1}{1024}</span>, so <span class="tex">1-\dfrac{1}{1024}=\dfrac{1023}{1024}</span>.</p>
@@ -661,6 +701,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p><strong>(d)</strong> Every two hours, half of a medical isotope decays. If there were originally 20 grams, how much remains after one day, correct to two significant figures?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> After each two-hour step, half remains, so the amount is <span class="tex">20\times\left(\dfrac{1}{2}\right)^k</span>, where <span class="tex">k</span> is the number of steps. This is the term formula <span class="tex">a r^{k}</span> with <span class="tex">a=20</span> and <span class="tex">r=\dfrac{1}{2}</span>, counting the start as power 0.</p>
           <p class="step"><strong>Step 1 ·</strong> One day is 24 hours. Each step is 2 hours, so the number of steps is <span class="tex">24\div 2=12</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Amount left <span class="tex">=20\times\left(\dfrac{1}{2}\right)^{12}=\dfrac{20}{4096}</span>.</p>
@@ -672,6 +713,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e i</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · e i.</strong></p><p><strong>(e)</strong> Over 10 years the price of a pair of shoes rises by 10% each year. The prices are <span class="tex">P,\;1.1P,\;(1.1)^2 P,\;\ldots</span>. One pair is bought each year.</p><p><strong>(i)</strong> Find an expression for the total paid over 10 years.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a=P</span> and <span class="tex">r=1.1&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. Ten prices are added, so <span class="tex">n=10</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_{10}=\dfrac{P(1.1^{10}-1)}{1.1-1}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">1.1-1=0.1</span>. Dividing by 0.1 means multiplying by 10.</p>
@@ -682,6 +724,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e ii</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · e ii.</strong></p><p><strong>(e)</strong> Over 10 years the price of a pair of shoes rises by 10% each year. The prices are <span class="tex">P,\;1.1P,\;(1.1)^2 P,\;\ldots</span>. One pair is bought each year.</p><p><strong>(ii)</strong> If that total is $900, find the starting price <span class="tex">P</span> to the nearest cent.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> From part (i), the total is <span class="tex">10P(1.1^{10}-1)</span>. Set that equal to 900 and solve for <span class="tex">P</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">10P(1.1^{10}-1)=900</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Divide both sides by 10: <span class="tex">P(1.1^{10}-1)=90</span>.</p>
@@ -705,6 +748,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">Find a formula for <span class="tex">S_n</span>, then find <span class="tex">n</span> for the given sum.</p><p><strong>(a)</strong> <span class="tex">5+10+20+\cdots</span> where <span class="tex">S_n=315</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=2&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=5</span> and <span class="tex">10\div 5=2</span>, so <span class="tex">r=2</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{5(2^n-1)}{2-1}=5(2^n-1)</span>.</p>
@@ -716,6 +760,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">Find a formula for <span class="tex">S_n</span>, then find <span class="tex">n</span> for the given sum.</p><p><strong>(b)</strong> <span class="tex">5-10+20-\cdots</span> where <span class="tex">S_n=-425</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=-2&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=5</span> and <span class="tex">(-10)\div 5=-2</span>, so <span class="tex">r=-2</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{5\bigl(1-(-2)^n\bigr)}{1-(-2)}=\dfrac{5\bigl(1-(-2)^n\bigr)}{3}</span>.</p>
@@ -729,6 +774,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p class="intro">Find a formula for <span class="tex">S_n</span>, then find <span class="tex">n</span> for the given sum.</p><p><strong>(c)</strong> <span class="tex">18+6+2+\cdots</span> where <span class="tex">S_n=26\dfrac{8}{9}</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=\dfrac{1}{3}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Dividing by <span class="tex">\dfrac{2}{3}</span> means multiplying by <span class="tex">\dfrac{3}{2}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=18</span> and <span class="tex">6\div 18=\dfrac{1}{3}</span>, so <span class="tex">r=\dfrac{1}{3}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=18\times\left(1-\left(\dfrac{1}{3}\right)^n\right)\times\dfrac{3}{2}=27\left(1-\left(\dfrac{1}{3}\right)^n\right)</span>.</p>
@@ -742,6 +788,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p class="intro">Find a formula for <span class="tex">S_n</span>, then find <span class="tex">n</span> for the given sum.</p><p><strong>(d)</strong> <span class="tex">48-24+12-\cdots</span> where <span class="tex">S_n=32\dfrac{1}{4}</span></p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r=-\dfrac{1}{2}&lt;1</span>, so <span class="tex">S_n=\dfrac{a(1-r^n)}{1-r}</span>. Dividing by <span class="tex">\dfrac{3}{2}</span> means multiplying by <span class="tex">\dfrac{2}{3}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=48</span> and <span class="tex">(-24)\div 48=-\dfrac{1}{2}</span>, so <span class="tex">r=-\dfrac{1}{2}</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=48\times\left(1-\left(-\dfrac{1}{2}\right)^n\right)\times\dfrac{2}{3}=32\left(1-\left(-\dfrac{1}{2}\right)^n\right)</span>.</p>
@@ -768,6 +815,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">These parts extend the proof of the GP-sum formula.</p><p><strong>(a)</strong> Prove <span class="tex">x^n-1=(x-1)(x^{n-1}+x^{n-2}+\cdots+x+1)</span>. Expand the right-hand side on two lines, with like powers lined up.</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> Expand means multiply the bracket by <span class="tex">x</span>, then multiply the same bracket by <span class="tex">-1</span>, and add those two lines. Matching powers should sit under each other so they cancel.</p>
           <p class="step"><strong>Step 1 ·</strong> Call the right-hand side <span class="tex">(x-1)(x^{n-1}+x^{n-2}+\cdots+x+1)</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> First line, multiply by <span class="tex">x</span>: <span class="tex">x^n+x^{n-1}+x^{n-2}+\cdots+x^2+x</span>.</p>
@@ -780,6 +828,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">These parts extend the proof of the GP-sum formula.</p><p><strong>(b)</strong> Prove <span class="tex">x^n-y^n=(x-y)(x^{n-1}+x^{n-2}y+\cdots+xy^{n-2}+y^{n-1})</span>.</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> Start from part (a), but replace the letter <span class="tex">x</span> by the fraction <span class="tex">\dfrac{x}{y}</span>. Then multiply both sides by <span class="tex">y^n</span> to clear the denominators.</p>
           <p class="step"><strong>Step 1 ·</strong> Part (a) with <span class="tex">x</span> changed to <span class="tex">\dfrac{x}{y}</span> says <span class="tex">\left(\dfrac{x}{y}\right)^n-1=\left(\dfrac{x}{y}-1\right)\left(\left(\dfrac{x}{y}\right)^{n-1}+\cdots+\dfrac{x}{y}+1\right)</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Multiply the left side by <span class="tex">y^n</span>: <span class="tex">y^n\left(\dfrac{x^n}{y^n}-1\right)=x^n-y^n</span>.</p>
@@ -792,6 +841,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p class="intro">These parts extend the proof of the GP-sum formula.</p><p><strong>(c)</strong> Hence factor <span class="tex">x^2-y^2</span>, <span class="tex">x^3-y^3</span> and <span class="tex">x^4-y^4</span> into factors that do not factor further over the reals.</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> Put <span class="tex">n=2</span>, then <span class="tex">n=3</span>, then <span class="tex">n=4</span> into the identity from part (b). A factor is irreducible over the reals when it has no further real factors other than constants.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">n=2</span>: <span class="tex">x^2-y^2=(x-y)(x+y)</span>. Both factors are linear, so they do not factor further.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">n=3</span>: <span class="tex">x^3-y^3=(x-y)(x^2+xy+y^2)</span>. The quadratic <span class="tex">x^2+xy+y^2</span> has no real roots in <span class="tex">x</span> when <span class="tex">y\neq 0</span>, so it stays as it is.</p>
@@ -804,6 +854,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p class="intro">These parts extend the proof of the GP-sum formula.</p><p><strong>(d)</strong> Use part (a), not a GP formula, to add the first 7 powers of 3: <span class="tex">3^0+3^1+\cdots+3^6</span>.</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> Part (a) says the long sum <span class="tex">x^{n-1}+\cdots+1</span> equals <span class="tex">\dfrac{x^n-1}{x-1}</span>, as long as <span class="tex">x\neq 1</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> The sum <span class="tex">3^6+3^5+\cdots+3+1</span> is the bracket in part (a) with <span class="tex">x=3</span> and <span class="tex">n=7</span>. There are 7 powers, from <span class="tex">3^0</span> to <span class="tex">3^6</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">3^6+\cdots+1=\dfrac{3^7-1}{3-1}</span>.</p>
@@ -815,6 +866,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · e.</strong></p><p class="intro">These parts extend the proof of the GP-sum formula.</p><p><strong>(e)</strong> Use part (a), not a GP formula, to add the first <span class="tex">n+1</span> powers of 2: <span class="tex">2^0+2^1+\cdots+2^n</span>.</p></div>
           <p class="formula-quick"><strong>Quick fact:</strong> Same identity as part (a). The powers <span class="tex">2^n+\cdots+2^0</span> are <span class="tex">n+1</span> terms, so the <span class="tex">n</span> in the identity must be replaced by <span class="tex">n+1</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> Put <span class="tex">x=2</span> and replace <span class="tex">n</span> by <span class="tex">n+1</span>: <span class="tex">2^{n+1}-1=(2-1)(2^n+2^{n-1}+\cdots+2+1)</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">2-1=1</span>, so the bracket equals <span class="tex">2^{n+1}-1</span>.</p>
@@ -824,6 +876,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · f</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · f.</strong></p><p class="intro">These parts extend the proof of the GP-sum formula.</p><p><strong>(f)</strong> How could parts (d) and (e) also be done with the GP-sum formula?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> For a GP with <span class="tex">r&gt;1</span>, <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. Here the first term is <span class="tex">a=1</span> in both parts.</p>
           <p class="step"><strong>Step 1 ·</strong> Part (d): <span class="tex">a=1</span>, <span class="tex">r=3</span>, and 7 terms. <span class="tex">S_7=\dfrac{3^7-1}{3-1}=1093</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Part (e): <span class="tex">a=1</span>, <span class="tex">r=2</span>, and <span class="tex">n+1</span> terms. <span class="tex">S_{n+1}=\dfrac{2^{n+1}-1}{2-1}=2^{n+1}-1</span>.</p>
@@ -844,6 +897,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p><strong>(a)</strong> Show that the sum <span class="tex">S_n</span> of the first <span class="tex">n</span> terms of <span class="tex">7+14+28+\cdots</span> is <span class="tex">S_n=7(2^n-1)</span>.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">r&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a=7</span>. <span class="tex">14\div 7=2</span> and <span class="tex">28\div 14=2</span>, so <span class="tex">r=2</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_n=\dfrac{7(2^n-1)}{2-1}</span>.</p>
@@ -854,6 +908,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p><strong>(b)</strong> For what value of <span class="tex">n</span> is <span class="tex">S_n</span> equal to 1785?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Use the result of part (a): <span class="tex">S_n=7(2^n-1)</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">7(2^n-1)=1785</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">2^n-1=1785\div 7=255</span>.</p>
@@ -865,6 +920,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · c</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · c.</strong></p><p><strong>(c)</strong> Show that <span class="tex">a_n=7\times 2^{n-1}</span>, and find how many terms are less than 70 000.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=ar^{n-1}</span>. To solve <span class="tex">2^{n-1}&lt;10000</span> with logarithms, <span class="tex">\log_2 10000=\dfrac{\ln 10000}{\ln 2}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a_n=7\times 2^{n-1}</span>. That is the term formula with <span class="tex">a=7</span> and <span class="tex">r=2</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> We need <span class="tex">7\times 2^{n-1}&lt;70000</span>.</p>
@@ -878,6 +934,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · d</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · d.</strong></p><p><strong>(d)</strong> Use trial and error to find the first sum <span class="tex">S_n</span> that is greater than 70 000.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> From part (a), <span class="tex">S_n=7(2^n-1)</span>. Trial and error means test whole values of <span class="tex">n</span> until the sum first passes 70 000.</p>
           <p class="step"><strong>Step 1 ·</strong> Try <span class="tex">n=13</span>. <span class="tex">2^{13}=8192</span>, so <span class="tex">2^{13}-1=8191</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> <span class="tex">S_{13}=7\times 8191=57337</span>, which is still under 70 000.</p>
@@ -890,6 +947,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · e</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · e.</strong></p><p><strong>(e)</strong> Prove that <span class="tex">S_n</span> is always 7 less than the next term, term number <span class="tex">n+1</span>.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> Term number <span class="tex">n+1</span> is <span class="tex">a_{n+1}=7\times 2^{(n+1)-1}=7\times 2^n</span>. We want to show <span class="tex">S_n=a_{n+1}-7</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">a_{n+1}-7=7\times 2^n-7</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> Factor 7: <span class="tex">7(2^n-1)</span>.</p>
@@ -909,6 +967,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · a</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · a.</strong></p><p class="intro">The powers of 3 that are greater than 1 form the GP <span class="tex">3,\;9,\;27,\;\ldots</span></p><p><strong>(a)</strong> How many powers of 3 lie between 2 and <span class="tex">10^{20}</span>?</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a_n=ar^{n-1}</span> with <span class="tex">a=3</span> and <span class="tex">r=3</span>, so <span class="tex">a_n=3^n</span>. If <span class="tex">3^n&lt;10^{20}</span>, then <span class="tex">n&lt;\log_3(10^{20})=\dfrac{\ln(10^{20})}{\ln 3}</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> The first power greater than 2 is <span class="tex">3</span> itself. That is term 1, and <span class="tex">3^1=3</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> The last power we want still satisfies <span class="tex">3^n&lt;10^{20}</span>.</p>
@@ -921,6 +980,7 @@
       <div class="q-part">
         <button class="btn show" type="button" aria-expanded="false">Show solution · b</button>
         <div class="sol">
+          <div class="reask"><p><strong>Question · b.</strong></p><p class="intro">The powers of 3 that are greater than 1 form the GP <span class="tex">3,\;9,\;27,\;\ldots</span></p><p><strong>(b)</strong> Show that <span class="tex">S_n=\dfrac{3}{2}(3^n-1)</span>, and find the smallest <span class="tex">n</span> for which <span class="tex">S_n&gt;10^{20}</span>.</p></div>
           <p class="formula-quick"><strong>Formula:</strong> <span class="tex">a=3</span> and <span class="tex">r=3&gt;1</span>, so <span class="tex">S_n=\dfrac{a(r^n-1)}{r-1}</span>. Then <span class="tex">\log_3</span> turns a power inequality into an inequality for <span class="tex">n</span>.</p>
           <p class="step"><strong>Step 1 ·</strong> <span class="tex">S_n=\dfrac{3(3^n-1)}{3-1}=\dfrac{3}{2}(3^n-1)</span>.</p>
           <p class="step"><strong>Step 2 ·</strong> We need <span class="tex">\dfrac{3}{2}(3^n-1)&gt;10^{20}</span>.</p>

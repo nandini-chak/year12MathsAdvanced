@@ -90,7 +90,14 @@ svg.plot .curve.image{stroke:var(--image)}
 .q-part > .btn.show{margin:0}
 .sol{display:none;margin-top:.7rem;padding-top:.7rem;border-top:1px dashed var(--line)}
 .sol.open{display:block}
+.sol .reask{margin:0 0 .75rem;padding:.55rem .75rem;background:#fff;border:1px solid var(--line);border-radius:10px;line-height:1.45}
+.sol .reask p{margin:.28rem 0}
 .sol .formula-quick{margin:.55rem 0 .75rem;padding:.55rem .75rem;background:#eef6ff;border-left:4px solid var(--blue);border-radius:0 10px 10px 0;font-size:.92rem;line-height:1.4}
+.fig{margin:.7rem 0;overflow-x:auto}
+.fig svg{max-width:min(100%,560px);height:auto;display:block}
+.fig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;align-items:start}
+.fig-grid figure{margin:0}
+.fig-cap{margin:.15rem 0 .4rem;font-size:.92rem;line-height:1.4}
 .sol .step{margin:.45rem 0;line-height:1.45}
 .sol .step strong{color:var(--navy)}
 .sol .final{margin:.35rem 0 .6rem;font-weight:600}
